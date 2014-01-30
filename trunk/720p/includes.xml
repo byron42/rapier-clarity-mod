@@ -1,0 +1,292 @@
+<includes>
+
+	<include file="Defaults.xml"/>
+	<!-- Views.xml -->
+	<!-- (???) ViewsCommon (???) -->
+	<!-- (???) ViewsMovies (???) -->
+	<!-- (???) ViewsTVShows (???) -->
+	<!-- (???) ViewsMusic (???) -->
+	<!-- includes_Scrollbars -->
+	<!-- (???) includes_MenuBar (???) -->
+	<!-- (???) includes_BreadCrumbs (???) -->
+	<!-- includes_Animations -->
+	<!-- includes_Dialogs -->
+	<!-- includes_Backgrounds -->
+	<!-- includes_MediaFlags -->
+	<!-- includes_NowPlaying -->
+	<!-- (???) includes_OSDNotification (???) -->
+	<!-- (???) includes_homeRecentlyAdded (???) -->
+	<!-- includes_Labels -->
+	<!-- includes_3DwraplisT was FUBAR -->
+	<!-- includes_InfoPane -->
+	<!-- (???) includes_Weather (???) -->
+	<!-- includes_SmallVideoOverlay -->
+
+	<constant name="ScreenWidth">1280</constant>
+	<constant name="ScreenHeight">720</constant>
+	<constant name="DialogMarginOffsetX">40</constant>
+	<constant name="DialogHeadingOffsetY">27</constant>
+	<constant name="DialogMarginOffsetY">59</constant>
+	<constant name="MenuBarOffsetY">44</constant>
+	<constant name="BottomPaneOffsetY">646</constant>
+	<constant name="BackgroundCrossfadeTime">300</constant>
+	<constant name="IconCrossfadeTime">300</constant>
+	<constant name="FanartCrossfadeTime">2000</constant>	
+	<constant name="MediaFlagsCrossfadeTime">400</constant>
+	<constant name="SortLetterOffsetY">280</constant>
+
+	<!--<include name="LoginScreenPaneDetails">
+		<control type="label">
+			<posx>10</posx>
+			<height>50</height>
+			<font>HeadFont</font>
+			<textcolor>DefaultColor</textcolor>
+			<aligny>center</aligny>
+			<label>$INFO[System.Date] [COLOR=LoginScreenInfoSeparatorColor]|[/COLOR] $INFO[System.Time] [COLOR=LoginScreenInfoSeparatorColor]|[/COLOR] [COLOR=DefaultColor4]$INFO[ListItem.Label2][/COLOR]</label>
+		</control>
+		
+		<control type="grouplist" id="213">
+			<posx>1155</posx>
+			<posy>7</posy>
+			<orientation>horizontal</orientation>
+			<onup>52</onup>
+			<onleft>213</onleft>
+			<onright>213</onright>
+			<control type="button" id="101">
+				<description>Quit</description>
+				<width>35</width>
+				<height>35</height>
+				<texturefocus>osd-exit-focus.png</texturefocus>
+				<texturenofocus>osd-exit-nofocus.png</texturenofocus>
+				<onclick>Quit()</onclick>
+			</control>
+			<control type="button" id="102">
+				<description>Reboot</description>
+				<width>35</width>
+				<height>35</height>
+				<texturefocus>osd-reboot-focus.png</texturefocus>
+				<texturenofocus>osd-reboot-nofocus.png</texturenofocus>
+				<onclick>Reset()</onclick>
+			</control>	
+			<control type="button" id="103">
+				<description>Shutdown</description>
+				<width>35</width>
+				<height>35</height>
+				<texturefocus>osd-shutdown-focus.png</texturefocus>
+				<texturenofocus>osd-shutdown-nofocus.png</texturenofocus>
+				<onclick>Shutdown()</onclick>
+			</control>	
+		</control>
+	</include>-->
+	
+	<!--<include name="DialogBackground">	
+		<control type="image">
+			<width>900</width>
+			<height>520</height>
+			<texture border="50,70,50,75">dialog-background.png</texture>
+		</control>		
+	</include>-->
+	
+	<include name="DialogTitle">
+		<posx>DialogMarginOffsetX</posx>
+		<posy>DialogHeadingOffsetY</posy>
+		<width>600</width>
+		<font>MenuBarButtonFont4</font>
+		<textcolor>DialogTitleColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	
+	<include name="DialogTitle2">
+		<posx>DialogMarginOffsetX</posx>
+		<posy>26</posy>
+		<width>420</width>
+		<font>DialogTitleFont</font>
+		<textcolor>DialogTitleColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+	</include>
+	
+	<!--<include name="FullscreenDialogTitle">
+		<posx>DialogMarginOffsetX</posx>
+		<posy>DialogHeadingOffsetY</posy>
+		<width>410</width>
+		
+		<font>MenuBarButtonFont</font>
+		<textcolor>ThemeColor</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>-->
+	
+	<!--<include name="DialogMenuBarBtn">	
+		<width>170</width>
+		<height>46</height>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<textwidth>160</textwidth>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>-->
+	
+	<!--<include name="DialogMenuBarSmallBtn">	
+		<width>150</width>
+		<height>46</height>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<textwidth>140</textwidth>
+		<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>		
+	</include>-->
+
+	<!--<include name="HomeMenuCategoryFocusDim">	
+		<width>300</width>
+		<height>96</height>		
+	</include>-->
+	
+	<!--<include name="HomeMenuIconDim">	
+		<width>256</width>
+		<height>256</height>			
+	</include>-->
+	
+<!--ooooooooooooooooooooooooooooooo (???) FROM VIEWS.XML (???) oooooooooooooooooooooooooooooooooooooooooooooo-->
+								<!--<include name="InfoViewCatLabel">
+								   <width>180</width>
+								   <font>HeadFont2B</font>
+								   <textcolor>MediaInfoItemColor</textcolor>
+								   <shadowcolor>ShadowColor</shadowcolor>  
+								</include>-->
+								
+								<!--<include name="InfoViewCatValueLabel">	
+									<width>430</width>
+									<font>HeadFont2</font>
+									<textcolor>MediaInfoItemColor2</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>	
+									<scroll>yes</scroll>
+								</include>-->
+								
+								<!--<include name="MovieListInfoViewCatLabel">
+								   <width>160</width>
+								   <font>HeadFont2B</font>
+								   <textcolor>MediaInfoItemColor</textcolor>
+								   <shadowcolor>ShadowColor</shadowcolor>   
+								</include>-->
+								
+								<!--<include name="MovieListInfoViewCatValueLabel">	
+									<width>305</width>
+									<font>HeadFont2</font>
+									<textcolor>MediaInfoItemColor2</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<scroll>yes</scroll>
+								</include>-->
+	
+								<!--<include name="MusicListInfoViewCatLabel">
+								   <width>120</width>
+								   <font>HeadFont2B</font>
+								   <textcolor>MediaInfoItemColor</textcolor>
+								   <shadowcolor>ShadowColor</shadowcolor>   
+								</include>-->
+								
+								<!--<include name="MusicListInfoViewCatValueLabel">	
+									<width>259</width>
+									<font>HeadFont2</font>
+									<textcolor>MediaInfoItemColor2</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>	
+									<scroll>yes</scroll>
+								</include>-->
+<!--ooooooooooooooooooooooooooooooo (???) FROM VIEWS.XML (???) oooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	
+	<!--<include name="TVShowsListInfoViewCatLabel">
+	   <width>120</width>
+	   <font>HeadFont2B</font>
+	   <textcolor>MediaInfoItemColor</textcolor>
+	   <shadowcolor>ShadowColor</shadowcolor>   
+	</include>-->
+	
+	<!--<include name="TVShowsListInfoViewCatValueLabel">	
+		<width>130</width>
+		<font>HeadFont2</font>
+		<textcolor>MediaInfoItemColor2</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>	
+		<scroll>yes</scroll>
+	</include>-->
+	
+	<!--<include name="MediaInfoCatLabel">	
+		<width>130</width>
+		<font>HeadFont2B</font>
+		<textcolor>MediaInfoItemColor2</textcolor>		
+	</include>-->
+	
+	<!--<include name="MediaInfoCatValueLabel">	
+		<width>510</width>
+		<font>HeadFont2</font>
+		<textcolor>MediaInfoItemColor2</textcolor>
+		<scroll>yes</scroll>		
+	</include>-->
+
+	<!--<include name="DialogBtn">	
+		<width>120</width>	
+		<textwidth>110</textwidth>
+	</include>-->
+	
+	<include name="ContextMenuBtn">
+		<width>280</width>
+		<textwidth>230</textwidth>
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
+		<font>MenuBarButtonFont</font>
+		<textcolor>ff626262</textcolor>
+		<focusedcolor>ThemeColor</focusedcolor>
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
+		<scroll>yes</scroll>
+	</include>
+	
+	<include name="ShutdownContextMenuBtn">
+		<width>280</width>
+		<textwidth>230</textwidth>
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
+		<font>MenuBarButtonFont</font>
+		<textcolor>ff626262</textcolor>
+		<focusedcolor>ThemeColor</focusedcolor>
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
+		<scroll>yes</scroll>
+	</include>
+	
+	<!--<include name="SettingsCatInactive">
+		<width>250</width>
+		<height>35</height>
+		<texture border="5">button-focus.png</texture>
+		
+		<animation effect="fade" start="0" end="50">Visible</animation>
+		
+	</include>-->
+	
+	
+	<!--<include name="SortLetterNotification">
+		<visible>Container.Scrolling</visible>
+		<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
+		<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
+	
+		<control type="image">
+			<posx>-15</posx>
+			<width>60</width>
+			<height>60</height>
+			<texture border="15">item-focus-background.png</texture>
+		</control>
+		
+		<control type="label">
+			<posx>-15</posx>
+			<width>60</width>
+			<height>60</height>
+			<font>SortLetterFont</font>
+			<textcolor>MediaInfoHeadColor</textcolor>
+			<shadowcolor>ShadowColor</shadowcolor>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.SortLetter]</label>
+		</control>
+	</include>-->
+	
+	
+</includes>

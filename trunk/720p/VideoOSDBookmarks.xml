@@ -1,0 +1,127 @@
+<window id="125">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<!-- BackgroundOpenCloseAnim -->
+	<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+	<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>30</posx>
+		<posy>70</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<!--*********************************************** PlayerDialogBox ************************************************-->
+			<control type="image">
+				<width>490</width>
+				<height>531</height>
+				<texture border="50,70,50,75">dialog-box1.jpg</texture>
+			</control>
+			<!--****************************************************************************************************************-->
+
+			<control type="label">
+				<description>Header</description>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogHeadingOffsetY</posy>
+				<width>410</width>
+				<font>MenuBarButtonFont</font>
+				<textcolor>ThemeColor</textcolor>
+				<shadowcolor>Black</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$LOCALIZE[298]</label>
+			</control>
+			<control type="panel" id="11">
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>410</width>
+				<height>411</height>
+				<pagecontrol>101</pagecontrol>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<onleft>9001</onleft>
+				<onright>101</onright>
+				<itemlayout width="200" height="137">
+					<control type="image">
+						<posx>9</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>120</height>
+						<bordertexture border="5">item-noshadow-background.png</bordertexture>
+						<bordersize>4</bordersize>
+						<info>ListItem.Icon</info>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>99</posx>
+						<posy>114</posy>
+						<width>190</width>
+						<height>22</height>
+						<font>DefaultFont</font>
+						<textcolor>DefaultColor</textcolor>
+						<align>center</align>	
+						<info>ListItem.Label</info>  					
+					</control>
+				</itemlayout>
+				<focusedlayout width="200" height="137">
+					<control type="image">
+						<posx>9</posx>
+						<posy>0</posy>
+						<width>190</width>
+						<height>120</height>
+						<bordertexture border="5">item-noshadow-background2.png</bordertexture>
+						<bordersize>4</bordersize>
+						<info>ListItem.Icon</info>
+					</control>
+					<control type="label">
+						<posx>99</posx>
+						<posy>114</posy>
+						<width>190</width>
+						<height>22</height>
+						<font>DefaultFont</font>
+						<textcolor>SelectedColor</textcolor>
+						<align>center</align>	
+						<info>ListItem.Label</info>  					
+					</control>
+				</focusedlayout>
+			</control>
+		
+			<control type="grouplist" id="9001">	
+				<posx>75</posx>	
+				<posy>477</posy>
+				<orientation>horizontal</orientation>
+				<onup>11</onup>
+				<onleft>101</onleft>
+				<onright>101</onright>
+				<control type="button" id="2">
+					<description>Create Bookmark</description>
+					<!-- DialogMenuBarBtn -->
+					<width>170</width>
+					<height>46</height>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<textwidth>160</textwidth>
+					<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<!-- DialogMenuBarBtn -->
+					<label>$LOCALIZE[294]</label>	
+				</control>		
+				<control type="button" id="3">
+					<description>Clear Bookmarks</description>
+					<!-- DialogMenuBarBtn -->
+					<width>170</width>
+					<height>46</height>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<textwidth>160</textwidth>
+					<texturefocus border="0,0,0,2">menu-bar-button-focus.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<!-- DialogMenuBarBtn -->
+					<label>$LOCALIZE[296]</label>
+				</control>	
+			</control>
+		</control>
+	</controls>	
+</window>

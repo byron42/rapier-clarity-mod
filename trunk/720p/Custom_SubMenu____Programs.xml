@@ -1,0 +1,3783 @@
+<window type="dialog" id="3071"> <!---PROGRAMS--->
+	<defaultcontrol always="true">931</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="100" delay="900" time="0" condition="Window.IsActive(Home)">WindowOpen</animation>
+			
+	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
+			<control type="group">
+				<!------- FOR HOME --------->
+				<animation type="WindowOpen" condition="Window.IsActive(Home)"reversible="false">
+					<effect type="fade"  end="100" delay="0" time="0" />
+				</animation>
+				<!------- FOR SKIN SETTINGS --------->
+				<animation effect="fade"  start="0" end="0" condition="Window.IsActive(3001)">Conditional</animation>
+				<control type="group">	
+					<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<posx>0</posx>
+							<description>Universal Classic Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture background="true">backgrounds/default-background-blue.jpg</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+							<visible>!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)</visible>
+						</control>
+						<include condition="Skin.String(Universal_CLASSIC_BG_Color)" file="includes_RamSavingBackgrounds.xml">UniversalBackgroundColors</include>
+					</control>
+					<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
+						<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<posx>0</posx>
+							<description>Universal Classic Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+						</control>
+					</control>
+					<!--*********************************** BackgroundSystem **********************************************-->
+					<control type="group">
+						<description>System Custom Background</description>
+						<!-- include condition="![Skin.HasSetting(HideNowPlayingMusic) | Skin.HasSetting(HideNowPlayingVideos)]" file="includes.xml">IsMediaPlayingCondition</include -->
+						<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+						<control type="multiimage">
+							<description>Custom Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<imagepath background="true" fallback="special://skin/images/backgrounds/background-system.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
+							<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+							<aspectratio>stretch</aspectratio>
+							<timeperimage>10000</timeperimage>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<randomize>true</randomize>
+							<!-- BackgroundSystemDimAnim -->
+							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Default Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+							<!-- BackgroundSystemDimAnim -->
+							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+						</control>
+					</control>
+					<!--***************************************************************************************************--> 
+					
+					<!--*********************************** BackgroundFSVideo *********************************************-->
+					<control type="group">
+						<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+						<control type="videowindow">
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture>background-dim.png</texture>
+							<!-- BackgroundVizDimAnim -->
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>
+					</control>
+					<!--***************************************************************************************************--> 
+					
+					<!--*********************************** BackgroundFSViz ***********************************************-->
+					<control type="group">
+						<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+						<control type="visualisation">
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+						</control>	
+						<control type="image">
+							<description>Dim Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture>background-dim.png</texture>
+							<!-- BackgroundVizDimAnim -->
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+						</control>	
+					</control>
+					<!--***************************************************************************************************--> 
+					
+					<!--******************************* FullControlAreaBackground *****************************************-->
+					<control type="group">	
+						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>control-area-background2.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						</control>
+					</control>
+					<control type="group">	
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>control-area-background2.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						</control>
+					</control>
+					<!--***************************************************************************************************--> 
+					<!-- BackgroundDimAnim -->
+					<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+					<!-- BackgroundOpenCloseAnim -->
+					<animation effect="fade" start="40" end="100" delay="0" time="600">WindowOpen</animation> 
+					<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
+					<animation effect="fade"  start="0" end="0" condition="Window.IsActive(129)">Hidden</animation>
+				</control>
+				
+	<!--(((TOP BAR)))========================================================================================================================-->			
+				<control type="group" id="505">	
+					<description>Top Bar Area</description>
+					<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
+					<control type="group">	
+						<control type="image" id="1110">
+							<width>ScreenWidth</width>
+							<height>53</height>
+							<texture border="0,0,0,7">top-bar-background.png</texture>
+							<colordiffuse>ff454A4F</colordiffuse> <!-- BLUE -->
+							<visible>!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)</visible>
+						</control>
+						<include condition="Skin.String(TopBarColor)"file="includes_BreadCrumbSettings.xml">TopBarColorSettings</include>
+						<control type="image" id="1110">
+							<width>ScreenWidth</width>
+							<posy>1</posy>
+							<height>41</height>
+							<texture border="10">Glass/SquareThemeBorder.png</texture>
+							<colordiffuse>BBFFFFFF</colordiffuse>
+							<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+						</control>
+					</control>
+					<!--*************************************************************************************************--> 
+					
+					<!--************************************* (SystemTray) **********************************************-->
+					<control type="group" id="600">
+						<posx>1055</posx>
+						<posy>4</posy>
+						<defaultcontrol always="true">345</defaultcontrol>
+						<control type="image">			
+							<width>219</width>
+							<height>35</height>
+							<texture border="8">SystemTray/top-bar-status-background.png</texture>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+							<visible>!Control.HasFocus(345) + !Control.HasFocus(346)</visible>
+						</control>
+						<control type="image">
+							<width>219</width>
+							<height>35</height>
+							<texture border="8">SystemTray/top-bar-status-background.png</texture>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+							<visible>Control.HasFocus(345) | Control.HasFocus(346)</visible>
+							<!-- SystemTrayPulseAnim -->
+							<animation effect="fade" start="80" time="600" pulse="true" condition="true">Conditional</animation>
+						</control>
+						<control type="label">
+							<description>Time</description>
+							<posx>9.5</posx>
+							<posy>1</posy>
+							<width>145</width>
+							<height>35</height>
+							<font>TimeFont</font>
+							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<aligny>center</aligny>
+							<label>$INFO[System.Time]</label>
+						</control>
+						
+						<control type="group"> <!------------- DEFAULT ICON --------------------->
+							<visible>!Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
+							<posx>2</posx>
+							<control type ="button" id="346">
+								<description>Eject Drive</description>
+								<posx>148</posx>
+								<posy>2.85</posy>
+								<width>34</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+								<texturenofocus>SystemTray/PlayNoFocusGray.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>XBMC.PlayDVD </onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>458</onleft>
+								<onright>345</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+							</control>
+							<control type="button" id="345">
+								<description>Shutdown</description>
+								<posx>183</posx>
+								<posy>2.85</posy>
+								<width>29</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+								<texturenofocus>SystemTray/PowerNoFocusGray.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(ShutdownMenu)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>346</onleft>
+								<onright>837</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+							</control>
+						</control>
+						<control type="group"> <!------------- GOLD ICON ------------------------>
+							<posx>2</posx>
+							<visible>Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
+							<control type="button" id="346">
+								<description>Eject Drive</description>
+								<posx>148</posx>
+								<posy>2.85</posy>
+								<width>34</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+								<texturenofocus>SystemTray/GOLD/PlayNoFocusGold.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>XBMC.PlayDVD </onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>458</onleft>
+								<onright>345</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+							</control>
+							
+							<control type="button" id="345">
+								<description>Shutdown</description>
+								<posx>183</posx>
+								<posy>2.85</posy>
+								<width>29</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+								<texturenofocus>SystemTray/GOLD/PowerNoFocusGold.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(ShutdownMenu)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>346</onleft>
+								<onright>837</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+							</control>
+						</control>
+						<control type="group"> <!------------- WHITE ICON ----------------------->
+							<posx>2</posx>
+							<visible>!Skin.String(IconColor,2) + Skin.String(IconColor,3)</visible>
+							<control type="button" id="346">
+								<description>Eject Drive</description>
+								<posx>146</posx>
+								<posy>2.85</posy>
+								<width>34</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+								<texturenofocus>SystemTray/WHITE/PlayNoFocusWhite.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>XBMC.PlayDVD </onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>458</onleft>
+								<onright>345</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+							</control>
+							<control type="button" id="345">
+								<description>Shutdown</description>
+								<posx>183</posx>
+								<posy>2.85</posy>
+								<width>29</width>
+								<height>29</height>
+								<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+								<texturenofocus>SystemTray/WHITE/PowerNoFocusWhite.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(ShutdownMenu)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<onup>-</onup>
+								<ondown>850</ondown>
+								<onleft>346</onleft>
+								<onright>837</onright>
+								<!-- SystemTrayButtonFocusAnim -->
+								<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+							</control>
+						</control>
+					</control>
+					<!--*************************************************************************************************--> 
+					
+					<!--******************************* (BreadCrumbCustomSub_Addon) *************************************-->
+					<control type="group">	
+						<posx>330</posx>	
+						<!-- BreadCrumbOpenCloseAnim2 -->
+						<animation effect="slide" start="-440,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="!Window.IsActive(3001)">WindowClose</animation>
+						<control type="button">
+							<description>SUB-MENU</description>
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<posy>4</posy>
+							<width>240</width>
+							<height>35</height>
+							<font>BreadCrumbFont</font>
+							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<textoffsetx>-</textoffsetx>
+							<align>center</align>
+							<aligny>top</aligny>
+							<shadowcolor></shadowcolor> <!--BrCr-->
+							<textoffsety>2</textoffsety> <!--BrCr-->
+							<textwidth>230</textwidth> <!--BrCr-->
+							<scroll>true</scroll> <!--BrCr-->
+							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<label>[UPPERCASE] $LOCALIZE[1034] [/UPPERCASE] </label>
+						</control>		
+					</control>
+					<control type="group">		
+						<posx>60</posx>
+						<!-- BreadCrumbOpenCloseAnim -->
+						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="!Window.IsActive(3001)">WindowClose</animation>
+						<control type="button">
+							<description>CUSTOM</description>
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<posy>4</posy>
+							<width>290</width>
+							<height>35</height>
+							<font>BreadCrumbFont</font>
+							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<textoffsetx>-</textoffsetx>
+							<align>center</align>
+							<aligny>top</aligny>
+							<shadowcolor></shadowcolor> <!--BrCr-->
+							<textoffsety>2</textoffsety> <!--BrCr-->
+							<textwidth>280</textwidth> <!--BrCr-->
+							<scroll>true</scroll> <!--BrCr-->
+							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<label>[UPPERCASE] $LOCALIZE[636] [/UPPERCASE] </label>
+						</control>
+					</control>
+					<!--BreadCrumbHome-->
+					<control type="group">
+						<control type="image">
+							<width>70</width>
+							<height>44</height> <!--BC HOME-->
+							<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						</control>	
+						<control type="group"> <!------------- DEFAULT ICON --------------------->
+							<visible>!Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
+							<control type="button"  id="837">
+								<posx>10</posx>
+								<posy>6</posy>
+								<width>31</width>
+								<height>28</height>
+								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+								<texturenofocus>Breadcrumb/breadcrumb-home-nofocusGRAY.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(Home)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<ondown>850</ondown>
+								<onright>458</onright>
+								<onleft>345</onleft>
+								<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+							</control> 
+						</control>
+						<control type="group"> <!------------- GOLD ICON ------------------------>
+							<visible>Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
+							<control type="button"  id="837">
+								<posx>10</posx>
+								<posy>6</posy>
+								<width>31</width>
+								<height>28</height>
+								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+								<texturenofocus>Breadcrumb/GOLD/breadcrumb-home-nofocusGOLD.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(Home)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<ondown>850</ondown>
+								<onright>458</onright>
+								<onleft>345</onleft>
+								<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+							</control>
+						</control> 
+						<control type="group"> <!------------- WHITE ICON ----------------------->
+							<visible>!Skin.String(IconColor,2) + Skin.String(IconColor,3)</visible>
+							<control type="button"  id="837">
+								<posx>10</posx>
+								<posy>6</posy>
+								<width>31</width>
+								<height>28</height>
+								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+								<texturenofocus>Breadcrumb/WHITE/breadcrumb-home-nofocuswHITE.png</texturenofocus>
+								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<onclick>ActivateWindow(Home)</onclick>
+								<pulseonselect>true</pulseonselect>
+								<ondown>850</ondown>
+								<onright>458</onright>
+								<onleft>345</onleft>
+								<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+							</control>
+						</control>
+					</control>
+					<!--*************************************************************************************************--> 
+					
+					<!--*********************************** WeatherNotification *****************************************-->
+					<control type="group" id="456">
+						<posx>950</posx>
+						<posy>4</posy>
+						<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
+						+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+						<!-- WeatherNotificationOpenCloseAnim -->
+						<animation effect="fade" end="100" time="200">Visible</animation>
+						<animation effect="fade" end="0" time="200">Hidden</animation> 
+						<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+						<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+						<control type="button" id="458">
+							<width>100</width>
+							<height>35</height>
+							<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
+							<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+							<onclick>ActivateWindow(MyWeather)</onclick>
+							<ondown>9</ondown>
+							<onright>346</onright>
+							<onleft>837</onleft>
+						</control>
+						<control type="image" id="457">
+							<posx>8</posx>
+							<posy>4</posy>
+							<width>27</width>
+							<height>27</height>
+							<texture>$INFO[Weather.Conditions]</texture>
+						</control>
+						<control type="label">
+							<posx>92</posx>
+							<posy>-2</posy>
+							<width>55</width>
+							<height>35</height>
+							<font>VolumeFont</font>
+							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[Weather.Temperature]</label>
+							<visible>!Control.HasFocus(458)</visible>
+						</control>
+						<control type="label">
+							<posx>92</posx>
+							<posy>-2</posy>
+							<width>55</width>
+							<height>35</height>
+							<font>VolumeFont</font>
+							<textcolor>TopBarStatusColor2</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[Weather.Temperature]</label>
+							<visible>Control.HasFocus(458)</visible>
+						</control>
+					</control>
+					<!--*************************************************************************************************--> 
+					
+					<!--*********************************** MediaPlayingNotification ************************************-->
+					<control type="group">
+						<posx>780</posx>
+						<posy>4</posy>
+						<visible>Player.HasMedia</visible>
+						<!-- MediaPlayingNotificationOpenCloseAnim -->
+						<animation effect="fade" end="100" time="200">Visible</animation>
+						<animation effect="fade" end="0" time="200">Hidden</animation>
+						<!-- MediaPlayingNotificationShiftAnim3 -->
+						<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+						<control type="image">
+							<width>270</width>
+							<height>35</height>
+							<texture border="8">SystemTray/top-bar-status-background.png</texture>
+							<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
+							<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						</control>
+						<control type="image">
+							<posx>8</posx>
+							<posy>5</posy>
+							<width>25</width>
+							<height>25</height>
+							<texture>defaultaudio.png</texture>
+							<visible>Player.HasAudio</visible>
+							<!-- MediaPlayingPulseAnim -->
+							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<posx>8</posx>
+							<posy>5</posy>
+							<width>25</width>
+							<height>25</height>
+							<texture>defaultvideo.png</texture>
+							<visible>Player.HasVideo</visible>
+							<!-- MediaPlayingPulseAnim -->
+							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+						</control>
+						<control type="group">
+							<posx>40</posx>
+							<posy>3</posy>
+							<width>224</width>
+							<height>36</height>
+							<visible>Player.HasAudio</visible>
+							<control type="fadelabel">
+								<description>Caption</description>
+								<posx>0</posx>
+								<posy>-2</posy>
+								<width>220</width>
+								<height>15</height>
+								<scrollout>false</scrollout>
+								<font>ScanContentFont</font>
+								<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+								<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+								<align>left</align>
+								<aligny>center</aligny>
+								<pauseatend>4000</pauseatend>
+								<info>MusicPlayer.Title</info>
+								<info>MusicPlayer.Artist</info>
+								<info>MusicPlayer.Album</info>
+								<info>MusicPlayer.Year</info>
+								<scroll>true</scroll>
+							</control>
+							<control type="label">
+								<description>Current Directory</description>
+								<posx>0</posx>
+								<posy>13</posy>
+								<width>224</width>
+								<height>15</height>
+								<font>ScanContentFont2</font>
+								<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+								<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							</control>
+						</control>
+						<control type="group">
+							<posx>40</posx>
+							<posy>3</posy>
+							<width>220</width>
+							<height>36</height>
+							<visible>Player.HasVideo</visible>
+							<control type="label">
+								<description>Caption</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>224</width>
+								<height>15</height>
+								<font>ScanContentFont</font>
+								<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
+								<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+								<scroll>true</scroll>
+							</control>
+							<control type="label">
+								<description>Current Directory</description>
+								<posx>0</posx>
+								<posy>15</posy>
+								<width>224</width>
+								<height>15</height>
+								<font>ScanContentFont2</font>
+								<textcolor>TopBarStatusColor</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+							</control>
+						</control>
+					</control>
+					<!--*************************************************************************************************--> 
+				</control>
+			</control>
+			
+	<!--(((CONTROLS)))========================================================================================================================-->			
+			<control type="group">
+				<animation effect="fade" start="40" end="100" time="300" delay="200" >WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="0" >WindowClose</animation>
+				<!---->
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3080)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Window.IsActive(3080)">Conditional</animation>
+				<control type="group"> <!---------- CUSTOM SUBMENU ITEMS /SEPARATORS (-) --------------------->
+					<posx>30</posx>
+					<posy>80</posy>
+					<control type="label" id="-">
+						<description>CUSTOM SUBMENU LABEL</description>
+						<posx></posx>
+						<posy>8</posy>
+						<font>PluginSettingsHead</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>31913</label>
+						<posy>DialogHeadingOffsetY</posy>
+						<width>600</width>
+						<font>MediaInfoTitleFont2</font>
+						<textcolor>DialogTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--******************************* separators ******************************-->
+					<control type="image"> <!-- TOP -->
+						<description>top bar</description>
+						<posy>34</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!-- BOTTOM -->
+						<description>BOTTOM bar</description>
+						<posy>565</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!-- BOTTOM 2-->
+						<description>BOTTOM bar</description>
+						<posy>620</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--*************************************************************************-->
+				</control>
+		
+				<control type="image"> <!------------------- CUSTOM BUTTON BG -------------------------->
+					<description>Network Setting BG</description>
+					<posx>430</posx>
+					<posy>140</posy>
+					<width>780</width>
+					<height>480</height>
+					<texture border="10,10,10,10">dialog-box2.jpg</texture> <!--RCCB-->
+					<colordiffuse>BBFFFFFF</colordiffuse>
+				</control>
+
+	<!--(((PROGRAMS CUSTOM SUB)))========================================================================================================================-->
+				<control type="group" id="850">
+					<description>Expanded Customize Programs Sub Menus Area</description>
+					<visible>Skin.HasSetting(ExpandProgramsSubMenuSettings)</visible>
+					<control type="label" > <!----- TOP BAR LABEL ------->
+						<description>Category</description>
+						<posx>1250</posx>
+						<posy>89</posy>
+						<font>PluginSettingsHead2</font>
+						<label>([B]$LOCALIZE[350][/B])</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<width>600</width>
+						<font>MediaInfoTitleFont2</font>
+						<textcolor>DialogTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+					</control>
+				<!-- RADIO BUTTONS ========================================================================-->		
+					<control type="grouplist" id="931">
+						<description>Edit Buttons Area</description>
+						<posx>60</posx>
+						<posy>145</posy>
+						<width>345</width>
+						<height>500</height>
+						<itemgap>15</itemgap>
+						<onup>931</onup>
+						<ondown>931</ondown>
+						<onleft>1931</onleft>
+						<onright>920</onright>
+						<control type="radiobutton" id="2301">
+							<description>Edit Button 1</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 1</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn1)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn1)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,1)</onfocus>
+						</control>
+						<control type="radiobutton" id="2302">
+							<description>Edit Button 2</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 2</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn2)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn2)</onclick>
+							<!--<onclick>Skin.SetString(SelectedExpandedBtn,2)</onclick>-->
+							<onfocus>Skin.SetString(SelectedExpandedBtn,2)</onfocus>
+						</control>
+						<control type="radiobutton" id="2303">
+							<description>Edit Button 3</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 3</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn3)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn3)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,3)</onfocus>
+						</control>
+						<control type="radiobutton" id="2304">
+							<description>Edit Button 4</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 4</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn4)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn4)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,4)</onfocus>
+						</control>
+						<control type="radiobutton" id="2305">
+							<description>Edit Button 5</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 5</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn5)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn5)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,5)</onfocus>
+						</control>
+						<control type="radiobutton" id="2306">
+							<description>Edit Button 6</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 6</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn6)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn6)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,6)</onfocus>
+						</control>
+						<control type="radiobutton" id="2307">
+							<description>Edit Button 7</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 7</label>
+							<colordiffuse>BFFFFFFF</colordiffuse>
+							<selected>Skin.HasSetting(EditProgramsSubMenuBtn7)</selected>
+							<onclick>Skin.ToggleSetting(EditProgramsSubMenuBtn7)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,7)</onfocus>
+						</control>
+					</control>
+				<!-- BUTTON PARAMS. =======================================================================-->		
+					<control type="group" id="920">  <!---- Programs BTN(1) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 1 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,1)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn1)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn1)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+							<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 1 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->	
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn1-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn1-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx></textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Favourites Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn1)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn1Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn1Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn1Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn1-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn1Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn1)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn1Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn1Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn1Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn1Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn1Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn1Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn1-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn1)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+					
+					<control type="group" id="920">  <!---- Programs BTN(2) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 2 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,2)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn2)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn2)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx><!--150-->
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 2 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->		
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-Script,SCRIPT)</onclick>
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn2-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx><!--80-->
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx><!--120-->
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+						<!--path-->
+							<control type="button" id="2331"> 
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn2)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn2Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn2Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn2Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn2-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn2Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn2)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn2Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn2Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn2Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn2Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn2Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn2Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn2-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn2)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+					
+					<control type="group" id="920">  <!---- Programs BTN(3) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 3 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,3)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn3)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn3)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 3 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->		
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn3-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn3-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->		
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn3)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn3Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn3Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn3Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn3-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn3Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn3)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn3Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn3Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn3Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn3Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn3Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn3Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn3-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn3)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+
+					<control type="group" id="920">  <!---- Programs BTN(4) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 4 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,4)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn4)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn4)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 4 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->			
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn4-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn4-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn4)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn4Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn4Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn4Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn4-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn4Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn4)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn4Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn4Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn4Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn4Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn4Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn4Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn4-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn4)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+
+					<control type="group" id="920">  <!---- Programs BTN(5) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 5 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,5)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn5)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn5)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 5 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->		
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn5-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn5-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn5)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn5Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn5Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn5Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn5-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn5Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn5)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn5Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn5Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn5Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn5Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn5Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn5Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn5-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn5)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+
+					<control type="group" id="920">  <!---- Programs BTN(6) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 6 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,6)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn6)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn6)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 6 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->		
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn6-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn6-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn6)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn6Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn6Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn6Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn6-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn6Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn6)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn6Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn6Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn6Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn6Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn6Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn6Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn6-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn6)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+
+					<control type="group" id="920">  <!---- Programs BTN(7) ----->
+						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
+						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
+						<description>Edit Button 7 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,7)</visible>
+						<enable>Skin.HasSetting(EditProgramsSubMenuBtn7)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EditProgramsSubMenuBtn7)">Conditional</animation>
+						<posx>200</posx>
+						<posy>100</posy>
+						<control type="button">
+							<description>Button Type Label</description>
+							<posx>238</posx>
+							<posy>48</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse>
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>540</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31446]</label>
+						</control>
+						<control type="button">
+							<description>Button Number Label</description>
+							<posx>238</posx>
+							<posy>43</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>PluginSettingsHead</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<textoffsetx>47</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
+							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="10">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>left</align>
+							<textwidth>200</textwidth>
+							<enable>false</enable>
+							<label>( 7 )</label>
+						</control>
+					<!-- BUTTON TYPE *********************************************************-->		
+						<control type="grouplist" id="921"> 
+							<description>Button Type Area</description>
+							<posx>250</posx>
+							<posy>130</posy>
+							<width>780</width>
+							<height>500</height>
+							<itemgap>22</itemgap>
+							<orientation>horizontal</orientation>
+							<onup>2333</onup>
+							<ondown>2331</ondown>
+							<onleft>931</onleft>
+							<onright>-</onright>
+							<control type="radiobutton" id="2320">
+								<description>Script Type</description>
+								<width>234</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff7C4849</textcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="10">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="10">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31601]</label>
+								<selected>Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-scriptloc)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-scriptlabel)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-Script,SCRIPT)</onclick>
+								<!--<onclick>Skin.Togglesetting(ProgramsSubMenuBtn7-Script,SCRIPT)</onclick>-->
+								<!--<enable>!Skin.HasSetting(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !Skin.HasSetting(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</enable>-->
+							</control>
+							<control type="radiobutton" id="2321">
+								<description>Plugin Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<disabledcolor>Grey</disabledcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>114</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<colordiffuse>-</colordiffuse>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31602]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN)</selected>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Pluginname)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Pluginfolder)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-label)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-Plugin,PLUGIN)</onclick>
+							</control>
+							<control type="radiobutton" id="2322">
+								<description>Favourite Type</description>
+								<width>230</width>
+								<height>50</height>
+								<font>Font_LibBold24</font>
+								<textcolor>ff4B4C7F</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>20</textoffsetx>
+								<textoffsety>4</textoffsety>
+								<aligny>top</aligny>
+								<textwidth>210</textwidth>
+								<radioposx>190</radioposx>
+								<radioposy>-</radioposy>
+								<radiowidth>22</radiowidth>
+								<radioheight>22</radioheight>
+								<textureradiofocus>radio-button-focus.png</textureradiofocus>
+								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<texturefocus border="5">search-focus.png</texturefocus>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<alttexturefocus border="5">search-focus.png</alttexturefocus>
+								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[31603]</label>				
+								<selected>Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</selected>	
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Script,SCRIPT)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-Plugin,PLUGIN)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7Param)</onclick>
+								<onclick>Skin.Reset(ProgramsSubMenuBtn7-NAME)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</onclick>
+							</control>
+						</control>
+						<control type="button">
+							<description>Button Properties Label</description>
+							<posx>238</posx>
+							<posy>195</posy>
+							<width>760</width>
+							<height>65</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31447]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>SystemInfoHead</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>Grey</focusedcolor>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>650</textwidth>
+							<enable>false</enable>
+							<label>$LOCALIZE[31445]</label>
+						</control>
+						<control type="button">
+							<description>Button Instructions "()"</description>
+							<posx>238</posx>
+							<posy>415</posy>
+							<width>760</width>
+							<height>90</height>
+							<font>Parentheses</font>
+							<aligny>top</aligny>
+							<textoffsety>16</textoffsety>
+							<textoffsetx>-</textoffsetx>
+							<shadowcolor>-</shadowcolor>
+							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<colordiffuse>FFC1EBFF</colordiffuse> 
+							<texturenofocus border="10">-</texturenofocus>
+							<align>center</align>
+							<textoffsetx>0</textoffsetx>
+							<textwidth>700</textwidth>
+							<enable>false</enable>
+							<!-- <label>(                                                                )</label> -->
+						</control>
+					<!-- BUTTON LABELS/PATHS *************************************************-->	
+						<control type="grouplist" id="922">
+							<description>Button Properties Area</description>
+							<posx>258</posx>
+							<posy>280</posy>
+							<width>760</width>
+							<height>500</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+						<!--labels-->
+							<control type="button" id="2330">
+								<description>SCRIPT Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7-scriptlabel)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-scriptlabel)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2335">
+								<description>PLUGIN Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7-label)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-label)</onclick>
+								<visible>!Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2334">
+								<description>FAV Label</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[31097] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7-NAME)]</label>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7-NAME)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+						<!--paths-->
+							<control type="button" id="2331">
+								<description>Script Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff7C4849</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7-Scriptloc)]</label>
+								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,ProgramsSubMenuBtn7)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn7Path,xbmc.python.script)</onclick>
+								<onclick>Skin.SetString(ProgramsSubMenuBtn7Param,RunScript($INFO[Skin.String(ProgramsSubMenuBtn7Path)]))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2332">
+								<description>Plugin Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>cc497F49</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7-Pluginfolder),,/]$INFO[Skin.String(ProgramsSubMenuBtn7-Pluginname)]</label>
+								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(ProgramsSubMenuBtn7Path)][/COLOR]</label>-->
+								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,ProgramsSubMenuBtn7)</onclick>
+								<!--<onclick>Skin.SetAddon(ProgramsSubMenuBtn7Path,xbmc.python.pluginsource)</onclick>-->
+								<!--<onclick>Skin.SetString(ProgramsSubMenuBtn7Param,ActivateWindow(ProgramsLibrary,plugin://$INFO[Skin.String(ProgramsSubMenuBtn7Path)],Return))</onclick>-->
+								<visible>!Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+							<control type="button" id="2333">
+								<description>Favourite Path</description>
+								<width>720</width>
+								<height>50</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>6</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<scroll>true</scroll>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(ProgramsSubMenuBtn7Param)]</label>
+								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn7Name)</onclick>-->
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,ProgramsSubMenuBtn7Param)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,ProgramsSubMenuBtn7-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,ProgramsSubMenuBtn7)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT)</visible>
+							</control>
+						</control>
+					</control>
+				</control>
+			
+	<!--(((OK/RESET ALL)))=================================================================================================================================-->
+				<control type="grouplist" id="1931">
+					<description>Dialog Button Area</description>				
+					<posx>300</posx>
+					<posy>650</posy>
+					<itemgap>220</itemgap>
+					<orientation>horizontal</orientation>	
+					<onup>931</onup>
+					<control type="button" id="18">
+						<description>Exit Window</description>
+						<width>215</width>
+						<height>50</height>
+						<font>PluginSettingsFoot</font>
+						<aligny>top</aligny>
+						<textoffsety>5</textoffsety>
+						<textcolor>AAFFFFFF</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<disabledcolor>ff343434</disabledcolor> <!-- JET -->
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[13012]</label>
+						<onclick>Dialog.Close(3071)</onclick>
+					</control>	
+					<control type="button" id="1932">
+						<description>Cancel</description>
+						<width>215</width>
+						<height>50</height>
+						<font>PluginSettingsFoot</font>
+						<aligny>top</aligny>
+						<textoffsety>5</textoffsety>
+						<textcolor>AAFFFFFF</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>400</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[192] $LOCALIZE[535] </label>
+						<description>Back</description>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn1-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn2-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn3-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn4-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn5-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn6-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn7-Script,SCRIPT)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn1-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn2-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn3-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn4-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn5-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn6-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn7-Plugin,PLUGIN)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn1-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn2-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn3-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn4-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn5-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn6-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(ProgramsSubMenuBtn7-Favourite,FAVOURITE)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn1)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn2)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn3)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn4)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn5)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn6)</onclick>
+						<onclick>Skin.Reset(EditProgramsSubMenuBtn7)</onclick>
+						<onclick>Dialog.Close(3071)</onclick>
+					</control>	
+				<!--
+					<control type ="label">
+						<width>215</width>
+						<height>50</height>
+						<font>PluginSettingsFoot</font>
+						<textcolor>AAFFFFFF</textcolor>
+						<label>$LOCALIZE[503]</label>
+						<visible>Window.IsActive(138)</visible>
+					</control>
+				--->	
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

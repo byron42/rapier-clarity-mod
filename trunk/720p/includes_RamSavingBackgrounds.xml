@@ -1,0 +1,70 @@
+<includes>
+
+<!--(((UNIVERSAL BACKGROUND)))=========================================================================================-->
+	<include name="UniversalBackgroundColor2">
+		<control type="image" id="1210">
+			<posx>0</posx>
+			<description>Universal Background</description>
+			<posy>MenuBarOffsetY</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" >backgrounds/default-background-gray.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<visible>Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)</visible>
+		</control>
+	</include>
+	<include name="UniversalBackgroundColor3">
+		<control type="image" id="1211">
+			<posx>0</posx>
+			<description>Universal Background</description>
+			<posy>MenuBarOffsetY</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" >backgrounds/default-background-red.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<visible>!Skin.String(Universal_CLASSIC_BG_Color,2) + Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)</visible>
+		</control>
+	</include>
+	<include name="UniversalBackgroundColor4">
+		<control type="image" id="1212">
+			<posx>0</posx>
+			<description>Universal Background</description>
+			<posy>MenuBarOffsetY</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" >backgrounds/default-background-green.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="69" end="69" condition="Window.IsActive(Home) + ![Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="Window.IsActive(Home) + [Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowOpen</animation> <!--ClassicUniversalBG_Fade-->
+			<animation effect="fade" start="45" end="45" condition="!Window.IsActive(Home)">WindowClose</animation> <!--ClassicUniversalBG_Fade-->
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<visible>!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + Skin.String(Universal_CLASSIC_BG_Color,4)</visible>
+		</control>
+	</include>	
+
+<!--(((STRINGS)))======================================================================================================-->	
+	<include name="UniversalBackgroundColors">
+		<include condition="Skin.String(Universal_CLASSIC_BG_Color,2)" file="includes_RamSavingBackgrounds.xml">UniversalBackgroundColor2</include>
+		<include condition="Skin.String(Universal_CLASSIC_BG_Color,3)" file="includes_RamSavingBackgrounds.xml">UniversalBackgroundColor3</include>
+		<include condition="Skin.String(Universal_CLASSIC_BG_Color,4)" file="includes_RamSavingBackgrounds.xml">UniversalBackgroundColor4</include>
+	</include>
+	
+</includes>
