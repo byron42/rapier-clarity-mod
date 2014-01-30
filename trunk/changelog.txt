@@ -20,6 +20,11 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		= made FileBrowser icons view (when searching for pics) match the rest
 		  of the icon view changes that I've made
 
+		= FIXED ShutDownMenu "shutdown" button.  It wasn't working properly,
+		  wasn't showing all of the shutdown times (30,60,120,custom) and now
+		  has arrows when focused and also a reminder when the system will turn
+		  off when this window is open
+
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
