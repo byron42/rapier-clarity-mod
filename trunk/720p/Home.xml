@@ -9,8 +9,10 @@
 		<!--little dialog fade out-->
 			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 		<!-- CUSTOM SUB CATS FADE ---------->	
-			<animation effect="fade"  start="100" end="0" delay="950" time="50" condition="Window.IsActive(3071) | Window.IsActive(3072)
-			| Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="950" time="50" condition="Window.IsVisible(3071) | Window.IsVisible(3072)
+			| Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)
+			| Window.IsVisible(3060) | Window.IsVisible(3061) | Window.IsVisible(3062) | Window.IsVisible(3063) | Window.IsVisible(3064)
+			| Window.IsVisible(3065) | Window.IsVisible(3066) | Window.IsVisible(3067)">Conditional</animation>
 			<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
 				<visible>Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 				<control type="image">
@@ -1331,13 +1333,14 @@
 				<animation effect="slide" start="0,0" end="0,-20" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 				
 				<!--<visible>!Window.IsVisible(114)</visible>-->
-				<visible>![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
+				<visible>![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078) | Window.IsVisible(3060) | Window.IsVisible(3061) | Window.IsVisible(3062) | Window.IsVisible(3063) | Window.IsVisible(3064) | Window.IsVisible(3065) | Window.IsVisible(3066) | Window.IsVisible(3067)]</visible>
 				
 				<onup>600</onup>
 				<posy>730</posy>
 				
 				<animation effect="slide" end="0,-155" time="300" tween="quadratic" easing="out" reversible="true" condition="ControlGroup(900).HasFocus + ![Window.IsVisible(114) | Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(NumericInput)
-				| Window.IsActive(VirtualKeyboard) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]">Conditional</animation>
+				| Window.IsActive(VirtualKeyboard) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078) | Window.IsVisible(3060)
+				| Window.IsVisible(3061) | Window.IsVisible(3062) | Window.IsVisible(3063) | Window.IsVisible(3064) | Window.IsVisible(3065) | Window.IsVisible(3066) | Window.IsVisible(3067)]">Conditional</animation>
 				 
 				<!-- HomeSubMenuBarImage -->
 				<control type="image">
@@ -3805,6 +3808,2329 @@
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>
 				</control>	
+			
+				<control type="list" id="110"> <!--CUSTOM_1--(((12)--> <!--((3060)-->
+					<description>CUSTOM_HOME_1 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(12)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+							<visible></visible>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							
+							<onclick>ActivateWindow(3060,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_1_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_1_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_1_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_1_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_1_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_1_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>	
+			
+				<control type="list" id="110"> <!--CUSTOM_2--(((13)--> <!--((3061)-->
+					<description>CUSTOM_HOME_2 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(13)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3061,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_2_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_2_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_2_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_2_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_2_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_2_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_3--(((14)--> <!--((3062)-->
+					<description>CUSTOM_HOME_3 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(14)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3062,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_3_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_3_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_3_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_3_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_3_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_3_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_4--(((15)--> <!--((3063)-->
+					<description>CUSTOM_HOME_4 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(15)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3063,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_4_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_4_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_4_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_4_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_4_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_4_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_5--(((16)--> <!--((3064)-->
+					<description>CUSTOM_HOME_5 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(16)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3064,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_5_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_5_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_5_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_5_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_5_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_5_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_6--(((17)--> <!--(((3065)-->
+					<description>CUSTOM_HOME_6 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(17)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3065,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_6_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_6_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_6_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_6_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_6_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_6_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_7--(((18)--> <!--(((3066)-->
+					<description>CUSTOM_HOME_7 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(18)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3066,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_7_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_7_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_7_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_7_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_7_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_7_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
+				<control type="list" id="110"> <!--CUSTOM_8--(((19)--> <!--(((3067)-->
+					<description>CUSTOM_HOME_8 Menu Bar</description>
+					<posx>24</posx>
+					<posy>0</posy>
+					<width>1224</width>
+					<height>34</height>
+					<ondown>850</ondown>
+					<onup>304</onup>
+					<orientation>horizontal</orientation>
+					<!-- HomeSubMenuOpenCloseAnim -->
+					<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+					<animation effect="fade" end="0" time="100">WindowClose</animation> 
+					<visible>Container(850).HasFocus(19)</visible>
+					<itemlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-2</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont</font>
+							<textcolor>ButtonColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+					</itemlayout>
+					<focusedlayout width="242">
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ButtonFocusColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+						</control>	
+						<control type="label">
+							<posx>137</posx>
+							<posy>-3</posy>
+							<width>232</width>
+							<height>34</height>
+							<font>MenuBarButtonFont2</font>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label2</info>
+							<pulseonselect>true</pulseonselect>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="15">
+							<description>Custom Items</description>
+							<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+							<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+							<onclick>ActivateWindow(3067,return)</onclick>
+							<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+						</item>
+					<!------------------------------------------------------------------------------------------------------------>	
+					<!--------------------------------------- CUSTOM HOME_CATS SUB-MENUS --------------------------------------------->	
+					<!--Button1--------------------------------------------------------------------------------------------------->
+						<item id="1">
+							<description>Custom Script Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn1-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Plugin Button 1</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn1-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn1)</visible>
+						</item>
+						<item id="1">
+							<description>Custom Favourite Button 1</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn1Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn1-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn1)</visible>
+						</item>
+					<!--Button2-->
+						<item id="2">
+							<description>Custom Script Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn2-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Plugin Button 2</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn2-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn2)</visible>
+						</item>
+						<item id="2">
+							<description>Custom Favourite Button 2</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn2Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn2-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn2)</visible>
+						</item>
+					<!--Button3-->
+						<item id="3">
+							<description>Custom Script Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn3-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Plugin Button 3</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn3-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn3)</visible>
+						</item>
+						<item id="3">
+							<description>Custom Favourite Button 3</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn3Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn3-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn3)</visible>
+						</item>
+					<!--Button4-->
+						<item id="4">
+							<description>Custom Script Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn4-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Plugin Button 4</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn4-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn4)</visible>
+						</item>
+						<item id="4">
+							<description>Custom Favourite Button 4</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn4Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn4-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn4)</visible>
+						</item>
+					<!--Button5-->
+						<item id="5">
+							<description>Custom Script Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn5-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Plugin Button 5</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn5-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn5)</visible>
+						</item>
+						<item id="5">
+							<description>Custom Favourite Button 5</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn5Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn5-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn5)</visible>
+						</item>
+					<!--Button6-->
+						<item id="6">
+							<description>Custom Script Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn6-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Plugin Button 6</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn6-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn6)</visible>
+						</item>
+						<item id="6">
+							<description>Custom Favourite Button 6</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn6Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn6-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn6)</visible>
+						</item>
+					<!--Button7-->
+						<item id="7">
+							<description>Custom Script Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-scripticon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-scripticon)]</thumb>
+							<label>[COLOR=ff7C4849]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-scriptlabel)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-scriptlabel)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>XBMC.RunScript($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-scriptloc)])</onclick>
+							<onclick>ActivateWindow(Scripts)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn7-scriptlabel))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Plugin Button 7</description>
+							<icon>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginicon)]</icon>
+							<thumb>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginicon)]</thumb>
+							<label>[COLOR=cc497F49]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-label)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-label)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>ActivateWindow($INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginfolder)]/)</onclick>
+							<visible>Skin.String(CustomHomeCats_8_SubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn7-label)) + !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginwindow))
+							+ !IsEmpty(Skin.String(CustomHomeCats_8_SubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn7)</visible>
+						</item>
+						<item id="7">
+							<description>Custom Favourite Button 7</description>
+							<label>[COLOR=ff4B4C7F]$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-NAME)][/COLOR]</label>
+							<label2>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7-NAME)]</label2>
+							<!--<onclick>Dialog.Close(3077)</onclick>-->
+							<onclick>$INFO[Skin.String(CustomHomeCats_8_SubMenuBtn7Param)]</onclick>
+							<visible>!IsEmpty(Skin.string(CustomHomeCats_8_SubMenuBtn7-NAME)) + Skin.String(CustomHomeCats_8_SubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditCustomHomeCats_8_SubMenuBtn7)</visible>
+						</item>
+					<!--Button7------------------------------------------------------------------------------------------------------------>
+					</content>
+				</control>
+				
 			</control>	
 	
 	<!--(((Main Category Icons)))============================================================================================================-->	
@@ -4184,7 +6510,9 @@
 				<animation effect="fade" start="40" end="0" time="300">Hidden</animation>
 				<visible>!Skin.HasSetting(DoNotDimScreen)</visible>
 				<visible>Window.IsActive(ShutdownMenu) | Window.IsActive(LockSettings) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(SelectDialog)
-				| Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)</visible>
+				| Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)
+				| Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066)
+				| Window.IsActive(3067)</visible>
 			</control>
 			<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 			
@@ -4236,11 +6564,15 @@
 				<animation effect="slide" end="0,114" time="200" delay="250" condition="Window.IsActive(virtualkeyboard)">Conditional</animation>
 				
 				<!-- CUSTOM_SUB_ANIMATION -->
-				<animation effect="slide" end="0,114" time="250" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073)
-				| Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
+				<animation effect="slide" end="0,114" time="250" condition="Window.IsActive(3071) | Window.IsActive(3072)
+				| Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)
+				| Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064)
+				| Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)">Conditional</animation>
 				
 				<visible>!Window.IsVisible(Favourites) | !Window.IsVisible(ShutdownMenu) | !Window.IsVisible(3071) | !Window.IsVisible(3072)
-				| !Window.IsVisible(3073) | !Window.IsVisible(3074) | !Window.IsVisible(3075) | !Window.IsVisible(3076) | !Window.IsVisible(3078)</visible>
+				| !Window.IsVisible(3073) | !Window.IsVisible(3074) | !Window.IsVisible(3075) | !Window.IsVisible(3076) | !Window.IsVisible(3078)
+				| !Window.IsVisible(3060) | !Window.IsVisible(3061) | !Window.IsVisible(3062) | !Window.IsVisible(3063) | !Window.IsVisible(3064)
+				| !Window.IsVisible(3065) | !Window.IsVisible(3066) | !Window.IsVisible(3067)</visible>
 			
 			<!-- MAIN MENU START ------------------------------------------------------------------------------------------>
 				<control type="wraplist" id="850">
@@ -4857,7 +7189,8 @@
 				<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowClose</animation>
 				<animation effect="slide" end="-700,0" time="150" tween="cubic" easing="out" condition="Player.HasMedia + [Window.IsActive(ShutdownMenu)
 				| Window.IsActive(Favourites) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075)
-				| Window.IsActive(3076) | Window.IsActive(3078)]">Conditional</animation>
+				| Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063)
+				| Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)]">Conditional</animation>
 			</control>
 	
 			<control type="group" id="505">	<!--------- RSS FEEDS ------------->

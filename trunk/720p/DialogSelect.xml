@@ -17,15 +17,15 @@
 			<!---->
 			<animation effect="fade"  start="0" end="80" delay="300" time="250" condition="Window.IsActive(smartplaylisteditor)">Conditional</animation>
 			<!---->
-			<animation effect="fade" start="0" end="100" time="300" delay="0" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Visible</animation>
-			<visible>Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)</visible>
+			<animation effect="fade" start="0" end="100" time="300" delay="0" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)">Visible</animation>
+			<visible>Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)</visible>
 
 <!--=============================================================================================================================================-->
 <!--||| CUSTOM_SUBS_ONLY ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 <!--=============================================================================================================================================-->
 			<control type="group">	
 				<!-- NotCustomSubs_HiddenSlideAnim -->
-				<animation effect="slide" end="-178,0" time="0" condition="![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]">Conditional</animation>
+				<animation effect="slide" end="-178,0" time="0" condition="![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)]">Conditional</animation>
 				
 				<!--*************************************** DialogBox__(BACKGROUND) *********************************-->
 				<control type="image"> 
@@ -35,7 +35,7 @@
 					<width>780</width>
 					<height>480</height>
 					<texture border="10,10,10,10">dialog-box1.jpg</texture>
-					<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible>
+					<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)]</visible>
 					<colordiffuse>FFFFFFFF</colordiffuse>
 					<animation effect="fade"  start="0" end="90" delay="300" time="250" condition="Window.IsActive(Home)">Conditional</animation>
 				</control>
@@ -185,7 +185,7 @@
 			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
 			<animation effect="fade"  start="0" end="80" delay="300" time="250" condition="Window.IsActive(smartplaylisteditor)">Conditional</animation>
-			<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)]</visible>
+			<visible>![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3060) | Window.IsActive(3061) | Window.IsActive(3062) | Window.IsActive(3063) | Window.IsActive(3064) | Window.IsActive(3065) | Window.IsActive(3066) | Window.IsActive(3067)]</visible>
 			<control type="group">
 				<!--
 				<animation effect="fade"  start="0" end="0" condition="Window.IsActive(129) | Window.IsActive(137) | Window.IsActive(136) | Window.IsActive(profiles) | Window.IsActive(profilesettings) | Window.IsActive(locksettings)">Conditional</animation>
