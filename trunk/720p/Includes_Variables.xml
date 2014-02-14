@@ -1,0 +1,54 @@
+<includes>
+<!--(((TOP BAR)))=================================-->
+	<variable name="TopBarColor">
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff454A4F</value>
+		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff332D22</value>
+		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff3F3F3F</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4)">ff666666</value>
+	</variable>
+	<variable name="BreadCrumbBackgroundColor">
+		<value condition="!Skin.String(BreadCrumbBackgroundColor,2) + !Skin.String(BreadCrumbBackgroundColor,3)">ff454A4F</value>
+		<value condition="!Skin.String(BreadCrumbBackgroundColor,1) + !Skin.String(BreadCrumbBackgroundColor,3)">ff8A795D</value>
+		<value condition="!Skin.String(BreadCrumbBackgroundColor,1) + !Skin.String(BreadCrumbBackgroundColor,2)">ff3F3F3F</value>
+	</variable>
+	<variable name="BreadCrumbFontColor">
+		<value condition="!Skin.String(BreadCrumbFontColor,2) + !Skin.String(BreadCrumbFontColor,3) + !Skin.String(BreadCrumbFontColor,4)">BreadCrumbColor</value>
+		<value condition="!Skin.String(BreadCrumbFontColor,1) + !Skin.String(BreadCrumbFontColor,3) + !Skin.String(BreadCrumbFontColor,4)">cc72644E</value>
+		<value condition="!Skin.String(BreadCrumbFontColor,1) + !Skin.String(BreadCrumbFontColor,2) + !Skin.String(BreadCrumbFontColor,4)">ff454A4F</value>
+		<value condition="!Skin.String(BreadCrumbFontColor,1) + !Skin.String(BreadCrumbFontColor,2) + !SkinSystemTrayPlayIcon.String(BreadCrumbFontColor,3)">ccE5E5E5</value>
+	</variable>
+	<variable name="SystemTrayShutdownIcon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">SystemTray/PowerNoFocusGray.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/PowerNoFocusGold.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">SystemTray/WHITE/PowerNoFocusWhite.png</value>
+	</variable>
+	<variable name="SystemTrayPlayIcon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">SystemTray/PlayNoFocusGray.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/PlayNoFocusGold.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">SystemTray/WHITE/PlayNoFocusWhite.png</value>
+	</variable>
+	<variable name="SystemTraySearchIcon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">SystemTray/SearchIconNoFocusGray.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">SystemTray/GOLD/SearchIconNoFocusGold.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">SystemTray/WHITE/SearchIconNoFocusWhite.png</value>
+	</variable>
+	<variable name="BreadCrumbHomeIcon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">Breadcrumb/breadcrumb-home-nofocusGRAY.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">Breadcrumb/GOLD/breadcrumb-home-nofocusGOLD.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/breadcrumb-home-nofocuswHITE.png</value>
+	</variable>
+	<variable name="xbmc4xbox_Icon">
+		<value condition="!Skin.String(IconColor,2) + !Skin.String(IconColor,3)">Breadcrumb/xbmc4xbox_logo.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,3)">Breadcrumb/GOLD/xbmc4xbox_logo.png</value>
+		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/xbmc4xbox_logo.png</value>
+	</variable>
+
+	<!--(((RAM SAVING BG'S)))=================================-->
+	<variable name="RamSavingBackgrounds">
+		<value condition="!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-blue.jpg</value>
+		<value condition="Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-gray.jpg</value>
+		<value condition="!Skin.String(Universal_CLASSIC_BG_Color,2) + Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-red.jpg</value>
+		<value condition="!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-green.jpg</value>
+	</variable>
+
+</includes>
