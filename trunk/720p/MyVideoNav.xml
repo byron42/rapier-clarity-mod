@@ -15,20 +15,18 @@
 				<control type="group"> <!--If Fanart is Visible then fade...-->
 					<animation effect="fade"  start="100" end="0" time="500" delay="0" condition="!IsEmpty(Listitem.Property(Fanart_Image)) + [Window.IsActive(VideoLibrary) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]]  | [Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)]  | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]]">Conditional</animation>
 					<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
-						<visible>Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
 							<posx>0</posx>
 							<description>Universal Classic Background</description>
 							<posy>MenuBarOffsetY</posy>
 							<width>1280</width>
 							<height>720</height>
-							<texture background="true">backgrounds/default-background-blue.jpg</texture>
+							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
-							<visible>!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)</visible>
 						</control>
-						<include condition="Skin.String(Universal_CLASSIC_BG_Color)" file="includes_RamSavingBackgrounds.xml">UniversalBackgroundColors</include>
 					</control>
 					<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
 						<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>

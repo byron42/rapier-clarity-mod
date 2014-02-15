@@ -12,7 +12,7 @@
 			<animation effect="fade"  start="100" end="0" delay="950" time="50" condition="Window.IsActive(3071) | Window.IsActive(3072)
 			| Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
 			<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
-				<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+				<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 				<control type="image">
 					<posx>0</posx>
 					<description>Universal Classic Background</description>
@@ -5103,7 +5103,7 @@
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
-						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+						<!-- <animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation> -->
 					</control>	
 				<!--xbumc4xbox logo-->		
 					<control type="button" id="837"> 
@@ -5121,7 +5121,7 @@
 						<onright>458</onright>
 						<onleft>350</onleft>
 						<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
-						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+						<!-- <animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation> -->
 					</control>
 					<control type="image">
 						<description>xbmc4xbox Icon No Focus</description>

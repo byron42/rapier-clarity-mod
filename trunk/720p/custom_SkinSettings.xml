@@ -11,19 +11,19 @@
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">
 				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
-					<visible>Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
-					<control type="image">
-						<posx>0</posx>
-						<description>Universal Classic Background</description>
-						<posy>MenuBarOffsetY</posy>
-						<width>1280</width>
-						<height>720</height>
-						<texture background="true">$VAR[RamSavingBackgrounds]</texture>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>BackgroundCrossfadeTime</fadetime>
-						<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<posx>0</posx>
+							<description>Universal Classic Background</description>
+							<posy>MenuBarOffsetY</posy>
+							<width>1280</width>
+							<height>720</height>
+							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
 					</control>
-				</control>
 				<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
 					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 					<control type="image">
@@ -6319,7 +6319,7 @@
 				<control type="group" id="600">
 					<posx>1055</posx>
 					<posy>4</posy>
-					<controlcontrol always="true">345</controlcontrol>
+					<defaultcontrol always="true">345</defaultcontrol>
 					<control type="image">			
 						<width>219</width>
 						<height>35</height>
@@ -6355,7 +6355,7 @@
 							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 							<ondown>850</ondown>
 							<onleft>346</onleft>
-							<onright>350</onright>
+							<onright>837</onright>
 							<!-- SystemTrayButtonFocusAnim -->
 							<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
 							<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
@@ -6481,7 +6481,7 @@
 						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 						<ondown>850</ondown>
 						<onright>458</onright>
-						<onleft>350</onleft>
+						<onleft>345</onleft>
 						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
