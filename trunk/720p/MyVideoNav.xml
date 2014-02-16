@@ -9332,10 +9332,9 @@
 						<width>ScreenWidth</width>
 						<height>53</height>
 						<texture border="0,0,0,7">top-bar-background.png</texture>
-						<colordiffuse>ff454A4F</colordiffuse> <!-- BLUE -->
-						<visible>!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)</visible>
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 					</control>
-					<include condition="Skin.String(TopBarColor)"file="includes_BreadCrumbSettings.xml">TopBarColorSettings</include>
+					
 					<control type="image" id="1110">
 						<width>ScreenWidth</width>
 						<posy>1</posy>
@@ -9356,19 +9355,7 @@
 						<width>219</width>
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
-						<visible>!Control.HasFocus(345) + !Control.HasFocus(346)</visible>
-					</control>
-					<control type="image">
-						<width>219</width>
-						<height>35</height>
-						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
-						<visible>Control.HasFocus(345) | Control.HasFocus(346)</visible>
-						<!-- SystemTrayPulseAnim -->
-						<animation effect="fade" start="80" time="600" pulse="true" condition="true">Conditional</animation>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 					</control>
 					<control type="label">
 						<description>Time</description>
@@ -9377,27 +9364,56 @@
 						<width>145</width>
 						<height>35</height>
 						<font>TimeFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<aligny>center</aligny>
 						<label>$INFO[System.Time]</label>
 					</control>
-					<control type="group"> <!------------- DEFAULT ICON --------------------->
-						<visible>!Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
+				<!--shutdown/play icons-->
+					<control type="group">
 						<posx>2</posx>
+						<control type="button" id="345">
+							<description>Shutdown</description>
+							<posx>183</posx>
+							<posy>2.85</posy>
+							<width>29</width>
+							<height>29</height>
+							<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+							<texturenofocus></texturenofocus>
+							<colordiffuse>FFFFFFFF</colordiffuse>
+							<onclick>ActivateWindow(ShutdownMenu)</onclick>
+							<pulseonselect>true</pulseonselect>
+							<onup>-</onup>
+							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+							<ondown>850</ondown>
+							<onleft>346</onleft>
+							<onright>837</onright>
+							<!-- SystemTrayButtonFocusAnim -->
+							<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+							<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+						</control>
+						<control type="image">
+							<description>Shutdown No Focus</description>
+							<posx>183</posx>
+							<posy>2.85</posy>
+							<width>29</width>
+							<height>29</height>
+							<texture>$VAR[SystemTrayShutdownIcon]</texture>
+							<colordiffuse></colordiffuse>
+							<visible>!Control.HasFocus(345)</visible>
+						</control>
 						<control type ="button" id="346">
-							<description>Eject Drive</description>
+							<description>Play Icon</description>
 							<posx>148</posx>
 							<posy>2.85</posy>
 							<width>34</width>
 							<height>29</height>
 							<texturefocus>SystemTray/PlayFocus.png</texturefocus>
-							<texturenofocus>SystemTray/PlayNoFocusGray.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
+							<texturenofocus></texturenofocus>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<onclick>XBMC.PlayDVD </onclick>
 							<pulseonselect>true</pulseonselect>
 							<onup>-</onup>
+							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 							<ondown>850</ondown>
 							<onleft>458</onleft>
 							<onright>345</onright>
@@ -9405,113 +9421,15 @@
 							<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
 							<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
 						</control>
-						<control type="button" id="345">
-							<description>Shutdown</description>
-							<posx>183</posx>
-							<posy>2.85</posy>
-							<width>29</width>
-							<height>29</height>
-							<texturefocus>SystemTray/PowerFocus.png</texturefocus>
-							<texturenofocus>SystemTray/PowerNoFocusGray.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<onclick>ActivateWindow(ShutdownMenu)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
-							<ondown>850</ondown>
-							<onleft>346</onleft>
-							<onright>837</onright>
-							<!-- SystemTrayButtonFocusAnim -->
-							<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
-							<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
-						</control>
-					</control>
-					<control type="group"> <!------------- GOLD ICON ------------------------>
-						<posx>2</posx>
-						<visible>Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
-						<control type="button" id="346">
-							<description>Eject Drive</description>
+						<control type="image">
+							<description>Play No Focus</description>
 							<posx>148</posx>
 							<posy>2.85</posy>
 							<width>34</width>
 							<height>29</height>
-							<texturefocus>SystemTray/PlayFocus.png</texturefocus>
-							<texturenofocus>SystemTray/GOLD/PlayNoFocusGold.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<onclick>XBMC.PlayDVD </onclick>
-							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
-							<ondown>850</ondown>
-							<onleft>458</onleft>
-							<onright>345</onright>
-							<!-- SystemTrayButtonFocusAnim -->
-							<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
-							<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
-						</control>
-						<control type="button" id="345">
-							<description>Shutdown</description>
-							<posx>183</posx>
-							<posy>2.85</posy>
-							<width>29</width>
-							<height>29</height>
-							<texturefocus>SystemTray/PowerFocus.png</texturefocus>
-							<texturenofocus>SystemTray/GOLD/PowerNoFocusGold.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<onclick>ActivateWindow(ShutdownMenu)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
-							<ondown>850</ondown>
-							<onleft>346</onleft>
-							<onright>837</onright>
-							<!-- SystemTrayButtonFocusAnim -->
-							<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
-							<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
-						</control>
-					</control>
-					<control type="group"> <!------------- WHITE ICON ----------------------->
-						<posx>2</posx>
-						<visible>!Skin.String(IconColor,2) + Skin.String(IconColor,3)</visible>
-						<control type="button" id="346">
-							<description>Eject Drive</description>
-							<posx>146</posx>
-							<posy>2.85</posy>
-							<width>34</width>
-							<height>29</height>
-							<texturefocus>SystemTray/PlayFocus.png</texturefocus>
-							<texturenofocus>SystemTray/WHITE/PlayNoFocusWhite.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse> 
-							<onclick>XBMC.PlayDVD </onclick>
-							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
-							<ondown>850</ondown>
-							<onleft>458</onleft>
-							<onright>345</onright>
-							<!-- SystemTrayButtonFocusAnim -->
-							<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
-							<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
-						</control>
-						<control type="button" id="345">
-							<description>Shutdown</description>
-							<posx>183</posx>
-							<posy>2.85</posy>
-							<width>29</width>
-							<height>29</height>
-							<texturefocus>SystemTray/PowerFocus.png</texturefocus>
-							<texturenofocus>SystemTray/WHITE/PowerNoFocusWhite.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse>
-							<onclick>ActivateWindow(ShutdownMenu)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
-							<ondown>850</ondown>
-							<onleft>346</onleft>
-							<onright>837</onright>
-							<!-- SystemTrayButtonFocusAnim -->
-							<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
-							<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+							<texture>$VAR[SystemTrayPlayIcon]</texture>
+							<colordiffuse></colordiffuse>
+							<visible>!Control.HasFocus(346)</visible>
 						</control>
 					</control>
 				</control>
@@ -9530,8 +9448,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9542,8 +9459,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)</visible>
@@ -9557,8 +9473,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9569,8 +9484,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[135][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/1/,Left) | Substring(Container.FolderPath,videodb://2/1/,Left) | Substring(Container.FolderPath,videodb://3/1/,Left)</visible>
@@ -9584,8 +9498,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9596,8 +9509,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[369][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/2/,Left) | Substring(Container.FolderPath,videodb://2/2/,Left) | Substring(Container.FolderPath,videodb://3/2/,Left)</visible>
@@ -9611,8 +9523,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9623,8 +9534,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[345][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/3/,Left) | Substring(Container.FolderPath,videodb://2/3/,Left) | Substring(Container.FolderPath,videodb://3/3/,Left)</visible>
@@ -9638,8 +9548,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9650,8 +9559,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[344][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/4/,Left) | Substring(Container.FolderPath,videodb://2/4/,Left)</visible>
@@ -9665,8 +9573,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9677,8 +9584,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[133][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://3/4/,Left)</visible>
@@ -9692,8 +9598,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9704,8 +9609,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[132][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://3/5/,Left)</visible>
@@ -9719,8 +9623,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9731,8 +9634,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[20348][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/5/,Left) | Substring(Container.FolderPath,videodb://3/6/,Left)</visible>
@@ -9746,8 +9648,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9758,8 +9659,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[20388][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/6/,Left) | Substring(Container.FolderPath,videodb://2/5/,Left) | Substring(Container.FolderPath,videodb://3/7/,Left)</visible>
@@ -9773,8 +9673,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9785,8 +9684,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[136][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,special://videoplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)</visible>
@@ -9800,8 +9698,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9812,8 +9709,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,plugin://video/,Left)</visible>
@@ -9827,8 +9723,7 @@
 						<width>340</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9839,8 +9734,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!-----------------------------------------------------------[BreadCrumbBtn_Big]---------------->
 						<label>[UPPERCASE]$LOCALIZE[31804][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://4/,Left) | Substring(Container.FolderPath,videodb://5/,Left) | Substring(Container.FolderPath,videodb://6/,Left)</visible>
@@ -9859,8 +9753,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9871,8 +9764,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[3][/UPPERCASE] </label>
 						<visible>!Substring(Container.FolderPath,videodb://1/,Left) + !Substring(Container.FolderPath,videodb://4/,Left)
@@ -9885,8 +9777,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9897,8 +9788,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[20342][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://1/,Left) | Substring(Container.FolderPath,videodb://4/,Left)</visible>
@@ -9910,8 +9800,7 @@
 						<width>240</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9922,8 +9811,7 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 						<label>[UPPERCASE]$LOCALIZE[20343][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://2/,Left) | Substring(Container.FolderPath,videodb://5/,Left)</visible>
@@ -9936,8 +9824,7 @@
 						<width>320</width>
 						<height>35</height>
 						<font>BreadCrumbFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -9948,78 +9835,46 @@
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<!------------------------- BreadCrumbBtn_Big -------------------------------------------------------------------------->
 						<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE] </label>
 						<visible>Substring(Container.FolderPath,videodb://3/,Left) | Substring(Container.FolderPath,videodb://6/,Left)</visible>
 					</control>
 				</control>
 				<!--BreadCrumbHome-->
-				<control type="group" id="601">
+				<control type="group">
 					<control type="image">
 						<width>70</width>
-						<height>45</height>
+						<height>44</height> <!--BC HOME-->
 						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 					</control>	
-					<control type="group"> <!------------- DEFAULT ICON --------------------->
-						<visible>!Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
-						<control type="button"  id="837">
-							<posx>10</posx>
-							<posy>6</posy>
-							<width>31</width>
-							<height>28</height>
-							<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
-							<texturenofocus>Breadcrumb/breadcrumb-home-nofocusGRAY.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse> 
-							<onclick>ActivateWindow(Home)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<ondown>850</ondown>
-							<onright>458</onright>
-							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
-						</control> 
+				 <!--home icon-->
+					<control type="button"  id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
-					<control type="group"> <!------------- GOLD ICON ------------------------>
-						<visible>Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
-						<control type="button"  id="837">
-							<posx>10</posx>
-							<posy>6</posy>
-							<width>31</width>
-							<height>28</height>
-							<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
-							<texturenofocus>Breadcrumb/GOLD/breadcrumb-home-nofocusGOLD.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse> 
-							<onclick>ActivateWindow(Home)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<ondown>850</ondown>
-							<onright>458</onright>
-							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
-						</control>
-					</control> 
-					<control type="group"> <!------------- WHITE ICON ----------------------->
-						<visible>!Skin.String(IconColor,2) + Skin.String(IconColor,3)</visible>
-						<control type="button"  id="837">
-							<posx>10</posx>
-							<posy>6</posy>
-							<width>31</width>
-							<height>28</height>
-							<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
-							<texturenofocus>Breadcrumb/WHITE/breadcrumb-home-nofocuswHITE.png</texturenofocus>
-							<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-							<colordiffuse>FFFFFFFF</colordiffuse> 
-							<onclick>ActivateWindow(Home)</onclick>
-							<pulseonselect>true</pulseonselect>
-							<ondown>850</ondown>
-							<onright>458</onright>
-							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
-						</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
 					</control>
 				</control>
 				<!--*************************************************************************************************-->
@@ -10040,8 +9895,7 @@
 						<height>35</height>
 						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						<onclick>ActivateWindow(MyWeather)</onclick>
 						<ondown>850</ondown>
 						<onright>346</onright>
@@ -10059,8 +9913,7 @@
 						<width>55</width>
 						<height>35</height>
 						<font>VolumeFont</font>
-						<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-						<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[Weather.Temperature]</label>
@@ -10094,8 +9947,7 @@
 						<width>270</width>
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<include condition="skin.String(BreadCrumbBackgroundColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbBackgroundSettings</include>
-						<colordiffuse condition="Skin.String(BreadCrumbBackgroundColor,1)">ff454A4F</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -10131,8 +9983,7 @@
 							<height>15</height>
 							<scrollout>false</scrollout>
 							<font>ScanContentFont</font>
-							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 							<align>left</align>
 							<aligny>center</aligny>
 							<pauseatend>4000</pauseatend>
@@ -10149,8 +10000,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont2</font>
-							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
@@ -10169,8 +10019,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont</font>
-							<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-							<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>

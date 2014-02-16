@@ -22,11 +22,9 @@
 				<width>ScreenWidth</width>
 				<height>48</height>
 				<texture flipy="true" border="0,0,0,7">top-bar-background.png</texture>
-				<colordiffuse>ff454A4F</colordiffuse> <!-- BLUE -->
-				<visible>!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)</visible>
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<include condition="Skin.String(TopBarColor)"file="includes_BreadCrumbSettings.xml">VideoScanBarColorSettings</include>
 			<!--****************************************************************************************************************-->
 	
 		<!-- PROGRESS BAR -------------------------------->		
@@ -60,8 +58,7 @@
 				<width>190</width>
 				<height>40</height>
 				<font>ListLabel2Font</font>
-				<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-				<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[13413]...</label>
@@ -74,8 +71,7 @@
 				<width>1070</width>
 				<height>40</height>
 				<font>ScanContentFont</font>
-				<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-				<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<haspath>true</haspath>
@@ -89,8 +85,7 @@
 				<width>1070</width>
 				<height>40</height>
 				<font>ScanContentFont</font>
-				<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>
-				<textcolor condition="Skin.String(BreadCrumbFontColor,1)">BreadCrumbColor</textcolor> <!-- GREY -->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<visible>!Skin.HasSetting(No_Media_Titles_In_Scanner)</visible>
