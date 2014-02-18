@@ -1,6 +1,29 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+2.17.14 Version 3.5.2
+
+
+	2.17.14
+------------------------------------------------------------------------------
+		= Reverted custom home sub-menus (took too much ram for now...still gonna figure it
+		  out hopefully)
+
+		= Added Skin Variables -- doing this allowed me to add a bit of ram back by 
+		  getting rid of a couple includes files
+			
+			--> Includes_BreadcrumbSettings.xml
+			--> Includes_RamSavingBackgrounds.xml
+			
+		= Cleaned up custom submenu strings...
+		
+		= Fixed backgrounds for Keyboard and Select dialogs for particular situations 
+		  (sometimes these windows backgrounds would be mostly transparent when they
+		  weren't supposed to be)
+		 
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 1.29.14 Version 3.5.1
 
 

@@ -22,7 +22,16 @@
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+							<animation effect="fade" start="45" end="100" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>background-dim.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="10" end="35" time="400">WindowOpen</animation>
+							<animation effect="fade" start="35" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 					<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
@@ -36,28 +45,22 @@
 							<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+							<animation effect="fade" start="45" end="100" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+						</control>
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>background-dim.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="10" end="35" time="400">WindowOpen</animation>
+							<animation effect="fade" start="35" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 					
 					<!--*********************************** BackgroundSearch **********************************************-->
 					<control type="group">
-						<description>System Custom Background</description>
 						<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-						<control type="multiimage">
-							<description>Custom Background</description>
-							<posy>MenuBarOffsetY</posy>
-							<width>1280</width>
-							<height>720</height>
-							<imagepath background="true" fallback="special://skin/backgrounds/default-background-gray.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
-							<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-							<aspectratio>stretch</aspectratio>
-							<timeperimage>10000</timeperimage>
-							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<randomize>true</randomize>
-							<!-- BackgroundSystemDimAnim -->
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
-						</control>
 						<control type="image">
 							<description>Default Background</description>
 							<posy>MenuBarOffsetY</posy>
@@ -67,9 +70,18 @@
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+							<visible>!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))</visible>
 							<!-- BackgroundSystemDimAnim -->
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+							<animation effect="fade" start="45" end="100" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
+						</control>
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>background-dim.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="10" end="70" time="400">WindowOpen</animation>
+							<animation effect="fade" start="70" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 					<!--***************************************************************************************************--> 

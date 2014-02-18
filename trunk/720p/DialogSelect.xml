@@ -204,7 +204,16 @@
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+							<animation effect="fade" start="45" end="100" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>background-dim.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="10" end="35" time="400">WindowOpen</animation>
+							<animation effect="fade" start="35" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 					<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
@@ -218,43 +227,39 @@
 							<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+							<animation effect="fade" start="45" end="100" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
 						</control>
 					</control>
 					
-					<!--*********************************** BackgroundGeneral *********************************************-->
+					<!--*********************************** BackgroundSelect **********************************************-->
 					<control type="group">
-						<description>General Custom Background</description>
+						<description>System Custom Background</description>
 						<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-						<control type="multiimage">
-							<description>Custom Background</description>
-							<posy>MenuBarOffsetY</posy>
-							<width>1280</width>
-							<height>720</height>
-							<imagepath background="true" fallback="special://skin/images/backgrounds/background-general.jpg">$INFO[Skin.String(GeneralCustomBG)]</imagepath>
-							<visible>Skin.HasSetting(ApplyAllGeneralCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-							<aspectratio>stretch</aspectratio>
-							<timeperimage>10000</timeperimage>
-							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<randomize>true</randomize>
-							<!-- BackgroundGeneralDimAnim -->
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimGeneralCustomBG)">Conditional</animation>
-						</control>
 						<control type="image">
 							<description>Default Background</description>
 							<posy>MenuBarOffsetY</posy>
 							<width>1280</width>
 							<height>720</height>
-							<texture background="true">special://skin/images/backgrounds/background-general.jpg</texture>
-							<colordiffuse>-</colordiffuse>
+							<texture background="true" border="10">backgrounds/default-background-gray.jpg</texture>
+							<colordiffuse>FFFFFFFF</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
-							<visible>!Skin.HasSetting(ApplyAllGeneralCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-							<!-- BackgroundGeneralDimAnim -->
-							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimGeneralCustomBG)">Conditional</animation>
+							<visible>!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))</visible>
+							<!-- BackgroundSystemDimAnim -->
+							<animation effect="fade" start="40" end="100" time="400" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<posy>MenuBarOffsetY</posy>
+							<width>ScreenWidth</width>
+							<height>676</height>		
+							<texture>background-dim.png</texture>
+							<!-- MediaViewOpenCloseAnim -->
+							<animation effect="fade" start="10" end="60" time="400">WindowOpen</animation>
+							<animation effect="fade" start="60" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
-					<!--***************************************************************************************************-->
+					<!--***************************************************************************************************--> 
+					
 					
 					<!--*********************************** BackgroundFSVideo *********************************************-->
 					<control type="group">
@@ -784,7 +789,7 @@
 						<onleft>5</onleft>
 						<onright>101</onright>
 						<itemgap>5</itemgap>
-						<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(101)">Conditional</animation>
+						<animation effect="slide" end="10,0" time="0" condition="!Control.IsVisible(101)">Conditional</animation>
 						<itemlayout height="40" width="840">
 							<control type="image">
 								<posx>5</posx> 
@@ -897,8 +902,8 @@
 						<enable>false</enable>
 					</control>
 					<control type="scrollbar" id="101"> 
-						<posx>1053</posx>
-						<posy>195</posy>
+						<posx>1055</posx>
+						<posy>190</posy>
 						<height>370</height>
 						<width>5</width>
 						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>

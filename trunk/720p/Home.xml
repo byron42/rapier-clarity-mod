@@ -1510,8 +1510,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							<visible>Skin.String(VideosSubMenuBtn1-Script,SCRIPT) + Skin.String(VideosSubMenuBtn1-scriptlabel) + Skin.String(VideosSubMenuBtn1-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -1521,8 +1520,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn1-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							<visible>Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn1-label) + Skin.String(VideosSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -1530,7 +1528,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn1-NAME)) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							<visible>Skin.string(VideosSubMenuBtn1-NAME) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -1543,8 +1541,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							<visible>Skin.String(VideosSubMenuBtn2-Script,SCRIPT) + Skin.String(VideosSubMenuBtn2-scriptlabel) + Skin.String(VideosSubMenuBtn2-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -1554,8 +1551,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn2-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							<visible>Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn2-label) + Skin.String(VideosSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -1563,7 +1559,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn2-NAME)) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							<visible>Skin.string(VideosSubMenuBtn2-NAME) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -1576,8 +1572,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							<visible>Skin.String(VideosSubMenuBtn3-Script,SCRIPT) + Skin.String(VideosSubMenuBtn3-scriptlabel) + Skin.String(VideosSubMenuBtn3-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -1587,8 +1582,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn3-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							<visible>Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn3-label) + Skin.String(VideosSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -1596,7 +1590,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn3-NAME)) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							<visible>Skin.string(VideosSubMenuBtn3-NAME) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -1609,8 +1603,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							<visible>Skin.String(VideosSubMenuBtn4-Script,SCRIPT) + Skin.String(VideosSubMenuBtn4-scriptlabel) + Skin.String(VideosSubMenuBtn4-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -1620,8 +1613,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn4-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							<visible>Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn4-label) + Skin.String(VideosSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -1629,7 +1621,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn4-NAME)) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							<visible>Skin.string(VideosSubMenuBtn4-NAME) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -1642,8 +1634,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							<visible>Skin.String(VideosSubMenuBtn5-Script,SCRIPT) + Skin.String(VideosSubMenuBtn5-scriptlabel) + Skin.String(VideosSubMenuBtn5-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -1653,8 +1644,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn5-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							<visible>Skin.String(VideosSubMenuBtn5-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn5-label) + Skin.String(VideosSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -1662,7 +1652,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn5-NAME)) + Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							<visible>Skin.string(VideosSubMenuBtn5-NAME) + Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -1675,8 +1665,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							<visible>Skin.String(VideosSubMenuBtn6-Script,SCRIPT) + Skin.String(VideosSubMenuBtn6-scriptlabel) + Skin.String(VideosSubMenuBtn6-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -1686,8 +1675,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn6-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							<visible>Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn6-label) + Skin.String(VideosSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -1695,7 +1683,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn6-NAME)) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							<visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -1708,8 +1696,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(VideosSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							<visible>Skin.String(VideosSubMenuBtn7-Script,SCRIPT) + Skin.String(VideosSubMenuBtn7-scriptlabel) + Skin.String(VideosSubMenuBtn7-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -1719,8 +1706,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(VideosSubMenuBtn7-label)) + !IsEmpty(Skin.String(VideosSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(VideosSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							<visible>Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn7-label) + Skin.String(VideosSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -1728,7 +1714,7 @@
 							<label2>$INFO[Skin.String(VideosSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(VideosSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(VideosSubMenuBtn7-NAME)) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							<visible>Skin.string(VideosSubMenuBtn7-NAME) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>						
@@ -1836,8 +1822,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn1-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn1-scriptlabel) + Skin.String(GeneralSubMenuBtn1-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -1847,8 +1832,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn1-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn1-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn1-label) + Skin.String(GeneralSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -1856,7 +1840,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn1-NAME)) + Skin.String(GeneralSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn1-NAME) + Skin.String(GeneralSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -1869,8 +1853,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn2-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn2-scriptlabel) + Skin.String(GeneralSubMenuBtn2-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -1880,8 +1863,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn2-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn2-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn2-label) + Skin.String(GeneralSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -1889,7 +1871,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn2-NAME)) + Skin.String(GeneralSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn2-NAME) + Skin.String(GeneralSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -1902,8 +1884,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn3-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn3-scriptlabel) + Skin.String(GeneralSubMenuBtn3-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -1913,8 +1894,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn3-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn3-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn3-label) + Skin.String(GeneralSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -1922,7 +1902,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn3-NAME)) + Skin.String(GeneralSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn3-NAME) + Skin.String(GeneralSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -1935,8 +1915,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn4-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn4-scriptlabel) + Skin.String(GeneralSubMenuBtn4-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -1946,8 +1925,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn4-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn4-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn4-label) + Skin.String(GeneralSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -1955,7 +1933,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn4-NAME)) + Skin.String(GeneralSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn4-NAME) + Skin.String(GeneralSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -1968,8 +1946,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn5-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn5-scriptlabel) + Skin.String(GeneralSubMenuBtn5-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -1979,8 +1956,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn5-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn5-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn5-label) + Skin.String(GeneralSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -1988,7 +1964,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn5-NAME)) + Skin.String(GeneralSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn5-NAME) + Skin.String(GeneralSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -2001,8 +1977,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn6-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn6-scriptlabel) + Skin.String(GeneralSubMenuBtn6-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -2012,8 +1987,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn6-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn6-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn6-label) + Skin.String(GeneralSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -2021,7 +1995,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn6-NAME)) + Skin.String(GeneralSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn6-NAME) + Skin.String(GeneralSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -2034,8 +2008,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(GeneralSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn7-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn7-scriptlabel) + Skin.String(GeneralSubMenuBtn7-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -2045,8 +2018,7 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(GeneralSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(GeneralSubMenuBtn7-label)) + !IsEmpty(Skin.String(GeneralSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(GeneralSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							<visible>Skin.String(GeneralSubMenuBtn7-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn7-label) + Skin.String(GeneralSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -2054,11 +2026,10 @@
 							<label2>$INFO[Skin.String(GeneralSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(GeneralSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(GeneralSubMenuBtn7-NAME)) + Skin.String(GeneralSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							<visible>Skin.string(GeneralSubMenuBtn7-NAME) + Skin.String(GeneralSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>	
-					
 				</control>			
 		
 				<control type="list" id="110"> <!--SYSTEM----(((8)---------------->
@@ -2245,8 +2216,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn1-scriptlabel) + Skin.String(ProgramsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -2256,8 +2226,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn1-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn1-label) + Skin.String(ProgramsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -2265,7 +2234,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn1-NAME)) + Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn1-NAME) + Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -2278,8 +2247,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn2-scriptlabel) + Skin.String(ProgramsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -2289,8 +2257,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn2-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn2-label) + Skin.String(ProgramsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -2298,7 +2265,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn2-NAME)) + Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn2-NAME) + Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -2311,8 +2278,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn3-scriptlabel) + Skin.String(ProgramsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -2322,8 +2288,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn3-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn3-label) + Skin.String(ProgramsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -2331,7 +2296,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn3-NAME)) + Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn3-NAME) + Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -2344,8 +2309,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn4-scriptlabel) + Skin.String(ProgramsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -2355,8 +2319,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn4-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn4-label) + Skin.String(ProgramsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -2364,7 +2327,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn4-NAME)) + Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn4-NAME) + Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -2377,8 +2340,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn5-scriptlabel) + Skin.String(ProgramsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -2388,8 +2350,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn5-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn5-label) + Skin.String(ProgramsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -2397,7 +2358,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn5-NAME)) + Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn5-NAME) + Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -2410,8 +2371,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn6-scriptlabel) + Skin.String(ProgramsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -2421,8 +2381,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn6-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn6-label) + Skin.String(ProgramsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -2430,7 +2389,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn6-NAME)) + Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn6-NAME) + Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -2443,8 +2402,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(ProgramsSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn7-scriptlabel) + Skin.String(ProgramsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -2454,8 +2412,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(ProgramsSubMenuBtn7-label)) + !IsEmpty(Skin.String(ProgramsSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(ProgramsSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							<visible>Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn7-label) + Skin.String(ProgramsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -2463,7 +2420,7 @@
 							<label2>$INFO[Skin.String(ProgramsSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(ProgramsSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(ProgramsSubMenuBtn7-NAME)) + Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							<visible>Skin.string(ProgramsSubMenuBtn7-NAME) + Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>						
@@ -2527,7 +2484,6 @@
 						</control>
 					</focusedlayout>
 					<content>
-						
 						<item id="1">
 							<description>Recently Added</description>
 							<label>31804</label>
@@ -2580,8 +2536,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn1-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn1-scriptlabel) + Skin.String(MoviesSubMenuBtn1-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -2591,8 +2546,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn1-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn1-label) + Skin.String(MoviesSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -2600,7 +2554,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn1-NAME)) + Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn1-NAME) + Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -2613,8 +2567,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn2-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn2-scriptlabel) + Skin.String(MoviesSubMenuBtn2-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -2624,8 +2577,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn2-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn2-label) + Skin.String(MoviesSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -2633,7 +2585,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn2-NAME)) + Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn2-NAME) + Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -2646,8 +2598,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn3-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn3-scriptlabel) + Skin.String(MoviesSubMenuBtn3-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -2657,8 +2608,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn3-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn3-label) + Skin.String(MoviesSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -2666,7 +2616,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn3-NAME)) + Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn3-NAME) + Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -2679,8 +2629,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn4-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn4-scriptlabel) + Skin.String(MoviesSubMenuBtn4-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -2690,8 +2639,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn4-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn4-label) + Skin.String(MoviesSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -2699,7 +2647,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn4-NAME)) + Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn4-NAME) + Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -2712,8 +2660,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn5-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn5-scriptlabel) + Skin.String(MoviesSubMenuBtn5-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -2723,8 +2670,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn5-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn5-label) + Skin.String(MoviesSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -2732,7 +2678,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn5-NAME)) + Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn5-NAME) + Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -2745,8 +2691,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn6-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn6-scriptlabel) + Skin.String(MoviesSubMenuBtn6-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -2756,8 +2701,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn6-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn6-label) + Skin.String(MoviesSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -2765,7 +2709,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn6-NAME)) + Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn6-NAME) + Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -2778,8 +2722,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(MoviesSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn7-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn7-scriptlabel) + Skin.String(MoviesSubMenuBtn7-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -2789,8 +2732,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(MoviesSubMenuBtn7-label)) + !IsEmpty(Skin.String(MoviesSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(MoviesSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							<visible>Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn7-label) + Skin.String(MoviesSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -2798,7 +2740,7 @@
 							<label2>$INFO[Skin.String(MoviesSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MoviesSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MoviesSubMenuBtn7-NAME)) + Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							<visible>Skin.string(MoviesSubMenuBtn7-NAME) + Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>						
@@ -2858,8 +2800,6 @@
 						</control>
 					</focusedlayout>
 					<content>
-						
-					
 						<item id="1">
 							<description>Recently Added</description>
 							<label>31804</label>
@@ -2913,8 +2853,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn1-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn1-scriptlabel) + Skin.String(TVShowsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -2924,8 +2863,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn1-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn1-label) + Skin.String(TVShowsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -2933,7 +2871,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn1-NAME)) + Skin.String(TVShowsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn1-NAME) + Skin.String(TVShowsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -2946,8 +2884,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn2-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn2-scriptlabel) + Skin.String(TVShowsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -2957,8 +2894,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn2-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn2-label) + Skin.String(TVShowsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -2966,7 +2902,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn2-NAME)) + Skin.String(TVShowsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn2-NAME) + Skin.String(TVShowsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -2979,8 +2915,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn3-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn3-scriptlabel) + Skin.String(TVShowsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -2990,8 +2925,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn3-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn3-label) + Skin.String(TVShowsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -2999,7 +2933,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn3-NAME)) + Skin.String(TVShowsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn3-NAME) + Skin.String(TVShowsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -3012,8 +2946,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn4-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn4-scriptlabel) + Skin.String(TVShowsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -3023,8 +2956,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn4-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn4-label) + Skin.String(TVShowsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -3032,7 +2964,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn4-NAME)) + Skin.String(TVShowsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn4-NAME) + Skin.String(TVShowsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -3045,8 +2977,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn5-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn5-scriptlabel) + Skin.String(TVShowsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -3056,8 +2987,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn5-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn5-label) + Skin.String(TVShowsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -3065,7 +2995,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn5-NAME)) + Skin.String(TVShowsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn5-NAME) + Skin.String(TVShowsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -3078,8 +3008,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn6-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn6-scriptlabel) + Skin.String(TVShowsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -3089,8 +3018,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn6-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn6-label) + Skin.String(TVShowsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -3098,7 +3026,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn6-NAME)) + Skin.String(TVShowsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn6-NAME) + Skin.String(TVShowsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -3111,8 +3039,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(TVShowsSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn7-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn7-scriptlabel) + Skin.String(TVShowsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -3122,8 +3049,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(TVShowsSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(TVShowsSubMenuBtn7-label)) + !IsEmpty(Skin.String(TVShowsSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(TVShowsSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							<visible>Skin.String(TVShowsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn7-label) + Skin.String(TVShowsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -3131,7 +3057,7 @@
 							<label2>$INFO[Skin.String(TVShowsSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(TVShowsSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(TVShowsSubMenuBtn7-NAME)) + Skin.String(TVShowsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							<visible>Skin.string(TVShowsSubMenuBtn7-NAME) + Skin.String(TVShowsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>
@@ -3206,20 +3132,16 @@
 							<label>133</label>
 							<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>	
 						</item>
-						
-						
 						<item id="2">
 							<description>Albums</description>
 							<label>132</label>
-						<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>						
+							<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>						
 						</item>
-						
 						<item id="6">
 							<description>Add-Ons</description>
 							<label>31919</label>
 							<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>			
 						</item>
-						
 						<item id="3">
 							<description>Songs</description>
 							<label>134</label>
@@ -3262,8 +3184,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							<visible>Skin.String(MusicSubMenuBtn1-Script,SCRIPT) + Skin.String(MusicSubMenuBtn1-scriptlabel) + Skin.String(MusicSubMenuBtn1-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -3273,8 +3194,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn1-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							<visible>Skin.String(MusicSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn1-label) + Skin.String(MusicSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -3282,7 +3202,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn1-NAME)) + Skin.String(MusicSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							<visible>Skin.string(MusicSubMenuBtn1-NAME) + Skin.String(MusicSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -3295,8 +3215,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							<visible>Skin.String(MusicSubMenuBtn2-Script,SCRIPT) + Skin.String(MusicSubMenuBtn2-scriptlabel) + Skin.String(MusicSubMenuBtn2-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -3306,8 +3225,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn2-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							<visible>Skin.String(MusicSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn2-label) + Skin.String(MusicSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -3315,7 +3233,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn2-NAME)) + Skin.String(MusicSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							<visible>Skin.string(MusicSubMenuBtn2-NAME) + Skin.String(MusicSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -3328,8 +3246,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							<visible>Skin.String(MusicSubMenuBtn3-Script,SCRIPT) + Skin.String(MusicSubMenuBtn3-scriptlabel) + Skin.String(MusicSubMenuBtn3-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -3339,8 +3256,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn3-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							<visible>Skin.String(MusicSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn3-label) + Skin.String(MusicSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -3348,7 +3264,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn3-NAME)) + Skin.String(MusicSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							<visible>Skin.string(MusicSubMenuBtn3-NAME) + Skin.String(MusicSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -3361,8 +3277,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							<visible>Skin.String(MusicSubMenuBtn4-Script,SCRIPT) + Skin.String(MusicSubMenuBtn4-scriptlabel) + Skin.String(MusicSubMenuBtn4-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -3372,8 +3287,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn4-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							<visible>Skin.String(MusicSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn4-label) + Skin.String(MusicSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -3381,7 +3295,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn4-NAME)) + Skin.String(MusicSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							<visible>Skin.string(MusicSubMenuBtn4-NAME) + Skin.String(MusicSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -3394,8 +3308,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							<visible>Skin.String(MusicSubMenuBtn5-Script,SCRIPT) + Skin.String(MusicSubMenuBtn5-scriptlabel) + Skin.String(MusicSubMenuBtn5-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -3405,8 +3318,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn5-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							<visible>Skin.String(MusicSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn5-label) + Skin.String(MusicSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -3414,7 +3326,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn5-NAME)) + Skin.String(MusicSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							<visible>Skin.string(MusicSubMenuBtn5-NAME) + Skin.String(MusicSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -3427,8 +3339,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							<visible>Skin.String(MusicSubMenuBtn6-Script,SCRIPT) + Skin.String(MusicSubMenuBtn6-scriptlabel) + Skin.String(MusicSubMenuBtn6-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -3438,8 +3349,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn6-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							<visible>Skin.String(MusicSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn6-label) + Skin.String(MusicSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -3447,7 +3357,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn6-NAME)) + Skin.String(MusicSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							<visible>Skin.string(MusicSubMenuBtn6-NAME) + Skin.String(MusicSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -3460,8 +3370,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(MusicSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							<visible>Skin.String(MusicSubMenuBtn7-Script,SCRIPT) + Skin.String(MusicSubMenuBtn7-scriptlabel) + Skin.String(MusicSubMenuBtn7-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -3471,8 +3380,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(MusicSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(MusicSubMenuBtn7-label)) + !IsEmpty(Skin.String(MusicSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(MusicSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							<visible>Skin.String(MusicSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn7-label) + Skin.String(MusicSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -3480,7 +3388,7 @@
 							<label2>$INFO[Skin.String(MusicSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(MusicSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(MusicSubMenuBtn7-NAME)) + Skin.String(MusicSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							<visible>Skin.string(MusicSubMenuBtn7-NAME) + Skin.String(MusicSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>						
@@ -3582,8 +3490,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn1-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn1-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn1-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn1-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn1-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn1-scriptlabel) + Skin.String(Add_onsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Plugin Button 1</description>
@@ -3593,8 +3500,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn1-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn1-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn1-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn1-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn1-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn1-label) + Skin.String(Add_onsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
 						</item>
 						<item id="1">
 							<description>Custom Favourite Button 1</description>
@@ -3602,7 +3508,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn1-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn1Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn1-NAME)) + Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn1-NAME) + Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
 						</item>
 					<!--Button1-->
 					<!--Button2-->
@@ -3615,8 +3521,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn2-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn2-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn2-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn2-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn2-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn2-scriptlabel) + Skin.String(Add_onsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Plugin Button 2</description>
@@ -3626,8 +3531,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn2-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn2-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn2-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn2-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn2-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn2-label) + Skin.String(Add_onsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
 						</item>
 						<item id="2">
 							<description>Custom Favourite Button 2</description>
@@ -3635,7 +3539,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn2-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn2Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn2-NAME)) + Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn2-NAME) + Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
 						</item>
 					<!--Button2-->
 					<!--Button3-->
@@ -3648,8 +3552,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn3-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn3-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn3-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn3-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn3-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn3-scriptlabel) + Skin.String(Add_onsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Plugin Button 3</description>
@@ -3659,8 +3562,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn3-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn3-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn3-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn3-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn3-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn3-label) + Skin.String(Add_onsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
 						</item>
 						<item id="3">
 							<description>Custom Favourite Button 3</description>
@@ -3668,7 +3570,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn3-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn3Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn3-NAME)) + Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn3-NAME) + Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
 						</item>
 					<!--Button3-->
 					<!--Button4-->
@@ -3681,8 +3583,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn4-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn4-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn4-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn4-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn4-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn4-scriptlabel) + Skin.String(Add_onsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Plugin Button 4</description>
@@ -3692,8 +3593,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn4-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn4-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn4-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn4-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn4-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn4-label) + Skin.String(Add_onsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
 						</item>
 						<item id="4">
 							<description>Custom Favourite Button 4</description>
@@ -3701,7 +3601,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn4-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn4Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn4-NAME)) + Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn4-NAME) + Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
 						</item>
 					<!--Button4-->
 					<!--Button5-->
@@ -3714,8 +3614,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn5-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn5-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn5-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn5-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn5-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn5-scriptlabel) + Skin.String(Add_onsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Plugin Button 5</description>
@@ -3725,8 +3624,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn5-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn5-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn5-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn5-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn5-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn5-label) + Skin.String(Add_onsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
 						</item>
 						<item id="5">
 							<description>Custom Favourite Button 5</description>
@@ -3734,7 +3632,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn5-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn5Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn5-NAME)) + Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn5-NAME) + Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
 						</item>
 					<!--Button5-->
 					<!--Button6-->
@@ -3747,8 +3645,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn6-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn6-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn6-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn6-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn6-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn6-scriptlabel) + Skin.String(Add_onsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Plugin Button 6</description>
@@ -3758,8 +3655,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn6-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn6-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn6-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn6-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn6-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn6-label) + Skin.String(Add_onsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
 						</item>
 						<item id="6">
 							<description>Custom Favourite Button 6</description>
@@ -3767,7 +3663,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn6-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn6Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn6-NAME)) + Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn6-NAME) + Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
 						</item>
 					<!--Button6-->
 					<!--Button7-->
@@ -3780,8 +3676,7 @@
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn7-scriptloc)])</onclick>
 							<onclick>ActivateWindow(Scripts)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn7-Script,SCRIPT) + !IsEmpty(Skin.String(Add_onsSubMenuBtn7-scriptlabel))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn7-scriptloc)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn7-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn7-scriptlabel) + Skin.String(Add_onsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Plugin Button 7</description>
@@ -3791,8 +3686,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn7-label)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn7-pluginfolder)]/)</onclick>
-							<visible>Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN) + !IsEmpty(Skin.String(Add_onsSubMenuBtn7-label)) + !IsEmpty(Skin.String(Add_onsSubMenuBtn7-pluginwindow))
-							+ !IsEmpty(Skin.String(Add_onsSubMenuBtn7-pluginfolder)) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							<visible>Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn7-label) + Skin.String(Add_onsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
 						</item>
 						<item id="7">
 							<description>Custom Favourite Button 7</description>
@@ -3800,7 +3694,7 @@
 							<label2>$INFO[Skin.String(Add_onsSubMenuBtn7-NAME)]</label2>
 							<!--<onclick>Dialog.Close(3077)</onclick>-->
 							<onclick>$INFO[Skin.String(Add_onsSubMenuBtn7Param)]</onclick>
-							<visible>!IsEmpty(Skin.string(Add_onsSubMenuBtn7-NAME)) + Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + !Skin.HasSetting(ShowHomeCustomIcons) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							<visible>Skin.string(Add_onsSubMenuBtn7-NAME) + Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
 						</item>
 					<!--Button7------------------------------------------------------------------------------------------------------------>
 					</content>
