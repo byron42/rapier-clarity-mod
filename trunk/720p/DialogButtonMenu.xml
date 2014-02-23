@@ -7,6 +7,11 @@
 			
 	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
 			<control type="group">	
+			<!-- BackgroundDimAnim -->
+				<animation effect="fade" start="100" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+			<!-- BackgroundOpenCloseAnim -->
+				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="0" delay="100" time="200">WindowClose</animation>
 				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 					<control type="image">
@@ -141,11 +146,7 @@
 				</control>
 				<!--***************************************************************************************************-->
 				
-				<!-- BackgroundDimAnim -->
-				<animation effect="fade" start="100" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
-				<!-- BackgroundOpenCloseAnim -->
-				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
-				<animation effect="fade" start="100" end="0" delay="100" time="200">WindowClose</animation>
+			
 			</control>
 			
 	<!--(((CONTROLS)))===========================================================================================================================-->			
@@ -417,9 +418,11 @@
 						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
 						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
 						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>AA555555</disabledcolor> <!-- JET -->
 						<onclick>ActivateWindow(134)</onclick>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
+						<enable>!Window.IsActive(VirtualKeyboard)</enable>
 					</control>
 					<control type="button" id="111">
 						<description>System Info</description>

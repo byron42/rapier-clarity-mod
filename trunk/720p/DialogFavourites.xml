@@ -6,7 +6,7 @@
 			<animation effect="fade"  end="100" delay="400" condition="Window.IsActive(Home) + !Window.IsVisible(ShutdownMenu)">WindowOpen</animation>
 			<!---->
 			<animation effect="fade"  start="0" end="100" delay="350"  condition="Window.IsVisible(ShutdownMenu)">WindowOpen</animation>
-			<animation effect="fade"  start="100" end="0" delay="300" time="150" condition="Window.IsActive(ShutdownMenu)">Conditional</animation> <!--open shutdown while favourites is open-->
+			<animation effect="fade"  start="100" end="0" delay="300" time="150" condition="Window.IsActive(ShutdownMenu) | Window.Next(VirtualKeyboard)">Conditional</animation> <!--open shutdown while favourites is open-->
 			<animation effect="fade"  end="100" delay="100" condition="">Conditional</animation>
 			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
