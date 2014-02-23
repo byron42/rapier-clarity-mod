@@ -289,5 +289,12 @@
 		</control>
 	</include>-->
 	
+	<include name="TallBackground">
+		<height>720</height>
+	</include>
+	
+	<include name="NormalBackground">
+		<height>676</height>
+	</include>
 	
 </includes>

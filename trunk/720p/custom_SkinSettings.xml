@@ -1453,6 +1453,35 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
+						<control type="radiobutton" id="1690">
+							<description>Transparent Menu Backs</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>8</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31520] $LOCALIZE[1397] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[13324]</label>
+							clear - style menu backgrounds
+							<selected>Skin.HasSetting(TransparentMenuBacks)</selected>
+							<onclick>Skin.ToggleSetting(TransparentMenuBacks)</onclick>
+							<!-- SettingsItemOpenCloseAnim -->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11903">
 							<posx>-3</posx><!---->
@@ -1651,6 +1680,28 @@
 							<label>31539</label>
 							<selected>Skin.HasSetting(HideGlobalSearchIcon)</selected>
 							<onclick>Skin.ToggleSetting(HideGlobalSearchIcon)</onclick>
+						</control> 
+						<control type="radiobutton" id="10130"> 
+							<description>Always Show Home Submenus</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>8</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[513] $LOCALIZE[1034] $LOCALIZE[13108]</label>
+							<selected>Skin.HasSetting(ConstantHomeSubmenu)</selected>
+							<onclick>Skin.ToggleSetting(ConstantHomeSubmenu)</onclick>
 						</control> 
 						<control type="radiobutton" id="10030"> 
 							<description>Hide Submenu Navigation Arrows</description>

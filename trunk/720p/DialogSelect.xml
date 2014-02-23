@@ -335,10 +335,8 @@
 							<width>ScreenWidth</width>
 							<height>53</height>
 							<texture border="0,0,0,7">top-bar-background.png</texture>
-							<colordiffuse>ff454A4F</colordiffuse> <!-- BLUE -->
-							
+							<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 						</control>
-						
 						<control type="image" id="1110">
 							<width>ScreenWidth</width>
 							<posy>1</posy>
@@ -354,86 +352,133 @@
 					<control type="group" id="600">
 						<posx>1055</posx>
 						<posy>4</posy>
-						<defaultcontrol always="true">345</defaultcontrol>
-						<control type="image">			
-							<width>219</width>
-							<height>35</height>
-							<texture border="8">SystemTray/top-bar-status-background.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
-						</control>
-						<control type="label">
-							<description>Time</description>
-							<posx>9.5</posx>
-							<posy>1</posy>
-							<width>145</width>
-							<height>35</height>
-							<font>TimeFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
-							<aligny>center</aligny>
-							<label>$INFO[System.Time]</label>
-						</control>
-					<!--shutdown/play icons-->
+						<ondown>850</ondown>
+						<defaultcontrol always="true">350</defaultcontrol>
 						<control type="group">
-							<posx>2</posx>
-							<control type="button" id="345">
-								<description>Shutdown</description>
-								<posx>183</posx>
+							<animation effect="slide" end="-30,0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
+							<control type="image">			
+								<width>219</width>
+								<height>35</height>
+								<texture border="8">SystemTray/top-bar-status-background.png</texture>
+								<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							</control>
+							<control type="label">
+								<description>Time</description>
+								<posx>9.5</posx>
+								<posy>1</posy>
+								<width>145</width>
+								<height>35</height>
+								<font>TimeFont</font>
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+								<aligny>center</aligny>
+								<label>$INFO[System.Time]</label>
+							</control>
+						<!--shutdown/play icons-->
+							<control type="group">
+								<posx>2</posx>
+								<control type="button" id="345">
+									<description>Shutdown</description>
+									<posx>183</posx>
+									<posy>2.85</posy>
+									<width>29</width>
+									<height>29</height>
+									<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+									<texturenofocus></texturenofocus>
+									<colordiffuse>FFFFFFFF</colordiffuse>
+									<onclick>ActivateWindow(ShutdownMenu)</onclick>
+									<pulseonselect>true</pulseonselect>
+									<onup>-</onup>
+									<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+									<ondown>850</ondown>
+									<onleft>346</onleft>
+									<onright>350</onright>
+									<!-- SystemTrayButtonFocusAnim -->
+									<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+									<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+								</control>
+								<control type="image">
+									<description>Shutdown No Focus</description>
+									<posx>183</posx>
+									<posy>2.85</posy>
+									<width>29</width>
+									<height>29</height>
+									<texture>$VAR[SystemTrayShutdownIcon]</texture>
+									<colordiffuse></colordiffuse>
+									<visible>!Control.HasFocus(345)</visible>
+								</control>
+								<control type ="button" id="346">
+									<description>Play Icon</description>
+									<posx>148</posx>
+									<posy>2.85</posy>
+									<width>34</width>
+									<height>29</height>
+									<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+									<texturenofocus></texturenofocus>
+									<colordiffuse>FFFFFFFF</colordiffuse>
+									<onclick>XBMC.PlayDVD </onclick>
+									<pulseonselect>true</pulseonselect>
+									<onup>-</onup>
+									<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+									<ondown>850</ondown>
+									<onleft>458</onleft>
+									<onright>345</onright>
+									<!-- SystemTrayButtonFocusAnim -->
+									<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+									<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+								</control>
+								<control type="image">
+									<description>Play No Focus</description>
+									<posx>148</posx>
+									<posy>2.85</posy>
+									<width>34</width>
+									<height>29</height>
+									<texture>$VAR[SystemTrayPlayIcon]</texture>
+									<colordiffuse></colordiffuse>
+									<visible>!Control.HasFocus(346)</visible>
+								</control>
+							</control>
+						</control>
+						<!--search icon-->
+						<control type="group">
+							<posx>189</posx>
+							<posy></posy>
+							<visible>!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)</visible>
+							<control type="image">
+								<posx>-5</posx>
+								<width>35</width>
+								<height>35</height>
+								<texture border="8">SystemTray/top-bar-status-background.png</texture>
+								<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							</control>
+							<control type="button" id="350">
+								<description>SEARCH ICON</description>
+								<posx>-2</posx>
 								<posy>2.85</posy>
 								<width>29</width>
 								<height>29</height>
-								<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+								<texturefocus>SystemTray/SearchIconFocus.png</texturefocus>
 								<texturenofocus></texturenofocus>
 								<colordiffuse>FFFFFFFF</colordiffuse>
-								<onclick>ActivateWindow(ShutdownMenu)</onclick>
+								<onclick></onclick>
 								<pulseonselect>true</pulseonselect>
 								<onup>-</onup>
 								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 								<ondown>850</ondown>
-								<onleft>346</onleft>
+								<onleft>345</onleft>
 								<onright>837</onright>
 								<!-- SystemTrayButtonFocusAnim -->
-								<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
-								<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+								<animation effect="zoom" end="110" center="20,17" time="100">Focus</animation>
+								<animation effect="zoom" start="110" end="100" center="20,17" time="100">Unfocus</animation>
 							</control>
 							<control type="image">
-								<description>Shutdown No Focus</description>
-								<posx>183</posx>
+								<description>Search Icon No Focus</description>
+								<posx>-2</posx>
 								<posy>2.85</posy>
 								<width>29</width>
 								<height>29</height>
-								<texture>$VAR[SystemTrayShutdownIcon]</texture>
+								<texture>$VAR[SystemTraySearchIcon]</texture>
 								<colordiffuse></colordiffuse>
-								<visible>!Control.HasFocus(345)</visible>
-							</control>
-							<control type ="button" id="346">
-								<description>Play Icon</description>
-								<posx>148</posx>
-								<posy>2.85</posy>
-								<width>34</width>
-								<height>29</height>
-								<texturefocus>SystemTray/PlayFocus.png</texturefocus>
-								<texturenofocus></texturenofocus>
-								<colordiffuse>FFFFFFFF</colordiffuse>
-								<onclick>XBMC.PlayDVD </onclick>
-								<pulseonselect>true</pulseonselect>
-								<onup>-</onup>
-								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
-								<ondown>850</ondown>
-								<onleft>458</onleft>
-								<onright>345</onright>
-								<!-- SystemTrayButtonFocusAnim -->
-								<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
-								<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
-							</control>
-							<control type="image">
-								<description>Play No Focus</description>
-								<posx>148</posx>
-								<posy>2.85</posy>
-								<width>34</width>
-								<height>29</height>
-								<texture>$VAR[SystemTrayPlayIcon]</texture>
-								<colordiffuse></colordiffuse>
-								<visible>!Control.HasFocus(346)</visible>
+								<visible>!Control.HasFocus(350)</visible>
 							</control>
 						</control>
 					</control>
@@ -516,7 +561,7 @@
 							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 							<ondown>850</ondown>
 							<onright>458</onright>
-							<onleft>345</onleft>
+							<onleft>350</onleft>
 							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
@@ -536,6 +581,7 @@
 					<control type="group" id="456">
 						<posx>950</posx>
 						<posy>4</posy>
+						<animation effect="slide" end="-30,0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
 						<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
 						+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
 						<!-- WeatherNotificationOpenCloseAnim -->
@@ -592,6 +638,7 @@
 					<control type="group">
 						<posx>780</posx>
 						<posy>4</posy>
+						<animation effect="slide" end="-30,0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
 						<visible>Player.HasMedia</visible>
 						<!-- MediaPlayingNotificationOpenCloseAnim -->
 						<animation effect="fade" end="100" time="200">Visible</animation>

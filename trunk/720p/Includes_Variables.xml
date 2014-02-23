@@ -5,7 +5,19 @@
 		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff332D22</value>
 		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff3F3F3F</value>
 		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4)">ff666666</value>
+	<!--transparent-->
+		<!-- <value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">BC454A4F</value>
+		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
+		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
+		<!-- <value condition="Skin.HasSetting(TransparentMenuBacks)">BB1B1B1B</value> -->
 	</variable>
+	
+	<!-- <variable name="TopBarImages">
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">Transparent_TopBar.png</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
+	</variable>
+	 -->
 	<variable name="BreadCrumbBackgroundColor">
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,2) + !Skin.String(BreadCrumbBackgroundColor,3)">ff454A4F</value>
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,1) + !Skin.String(BreadCrumbBackgroundColor,3)">ff8A795D</value>
@@ -43,7 +55,7 @@
 		<value condition="!Skin.String(IconColor,1) + !Skin.String(IconColor,2)">Breadcrumb/WHITE/xbmc4xbox_logo.png</value>
 	</variable>
 
-	<!--(((RAM SAVING BG'S)))=================================-->
+<!--(((RAM SAVING BG'S)))=================================-->
 	<variable name="RamSavingBackgrounds">
 		<value condition="!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-blue.jpg</value>
 		<value condition="Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + !Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-gray.jpg</value>
@@ -51,4 +63,19 @@
 		<value condition="!Skin.String(Universal_CLASSIC_BG_Color,2) + !Skin.String(Universal_CLASSIC_BG_Color,3) + Skin.String(Universal_CLASSIC_BG_Color,4)">backgrounds/default-background-green.jpg</value>
 	</variable>
 
+<!--(((HOME SUBMENUS)))=================================-->
+	<variable name="ConstantSubsFocusColor">
+		<value condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">ButtonColor</value>
+		<value condition="ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">ThemeColor</value>
+		<value condition="!Skin.HasSetting(ConstantHomeSubmenu)">ThemeColor</value>
+	</variable>
+	<variable name="HomeMenuColors">
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">FFFFFFFF</value>
+	</variable>
+<!--(((MENU BAR OFFSET)))=================================-->
+	<!-- <variable name="MenuBarOffset">
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">0</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">44</value>
+	</variable> -->
 </includes>
