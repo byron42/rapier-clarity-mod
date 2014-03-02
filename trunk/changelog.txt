@@ -3,9 +3,31 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 2.17.14 Version 3.5.2
 
+	3.2.14
+------------------------------------------------------------------------------
+		= Fully integrated transparent top bar, sub-menus, home menu
+		  (the option is in skin settings/general)
+
+		= Reduced sub-menu font size slightly (adds a cleaner look,
+		  still easy to read), also took away sub-menu zoom effect
+
+		= Reduced skin settings/settings font slightly...too big and
+		  now has a distinguishable size difference from the category
+		  labels
+
+		= Changed "SYSTEM" home button (settings now have categories
+		  first before entering appearance settings).  Submenu
+		  "settings" renamed to "appearance" which is a direct link
+		  to appearance settings also submenu has been made hidden
+      		  unless accesed like all other sub-menus
+
+		= Changed "MUSIC" home button (if Library.HasContent(Music) 
+		  it will now open MusicLibrary)
+
 	2.22.14
 ------------------------------------------------------------------------------
-		= Added "Constant Submenus" option for home menu
+		= Added "Constant Submenus" option for home menu (skin settings/
+		  home)
 
 		= Added Transparent Home Menu option (been a long time coming)
 

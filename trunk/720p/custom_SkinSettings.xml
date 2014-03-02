@@ -15,9 +15,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<description>Universal Classic Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -29,9 +29,9 @@
 					<control type="image">
 						<posx>0</posx>
 						<description>Universal Classic Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -45,9 +45,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<description>Custom Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-system.jpg">$INFO[Skin.String(SystemCustomBG)]</imagepath>
 						<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<aspectratio>stretch</aspectratio>
@@ -59,9 +59,9 @@
 					</control>
 					<control type="image">
 						<description>Default Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -76,15 +76,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -96,15 +96,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -116,9 +116,9 @@
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -130,9 +130,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -154,12 +154,12 @@
 			<!--Programs-->
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(ProgramsCustomBG)</info>		
 					<visible>Control.HasFocus(102) | Control.HasFocus(103)</visible>
@@ -170,12 +170,12 @@
 			<!--Pictures-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(PicturesCustomBG)</info>		
 					<visible>Control.HasFocus(108) | Control.HasFocus(109)</visible>
@@ -186,12 +186,12 @@
 			<!--Music-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(MusicCustomBG)</info>		
 					<visible>Control.HasFocus(114) | Control.HasFocus(115)</visible>
@@ -202,12 +202,12 @@
 			<!--Videos-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(VideosCustomBG)</info>		
 					<visible>Control.HasFocus(120) | Control.HasFocus(121)</visible>
@@ -218,12 +218,12 @@
 			<!--Movies-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(MoviesCustomBG)</info>		
 					<visible>Control.HasFocus(144) | Control.HasFocus(145)</visible>
@@ -234,12 +234,12 @@
 			<!--TvShows-->
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(TVShowsCustomBG)</info>		
 					<visible>Control.HasFocus(138) | Control.HasFocus(139)</visible>
@@ -250,12 +250,12 @@
 			<!--General-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(GeneralCustomBG)</info>		
 					<visible>Control.HasFocus(126) | Control.HasFocus(127)</visible>
@@ -266,12 +266,12 @@
 			<!--System-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(SystemCustomBG)</info>		
 					<visible>Control.HasFocus(132) | Control.HasFocus(133)</visible>
@@ -283,12 +283,12 @@
 			<!--Weather-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(WeatherCustomBG)</info>		
 					<visible>Control.HasFocus(162) | Control.HasFocus(163)</visible>
@@ -301,12 +301,12 @@
 			<!--Universal Custom-->	
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<fadetime>500</fadetime>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(UniversalCustomBG)</info>		
 					<visible>Control.HasFocus(1502)</visible>
@@ -317,11 +317,11 @@
 				<!---ADD-ONS
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(AddonsCustomBG)</info>		
 					<visible>Control.HasFocus(168)</visible>
@@ -341,9 +341,9 @@
 					<animation effect="fade" start="50" end="0" time="400" delay="0">Hidden</animation>
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>background-dim.png</texture>
 					</control>
 					<control type="label">
@@ -731,7 +731,7 @@
 					<animation effect="slide" end="0,40" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<posx>0</posx>
 					<posy>-40</posy>
-					<height>720</height><!--518-->
+					<include>VariableBackgroundHeight</include><!--518-->
 					<width>1280</width><!--125-->
 					<pagecontrol></pagecontrol>
 					<onup>851</onup>
@@ -6334,7 +6334,7 @@
 				<!--**************************** DialogPopUpScreenDim ***********************************-->
 				<control type="image">
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<texture>background-dim.png</texture>
 					<animation effect="fade" start="0" end="40" time="450">Visible</animation>
 					<animation effect="fade" start="40" end="0" time="450">Hidden</animation>

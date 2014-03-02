@@ -1,16 +1,16 @@
 <includes>
 <!--(((TOP BAR)))=================================-->
 	<variable name="TopBarColor">
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff454A4F</value>
-		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff332D22</value>
-		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4)">ff3F3F3F</value>
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4)">ff666666</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff454A4F</value>
+		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff332D22</value>
+		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff3F3F3F</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff666666</value>
 	<!--transparent-->
 		<!-- <value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">BC454A4F</value>
 		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
 		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
 		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
-		<!-- <value condition="Skin.HasSetting(TransparentMenuBacks)">BB1B1B1B</value> -->
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">BB1B1B1B</value>
 	</variable>
 	
 	<!-- <variable name="TopBarImages">

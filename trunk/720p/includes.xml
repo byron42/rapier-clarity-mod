@@ -289,12 +289,28 @@
 		</control>
 	</include>-->
 	
+	<include name="VariableBackgroundHeight">
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
+	</include>
 	<include name="TallBackground">
 		<height>720</height>
 	</include>
-	
 	<include name="NormalBackground">
 		<height>676</height>
 	</include>
+	
+	
+	<include name="BackgroundOffset">
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
+	</include>
+	<include name="BackgroundOffsetTransparency">
+		<posy>0</posy>
+	</include>
+	<include name="BackgroundOffsetNoTransparency">
+		<posy>44</posy>
+	</include>
+	
 	
 </includes>

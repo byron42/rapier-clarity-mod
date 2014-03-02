@@ -16,9 +16,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<description>Universal Classic Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -30,9 +30,9 @@
 					<control type="image">
 						<posx>0</posx>
 						<description>Universal Classic Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -46,9 +46,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<description>Custom Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-music.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -60,9 +60,9 @@
 					</control>
 					<control type="image">
 						<description>Default Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -77,15 +77,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -97,15 +97,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -120,9 +120,9 @@
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -134,9 +134,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -193,7 +193,7 @@
 			
 	<!--(((PAGE LAYOUT)))=================================================================================================================================-->		
 			<control type="group">		
-				<posy>MenuBarOffsetY</posy>	
+				<include>BackgroundOffset</include>	
 				<!--************************ MENUBAR IMAGE TOP/BOTTOM *****************************-->
 				<control type="group">		
 					<control type="image">

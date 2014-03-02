@@ -12,9 +12,9 @@
 			<control type="group">	
 				<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 				<control type="image">
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<width>ScreenWidth</width>
-					<height>676</height>		
+					<include>VariableBackgroundHeight</include>		
 					<texture>control-area-background2.png</texture>
 					<!-- MediaViewOpenCloseAnim -->
 					<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -27,9 +27,9 @@
 			<control type="group">	
 				<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
 				<control type="image">
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<width>ScreenWidth</width>
-					<height>676</height>		
+					<include>VariableBackgroundHeight</include>		
 					<texture>control-area-background2.png</texture>
 					<!-- MediaViewOpenCloseAnim -->
 					<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>

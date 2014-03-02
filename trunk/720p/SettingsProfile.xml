@@ -14,9 +14,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<description>Universal Classic Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -29,9 +29,9 @@
 					<control type="image">
 						<posx>0</posx>
 						<description>Universal Classic Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -45,9 +45,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<description>Custom Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-system">$INFO[Skin.String(SystemCustomBG)]</imagepath>
 						<visible>Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<aspectratio>stretch</aspectratio>
@@ -59,9 +59,9 @@
 					</control>
 					<control type="image">
 						<description>Default Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -76,15 +76,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -96,15 +96,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -119,9 +119,9 @@
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -133,9 +133,9 @@
 				<control type="group">	
 					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
 					<control type="image">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
-						<height>676</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
 						<!-- MediaViewOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
@@ -234,7 +234,7 @@
 			<!--**************************** DialogPopUpScreenDim **********************************-->
 			<control type="image">
 				<width>1280</width>
-				<height>720</height>
+				<include>VariableBackgroundHeight</include>
 				<texture>background-dim.png</texture>
 				<animation effect="fade" start="0" end="40" time="450">Visible</animation>
 				<animation effect="fade" start="40" end="0" time="450">Hidden</animation>
@@ -247,6 +247,8 @@
 			<control type="group">	
 				<animation effect="fade" start="0" end="100" time="250" delay="300" condition="!Window.IsActive(profilesettings)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(profilesettings)">Conditional</animation>
+				<!-- fade out sub menu bar -->
+				<animation effect="fade"  start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>
 				<height>34</height>
 				<posy>44</posy>
@@ -301,7 +303,10 @@
 				<!-- MenuBarOpenCloseAnim -->
 				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>
-				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">WindowClose</animation>
+				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
+					<effect type="fade" start="100" end="0" time="1" delay="200"/>
+				</animation>
 				
 			</control>
 			

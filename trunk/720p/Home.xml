@@ -16,9 +16,9 @@
 				<control type="image">
 					<posx>0</posx>
 					<description>Universal Classic Background</description>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
 					<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 					<aspectratio>stretch</aspectratio>
@@ -31,9 +31,9 @@
 				<control type="image">
 					<posx>0</posx>
 					<description>Universal Classic Background</description>
-					<posy>MenuBarOffsetY</posy>
+					<include>BackgroundOffset</include>
 					<width>1280</width>
-					<height>720</height>
+					<include>VariableBackgroundHeight</include>
 					<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -47,9 +47,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -64,9 +64,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -81,9 +81,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -98,9 +98,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -115,9 +115,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -132,9 +132,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -149,9 +149,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -166,9 +166,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -183,9 +183,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -200,9 +200,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -213,9 +213,9 @@
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
 						<posx>0</posx>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<timeperimage>5000</timeperimage>
@@ -233,9 +233,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/images/backgrounds/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -250,9 +250,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -267,9 +267,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -284,9 +284,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -301,9 +301,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -318,9 +318,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -335,9 +335,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -352,9 +352,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -369,9 +369,9 @@
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
 						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
@@ -384,15 +384,15 @@
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
 					<control type="videowindow">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -405,15 +405,15 @@
 				<control type="group">
 					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
 					<control type="visualisation">
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 					</control>	
 					<control type="image">
 						<description>Dim Background</description>
-						<posy>MenuBarOffsetY</posy>
+						<include>BackgroundOffset</include>
 						<width>1280</width>
-						<height>720</height>
+						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
 						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
@@ -436,9 +436,9 @@
 						[Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)]  | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -449,9 +449,9 @@
 						</control>	
 						<control type="image">
 							<description>Dim Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>ScreenWidth</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMoviesFanart)</visible>
@@ -472,9 +472,9 @@
 						| [Control.IsVisible(50) + !Skin.HasSetting(HideTVShowsIconViewFanart)]]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>$INFO[Fanart.Image]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -486,9 +486,9 @@
 						</control>	
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -500,9 +500,9 @@
 						</control>	
 						<control type="image">
 							<description>Dim Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>ScreenWidth</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(DoNotDimTVShowsFanart)</visible>
@@ -519,9 +519,9 @@
 						| [Control.IsVisible(64) + !Skin.HasSetting(HideMusicWrapListInfoFanart)]]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>1280</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>FanartCrossfadeTime</fadetime>
@@ -532,9 +532,9 @@
 						</control>
 						<control type="image">
 							<description>Dim Background</description>
-							<posy>MenuBarOffsetY</posy>
+							<include>BackgroundOffset</include>
 							<width>ScreenWidth</width>
-							<height>720</height>
+							<include>VariableBackgroundHeight</include>
 							<texture>background-dim.png</texture>
 							<fadetime>FanartCrossfadeTime</fadetime>
 							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
@@ -567,9 +567,9 @@
 
 	<!--(((Recently Added)))=================================================================================================================-->
 			<control type="group" id="2013"> <!-- Recently Added Fullscreen Fanart -->
-				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundOffset</include>
 				<width>1280</width>
-				<height>720</height>
+				<include>VariableBackgroundHeight</include>
 				<!-- RecentlyAddedFanartFade -->
 				<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
 				<!-- RecentlyAddedFanartFade -->
@@ -579,35 +579,35 @@
 				<control type="group">		
 					<control type="image" background="true">	
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>                 
 						<info>Window.Property(LatestMovie.1.Fanart)</info>
 						<visible>Control.HasFocus(305) + Container(305).Row(0) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestMovie.2.Fanart)</info>
 						<visible>Control.HasFocus(305) + Container(305).Row(1) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestMovie.3.Fanart)</info>
 						<visible>Control.HasFocus(305) + Container(305).Row(2) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestMovie.4.Fanart)</info>
 						<visible>Control.HasFocus(305) + Container(305).Row(3) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestMovie.5.Fanart)</info>
 						<visible>Control.HasFocus(305) + Container(305).Row(4) </visible>		
@@ -617,35 +617,35 @@
 				<control type="group">		
 					<control type="image">	
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestEpisode.1.Fanart)</info>
 						<visible>Control.HasFocus(306) + Container(306).Row(0) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestEpisode.2.Fanart)</info>
 						<visible>Control.HasFocus(306) + Container(306).Row(1) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestEpisode.3.Fanart)</info>
 						<visible>Control.HasFocus(306) + Container(306).Row(2) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestEpisode.4.Fanart)</info>
 						<visible>Control.HasFocus(306) + Container(306).Row(3) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestEpisode.5.Fanart)</info>
 						<visible>Control.HasFocus(306) + Container(306).Row(4) </visible>		
@@ -655,35 +655,35 @@
 				<control type="group">		
 					<control type="image">	
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestSong.1.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(0) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestSong.2.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(1) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestSong.3.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(2) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestSong.4.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(3) </visible>		
 					</control>
 					<control type="image">
 						<width>1280</width>
-						<height>720</height> 
+						<include>VariableBackgroundHeight</include> 
 						<fadetime>IconCrossfadeTime</fadetime>
 						<info>Window.Property(LatestSong.5.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(4) </visible>		
@@ -701,7 +701,7 @@
 						| [[Control.HasFocus(307) + Container(307).Row(4) + !IsEmpty(Window.Property(LatestSong.5.Fanart))]]</visible>
 						
 						<width>ScreenWidth</width>
-						<height>720</height>		
+						<include>VariableBackgroundHeight</include>		
 						<texture>background-dim.png</texture>
 						<!-- CustomBackgroundPreviewFadeInAnim -->
 						<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
@@ -1722,9 +1722,9 @@
 	
 			<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 			<control type="image">
-				<posy>MenuBarOffsetY</posy>
+				<include>BackgroundOffset</include>
 				<width>1280</width>
-				<height>720</height>
+				<include>VariableBackgroundHeight</include>
 				<texture>background-dim.png</texture>
 				<animation effect="fade" start="0" end="40" time="300">Visible</animation>
 				<animation effect="fade" start="40" end="0" time="300">Hidden</animation>
