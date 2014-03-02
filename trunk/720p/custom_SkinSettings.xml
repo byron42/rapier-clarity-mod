@@ -352,7 +352,7 @@
 						<posy>660</posy>
 						<width>1240</width>
 						<height>50</height>
-						<font>CustomSkin</font>
+						<font>MediaInfoCatFont</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<selectedcolor></selectedcolor>
@@ -780,7 +780,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -798,7 +798,7 @@
 							<description>Default Colour</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -828,7 +828,7 @@
 							<description>Gold Top Bar</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -859,7 +859,7 @@
 							<description>Black Top Bar</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -889,7 +889,7 @@
 							<description>GRAY Top Bar</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -924,7 +924,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -942,7 +942,7 @@
 							<description>Default Colour</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -973,7 +973,7 @@
 							<description>Gold Icons</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1003,7 +1003,7 @@
 							<description>White Icons</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1038,7 +1038,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1056,7 +1056,7 @@
 							<description>Default Colour</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1087,7 +1087,7 @@
 							<description>Gold Tabs</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1117,7 +1117,7 @@
 							<description>Gray Tabs</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1152,7 +1152,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1170,7 +1170,7 @@
 							<description>Default Colour</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1201,7 +1201,7 @@
 							<description>Gold Fonts</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1231,7 +1231,7 @@
 							<description>Blue Fonts</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1261,7 +1261,7 @@
 							<description>White Fonts</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1329,7 +1329,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1357,7 +1357,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1379,7 +1379,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1402,7 +1402,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1433,7 +1433,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1461,7 +1461,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1507,7 +1507,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1525,7 +1525,7 @@
 							<description>Show Weather Notification</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1556,7 +1556,7 @@
 							<description>Weather Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1645,7 +1645,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1667,7 +1667,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1689,7 +1689,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1711,7 +1711,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1733,7 +1733,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1810,7 +1810,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -1835,7 +1835,7 @@
 							<description>Hide Programs Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1866,7 +1866,7 @@
 							<description>Hide Pictures Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1897,7 +1897,7 @@
 							<description>Hide Music Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1928,7 +1928,7 @@
 							<description>Hide Videos Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1959,7 +1959,7 @@
 							<description>Hide Movies Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -1991,7 +1991,7 @@
 							<description>Hide TV Shows Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2023,7 +2023,7 @@
 							<description>Hide General Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2054,7 +2054,7 @@
 							<description>Hide Scripts Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2085,7 +2085,7 @@
 							<description>Hide Weather Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2116,7 +2116,7 @@
 							<description>Hide Addons Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2148,7 +2148,7 @@
 							<description>Hide SEARCH Category</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2185,7 +2185,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2204,7 +2204,7 @@
 						<control type="radiobutton" id="5001">
 							<description>Home Menu CUSTOM 1</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2242,7 +2242,7 @@
 						<control type="radiobutton" id="5002">
 							<description>Home Menu CUSTOM 2</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2343,7 +2343,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2369,7 +2369,7 @@
 						<control type="radiobutton" id="2001">
 							<description>Customize PROGRAMS Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2407,7 +2407,7 @@
 						<control type="radiobutton" id="2002">
 							<description>Customize PICTURES Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2446,7 +2446,7 @@
 						<control type="radiobutton" id="2003">
 							<description>Customize Music Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2484,7 +2484,7 @@
 						<control type="radiobutton" id="2004">
 							<description>Customize VIDEOS Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2522,7 +2522,7 @@
 						<control type="radiobutton" id="2005">
 							<description>Customize MOVIES Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2561,7 +2561,7 @@
 						<control type="radiobutton" id="2006">
 							<description>Customize TV SHOWS Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2600,7 +2600,7 @@
 						<control type="radiobutton" id="2007">
 							<description>Customize GENERAL Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2639,7 +2639,7 @@
 						<control type="radiobutton" id="2008">
 							<description>Customize WEATHER Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2678,7 +2678,7 @@
 						<control type="radiobutton" id="2009">
 							<description>Customize ADD-ONS Sub Menus</description>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -2780,7 +2780,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2802,7 +2802,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2824,7 +2824,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2847,7 +2847,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2870,7 +2870,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2893,7 +2893,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2915,7 +2915,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2937,7 +2937,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -2959,7 +2959,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3015,7 +3015,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3054,7 +3054,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3093,7 +3093,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3121,7 +3121,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3149,7 +3149,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3167,7 +3167,7 @@
 							<description>Hide Un-Selected Media Type Icons</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3198,7 +3198,7 @@
 							<description>Hide Selected Media Type Icons</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3250,7 +3250,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3280,7 +3280,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3308,7 +3308,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3337,7 +3337,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3368,7 +3368,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3396,7 +3396,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3441,7 +3441,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3479,7 +3479,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3536,7 +3536,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -3554,7 +3554,7 @@
 							<description>ENABLE CLASSIC UNIVERSAL BG</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3585,7 +3585,7 @@
 							<description>BLUE</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3617,7 +3617,7 @@
 							<description>GREY</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3649,7 +3649,7 @@
 							<description>RED</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3681,7 +3681,7 @@
 							<description>GREEN</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3714,7 +3714,7 @@
 							<description>Universal Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -3746,7 +3746,7 @@
 							<description>Universal Classic BG options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
@@ -3782,7 +3782,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -3800,7 +3800,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3834,7 +3834,7 @@
 							<description>UNIVERSAL Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3865,7 +3865,7 @@
 							<description>Universal Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3897,7 +3897,7 @@
 							<description>UNIVERSAL Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3930,7 +3930,7 @@
 							<description>Universal Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -3961,7 +3961,7 @@
 							<description>Universal options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4000,7 +4000,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -4018,7 +4018,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4051,7 +4051,7 @@
 							<description>Programs Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4082,7 +4082,7 @@
 							<description>Programs Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4113,7 +4113,7 @@
 							<description>Programs Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4145,7 +4145,7 @@
 							<description>Programs Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4176,7 +4176,7 @@
 							<description>Programs options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4215,7 +4215,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -4233,7 +4233,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4266,7 +4266,7 @@
 							<description>Pictures Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4297,7 +4297,7 @@
 							<description>Pictures Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4328,7 +4328,7 @@
 							<description>Pictures Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4360,7 +4360,7 @@
 							<description>Pictures Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4392,7 +4392,7 @@
 							<description>PICTURES options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4431,7 +4431,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -4449,7 +4449,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4482,7 +4482,7 @@
 							<description>Music Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4513,7 +4513,7 @@
 							<description>Music Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4544,7 +4544,7 @@
 							<description>Music Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4576,7 +4576,7 @@
 							<description>Music Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4607,7 +4607,7 @@
 							<description>Music options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4646,7 +4646,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -4664,7 +4664,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4697,7 +4697,7 @@
 							<description>Videos Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4728,7 +4728,7 @@
 							<description>Videos Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4759,7 +4759,7 @@
 							<description>Videos Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4791,7 +4791,7 @@
 							<description>Videos Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4822,7 +4822,7 @@
 							<description>Videos options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4861,7 +4861,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -4879,7 +4879,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4912,7 +4912,7 @@
 							<description>Movies Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4943,7 +4943,7 @@
 							<description>Movies Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -4974,7 +4974,7 @@
 							<description>Movies Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5006,7 +5006,7 @@
 							<description>Movies Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5037,7 +5037,7 @@
 							<description>Movies options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5076,7 +5076,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -5094,7 +5094,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5127,7 +5127,7 @@
 							<description>TV Shows Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5158,7 +5158,7 @@
 							<description>TV Shows Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5189,7 +5189,7 @@
 							<description>TV Shows Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5221,7 +5221,7 @@
 							<description>TV Shows Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5252,7 +5252,7 @@
 							<description>TVShows options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5291,7 +5291,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -5309,7 +5309,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5342,7 +5342,7 @@
 							<description>General Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5373,7 +5373,7 @@
 							<description>General Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5404,7 +5404,7 @@
 							<description>General Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5436,7 +5436,7 @@
 							<description>General Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5467,7 +5467,7 @@
 							<description>General options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5506,7 +5506,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -5525,7 +5525,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5558,7 +5558,7 @@
 							<description>Scripts Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5589,7 +5589,7 @@
 							<description>Scripts Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5620,7 +5620,7 @@
 							<description>Scripts Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5652,7 +5652,7 @@
 							<description>Scripts Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5683,7 +5683,7 @@
 							<description>Scripts options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5722,7 +5722,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -5740,7 +5740,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5773,7 +5773,7 @@
 							<description>System Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5804,7 +5804,7 @@
 							<description>System Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5835,7 +5835,7 @@
 							<description>System Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5867,7 +5867,7 @@
 							<description>System Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5898,7 +5898,7 @@
 							<description>System options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5937,7 +5937,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -5956,7 +5956,7 @@
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -5989,7 +5989,7 @@
 							<description>Weather Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -6020,7 +6020,7 @@
 							<description>Weather Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>690</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -6051,7 +6051,7 @@
 							<description>Weather Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -6083,7 +6083,7 @@
 							<description>Weather Dim Background</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -6114,7 +6114,7 @@
 							<description>Weather options default</description>
 							<posx>10</posx>
 							<width>800</width>
-							<font>CustomSkin</font>
+							<font>MediaInfoCatFont</font>
 							<textwidth>675</textwidth><!--RBTW-->
 							<textoffsetx>85</textoffsetx>
 							<aligny>top</aligny>
@@ -6168,7 +6168,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -6203,7 +6203,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>center</align>
@@ -6238,7 +6238,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -6259,7 +6259,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>
@@ -6281,7 +6281,7 @@
 							<font>CustomSkinHead</font>
 							<textwidth>755</textwidth><!--HBTW-->
 							<aligny>top</aligny>
-							<textoffsety>8</textoffsety>
+							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<align>left</align>

@@ -171,226 +171,177 @@
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 				<description>Menu Bar Area</description>
-				<posy>MenuBarOffsetY</posy>	
-				<visible>!Window.Previous(Programs) + !Window.Previous(Pictures) + !Window.Previous(MusicLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(VideoFiles) + !Window.Previous(Weather) + !Window.Previous(3001)</visible>
-				<control type="image">
-					<description>Menu Bar Image</description>
-					<width>ScreenWidth</width>
-					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">home-submenu-cover1.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<description>Left Submenu Arrow</description>
-					<posx>5</posx>
-					<posy>6</posy>
-					<width>25</width>
-					<height>17</height>
-					<texture>arrow-scroll-left-nofocus.png</texture>
-					<visible>[Container(850).HasPrevious | Container(850).HasNext] + !Skin.HasSetting(HideSubMenuArrows)</visible>
-				</control>
-				<control type="image">
-					<description>Right Submenu Arrow</description>
-					<posx>1250</posx>
-					<posy>6</posy>
-					<width>25</width>
-					<height>17</height>
-					<texture>arrow-scroll-right-nofocus.png</texture>
-					<visible>[Container(850).HasNext | Container(850).HasPrevious] + !Skin.HasSetting(HideSubMenuArrows)</visible>
-				</control>
+				
 				<!--******************************************** Categories ********************************************-->
 				<control type="grouplist" id="850">
 					<description>Settings Menu Bar</description>
-					<posx>28</posx>
-					<posy>-3</posy>
-					<width>1250</width>
-					<height>34</height>
-					<itemgap>0</itemgap>
-					<onup>600</onup>
-					<ondown>9001</ondown>
-					<orientation>horizontal</orientation>
+					<posx>390</posx>
+					<posy>155</posy>
+					<itemgap>10</itemgap>
+					<onup>850</onup>
+					<ondown>850</ondown>
+					<onleft>600</onleft>
+					<onright>600</onright>
+					<orientation>vertical</orientation>
 				<!--APPREARANCE-->
-					<control type="button" id="101">
-						<description>Appearance</description>
-						<width>180</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="102">
+						<description>APPEARANCE</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<!--deleted ContextMenuBtnFocus -->
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(AppearanceSettings)</onclick>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>	
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
-					</control>	
-					<control type="image" id="116">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 				<!--MUSIC-->
-					<control type="button" id="104">
-						<description>Music</description>
-						<width>175</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="103">
+						<description>MUSIC</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(MusicSettings)</onclick>	
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>	
-					</control>
-					<control type="image" id="119">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 				<!--VIDEOS-->
-					<control type="button" id="105">
-						<description>Videos</description>
-						<width>175</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="104">
+						<description>VIDEOS</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[10006][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(VideosSettings)</onclick>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
-					</control>
-					<control type="image" id="120">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
-					</control>
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
+					</control>	
 				<!--PICTURES-->
-					<control type="button" id="103">
-						<description>Pictures</description>
-						<width>180</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="106">
+						<description>PICTURES</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(PicturesSettings)</onclick>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>AA555555</disabledcolor> <!-- JET -->
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-					</control>
-					<control type="image" id="118">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
-					</control>
+					</control>	
 				<!--WEATHER-->
-					<control type="button" id="106">
-						<description>Weather</description>
-						<width>180</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="109">
+						<description>WEATHER</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(WeatherSettings)</onclick>	
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>AA555555</disabledcolor> <!-- JET -->
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-					</control>
-					<control type="image" id="121">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
 					</control>
 				<!--NETWORK-->
-					<control type="button" id="107">
-						<description>Network</description>
-						<width>175</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="110">
+						<description>NETWORK</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(NetworkSettings)</onclick>	
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>AA555555</disabledcolor> <!-- JET -->
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
-					<control type="image" id="122">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
-					</control>
 				<!--SYSTEM-->
-					<control type="button" id="108">
-						<description>System</description>
-						<width>175</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="111">
+						<description>SYSTEM</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(SystemSettings)</onclick>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
-					</control>
-					<control type="image" id="113">
-						<description>MenuBarSeparator</description>
-						<width>2</width>
-						<height>34</height>
-						<texture>menu-bar-separator.png</texture><!---->
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 				<!--SKIN SETTINGS-->
-					<control type="button" id="109">
-						<description>Skin Settings</description>
-						<width>180</width>
-						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
-						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
-						<texturefocus border="10">-</texturefocus>
-						<pulseonselect>true</pulseonselect>
-						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
+					<control type="button" id="112">
+						<description>SKIN SETTINGS</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
 						<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(3001)</onclick>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 				</control>
 				<!--****************************************************************************************************-->
-				<!-- MenuBarSettingsOpenCloseAnim -->
-				<animation effect="slide" start="0,-43" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>
+				<animation effect="slide" end="0,-44" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
 			</control>
 
 			
@@ -838,7 +789,7 @@
 					<width>1190</width> <!---->
 					<textcolor>InfoPaneHeaderColor</textcolor>
 					<font>InfoPaneHeaderFont</font>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$INFO[System.CurrentControl]</label>
 				</control>
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>
@@ -848,28 +799,8 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31202]</label>
-					<visible>Window.IsActive(AppearanceSettings)</visible>
+					<visible>Control.HasFocus(102)</visible>
 				</control>
-				<control type="label">
-					<description>InfoPaneDetailLabel</description>
-					<posx>76</posx>
-					<posy>37</posy>
-					<width>800</width>
-					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
-					<label>$LOCALIZE[31203]</label>
-					<visible>Window.IsActive(ProgramsSettings)</visible>
-				</control>
-				<control type="label">
-					<description>InfoPaneDetailLabel</description>
-					<posx>76</posx>
-					<posy>37</posy>
-					<width>800</width>
-					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
-					<label>$LOCALIZE[31204]</label>
-					<visible>Window.IsActive(PicturesSettings)</visible>
-				</control>	
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>
 					<posx>76</posx>
@@ -878,8 +809,8 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31205]</label>
-					<visible>Window.IsActive(MusicSettings)</visible>
-				</control>	
+					<visible>Control.HasFocus(103)</visible>
+				</control>
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>
 					<posx>76</posx>
@@ -888,7 +819,17 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31206]</label>
-					<visible>Window.IsActive(VideosSettings)</visible>
+					<visible>Control.HasFocus(104)</visible>
+				</control>	
+				<control type="label">
+					<description>InfoPaneDetailLabel</description>
+					<posx>76</posx>
+					<posy>37</posy>
+					<width>800</width>
+					<textcolor>InfoPaneDetailsColor</textcolor>
+					<font>InfoPaneDetailFont</font>
+					<label>$LOCALIZE[31204]</label>
+					<visible>Control.HasFocus(106)</visible>
 				</control>	
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>
@@ -898,7 +839,17 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31207]</label>
-					<visible>Window.IsActive(WeatherSettings)</visible>
+					<visible>Control.HasFocus(109)</visible>
+				</control>	
+				<control type="label">
+					<description>InfoPaneDetailLabel</description>
+					<posx>76</posx>
+					<posy>37</posy>
+					<width>800</width>
+					<textcolor>InfoPaneDetailsColor</textcolor>
+					<font>InfoPaneDetailFont</font>
+					<label>$LOCALIZE[31209]</label>
+					<visible>Control.HasFocus(111)</visible>
 				</control>	
 				<control type="label">
 					<description>InfoPaneDetailLabel</description>
@@ -908,7 +859,17 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31208]</label>
-					<visible>Window.IsActive(NetworkSettings)</visible>
+					<visible>Control.HasFocus(110)</visible>
+				</control>	
+				<control type="label">
+					<description>InfoPaneDetailLabel</description>
+					<posx>76</posx>
+					<posy>37</posy>
+					<width>800</width>
+					<textcolor>InfoPaneDetailsColor</textcolor>
+					<font>InfoPaneDetailFont</font>
+					<label>$LOCALIZE[20077]</label>
+					<visible>Control.HasFocus(112)</visible>
 				</control>	
 				<control type="label">
 					<!----------------------- InfoPaneDetailLabel ---------------------------------->
