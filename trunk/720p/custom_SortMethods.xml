@@ -22,8 +22,9 @@
 			</control>
 			<!--**********************************************************************************-->
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary) | Window.IsActive(musiclibrary)">Conditional</animation>
 				<description>Sort By Menu</description>
-				<posx>315</posx>
+				<posx>370</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>2</itemgap>

@@ -24,8 +24,9 @@
 			<!--*******************************************************************************************-->
 	<!--(((MOVIES)))==========================================================================================================-->
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary)">Conditional</animation>
 				<description>Movies Library Menu</description>
-				<posx>545</posx>
+				<posx>620</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>2</itemgap>
@@ -218,8 +219,9 @@
 			</control>
 	<!--(((TV SHOWS)))========================================================================================================-->
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary)">Conditional</animation>
 				<description>TVShows Library Menu</description>
-				<posx>545</posx>
+				<posx>620</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>0</itemgap>
@@ -376,8 +378,9 @@
 			</control>
 	<!--(((MUSIC)))===========================================================================================================-->		
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(musiclibrary)">Conditional</animation>
 				<description>Music Videos Library Menu</description>
-				<posx>450</posx>
+				<posx>620</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>0</itemgap>
@@ -587,8 +590,9 @@
 				</control>
 			</control>
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(musiclibrary)">Conditional</animation>
 				<description>Music Library Menu</description>
-				<posx>545</posx>
+				<posx>620</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>0</itemgap>

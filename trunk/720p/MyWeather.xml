@@ -186,13 +186,14 @@
 	<!--(((MENU BAR)))=========================================================================================================================-->		
 			<control type="group">	
 				<description>Menu Bar Area</description>
-				<posy>MenuBarOffsetY</posy>		
+				<height>34</height>
+				<posy>44</posy>
 				<control type="image">
 					<width>ScreenWidth</width>
 					<height>34</height>
 					<texture flipy="true" border="80,4,80,4">home-submenu-cover1.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<colordiffuse></colordiffuse>
+					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
 				<!--********************************* MyWeatherMenuBar ************************************************-->
 				<control type="grouplist" id="850">
@@ -214,18 +215,16 @@
 						<textoffsetx>13</textoffsetx>
 						<textwidth>500</textwidth>
 						<align>left</align>
-						<texturefocus border="10">scrollbar-background.png</texturefocus>
+						<texturefocus border="10"></texturefocus>
 						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>	
 						<texturenofocus>-</texturenofocus>
 						<reverse>-</reverse>
-						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>
 						<texturenofocus>-</texturenofocus>		
 					</control>	
 					<control type="image" id="116">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -233,24 +232,23 @@
 						<description>Refresh</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>SubMenuFont2</font>
 						<textcolor>ButtonColor</textcolor>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<align>center</align>
-						<aligny>center</aligny>
 						<textoffsetx>13</textoffsetx>
 						<textwidth>154</textwidth>
-						<texturefocus border="10">scrollbar-background.png</texturefocus>
+						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
-						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>
 					</control>
 					<control type="image" id="117">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -258,25 +256,24 @@
 						<description>Settings</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>SubMenuFont2</font>
 						<textcolor>ButtonColor</textcolor>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<align>center</align>
-						<aligny>center</aligny>
 						<textoffsetx>13</textoffsetx>
 						<textwidth>154</textwidth>
-						<texturefocus border="10">scrollbar-background.png</texturefocus>
+						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 						<onclick>ActivateWindow(WeatherSettings)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>
 					</control>
 					<control type="image" id="118">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -285,14 +282,14 @@
 				<control type="label">
 					<description>location label</description>
 					<posx>8</posx>
-					<posy>-5</posy>
+					<posy>-3</posy>
 					<width>450</width>
 					<textwidth>440</textwidth>
 					<height>36</height>
-					<label>$INFO[Control.GetLabel(3)]</label>
-					<font>MenuBarButtonFont</font>
+					<label>$INFO[Weather.Location]</label>
 					<aligny>top</aligny>
-					<textoffsety>6</textoffsety>
+					<textoffsety>4</textoffsety>
+					<font>SubMenuFont2</font>
 					<textcolor>ButtonColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<align>left</align>
@@ -301,14 +298,14 @@
 				<control type="label">
 					<description>location label</description>
 					<posx>8</posx>
-					<posy>-5</posy>
+					<posy>-3</posy>
 					<width>450</width>
 					<textwidth>440</textwidth>
 					<height>36</height>
-					<label>$INFO[Control.GetLabel(3)]</label>
-					<font>MenuBarButtonFont</font>
+					<label>$INFO[Weather.Location]</label>
 					<aligny>top</aligny>
-					<textoffsety>6</textoffsety>
+					<textoffsety>4</textoffsety>
+					<font>SubMenuFont2</font>
 					<textcolor>ButtonFocusColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<align>left</align>
@@ -317,13 +314,10 @@
 				<!--***************************************************************************************************-->
 			
 				<!-- MenuBarOpenCloseAnim -->
-				<animation effect="slide" start="0,-86" time="300" delay="250">WindowOpen</animation>
-				<animation effect="slide" end="0,-86" time="300"  condition="![Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3004) | Window.IsActive(3005) | Window.IsActive(3017)]">WindowClose</animation>
-				<animation effect="slide" end="0,-86" time="300" delay="400" condition="Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3004) | Window.IsActive(3005) | Window.IsActive(3017)">WindowClose</animation>
-				<animation effect="slide" start="0,-86" time="300">Visible</animation>
-				<animation effect="slide" end="0,-86" time="300">Hidden</animation>
-				<animation effect="slide" end="0,-86" condition="!Skin.HasSetting(HideMenuBar)">Conditional</animation>
-				<animation effect="slide" end="0,86" time="300" condition="!Skin.HasSetting(HideMenuBar) + ControlGroup(850).HasFocus">Conditional</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">WindowClose</animation>
+			
 			</control>
 			
 	<!--(((TOP BAR)))============================================================================================================================-->		

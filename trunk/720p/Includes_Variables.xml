@@ -78,4 +78,51 @@
 		<value condition="Skin.HasSetting(TransparentMenuBacks)">0</value>
 		<value condition="!Skin.HasSetting(TransparentMenuBacks)">44</value>
 	</variable> -->
+	
+<!--(((SYSTEM SETTING BREADCRUMB LABEL)))=================================-->
+	<variable name="SettingsCategoryBC">
+		<value condition="Window.IsActive(picturessettings)">$LOCALIZE[1] </value>
+		<value condition="Window.IsActive(programssettings)">$LOCALIZE[0] </value>
+		<value condition="Window.IsActive(weathersettings)">$LOCALIZE[8] </value>
+		<value condition="Window.IsActive(musicsettings)">$LOCALIZE[2] </value>
+		<value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000] </value>
+		<value condition="Window.IsActive(videossettings)">$LOCALIZE[3] </value>
+		<value condition="Window.IsActive(networksettings)">$LOCALIZE[13279] </value>
+		<value condition="Window.IsActive(appearancesettings)">$LOCALIZE[480] </value>
+	</variable>	
+	
+<!--(((VIDEO LIBRARY BREADCRUMB LABEL)))=================================-->
+	<variable name="VideoLibraryBreadCrumbLabel_1">
+		<value condition="Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)">[UPPERCASE]$LOCALIZE[14022][/UPPERCASE] </value> <!--library-->
+		<value condition="Substring(Container.FolderPath,videodb://1/1/,Left) | Substring(Container.FolderPath,videodb://2/1/,Left) | Substring(Container.FolderPath,videodb://3/1/,Left)">[UPPERCASE]$LOCALIZE[135][/UPPERCASE] </value> <!-- genres -->
+		<value condition="Substring(Container.FolderPath,videodb://1/2/,Left) | Substring(Container.FolderPath,videodb://2/2/,Left) | Substring(Container.FolderPath,videodb://3/2/,Left)">[UPPERCASE]$LOCALIZE[369][/UPPERCASE] </value> <!-- title -->
+		<value condition="Substring(Container.FolderPath,videodb://1/3/,Left) | Substring(Container.FolderPath,videodb://2/3/,Left) | Substring(Container.FolderPath,videodb://3/3/,Left)">[UPPERCASE]$LOCALIZE[345][/UPPERCASE] </value> <!-- year -->
+		<value condition="Substring(Container.FolderPath,videodb://1/4/,Left) | Substring(Container.FolderPath,videodb://2/4/,Left)">[UPPERCASE]$LOCALIZE[344][/UPPERCASE] </value> <!-- actors -->
+		<value condition="Substring(Container.FolderPath,videodb://3/4/,Left)">[UPPERCASE]$LOCALIZE[133][/UPPERCASE] </value> <!-- artists -->
+		<value condition="Substring(Container.FolderPath,videodb://3/5/,Left)">[UPPERCASE]$LOCALIZE[132][/UPPERCASE] </value> <!-- albums -->
+		<value condition="Substring(Container.FolderPath,videodb://1/5/,Left) | Substring(Container.FolderPath,videodb://3/6/,Left)">[UPPERCASE]$LOCALIZE[20348][/UPPERCASE] </value> <!-- directors -->
+		<value condition="Substring(Container.FolderPath,videodb://1/6/,Left) | Substring(Container.FolderPath,videodb://2/5/,Left) | Substring(Container.FolderPath,videodb://3/7/,Left)">[UPPERCASE]$LOCALIZE[20388][/UPPERCASE] </value> <!-- studios -->
+		<value condition="Substring(Container.FolderPath,special://videoplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)">UPPERCASE]$LOCALIZE[136][/UPPERCASE] </value> <!-- playlists -->
+		<value condition="Substring(Container.FolderPath,plugin://video/,Left)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- plugins -->
+	</variable>	
+	
+<!--(((VIDEO LIBRARY BREADCRUMB LABEL)))=================================-->
+	<variable name="VideoLibraryBreadCrumbLabel_2">
+		<value condition="!Substring(Container.FolderPath,videodb://1/,Left) + !Substring(Container.FolderPath,videodb://4/,Left) + !Substring(Container.FolderPath,videodb://2/,Left) + !Substring(Container.FolderPath,videodb://5/,Left)">[UPPERCASE]$LOCALIZE[3][/UPPERCASE] </value> <!-- videos -->
+		<value condition="Substring(Container.FolderPath,videodb://1/,Left) | Substring(Container.FolderPath,videodb://4/,Left)">[UPPERCASE]$LOCALIZE[20342][/UPPERCASE] </value> <!-- movies -->
+		<value condition="Substring(Container.FolderPath,videodb://2/,Left) | Substring(Container.FolderPath,videodb://5/,Left)">[UPPERCASE]$LOCALIZE[20343][/UPPERCASE] </value> <!-- tv shows -->
+	</variable>	
+	
+<!--(((SYSTEM SETTING Category LABEL)))=================================-->
+	<!-- <variable name="SettingsCategoryBC">
+		<value condition="Window.IsActive(picturessettings)">$LOCALIZE[1]</value>
+		<value condition="Window.IsActive(programssettings)">$LOCALIZE[0]</value>
+		<value condition="Window.IsActive(weathersettings)">$LOCALIZE[8]</value>
+		<value condition="Window.IsActive(musicsettings)">$LOCALIZE[2]</value>
+		<value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsActive(videossettings)">$LOCALIZE[3]</value>
+		<value condition="Window.IsActive(networksettings)">$LOCALIZE[13279]</value>
+		<value condition="Window.IsActive(appearancesettings)">$LOCALIZE[480]</value>
+	</variable>	 -->
+	
 </includes>

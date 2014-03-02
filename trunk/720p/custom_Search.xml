@@ -23,8 +23,9 @@
 			</control>
 			<!--******************************************************************************************-->
 			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary)">Conditional</animation>
 				<description>Video Library Search</description>
-				<posx>727</posx>
+				<posx>782</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>2</itemgap>
@@ -94,7 +95,8 @@
 			</control>
 			<control type="grouplist" id="200">
 				<description>Music Library Search</description>
-				<posx>660</posx>
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(musiclibrary)">Conditional</animation>
+				<posx>782</posx>
 				<posy>75</posy>
 				<width>350</width>
 				<itemgap>0</itemgap>
@@ -107,7 +109,6 @@
 				</animation>	
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
-					<effect type="slide" end="0,-35" time="100" tween="circle" easing="out"/>
 				</animation>
 				<!-- MenuOpenCloseAnim -->
 				<control type="image">

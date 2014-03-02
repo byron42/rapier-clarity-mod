@@ -236,7 +236,7 @@
 				<height>48</height>
 				<font>CustomSkinHead</font>
 				<aligny>top</aligny>
-				<textoffsety>7</textoffsety>
+				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -255,7 +255,7 @@
 				<height>48</height>
 				<font>CustomSkinHead</font>
 				<aligny>top</aligny>
-				<textoffsety>7</textoffsety>
+				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -272,7 +272,7 @@
 				<height>48</height>
 				<font>CustomSkinHead</font>
 				<aligny>top</aligny>
-				<textoffsety>7</textoffsety>
+				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -328,7 +328,8 @@
 	<!--(((MENU BAR)))================================================================================================================================-->	
 			<control type="group">
 				<description>Menu Bar Area</description>
-				<posy>MenuBarOffsetY</posy>	
+				<height>34</height>
+				<posy>44</posy>
 				<visible>!Window.Previous(Programs) + !Window.Previous(Pictures) + !Window.Previous(MusicLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(VideoFiles) + !Window.Previous(Weather) + !Window.Previous(3001)</visible>
 				<control type="image">
 					<description>Menu Bar Image</description>
@@ -336,6 +337,7 @@
 					<height>34</height>
 					<texture flipy="true" border="80,4,80,4">home-submenu-cover1.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Left Submenu Arrow</description>
@@ -357,6 +359,7 @@
 				</control>
 				<!--******************************************** Categories ********************************************-->
 				<control type="grouplist" id="850">
+					<animation effect="fade"  start="100" end="60" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Settings Menu Bar</description>
 					<posx>28</posx>
 					<posy>-3</posy>
@@ -371,7 +374,9 @@
 						<description>Appearance</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -380,12 +385,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[480][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(AppearanceSettings)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
 					</control>	
 					<control type="image" id="116">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -394,7 +397,9 @@
 						<description>Music</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -403,12 +408,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(MusicSettings)</onclick>	
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>	
 					</control>
 					<control type="image" id="119">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -417,7 +420,9 @@
 						<description>Videos</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -426,12 +431,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[10006][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(VideosSettings)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
 					</control>
 					<control type="image" id="120">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -440,7 +443,9 @@
 						<description>Pictures</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -449,12 +454,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(PicturesSettings)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 					<control type="image" id="118">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -463,7 +466,9 @@
 						<description>Weather</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -472,12 +477,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[400][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(WeatherSettings)</onclick>	
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 					<control type="image" id="121">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -486,7 +489,9 @@
 						<description>Network</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -495,12 +500,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[13279][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(NetworkSettings)</onclick>	
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
 					<control type="image" id="122">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -509,7 +512,9 @@
 						<description>System</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -518,12 +523,10 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(SystemSettings)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
 					</control>
 					<control type="image" id="113">
 						<description>MenuBarSeparator</description>
-						<width>2</width>
+						<width>4</width>
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
@@ -532,7 +535,9 @@
 						<description>Skin Settings</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>MenuBarButtonFont</font>	
+						<font>SubMenuFont</font>	
+						<aligny>top</aligny>
+						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">-</texturefocus>
@@ -541,13 +546,15 @@
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[166][/UPPERCASE]</label>
 						<onclick>ReplaceWindow(3001)</onclick>
-						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
-						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>					
 					</control>
 				</control>
 				<!--****************************************************************************************************-->
 				<!-- MenuBarSettingsOpenCloseAnim -->
-				<animation effect="slide" start="0,-43" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation>
+				<!-- <animation effect="slide" start="0,-86" time="250" condition="!Window.Previous(AppearanceSettings) + !Window.Previous(NetworkSettings) + !Window.Previous(VideosSettings) + !Window.Previous(SystemSettings) + !Window.Previous(MusicSettings) + !Window.Previous(WeatherSettings) + !Window.Previous(ProgramsSettings) + !Window.Previous(PicturesSettings)">WindowOpen</animation> -->
+				<!-- MenuBarOpenCloseAnim -->
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">WindowClose</animation>
 			</control>
 
 	<!--(((TOP BAR)))=================================================================================================================================-->			
@@ -663,8 +670,35 @@
 				<!--*************************************************************************************************-->
 				
 				<!--******************************** (BreadCrumbSettingCats) ****************************************-->
+				<control type="group">		
+					<posx>320</posx>	
+					<!-- BreadCrumbOpenCloseAnim -->
+					<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+					<control type="button">
+						<description>Variable System Label</description>
+						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+						<posy>4</posy>
+						<width>270</width>
+						<height>35</height>
+						<font>BreadCrumbFont</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+						<textoffsetx>-</textoffsetx>
+						<align>center</align>
+						<aligny>top</aligny>
+						<shadowcolor></shadowcolor> <!--BrCr-->
+						<textoffsety>2</textoffsety> <!--BrCr-->
+						<textwidth>260</textwidth> <!--BrCr-->
+						<scroll>true</scroll> <!--BrCr-->
+						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+						<label>[UPPERCASE]$VAR[SettingsCategoryBC][/UPPERCASE] </label>
+					</control>
+				</control>
 				<control type="group">			
-					<posx>320</posx>
+					<posx>60</posx>
 					<!-- BreadCrumbOpenCloseAnim -->
 					<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
 					<control type="button">
@@ -690,33 +724,7 @@
 						<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </label>
 					</control>	
 				</control>
-				<control type="group">		
-					<posx>60</posx>	
-					<!-- BreadCrumbOpenCloseAnim -->
-					<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
-					<control type="button">
-						<description>System</description>
-						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
-						<posy>4</posy>
-						<width>270</width>
-						<height>35</height>
-						<font>BreadCrumbFont</font>
-						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
-						<textoffsetx>-</textoffsetx>
-						<align>center</align>
-						<aligny>top</aligny>
-						<shadowcolor></shadowcolor> <!--BrCr-->
-						<textoffsety>2</textoffsety> <!--BrCr-->
-						<textwidth>260</textwidth> <!--BrCr-->
-						<scroll>true</scroll> <!--BrCr-->
-						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
-						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
-						<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
-						<label>[UPPERCASE]$LOCALIZE[13000][/UPPERCASE] </label>
-					</control>
-				</control>
+				
 				<!--BreadCrumbHome-->
 				<control type="group">
 					<control type="image">
