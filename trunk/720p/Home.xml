@@ -2253,18 +2253,17 @@
 							</control>
 						</focusedlayout>
 						<content>
-							<item id="1">
-								<description>Music Videos</description>
-								<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
-								<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,Return)</onclick>	
-								<visible>Library.HasContent(MusicVideos)</visible>
-								</item>
+							
 							<item id="2">
 								<description>Video Plugins</description>
-								<label>31801</label>
+								<label>24001</label>
 								<onclick>ActivateWindow(videofiles,"Video plugins")</onclick>						
 							</item>
-							
+							<item id="6">
+								<description>Video Files</description>
+								<label>1214</label>
+								<onclick>ActivateWindow(videofiles)</onclick>	
+							</item>
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
@@ -2272,8 +2271,14 @@
 							</item>
 							<item id="4">
 								<description>Video Library</description>
-								<label>31802</label>
+								<label>14022</label>
 								<onclick>ActivateWindow(VideoLibrary)</onclick>						
+							</item>
+							<item id="1">
+								<description>Music Videos</description>
+								<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
+								<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,Return)</onclick>	
+								<visible>Library.HasContent(MusicVideos)</visible>
 							</item>
 							<item id="5">
 								<description>Playlists</description>
@@ -4524,7 +4529,7 @@
 							<description>Cover image</description>
 							<width>140</width>
 							<height>190</height>
-							<bordertexture border="7">item-shadow-border.png</bordertexture>
+							<bordertexture border="10">item-shadow-border.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture>$INFO[VideoPlayer.Cover]</texture>
 							<aspectratio align="bottom">stretch</aspectratio>
