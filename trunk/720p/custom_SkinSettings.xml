@@ -150,7 +150,7 @@
 			
 	<!--(((CUSTOM BACKGROUND IMAGES)))========================================================================================================-->
 			<control type="group">	
-				<animation effect="fade" start="100" end="0" time="250" delay="" condition="Window.IsActive(FileBrowser) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="250" delay="" condition="Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
 			<!--Programs-->
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
@@ -404,8 +404,8 @@
 	<!--(((CONTROLS)))================================(TOTAL GROUP FOR FADING INTO CUSTOM MENUS)==============================================-->		
 			<control type="group">
 				<!--Custom_SubMenu_Fade_Animation-->
-				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(FileBrowser) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(FileBrowser) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
 				<!--Custom_Background_Fade_Animation-->
 				<animation effect="fade" start="100" end="0" time="400" delay="500" condition="[[Control.HasFocus(102) | Control.HasFocus(103)] + !IsEmpty(Skin.String(ProgramsCustomBG))] | [[Control.HasFocus(108) | Control.HasFocus(109)] + !IsEmpty(Skin.String(PicturesCustomBG))] 
 				| [[Control.HasFocus(114) | Control.HasFocus(115)] + !IsEmpty(Skin.String(MusicCustomBG))] | [[Control.HasFocus(120) | Control.HasFocus(121)] + !IsEmpty(Skin.String(VideosCustomBG))] 
@@ -431,8 +431,6 @@
 							<height>40</height> <!-- 65 -->
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(907)">Visible</animation>
 							<visible>Control.IsVisible(907)</visible>
 						</control>
 						<control type="button" id="1">
@@ -454,7 +452,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>31520</label>
 							<textoffsety>13</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,8)</onfocus>
 							<onup>8</onup>
 							<ondown>2</ondown>
 							<onleft>600</onleft>
@@ -470,8 +467,6 @@
 							<height>40</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(900)">Visible</animation>
 							<visible>Control.IsVisible(900)</visible>
 						</control>
 						<control type="button" id="2">
@@ -481,7 +476,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -491,7 +485,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31010]</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,1)</onfocus>
 							<onup>1</onup>
 							<ondown>3</ondown>
 							<onleft>600</onleft>
@@ -507,8 +500,6 @@
 							<height>41</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(901)">Visible</animation>
 							<visible>Control.IsVisible(901)</visible>
 						</control>	
 						<control type="button" id="3">
@@ -518,7 +509,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -527,7 +517,6 @@
 							<texturenofocus border="5">-</texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31011]</label>
-							<onfocus>Skin.SetString(SkinSettingsCategory,2)</onfocus>
 							<onup>2</onup>
 							<ondown>4</ondown>
 							<onleft>600</onleft>
@@ -543,8 +532,6 @@
 							<height>41</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(902)">Visible</animation>
 							<visible>Control.IsVisible(902)</visible>
 						</control>
 						<control type="button" id="4">
@@ -554,7 +541,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -564,7 +550,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31013]</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,3)</onfocus>
 							<onup>3</onup>
 							<ondown>5</ondown>
 							<onleft>600</onleft>
@@ -580,8 +565,6 @@
 							<height>41</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(903)">Visible</animation>
 							<visible>Control.IsVisible(903)</visible>
 						</control>
 						<control type="button" id="5">
@@ -591,7 +574,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -601,7 +583,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31012]</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,4)</onfocus>
 							<onup>4</onup>
 							<ondown>6</ondown>
 							<onleft>600</onleft>
@@ -617,8 +598,6 @@
 							<height>40</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(906)">Visible</animation>
 							<visible>Control.IsVisible(906)</visible>
 						</control>
 						<control type="button" id="6">
@@ -628,7 +607,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -638,7 +616,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[12600]</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,7)</onfocus>
 							<onup>5</onup>
 							<ondown>7</ondown>
 							<onleft>600</onleft>
@@ -654,8 +631,6 @@
 							<height>41</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(904)">Visible</animation>
 							<visible>Control.IsVisible(904)</visible>
 						</control>
 						<control type="button" id="7">
@@ -665,7 +640,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -675,7 +649,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[247]</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,5)</onfocus>
 							<onup>6</onup>
 							<ondown>8</ondown>
 							<onleft>600</onleft>
@@ -691,8 +664,6 @@
 							<height>41</height>
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
-							<!-- SettingsCatInactiveDimAnim -->
-							<animation effect="fade" start="0" end="100" condition="!Control.HasFocus(905)">Visible</animation>
 							<visible>Control.IsVisible(905)</visible>
 						</control>
 						<control type="button" id="8">
@@ -702,7 +673,6 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 							<textcolor>Grey</textcolor> <!-- GREY -->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -712,7 +682,6 @@
 							<pulseonselect>false</pulseonselect>
 							<label>31521</label>
 							<textoffsety>14</textoffsety>
-							<onfocus>Skin.SetString(SkinSettingsCategory,6)</onfocus>
 							<onup>7</onup>
 							<ondown>1</ondown>
 							<onleft>600</onleft>
@@ -753,7 +722,7 @@
 						<onleft>850</onleft>
 						<onright>20080</onright>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.String(SkinSettingsCategory,8)</visible>
+						<visible>Control.HasFocus(1) | ControlGroup(907).HasFocus | Control.HasFocus(20080)</visible>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11901">
 							<posx>-3</posx><!---->
@@ -1303,7 +1272,7 @@
 						<onleft>850</onleft>
 						<onright>20081</onright>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.String(SkinSettingsCategory,1)</visible>
+						<visible>Control.HasFocus(2) | ControlGroup(900).HasFocus | Control.HasFocus(20081)</visible>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11902">
 							<posx>-3</posx><!---->
@@ -1600,7 +1569,7 @@
 						<onleft>850</onleft>
 						<onright>20082</onright>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.String(SkinSettingsCategory,2)</visible>
+						<visible>Control.HasFocus(3) | ControlGroup(901).HasFocus | Control.HasFocus(20082)</visible>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11904">
 							<posx>-3</posx><!---->
@@ -1681,72 +1650,7 @@
 							<selected>Skin.HasSetting(HideGlobalSearchIcon)</selected>
 							<onclick>Skin.ToggleSetting(HideGlobalSearchIcon)</onclick>
 						</control> 
-						<control type="radiobutton" id="10130"> 
-							<description>Always Show Home Submenus</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[513] $LOCALIZE[1034] $LOCALIZE[13108]</label>
-							<selected>Skin.HasSetting(ConstantHomeSubmenu)</selected>
-							<onclick>Skin.ToggleSetting(ConstantHomeSubmenu)</onclick>
-						</control> 
-						<control type="radiobutton" id="10030"> 
-							<description>Hide Submenu Navigation Arrows</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>31557</label>
-							<selected>Skin.HasSetting(HideSubMenuArrows)</selected>
-							<onclick>Skin.ToggleSetting(HideSubMenuArrows)</onclick>
-						</control> 
-						<control type="radiobutton" id="10051"> 
-							<description>31540</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>Hide  " $LOCALIZE[15019] $LOCALIZE[15311] "  on $LOCALIZE[1034]</label>
-							<selected>Skin.HasSetting(HideAddCustomButton)</selected>
-							<onclick>Skin.ToggleSetting(HideAddCustomButton)</onclick>
-						</control> 
+						
 						<control type="button" id="11132"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
@@ -2332,6 +2236,72 @@
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
 						</control>	
+						<control type="radiobutton" id="10130"> 
+							<description>Always Show Home Submenus</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[513] $LOCALIZE[1034] $LOCALIZE[13108]</label>
+							<selected>Skin.HasSetting(ConstantHomeSubmenu)</selected>
+							<onclick>Skin.ToggleSetting(ConstantHomeSubmenu)</onclick>
+						</control> 
+						<control type="radiobutton" id="10030"> 
+							<description>Hide Submenu Navigation Arrows</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>31557</label>
+							<selected>Skin.HasSetting(HideSubMenuArrows)</selected>
+							<onclick>Skin.ToggleSetting(HideSubMenuArrows)</onclick>
+						</control> 
+						<control type="radiobutton" id="10051"> 
+							<description>Hide Add Path</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31015]  " $LOCALIZE[15019] $LOCALIZE[15311] "  $LOCALIZE[31001] ( $LOCALIZE[593] $LOCALIZE[459] )</label>
+							<selected>Skin.HasSetting(HideAddCustomButton)</selected>
+							<onclick>Skin.ToggleSetting(HideAddCustomButton)</onclick>
+						</control> 
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->					
 	<!----------------------------------------------- ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ---------------------------------------------------------------->
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
@@ -2717,6 +2687,27 @@
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->					
 	<!----------------------------------------------- ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ---------------------------------------------------------------->
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+						 <control type="button" id="10052"> 
+							<description>Submenu Filters</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[24022] / $LOCALIZE[24021]  $LOCALIZE[1034]  $LOCALIZE[31605]</label>
+							<onclick>ActivateWindow(3021)</onclick>
+						</control>
 						<control type="button" id="11136"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
@@ -2989,7 +2980,7 @@
 						<onleft>850</onleft>
 						<onright>20083</onright>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.String(SkinSettingsCategory,3)</visible>
+						<visible>Control.HasFocus(4) | ControlGroup(902).HasFocus | Control.HasFocus(20083)</visible>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11909">
 							<posx>-3</posx><!---->
@@ -3509,7 +3500,7 @@
 						<onleft>850</onleft>
 						<onright>20084</onright>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>Skin.String(SkinSettingsCategory,4)</visible>
+						<visible>Control.HasFocus(5) | ControlGroup(903).HasFocus | Control.HasFocus(20084)</visible>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11914">
 							<posx>-3</posx><!---->
@@ -6160,7 +6151,7 @@
 						<onup>903</onup>
 						<ondown>903</ondown>
 						<onleft>850</onleft>
-						<visible>Skin.String(SkinSettingsCategory,5)</visible>
+						<visible>Control.HasFocus(7) | ControlGroup(904).HasFocus</visible>
 						<control type="radiobutton" id="15">
 							<description>Show OpenSubtitles_OSD Button</description>
 							<width>825</width>
@@ -6195,7 +6186,7 @@
 						<onup>903</onup>
 						<ondown>903</ondown>
 						<onleft>850</onleft>
-						<visible>Skin.String(SkinSettingsCategory,6)</visible>
+						<visible>Control.HasFocus(8) | ControlGroup(905).HasFocus</visible>
 						<control type="button" id="310">
 							<description>Confirm Reset Settings</description>
 							<width>800</width>
@@ -6230,7 +6221,7 @@
 						<onup>903</onup>
 						<ondown>903</ondown>
 						<onleft>850</onleft>
-						<visible>Skin.String(SkinSettingsCategory,7)</visible>
+						<visible>Control.HasFocus(6) | ControlGroup(906).HasFocus</visible>
 						<control type="radiobutton" id="1015">
 							<description>Disable Weather Conditional Backgrounds</description>
 							<width>800</width>
@@ -6716,8 +6707,8 @@
 	<!--(((INFO PANE)))=======================================================================================================================-->		
 			<control type="group">
 				<!-- Custom_SubMenu_Fade_Animation -->
-				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(FileBrowser) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(FileBrowser) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
 				<description>Bottom Bar Area</description>
 				<posy>BottomPaneOffsetY</posy>	
 				
@@ -6810,8 +6801,8 @@
 				<!-- InfoPaneHiddenSlideAnim -->
 				<animation effect="slide" end="0,40" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 				<!-- Custom_SubMenu_Fade_Animation -->
-				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
 				<!-- Custom_Background_Fade_Animation -->
 				<animation effect="fade" start="100" end="0" time="400" delay="500" condition="[[Control.HasFocus(102) | Control.HasFocus(103)] + !IsEmpty(Skin.String(ProgramsCustomBG))] | [[Control.HasFocus(108) | Control.HasFocus(109)] + !IsEmpty(Skin.String(PicturesCustomBG))] 
 				| [[Control.HasFocus(114) | Control.HasFocus(115)] + !IsEmpty(Skin.String(MusicCustomBG))] | [[Control.HasFocus(120) | Control.HasFocus(121)] + !IsEmpty(Skin.String(VideosCustomBG))] 
@@ -6836,7 +6827,7 @@
 					<onup>PageUp</onup>
 					<ondown>PageDown</ondown>
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation> 
-					<visible>Skin.String(SkinSettingsCategory,8)</visible>
+					<visible>Control.HasFocus(1) | ControlGroup(907).HasFocus | Control.HasFocus(20080)</visible>
 				</control>
 				<control type="scrollbar" id="20081"> <!-- GENERAL SCROLLBAR --------(900)-->
 					<posx>1265</posx>
@@ -6854,7 +6845,7 @@
 					<onright>900</onright>
 					<onup>PageUp</onup>
 					<ondown>PageDown</ondown>
-					<visible>Skin.String(SkinSettingsCategory,1)</visible>
+					<visible>Control.HasFocus(2) | ControlGroup(900).HasFocus | Control.HasFocus(20081)</visible>
 				</control>
 				<control type="scrollbar" id="20082"> <!-- HOME SCROLLBAR -----------(901)-->
 					<posx>1265</posx>
@@ -6872,7 +6863,7 @@
 					<onright>901</onright>
 					<onup>PageUp</onup>
 					<ondown>PageDown</ondown>
-					<visible>Skin.String(SkinSettingsCategory,2)</visible>
+					<visible>Control.HasFocus(3) | ControlGroup(901).HasFocus | Control.HasFocus(20082)</visible>
 				</control>
 				<control type="scrollbar" id="20083"> <!-- MEDIA SCROLLBAR ----------(902)-->
 					<posx>1265</posx>
@@ -6890,7 +6881,7 @@
 					<onright>902</onright>
 					<onup>PageUp</onup>
 					<ondown>PageDown</ondown>
-					<visible>Skin.String(SkinSettingsCategory,3)</visible>
+					<visible>Control.HasFocus(4) | ControlGroup(902).HasFocus | Control.HasFocus(20083)</visible>
 				</control>
 				<control type="scrollbar" id="20084"> <!-- BACKGROUNDS SCROLLBAR ----(903)-->
 					<posx>1265</posx>
@@ -6908,7 +6899,7 @@
 					<onright>903</onright>
 					<onup>PageUp</onup>
 					<ondown>PageDown</ondown>
-					<visible>Skin.String(SkinSettingsCategory,4)</visible>
+					<visible>Control.HasFocus(5) | ControlGroup(903).HasFocus | Control.HasFocus(20084)</visible>
 				</control>
 			</control>
 		</control>

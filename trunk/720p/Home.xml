@@ -2212,7 +2212,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(4)</visible>
+						<visible>Container(850).HasFocus(4) + !Skin.HasSetting(ShowVideosSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -2257,33 +2257,38 @@
 							<item id="2">
 								<description>Video Plugins</description>
 								<label>24001</label>
-								<onclick>ActivateWindow(videofiles,"Video plugins")</onclick>						
+								<onclick>ActivateWindow(videofiles,"Video plugins")</onclick>
+								<visible>!Skin.HasSetting(HideVideoPluginsButton)</visible>
 							</item>
 							<item id="6">
 								<description>Video Files</description>
 								<label>1214</label>
 								<onclick>ActivateWindow(videofiles)</onclick>	
+								<visible>!Skin.HasSetting(HideVideoFilesButton)</visible>
 							</item>
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
+								<visible>!Skin.HasSetting(HideVideoAddonsButton)</visible>
 							</item>
 							<item id="4">
 								<description>Video Library</description>
 								<label>14022</label>
-								<onclick>ActivateWindow(VideoLibrary)</onclick>						
+								<onclick>ActivateWindow(VideoLibrary)</onclick>	
+								<visible>!Skin.HasSetting(HideVideoLibraryButton)</visible>
 							</item>
 							<item id="1">
 								<description>Music Videos</description>
 								<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE]</label>
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,Return)</onclick>	
-								<visible>Library.HasContent(MusicVideos)</visible>
+								<visible>!Skin.HasSetting(HideVideoMusicVidsButton) + Library.HasContent(MusicVideos)</visible>
 							</item>
 							<item id="5">
 								<description>Playlists</description>
 								<label>136</label>
 								<onclick>ActivateWindow(VideoLibrary,Playlists,Return)</onclick>
+								<visible>!Skin.HasSetting(HideVideoPlaylistButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -2293,7 +2298,7 @@
 								<onclick>Skin.SetBool(ExpandVideosSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3072,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideVideosAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM VIDEOS SUB-MENUS --------------------------------------------->	
@@ -2530,7 +2535,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(7)</visible>
+						<visible>Container(850).HasFocus(7) + !Skin.HasSetting(ShowGeneralSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -2575,27 +2580,31 @@
 								<description>Favourites</description>
 								<label>$LOCALIZE[1036]</label>
 								<onclick>ActivateWindow(Favourites)</onclick>
+								<visible>!Skin.HasSetting(HideGeneralFavouritesButton)</visible>
 							</item>
 							<item id="2">
-								<visible>!Skin.HasSetting(HideScriptsCategory)</visible>
 								<description>Scripts</description>
 								<label>$LOCALIZE[10020]</label>
-								<onclick>ActivateWindow(Scripts)</onclick>		
+								<onclick>ActivateWindow(Scripts)</onclick>	
+								<visible>!Skin.HasSetting(HideGeneralScriptsButton) + !Skin.HasSetting(HideScriptsCategory)</visible>
 							</item>
 							<item id="3">
 								<description>Eject button</description>
 								<label>[UPPERCASE]$LOCALIZE[13391][/UPPERCASE]</label>
 								<onclick>XBMC.EjectTray()</onclick>
+								<visible>!Skin.HasSetting(HideGeneralEjectButton)</visible>
 							</item>
 							<item id="4">
 								<description>Filemanager</description>
 								<label>$LOCALIZE[10003]</label>
-								<onclick>ActivateWindow(Filemanager)</onclick>		
+								<onclick>ActivateWindow(Filemanager)</onclick>
+								<visible>!Skin.HasSetting(HideGeneralFileManagerButton)</visible>
 							</item>
 							<item id="5">
 								<description>Weather</description>
 								<label>[UPPERCASE]$LOCALIZE[8][/UPPERCASE]</label>
-								<onclick>ActivateWindow(Weather)</onclick>		
+								<onclick>ActivateWindow(Weather)</onclick>
+								<visible>!Skin.HasSetting(HideGeneralWeatherButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -2605,7 +2614,7 @@
 								<onclick>Skin.SetBool(ExpandGeneralSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3076,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideGeneralAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM General SUB-MENUS --------------------------------------------->	
@@ -2842,7 +2851,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(8)</visible>
+						<visible>Container(850).HasFocus(8) + !Skin.HasSetting(ShowSystemSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -2884,31 +2893,36 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<description>Appearancer</description>
+								<description>Appearance</description>
 								<label>480</label>
-								<onclick>ActivateWindow(AppearanceSettings)</onclick>		
+								<onclick>ActivateWindow(AppearanceSettings)</onclick>
+								<visible>!Skin.HasSetting(HideSystemAppearanceButton)</visible>
 							</item>
 							<item id="2">
 								<description>Skin Settings</description>
 								<label>$LOCALIZE[20077]</label>
-								<onclick>ActivateWindow(3001)</onclick>		
+								<onclick>ActivateWindow(3001)</onclick>	
+								<visible>!Skin.HasSetting(HideSystemSkinSettingsButton)</visible>
 							</item>
 							
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/)</onclick>	
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/)</onclick>
+								<visible>!Skin.HasSetting(HideSystemAddonsButton)</visible>
 							</item>
 							
 							<item id="4">
 								<description>Profiles</description>
 								<label>$LOCALIZE[13200]</label>
-								<onclick>ActivateWindow(Profiles)</onclick>		
+								<onclick>ActivateWindow(Profiles)</onclick>
+								<visible>!Skin.HasSetting(HideSystemProfilesButton)</visible>
 							</item>
 							<item id="5">
 								<description>Credits</description>
 								<label>$LOCALIZE[470]</label>
 								<onclick>ActivateWindow(3010)</onclick>
+								<visible>!Skin.HasSetting(HideSystemCreditsButton)</visible>
 							</item>
 						</content>						
 					</control>
@@ -2924,7 +2938,7 @@
 						<orientation>horizontal</orientation>
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<visible>Container(850).HasFocus(1)</visible>
+						<visible>Container(850).HasFocus(1) + !Skin.HasSetting(ShowProgramsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -2969,27 +2983,32 @@
 								<description>Plugins</description>
 								<label>24001</label>
 								<onclick>ActivateWindow(Programs,Plugins,return)</onclick>
+								<visible>!Skin.HasSetting(HideProgramsPluginButton)</visible>
 							</item>
 							
 							<item id="2">
 								<description>Games</description>
 								<label>15016</label>
 								<onclick>ActivateWindow(Programs,Games,return)</onclick>
+								<visible>!Skin.HasSetting(HideProgramsGamesButton)</visible>
 							</item>
 							<item id="1">
 								<description>Add-Ons</description>
 								<label>31919</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.program.&amp;repoid=repository.xbmc4xbox/)</onclick>
+								<visible>!Skin.HasSetting(HideProgramsAddonsButton)</visible>
 							</item>	
 							<item id="4">
 								<description>Apps</description>
 								<label>31921</label>
 								<onclick>ActivateWindow(Programs,Apps,return)</onclick>
+								<visible>!Skin.HasSetting(HideProgramsAppsButton)</visible>
 							</item>
 							<item id="3">
 								<description>Emus</description>
 								<label>31922</label>
 								<onclick>ActivateWindow(Programs,Emulators,return)</onclick>
+								<visible>!Skin.HasSetting(HideProgramsEmusButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -2999,7 +3018,7 @@
 								<onclick>Skin.SetBool(ExpandProgramsSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3071,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideProgramsAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM Programs SUB-MENUS --------------------------------------------->	
@@ -3240,7 +3259,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(5)</visible>
+						<visible>Container(850).HasFocus(5) + !Skin.HasSetting(ShowMoviesSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -3285,31 +3304,37 @@
 								<description>Recently Added</description>
 								<label>31804</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesRecentButton)</visible>
 							</item>		
 							<item id="2">
 								<description>Genres</description>
 								<label>135</label>
-								<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>	
+								<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesGenresButton)</visible>
 							</item>
 							<item id="3">
 								<description>Actors</description>
 								<label>344</label>
-							<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>						
+								<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesActorsButton)</visible>
 							</item>
 							<item id="4">
 								<description>Directors</description>
 								<label>20348</label>
 								<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesDirectorsButton)</visible>
 							</item>
 							<item id="5">
 								<description>Years</description>
 								<label>652</label>
-								<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>						
+								<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesYearsButton)</visible>
 							</item>
 							<item id="6">
 								<description>Update Video Library</description>
 								<label>653</label>
 								<onclick>UpdateLibrary(video)</onclick>
+								<visible>!Skin.HasSetting(HideMoviesUpdateButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -3319,7 +3344,7 @@
 								<onclick>Skin.SetBool(ExpandMoviesSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3073,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMoviesAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM MOVIES SUB-MENUS --------------------------------------------->	
@@ -3556,7 +3581,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(6)</visible>
+						<visible>Container(850).HasFocus(6) + !Skin.HasSetting(ShowTvShowsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -3601,31 +3626,37 @@
 								<description>Recently Added</description>
 								<label>31804</label>
 								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedEpisodes,return)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsRecentButton)</visible>
 							</item>
 							<item id="2">
 								<description>Genres</description>
 								<label>135</label>
-								<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>	
+								<onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsGenresButton)</visible>
 							</item>
 							<item id="3">
 								<description>Actors</description>
 								<label>344</label>
-							<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>						
+								<onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsActorsButton)</visible>
 							</item>
 							<item id="4">
 								<description>Directors</description>
 								<label>20388</label>
 								<onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsDirectorsButton)</visible>
 							</item>
 							<item id="5">
 								<description>Years</description>
 								<label>652</label>
-								<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>						
+								<onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsYearsButton)</visible>
 							</item>
 							<item id="6">
 								<description>Update Video Library</description>
 								<label>653</label>
 								<onclick>UpdateLibrary(video)</onclick>
+								<visible>!Skin.HasSetting(HideTvShowsUpdateButton)</visible>
 							</item>	
 						
 							<item id="15">
@@ -3636,7 +3667,7 @@
 								<onclick>Skin.SetBool(ExpandTVShowsSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3074,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideTvShowsAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM TVShows SUB-MENUS --------------------------------------------->	
@@ -3873,7 +3904,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(3)</visible>
+						<visible>Container(850).HasFocus(3) + !Skin.HasSetting(ShowMusicSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -3928,41 +3959,49 @@
 								<description>Artists</description>
 								<label>133</label>
 								<onclick>ActivateWindow(MusicLibrary,Artists,return)</onclick>	
+								<visible>!Skin.HasSetting(HideMusicArtistsButton)</visible>
 							</item>
 							<item id="2">
 								<description>Albums</description>
 								<label>132</label>
-								<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>						
+								<onclick>ActivateWindow(MusicLibrary,Albums,return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicAlbumsButton)</visible>
 							</item>
 							<item id="6">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>			
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>
+								<visible>!Skin.HasSetting(HideMusicAddonsButton)</visible>
 							</item>
 							<item id="3">
 								<description>Songs</description>
 								<label>134</label>
-								<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>						
+								<onclick>ActivateWindow(MusicLibrary,Songs,return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicSongsButton)</visible>
 							</item>
 							<item id="4">
 								<description>Music Library</description>
 								<label>14022</label>
 								<onclick>ActivateWindow(MusicLibrary)</onclick>
+								<visible>Library.HasContent(Music) + !Skin.HasSetting(HideMusicLibraryButton)</visible>
 							</item>
 							<item id="4">
 								<description>Music Files</description>
 								<label>1214</label>
 								<onclick>ActivateWindow(MusicFiles)</onclick>
+								<visible>!Skin.HasSetting(HideMusicFilesButton)</visible>
 							</item>
 							<item id="5">
-								<description>Recently Added</description>
+								<description>Playlists</description>
 								<label>136</label>
 								<onclick>XBMC.ActivateWindow(MusicLibrary,Playlists,return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicPlaylistsButton)</visible>
 							</item>		
 							<item id="7">
 								<description>Update Music Library</description>
 								<label>653</label>
 								<onclick>UpdateLibrary(music)</onclick>
+								<visible>Library.HasContent(Music) + !Skin.HasSetting(HideMusicUpdateButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -3972,7 +4011,7 @@
 								<onclick>Skin.SetBool(ExpandMusicSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3075,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMusicAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM MUSIC SUB-MENUS --------------------------------------------->	
@@ -4209,7 +4248,7 @@
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<!-- HomeSubMenuOpenCloseAnim -->
-						<visible>Container(850).HasFocus(11)</visible>
+						<visible>Container(850).HasFocus(11) + !Skin.HasSetting(ShowAddonsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
 								<posx>137</posx>
@@ -4254,21 +4293,25 @@
 								<description>VIDEO Add-Ons</description>
 								<label>$LOCALIZE[157]</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
+								<visible>!Skin.HasSetting(HideAddonsVideoButton)</visible>
 							</item>
 							<item id="2">
 								<description>MUSIC Add-Ons</description>
 								<label>$LOCALIZE[249]</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>			
+								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="3">
 								<description>XBMC.ORG Add-Ons</description>
 								<label>XBMC.ORG</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/)</onclick>
+								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="5">
 								<description>LIBRARIES</description>
 								<label>.MODULES</label>
 								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc4xbox/)</onclick>			
+								<visible>!Skin.HasSetting(HideAddonsModulesButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>
@@ -4278,7 +4321,7 @@
 								<onclick>Skin.SetBool(ExpandAdd_onsSubMenuSettings)</onclick>
 								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
 								<onclick>ActivateWindow(3078,return)</onclick>
-								<visible>!Skin.HasSetting(HideAddCustomButton)</visible>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideAddonsAddCustomButton)</visible>
 							</item>
 						<!------------------------------------------------------------------------------------------------------------>	
 						<!--------------------------------------- CUSTOM Add-Ons SUB-MENUS --------------------------------------------->	
