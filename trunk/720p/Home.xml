@@ -1528,6 +1528,26 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
+				<control type="image"> <!-- scripts ---->
+					<posy>10</posy>
+					<description>Scripts Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>home-scripts-icon.png</texture>
+					<visible>Container(850).HasFocus(20)</visible>
+					<!-- HomeMenuIconAnim -->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!-- SubMenuIconClickAnim -->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
 				<!--------------------------------------------------------------------------------------- CUSTOM ICONS --------->
 				<control type="image"> <!-- custom1 --->
 					<description>Custom1 Icon</description>
@@ -1793,7 +1813,8 @@
 					<animation effect="slide" start="0,0" end="0,-3" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" end="0,11" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-					<animation effect="slide" end="0,-10" time="0" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Container(850).HasFocus(2) | Container(850).HasFocus(9)]">Conditional</animation>
+				<!-- no category sub slide -->
+					<!-- <animation effect="slide" end="0,-10" time="0" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Container(850).HasFocus(2) | Container(850).HasFocus(9)]">Conditional</animation> -->
 					<description>Home Menu</description>
 					<posx>15</posx>
 					<posy>27</posy>
@@ -2129,7 +2150,6 @@
 	<!--(((Sub-Menus)))======================================================================================================================-->
 			<control type="group" id="900">
 				<onup>600</onup>
-				
 				<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
 				<animation effect="slide" start="0,114" end="0,33"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
@@ -2149,17 +2169,6 @@
 				<!--sub open animation-->
 					<animation effect="zoom" start="0,577,1280,40" end="0,610,1280,0" time="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				
-					<!-- <control type="image">
-						<description>Home SubMenu Bar Image</description>
-						<posy>-5</posy>
-						<width>ScreenWidth</width>
-						<height>35</height>
-						<texture border="80,4,80,4">home-submenu-cover1.png</texture>
-						<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
-						<aspectratio aligny="top">scale</aspectratio>
-						<visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible>
-					</control> -->
-					
 					<control type="image">
 						<description>separator</description>
 						<posy>30</posy>
@@ -4575,7 +4584,7 @@
 							<bordertexture border="10">item-shadow-border.png</bordertexture>
 							<bordersize>5</bordersize>
 							<texture>$INFO[VideoPlayer.Cover]</texture>
-							<aspectratio align="bottom">stretch</aspectratio>
+							<aspectratio align="center">keep</aspectratio>
 						</control>
 						<control type="image">
 							<posy>7</posy>
