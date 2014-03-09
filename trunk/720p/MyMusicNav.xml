@@ -3313,8 +3313,8 @@
 								<visible>false</visible>
 							</control>
 							<!-- MenuBarOptionsSwitchAnim -->
-							<animation effect="slide" start="0,-35" time="350">Visible</animation>
-							<animation effect="slide" end="0,-35" time="350">Hidden</animation>
+							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
+							<animation effect="fade" end="0" time="200">Hidden</animation>
 							<visible>!Skin.HasSetting(ShowMediaExtraOptions)</visible>
 						</control>
 						<control type="group">   			
@@ -3430,8 +3430,8 @@
 								</control>
 							</control>
 							<!-- MenuBarOptionsSwitchAnim -->
-							<animation effect="slide" start="0,-35" time="350">Visible</animation>
-							<animation effect="slide" end="0,-35" time="350">Hidden</animation>
+							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
+							<animation effect="fade" end="0" time="200">Hidden</animation>
 							<visible>Skin.HasSetting(ShowMediaExtraOptions)</visible>
 						</control>		
 					</control>
@@ -3440,7 +3440,7 @@
 				
 				<!-- MenuBarOpenCloseAnim -->
 				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
-				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>
+				<!-- <animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation> -->
 				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
 					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
 					<effect type="fade" start="100" end="0" time="1" delay="200"/>

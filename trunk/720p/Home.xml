@@ -23,7 +23,7 @@
 					<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
-					<animation effect="fade" end="45" condition="Window.IsVisible(ShutdownMenu) | Window.IsVisible(VirtualKeyboard) | Window.IsVisible(SelectDialog) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+					
 				</control>
 			</control>
 			<control type="group"> <!-------- UNIVERSAL CUSTOM BG ----------------------------->
