@@ -1066,7 +1066,7 @@
 					<description>MenuBarImage</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">home-submenu-cover1.png</texture>
+					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>

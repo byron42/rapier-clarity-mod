@@ -10,14 +10,14 @@
 		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
 		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
 		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">BF1B1B1B</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
 	</variable>
 	
 	<variable name="TopBarImage">
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">top-bar-background_clear.png</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">Transparent-Top-Bar.png</value>
 		<value condition="!Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
-	<!--transparent-->
 	</variable>
+	
 	
 	<variable name="BreadCrumbBackgroundColor">
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,2) + !Skin.String(BreadCrumbBackgroundColor,3)">ff454A4F</value>
@@ -75,6 +75,11 @@
 		<value condition="Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
 		<value condition="!Skin.HasSetting(TransparentMenuBacks)">FFFFFFFF</value>
 	</variable>
+	<variable name="SubMenuImage">
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">Transparent-Sub-Bar.png</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">home-submenu-cover1.png</value>
+	</variable>
+	
 
 <!--(((SYSTEM SETTING BREADCRUMB LABEL)))=================================-->
 	<variable name="SettingsCategoryBC">

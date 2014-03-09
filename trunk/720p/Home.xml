@@ -2174,7 +2174,7 @@
 						<posy>30</posy>
 						<width>ScreenWidth</width>
 						<height>2</height>
-						<texture border="80,4,80,4">home-submenu-cover1.png</texture>
+						<texture border="80,4,80,4">$VAR[SubMenuImage]</texture>
 						<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 						<aspectratio aligny="top">scale</aspectratio>
 						<visible>Skin.HasSetting(ConstantHomeSubmenu) + ![Container(850).HasFocus(2) | Container(850).HasFocus(9)]</visible>
@@ -4857,7 +4857,7 @@
 					<description>Menu Bar Image</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<texture flipy="true" border="80,4,80,4">home-submenu-cover1.png</texture>
+					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
