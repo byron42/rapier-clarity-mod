@@ -166,9 +166,8 @@
 						<control type="image" id="1110">
 							<width>ScreenWidth</width>
 							<height>53</height>
-							<texture border="0,0,0,7">top-bar-background.png</texture>
-							<colordiffuse>ff454A4F</colordiffuse> <!-- BLUE -->
-							
+							<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+							<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 						</control>
 						
 						<control type="image" id="1110">
