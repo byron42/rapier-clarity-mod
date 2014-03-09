@@ -10,7 +10,7 @@
 		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
 		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
 		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">BB1B1B1B</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">BF1B1B1B</value>
 	</variable>
 	
 	<variable name="TopBarImage">

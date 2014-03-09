@@ -562,12 +562,14 @@
 					<control type="image">
 						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 						<width>1280</width>
+						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
 					</control>
 					<control type="image">
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
 						<width>1280</width>
+						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
 					</control>
