@@ -13,6 +13,12 @@
 		<value condition="Skin.HasSetting(TransparentMenuBacks)">BB1B1B1B</value>
 	</variable>
 	
+	<variable name="TopBarImage">
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">top-bar-background_clear.png</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
+	<!--transparent-->
+	</variable>
+	
 	<variable name="BreadCrumbBackgroundColor">
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,2) + !Skin.String(BreadCrumbBackgroundColor,3)">ff454A4F</value>
 		<value condition="!Skin.String(BreadCrumbBackgroundColor,1) + !Skin.String(BreadCrumbBackgroundColor,3)">ff8A795D</value>
@@ -117,11 +123,23 @@
 		<value condition="Substring(Container.FolderPath,videodb://3/,Left)">[UPPERCASE]$LOCALIZE[3][/UPPERCASE] </value> <!-- music videos -->
 		<value condition="Substring(Container.FolderPath,plugin://music/,Left)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- plugins -->
 	</variable>
+<!--(((FILE MANAGER/PLAYLIST EDITOR)))=================================-->
+	<variable name="NumObjectsLeftColor">
+		<value condition="!Control.HasFocus(20)">Grey</value>
+		<value condition="Control.HasFocus(20)">ThemeColor2</value>
+	</variable>	
+	<variable name="NumObjectsRightColor">
+		<value condition="!Control.HasFocus(21)">Grey</value>
+		<value condition="Control.HasFocus(21)">ThemeColor2</value>
+	</variable>	
 
-	<variable name="MusicLibraryBreadCrumbLabel_Big">
-		<value condition="Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31804][/UPPERCASE] </value> <!-- recently added -->
-		<value condition="Substring(Container.FolderPath,musicdb://8/,Left)">[UPPERCASE]$LOCALIZE[521][/UPPERCASE] </value> <!-- compilations -->
-		<!-- <value condition="Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31939][/UPPERCASE] </value> <!-- Recently PLAYED --> -->
+	<variable name="NumObjectsLeftColorPL">
+		<value condition="!Control.HasFocus(50)">Grey</value>
+		<value condition="Control.HasFocus(50)">ThemeColor2</value>
+	</variable>	
+	<variable name="NumObjectsRightColorPL">
+		<value condition="!Control.HasFocus(100)">Grey</value>
+		<value condition="Control.HasFocus(100)">ThemeColor2</value>
 	</variable>	
 
 </includes>

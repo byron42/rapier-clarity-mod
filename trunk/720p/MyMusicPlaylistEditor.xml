@@ -151,8 +151,10 @@
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 			</control>
-			<!--******************************* Separators ************************************-->
+			<!--******************************* SEPARATORS ************************************-->
 			<control type="group"> 
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 				<posx>14</posx>
 				<posy>110</posy>
 				<control type="group"> <!-- TOP -->
@@ -160,14 +162,14 @@
 					<control type="image">
 						<description>top bar</description>
 						<posy>34</posy>
-						<width>626</width>
+						<width>505</width>
 						<height>3</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="image">
-						<posx>626</posx>
+						<posx>748</posx>
 						<posy>34</posy>
-						<width>626</width>
+						<width>505</width>
 						<height>3</height>
 						<texture flipx="true">separator.png</texture>
 					</control>
@@ -175,15 +177,16 @@
 				<control type="group"> <!-- BOTTOM -->
 					<control type="image">
 						<description>BOTTOM bar</description>
+						<posx></posx>
 						<posy>565</posy>
-						<width>510</width>
+						<width>505</width>
 						<height>3</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="image">
-						<posx>742</posx>
+						<posx>748</posx>
 						<posy>565</posy>
-						<width>512</width>
+						<width>507</width>
 						<height>3</height>
 						<texture flipx="true">separator.png</texture>
 					</control>
@@ -193,57 +196,60 @@
 			
 	<!--(((PAGE LAYOUT)))=================================================================================================================================-->		
 			<control type="group">		
-				<include>BackgroundOffset</include>	
+				<posy>44</posy>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 				<!--************************ MENUBAR IMAGE TOP/BOTTOM *****************************-->
 				<control type="group">		
 					<control type="image">
-						<description>MenuBarImage(LEFT-TOP)</description>
+						<description>MenuBarImage(LEFT)</description>
 						<posx>-8</posx>
 						<posy>23</posy>
-						<width>650</width>
+						<width>527</width>
 						<height>45</height>
 						<texture flipx="true" border="10">ListViewItemBack.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<description>MenuBarImage(RIGHT-TOP)</description>
-						<posx>635</posx>
+						<description>MenuBarImage(RIGHT)</description>
+						<posx>762</posx>
 						<posy>23</posy>
-						<width>650</width>
+						<width>520</width>
 						<height>45</height>
 						<texture border="10">ListViewItemBack.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
+				<!--bottom(label_bg)-->	
 					<control type="image">
 						<description>MenuBarImage(LEFT-BOTTOM)</description>
 						<posx>-8</posx>
 						<posy>635</posy>
-						<width>647</width>
+						<width>527</width>
 						<height>45</height>
 						<texture flipx="true" border="10">ListViewItemBack.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
 						<description>MenuBarImage(RIGHT-BOTTOM)</description>
-						<posx>639</posx>
+						<posx>762</posx>
 						<posy>635</posy>
-						<width>650</width>
+						<width>520</width>
 						<height>45</height>
 						<texture border="10">ListViewItemBack.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
+					<control type="image">
+						<description>FileManagerDividerPaneImage</description>
+						<posy>1</posy>
+						<posx>520</posx>
+						<width>240</width>
+						<height>680</height>
+						<texture border="10">DividerPane.png</texture>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+					</control>
 				</control>
 				<!--*******************************************************************************-->
-				<control type="image">
-					<description>FileManagerDividerPaneImage</description>
-					<posy>-10</posy>
-					<posx>520</posx>
-					<width>240</width>
-					<height>1000</height>
-					<texture border="2">black-back.png</texture>
-					<bordertexture border="15">search-focus.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
+				
 			<!--path labels-->
 				<control type="label">
 					<description>Path Left</description>
@@ -275,66 +281,36 @@
 			</control>
 		<!--number of objects-->
 			<control type="group"> 
-				<posx>-40</posx>
-				<posy>10</posy>
-				<control type="label">
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+				<posy>44</posy>
+				<control type="label" id="12">
 					<description>Num Objects Left</description>
-					<posy>678</posy>
-					<posx>12</posx>
+					<posy>641</posy>
+					<posx>15</posx>
 					<width>210</width>
 					<height>34</height>	
 					<font>ListLabel2Font</font>
-					<textcolor>Grey</textcolor>
-					<selectedcolor>ThemeColor2</selectedcolor>
+					<textcolor>$VAR[NumObjectsLeftColorPL]</textcolor>
+					<selectedcolor></selectedcolor>
 					<shadowcolor>black</shadowcolor>
-					<align>center</align>
+					<align>left</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(50).NumItems] $LOCALIZE[127]</label>
-					<visible>!Control.HasFocus(50)</visible>
 				</control>
-				<control type="label">
-					<description>Num Objects Left</description>
-					<posy>678</posy>
-					<posx>12</posx>
-					<width>210</width>
-					<height>34</height>	
-					<font>ListLabel2Font</font>
-					<textcolor>ThemeColor2</textcolor>
-					<selectedcolor>ThemeColor2</selectedcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>center</align>
-					<aligny>top</aligny>
-					<label>$INFO[Container(50).NumItems] $LOCALIZE[127]</label>
-					<visible>Control.HasFocus(50)</visible>
-				</control>
-				<control type="label">
+				<control type="label" id="13">
 					<description>Num Objects Right</description>
-					<posx>1308</posx>
-					<posy>678</posy>
+					<posx>1262</posx>
+					<posy>641</posy>
 					<width>210</width>
 					<height>34</height>	
 					<font>ListLabel2Font</font>
-					<textcolor>Grey</textcolor>
-					<selectedcolor>ThemeColor2</selectedcolor>
+					<textcolor>$VAR[NumObjectsRightColorPL]</textcolor>
+					<selectedcolor></selectedcolor>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Container(100).NumItems] $LOCALIZE[127]</label>
-					<visible>!Control.HasFocus(100)</visible>
-				</control>
-				<control type="label">
-					<description>Num Objects Right</description>
-					<posx>1308</posx>
-					<posy>678</posy>
-					<width>210</width>
-					<height>34</height>	
-					<font>ListLabel2Font</font>
-					<textcolor>ThemeColor2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>right</align>
-					<aligny>top</aligny>
-					<label>$INFO[Container(100).NumItems] $LOCALIZE[127]</label>
-					<visible>Control.HasFocus(100)</visible>
 				</control>
 			</control>	
 			
@@ -774,7 +750,7 @@
 							<height>36</height>	
 							<texture border="10,10,10,10">search-focus.png</texture>
 							<colordiffuse>FFFFFFFF</colordiffuse>
-							<visible>Control.HasFocus(20)</visible>
+							<visible>Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
 							<posx>-13</posx>
@@ -784,7 +760,7 @@
 							<texture border="10,10,10,10">search-focus2.png</texture>
 							<!--AltTexture-->
 							<colordiffuse></colordiffuse>
-							<visible>!Control.HasFocus(20)</visible>
+							<visible>!Control.HasFocus(50)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -878,7 +854,7 @@
 							<width>490</width>
 							<height>36</height>	
 							<texture border="10,10,10,10">search-focus.png</texture>
-							<visible>Control.HasFocus(21)</visible>
+							<visible>Control.HasFocus(100)</visible>
 						</control>
 						<control type="image">
 							<posx>-11</posx>
@@ -888,7 +864,7 @@
 							<texture border="10,10,10,10">search-focus2.png</texture>
 							<!--AltTexture-->
 							<colordiffuse></colordiffuse>
-							<visible>!Control.HasFocus(21)</visible>
+							<visible>!Control.HasFocus(100)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -997,10 +973,10 @@
 						<width>200</width>
 						<visible>Control.HasFocus(50)</visible>
 						<control type="image">
-							<posy>-20</posy>
-							<posx>5</posx>
-							<width>190</width>
-							<height>190</height>
+							<posy>-17</posy>
+							<posx>8</posx>
+							<width>184</width>
+							<height>184</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>$INFO[Container(50).ListItem.Icon]</texture>
 							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
@@ -1134,10 +1110,10 @@
 						<width>200</width>
 						<visible>Control.HasFocus(100)</visible>
 						<control type="image">
-							<posy>-20</posy>
-							<posx>5</posx>
-							<width>190</width>
-							<height>190</height>
+							<posy>-17</posy>
+							<posx>8</posx>
+							<width>184</width>
+							<height>184</height>
 							<aspectratio>stretch</aspectratio>
 							<texture>$INFO[Container(100).ListItem.Icon]</texture>
 							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
@@ -1264,7 +1240,19 @@
 							</control>
 						</control>
 					</control>	
-				</control>			
+				</control>	
+				<control type="image">
+					<posy>192</posy>
+					<posx>548</posx>
+					<width>184</width>
+					<height>184</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="15">Glass/keyfocus.png</texture>
+					<!-- <bordertexture border="15">Glass/keyfocus.png</bordertexture>
+					<bordersize>14</bordersize> -->
+					<fadetime>IconCrossfadeTime</fadetime>
+					<visible>[!Control.HasFocus(100) + !Control.HasFocus(50)] | IsEmpty(Container(100).ListItem.Icon) | IsEmpty(Container(50).ListItem.Icon)</visible>
+				</control>
 			<!--scrollbars-->
 				<control type="scrollbar" id="150">
 					<posx>13</posx>

@@ -154,6 +154,8 @@
 			
 			<!--******************************* SEPARATORS ************************************-->
 			<control type="group"> 
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
 				<posx>14</posx>
 				<posy>110</posy>
 				<control type="group"> <!-- TOP -->
@@ -161,14 +163,14 @@
 					<control type="image">
 						<description>top bar</description>
 						<posy>34</posy>
-						<width>510</width>
+						<width>505</width>
 						<height>3</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="image">
-						<posx>742</posx>
+						<posx>748</posx>
 						<posy>34</posy>
-						<width>512</width>
+						<width>505</width>
 						<height>3</height>
 						<texture flipx="true">separator.png</texture>
 					</control>
@@ -176,15 +178,16 @@
 				<control type="group"> <!-- BOTTOM -->
 					<control type="image">
 						<description>BOTTOM bar</description>
+						<posx></posx>
 						<posy>565</posy>
-						<width>510</width>
+						<width>505</width>
 						<height>3</height>
 						<texture>separator.png</texture>
 					</control>
 					<control type="image">
-						<posx>742</posx>
+						<posx>748</posx>
 						<posy>565</posy>
-						<width>512</width>
+						<width>507</width>
 						<height>3</height>
 						<texture flipx="true">separator.png</texture>
 					</control>
@@ -193,145 +196,117 @@
 			<!--*******************************************************************************-->
 			
 	<!--(((CONTROLS)))============================================================================================================================-->		
-			<control type="group">		
-				<include>BackgroundOffset</include>
-			<!--top(label_bg)-->
-				<control type="image">
-					<description>MenuBarImage(LEFT)</description>
-					<posx>-8</posx>
-					<posy>23</posy>
-					<width>528</width>
-					<height>45</height>
-					<texture flipx="true" border="10">ListViewItemBack.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<description>MenuBarImage(RIGHT)</description>
-					<posx>756</posx>
-					<posy>23</posy>
-					<width>535</width>
-					<height>45</height>
-					<texture border="10">ListViewItemBack.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			<!--bottom(label_bg)-->	
-				<control type="image">
-					<description>MenuBarImage(LEFT-BOTTOM)</description>
-					<posx>-8</posx>
-					<posy>635</posy>
-					<width>647</width>
-					<height>45</height>
-					<texture flipx="true" border="10">ListViewItemBack.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<description>MenuBarImage(RIGHT-BOTTOM)</description>
-					<posx>639</posx>
-					<posy>635</posy>
-					<width>650</width>
-					<height>45</height>
-					<texture border="10">ListViewItemBack.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<description>FileManagerDividerPaneImage</description>
-					<posy>-10</posy>
-					<posx>520</posx>
-					<width>240</width>
-					<height>1000</height>
-					<texture border="2">black-back.png</texture>
-					<bordertexture border="15">search-focus.png</bordertexture>
-					<bordersize>10</bordersize>
-				</control>
-			<!--path labels-->
-				<control type="label" id="101">
-					<description>Path Left</description>
-					<posx>15</posx>
-					<posy>30</posy>
-					<width>505</width>
-					<height>45</height>	
-					<font>ListLabel2Font</font>
-					<textcolor>ThemeColor2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<aligny>top</aligny>
-					<scroll>yes</scroll>
-				</control>	
-				<control type="label" id="102">
-					<description>Path Right</description>
-					<posx>1262</posx>
-					<posy>30</posy>
-					<width>505</width>
-					<height>45</height>	
-					<font>ListLabel2Font</font>
-					<textcolor>ThemeColor2</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<align>right</align>
-					<aligny>top</aligny>
-					<scroll>yes</scroll>
-				</control>
-			 <!--Number of Objects-->	
-				<control type="group">
-					<posx>-40</posx>
-					<control type="label" id="12">
-						<description>Num Objects Left</description>
-						<posy>641</posy>
-						<posx>12</posx>
-						<width>210</width>
-						<height>34</height>	
-						<font>ListLabel2Font</font>
-						<textcolor>Grey</textcolor>
-						<selectedcolor>ThemeColor2</selectedcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>center</align>
-						<aligny>top</aligny>
-						<label>$INFO[Container(20).NumItems] $LOCALIZE[127]</label>
-						<visible>!Control.HasFocus(20)</visible>
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="1000">WindowClose</animation>
+				<control type="group">	
+					<posy>44</posy>
+				<!--top(label_bg)-->
+					<control type="image">
+						<description>MenuBarImage(LEFT)</description>
+						<posx>-8</posx>
+						<posy>23</posy>
+						<width>527</width>
+						<height>45</height>
+						<texture flipx="true" border="10">ListViewItemBack.png</texture>
+						<aspectratio>stretch</aspectratio>
 					</control>
-					<control type="label" id="12">
-						<description>Num Objects Left</description>
-						<posy>641</posy>
-						<posx>12</posx>
-						<width>210</width>
-						<height>34</height>	
+					<control type="image">
+						<description>MenuBarImage(RIGHT)</description>
+						<posx>762</posx>
+						<posy>23</posy>
+						<width>520</width>
+						<height>45</height>
+						<texture border="10">ListViewItemBack.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+				<!--bottom(label_bg)-->	
+					<control type="image">
+						<description>MenuBarImage(LEFT-BOTTOM)</description>
+						<posx>-8</posx>
+						<posy>635</posy>
+						<width>527</width>
+						<height>45</height>
+						<texture flipx="true" border="10">ListViewItemBack.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>MenuBarImage(RIGHT-BOTTOM)</description>
+						<posx>762</posx>
+						<posy>635</posy>
+						<width>520</width>
+						<height>45</height>
+						<texture border="10">ListViewItemBack.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<description>FileManagerDividerPaneImage</description>
+						<posy>1</posy>
+						<posx>520</posx>
+						<width>240</width>
+						<height>680</height>
+						<texture border="10">DividerPane.png</texture>
+						<colordiffuse>BFFFFFFF</colordiffuse>
+					</control>
+				<!--path labels-->
+					<control type="label" id="101">
+						<description>Path Left</description>
+						<posx>15</posx>
+						<posy>30</posy>
+						<width>505</width>
+						<height>45</height>	
 						<font>ListLabel2Font</font>
 						<textcolor>ThemeColor2</textcolor>
-						<selectedcolor>ThemeColor2</selectedcolor>
 						<shadowcolor>black</shadowcolor>
-						<align>center</align>
 						<aligny>top</aligny>
-						<label>$INFO[Container(20).NumItems] $LOCALIZE[127]</label>
-						<visible>Control.HasFocus(20)</visible>
-					</control>
-					<control type="label" id="13">
-						<description>Num Objects Right</description>
-						<posx>1308</posx>
-						<posy>641</posy>
-						<width>210</width>
-						<height>34</height>	
-						<font>ListLabel2Font</font>
-						<textcolor>Grey</textcolor>
-						<selectedcolor>ThemeColor2</selectedcolor>
-						<shadowcolor>black</shadowcolor>
-						<align>right</align>
-						<aligny>top</aligny>
-						<label>$INFO[Container(21).NumItems] $LOCALIZE[127]</label>
-						<visible>!Control.HasFocus(21)</visible>
-					</control>
-					<control type="label" id="13">
-						<description>Num Objects Right</description>
-						<posx>1308</posx>
-						<posy>641</posy>
-						<width>210</width>
-						<height>34</height>	
+						<scroll>yes</scroll>
+					</control>	
+					<control type="label" id="102">
+						<description>Path Right</description>
+						<posx>1262</posx>
+						<posy>30</posy>
+						<width>505</width>
+						<height>45</height>	
 						<font>ListLabel2Font</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>right</align>
 						<aligny>top</aligny>
-						<label>$INFO[Container(21).NumItems] $LOCALIZE[127]</label>
-						<visible>Control.HasFocus(21)</visible>
+						<scroll>yes</scroll>
 					</control>
-				</control>	
+				 <!--Number of Objects-->	
+					<control type="group">
+						<!-- <posx>-40</posx> -->
+						<control type="label" id="12">
+							<description>Num Objects Left</description>
+							<posy>641</posy>
+							<posx>15</posx>
+							<width>210</width>
+							<height>34</height>	
+							<font>ListLabel2Font</font>
+							<textcolor>$VAR[NumObjectsLeftColor]</textcolor>
+							<selectedcolor></selectedcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>top</aligny>
+							<label>$INFO[Container(20).NumItems] $LOCALIZE[127]</label>
+						</control>
+						<control type="label" id="13">
+							<description>Num Objects Right</description>
+							<posx>1262</posx>
+							<posy>641</posy>
+							<width>210</width>
+							<height>34</height>	
+							<font>ListLabel2Font</font>
+							<textcolor>$VAR[NumObjectsRightColor]</textcolor>
+							<selectedcolor></selectedcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<aligny>top</aligny>
+							<label>$INFO[Container(21).NumItems] $LOCALIZE[127]</label>
+						</control>
+					</control>	
+				</control>
 			</control>
 		<!--lists,center area-->
 			<control type="group">
@@ -595,7 +570,7 @@
 						<width>190</width>
 						<height>190</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>Glass/keyfocus.png</texture>
+						<texture border="15">Glass/keyfocus.png</texture>
 						<fadetime>IconCrossfadeTime</fadetime>
 						<visible>[!Control.HasFocus(21) + !Control.HasFocus(20)]</visible>
 					</control>
