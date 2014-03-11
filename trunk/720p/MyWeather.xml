@@ -198,6 +198,7 @@
 				</control>
 				<!--********************************* MyWeatherMenuBar ************************************************-->
 				<control type="grouplist" id="850">
+					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Weather Menu Bar</description>
 					<posy>-3</posy>
 					<width>ScreenWidth</width>

@@ -900,6 +900,7 @@
 				</control>
 				<!--********************************************* DefaultMenuBar ************************************************************-->
 				<control type="group" id="850">
+					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<visible>!Skin.HasSetting(KioskMode)</visible>
 					<onup>600</onup>
 					<onleft>600</onleft>

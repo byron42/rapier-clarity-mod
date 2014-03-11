@@ -167,6 +167,7 @@
 				
 				<!--********************************************* SongInfoMenuBar ***********************************************************-->
 				<control type="grouplist" id="987">
+					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(987).HasFocus">Conditional</animation>
 					<description>Song Info Menu Bar</description>
 					<width>ScreenWidth</width>
 					<posy>-3</posy>

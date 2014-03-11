@@ -67,7 +67,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -1732,7 +1732,7 @@
 					<posy>571</posy>
 					<width>ScreenWidth</width>
 					<height>40</height>
-					<texture border="80,4,80,4">home-submenu-cover1.png</texture>
+					<texture border="80,4,80,4">$VAR[SubMenuImage]</texture>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 					<aspectratio aligny="top">scale</aspectratio>
 					<!-- <visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible> -->

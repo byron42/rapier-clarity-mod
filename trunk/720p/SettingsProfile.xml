@@ -260,6 +260,7 @@
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
 				<control type="grouplist" id="850">
+					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<posy>-1</posy>
 					<posx>10</posx>
 					<description>Profiles Menu Bar</description>
