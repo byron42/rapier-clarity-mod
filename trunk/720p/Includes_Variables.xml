@@ -80,19 +80,6 @@
 		<value condition="!Skin.HasSetting(TransparentMenuBacks)">home-submenu-cover1.png</value>
 	</variable>
 	
-
-<!--(((SYSTEM SETTING BREADCRUMB LABEL)))=================================-->
-	<variable name="SettingsCategoryBC">
-		<value condition="Window.IsActive(picturessettings)">$LOCALIZE[1] </value>
-		<value condition="Window.IsActive(programssettings)">$LOCALIZE[0] </value>
-		<value condition="Window.IsActive(weathersettings)">$LOCALIZE[8] </value>
-		<value condition="Window.IsActive(musicsettings)">$LOCALIZE[2] </value>
-		<value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000] </value>
-		<value condition="Window.IsActive(videossettings)">$LOCALIZE[3] </value>
-		<value condition="Window.IsActive(networksettings)">$LOCALIZE[13279] </value>
-		<value condition="Window.IsActive(appearancesettings)">$LOCALIZE[480] </value>
-	</variable>	
-	
 <!--(((VIDEO LIBRARY BREADCRUMB LABEL)))=================================-->
 	<variable name="VideoLibraryBreadCrumbLabel_1">
 		<value condition="Substring(Container.FolderPath,videodb://1/,Right) | Substring(Container.FolderPath,videodb://2/,Right) | Substring(Container.FolderPath,videodb://3/,Right) | IsEmpty(Container.FolderPath)">[UPPERCASE]$LOCALIZE[14022][/UPPERCASE] </value> <!--library-->
@@ -128,6 +115,63 @@
 		<value condition="Substring(Container.FolderPath,videodb://3/,Left)">[UPPERCASE]$LOCALIZE[3][/UPPERCASE] </value> <!-- music videos -->
 		<value condition="Substring(Container.FolderPath,plugin://music/,Left)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- plugins -->
 	</variable>
+	<variable name="MusicLibraryBreadCrumbLabel_Big">
+			<value condition="Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31804][/UPPERCASE] </value> <!-- recently added -->
+			<value condition="Substring(Container.FolderPath,musicdb://8/,Left)">[UPPERCASE]$LOCALIZE[521][/UPPERCASE] </value> <!-- compilations -->
+			<!-- <value condition="Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31939][/UPPERCASE] </value> <!-- Recently PLAYED --> -->
+	</variable>  
+	
+<!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
+	<variable name="BreadCrumbLabel_Left">
+		<value condition="Window.IsActive(3010)">[UPPERCASE]$LOCALIZE[470][/UPPERCASE] </value> <!--credits-->
+		<value condition="Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(132)">[UPPERCASE]$LOCALIZE[31910][/UPPERCASE] </value> <!-- media -->
+		<value condition="Window.IsVisible(139)">[UPPERCASE]$LOCALIZE[31911][/UPPERCASE] </value> <!-- picture -->
+		<value condition="Window.IsActive(10140)">[UPPERCASE]$LOCALIZE[31602][/UPPERCASE] </value> <!-- plugin -->
+		<value condition="Window.IsActive(7) | Window.IsActive(4)">[UPPERCASE]$LOCALIZE[13000][/UPPERCASE] </value> <!-- system -->
+		<value condition="Window.IsActive(3080)">[UPPERCASE]$LOCALIZE[1036][/UPPERCASE] </value> <!-- favourites -->
+		<value condition="Window.IsActive(3001) | Window.IsActive(131) | Window.IsActive(130) | Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(profiles)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!-- settings -->
+		<value condition="Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)">[UPPERCASE]$LOCALIZE[636][/UPPERCASE] </value> <!-- custom -->
+		<value condition="Window.IsVisible(2001) + Container.Content(Artists)">[UPPERCASE]$LOCALIZE[557][/UPPERCASE] </value> <!-- artist -->
+		<value condition="Window.IsVisible(2001) + Container.Content(Albums)">[UPPERCASE]$LOCALIZE[558][/UPPERCASE] </value> <!-- albums -->
+		<value condition="Window.IsVisible(135)">[UPPERCASE]$LOCALIZE[179][/UPPERCASE] </value> <!-- song -->
+		<value condition="Window.IsVisible(2003) + !Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Episodes) + !Container.Content(MusicVideos)">[UPPERCASE]$LOCALIZE[157][/UPPERCASE] </value> <!-- video -->
+		<value condition="Window.IsVisible(2003) + Container.Content(Movies)">[UPPERCASE]$LOCALIZE[20338][/UPPERCASE] </value> <!-- movies -->
+		<value condition="Window.IsVisible(2003) + Container.Content(TVShows)">[UPPERCASE]$LOCALIZE[20364][/UPPERCASE] </value> <!-- tv shows -->
+		<value condition="Window.IsVisible(2003) + Container.Content(Episodes)">[UPPERCASE]$LOCALIZE[20359][/UPPERCASE] </value> <!-- episodes -->
+		<value condition="Window.IsVisible(2003) + Container.Content(MusicVideos)">[UPPERCASE]$LOCALIZE[20391][/UPPERCASE] </value> <!-- music vids -->
+		<value condition="Window.IsActive(3)">[UPPERCASE]$LOCALIZE[10003][/UPPERCASE] </value> <!-- file mangager -->
+		<value condition="Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(503) | Window.IsActive(501)">[UPPERCASE]$LOCALIZE[2][/UPPERCASE] </value> <!-- music -->
+		<value condition="Window.IsActive(2)">[UPPERCASE]$LOCALIZE[1][/UPPERCASE] </value> <!-- pictures -->
+		<value condition="Window.IsActive(1)">[UPPERCASE]$LOCALIZE[0][/UPPERCASE] </value> <!-- programs -->
+		<value condition="Window.IsActive(20)">[UPPERCASE]$LOCALIZE[247][/UPPERCASE] </value> <!-- scripts -->
+		<value condition="Window.IsActive(videofiles) | Window.IsActive(videoplaylist)">[UPPERCASE]$LOCALIZE[3][/UPPERCASE] </value> <!-- videos -->
+		<value condition="Window.IsActive(2600)">[UPPERCASE]$LOCALIZE[8][/UPPERCASE] </value> <!-- weather -->
+		<value condition="Window.IsActive(125)">[UPPERCASE]$LOCALIZE[298][/UPPERCASE] </value> <!-- bookmarks -->
+	</variable>
+	
+	<variable name="BreadCrumbLabel_Right">
+		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- PLUGINS -->
+		<value condition="Window.IsActive(501) | Window.IsActive(2) | [Window.IsActive(1) + !Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + !Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[1214][/UPPERCASE] </value> <!-- FILES -->
+		<value condition="Window.IsActive(503)">[UPPERCASE]$LOCALIZE[10503][/UPPERCASE] </value> <!-- PLAYLIST EDITOR -->
+		<value condition="Window.IsActive(500) | Window.IsActive(28)">[UPPERCASE]$LOCALIZE[13350][/UPPERCASE] </value> <!-- PLAYLIST -->
+		<value condition="Window.IsActive(34) | Window.IsActive(131) | Window.IsActive(130)">[UPPERCASE]$LOCALIZE[1036][/UPPERCASE] </value> <!-- PROFILES -->
+		<value condition="Window.IsActive(picturessettings)">$LOCALIZE[1] </value>
+		<value condition="Window.IsActive(programssettings)">$LOCALIZE[0] </value>
+		<value condition="Window.IsActive(weathersettings)">$LOCALIZE[8] </value>
+		<value condition="Window.IsActive(musicsettings)">$LOCALIZE[2] </value>
+		<value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000] </value>
+		<value condition="Window.IsActive(videossettings)">$LOCALIZE[3] </value>
+		<value condition="Window.IsActive(networksettings)">$LOCALIZE[13279] </value>
+		<value condition="Window.IsActive(appearancesettings)">$LOCALIZE[480] </value>
+		<value condition="Window.IsActive(3001)">[UPPERCASE]$LOCALIZE[166][/UPPERCASE] </value> <!-- SKIN -->
+		<value condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">[UPPERCASE]$LOCALIZE[1034][/UPPERCASE] </value> <!-- SUB-MENU -->
+		<value condition="Window.IsVisible(2001) | Window.IsVisible(2003) | Window.IsVisible(135) | Window.IsVisible(139)">[UPPERCASE]$LOCALIZE[31019][/UPPERCASE] </value> <!-- INFORMATION -->
+		<value condition="Window.IsVisible(132) | Window.IsVisible(129) | Window.IsVisible(128) | Window.IsVisible(10140) | Window.IsVisible(126) | Window.IsVisible(4)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!-- SETTINGS -->
+	</variable>
+	
+	
+	
+	
 <!--(((FILE MANAGER/PLAYLIST EDITOR)))=================================-->
 	<variable name="NumObjectsLeftColor">
 		<value condition="!Control.HasFocus(20)">Grey</value>
