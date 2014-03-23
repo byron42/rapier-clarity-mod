@@ -71,7 +71,7 @@
 						<pulseonselect>false</pulseonselect>
 						<label>3</label>
 						<textoffsety>13</textoffsety>
-						<onup>8</onup>
+						<onup>9</onup>
 						<ondown>2</ondown>
 						<onleft>600</onleft>
 						<onright>851</onright>
@@ -306,11 +306,43 @@
 						<label>31919</label>
 						<textoffsety>14</textoffsety>
 						<onup>7</onup>
-						<ondown>1</ondown>
+						<ondown>9</ondown>
 						<onleft>600</onleft>
 						<onright>905</onright>
 					</control>	
 				</control>	
+				
+				<control type="group"> <!-- 8 MUSIC VIDS (908) -->
+					<control type="image">
+						<posx>4</posx>
+						<posy>466</posy>
+						<width>282</width>
+						<height>41</height>
+						<texture border="10">search-focus.png</texture>
+						<colordiffuse>BBBBFFFF</colordiffuse>
+						<visible>Control.IsVisible(908)</visible>
+					</control>	
+					<control type="button" id="9">
+						<description>MusicVids Submenu</description>
+						<posy>461</posy>
+						<width>290</width>
+						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
+						<height>50</height>
+						<font>SETTINGS_CATEGORY</font>
+						<textcolor>Grey</textcolor> <!-- GREY -->
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="5">-</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<label>20389</label>
+						<onup>8</onup>
+						<ondown>1</ondown>
+						<onleft>600</onleft>
+						<onright>851</onright>
+					</control>
+				</control>
 			</control>
 		
 			<control type="group" id="851"> <!----- OPTIONS LIST ----->
@@ -1916,7 +1948,7 @@
 				</control>
 				
 				<control type="grouplist" id="905">	<!-- 6 ADDONS  -->
-					<description>TvShows Subs Config</description>
+					<description>Addons Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
 					<width>825</width>
@@ -2105,6 +2137,194 @@
 					</control>
 				</control>
 				
+				<control type="grouplist" id="908">	<!-- 8 MUSIC VIDS  -->
+					<description>System Subs Config</description>
+					<posx>375</posx>
+					<posy>140</posy>
+					<width>825</width>
+					<height>535</height>
+					<itemgap>2</itemgap>
+					<orientation>vertical</orientation>	
+					<onup>908</onup>
+					<ondown>908</ondown>
+					<onleft>850</onleft>
+					<onright>908</onright>
+					<usecontrolcoords>true</usecontrolcoords>
+					<visible>Control.HasFocus(9) | ControlGroup(908).HasFocus</visible>
+					<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+					<control type="button" id="9000">
+						<posx>-3</posx><!---->
+						<height>27</height><!---->
+						<width>840</width><!---->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20389] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
+						<font>CustomSkinSeparator</font><!---->
+						<disabledcolor>aa555555</disabledcolor><!---->
+						<align>-</align><!---->
+						<aligny>top</aligny><!---->
+						<textoffsety>-2</textoffsety><!---->
+						<textoffsetx>3</textoffsetx><!---->
+						<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+						<colordiffuse>BFFFFFFF</colordiffuse><!---->
+						<enable>false</enable>
+					</control>
+					<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+					<control type="button" id="9001"> <!--SPACER-->
+						<description>SPACER</description>
+						<width>-</width>
+						<height>13</height> <!----->
+						<font>-</font>
+						<textcolor>-</textcolor>
+						<focusedcolor>-</focusedcolor>
+						<disabledcolor>-</disabledcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textoffsetx>-</textoffsetx>
+						<texturefocus border="5">-</texturefocus>
+						<colordiffuse>-</colordiffuse>
+						<texturenofocus border="5">-</texturenofocus>
+						<colordiffuse>-</colordiffuse>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+						<enable>false</enable>
+					</control>	
+					<control type="radiobutton" id="9002">
+						<description>Hide Albums</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[132]</label>
+						<selected>!Skin.HasSetting(HideMusicVidsAlbumsButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicVidsAlbumsButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicVidsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(9002)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="9003">
+						<description>Hide Artists</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[133]</label>
+						<selected>!Skin.HasSetting(HideMusicVidsArtistButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicVidsArtistButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicVidsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(9003)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="9004">
+						<description>Hide Genres</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[135]</label>
+						<selected>!Skin.HasSetting(HideMusicVidsGenreButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicVidsGenreButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicVidsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(9004)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="9005">
+						<description>Hide Directors</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[20348]</label>
+						<selected>!Skin.HasSetting(HideMusicVidsDirectorButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicVidsDirectorButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicVidsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(9005)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="9006">
+						<description>Hide Years</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[345]</label>
+						<selected>!Skin.HasSetting(HideMusicVidsYearButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicVidsYearButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicVidsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(9006)">Conditional</animation>
+					</control>
+					<control type="image" id="9008">
+						<description>Separator</description>
+						<width>830</width>
+						<height>5</height>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="radiobutton" id="9009">
+						<description>Hide total submenu</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[31015] $LOCALIZE[20389] $LOCALIZE[1034]</label>
+						<selected>Skin.HasSetting(ShowMusicVidsSubmenu)</selected>
+						<onclick>Skin.ToggleSetting(ShowMusicVidsSubmenu)</onclick>
+					</control>
+				</control>
 			</control>
 			
 			<control type="group"> <!--arrows-->

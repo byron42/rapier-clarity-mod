@@ -75,7 +75,7 @@
 						<visible>Container(850).HasFocus(2) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!-- MUSIC -------------------------------------->
+			<!-- MUSIC/MUSIC VIDEOS ------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -89,7 +89,7 @@
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<randomize>true</randomize>
-						<visible>Container(850).HasFocus(3) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<visible>[Container(850).HasFocus(3) | Container(850).HasFocus(21)] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
 			<!-- VIDEO -------------------------------------->
@@ -1394,6 +1394,25 @@
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
 				<control type="image"> <!-- videos ---->
+					<description>Music Videos Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>home-musicvids-icon.png</texture>
+					<visible>Container(850).HasFocus(21)</visible>
+					<!-- HomeMenuIconAnim -->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!-- SubMenuIconClickAnim -->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!-- videos ---->
 					<description>Videos Icon</description>
 					<width>256</width>
 					<height>256</height>
@@ -1953,6 +1972,14 @@
 							<onclick>ActivateWindow(VideoLibrary,TVShowTitles,Return)</onclick>
 							<visible>!Skin.HasSetting(HideTVShowsCategory) + Library.HasContent(TVShows)</visible>
 						</item>	
+						<item id="21">
+							<description>Music Videos Category</description>
+							<label>20389</label>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(MusicCustomBG)]</thumb>
+							<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,Return)</onclick>
+							<visible>!Skin.HasSetting(HideMusicVideosCategory) + Library.HasContent(MusicVideos)</visible>
+						</item>
 						<item id="3">
 							<description>Music Category</description>
 							<label>2</label>
@@ -2935,6 +2962,96 @@
 							</item>
 						</content>						
 					</control>
+					
+					<control type="list" id="110"> <!--MusicVids-(((21)---------------->
+						<description>System Menu Bar</description>
+						<posx>24</posx>
+						<posy>0</posy>
+						<width>1224</width>
+						<height>34</height>
+						<ondown>850</ondown>
+						<onup>600</onup>
+						<orientation>horizontal</orientation>
+						<!-- HomeSubMenuOpenCloseAnim -->
+						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
+						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
+						<visible>Container(850).HasFocus(21) + !Skin.HasSetting(ShowMusicVidsSubmenu)</visible>
+						<itemlayout width="242">
+							<control type="label">
+								<posx>137</posx>
+								<posy>-2</posy>
+								<width>232</width>
+								<height>34</height>
+								<font>SubMenuFont</font>
+								<textcolor>ButtonColor</textcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>	
+						</itemlayout>
+						<focusedlayout width="242">
+							<control type="label">
+								<posx>137</posx>
+								<posy>-2</posy>
+								<width>232</width>
+								<height>34</height>
+								<font>SubMenuFont</font>
+								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>	
+							<control type="label">
+								<posx>137</posx>
+								<posy>-2</posy>
+								<width>232</width>
+								<height>34</height>
+								<font>SubMenuFont</font>
+								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>center</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label2</info>
+								<pulseonselect>true</pulseonselect>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>albums</description>
+								<label>132</label>
+								<onclick>ActivateWindow(VideoLibrary,videodb://3/5/,Return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicVidsAlbumsButton)</visible>
+							</item>
+							<item id="2">
+								<description>artists</description>
+								<label>133</label>
+								<onclick>ActivateWindow(VideoLibrary,MusicVideoArtists,Return)</onclick>	
+								<visible>!Skin.HasSetting(HideMusicVidsArtistButton)</visible>
+							</item>
+							
+							<item id="3">
+								<description>genres</description>
+								<label>135</label>
+								<onclick>ActivateWindow(VideoLibrary,MusicVideoGenres,Return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicVidsGenreButton)</visible>
+							</item>
+							
+							<item id="4">
+								<description>directors</description>
+								<label>20348</label>
+								<onclick>ActivateWindow(VideoLibrary,videodb://3/6/,Return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicVidsDirectorButton)</visible>
+							</item>
+							<item id="5">
+								<description>year</description>
+								<label>345</label>
+								<onclick>ActivateWindow(VideoLibrary,MusicVideoYears,Return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicVidsYearButton)</visible>
+							</item>
+						</content>						
+					</control>
+					
 					
 					<control type="list" id="110"> <!--PROGRAMS--(((1)--> <!--(((3071)-->
 						<description>Programs Menu Bar</description>

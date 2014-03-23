@@ -1859,6 +1859,38 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
+						<control type="radiobutton" id="3500">
+							<description>Hide Music Videos Category</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>$LOCALIZE[20389]</label>
+							<selected>Skin.HasSetting(HideMusicVideosCategory)</selected>
+							<onclick>Skin.ToggleSetting(HideMusicVideosCategory)</onclick>
+							<enable>Library.HasContent(MusicVideos)</enable>
+							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
+							<!-- SettingsItemOpenCloseAnim -->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
 						<control type="radiobutton" id="36">
 							<description>Hide Movies Category</description>
 							<posx>10</posx>
