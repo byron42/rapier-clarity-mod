@@ -2513,9 +2513,172 @@
 						</control>
 					</control>
 					
-					<include condition="Skin.String(MusicListInfo2Style,1)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2ClassicStyle</include>
+					<!-- <include condition="Skin.String(MusicListInfo2Style,1)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2ClassicStyle</include>
 					<include condition="Skin.String(MusicListInfo2Style,2) | Skin.String(MusicListInfo2Style,)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2BannerStyle</include>
-					<include condition="Skin.String(MusicListInfo2Style,3)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2IconStyle</include>
+					<include condition="Skin.String(MusicListInfo2Style,3)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2IconStyle</include> -->
+					
+					<control type="list" id="67">	
+						<viewtype label="$LOCALIZE[31120]">List Info 2</viewtype>
+						<posx>610</posx>
+						<posy>74</posy>
+						<width>626</width>
+						<height>572</height>
+						<pagecontrol>150</pagecontrol>
+						<onup>67</onup>
+						<ondown>67</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>	
+						<itemlayout height="95">
+							<control type="image">
+								<description>Background</description>
+								<posx>20</posx>
+								<posy>2</posy>
+								<width>590</width>
+								<height>87</height>
+								<texture border="5">button-nofocus.png</texture>
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+							</control>	
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordertexture border="7">item-shadow-border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>								
+							<control type="label">
+								<description>Title</description>
+								<posx>115</posx>
+								<posy>9</posy>
+								<width>490</width>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>DefaultColor</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<posx>120</posx>
+								<posy>60</posy>
+								<width>490</width>
+								<font>MediaInfoCatFont</font>
+								<textcolor>MediaInfoHeadColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>				
+								<info>ListItem.Label2</info>
+								<visible>Skin.HasSetting(NoStars)</visible>
+							</control>
+							<control type="image">
+								<description>IMDB rating</description>
+								<posx>67</posx>
+								<align>left</align>
+								<posy>50</posy>
+								<width>220</width>
+								<height>25</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ffcccccc</colordiffuse>	
+								<visible>!Skin.HasSetting(NoStars)</visible>
+							</control>
+						</itemlayout>		
+						<focusedlayout height="95">	
+							<control type="image">
+								<posx>2</posx>
+								<posy>-5</posy>
+								<width>626</width>
+								<height>100</height>
+								<visible>Control.HasFocus(67)</visible>
+								<texture border="10">Glass/keyfocus.png</texture>
+								<bordersize>9</bordersize>
+							</control>
+							<control type="image">
+								<posx>2</posx>
+								<posy>-5</posy>
+								<width>626</width>
+								<height>100</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">Glass/keyfocus.png</texture>
+								<bordersize>9</bordersize>
+								<visible>!Control.HasFocus(67)</visible>
+							</control>
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordertexture border="7">item-shadow-border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>				
+							<control type="label">
+								<description>Title</description>
+								<posx>120</posx>
+								<posy>9</posy>
+								<width>405</width>
+								<textwidth>405</textwidth>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<animation effect="zoom" end="120" center="120,15" time="100">focus</animation>
+								<animation effect="zoom" start="120" center="120,15" time="100">unfocus</animation>	
+							</control>
+							<control type="label">
+								<posx>120</posx>
+								<posy>60</posy>
+								<width>490</width>
+								<font>MediaInfoCatFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>	
+								<animation effect="zoom" end="120" center="120,55" time="100">focus</animation>
+								<animation effect="zoom" start="120" center="120,55" time="100">unfocus</animation>	
+								<info>ListItem.Label2</info>
+								<visible>Skin.HasSetting(NoStars)</visible>
+							</control>
+							<control type="image">
+								<description>IMDB rating</description>
+								<posx>67</posx>
+								<posy>50</posy>
+								<width>220</width>
+								<height>25</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ThemeColor</colordiffuse>	
+								<visible>!Skin.HasSetting(NoStars)</visible>
+								<animation effect="zoom" end="110" center="85,52" time="100">focus</animation>
+								<animation effect="zoom" start="110" center="85,52" time="100">unfocus</animation>	
+							</control>
+						</focusedlayout>		
+					</control>	
 					
 					<control type="button" id="188">
 						<onfocus>Skin.SetString(CurrentViewMode,67)</onfocus>
