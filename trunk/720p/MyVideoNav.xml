@@ -1071,7 +1071,7 @@
 						<ondown>54</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies) </visible>
+						<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos]</visible>
 						<itemlayout height="270" width="240">				
 							<control type="image">
 								<description>Cover</description>
@@ -7078,8 +7078,8 @@
 						<width>520</width>
 						<height>305</height>
 						<pagecontrol>150</pagecontrol>
-						<onup>58</onup>
-						<ondown>58</ondown>
+						<onup>61</onup>
+						<ondown>61</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
 						<itemgap></itemgap>
@@ -9353,7 +9353,8 @@
 				<control type="group">		
 					<posx>285</posx>		
 					<!-- BreadCrumbOpenCloseAnim2 -->
-					<animation effect="slide" start="-440,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+					<animation effect="slide" start="-440,0" time="300" tween="cubic" easing="out"condition="!Container.Content(MusicVideos)">WindowOpen</animation>
+					<animation effect="slide" start="-220,0" end="80,0" time="150" tween="cubic" easing="out" condition="Container.Content(MusicVideos)">WindowOpen</animation>
 					<visible>!Window.IsActive(MovieInformation)</visible>
 					<control type="button">
 						<description>2nd Label</description>

@@ -1099,6 +1099,30 @@
 					<onclick>Skin.ToggleSetting(HideMoviesThumbnailLabel)</onclick>	
 					<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
 				</control>
+				<control type="radiobutton" id="20139">
+				<!--music vids-->
+					<description>Thumbnail Hide Label (MusicVideos)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         <!-- radio-button-focus2.png  -->
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   <!-- radio-button-nofocus2.png  -->
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31042]</label>
+					<selected>Skin.HasSetting(HideMoviesThumbnailLabel)</selected>
+					<onclick>Skin.ToggleSetting(HideMoviesThumbnailLabel)</onclick>	
+					<visible>Skin.String(CurrentViewMode,54) + Container.Content(MusicVideos)</visible>
+				</control>
 				<control type="radiobutton" id="2003">
 					<description>Thumbnail Hide Overlay (Movies)</description>
 					<width>450</width>
@@ -1121,6 +1145,30 @@
 					<selected>Skin.HasSetting(HideMoviesThumbnailOverlay)</selected>
 					<onclick>Skin.ToggleSetting(HideMoviesThumbnailOverlay)</onclick>	
 					<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
+				</control>
+				<control type="radiobutton" id="20030">
+				<!--music vids-->
+					<description>Thumbnail Hide Overlay (MusicVideos)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>        
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31046]</label>
+					<selected>Skin.HasSetting(HideMoviesThumbnailOverlay)</selected>
+					<onclick>Skin.ToggleSetting(HideMoviesThumbnailOverlay)</onclick>	
+					<visible>Skin.String(CurrentViewMode,54) + Container.Content(MusicVideos)</visible>
 				</control>
 				<control type="radiobutton" id="2004">
 					<description>List Hide Cover (Movies)</description>
