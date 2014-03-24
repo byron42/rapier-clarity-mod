@@ -184,7 +184,7 @@
 					<include>BreadCrumbButtonRight</include>
 					<include>BreadCrumbButtonLeft</include>
 					
-					</control>
+				
 					<!--BreadCrumbHome-->
 					<control type="group">
 						<control type="image">
