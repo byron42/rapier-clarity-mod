@@ -190,5 +190,138 @@
 		<value condition="!Control.HasFocus(100)">Grey</value>
 		<value condition="Control.HasFocus(100)">ThemeColor2</value>
 	</variable>	
-
+	
+<!--(((RECENTLY ADDED)))=================================-->
+	<variable name="RecentItemHeader">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">[UPPERCASE]$LOCALIZE[20386][/UPPERCASE]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">[UPPERCASE]$LOCALIZE[20387][/UPPERCASE]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">[UPPERCASE]$LOCALIZE[359][/UPPERCASE]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">[UPPERCASE]$LOCALIZE[20390][/UPPERCASE]</value> <!-- music vids -->
+	</variable>	
+	
+	<!--content labels-->
+	<variable name="RecentItem.1.Label">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.1.Title)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.1.ShowTitle)] $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.1.Title)] $INFO[Window.Property(LatestSong.1.Year),(,)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.1.Title)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.2.Label">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.2.Title)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.2.ShowTitle)] $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.2.Title)] $INFO[Window.Property(LatestSong.2.Year),(,)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.2.Title)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.3.Label">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.3.Title)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.3.ShowTitle)] $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.3.Title)] $INFO[Window.Property(LatestSong.3.Year),(,)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.3.Title)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.4.Label">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.4.Title)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.4.ShowTitle)] $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.4.Title)] $INFO[Window.Property(LatestSong.4.Year),(,)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.4.Title)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.5.Label">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.5.Title)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.5.ShowTitle)] $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.5.Title)] $INFO[Window.Property(LatestSong.5.Year),(,)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.5.Title)]</value> <!-- music vids -->
+	</variable>	
+	<!--executables-->
+	<variable name="RecentItem.1.Path">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.1.Path),PlayMedia(,)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.1.Path),PlayMedia(,)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.1.Path)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.1.Path),PlayMedia(,)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.2.Path">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.2.Path),PlayMedia(,)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.2.Path),PlayMedia(,)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.2.Path)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.2.Path),PlayMedia(,)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.3.Path">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.3.Path),PlayMedia(,)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.3.Path),PlayMedia(,)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.3.Path)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.3.Path),PlayMedia(,)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.4.Path">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.4.Path),PlayMedia(,)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.4.Path),PlayMedia(,)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.4.Path)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.4.Path),PlayMedia(,)]</value> <!-- music vids -->
+	</variable>	
+	<variable name="RecentItem.5.Path">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.5.Path),PlayMedia(,)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.5.Path),PlayMedia(,)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.5.Path)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.5.Path),PlayMedia(,)]</value> <!-- music vids -->
+	</variable>
+	<!-- fanart -->
+	<variable name="RecentItem.1.Thumb">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.1.Fanart)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.1.Fanart)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.1.Fanart)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.1.Fanart)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.2.Thumb">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.2.Fanart)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.2.Fanart)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.2.Fanart)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.2.Fanart)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.3.Thumb">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.3.Fanart)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.3.Fanart)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.3.Fanart)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.3.Fanart)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.4.Thumb">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.4.Fanart)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.4.Fanart)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.4.Fanart)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.4.Fanart)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.5.Thumb">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.5.Fanart)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.5.Fanart)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.5.Fanart)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.5.Fanart)]</value> <!-- music vids -->
+	</variable>
+	
+	<!-- thumbs -->
+	<variable name="RecentItem.1.Thumbs">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.1.Thumb)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.1.Thumb)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.1.Thumb)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.2.Thumbs">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.2.Thumb)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.2.Thumb)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.2.Thumb)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.3.Thumbs">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.3.Thumb)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.3.Thumb)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.3.Thumb)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.4.Thumbs">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.4.Thumb)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.4.Thumb)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.4.Thumb)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</value> <!-- music vids -->
+	</variable>
+	<variable name="RecentItem.5.Thumbs">
+		<value condition="!Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)">$INFO[Window.Property(LatestMovie.5.Thumb)]</value> <!-- movies -->
+		<value condition="!Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)">$INFO[Window.Property(LatestEpisode.5.Thumb)]</value> <!-- TvShows -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)">$INFO[Window.Property(LatestSong.5.Thumb)]</value> <!-- music -->
+		<value condition="!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)">$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</value> <!-- music vids -->
+	</variable>
 </includes>

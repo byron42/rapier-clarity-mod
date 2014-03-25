@@ -423,127 +423,7 @@
 				<!--*****************************************************************************************************-->
 				
 				<!--*********************************** BackgroundFanart ************************************************-->
-				<control type="group">
-					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-					<control type="group">
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)
-						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] 
-						| [Control.IsVisible(53) + !Skin.HasSetting(HideMoviesWrapListInfoFanart)] 
-						| [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)]
-						| Control.IsVisible(59) | Control.IsVisible(64) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]
-						| Control.IsVisible(68) | [Control.IsVisible(74) + !Skin.HasSetting(HideMovies3DWrapViewFanart)]] | 
-						[Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)] | 
-						[Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)]  | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]</visible>
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
-							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<!-- KenBurnsAnim -->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-							<!-- KenBurnsAnim -->
-						</control>	
-						<control type="image">
-							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
-							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMoviesFanart)</visible>
-							<!-- BackgroundFanartDimAnim -->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-							<!-- BackgroundFanartDimAnim -->
-						</control>
-					</control>
-					<control type="group">
-						<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]
-						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideTVShowsListFanart)] 
-						| [Control.IsVisible(60) + !Skin.HasSetting(HideTVShowsEpisodeViewFanart)]
-						| [Control.IsVisible(61) + !Skin.HasSetting(HideTVShowsListInfoFanart)]
-						| [Control.IsVisible(62) + !Skin.HasSetting(HideTVShowsWideListViewFanart)]
-						| [Control.IsVisible(65) + !Skin.HasSetting(HideTVShowsEpisodeShowcaseFanart)]
-						| [Control.IsVisible(66) + !Skin.HasSetting(HideTVShowsLargePosterFanart)]
-						| [Control.IsVisible(68) + !Skin.HasSetting(HideTVShowsWideSlimListFanart)]
-						| [Control.IsVisible(50) + !Skin.HasSetting(HideTVShowsIconViewFanart)]]</visible>
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
-							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>$INFO[Fanart.Image]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>Container.Content(episodes)</visible>
-							<!-- KenBurnsAnim -->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-							<!-- KenBurnsAnim -->
-						</control>	
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
-							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!Container.Content(episodes)</visible>
-							<!-- KenBurnsAnim -->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-							<!-- KenBurnsAnim -->
-						</control>	
-						<control type="image">
-							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
-							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!Skin.HasSetting(DoNotDimTVShowsFanart)</visible>
-							<!-- BackgroundFanartDimAnim -->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-							<!-- BackgroundFanartDimAnim -->
-						</control>
-					</control>
-					<control type="group">
-						<visible>[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]
-						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideMusicListFanart)] 
-						| [Control.IsVisible(62) + !Skin.HasSetting(HideMusicListInfoFanart)]
-						| [Control.IsVisible(78) + !Skin.HasSetting(HideMusicWideSlimListFanart)]
-						| [Control.IsVisible(64) + !Skin.HasSetting(HideMusicWrapListInfoFanart)]]</visible>
-						<control type="largeimage">
-							<description>Fanart Background</description>
-							<include>BackgroundOffset</include>
-							<width>1280</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
-							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<!-- KenBurnsAnim -->
-							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
-							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
-							<!-- KenBurnsAnim -->
-						</control>
-						<control type="image">
-							<description>Dim Background</description>
-							<include>BackgroundOffset</include>
-							<width>ScreenWidth</width>
-							<include>VariableBackgroundHeight</include>
-							<texture>background-dim.png</texture>
-							<fadetime>FanartCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
-							<!-- BackgroundFanartDimAnim -->
-							<animation effect="fade" end="50" condition="true">Conditional</animation>
-							<!-- BackgroundFanartDimAnim -->
-						</control>
-					</control>
-				</control>
+				
 				<!--*****************************************************************************************************-->
 				
 				<!-- BackgroundOpenCloseAnim -->
@@ -688,33 +568,72 @@
 						<info>Window.Property(LatestSong.5.Fanart)</info>
 						<visible>Control.HasFocus(307) + Container(307).Row(4) </visible>		
 					</control>
-					
-					<control type="image">
-					
-						<visible>[[Control.HasFocus(305) + Container(305).Row(0) + !IsEmpty(Window.Property(LatestMovie.1.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(1) + !IsEmpty(Window.Property(LatestMovie.2.Fanart))]] 
-						| [[Control.HasFocus(305) + Container(305).Row(2) + !IsEmpty(Window.Property(LatestMovie.3.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(3) + !IsEmpty(Window.Property(LatestMovie.4.Fanart))]] 
-						| [[Control.HasFocus(305) + Container(305).Row(4) + !IsEmpty(Window.Property(LatestMovie.5.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(0) + !IsEmpty(Window.Property(LatestEpisode.1.Fanart))]] 
-						| [[Control.HasFocus(306) + Container(306).Row(1) + !IsEmpty(Window.Property(LatestEpisode.2.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(2) + !IsEmpty(Window.Property(LatestEpisode.3.Fanart))]] 
-						| [[Control.HasFocus(306) + Container(306).Row(3) + !IsEmpty(Window.Property(LatestEpisode.4.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(4) + !IsEmpty(Window.Property(LatestEpisode.5.Fanart))]] 
-						| [[Control.HasFocus(307) + Container(307).Row(0) + !IsEmpty(Window.Property(LatestSong.1.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(1) + !IsEmpty(Window.Property(LatestSong.2.Fanart))]] 
-						| [[Control.HasFocus(307) + Container(307).Row(2) + !IsEmpty(Window.Property(LatestSong.3.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(3) + !IsEmpty(Window.Property(LatestSong.4.Fanart))]] 
-						| [[Control.HasFocus(307) + Container(307).Row(4) + !IsEmpty(Window.Property(LatestSong.5.Fanart))]]</visible>
-						
-						<width>ScreenWidth</width>
-						<include>VariableBackgroundHeight</include>		
-						<texture>background-dim.png</texture>
-						<!-- CustomBackgroundPreviewFadeInAnim -->
-						<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
-						<!-- CustomBackgroundPreviewFadeInAnim -->
+				</control>
+			<!-- Recrnt MusicVids Fanart -------------------------->
+				<control type="group">		
+					<control type="image">	
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include> 
+						<fadetime>IconCrossfadeTime</fadetime>
+						<info>Window.Property(LatestMusicVideo.1.Fanart)</info>
+						<visible>Control.HasFocus(308) + Container(308).Row(0) </visible>		
 					</control>
+					<control type="image">
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include> 
+						<fadetime>IconCrossfadeTime</fadetime>
+						<info>Window.Property(LatestMusicVideo.2.Fanart)</info>
+						<visible>Control.HasFocus(308) + Container(308).Row(1) </visible>		
+					</control>
+					<control type="image">
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include> 
+						<fadetime>IconCrossfadeTime</fadetime>
+						<info>Window.Property(LatestMusicVideo.3.Fanart)</info>
+						<visible>Control.HasFocus(308) + Container(308).Row(2) </visible>		
+					</control>
+					<control type="image">
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include> 
+						<fadetime>IconCrossfadeTime</fadetime>
+						<info>Window.Property(LatestMusicVideo.4.Fanart)</info>
+						<visible>Control.HasFocus(308) + Container(308).Row(3) </visible>		
+					</control>
+					<control type="image">
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include> 
+						<fadetime>IconCrossfadeTime</fadetime>
+						<info>Window.Property(LatestMusicVideo.5.Fanart)</info>
+						<visible>Control.HasFocus(308) + Container(308).Row(4) </visible>		
+					</control>
+				</control>
 					
-				</control>	
+				<control type="image">
+				
+					<visible>[[Control.HasFocus(305) + Container(305).Row(0) + !IsEmpty(Window.Property(LatestMovie.1.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(1) + !IsEmpty(Window.Property(LatestMovie.2.Fanart))]] 
+					| [[Control.HasFocus(305) + Container(305).Row(2) + !IsEmpty(Window.Property(LatestMovie.3.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(3) + !IsEmpty(Window.Property(LatestMovie.4.Fanart))]] 
+					| [[Control.HasFocus(305) + Container(305).Row(4) + !IsEmpty(Window.Property(LatestMovie.5.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(0) + !IsEmpty(Window.Property(LatestEpisode.1.Fanart))]] 
+					| [[Control.HasFocus(306) + Container(306).Row(1) + !IsEmpty(Window.Property(LatestEpisode.2.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(2) + !IsEmpty(Window.Property(LatestEpisode.3.Fanart))]] 
+					| [[Control.HasFocus(306) + Container(306).Row(3) + !IsEmpty(Window.Property(LatestEpisode.4.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(4) + !IsEmpty(Window.Property(LatestEpisode.5.Fanart))]] 
+					| [[Control.HasFocus(307) + Container(307).Row(0) + !IsEmpty(Window.Property(LatestSong.1.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(1) + !IsEmpty(Window.Property(LatestSong.2.Fanart))]] 
+					| [[Control.HasFocus(307) + Container(307).Row(2) + !IsEmpty(Window.Property(LatestSong.3.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(3) + !IsEmpty(Window.Property(LatestSong.4.Fanart))]] 
+					| [[Control.HasFocus(307) + Container(307).Row(4) + !IsEmpty(Window.Property(LatestSong.5.Fanart))]]</visible>
+					
+					<width>ScreenWidth</width>
+					<include>VariableBackgroundHeight</include>		
+					<texture>background-dim.png</texture>
+					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
+					<!-- CustomBackgroundPreviewFadeInAnim -->
+				</control>
+					
+			
 			</control>
 			<control type="group" id="304">	 <!-- Recently Added Controls ----------->
 				<posy>105</posy>
 				<posx>805</posx>
 				<onup>600</onup>
-				<visible>[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]</visible>
+				<visible>[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]</visible>
 				<!-- animations to slide the control on visible or window close -->
 				<animation effect="slide" end="500" time="300">WindowClose</animation>
 				<animation effect="slide" start="500,0" end="0,0" time="300" delay="800">WindowOpen</animation>
@@ -735,14 +654,14 @@
 					<height>200</height>
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BB0067A5</colordiffuse>
-					<visible>Control.HasFocus(305) | Control.HasFocus(306) | Control.HasFocus(307)</visible>
+					<visible>Control.HasFocus(305) | Control.HasFocus(306) | Control.HasFocus(307) | Control.HasFocus(308)</visible>
 				</control>
 				
 			<!-- MOVIES -------------------------------->				
 				<control type="group">
 					<posy>5</posy>
 					<posx>25</posx>
-					<visible> !Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)</visible>
+					<visible> !Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)</visible>
 					<control type="label">
 						<description>Latest Movies</description>
 						<posx>-10</posx>
@@ -913,7 +832,7 @@
 				<control type="group">
 					<posy>5</posy>
 					<posx>25</posx>
-					<visible> !Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)</visible>
+					<visible> !Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)</visible>
 
 					<control type="label">
 						<description>Latest TV Shows</description>
@@ -1081,7 +1000,7 @@
 				<control type="group">
 					<posy>5</posy>
 					<posx>25</posx>
-					<visible> !Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)</visible>
+					<visible> !Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)</visible>
 					
 					<control type="label">
 						<description>Latest Albums</description>
@@ -1244,6 +1163,177 @@
 							<visible>Container(307).Row(4)</visible>
 						</control>
 					</control>	
+				</control>
+			<!-- MUSIC VIDEOS -------------------------------->				
+				<control type="group">
+					<posy>5</posy>
+					<posx>25</posx>
+					<visible> !Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)</visible>
+					<control type="label">
+						<description>Latest Movies</description>
+						<posx>-10</posx>
+						<posy>-1</posy>
+						<width>465</width>
+						<font>LargeListLabelFont</font>
+						<textcolor>ThemeColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[20390][/UPPERCASE]</label>
+					</control>
+					<control type="list" id="308">
+						<description>List of latest movies</description>
+						<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentMusicVideos)</visible>
+						<posy>47</posy>
+						<posx>125</posx>
+						<width>300</width>
+						<height>130</height>
+						<onup>600</onup>
+						<ondown>510</ondown>
+						<onleft>510</onleft>
+						<onright>510</onright>
+						<itemgap>4</itemgap>
+						<viewtype label="3D list">list</viewtype>
+						<orientation>vertical</orientation>
+						<pagecontrol>25</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout width="342" height="25" condition="true">
+							<control type="label">
+								<posx>0</posx>
+								<posy>-7</posy>
+								<width>300</width>
+								<height>25</height>
+								<font>VolumeFont</font>
+								<aligny>top</aligny>
+								<textcolor>white</textcolor>
+								<selectedcolor>Grey</selectedcolor>
+								<align>left</align>
+								<label>- $INFO[ListItem.Label]</label>
+							</control>				
+						</itemlayout>
+						<focusedlayout width="342" height="25">
+							<control type="label">
+								<posx>0</posx>
+								<posy>-9</posy>
+								<width>300</width>
+								<height>30</height>
+								<font>Font_LibBold20</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<aligny>top</aligny>
+								<align>left</align>
+								<info>ListItem.Label</info>
+							</control>					
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>$INFO[Window.Property(LatestMusicVideo.1.Title)]</label>
+								<onclick>$INFO[Window.Property(LatestMusicVideo.1.Path),PlayMedia(,)]</onclick>
+								<thumb>$INFO[Window.Property(LatestMusicVideo.1.Fanart)]</thumb>
+								<visible>substring(Window.Property(LatestMusicVideo.1.Path),.)</visible>
+							</item>
+							<item id="2">
+								<label>$INFO[Window.Property(LatestMusicVideo.2.Title)]</label>
+								<onclick>$INFO[Window.Property(LatestMusicVideo.2.Path),PlayMedia(,)]</onclick>
+								<thumb>$INFO[Window.Property(LatestMusicVideo.2.Fanart)]</thumb>
+								<visible>substring(Window.Property(LatestMusicVideo.2.Path),.)</visible>
+							</item>
+							<item id="3">
+								<label>$INFO[Window.Property(LatestMusicVideo.3.Title)]</label>
+								<onclick>$INFO[Window.Property(LatestMusicVideo.3.Path),PlayMedia(,)]</onclick>
+								<thumb>$INFO[Window.Property(LatestMusicVideo.3.Fanart)]</thumb>
+								<visible>substring(Window.Property(LatestMusicVideo.3.Path),.)</visible>
+							</item>
+							<item id="4">
+								<label>$INFO[Window.Property(LatestMusicVideo.4.Title)]</label>
+								<onclick>$INFO[Window.Property(LatestMusicVideo.4.Path),PlayMedia(,)]</onclick>
+								<thumb>$INFO[Window.Property(LatestMusicVideo.4.Fanart)]</thumb>
+								<visible>substring(Window.Property(LatestMusicVideo.4.Path),.)</visible>
+							</item>
+							<item id="5">
+								<label>$INFO[Window.Property(LatestMusicVideo.5.Title)]</label>
+								<onclick>$INFO[Window.Property(LatestMusicVideo.5.Path),PlayMedia(,)]</onclick>
+								<thumb>$INFO[Window.Property(LatestMusicVideo.5.Fanart)]</thumb>
+								<visible>substring(Window.Property(LatestMusicVideo.5.Path),.)</visible>
+							</item>
+						</content>
+					</control>
+					<!-----------------------------SEPARATORS---------------------------->
+					<control type="image">
+						<description>SEPARATOR-TOP-MOVIES</description>
+						<posx>-17</posx>
+						<posy>31</posy>
+						<width>490</width>
+						<height>3</height>
+						<colordiffuse>aaE3DAC9</colordiffuse>
+						<texture border="0">slider_nibfo.png</texture>
+					</control>
+					<control type="image">
+						<description>SEPARATOR-BOTTOM-MOVIES</description>
+						<posx>105</posx>
+						<posy>175</posy>
+						<width>350</width>
+						<height>3</height>
+						<colordiffuse>aaE3DAC9</colordiffuse>
+						<texture flipx="true">slider_nibfo.png</texture>
+					</control>
+					<!-----------------------------SEPARATORS---------------------------->
+					<control type="group">
+						<posx>-315</posx>
+						<control type="image">
+							<posx>300</posx>
+							<posy>35</posy>
+							<width>125</width>
+							<height>160</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</texture>
+							<bordertexture border="15">search-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+							<visible>Container(308).Row(0) </visible>
+						</control>
+						<control type="image">
+							<posx>300</posx>
+							<posy>35</posy>
+							<width>125</width>
+							<height>160</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</texture>
+							<bordertexture border="15">search-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+							<visible>Container(308).Row(1) </visible>
+						</control>	
+						<control type="image">
+							<posx>300</posx>
+							<posy>35</posy>
+							<width>125</width>
+							<height>160</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</texture>
+							<bordertexture border="15">search-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+							<visible>Container(308).Row(2) </visible>
+						</control>
+						<control type="image">
+							<posx>300</posx>
+							<posy>35</posy>
+							<width>125</width>
+							<height>160</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</texture>
+							<bordertexture border="15">search-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+							<visible>Container(308).Row(3) </visible>
+						</control>
+						<control type="image">
+							<posx>300</posx>
+							<posy>35</posy>
+							<width>125</width>
+							<height>160</height>
+							<aspectratio align="left">stretch</aspectratio>
+							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</texture>
+							<bordertexture border="15">search-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+							<visible>Container(308).Row(4) </visible>
+						</control>
+					</control>
 				</control>
 			</control>
 	
@@ -2970,7 +3060,7 @@
 						<width>1224</width>
 						<height>34</height>
 						<ondown>850</ondown>
-						<onup>600</onup>
+						<onup>308</onup>
 						<orientation>horizontal</orientation>
 						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
@@ -5063,7 +5153,7 @@
 								<onclick>ActivateWindow(ShutdownMenu)</onclick>
 								<pulseonselect>true</pulseonselect>
 								<onup>-</onup>
-								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 								<ondown>850</ondown>
 								<onleft>346</onleft>
 								<onright>350</onright>
@@ -5093,7 +5183,7 @@
 								<onclick>XBMC.PlayDVD </onclick>
 								<pulseonselect>true</pulseonselect>
 								<onup>-</onup>
-								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 								<ondown>850</ondown>
 								<onleft>458</onleft>
 								<onright>345</onright>
@@ -5139,7 +5229,7 @@
 							<onclick>XBMC.RunScript(special://skin/scripts/content.search.py)</onclick>
 							<pulseonselect>true</pulseonselect>
 							<onup>-</onup>
-							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 							<ondown>850</ondown>
 							<onleft>345</onleft>
 							<onright>837</onright>
