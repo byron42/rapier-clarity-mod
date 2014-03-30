@@ -2764,7 +2764,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31543</label> <!-- INFO PANEL -->
+							<label>31804</label> <!-- RECENTLY ADDED -->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -2794,7 +2794,154 @@
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
+						</control>
+						<control type="radiobutton" id="150">
+							<description>Hide Recent Movies</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31015] $LOCALIZE[20386]</label>
+							<selected>!Skin.HasSetting(HideRecentMovies)</selected>
+							<onclick>Skin.ToggleSetting(HideRecentMovies)</onclick>
+							<enable>Library.HasContent(Movies)</enable>
+						</control>
+						<control type="radiobutton" id="151">
+							<description>Hide Recent TV Shows</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31015] $LOCALIZE[20387]</label>
+							<selected>!Skin.HasSetting(HideRecentTVShows)</selected>
+							<onclick>Skin.ToggleSetting(HideRecentTVShows)</onclick>
+							<enable>Library.HasContent(TvShows)</enable>
+						</control>
+						<control type="radiobutton" id="155">
+							<description>Hide Recent Albums</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31015] $LOCALIZE[359]</label>
+							<selected>!Skin.HasSetting(HideRecentAlbums)</selected>
+							<onclick>Skin.ToggleSetting(HideRecentAlbums)</onclick>
+							<enable>Library.HasContent(Music)</enable>
+						</control>
+						<control type="radiobutton" id="1550">
+							<description>Hide Recent Music Videos</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5">-</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31015] $LOCALIZE[20390]</label>
+							<selected>!Skin.HasSetting(HideRecentMusicVideos)</selected>
+							<onclick>Skin.ToggleSetting(HideRecentMusicVideos)</onclick>
+							<enable>Library.HasContent(MusicVideos)</enable>
+						</control>
+						<control type="button" id="13136"> <!--SPACER-->
+							<description>SPACER</description>
+							<width>-</width>
+							<height>13</height> <!----->
+							<font>-</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<disabledcolor>-</disabledcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textoffsetx>-</textoffsetx>
+							<texturefocus border="5">-</texturefocus>
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="5">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<enable>false</enable>
 						</control>	
+	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+						<control type="button" id="12908">
+							<posx>-3</posx><!---->
+							<height>27</height><!---->
+							<width>840</width><!---->
+							<label>31543</label> <!-- INFO PANEL -->
+							<font>CustomSkinSeparator</font><!---->
+							<disabledcolor>aa555555</disabledcolor><!---->
+							<align>-</align><!---->
+							<aligny>top</aligny><!---->
+							<textoffsety>-2</textoffsety><!---->
+							<textoffsetx>3</textoffsetx><!---->
+							<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+							<colordiffuse>BFFFFFFF</colordiffuse><!---->
+							<enable>false</enable>
+						</control>
+	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->					
+						<control type="button" id="13137"> <!--SPACER-->
+							<description>SPACER</description>
+							<width>-</width>
+							<height>13</height> <!----->
+							<font>-</font>
+							<textcolor>-</textcolor>
+							<focusedcolor>-</focusedcolor>
+							<disabledcolor>-</disabledcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textoffsetx>-</textoffsetx>
+							<texturefocus border="5">-</texturefocus>
+							<colordiffuse>-</colordiffuse>
+							<texturenofocus border="5">-</texturenofocus>
+							<colordiffuse>-</colordiffuse>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<enable>false</enable>
+						</control>
 						<control type="radiobutton" id="41">
 							<description>Always Hide Category Icons</description>
 							<posx>10</posx>
@@ -2838,98 +2985,6 @@
 							<label>31545</label>
 							<selected>Skin.HasSetting(HideHomeCategoryIconsWhenVideo)</selected> <!--ON-->
 							<onclick>Skin.ToggleSetting(HideHomeCategoryIconsWhenVideo)</onclick>
-						</control>
-						<control type="radiobutton" id="150">
-							<description>Hide Recent Movies</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31077]</label>
-							<selected>!Skin.HasSetting(HideRecentMovies)</selected>
-							<onclick>Skin.ToggleSetting(HideRecentMovies)</onclick>
-							<visible>!Skin.HasSetting(HideMoviesCategory)</visible>
-						</control>
-						<control type="radiobutton" id="151">
-							<description>Hide Recent TV Shows</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31078]</label>
-							<selected>!Skin.HasSetting(HideRecentTVShows)</selected>
-							<onclick>Skin.ToggleSetting(HideRecentTVShows)</onclick>
-							<visible>!Skin.HasSetting(HideTVShowsCategory)</visible>
-						</control>
-						<control type="radiobutton" id="155">
-							<description>Hide Recent Albums</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31079]</label>
-							<selected>!Skin.HasSetting(HideRecentAlbums)</selected>
-							<onclick>Skin.ToggleSetting(HideRecentAlbums)</onclick>
-							<visible>!Skin.HasSetting(HideMusicCategory)</visible>
-						</control>
-						<control type="radiobutton" id="1550">
-							<description>Hide Recent Music Videos</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>CustomSkinHead</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31015] $LOCALIZE[20390]</label>
-							<selected>!Skin.HasSetting(HideRecentMusicVideos)</selected>
-							<onclick>Skin.ToggleSetting(HideRecentMusicVideos)</onclick>
-							<visible>!Skin.HasSetting(HideMusicVideosCategory)</visible>
 						</control>
 						<control type="radiobutton" id="152">
 							<description>Hide Now Playing Music</description>

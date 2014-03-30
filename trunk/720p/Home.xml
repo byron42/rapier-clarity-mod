@@ -1,4 +1,6 @@
 <window id="0">
+	<!-- <onload condition="Window.Previous(startup)">SetFocus(304)</onload>
+	<onload condition="Window.Previous(startup) + !Skin.HasSetting(HideRecentMovies) + Control.HasFocus(304)">SetFocus(510)</onload> -->
 	<defaultcontrol always="true">510</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -422,14 +424,9 @@
 				</control>
 				<!--*****************************************************************************************************-->
 				
-				<!--*********************************** BackgroundFanart ************************************************-->
-				
-				<!--*****************************************************************************************************-->
-				
 				<!-- BackgroundOpenCloseAnim -->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
-				<!-- BackgroundOpenCloseAnim -->
 				
 				<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 				<control type="image">
@@ -446,179 +443,76 @@
 			</control>
 
 	<!--(((Recently Added)))=================================================================================================================-->
+			
+			<!-- [5]    movies      ------------(305)-->
+			<!-- [6]    episodes    ------------(306)-->
+			<!-- [3]    albums      ------------(307)-->
+			<!-- [21]   music vids  ------------(308)-->
+				
 			<control type="group" id="2013"> <!-- Recently Added Fullscreen Fanart -->
 				<include>BackgroundOffset</include>
 				<width>1280</width>
 				<include>VariableBackgroundHeight</include>
-				<!-- RecentlyAddedFanartFade -->
-				<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
-				<!-- RecentlyAddedFanartFade -->
 				<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
-			
-			<!-- Recent Movies Fanart ------------------------->	
-				<control type="group">		
-					<control type="image" background="true">	
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>                 
-						<info>Window.Property(LatestMovie.1.Fanart)</info>
-						<visible>Control.HasFocus(305) + Container(305).Row(0) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMovie.2.Fanart)</info>
-						<visible>Control.HasFocus(305) + Container(305).Row(1) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMovie.3.Fanart)</info>
-						<visible>Control.HasFocus(305) + Container(305).Row(2) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMovie.4.Fanart)</info>
-						<visible>Control.HasFocus(305) + Container(305).Row(3) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMovie.5.Fanart)</info>
-						<visible>Control.HasFocus(305) + Container(305).Row(4) </visible>		
-					</control>
-				</control>	
-			<!-- Recent TVShows Fanart ------------------------>	
-				<control type="group">		
-					<control type="image">	
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestEpisode.1.Fanart)</info>
-						<visible>Control.HasFocus(306) + Container(306).Row(0) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestEpisode.2.Fanart)</info>
-						<visible>Control.HasFocus(306) + Container(306).Row(1) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestEpisode.3.Fanart)</info>
-						<visible>Control.HasFocus(306) + Container(306).Row(2) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestEpisode.4.Fanart)</info>
-						<visible>Control.HasFocus(306) + Container(306).Row(3) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestEpisode.5.Fanart)</info>
-						<visible>Control.HasFocus(306) + Container(306).Row(4) </visible>		
-					</control>
-				</control>	
-			<!-- Recrnt Album Fanart -------------------------->
-				<control type="group">		
-					<control type="image">	
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestSong.1.Fanart)</info>
-						<visible>Control.HasFocus(307) + Container(307).Row(0) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestSong.2.Fanart)</info>
-						<visible>Control.HasFocus(307) + Container(307).Row(1) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestSong.3.Fanart)</info>
-						<visible>Control.HasFocus(307) + Container(307).Row(2) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestSong.4.Fanart)</info>
-						<visible>Control.HasFocus(307) + Container(307).Row(3) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestSong.5.Fanart)</info>
-						<visible>Control.HasFocus(307) + Container(307).Row(4) </visible>		
-					</control>
-				</control>
-			<!-- Recrnt MusicVids Fanart -------------------------->
-				<control type="group">		
-					<control type="image">	
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMusicVideo.1.Fanart)</info>
-						<visible>Control.HasFocus(308) + Container(308).Row(0) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMusicVideo.2.Fanart)</info>
-						<visible>Control.HasFocus(308) + Container(308).Row(1) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMusicVideo.3.Fanart)</info>
-						<visible>Control.HasFocus(308) + Container(308).Row(2) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMusicVideo.4.Fanart)</info>
-						<visible>Control.HasFocus(308) + Container(308).Row(3) </visible>		
-					</control>
-					<control type="image">
-						<width>1280</width>
-						<include>VariableBackgroundHeight</include> 
-						<fadetime>IconCrossfadeTime</fadetime>
-						<info>Window.Property(LatestMusicVideo.5.Fanart)</info>
-						<visible>Control.HasFocus(308) + Container(308).Row(4) </visible>		
-					</control>
-				</control>
-					
+			<!--Movie Fanart-->	
 				<control type="image">
-				
-					<visible>[[Control.HasFocus(305) + Container(305).Row(0) + !IsEmpty(Window.Property(LatestMovie.1.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(1) + !IsEmpty(Window.Property(LatestMovie.2.Fanart))]] 
-					| [[Control.HasFocus(305) + Container(305).Row(2) + !IsEmpty(Window.Property(LatestMovie.3.Fanart))]] | [[Control.HasFocus(305) + Container(305).Row(3) + !IsEmpty(Window.Property(LatestMovie.4.Fanart))]] 
-					| [[Control.HasFocus(305) + Container(305).Row(4) + !IsEmpty(Window.Property(LatestMovie.5.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(0) + !IsEmpty(Window.Property(LatestEpisode.1.Fanart))]] 
-					| [[Control.HasFocus(306) + Container(306).Row(1) + !IsEmpty(Window.Property(LatestEpisode.2.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(2) + !IsEmpty(Window.Property(LatestEpisode.3.Fanart))]] 
-					| [[Control.HasFocus(306) + Container(306).Row(3) + !IsEmpty(Window.Property(LatestEpisode.4.Fanart))]] | [[Control.HasFocus(306) + Container(306).Row(4) + !IsEmpty(Window.Property(LatestEpisode.5.Fanart))]] 
-					| [[Control.HasFocus(307) + Container(307).Row(0) + !IsEmpty(Window.Property(LatestSong.1.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(1) + !IsEmpty(Window.Property(LatestSong.2.Fanart))]] 
-					| [[Control.HasFocus(307) + Container(307).Row(2) + !IsEmpty(Window.Property(LatestSong.3.Fanart))]] | [[Control.HasFocus(307) + Container(307).Row(3) + !IsEmpty(Window.Property(LatestSong.4.Fanart))]] 
-					| [[Control.HasFocus(307) + Container(307).Row(4) + !IsEmpty(Window.Property(LatestSong.5.Fanart))]]</visible>
-					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[Container(305).ListItem.Property(FanartImage)]</texture>
+					<aspectratio>scale</aspectratio>
+					<fadetime>600</fadetime>
+					<!--(VisibleFadeEffect)-->
+					<animation effect="fade" time="200">Visible</animation>
+					<animation effect="fade" time="200">Hidden</animation>
+					<visible>ControlGroup(304).HasFocus + Container(850).HasFocus(5)</visible>
+				</control>
+			<!--Episode Fanart-->	
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[Container(306).ListItem.Property(FanartImage)]</texture>
+					<aspectratio>scale</aspectratio>
+					<fadetime>600</fadetime>
+					<!--(VisibleFadeEffect)-->
+					<animation effect="fade" time="200">Visible</animation>
+					<animation effect="fade" time="200">Hidden</animation>
+					<visible>ControlGroup(304).HasFocus + Container(850).HasFocus(6)</visible>
+				</control>
+			<!--Album Fanart-->	
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[Container(307).ListItem.Property(FanartImage)]</texture>
+					<aspectratio>scale</aspectratio>
+					<fadetime>600</fadetime>
+					<!--(VisibleFadeEffect)-->
+					<animation effect="fade" time="200">Visible</animation>
+					<animation effect="fade" time="200">Hidden</animation>
+					<visible>ControlGroup(304).HasFocus + Container(850).HasFocus(3)</visible>
+				</control>
+			<!--Music Video Fanart-->	
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[Container(308).ListItem.Property(FanartImage)]</texture>
+					<aspectratio>scale</aspectratio>
+					<fadetime>600</fadetime>
+					<!--(VisibleFadeEffect)-->
+					<animation effect="fade" time="200">Visible</animation>
+					<animation effect="fade" time="200">Hidden</animation>
+					<visible>ControlGroup(304).HasFocus + Container(850).HasFocus(21)</visible>
+				</control>
+			<!--screen dimmer-->
+				<control type="image">
+					<visible>ControlGroup(304).HasFocus</visible>
 					<width>ScreenWidth</width>
 					<include>VariableBackgroundHeight</include>		
 					<texture>background-dim.png</texture>
@@ -626,13 +520,12 @@
 					<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
 					<!-- CustomBackgroundPreviewFadeInAnim -->
 				</control>
-					
-			
 			</control>
 			<control type="group" id="304">	 <!-- Recently Added Controls ----------->
 				<posy>105</posy>
 				<posx>805</posx>
 				<onup>600</onup>
+				<width>500</width>
 				<visible>[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]</visible>
 				<!-- animations to slide the control on visible or window close -->
 				<animation effect="slide" end="500" time="300">WindowClose</animation>
@@ -642,699 +535,469 @@
 				<animation effect="fade" start="100" end="75" time="200" delay="1000" condition="!Control.HasFocus(304)">Conditional</animation>
 				<!-- fade in when focused, out when unfocused -->
 				<animation effect="fade" start="75" end="100" time="200">Focus</animation>
-				
 				<control type="image">
 					<width>480</width>
 					<height>200</height>
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
-				<control type="image">
+				<control type="image" id="1020">
 					<width>480</width>
 					<height>200</height>
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BB0067A5</colordiffuse>
-					<visible>Control.HasFocus(305) | Control.HasFocus(306) | Control.HasFocus(307) | Control.HasFocus(308)</visible>
+					<visible>ControlGroup(304).HasFocus</visible>
 				</control>
-				
-			<!-- MOVIES -------------------------------->				
+			<!-- LISTS -------------------------------->				
 				<control type="group">
 					<posy>5</posy>
 					<posx>25</posx>
-					<visible> !Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + Skin.HasSetting(HideRecentMovies)</visible>
+				<!--header (all cats)-->
 					<control type="label">
-						<description>Latest Movies</description>
-						<posx>-10</posx>
-						<posy>-1</posy>
-						<width>342</width>
-						<font>LargeListLabelFont</font>
-						<textcolor>ThemeColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>[UPPERCASE]$LOCALIZE[20386][/UPPERCASE]</label>
-					</control>
-					<control type="list" id="305">
-						<description>List of latest movies</description>
-						<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentMovies)</visible>
-						<posy>47</posy>
-						<posx>125</posx>
-						<width>300</width>
-						<height>130</height>
-						<onup>600</onup>
-						<ondown>510</ondown>
-						<onleft>510</onleft>
-						<onright>510</onright>
-						<itemgap>4</itemgap>
-						<viewtype label="3D list">list</viewtype>
-						<orientation>vertical</orientation>
-						<pagecontrol>25</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<itemlayout width="342" height="25" condition="true">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-7</posy>
-								<width>300</width>
-								<height>25</height>
-								<font>VolumeFont</font>
-								<aligny>top</aligny>
-								<textcolor>white</textcolor>
-								<selectedcolor>Grey</selectedcolor>
-								<align>left</align>
-								<label>- $INFO[ListItem.Label]</label>
-							</control>				
-						</itemlayout>
-						<focusedlayout width="342" height="25">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-9</posy>
-								<width>300</width>
-								<height>30</height>
-								<font>Font_LibBold20</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>ThemeColor</shadowcolor>
-								<aligny>top</aligny>
-								<align>left</align>
-								<info>ListItem.Label</info>
-							</control>					
-						</focusedlayout>
-						<content>
-							<item id="1">
-								<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMovie.1.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMovie.1.Path),.)</visible>
-							</item>
-							<item id="2">
-								<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMovie.2.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMovie.2.Path),.)</visible>
-							</item>
-							<item id="3">
-								<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMovie.3.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMovie.3.Path),.)</visible>
-							</item>
-							<item id="4">
-								<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMovie.4.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMovie.4.Path),.)</visible>
-							</item>
-							<item id="5">
-								<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMovie.5.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMovie.5.Path),.)</visible>
-							</item>
-						</content>
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="image">
-						<description>SEPARATOR-TOP-MOVIES</description>
-						<posx>-17</posx>
-						<posy>31</posy>
-						<width>490</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture border="0">slider_nibfo.png</texture>
-					</control>
-					<control type="image">
-						<description>SEPARATOR-BOTTOM-MOVIES</description>
-						<posx>105</posx>
-						<posy>175</posy>
-						<width>350</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture flipx="true">slider_nibfo.png</texture>
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="group">
-						<posx>-315</posx>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMovie.1.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(305).Row(0) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMovie.2.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(305).Row(1) </visible>
-						</control>	
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMovie.3.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(305).Row(2) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMovie.4.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(305).Row(3) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMovie.5.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(305).Row(4) </visible>
-						</control>
-					</control>
-				</control>
-			<!-- TV-SHOWS -------------------------------->		
-				<control type="group">
-					<posy>5</posy>
-					<posx>25</posx>
-					<visible> !Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(21) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + Skin.HasSetting(HideRecentTVShows)</visible>
-
-					<control type="label">
-						<description>Latest TV Shows</description>
-						<posx>-10</posx>
-						<posy>-1</posy>
-						<width>400</width>
-						<font>LargeListLabelFont</font>
-						<textcolor>MediaInfoHeadColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>[UPPERCASE]$LOCALIZE[20387][/UPPERCASE]</label>
-					</control>
-					
-					<control type="list" id="306">
-						<description>List of latest TV Shows</description>
-						<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentTVShows)</visible>
-						<posy>44</posy>
-						<posx>180</posx>
-						<width>300</width>
-						<height>130</height>
-						<onup>600</onup>
-						<ondown>510</ondown>
-						<onleft>510</onleft>
-						<onright>510</onright>
-						<itemgap>2</itemgap>
-						<viewtype label="3D list">list</viewtype>
-						<orientation>vertical</orientation>
-						<pagecontrol>25</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<itemlayout width="265" height="25" condition="true">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-7</posy>
-								<width>265</width>
-								<height>25</height>
-								<font>VolumeFont</font>
-								<aligny>top</aligny>
-								<textcolor>White</textcolor>
-								<selectedcolor>Grey</selectedcolor>
-								<align>left</align>
-								<label>- $INFO[ListItem.Label]</label>
-							</control>				
-						</itemlayout>
-						<focusedlayout width="265" height="25">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-9</posy>
-								<width>300</width>
-								<height>30</height>
-								<font>Font_LibBold20</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>ThemeColor</shadowcolor>
-								<aligny>top</aligny>
-								<align>left</align>
-								<info>ListItem.Label</info>
-							</control>					
-						</focusedlayout>						
-						<content>
-							<item id="1">
-								<label>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] ($INFO[Window.Property(LatestEpisode.1.EpisodeNo)])</label>
-								<onclick>$INFO[Window.Property(LatestEpisode.1.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestEpisode.1.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestEpisode.1.Path),.)</visible>
-							</item>
-							<item id="2">
-								<label>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] ($INFO[Window.Property(LatestEpisode.2.EpisodeNo)])</label>
-								<onclick>$INFO[Window.Property(LatestEpisode.2.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestEpisode.2.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestEpisode.2.Path),.)</visible>
-							</item>
-							<item id="3">
-								<label>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] ($INFO[Window.Property(LatestEpisode.3.EpisodeNo)])</label>
-								<onclick>$INFO[Window.Property(LatestEpisode.3.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestEpisode.3.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestEpisode.3.Path),.)</visible>
-							</item>
-							<item id="4">
-								<label>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] ($INFO[Window.Property(LatestEpisode.4.EpisodeNo)])</label>
-								<onclick>$INFO[Window.Property(LatestEpisode.4.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestEpisode.4.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestEpisode.4.Path),.)</visible>
-							</item>
-							<item id="5">
-								<label>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] ($INFO[Window.Property(LatestEpisode.5.EpisodeNo)])</label>
-								<onclick>$INFO[Window.Property(LatestEpisode.5.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestEpisode.5.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestEpisode.5.Path),.)</visible>
-							</item>
-						</content>		
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="image">
-						<description>SEPARATOR-TOP-EPISODES</description>
-						<posx>-17</posx>
-						<posy>31</posy>
-						<width>490</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture border="0">slider_nibfo.png</texture>
-					</control>
-					<control type="image">
-						<description>SEPARATOR-BOTTOM-EPISODES</description>
-						<posx>-17</posx>
-						<posy>175</posy>
-						<width>490</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture flipx="true">slider_nibfo.png</texture>
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="group">
-						<posx>-300</posx>	
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>192</width>
-							<height>143</height>
-							<texture fallback="defaultvideobigposterH.png">$INFO[Window.Property(LatestEpisode.1.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(306).Row(0)</visible>
-						</control>	
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>192</width>
-							<height>143</height>
-							<texture fallback="defaultvideobigposterH.png">$INFO[Window.Property(LatestEpisode.2.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(306).Row(1)</visible>
-						</control>	
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>192</width>
-							<height>143</height>
-							<texture fallback="defaultvideobigposterH.png">$INFO[Window.Property(LatestEpisode.3.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(306).Row(2)</visible>
-						</control>
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>192</width>
-							<height>143</height>
-							<texture fallback="defaultvideobigposterH.png">$INFO[Window.Property(LatestEpisode.4.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(306).Row(3)</visible>
-						</control>
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>192</width>
-							<height>143</height>
-							<texture fallback="defaultvideobigposterH.png">$INFO[Window.Property(LatestEpisode.5.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(306).Row(4)</visible>
-						</control>
-					</control>		
-				</control>
-			<!-- ALBUMS -------------------------------->				
-				<control type="group">
-					<posy>5</posy>
-					<posx>25</posx>
-					<visible> !Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentAlbums)</visible>
-					
-					<control type="label">
-						<description>Latest Albums</description>
-						<posx>-10</posx>
-						<posy>-1</posy>
-						<width>400</width>
-						<font>LargeListLabelFont</font>
-						<textcolor>MediaInfoHeadColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
-						<label>[UPPERCASE]$LOCALIZE[359][/UPPERCASE]</label>
-					</control>
-					
-					<control type="list" id="307">
-						<description>List of latest Albums</description>
-						<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentAlbums)</visible>
-						<posy>44</posy>
-						<posx>150</posx>
-						<width>300</width>
-						<height>130</height>
-						<onup>600</onup>
-						<ondown>510</ondown>
-						<onleft>510</onleft>
-						<onright>510</onright>
-						<viewtype label="3D list">list</viewtype>
-						<orientation>vertical</orientation>
-						<pagecontrol>25</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<itemgap>2</itemgap>
-						<itemlayout width="295" height="25" condition="true">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-7</posy>
-								<width>285</width>
-								<height>25</height>
-								<font>VolumeFont</font>
-								<aligny>top</aligny>
-								<textcolor>white</textcolor>
-								<selectedcolor>Grey</selectedcolor>
-								<align>left</align>
-								<label>- $INFO[ListItem.Label]</label>
-							</control>				
-						</itemlayout>
-						<focusedlayout width="295" height="25">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-9</posy>
-								<width>275</width>
-								<height>30</height>
-								<font>Font_LibBold20</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>ThemeColor</shadowcolor>
-								<aligny>top</aligny>
-								<align>left</align>
-								<label>$INFO[ListItem.Label]</label>
-							</control>					
-						</focusedlayout>
-						<content>
-							<item id="1">
-								<label>$INFO[Window.Property(LatestSong.1.Artist)]$INFO[Window.Property(LatestSong.1.Title),: ,] $INFO[Window.Property(LatestSong.1.Year),(,)]</label>
-								<thumb>$INFO[Window.Property(LatestSong.1.Thumb)]</thumb>
-								<icon>$INFO[Window.Property(LatestSong.1.Fanart)]</icon>
-								<onclick>$INFO[Window.Property(LatestSong.1.Path)]</onclick>
-							</item>
-							<item id="2">
-								<label>$INFO[Window.Property(LatestSong.2.Artist)]$INFO[Window.Property(LatestSong.2.Title),: ,] $INFO[Window.Property(LatestSong.2.Year),(,)]</label>
-								<thumb>$INFO[Window.Property(LatestSong.2.Thumb)]</thumb>
-								<icon>$INFO[Window.Property(LatestSong.2.Fanart)]</icon>
-								<onclick>$INFO[Window.Property(LatestSong.2.Path)]</onclick>
-							</item>
-							<item id="3">
-								<label>$INFO[Window.Property(LatestSong.3.Artist)]$INFO[Window.Property(LatestSong.3.Title),: ,] $INFO[Window.Property(LatestSong.3.Year),(,)]</label>
-								<thumb>$INFO[Window.Property(LatestSong.3.Thumb)]</thumb>
-								<icon>$INFO[Window.Property(LatestSong.3.Fanart)]</icon>
-								<onclick>$INFO[Window.Property(LatestSong.3.Path)]</onclick>
-							</item>
-							<item id="4">
-								<label>$INFO[Window.Property(LatestSong.4.Artist)]$INFO[Window.Property(LatestSong.4.Title),: ,] $INFO[Window.Property(LatestSong.4.Year),(,)]</label>
-								<thumb>$INFO[Window.Property(LatestSong.4.Thumb)]</thumb>
-								<icon>$INFO[Window.Property(LatestSong.4.Fanart)]</icon>
-								<onclick>$INFO[Window.Property(LatestSong.4.Path)]</onclick>
-							</item>
-							<item id="5">
-								<label>$INFO[Window.Property(LatestSong.5.Artist)]$INFO[Window.Property(LatestSong.5.Title),: ,] $INFO[Window.Property(LatestSong.5.Year),(,)]</label>
-								<thumb>$INFO[Window.Property(LatestSong.5.Thumb)]</thumb>
-								<icon>$INFO[Window.Property(LatestSong.5.Fanart)]</icon>
-								<onclick>$INFO[Window.Property(LatestSong.5.Path)]</onclick>
-							</item>
-						</content>		
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="image">
-						<description>SEPARATOR-TOP-ALBUMS</description>
-						<posx>-17</posx>
-						<posy>31</posy>
-						<width>490</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture border="0">slider_nibfo.png</texture>
-					</control>
-					<control type="image">
-						<description>SEPARATOR-BOTTOM-ALBUMS</description>
-						<posx>138</posx>
-						<posy>175</posy>
-						<width>340</width>
-						<height>3</height>
-						<colordiffuse>aaE3DAC9</colordiffuse>
-						<texture flipx="true">slider_nibfo.png</texture>
-					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="group">
-						<posx>-300</posx>		
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>160</width>
-							<height>160</height>
-							<texture fallback="DefaultAlbumCover.png">$INFO[Window.Property(LatestSong.1.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(307).Row(0)</visible>
-						</control>	
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>160</width>
-							<height>160</height>
-							<texture fallback="DefaultAlbumCover.png">$INFO[Window.Property(LatestSong.2.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(307).Row(1)</visible>
-						</control>	
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>160</width>
-							<height>160</height>
-							<texture fallback="DefaultAlbumCover.png">$INFO[Window.Property(LatestSong.3.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(307).Row(2)</visible>
-						</control>
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>160</width>
-							<height>160</height>
-							<texture fallback="DefaultAlbumCover.png">$INFO[Window.Property(LatestSong.4.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(307).Row(3)</visible>
-						</control>
-						<control type="image">
-							<posx>280</posx>
-							<posy>33</posy>
-							<width>160</width>
-							<height>160</height>
-							<texture fallback="DefaultAlbumCover.png">$INFO[Window.Property(LatestSong.5.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(307).Row(4)</visible>
-						</control>
-					</control>	
-				</control>
-			<!-- MUSIC VIDEOS -------------------------------->				
-				<control type="group">
-					<posy>5</posy>
-					<posx>25</posx>
-					<visible> !Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(3) + !Container(850).HasFocus(6) + Skin.HasSetting(HideRecentMusicVideos)</visible>
-					<control type="label">
-						<description>Latest Movies</description>
+						<description>Latest Item Header</description>
 						<posx>-10</posx>
 						<posy>-1</posy>
 						<width>465</width>
 						<font>LargeListLabelFont</font>
 						<textcolor>ThemeColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label>[UPPERCASE]$LOCALIZE[20390][/UPPERCASE]</label>
+						<label>$VAR[RecentItemHeader]</label>
 					</control>
-					<control type="list" id="308">
-						<description>List of latest movies</description>
-						<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentMusicVideos)</visible>
-						<posy>47</posy>
-						<posx>125</posx>
-						<width>300</width>
-						<height>130</height>
-						<onup>600</onup>
-						<ondown>510</ondown>
-						<onleft>510</onleft>
-						<onright>510</onright>
-						<itemgap>4</itemgap>
-						<viewtype label="3D list">list</viewtype>
-						<orientation>vertical</orientation>
-						<pagecontrol>25</pagecontrol>
-						<scrolltime>200</scrolltime>
-						<itemlayout width="342" height="25" condition="true">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-7</posy>
-								<width>300</width>
-								<height>25</height>
-								<font>VolumeFont</font>
-								<aligny>top</aligny>
-								<textcolor>white</textcolor>
-								<selectedcolor>Grey</selectedcolor>
-								<align>left</align>
-								<label>- $INFO[ListItem.Label]</label>
-							</control>				
-						</itemlayout>
-						<focusedlayout width="342" height="25">
-							<control type="label">
-								<posx>0</posx>
-								<posy>-9</posy>
-								<width>300</width>
-								<height>30</height>
-								<font>Font_LibBold20</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>ThemeColor</shadowcolor>
-								<aligny>top</aligny>
-								<align>left</align>
-								<info>ListItem.Label</info>
-							</control>					
-						</focusedlayout>
-						<content>
-							<item id="1">
-								<label>$INFO[Window.Property(LatestMusicVideo.1.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMusicVideo.1.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMusicVideo.1.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMusicVideo.1.Path),.)</visible>
-							</item>
-							<item id="2">
-								<label>$INFO[Window.Property(LatestMusicVideo.2.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMusicVideo.2.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMusicVideo.2.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMusicVideo.2.Path),.)</visible>
-							</item>
-							<item id="3">
-								<label>$INFO[Window.Property(LatestMusicVideo.3.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMusicVideo.3.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMusicVideo.3.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMusicVideo.3.Path),.)</visible>
-							</item>
-							<item id="4">
-								<label>$INFO[Window.Property(LatestMusicVideo.4.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMusicVideo.4.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMusicVideo.4.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMusicVideo.4.Path),.)</visible>
-							</item>
-							<item id="5">
-								<label>$INFO[Window.Property(LatestMusicVideo.5.Title)]</label>
-								<onclick>$INFO[Window.Property(LatestMusicVideo.5.Path),PlayMedia(,)]</onclick>
-								<thumb>$INFO[Window.Property(LatestMusicVideo.5.Fanart)]</thumb>
-								<visible>substring(Window.Property(LatestMusicVideo.5.Path),.)</visible>
-							</item>
-						</content>
+				<!--MOVIES-->				
+					<control type="group">
+						<posy>5</posy>
+						<posx>25</posx>
+						<visible> !Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(3) + !Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMovies)</visible>
+						<control type="list" id="305">
+							<description>List of latest movies</description>
+							<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentMovies)</visible>
+							<posy>40</posy>
+							<posx>90</posx>
+							<width>335</width>
+							<height>130</height>
+							<onup>600</onup>
+							<ondown>510</ondown>
+							<onleft>510</onleft>
+							<onright>510</onright>
+							<itemgap>4</itemgap>
+							<viewtype label="3D list">list</viewtype>
+							<orientation>vertical</orientation>
+							<pagecontrol>25</pagecontrol>
+							<scrolltime>200</scrolltime>
+							<itemlayout width="342" height="25" condition="true">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-7</posy>
+									<width>335</width>
+									<height>25</height>
+									<font>VolumeFont</font>
+									<aligny>top</aligny>
+									<textcolor>white</textcolor>
+									<selectedcolor>Grey</selectedcolor>
+									<align>left</align>
+									<label>- $INFO[ListItem.Label]</label>
+								</control>				
+							</itemlayout>
+							<focusedlayout width="342" height="25">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-11</posy>
+									<width>335</width>
+									<textwidth>330</textwidth>
+									<height>30</height>
+									<font>Font_LibBold20</font>
+									<textcolor>White</textcolor>
+									<shadowcolor>ThemeColor</shadowcolor>
+									<aligny>top</aligny>
+									<align>left</align>
+									<info>ListItem.Label</info>
+								</control>					
+							</focusedlayout>
+							<content>
+								<item id="1">
+									<label>$VAR[RecentItem.1.Label]</label>
+									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
+									<visible>substring(Window.Property(LatestMovie.1.Path),.)</visible>
+								</item>
+								<item id="2">
+									<label>$VAR[RecentItem.2.Label]</label>
+									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
+									<visible>substring(Window.Property(LatestMovie.2.Path),.)</visible>
+								</item>
+								<item id="3">
+									<label>$VAR[RecentItem.3.Label]</label>
+									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
+									<visible>substring(Window.Property(LatestMovie.3.Path),.)</visible>
+								</item>
+								<item id="4">
+									<label>$VAR[RecentItem.4.Label]</label>
+									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
+									<visible>substring(Window.Property(LatestMovie.4.Path),.)</visible>
+								</item>
+								<item id="5">
+									<label>$VAR[RecentItem.5.Label]</label>
+									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
+									<visible>substring(Window.Property(LatestMovie.5.Path),.)</visible>
+								</item>
+							</content>
+						</control>
 					</control>
-					<!-----------------------------SEPARATORS---------------------------->
+				<!--EPISODES-->		
+					<control type="group">
+						<posy>5</posy>
+						<posx>25</posx>
+						<visible> !Container(850).HasFocus(5) + !Container(850).HasFocus(4) + !Container(850).HasFocus(3) + !Container(850).HasFocus(7) + !Container(850).HasFocus(21) + Skin.HasSetting(HideRecentTVShows)</visible>
+						<control type="list" id="306">
+							<description>List of latest TV Shows</description>
+							<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentTVShows)</visible>
+							<posy>40</posy>
+							<posx>160</posx>
+							<width>275</width>
+							<height>130</height>
+							<onup>600</onup>
+							<ondown>510</ondown>
+							<onleft>510</onleft>
+							<onright>510</onright>
+							<itemgap>2</itemgap>
+							<viewtype label="3D list">list</viewtype>
+							<orientation>vertical</orientation>
+							<pagecontrol>25</pagecontrol>
+							<scrolltime>200</scrolltime>
+							<itemlayout width="265" height="25" condition="true">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-7</posy>
+									<width>275</width>
+									<height>25</height>
+									<font>VolumeFont</font>
+									<aligny>top</aligny>
+									<textcolor>White</textcolor>
+									<selectedcolor>Grey</selectedcolor>
+									<align>left</align>
+									<label>- $INFO[ListItem.Label]</label>
+								</control>				
+							</itemlayout>
+							<focusedlayout width="265" height="25">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-11</posy>
+									<width>275</width>
+									<textwidth>270</textwidth>
+									<height>30</height>
+									<font>Font_LibBold20</font>
+									<textcolor>White</textcolor>
+									<shadowcolor>ThemeColor</shadowcolor>
+									<aligny>top</aligny>
+									<align>left</align>
+									<info>ListItem.Label</info>
+								</control>					
+							</focusedlayout>						
+							<content>
+								<item id="1">
+									<label>$VAR[RecentItem.1.Label]</label>
+									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
+									<visible>substring(Window.Property(LatestEpisode.1.Path),.)</visible>
+								</item>
+								<item id="2">
+									<label>$VAR[RecentItem.2.Label]</label>
+									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
+									<visible>substring(Window.Property(LatestEpisode.2.Path),.)</visible>
+								</item>
+								<item id="3">
+									<label>$VAR[RecentItem.3.Label]</label>
+									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
+									<visible>substring(Window.Property(LatestEpisode.3.Path),.)</visible>
+								</item>
+								<item id="4">
+									<label>$VAR[RecentItem.4.Label]</label>
+									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
+									<visible>substring(Window.Property(LatestEpisode.4.Path),.)</visible>
+								</item>
+								<item id="5">
+									<label>$VAR[RecentItem.5.Label]</label>
+									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
+									<visible>substring(Window.Property(LatestEpisode.5.Path),.)</visible>
+								</item>
+							</content>	
+						</control>
+					</control>
+				<!--ALBUMS-->				
+					<control type="group">
+						<posy>5</posy>
+						<posx>25</posx>
+						<visible>!Container(850).HasFocus(4) + !Container(850).HasFocus(5) + !Container(850).HasFocus(6) + !Container(850).HasFocus(21) + Skin.HasSetting(HideRecentAlbums)</visible>
+						<control type="list" id="307">
+							<description>List of latest Albums</description>
+							<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentAlbums)</visible>
+							<posy>40</posy>
+							<posx>120</posx>
+							<width>290</width>
+							<height>130</height>
+							<onup>600</onup>
+							<ondown>510</ondown>
+							<onleft>510</onleft>
+							<onright>510</onright>
+							<viewtype label="3D list">list</viewtype>
+							<orientation>vertical</orientation>
+							<pagecontrol>25</pagecontrol>
+							<scrolltime>200</scrolltime>
+							<itemgap>2</itemgap>
+							<itemlayout width="295" height="25" condition="true">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-7</posy>
+									<width>290</width>
+									<height>25</height>
+									<font>VolumeFont</font>
+									<aligny>top</aligny>
+									<textcolor>white</textcolor>
+									<selectedcolor>Grey</selectedcolor>
+									<align>left</align>
+									<label>- $INFO[ListItem.Label]</label>
+								</control>				
+							</itemlayout>
+							<focusedlayout width="295" height="25">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-11</posy>
+									<width>290</width>
+									<textwidth>285</textwidth>
+									<height>30</height>
+									<font>Font_LibBold20</font>
+									<textcolor>White</textcolor>
+									<shadowcolor>ThemeColor</shadowcolor>
+									<aligny>top</aligny>
+									<align>left</align>
+									<label>$INFO[ListItem.Label]</label>
+								</control>					
+							</focusedlayout>
+							<content>
+								<item id="1">
+									<label>$VAR[RecentItem.1.Label]</label>
+									<onclick>PlayList.Clear</onclick>
+									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
+									<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+								</item>
+								<item id="2">
+									<label>$VAR[RecentItem.2.Label]</label>
+									<onclick>PlayList.Clear</onclick>
+									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
+									<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+								</item>
+								<item id="3">
+									<label>$VAR[RecentItem.3.Label]</label>
+									<onclick>PlayList.Clear</onclick>
+									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
+									<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+								</item>
+								<item id="4">
+									<label>$VAR[RecentItem.4.Label]</label>
+									<onclick>PlayList.Clear</onclick>
+									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
+									<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+								</item>
+								<item id="5">
+									<label>$VAR[RecentItem.5.Label]</label>
+									<onclick>PlayList.Clear</onclick>
+									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
+									<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+								</item>
+							</content>		
+						</control>
+					</control>		
+				<!--MUSIC VIDS-->				
+					<control type="group">
+						<posy>5</posy>
+						<posx>25</posx>
+						<visible> !Container(850).HasFocus(6) + !Container(850).HasFocus(7) + !Container(850).HasFocus(3) + !Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMusicVideos)</visible>
+						<control type="list" id="308">
+							<description>List of latest movies</description>
+							<visible allowhiddenfocus="true">Skin.HasSetting(HideRecentMovies)</visible>
+							<posy>40</posy>
+							<posx>90</posx>
+							<width>335</width>
+							<height>130</height>
+							<onup>600</onup>
+							<ondown>510</ondown>
+							<onleft>510</onleft>
+							<onright>510</onright>
+							<itemgap>4</itemgap>
+							<viewtype label="3D list">list</viewtype>
+							<orientation>vertical</orientation>
+							<pagecontrol>25</pagecontrol>
+							<scrolltime>200</scrolltime>
+							<itemlayout width="342" height="25" condition="true">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-7</posy>
+									<width>335</width>
+									<height>25</height>
+									<font>VolumeFont</font>
+									<aligny>top</aligny>
+									<textcolor>white</textcolor>
+									<selectedcolor>Grey</selectedcolor>
+									<align>left</align>
+									<label>- $INFO[ListItem.Label]</label>
+								</control>				
+							</itemlayout>
+							<focusedlayout width="342" height="25">
+								<control type="label">
+									<posx>0</posx>
+									<posy>-11</posy>
+									<width>335</width>
+									<textwidth>330</textwidth>
+									<height>30</height>
+									<font>Font_LibBold20</font>
+									<textcolor>White</textcolor>
+									<shadowcolor>ThemeColor</shadowcolor>
+									<aligny>top</aligny>
+									<align>left</align>
+									<info>ListItem.Label</info>
+								</control>					
+							</focusedlayout>
+							<content>
+								<item id="1">
+									<label>$VAR[RecentItem.1.Label]</label>
+									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
+									<visible>substring(Window.Property(LatestMusicVideo.1.Path),.)</visible>
+								</item>
+								<item id="2">
+									<label>$VAR[RecentItem.2.Label]</label>
+									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
+									<visible>substring(Window.Property(LatestMusicVideo.2.Path),.)</visible>
+								</item>
+								<item id="3">
+									<label>$VAR[RecentItem.3.Label]</label>
+									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
+									<visible>substring(Window.Property(LatestMusicVideo.3.Path),.)</visible>
+								</item>
+								<item id="4">
+									<label>$VAR[RecentItem.4.Label]</label>
+									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
+									<visible>substring(Window.Property(LatestMusicVideo.4.Path),.)</visible>
+								</item>
+								<item id="5">
+									<label>$VAR[RecentItem.5.Label]</label>
+									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
+									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
+									<visible>substring(Window.Property(LatestMusicVideo.5.Path),.)</visible>
+								</item>
+							</content>
+						</control>
+					</control>
+					
+					<!--************************** SEPARATORS *************************-->
 					<control type="image">
 						<description>SEPARATOR-TOP-MOVIES</description>
 						<posx>-17</posx>
 						<posy>31</posy>
-						<width>490</width>
+						<width>500</width>
 						<height>3</height>
 						<colordiffuse>aaE3DAC9</colordiffuse>
 						<texture border="0">slider_nibfo.png</texture>
 					</control>
 					<control type="image">
 						<description>SEPARATOR-BOTTOM-MOVIES</description>
-						<posx>105</posx>
+						<posx>109</posx>
 						<posy>175</posy>
-						<width>350</width>
+						<width>500</width>
 						<height>3</height>
 						<colordiffuse>aaE3DAC9</colordiffuse>
 						<texture flipx="true">slider_nibfo.png</texture>
+						<animation effect="slide" end="-127,0" condition="Container(850).HasFocus(6)">Conditional</animation>
+						<animation effect="slide" end="29,0" condition="Container(850).HasFocus(3)">Conditional</animation>
 					</control>
-					<!-----------------------------SEPARATORS---------------------------->
-					<control type="group">
-						<posx>-315</posx>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(308).Row(0) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(308).Row(1) </visible>
-						</control>	
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(308).Row(2) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(308).Row(3) </visible>
-						</control>
-						<control type="image">
-							<posx>300</posx>
-							<posy>35</posy>
-							<width>125</width>
-							<height>160</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture fallback="defaultvideobigposter4.png">$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</texture>
-							<bordertexture border="15">search-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-							<visible>Container(308).Row(4) </visible>
-						</control>
+					<!--***************************************************************-->
+				
+				<!--thumbs(movies)-->
+					<control type="image">
+						<posx>-17</posx>
+						<posy>36</posy>
+						<width>123</width>
+						<height>152</height>
+						<aspectratio align="left">stretch</aspectratio>
+						<bordertexture border="10">Glass/SquareThemeBorder.png</bordertexture>
+						<bordersize>10</bordersize>
+						<texture background="true" fallback="defaultvideobigposter4.png">$INFO[Container(305).ListItem.Property(ItemThumb)]</texture>
+						<visible>!Container(850).HasFocus(6) + !Container(850).HasFocus(3) + !Container(850).HasFocus(21) + Control.IsVisible(305)</visible>
+					</control>
+				<!--thumbs(episodes)-->
+					<control type="image">
+						<posx>-17</posx>
+						<posy>36</posy>
+						<width>192</width>
+						<height>138</height>
+						<aspectratio align="left">stretch</aspectratio>
+						<bordertexture border="10">Glass/SquareThemeBorder.png</bordertexture>
+						<bordersize>10</bordersize>
+						<texture background="true"  fallback="defaultvideobigposterH.png">$INFO[Container(306).ListItem.Property(ItemThumb)]</texture>
+						<visible>!Container(850).HasFocus(3) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + Control.IsVisible(306)</visible>
+					</control>
+				<!--thumbs(songs)-->
+					<control type="image">
+						<posx>-17</posx>
+						<posy>36</posy>
+						<width>152</width>
+						<height>152</height>
+						<aspectratio align="left">stretch</aspectratio>
+						<bordertexture border="10">Glass/SquareThemeBorder.png</bordertexture>
+						<bordersize>10</bordersize>
+						<texture background="true" fallback="DefaultAlbumCover.png">$INFO[Container(307).ListItem.Property(ItemThumb)]</texture>
+						<visible>!Container(850).HasFocus(6) + !Container(850).HasFocus(21) + !Container(850).HasFocus(5) + Control.IsVisible(307)</visible>
+					</control>
+				<!--thumbs(music vids)-->
+					<control type="image">
+						<posx>-17</posx>
+						<posy>36</posy>
+						<width>123</width>
+						<height>152</height>
+						<aspectratio align="left">stretch</aspectratio>
+						<bordertexture border="10">Glass/SquareThemeBorder.png</bordertexture>
+						<bordersize>10</bordersize>
+						<texture background="true" fallback="defaultvideobigposter4.png">$INFO[Container(308).ListItem.Property(ItemThumb)]</texture>
+						<visible>!Container(850).HasFocus(6) + !Container(850).HasFocus(3) + !Container(850).HasFocus(5) + Control.IsVisible(308)</visible>
 					</control>
 				</control>
+			
 			</control>
 	
 	<!--(((System Info)))====================================================================================================================-->
@@ -1821,7 +1484,7 @@
 				<!--------------------------------------------------------------------------------------- CUSTOM ICONS --------->
 			</control>
 	
-			<control type="group">	
+			<control type="group">	<!-- SUBMENU IMAGE -->
 				<animation effect="slide" start="0,114" time="250" >WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
 				<animation effect="slide" start="0,114" end="0,34"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
@@ -3054,13 +2717,13 @@
 					</control>
 					
 					<control type="list" id="110"> <!--MusicVids-(((21)---------------->
-						<description>System Menu Bar</description>
+						<description>MusicVids Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
 						<width>1224</width>
 						<height>34</height>
 						<ondown>850</ondown>
-						<onup>308</onup>
+						<onup>304</onup>
 						<orientation>horizontal</orientation>
 						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
@@ -4762,7 +4425,6 @@
 					</control>	
 				</control>	
 			</control>
-	
 	
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
