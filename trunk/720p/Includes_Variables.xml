@@ -1,21 +1,21 @@
 <includes>
 <!--(((TOP BAR)))=================================-->
 	<variable name="TopBarColor">
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff454A4F</value>
-		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff332D22</value>
-		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff3F3F3F</value>
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">ff666666</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff454A4F</value>
+		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff332D22</value>
+		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff3F3F3F</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">ff666666</value>
 	<!--transparent-->
-		<!-- <value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">BC454A4F</value>
-		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
-		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
-		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
+		<!-- <value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">BC454A4F</value>
+		<value condition="Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb332D22</value>
+		<value condition="!Skin.String(TopBarColor,2) + Skin.String(TopBarColor,3) + !Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb3F3F3F</value>
+		<value condition="!Skin.String(TopBarColor,2) + !Skin.String(TopBarColor,3) + Skin.String(TopBarColor,4) + !Skin.HasSetting(TransparentMenuBacks)">bb666666</value> -->
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
 	</variable>
 	
 	<variable name="TopBarImage">
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">Transparent-Top-Bar.png</value>
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">Transparent-Top-Bar.png</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">top-bar-background.png</value>
 	</variable>
 	
 	<variable name="BreadCrumbBackgroundColor">
@@ -71,12 +71,12 @@
 		<value condition="!Skin.HasSetting(ConstantHomeSubmenu)">ThemeColor</value>
 	</variable>
 	<variable name="HomeMenuColors">
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">FFFFFFFF</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">BBBBBBBB</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">FFFFFFFF</value>
 	</variable>
 	<variable name="SubMenuImage">
-		<value condition="Skin.HasSetting(TransparentMenuBacks)">Transparent-Sub-Bar.png</value>
-		<value condition="!Skin.HasSetting(TransparentMenuBacks)">home-submenu-cover1.png</value>
+		<value condition="!Skin.HasSetting(TransparentMenuBacks)">Transparent-Sub-Bar.png</value>
+		<value condition="Skin.HasSetting(TransparentMenuBacks)">home-submenu-cover1.png</value>
 	</variable>
 	
 <!--(((VIDEO LIBRARY BREADCRUMB LABEL)))=================================-->

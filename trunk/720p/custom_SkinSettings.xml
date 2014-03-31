@@ -1442,7 +1442,7 @@
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31520] $LOCALIZE[1397] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[13324]</label>
 							clear - style menu backgrounds
-							<selected>Skin.HasSetting(TransparentMenuBacks)</selected>
+							<selected>!Skin.HasSetting(TransparentMenuBacks)</selected>
 							<onclick>Skin.ToggleSetting(TransparentMenuBacks)</onclick>
 							<!-- SettingsItemOpenCloseAnim -->
 							<animation effect="fade" end="0" time="300">Hidden</animation>

@@ -3,25 +3,7 @@
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
 	<!-- Views.xml -->
-	<!-- (???) ViewsCommon (???) -->
-	<!-- (???) ViewsMovies (???) -->
-	<!-- (???) ViewsTVShows (???) -->
-	<!-- (???) ViewsMusic (???) -->
-	<!-- includes_Scrollbars -->
-	<!-- (???) includes_MenuBar (???) -->
-	<!-- (???) includes_BreadCrumbs (???) -->
-	<!-- includes_Animations -->
-	<!-- includes_Dialogs -->
-	<!-- includes_Backgrounds -->
-	<!-- includes_MediaFlags -->
-	<!-- includes_NowPlaying -->
 	<!-- (???) includes_OSDNotification (???) -->
-	<!-- (???) includes_homeRecentlyAdded (???) -->
-	<!-- includes_Labels -->
-	<!-- includes_3DwraplisT was FUBAR -->
-	<!-- includes_InfoPane -->
-	<!-- (???) includes_Weather (???) -->
-	<!-- includes_SmallVideoOverlay -->
 
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
@@ -65,7 +47,6 @@
 		<font>MenuBarButtonFont</font>
 		<textcolor>ff626262</textcolor>
 		<focusedcolor>ThemeColor</focusedcolor>
-		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
 		<scroll>yes</scroll>
 	</include>
 	
@@ -76,13 +57,12 @@
 		<font>MenuBarButtonFont</font>
 		<textcolor>ff626262</textcolor>
 		<focusedcolor>ThemeColor</focusedcolor>
-		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
 		<scroll>yes</scroll>
 	</include>
 	
 	<include name="VariableBackgroundHeight">
-		<include condition="Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
-		<include condition="!Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
 	</include>
 	<include name="TallBackground">
 		<height>720</height>
@@ -91,10 +71,9 @@
 		<height>676</height>
 	</include>
 	
-
 	<include name="BackgroundOffset">
-		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
-		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
 	</include>
 	<include name="BackgroundOffsetTransparency">
 		<posy>0</posy>
@@ -281,6 +260,5 @@
 		<width>320</width>
 		<textwidth>310</textwidth>
 	</include>
-	
 	
 </includes>
