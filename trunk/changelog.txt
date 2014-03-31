@@ -3,6 +3,59 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 2.17.14 Version 3.5.2
 
+	3.30.14
+------------------------------------------------------------------------------
+		= Added a "submenu filter" meaning that one can further
+		  customize the submenu from skin settings by adding or 
+		  subtracting individual items (or the whole submenu
+		  for that matter) to their liking.  Skin settings/home/
+	          submenus...only items that already exist
+
+		= Fixed all lag in custom skin settings...I'm getting good
+		  at workarounds.  This is something that's been bugging me 
+		  since I started changing things with this skin.  It's now 
+		  lightning fast!
+
+		= MAJOR work has gone into SkinVariables...It has added more
+		  speed, and taken away great amounts of code.
+
+		= Added almost all breadcrumbs and system tray into includes
+		  and the labels are now in skin variables...this means that
+                  if for any reason someone wants to add different labels
+		  button sizes etc. it will be loads easier and this also 
+		  cut a ton of code out of the skin, not to mention added
+		  CPU speed and increased ram
+
+		= PICTURES and GENERAL backgrounds have been changed/updated
+
+		= ListInfo2 views for all containers have been diminished to 
+		  "Banner Style" only.  This got rid of 4 pretty useless files
+		  not to mention getting rid of files that were automatically
+		  included into ram every time any library container was
+		  entered which = more ram saved
+
+		= Cleaned up the Recently Added code...Didn't really change
+		  the apperance of it yet but am considering it.  Also made
+		  Recently Added Albums actually show ALBUMS!  For whatever
+		  reason I never realized that prior to this change it was
+		  actually scanning songs not albums (never really use this
+		  feature so I never noticed)
+
+		= Added MUSIC VIDEOS to the home menu, when music vids are 
+		  scanned into the library this category will now show up 
+		  on the home menu (also added Music Videos to the recently
+		  added items on the home screen)
+
+		= Made OSD bookmarks into a full screen dialog just as I have
+		  with all the rest
+
+		= Skin now defaults to transparent settings
+
+		= Crushed down textures which suprisingly added more than 
+		  1mb ram skinwide (home menu boots up to 40mb free and stays
+		  pretty close to that skinwide with the use of ToDDs)
+
+
 	3.2.14
 ------------------------------------------------------------------------------
 		= Fully integrated transparent top bar, sub-menus, home menu
