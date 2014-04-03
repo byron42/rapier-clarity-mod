@@ -116,7 +116,7 @@
 				<control type="group">
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="group">
-						<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]]  | [Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)]  | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]  | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
+						<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos)] + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | [Control.IsVisible(58) + !Skin.HasSetting(HideMoviesListInfoFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]]  | [Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)]  | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]  | [Control.IsVisible(75) + !Skin.HasSetting(HideMoviesShowcaseSplitViewFanart)]</visible>
 						<control type="largeimage">
 							<description>Fanart Background</description>
 							<include>BackgroundOffset</include>
@@ -1071,7 +1071,7 @@
 						<ondown>54</ondown>
 						<onleft>850</onleft>
 						<onright>150</onright>
-						<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos]</visible>
+						<visible>Container.Content(Movies) | Container.Content(MusicVideos)</visible>
 						<itemlayout height="270" width="240">				
 							<control type="image">
 								<description>Cover</description>
@@ -10301,6 +10301,7 @@
 							<textcolor>InfoPaneDetailsColor</textcolor>
 							<font>InfoPaneDetailFont</font>
 							<label>$INFO[ListItem.Label2,,   ]$INFO[Container.NumItems,[, $LOCALIZE[127]]]</label>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 						</control>
 					</control>
 				<!-- VIDEO LIBRARY --------------------------------------------------------------------------------------------->
@@ -10366,6 +10367,7 @@
 							<font>InfoPaneDetailFont</font>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>![Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)]</visible>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 						</control>
 					<!--MOVIES_FANART_SPECIFIC-->			
 						<control type="label">
@@ -10410,6 +10412,7 @@
 							<textcolor>InfoPaneDetailsColor</textcolor>
 							<font>InfoPaneDetailFont</font>
 							<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Property(WatchedEpisodes),($LOCALIZE[16102] ]$INFO[ListItem.Property(UnWatchedEpisodes), - $LOCALIZE[16101] ,)   ]</label>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 							<visible>Container.Content(TVShows)</visible>
 						</control>
 						<!--************************************** Media Flags *************************************************-->

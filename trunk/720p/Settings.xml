@@ -665,6 +665,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31202]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(102)</visible>
 				</control>
 				<control type="label">
@@ -675,6 +676,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31205]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(103)</visible>
 				</control>
 				<control type="label">
@@ -685,6 +687,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31206]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(104)</visible>
 				</control>	
 				<control type="label">
@@ -695,6 +698,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31204]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(106)</visible>
 				</control>	
 				<control type="label">
@@ -705,6 +709,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31207]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(109)</visible>
 				</control>	
 				<control type="label">
@@ -715,6 +720,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31209]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(111)</visible>
 				</control>	
 				<control type="label">
@@ -725,6 +731,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31208]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(110)</visible>
 				</control>	
 				<control type="label">
@@ -735,6 +742,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[20077]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Control.HasFocus(112)</visible>
 				</control>	
 				<control type="label">
@@ -746,6 +754,7 @@
 					<font>InfoPaneDetailFont</font>
 					<!----------------------- InfoPaneDetailLabel ---------------------------------->
 					<label>$LOCALIZE[31209]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(SystemSettings)</visible>
 				</control>
 				<!--***************************************************************************************************************-->

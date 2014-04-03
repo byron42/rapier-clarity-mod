@@ -1531,6 +1531,7 @@
 							<textcolor>InfoPaneDetailsColor</textcolor>
 							<font>InfoPaneDetailFont</font>
 							<label>$INFO[ListItem.Label2,,   ]$INFO[Container.NumItems,[, $LOCALIZE[127]]]</label>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 						</control>
 					</control>
 				</control>

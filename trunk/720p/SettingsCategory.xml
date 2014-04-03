@@ -879,6 +879,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31202]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(AppearanceSettings)</visible>
 				</control>
 				<control type="label">
@@ -889,6 +890,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31203]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(ProgramsSettings)</visible>
 				</control>
 				<control type="label">
@@ -899,6 +901,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31204]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(PicturesSettings)</visible>
 				</control>	
 				<control type="label">
@@ -909,6 +912,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31205]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(MusicSettings)</visible>
 				</control>	
 				<control type="label">
@@ -919,6 +923,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31206]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(VideosSettings)</visible>
 				</control>	
 				<control type="label">
@@ -929,6 +934,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31207]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(WeatherSettings)</visible>
 				</control>	
 				<control type="label">
@@ -939,6 +945,7 @@
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
 					<label>$LOCALIZE[31208]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(NetworkSettings)</visible>
 				</control>	
 				<control type="label">
@@ -950,6 +957,7 @@
 					<font>InfoPaneDetailFont</font>
 					<!----------------------- InfoPaneDetailLabel ---------------------------------->
 					<label>$LOCALIZE[31209]</label>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(SystemSettings)</visible>
 				</control>
 				<!--***************************************************************************************************************-->

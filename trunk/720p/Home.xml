@@ -2768,6 +2768,12 @@
 							</control>
 						</focusedlayout>
 						<content>
+							<item id="6">
+								<description>Recently Added</description>
+								<label>31804</label>
+								<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMusicVideos,return)</onclick>
+								<visible>!Skin.HasSetting(HideMusicVidsRecentButton)</visible>
+							</item>	
 							<item id="1">
 								<description>albums</description>
 								<label>132</label>

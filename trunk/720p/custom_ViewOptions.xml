@@ -3491,7 +3491,30 @@
 					<label>$LOCALIZE[31025]</label>
 					<selected>Skin.HasSetting(HideMoviesThumbnailViewScrollbar)</selected>
 					<onclick>Skin.ToggleSetting(HideMoviesThumbnailViewScrollbar)</onclick>
-					<visible>Skin.String(CurrentViewMode,54)</visible>
+					<visible>Skin.String(CurrentViewMode,54) + Container.Content(Movies)</visible>
+				</control>
+				<control type="radiobutton" id="20620">
+					<description>Thumbnail Hide Scrollbar (MusicVids)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>        
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>  
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideMoviesThumbnailViewScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideMoviesThumbnailViewScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,54) + Container.Content(MusicVideos)</visible>
 				</control>
 				<control type="radiobutton" id="26000">
 					<description>List View Hide Star Rating (Non Library)</description>

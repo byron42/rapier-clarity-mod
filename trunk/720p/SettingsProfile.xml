@@ -617,6 +617,7 @@
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
 					<font>InfoPaneDetailFont</font>
+					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<label>$LOCALIZE[13204] $INFO[System.ProfileName]</label>
 				</control>	
 				<!--**************************************************************************************************************-->
