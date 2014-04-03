@@ -4010,7 +4010,7 @@
 							<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 							<posx>76</posx>
 							<posy>6</posy>
-							<width>800</width>
+							<width>1190</width>
 							<textcolor>InfoPaneHeaderColor</textcolor>
 							<font>InfoPaneHeaderFont</font>
 							<label>$INFO[ListItem.Label]</label>	

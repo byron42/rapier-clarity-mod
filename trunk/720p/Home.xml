@@ -1,6 +1,4 @@
 <window id="0">
-	<!-- <onload condition="Window.Previous(startup)">SetFocus(304)</onload>
-	<onload condition="Window.Previous(startup) + !Skin.HasSetting(HideRecentMovies) + Control.HasFocus(304)">SetFocus(510)</onload> -->
 	<defaultcontrol always="true">510</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -1802,7 +1800,7 @@
 							<label>31919</label>
 							<icon>-</icon>
 							<thumb>$INFO[Skin.String(AddonsCustomBG)]</thumb>
-							<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listlocalrepos/)</onclick>	
+							<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/,return)</onclick>	
 							<visible>!Skin.HasSetting(HideAddonsCategory)</visible>
 						</item>
 						<!--
@@ -3873,7 +3871,7 @@
 							<item id="5">
 								<description>Playlists</description>
 								<label>136</label>
-								<onclick>XBMC.ActivateWindow(MusicLibrary,Playlists,return)</onclick>
+								<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
 								<visible>!Skin.HasSetting(HideMusicPlaylistsButton)</visible>
 							</item>		
 							<item id="7">

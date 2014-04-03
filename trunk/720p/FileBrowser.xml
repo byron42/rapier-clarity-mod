@@ -3,12 +3,12 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>	
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog) ">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(yesnodialog) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(okdialog)">Conditional</animation>
 			<control type="group">
-				<animation effect="fade"  start="0" end="0" condition="Window.IsActive(129) | Window.IsActive(profiles) | Window.IsActive(3001)">Conditional</animation>
+				<animation effect="fade" start="0" end="0" condition="Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(3001)">Conditional</animation>
 				
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->			
 				<control type="group">	
@@ -155,6 +155,7 @@
 				
 	<!--(((TOP BAR)))=============================================================================================================================-->				
 				<control type="group" id="505">	
+					<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
 					<description>Top Bar Area</description>
 					<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 					<control type="group">	
@@ -181,8 +182,60 @@
 					<!--*************************************************************************************************-->
 					
 					<!--******************************** (BreadCrumbFileBrowser) ****************************************-->
-					<include>BreadCrumbButtonRight</include>
-					<include>BreadCrumbButtonLeft</include>
+					<control type="group">			
+						<posx>280</posx>	
+						<!-- BreadCrumbOpenCloseAnim2 -->
+						<animation effect="slide" start="-440,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+						<control type="button">
+							<description>Settings</description>
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<posy>4</posy>
+							<width>260</width>
+							<height>35</height>
+							<font>BreadCrumbFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textoffsetx>-</textoffsetx>
+							<align>center</align>
+							<aligny>top</aligny>
+							<shadowcolor></shadowcolor> <!--BrCr-->
+							<textoffsety>2</textoffsety> <!--BrCr-->
+							<textwidth>240</textwidth> <!--BrCr-->
+							<scroll>true</scroll> <!--BrCr-->
+							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<label>[UPPERCASE] $LOCALIZE[10004] [/UPPERCASE] </label>
+						</control>		
+					</control>
+					<control type="group">		
+						<posx>60</posx>
+						<!-- BreadCrumbOpenCloseAnim -->
+						<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+						<control type="button">
+							<description>Media</description>
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<posy>4</posy>
+							<width>240</width>
+							<height>35</height>
+							<font>BreadCrumbFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textoffsetx>-</textoffsetx>
+							<align>center</align>
+							<aligny>top</aligny>
+							<shadowcolor></shadowcolor> <!--BrCr-->
+							<textoffsety>2</textoffsety> <!--BrCr-->
+							<textwidth>230</textwidth> <!--BrCr-->
+							<scroll>true</scroll> <!--BrCr-->
+							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
+							<label>[UPPERCASE] $LOCALIZE[31910] [/UPPERCASE] </label>
+						</control>
+					</control>
 					
 				
 					<!--BreadCrumbHome-->
@@ -391,17 +444,19 @@
 		
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(34) |  Window.IsActive(virtualkeyboard) | Window.IsActive(131) | Window.IsActive(3082) | Window.IsActive(3083)">WindowOpen</animation>
-				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="Window.IsVisible(131)">WindowOpen</animation>
-				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(34) |  Window.IsActive(virtualkeyboard) | Window.IsActive(131) | Window.IsActive(3082) | Window.IsActive(3083)">WindowClose</animation>
-				<animation type="WindowOpen" condition="!Window.IsActive(mediasource)" reversible="false">
-					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
-					<effect type="fade" start="0" end="100" time="300" />
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowOpen</animation>
+				<!-- <animation effect="fade" start="0" end="100" time="250" delay="400" condition="Window.IsVisible(locksettings)">WindowOpen</animation> -->
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowClose</animation>
+				
+				<animation type="WindowOpen" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)]" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450"/>
+					<effect type="fade" start="0" end="100" time="300"/>
 				</animation>
-				<animation type="WindowClose" condition="!Window.IsActive(mediasource)" reversible="false">
-					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
-					<effect type="fade" start="100" end="0" time="250" />
+				<animation type="WindowClose" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)]" reversible="false">
+					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200"/>
+					<effect type="fade" start="100" end="0" time="250"/>
 				</animation>
+				
 				<!-------- ThisWasAlreadyHere --------------------------------------------------------------------------->
 				<animation effect="fade" start="0" end="100" time="250" delay="425" condition="![Window.IsActive(NetworkSetup) | Window.IsActive(locksettings)]">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(NetworkSetup) | Window.IsActive(locksettings)">Conditional</animation>
