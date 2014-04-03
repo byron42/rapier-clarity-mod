@@ -1,0 +1,161 @@
+<window id="123">
+	<defaultcontrol>2</defaultcontrol>
+	<!-- BackgroundOpenCloseAnim -->
+	<animation effect="fade" start="0" end="100" time="300" delay="500">WindowOpen</animation> 
+	<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>40</posx>
+		<posy>55</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posy>45</posy>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(SliderDialog)">Conditional</animation>
+			
+			<!--******************************************************** BG_OSDsettings **********************************************************-->
+			<control type="group">
+				<posx>150</posx>
+				<control type="image">
+					<description>Context Menu Top</description>
+					<posy>-3</posy>
+					<width>900</width>
+					<height>57</height>
+					<texture border="0">OSDBackgrounds/BG_OSDsettingsMID_top.png</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				<control type="image">
+					<description>Context Menu Middle</description>
+					<posy>54</posy>
+					<width>900</width>
+					<height>421</height>
+					<texture border="0,0,0,2">OSDBackgrounds/BG_OSDsettings_middle.png</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				<control type="image">
+					<description>Context Menu Bottom</description>
+					<posy>475</posy>
+					<width>900</width>
+					<height>49</height>
+					<texture border="-">OSDBackgrounds/BG_OSDsettings_bottom.png</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+			</control>
+			<!--**********************************************************************************************************************************-->
+			
+			<control type="image">
+				<posx>580</posx>
+				<posy>472</posy>
+				<width>40</width>
+				<height>16</height>
+				<texture>Arrow_Down.png</texture>
+				<visible>Container(2).HasNext</visible>
+			</control>
+			<control type="image">
+				<posx>580</posx>
+				<posy>52</posy>
+				<width>40</width>
+				<height>16</height>
+				<texture>Arrow_Up.png</texture>
+				<visible>Container(2).HasPrevious</visible>
+			</control>
+			<control type="label" id="2">
+				<description>heading label</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1200</width>
+				<height>40</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>MenuBarButtonFont4</font>
+				<textcolor>ThemeColor</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>200</posx>
+				<posy>70</posy>
+				<width>760</width>
+				<height>400</height>
+				<itemgap>5</itemgap>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<animation effect="slide" start="0,0" end="20,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>45</height>
+				<font>font13</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<textoffsetx>7</textoffsetx>
+				<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
+				<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+				<texturefocus border="10,0,10,0">scrollbar-background.png</texturefocus>
+				<texturenofocus>menu-bar-separator.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>45</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<textoffsetx>7</textoffsetx>
+				<texturefocus>scrollbar-background.png</texturefocus>
+				<texturenofocus>menu-bar-separator.png</texturenofocus>
+				<textureradiofocus>radio-button-focus.png</textureradiofocus>
+				<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+				<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
+				<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>45</height>
+				<texturefocus>scrollbar-background.png</texturefocus>
+				<texturenofocus>menu-bar-separator.png</texturenofocus>
+				<textureup>arrow-scroll-up-nofocus.png</textureup>
+				<texturedown>arrow-scroll-down-nofocus.png</texturedown>
+				<textureupfocus>arrow-scroll-up-focus.png</textureupfocus>
+				<texturedownfocus>arrow-scroll-down-focus.png</texturedownfocus>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>7</textoffsetx>
+				<aligny>center</aligny>
+				<reverse>yes</reverse>
+				<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
+				<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="sliderex" id="10">
+				<description>Default Slider</description>
+				<posx>530</posx>
+				<posy>150</posy>
+				<height>45</height>
+				<texturefocus>scrollbar-background.png</texturefocus>
+				<texturenofocus>menu-bar-separator.png</texturenofocus>
+				<sliderwidth>150</sliderwidth>
+				<sliderheight>20</sliderheight>
+				<texturesliderbar>slider-background.png</texturesliderbar>
+				<textureslidernib>slider-nib-nofocus.png</textureslidernib>
+				<textureslidernibfocus>slider-nib-nofocus.png</textureslidernibfocus>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<disabledcolor>disabled</disabledcolor>
+				<textoffsetx>7</textoffsetx>
+			</control>
+		</control>	
+	</controls>
+</window>
