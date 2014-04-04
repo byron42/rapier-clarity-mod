@@ -1,0 +1,719 @@
+<window type="dialog" id="142">
+	<defaultcontrol always="true">401</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx></posx>
+		<posy></posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
+			<posx></posx>
+			<posy></posy>
+			<control type="group" id="99">
+				<animation effect="slide" start="0,-400" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(111)">Conditional</animation>
+				<control type="image">
+					<description>media info background image</description>
+					<posx>-10</posx>
+					<posy>-38</posy>
+					<width>1300</width>
+					<height>200</height>
+					<texture border="10,10,10,10">media-background2.jpg</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				
+	<!--(((MAIN BAR WITH CONTROLS)))================(sloppy code needs cleanup!)=========================================================================-->		
+				<control type="group">
+					<posx>300</posx>
+					<posy>715r</posy>
+					<!-- Stuff to fill in for seekbar not being visible -->
+					<!--<control type="label">
+						<description>Playing Label</description>
+						<posx>375</posx>
+						<posy>110</posy>
+						<width>500</width>
+						<height>25</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31040</label>
+						<visible>Player.Playing + !Player.Seeking</visible>
+					</control>-->
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>SEEKING Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-pause-focus.png</texturenofocus>
+						<texturenofocus>osd-pause-focus.png</texturenofocus>
+						<visible>Player.Seeking</visible>
+					</control>
+					<!--<control type="label">
+						<description>Paused Label</description>
+						<posx>375</posx>
+						<posy>110</posy>
+						<width>500</width>
+						<height>25</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31043</label>
+						<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
+					</control>-->
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>PAUSED Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-pause-focus.png</texturenofocus>
+						<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
+					</control>
+					<!--<control type="label">
+						<description>Cache Label</description>
+						<posx>375</posx>
+						<posy>110</posy>
+						<width>500</width>
+						<height>25</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
+						<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+					</control>-->
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>CACHE Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-pause-focus.png</texturenofocus>
+						<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
+					</control>
+					<!--<control type="label">
+						<animation effect="fade" start="0" end="100" time="250" easing="out" condition="Player.Seeking">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>Seeking Label</description>
+						<posx>375</posx>
+						<posy>110</posy>
+						<width>500</width>
+						<height>25</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
+						<visible>Player.Seeking</visible>
+					</control>-->
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding2x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>FF Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31723</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-forward-focus.png</texturenofocus>
+						<visible>Player.Forwarding2x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding4x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>FF Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31724</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-forward-focus.png</texturenofocus>
+						<visible>Player.Forwarding4x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>FF Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31725</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-forward-focus.png</texturenofocus>
+						<visible>Player.Forwarding8x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding16x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>FF Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>100</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31726</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-forward-focus.png</texturenofocus>
+						<visible>Player.Forwarding16x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="250" easing="out" condition="Player.Forwarding32x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>FF Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>100</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31727</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-forward-focus-x32.png</texturenofocus>
+						<visible>Player.Forwarding32x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>RW Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>100</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31728</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-rewind-focus.png</texturenofocus>
+						<visible>Player.Rewinding2x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>RW Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>100</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31729</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-rewind-focus.png</texturenofocus>
+						<visible>Player.Rewinding4x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>RW Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>100</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31730</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-rewind-focus.png</texturenofocus>
+						<visible>Player.Rewinding8x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>RW Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31731</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-rewind-focus.png</texturenofocus>
+						<visible>Player.Rewinding16x</visible>
+					</control>
+					<control type="button">
+						<animation effect="fade" start="0" end="100" time="0" easing="out" condition="Player.Forwarding8x">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<description>RW Label</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>31732</label>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>osd-rewind-focus-x32.png</texturenofocus>
+						<visible>Player.Rewinding32x</visible>
+					</control>
+					<!-- End Stuff to fill in for seekbar not being visible -->
+					<control type="label">
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>830</width>
+						<height>25</height>
+						<label>$INFO[VideoPlayer.Title]</label>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_OSDMusicTitle</font>
+						<textcolor>ThemeColor</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>!VideoPlayer.Content(Movies)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>30</posy>
+						<width>870</width>
+						<height>25</height>
+						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
+						<scroll>true</scroll>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_OSDMusicTitle</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>ThemeColor</shadowcolor>
+						<visible>VideoPlayer.Content(Movies)</visible>
+					</control>
+					<!--<control type="label">
+						<posx>0</posx>
+						<posy>67</posy>
+						<width>680</width>
+						<height>20</height>
+						<label>$INFO[VideoPlayer.Director,$LOCALIZE[20339]: ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>!Player.ChapterCount + VideoPlayer.Content(Movies)</visible>
+					</control>-->
+					<!--<control type="label">
+						<posx>0</posx>
+						<posy>67</posy>
+						<width>360</width>
+						<height>20</height>
+						<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>Player.ChapterCount + !VideoPlayer.Content(Episodes)</visible>
+					</control>-->
+					<!--<control type="label">
+						<posx>0</posx>
+						<posy>67</posy>
+						<width>360</width>
+						<height>20</height>
+						<label>$INFO[VideoPlayer.Season,$LOCALIZE[20373]: ] &#32;&#32;&#32; $INFO[VideoPlayer.Episode,$LOCALIZE[20359]: ]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<visible>VideoPlayer.Content(Episodes)</visible>
+					</control>-->
+					<!--<control type="label">
+						<posx>870</posx>
+						<posy>67</posy>
+						<width>360</width>
+						<height>20</height>
+						<label>$LOCALIZE[31049]: $INFO[Player.FinishTime]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12_title</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>-->
+					<!--<control type="image"> 
+						<description>Live TV Channel Logo image</description> 
+						<posx>30</posx> 
+						<posy>290r</posy> 
+						<width>280</width> 
+						<height>260</height> 
+						<fadetime>200</fadetime> 
+						<texture background="true">$INFO[VideoPlayer.Cover]</texture> 
+						<aspectratio aligny="bottom">keep</aspectratio> 
+						<visible>VideoPlayer.Content(LiveTV)</visible> 
+					</control> -->
+					<control type="progress">
+						<description>Progressbar</description>
+						<posx>0</posx>
+						<posy>87</posy>
+						<width>800</width>
+						<height>14</height>
+						<info>Player.Progress</info>
+						<visible>!Player.Caching</visible>
+					</control>
+					<control type="progress">
+						<description>Player Caching Progress Bar</description>
+						<posx>0</posx>
+						<posy>87</posy>
+						<width>800</width>
+						<height>14</height>
+						<reveal>true</reveal>
+						<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
+						<info>Player.CacheLevel</info>
+						<visible>Player.Caching</visible>
+					</control>
+					<control type="label">
+						<description>Elapsed Time Label</description>
+						<posx>0</posx>
+						<posy>115</posy>
+						<width>375</width>
+						<height>20</height>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Player.Time]</label>
+						<visible>!Player.Seeking</visible>
+					</control>
+					<control type="label">
+						<description>Seek Time Label</description>
+						<posx>0</posx>
+						<posy>115</posy>
+						<width>375</width>
+						<height>20</height>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[Player.SeekTime]</label>
+						<visible>Player.Seeking</visible>
+					</control>
+					<control type="label">
+						<posx>800</posx>
+						<posy>115</posy>
+						<width>370</width>
+						<height>25</height>
+						<label>$INFO[Player.Duration]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				
+	<!--(((MEDIA FLAGS AREA)))================(not working)==============================================================================================-->		
+				<control type="group">		
+					<!------------------------------------ VideoInfoStudioMediaFlag ------------------------------------------------------->
+					<control type="image">
+						<posx>900</posx>
+						<posy>115</posy>
+						<width>161</width>
+						<height>109</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+					</control>
+					<!------------------------------------ VideoInfoStudioMediaFlag ------------------------------------------------------->
+				
+					<control type="grouplist">
+						<description>Media Flags Area</description>
+						<posx>200</posx>
+						<posy>115</posy>
+						<width>580</width>
+						<height>60</height>
+						<itemgap>0</itemgap>
+						<align>center</align>
+						<orientation>horizontal</orientation>
+						<!------------------------------------ VideoMediaFlags ------------------------------------------------------->
+						<control type="image">
+							<description>Blu-ray Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/bluray.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
+						</control>
+						<control type="image">
+							<description>HDDVD Image</description>
+							<width>120</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/hddvd.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)</visible>
+						</control>
+							<control type="image">
+							<description>DVD Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/dvd.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.vob,Right)</visible>
+						</control>
+						<control type="image">
+							<description>HDTV Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/hdtv.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,hdtv)</visible>
+						</control>
+						<control type="image">
+							<description>DVDRIP Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/dvdrip.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,dvdrip)</visible>
+						</control>
+						<control type="image">
+							<description>DVDR5 Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/dvdr5.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,dvdr5) | substring(ListItem.filename,.r5)</visible>
+						</control>
+						<control type="image">
+							<description>DVD SCREENER Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/dvdscreener.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,dvdscreener) | substring(ListItem.filename,dvdscr) | substring(ListItem.filename,.screener)</visible>
+						</control>
+						<control type="image">
+							<description>TELESYNC Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/telesync.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,telesync) | substring(ListItem.filename,.ts.)</visible>
+						</control>
+						<control type="image">
+							<description>CAM Image</description>
+							<width>90</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/video/cam.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.filename,.CAM)</visible>
+						</control>
+						<control type="image">
+							<description>Video Res Image</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<texture>$INFO[ListItem.VideoResolution,flagging/VideoResolution/,.png]</texture>
+						</control>
+						<control type="image">
+							<description>Codec Image</description>
+							<width>80</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.VideoCodec,flagging/VideoCodec/,.png]</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						</control>
+						<!------------------------------------ VideoMediaFlags ------------------------------------------------------->
+						
+						<!------------------------------------ AudioMediaFlags ------------------------------------------------------->
+						<control type="image">
+							<description>MP3 Codec Image</description>
+							<width>80</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.AudioCodec,flagging/AudioCodec/,.png]</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						</control>
+						<control type="image">
+							<description>Audio Channels Image</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.AudioChannels,flagging/AudioChannels/,.png]</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						</control>
+						<!------------------------------------ AudioMediaFlags ------------------------------------------------------->
+						
+						<!------------------------------------ AspectMediaFlags ------------------------------------------------------->
+						<control type="image">
+							<description>Aspectratio Image</description>
+							<width>60</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[ListItem.VideoAspect,flagging/AspectRatio/,.png]</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						</control>
+						<!------------------------------------ AspectMediaFlags ------------------------------------------------------->
+					</control>
+				</control>
+			</control>
+			
+	<!--(((ICONS)))======================================================================================================================================-->		
+			<control type="group">
+				<posx></posx>
+				<posy></posy>
+				<visible>VideoPlayer.Content(Movies)</visible>
+				<animation effect="slide" start="0,-114" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(111)">Conditional</animation>
+				<control type="image">
+					<description>cover image</description>
+					<posx>5</posx>
+					<posy>700r</posy>
+					<width>280</width>
+					<height>320</height>
+					<texture>$INFO[VideoPlayer.cover]</texture>
+					<aspectratio aligny="top">keep</aspectratio>
+					<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+					<bordersize>14</bordersize>
+				</control>
+				<!--<control type="image">
+					<description>cover image</description>
+					<posx>15</posx>
+					<posy>480r</posy>
+					<width>264</width>
+					<height>264</height>
+					<texture flipy="true" diffuse="reflection.png">$INFO[VideoPlayer.cover]</texture>
+					<bordertexture flipy="true" border="15" diffuse="reflection.png">item-round-background2.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="top">keep</aspectratio>
+				</control>-->
+			</control>
+			<control type="group">
+				<visible>!VideoPlayer.Content(Movies)</visible>
+				<animation effect="slide" start="0,-114" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" delay="150" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,0" end="0,-400" time="300" tween="quadratic" easing="out" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(111)">Conditional</animation>
+				<control type="image">
+					<description>cover image</description>
+					<posx>5</posx>
+					<posy>700r</posy>
+					<width>280</width>
+					<height>320</height>
+					<texture>$INFO[VideoPlayer.cover]</texture>
+					<aspectratio aligny="top">keep</aspectratio>
+					<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+					<bordersize>14</bordersize>
+				</control>
+				<!--<control type="image">
+					<description>cover image</description>
+					<posx>-5</posx>
+					<posy>370r</posy>
+					<width>304</width>
+					<height>189</height>
+					<texture flipy="true" diffuse="reflection.png">$INFO[VideoPlayer.cover]</texture>
+					<bordertexture flipy="true" border="15" diffuse="reflection.png">item-round-background2.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio aligny="top">keep</aspectratio>
+				</control>-->
+			</control>
+		</control>
+	</controls>
+</window>

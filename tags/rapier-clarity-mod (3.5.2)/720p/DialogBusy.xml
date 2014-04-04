@@ -1,0 +1,50 @@
+<window id="138">
+	<animation effect="fade" time="200">WindowOpen</animation> <!-- condition="System.IdleTime(2)" --(???)-->
+	<animation effect="fade" time="200">WindowClose</animation>
+	<zorder>100</zorder>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>-10</posx>
+			<posy>-50</posy>
+			<width>1300</width>
+			<height>800</height>
+			<texture>background-dim.png</texture>
+			<animation effect="fade" start="0" end="80"  delay="" time="300" condition="true">WindowOpen</animation>
+		</control>
+		<control type="group">
+			<animation effect="zoom" start="60"  end="90" center="640,360" condition="true" pulse="true" time="1100">conditional</animation>
+			<posx>640</posx>
+			<posy>360</posy>
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>-80</posx>
+				<posy>-80</posy>
+				<width>160</width>
+				<height>160</height>
+				<texture border="">busy5.png</texture>
+				<colordiffuse>BFFFFFFF</colordiffuse> <!-- GREY -->
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation effect="fade" start="20" end="100"  time="1100" pulse="true" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>-60</posx>
+				<posy>-60</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture border="">busy5.png</texture>
+				<colordiffuse>BFFFFFFF</colordiffuse> <!-- GREY -->
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="-50" end="-410" center="auto" time="1500" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation effect="fade" start="20" end="100"  time="1100" pulse="true" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</controls>
+</window>
