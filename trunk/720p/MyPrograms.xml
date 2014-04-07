@@ -12,6 +12,8 @@
 			
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">	
+				<!--(AddonFanartFadeOut)-->
+				<animation effect="fade" end="0" time="200" conditon="!IsEmpty(Listitem.Property(Fanart_Image))">Conditional</animation>
 				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
@@ -123,6 +125,32 @@
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 			</control>
+			
+			<!--********************************** BackgroundFanart *********************************************-->
+			<control type="group">
+				<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+				<!--(VisibleFadeEffect)-->
+				<animation effect="fade" time="200">Visible</animation>
+				<animation effect="fade" time="200">Hidden</animation>
+				<control type="image">
+					<description>Fanart Background</description>
+					<include>BackgroundOffset</include>
+					<width>1280</width>
+					<include>VariableBackgroundHeight</include>
+					<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<fadetime>600</fadetime>
+				</control>	
+				<control type="image">
+					<width>ScreenWidth</width>
+					<include>VariableBackgroundHeight</include>		
+					<texture>background-dim.png</texture>
+					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+			</control>
+			<!--*************************************************************************************************-->
+			
 			
 	<!--(((VIEWS)))===========================================================================================================================-->			
 			<control type="group">   
