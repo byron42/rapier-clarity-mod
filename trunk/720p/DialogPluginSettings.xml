@@ -1,4 +1,5 @@
 <window id="10140">
+	<onload condition="Window.IsActive(ContextMenu)">Dialog.Close(ContextMenu)</onload>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -385,7 +386,11 @@
 			</control>
 		
 	<!--(((CONTROLS)))============================================================================================================================-->		
+			
+			
 			<control type="group">
+				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditonal</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="!Window.IsActive(FileBrowser)">Conditonal</animation>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
 					<effect type="fade" start="0" end="100" time="300" />

@@ -149,7 +149,7 @@
 	</variable>
 	
 	<variable name="BreadCrumbLabel_Right">
-		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- PLUGINS -->
+		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)] + !Window.IsActive(PluginSettings)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!-- PLUGINS -->
 		<value condition="Window.IsActive(501) | Window.IsActive(2) | [Window.IsActive(1) + !Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + !Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[1214][/UPPERCASE] </value> <!-- FILES -->
 		<value condition="Window.IsActive(503)">[UPPERCASE]$LOCALIZE[10503][/UPPERCASE] </value> <!-- PLAYLIST EDITOR -->
 		<value condition="Window.IsActive(500) | Window.IsActive(28)">[UPPERCASE]$LOCALIZE[13350][/UPPERCASE] </value> <!-- PLAYLIST -->

@@ -8,7 +8,7 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(yesnodialog) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(okdialog)">Conditional</animation>
 			<control type="group">
-				<animation effect="fade" start="0" end="0" condition="Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(3001)">Conditional</animation>
+				<animation effect="fade" start="0" end="0" condition="Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(3001) | Window.IsActive(PluginSettings)">Conditional</animation>
 				
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->			
 				<control type="group">	
@@ -445,14 +445,15 @@
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowOpen</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="Window.IsActive(PluginSettings)">WindowOpen</animation>
 				<!-- <animation effect="fade" start="0" end="100" time="250" delay="400" condition="Window.IsVisible(locksettings)">WindowOpen</animation> -->
-				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083) | Window.IsActive(PluginSettings)">WindowClose</animation>
 				
-				<animation type="WindowOpen" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)]" reversible="false">
+				<animation type="WindowOpen" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083) | Window.IsActive(PluginSettings)]" reversible="false">
 					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450"/>
 					<effect type="fade" start="0" end="100" time="300"/>
 				</animation>
-				<animation type="WindowClose" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)]" reversible="false">
+				<animation type="WindowClose" condition="![Window.IsActive(mediasource) | Window.IsActive(3001) | Window.IsActive(profiles) |  Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083) | Window.IsActive(PluginSettings)]" reversible="false">
 					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200"/>
 					<effect type="fade" start="100" end="0" time="250"/>
 				</animation>
