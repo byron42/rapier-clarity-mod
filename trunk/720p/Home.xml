@@ -1483,8 +1483,8 @@
 			<control type="group">	<!--SUBMENU IMAGE-->
 				<animation effect="slide" start="0,114" time="250" >WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
-				<animation effect="slide" start="0,114" end="0,34"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<!--<animation effect="slide" end="0,-5"time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
+				<animation effect="slide" start="0,114" end="0,34" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!--<animation effect="slide" end="0,-5" time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<control type="image">
 					<animation effect="fade" start="100" end="0" time="50" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
@@ -1926,8 +1926,8 @@
 				<onup>600</onup>
 				<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
-				<animation effect="slide" start="0,114" end="0,33"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<!--<animation effect="slide" end="0,-5"time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
+				<animation effect="slide" start="0,114" end="0,33" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!--<animation effect="slide" end="0,-5" time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
 				<animation effect="fade" start="100" end="60" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<control type="group">	
