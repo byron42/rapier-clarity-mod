@@ -15,9 +15,9 @@
 				<width>1280</width>
 				<height>720</height>
 				<texture>background-dim.png</texture>
-				<!-- BackgroundVizDimAnim -->
+				<!--BackgroundVizDimAnim-->
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
-				<!-- BackgroundVizDimAnim -->
+				<!--BackgroundVizDimAnim-->
 			</control>
 		</control>
 		<!--*****************************************************************************************************-->
@@ -52,7 +52,7 @@
 			<texturefocus border="6">calibrate-pixelratio-focus.png</texturefocus>
 			<texturenofocus border="6">calibrate-pixelratio-nofocus.png</texturenofocus>
 		</control>
-		<control type="group"> <!-- Coordinates -->	
+		<control type="group"> <!--Coordinates-->	
 			<posy>50</posy>
 			<control type="label" id="2">
 				<description>Coordinates</description>

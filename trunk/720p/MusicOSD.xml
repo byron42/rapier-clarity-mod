@@ -7,14 +7,14 @@
 	</coordinates>
 	<controls>
 	   	<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<!-- HomeMenuPaneOpenCloseAnim -->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--HomeMenuPaneOpenCloseAnim-->
 			<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="0,114" time="250" delay="200">WindowClose</animation>
-			<!-- HomeMenuPaneSpecificCloseAnim -->
+			<!--HomeMenuPaneSpecificCloseAnim-->
 			<animation effect="slide" end="0,122" time="350" condition="Window.IsActive(121) | Window.IsActive(111)">Conditional</animation>
 			<animation effect="slide" end="0,122" time="250" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
 			<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122)</visible>
@@ -227,10 +227,10 @@
 				<onright>503</onright>
 				<onup>500</onup>
 				<ondown>500</ondown>	
-				<!-- HomeMenuPaneOpenCloseAnim -->
+				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,114" time="1000" tween="circle" easing="out">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="1000" delay="200">Hidden</animation>
-				<!-- HomeMenuPaneOpenCloseAnim -->
+				<!--HomeMenuPaneOpenCloseAnim-->
 			</control>
 			
 	<!--(((YOUTUBE SEARCH)))==========================================================================================================-->	
@@ -242,7 +242,7 @@
 				<height>34</height>
 				<pulseonselect>false</pulseonselect>
 				<texture>YouTubeIcon.jpg</texture>
-				<!-- HomeMenuPaneOpenCloseAnim -->
+				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,114" time="1000" tween="circle" easing="out" condition="Control.HasFocus(4321)">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="500" delay="200" condition="!Control.HasFocus(4321)">WindowClose</animation>
 			</control>
@@ -269,13 +269,13 @@
 				<onup>4321</onup>
 				<ondown>9000</ondown>	
 				<onclick>ActivateWindow(videos,plugin://video/YouTube/?path=/root/search&amp;feed=search&amp;search=$INFO[MusicPlayer.Artist],return)</onclick>
-				<!-- HomeMenuPaneOpenCloseAnim -->
+				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,114" time="1000" tween="circle" easing="out" condition="Control.HasFocus(4321)">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="500" delay="0" condition="!Control.HasFocus(4321)">WindowClose</animation>
 			</control>
 	<!--==============================================================================================================================-->		
 	
-			<control type="button" id="399"> <!-- Lyrics -->
+			<control type="button" id="399"> <!--Lyrics-->
 				<description>LYRICS BUTTON</description>
 				<posx>-225</posx>
 				<posy>90</posy>

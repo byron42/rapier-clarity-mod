@@ -5,7 +5,7 @@
 		<posx>340</posx>
 		<posy>235</posy>
 	</coordinates>
-	<!-- DialogOpenCloseAnim -->
+	<!--DialogOpenCloseAnim-->
 	<animation type="WindowOpen" reversible="false">
 		<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="350" />
 		<effect type="fade" start="0" end="100" time="300" />
@@ -16,8 +16,8 @@
 	</animation>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--**************************************** ProgressDialogBox ***************************************-->
 			<control type="image">
 				<width>600</width>
@@ -48,7 +48,7 @@
 				<textcolor>ThemeColor</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<!-- separator *********************************-->
+			<!--separator *********************************-->
 			<control type="image"> 
 				<description>header separator</description>
 				<posx>6</posx>

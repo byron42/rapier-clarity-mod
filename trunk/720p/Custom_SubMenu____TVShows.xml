@@ -4,22 +4,22 @@
 	<zorder>0</zorder>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<animation effect="fade"  start="100" end="100" delay="900" time="0" condition="Window.IsActive(Home)">WindowOpen</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="100" delay="900" time="0" condition="Window.IsActive(Home)">WindowOpen</animation>
 			
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">
-				<!------- FOR HOME --------->
+				<!--FOR HOME-->
 				<animation type="WindowOpen" condition="Window.IsActive(Home)"reversible="false">
-					<effect type="fade"  end="100" delay="0" time="0" />
+					<effect type="fade" end="100" delay="0" time="0" />
 				</animation>
-				<!------- FOR SKIN SETTINGS --------->
-				<animation effect="fade"  start="0" end="0" condition="Window.IsActive(3001)">Conditional</animation>
+				<!--FOR SKIN SETTINGS-->
+				<animation effect="fade" start="0" end="0" condition="Window.IsActive(3001)">Conditional</animation>
 				<control type="group">	
-					<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
+					<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
 							<posx>0</posx>
@@ -33,7 +33,7 @@
 							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
 						</control>
 					</control>
-					<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
+					<control type="group"> <!--UNIVERSAL CUSTOM BG-->
 						<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
 							<posx>0</posx>
@@ -50,7 +50,7 @@
 					<!--*********************************** BackgroundSystem **********************************************-->
 					<control type="group">
 						<description>System Custom Background</description>
-						<!-- include condition="![Skin.HasSetting(HideNowPlayingMusic) | Skin.HasSetting(HideNowPlayingVideos)]" file="includes.xml">IsMediaPlayingCondition</include -->
+						<!--include condition="![Skin.HasSetting(HideNowPlayingMusic) | Skin.HasSetting(HideNowPlayingVideos)]" file="includes.xml">IsMediaPlayingCondition</include-->
 						<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 						<control type="multiimage">
 							<description>Custom Background</description>
@@ -63,7 +63,7 @@
 							<timeperimage>10000</timeperimage>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<randomize>true</randomize>
-							<!-- BackgroundSystemDimAnim -->
+							<!--BackgroundSystemDimAnim-->
 							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
 						</control>
 						<control type="image">
@@ -75,7 +75,7 @@
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-							<!-- BackgroundSystemDimAnim -->
+							<!--BackgroundSystemDimAnim-->
 							<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
 						</control>
 					</control>
@@ -95,7 +95,7 @@
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
 							<texture>background-dim.png</texture>
-							<!-- BackgroundVizDimAnim -->
+							<!--BackgroundVizDimAnim-->
 							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>
 					</control>
@@ -115,7 +115,7 @@
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
 							<texture>background-dim.png</texture>
-							<!-- BackgroundVizDimAnim -->
+							<!--BackgroundVizDimAnim-->
 							<animation effect="fade" end="70" condition="true">Conditional</animation>
 						</control>	
 					</control>
@@ -123,13 +123,13 @@
 					
 					<!--******************************* FullControlAreaBackground *****************************************-->
 					<control type="group">	
-						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
+						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 						<control type="image">
 							<include>BackgroundOffset</include>
 							<width>ScreenWidth</width>
 							<include>VariableBackgroundHeight</include>		
 							<texture>control-area-background2.png</texture>
-							<!-- MediaViewOpenCloseAnim -->
+							<!--MediaViewOpenCloseAnim-->
 							<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -137,13 +137,13 @@
 						</control>
 					</control>
 					<control type="group">	
-						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 						<control type="image">
 							<include>BackgroundOffset</include>
 							<width>ScreenWidth</width>
 							<include>VariableBackgroundHeight</include>		
 							<texture>control-area-background2.png</texture>
-							<!-- MediaViewOpenCloseAnim -->
+							<!--MediaViewOpenCloseAnim-->
 							<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -151,12 +151,12 @@
 						</control>
 					</control>
 					<!--***************************************************************************************************--> 
-					<!-- BackgroundDimAnim -->
+					<!--BackgroundDimAnim-->
 					<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
-					<!-- BackgroundOpenCloseAnim -->
+					<!--BackgroundOpenCloseAnim-->
 					<animation effect="fade" start="40" end="100" delay="0" time="600">WindowOpen</animation> 
 					<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
-					<animation effect="fade"  start="0" end="0" condition="Window.IsActive(129)">Hidden</animation>
+					<animation effect="fade" start="0" end="0" condition="Window.IsActive(129)">Hidden</animation>
 				</control>
 				
 	<!--(((TOP BAR)))========================================================================================================================-->			
@@ -168,7 +168,7 @@
 							<width>ScreenWidth</width>
 							<height>53</height>
 							<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-							<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
+							<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
 						</control>
 						
 						<control type="image" id="1110">
@@ -196,11 +196,11 @@
 							<width>70</width>
 							<height>44</height> <!--BC HOME-->
 							<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						</control>	
-						<control type="group"> <!------------- DEFAULT ICON --------------------->
+						<control type="group"> <!--DEFAULT ICON-->
 							<visible>!Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
-							<control type="button"  id="837">
+							<control type="button" id="837">
 								<posx>10</posx>
 								<posy>6</posy>
 								<width>31</width>
@@ -208,7 +208,7 @@
 								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
 								<texturenofocus>Breadcrumb/breadcrumb-home-nofocusGRAY.png</texturenofocus>
 								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!--VANILLA?-->
 								<onclick>ActivateWindow(Home)</onclick>
 								<pulseonselect>true</pulseonselect>
 								<ondown>850</ondown>
@@ -217,9 +217,9 @@
 								<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 							</control> 
 						</control>
-						<control type="group"> <!------------- GOLD ICON ------------------------>
+						<control type="group"> <!--GOLD ICON-->
 							<visible>Skin.String(IconColor,2) + !Skin.String(IconColor,3)</visible>
-							<control type="button"  id="837">
+							<control type="button" id="837">
 								<posx>10</posx>
 								<posy>6</posy>
 								<width>31</width>
@@ -227,7 +227,7 @@
 								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
 								<texturenofocus>Breadcrumb/GOLD/breadcrumb-home-nofocusGOLD.png</texturenofocus>
 								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!--VANILLA?-->
 								<onclick>ActivateWindow(Home)</onclick>
 								<pulseonselect>true</pulseonselect>
 								<ondown>850</ondown>
@@ -236,9 +236,9 @@
 								<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 							</control>
 						</control> 
-						<control type="group"> <!------------- WHITE ICON ----------------------->
+						<control type="group"> <!--WHITE ICON-->
 							<visible>!Skin.String(IconColor,2) + Skin.String(IconColor,3)</visible>
-							<control type="button"  id="837">
+							<control type="button" id="837">
 								<posx>10</posx>
 								<posy>6</posy>
 								<width>31</width>
@@ -246,7 +246,7 @@
 								<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
 								<texturenofocus>Breadcrumb/WHITE/breadcrumb-home-nofocuswHITE.png</texturenofocus>
 								<!--<include condition="skin.String(TopBarIconColor)" file="includes_BreadCrumbSettings.xml">TopBarIconColorSettings</include>-->
-								<colordiffuse>FFFFFFFF</colordiffuse> <!-- VANILLA? -->
+								<colordiffuse>FFFFFFFF</colordiffuse> <!--VANILLA?-->
 								<onclick>ActivateWindow(Home)</onclick>
 								<pulseonselect>true</pulseonselect>
 								<ondown>850</ondown>
@@ -264,7 +264,7 @@
 						<posy>4</posy>
 						<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
 						+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
-						<!-- WeatherNotificationOpenCloseAnim -->
+						<!--WeatherNotificationOpenCloseAnim-->
 						<animation effect="fade" end="100" time="200">Visible</animation>
 						<animation effect="fade" end="0" time="200">Hidden</animation> 
 						<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
@@ -274,7 +274,7 @@
 							<height>35</height>
 							<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 							<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 							<onclick>ActivateWindow(MyWeather)</onclick>
 							<ondown>9</ondown>
 							<onright>346</onright>
@@ -293,7 +293,7 @@
 							<width>55</width>
 							<height>35</height>
 							<font>VolumeFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[Weather.Temperature]</label>
@@ -319,16 +319,16 @@
 						<posx>780</posx>
 						<posy>4</posy>
 						<visible>Player.HasMedia</visible>
-						<!-- MediaPlayingNotificationOpenCloseAnim -->
+						<!--MediaPlayingNotificationOpenCloseAnim-->
 						<animation effect="fade" end="100" time="200">Visible</animation>
 						<animation effect="fade" end="0" time="200">Hidden</animation>
-						<!-- MediaPlayingNotificationShiftAnim3 -->
+						<!--MediaPlayingNotificationShiftAnim3-->
 						<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
 						<control type="image">
 							<width>270</width>
 							<height>35</height>
 							<texture border="8">SystemTray/top-bar-status-background.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						</control>
 						<control type="image">
 							<posx>8</posx>
@@ -337,7 +337,7 @@
 							<height>25</height>
 							<texture>defaultaudio.png</texture>
 							<visible>Player.HasAudio</visible>
-							<!-- MediaPlayingPulseAnim -->
+							<!--MediaPlayingPulseAnim-->
 							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
@@ -347,7 +347,7 @@
 							<height>25</height>
 							<texture>defaultvideo.png</texture>
 							<visible>Player.HasVideo</visible>
-							<!-- MediaPlayingPulseAnim -->
+							<!--MediaPlayingPulseAnim-->
 							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 						</control>
 						<control type="group">
@@ -364,7 +364,7 @@
 								<height>15</height>
 								<scrollout>false</scrollout>
 								<font>ScanContentFont</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
 								<pauseatend>4000</pauseatend>
@@ -381,7 +381,7 @@
 								<width>224</width>
 								<height>15</height>
 								<font>ScanContentFont2</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
@@ -400,7 +400,7 @@
 								<width>224</width>
 								<height>15</height>
 								<font>ScanContentFont</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
@@ -431,7 +431,7 @@
 				<!---->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3080)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Window.IsActive(3080)">Conditional</animation>
-				<control type="group"> <!---------- CUSTOM SUBMENU ITEMS /SEPARATORS (-) --------------------->
+				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS(-)-->
 					<posx>30</posx>
 					<posy>80</posy>
 					<control type="label" id="-">
@@ -451,21 +451,21 @@
 						<aligny>center</aligny>
 					</control>
 					<!--******************************* separators ******************************-->
-					<control type="image"> <!-- TOP -->
+					<control type="image"> <!--TOP-->
 						<description>top bar</description>
 						<posy>34</posy>
 						<width>1220</width>
 						<height>5</height>
 						<texture>separatio_FS.png</texture>
 					</control>
-					<control type="image"> <!-- BOTTOM -->
+					<control type="image"> <!--BOTTOM-->
 						<description>BOTTOM bar</description>
 						<posy>565</posy>
 						<width>1220</width>
 						<height>5</height>
 						<texture>separatio_FS.png</texture>
 					</control>
-					<control type="image"> <!-- BOTTOM 2-->
+					<control type="image"> <!--BOTTOM 2-->
 						<description>BOTTOM bar</description>
 						<posy>620</posy>
 						<width>1220</width>
@@ -475,7 +475,7 @@
 					<!--*************************************************************************-->
 				</control>
 		
-				<control type="image"> <!------------------- CUSTOM BUTTON BG -------------------------->
+				<control type="image"> <!--CUSTOM BUTTON BG-->
 					<description>Network Setting BG</description>
 					<posx>430</posx>
 					<posy>140</posy>
@@ -489,7 +489,7 @@
 				<control type="group" id="850">
 					<description>Expanded Customize TVShows Sub Menus Area</description>
 					<visible>Skin.HasSetting(ExpandTVShowsSubMenuSettings)</visible>
-					<control type="label" > <!----- TOP BAR LABEL ------->
+					<control type="label" > <!--TOP BAR LABEL-->
 						<description>Category</description>
 						<posx>1250</posx>
 						<posy>89</posy>
@@ -504,8 +504,8 @@
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 					</control>
-				<!-- RADIO BUTTONS ========================================================================-->
-					<control type="grouplist" id="931"> <!-- CUSTOM BUTTONS (1-7) -->
+				<!--RADIO BUTTONS ========================================================================-->
+					<control type="grouplist" id="931"> <!--CUSTOM BUTTONS (1-7)-->
 						<description>Edit Buttons Area</description>
 						<posx>60</posx>
 						<posy>145</posy>
@@ -728,8 +728,8 @@
 							<onfocus>Skin.SetString(SelectedExpandedBtn,7)</onfocus>
 						</control>
 					</control>
-				<!-- BUTTON PARAMS. =======================================================================-->	
-					<control type="group" id="920">  <!---- TVShows BTN(1) ----->
+				<!--BUTTON PARAMS. =======================================================================-->	
+					<control type="group" id="920">  <!--TVShows BTN(1)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 1 Controls Area</description>
@@ -749,7 +749,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -771,8 +771,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -781,7 +781,7 @@
 							<enable>false</enable>
 							<label>( 1 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->		
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -910,7 +910,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx></textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -930,7 +930,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -941,7 +941,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -951,16 +951,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->		
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -1121,7 +1121,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(2) ----->
+					<control type="group" id="920">  <!--TVShows BTN(2)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 2 Controls Area</description>
@@ -1141,7 +1141,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--150-->
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1161,8 +1161,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1171,7 +1171,7 @@
 							<enable>false</enable>
 							<label>( 2 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->			
+					<!--BUTTON TYPE *********************************************************-->			
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -1298,7 +1298,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--80-->
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1318,7 +1318,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--120-->
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1329,7 +1329,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -1339,16 +1339,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->		
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -1509,7 +1509,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(3) ----->
+					<control type="group" id="920">  <!--TVShows BTN(3)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 3 Controls Area</description>
@@ -1529,7 +1529,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1549,8 +1549,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1559,7 +1559,7 @@
 							<enable>false</enable>
 							<label>( 3 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->			
+					<!--BUTTON TYPE *********************************************************-->			
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -1688,7 +1688,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1708,7 +1708,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1719,7 +1719,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -1729,16 +1729,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->		
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -1899,7 +1899,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(4) ----->
+					<control type="group" id="920">  <!--TVShows BTN(4)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 4 Controls Area</description>
@@ -1919,7 +1919,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1939,8 +1939,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1949,7 +1949,7 @@
 							<enable>false</enable>
 							<label>( 4 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->		
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -2078,7 +2078,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2098,7 +2098,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2109,7 +2109,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -2119,16 +2119,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->	
+					<!--BUTTON LABELS/PATHS *************************************************-->	
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -2289,7 +2289,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(5) ----->
+					<control type="group" id="920">  <!--TVShows BTN(5)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 5 Controls Area</description>
@@ -2309,7 +2309,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2329,8 +2329,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2467,7 +2467,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2487,7 +2487,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2498,7 +2498,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -2508,14 +2508,14 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
@@ -2679,7 +2679,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(6) ----->
+					<control type="group" id="920">  <!--TVShows BTN(6)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 6 Controls Area</description>
@@ -2699,7 +2699,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2719,8 +2719,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2729,7 +2729,7 @@
 							<enable>false</enable>
 							<label>( 6 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->			
+					<!--BUTTON TYPE *********************************************************-->			
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -2858,7 +2858,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2878,7 +2878,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2889,7 +2889,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -2899,16 +2899,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->		
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -3069,7 +3069,7 @@
 						</control>
 					</control>
 					
-					<control type="group" id="920">  <!---- TVShows BTN(7) ----->
+					<control type="group" id="920">  <!--TVShows BTN(7)-->
 						<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(selectdialog)">Conditional</animation>
 						<animation effect="fade" start="0" end="100" time="200" delay="1250" condition="!Window.IsActive(selectdialog)">Conditional</animation>
 						<description>Edit Button 7 Controls Area</description>
@@ -3089,7 +3089,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -3109,8 +3109,8 @@
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>aa343434</disabledcolor> <!-- JET -->
-							<!--<disabledcolor>CC555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>aa343434</disabledcolor> <!--JET-->
+							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -3119,7 +3119,7 @@
 							<enable>false</enable>
 							<label>( 7 )</label>
 						</control>
-					<!-- BUTTON TYPE *********************************************************-->		
+					<!--BUTTON TYPE *********************************************************-->		
 						<control type="grouplist" id="921"> 
 							<description>Button Type Area</description>
 							<posx>250</posx>
@@ -3248,7 +3248,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -3268,7 +3268,7 @@
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -3279,7 +3279,7 @@
 							<label>$LOCALIZE[31445]</label>
 						</control>
 						<control type="button">
-							<description>Button Instructions "()"</description>
+							<description>Button Instructions</description>
 							<posx>238</posx>
 							<posy>415</posy>
 							<width>760</width>
@@ -3289,16 +3289,16 @@
 							<textoffsety>16</textoffsety>
 							<textoffsetx>-</textoffsetx>
 							<shadowcolor>-</shadowcolor>
-							<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
+							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
 							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
-							<!-- <label>(                                                                )</label> -->
+							<!--<label>(                                                                )</label>-->
 						</control>
-					<!-- BUTTON LABELS/PATHS *************************************************-->		
+					<!--BUTTON LABELS/PATHS *************************************************-->		
 						<control type="grouplist" id="922">
 							<description>Button Properties Area</description>
 							<posx>258</posx>
@@ -3480,7 +3480,7 @@
 						<textwidth>160</textwidth>
 						<texturefocus border="10,10,10,10">-</texturefocus>
 						<texturenofocus>-</texturenofocus>
-						<disabledcolor>ff343434</disabledcolor> <!-- JET -->
+						<disabledcolor>ff343434</disabledcolor> <!--JET-->
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 						<label>$LOCALIZE[13012]</label>
@@ -3532,16 +3532,6 @@
 						<onclick>Skin.Reset(EditTVShowsSubMenuBtn7)</onclick>
 						<onclick>Dialog.Close(3074)</onclick>
 					</control>	
-				<!--
-					<control type ="label">
-						<width>215</width>
-						<height>50</height>
-						<font>PluginSettingsFoot</font>
-						<textcolor>AAFFFFFF</textcolor>
-						<label>$LOCALIZE[503]</label>
-						<visible>Window.IsActive(138)</visible>
-					</control>
-				--->	
 				</control>
 			</control>
 		</control>

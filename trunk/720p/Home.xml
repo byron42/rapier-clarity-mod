@@ -23,7 +23,6 @@
 					<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
-					
 				</control>
 			</control>
 			<control type="group"> <!--***** UNIVERSAL CUSTOM BG **************************-->
@@ -426,18 +425,6 @@
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 				
-				<!--******************************* DialogPopUpScreenDim ******************************-->
-				<control type="image">
-					<!--ScreenSize-->
-					<width>1300</width>
-					<height>675</height>
-					<posx></posx>
-					<posy>44</posy>
-					<!--ScreenSize-->
-					<!--<texture border="10,10,10,10">special://skin/images/skin/extras/HomeScreenDim.png</texture>-->
-					<colordiffuse></colordiffuse>
-				</control>
-				<!--***********************************************************************************-->
 			</control>
 
 	<!--(((Recently Added)))=================================================================================================================-->
@@ -1316,7 +1303,7 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<!--************************************ CUSTOM ICONS **************************************-->
+				<!--*********************************** CUSTOM ICONS **************************************-->
 				<control type="image"> <!--custom1-->
 					<description>Custom1 Icon</description>
 					<width>256</width>
@@ -1477,7 +1464,7 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<!--****************************************************************************************-->
+				<!--*********************************************************************************-->
 			</control>
 	
 			<control type="group">	<!--SUBMENU IMAGE-->
@@ -1579,8 +1566,6 @@
 					<animation effect="slide" start="0,0" end="0,-3" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" end="0,11" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<!--no category sub slide-->
-					<!--<animation effect="slide" end="0,-10" time="0" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Container(850).HasFocus(2) | Container(850).HasFocus(9)]">Conditional</animation>-->
 					<description>Home Menu</description>
 					<posx>15</posx>
 					<posy>27</posy>
@@ -1597,22 +1582,10 @@
 					<!--HomeMenuOpenCloseAnim-->
 					<animation effect="fade" end="100" time="650">WindowOpen</animation> 
 					<animation effect="fade" end="0" time="650">WindowClose</animation>
-			
 					<!--HomeMenuFocusAnim-->
 					<animation effect="fade" start="30" end="100" time="650">Focus</animation>
 					<animation effect="fade" start="100" end="30" time="650">Unfocus</animation>
-				
 					<itemlayout width="400">
-					<!--
-						<control type="image">
-							<width>350</width>
-							<height>64</height>
-							<posx>0</posx>
-							<posy>0</posy>
-							<texture>special://skin/images/skin/default-background-blue-center.jpg</texture>
-							<colordiffuse>bbbbbbbb</colordiffuse>
-						</control>
-					-->
 						<control type="label">
 							<posx>175</posx>
 							<posy>0</posy>
@@ -1643,16 +1616,6 @@
 						</control>
 					</itemlayout>	
 					<focusedlayout width="500">
-					<!--	
-						<control type="image">
-							<width>534</width>
-							<height>64</height>
-							<posx>-42</posx>
-							<posy>0</posy>
-							<texture>special://skin/images/skin/default-background-blue-center.jpg</texture>
-							<colordiffuse>bbbbbbbb</colordiffuse>
-						</control>
-					-->
 						<control type="label">
 							<Description>Home Menu Bar Focus</Description>
 							<posx>226</posx>
@@ -1669,7 +1632,6 @@
 							<!--HomeMenuCategoryFocusAnim-->
 							<animation effect="zoom" delay="140" start="75" end="100" center="250,32" time="150">Focus</animation>
 							<animation effect="zoom" start="100" end="75" center="250,32" time="90">Unfocus</animation>
-							<!--HomeMenuCategoryFocusAnim-->
 						</control>
 						<control type="label">
 							<Description>Home Menu Bar Focus</Description>
@@ -1687,11 +1649,9 @@
 							<!--HomeMenuCategoryFocusAnim-->
 							<animation effect="zoom" delay="140" start="75" end="100" center="250,32" time="150">Focus</animation>
 							<animation effect="zoom" start="100" end="75" center="250,32" time="90">Unfocus</animation>
-							<!--HomeMenuCategoryFocusAnim-->
 							<visible>!IsEmpty(Skin.String(Custom1BtnParam)) | !IsEmpty(Skin.String(Custom2BtnParam)) | !IsEmpty(Skin.String(Custom3BtnParam)) | !IsEmpty(Skin.String(Custom4BtnParam))
 							| !IsEmpty(Skin.String(Custom5BtnParam)) | !IsEmpty(Skin.String(Custom6BtnParam)) | !IsEmpty(Skin.String(Custom7BtnParam)) | !IsEmpty(Skin.String(Custom8BtnParam))</visible>
 						</control>
-					<!--**************************************** CUSTOM HOME CATS FOCUS ****************************************-->		
 					</focusedlayout>
 					<content>				
 						<item id="4">
@@ -1808,7 +1768,7 @@
 							<visible>Skin.HasSetting(HideSearchCategory)</visible>
 						</item>
 						-->
-					<!--************************************* (((CustomHomeCatsNo_Focus/Focus) ********************************-->	
+					<!--CUSTOM ITEMS-->	
 						<item id="12"> <!--CUSTOM_HOME_MENU_CAT_1-->
 							<description>Custom1 Category</description>
 							<label2>$INFO[Skin.String(Custom1Btn-NAME)]</label2>
@@ -1873,7 +1833,6 @@
 							<onclick>$INFO[Skin.String(Custom8BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom8BtnParam))</visible>
 						</item>
-					<!--*******************************************************************************************************-->
 					</content>			
 				</control>
 			<!--MAIN MENU END **************************************************************-->			
@@ -1927,7 +1886,6 @@
 				<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
 				<animation effect="slide" start="0,114" end="0,33" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<!--<animation effect="slide" end="0,-5" time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
 				<animation effect="fade" start="100" end="60" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<control type="group">	
@@ -1960,6 +1918,7 @@
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 						<animation effect="fade" start="100" end="0" time="50" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 						<control type="image">
 							<description>Left Submenu Arrow</description>
 							<posx>5</posx>
@@ -1994,7 +1953,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(4) + !Skin.HasSetting(ShowVideosSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2036,7 +1994,6 @@
 							</control>
 						</focusedlayout>
 						<content>
-							
 							<item id="2">
 								<description>Video Plugins</description>
 								<label>24001</label>
@@ -2052,7 +2009,7 @@
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>		
 								<visible>!Skin.HasSetting(HideVideoAddonsButton)</visible>
 							</item>
 							<item id="4">
@@ -2115,7 +2072,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn1-NAME) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2146,7 +2102,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn2-NAME) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2177,7 +2132,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn3-NAME) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -2208,7 +2162,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn4-NAME) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -2239,7 +2192,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn5-NAME) + Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -2270,7 +2222,6 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -2301,7 +2252,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn7-NAME) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 			
@@ -2317,7 +2268,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(7) + !Skin.HasSetting(ShowGeneralSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2431,7 +2381,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn1-NAME) + Skin.String(GeneralSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2462,7 +2411,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn2-NAME) + Skin.String(GeneralSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2493,7 +2441,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn3-NAME) + Skin.String(GeneralSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -2524,7 +2471,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn4-NAME) + Skin.String(GeneralSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -2555,7 +2501,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn5-NAME) + Skin.String(GeneralSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -2586,7 +2531,6 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn6-NAME) + Skin.String(GeneralSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -2617,7 +2561,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn7-NAME) + Skin.String(GeneralSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>	
 					</control>			
 			
@@ -2633,7 +2577,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(8) + !Skin.HasSetting(ShowSystemSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2687,11 +2630,10 @@
 								<onclick>ActivateWindow(3001)</onclick>	
 								<visible>!Skin.HasSetting(HideSystemSkinSettingsButton)</visible>
 							</item>
-							
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/,Return)</onclick>
 								<visible>!Skin.HasSetting(HideSystemAddonsButton)</visible>
 							</item>
 							
@@ -2722,7 +2664,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(21) + !Skin.HasSetting(ShowMusicVidsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2782,14 +2723,12 @@
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoArtists,Return)</onclick>	
 								<visible>!Skin.HasSetting(HideMusicVidsArtistButton)</visible>
 							</item>
-							
 							<item id="3">
 								<description>genres</description>
 								<label>135</label>
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoGenres,Return)</onclick>
 								<visible>!Skin.HasSetting(HideMusicVidsGenreButton)</visible>
 							</item>
-							
 							<item id="4">
 								<description>directors</description>
 								<label>20348</label>
@@ -2804,7 +2743,6 @@
 							</item>
 						</content>						
 					</control>
-					
 					
 					<control type="list" id="110"> <!--PROGRAMS ====(((1)====--> <!--(((3071)-->
 						<description>Programs Menu Bar</description>
@@ -2864,7 +2802,6 @@
 								<onclick>ActivateWindow(Programs,Plugins,return)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsPluginButton)</visible>
 							</item>
-							
 							<item id="2">
 								<description>Games</description>
 								<label>15016</label>
@@ -2931,7 +2868,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn1-NAME) + Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2962,7 +2898,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn2-NAME) + Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2993,7 +2928,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn3-NAME) + Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3024,7 +2958,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn4-NAME) + Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3055,7 +2988,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn5-NAME) + Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3086,7 +3018,6 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn6-NAME) + Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3117,7 +3048,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn7-NAME) + Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 					
@@ -3137,7 +3068,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(5) + !Skin.HasSetting(ShowMoviesSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3257,7 +3187,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn1-NAME) + Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3288,7 +3217,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn2-NAME) + Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3319,7 +3247,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn3-NAME) + Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3350,7 +3277,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn4-NAME) + Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3381,7 +3307,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn5-NAME) + Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3412,7 +3337,6 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn6-NAME) + Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3443,7 +3367,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn7-NAME) + Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>					
 				
@@ -3459,7 +3383,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(6) + !Skin.HasSetting(ShowTvShowsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3537,7 +3460,6 @@
 								<onclick>UpdateLibrary(video)</onclick>
 								<visible>!Skin.HasSetting(HideTvShowsUpdateButton)</visible>
 							</item>	
-						
 							<item id="15">
 								<description>Custom Items</description>
 								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
@@ -3580,7 +3502,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn1-NAME) + Skin.String(TVShowsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3611,7 +3532,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn2-NAME) + Skin.String(TVShowsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3642,7 +3562,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn3-NAME) + Skin.String(TVShowsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3673,7 +3592,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn4-NAME) + Skin.String(TVShowsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3704,7 +3622,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn5-NAME) + Skin.String(TVShowsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3735,7 +3652,6 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn6-NAME) + Skin.String(TVShowsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3766,7 +3682,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn7-NAME) + Skin.String(TVShowsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>
 					</control>		
 				
@@ -3782,7 +3698,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(3) + !Skin.HasSetting(ShowMusicSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3824,16 +3739,14 @@
 							</control>
 						</focusedlayout>
 						<content>
-							
-					<!--|||||||||||||||||||||||||||||||| THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! |||||||||||||||||||||||||-->
+					<!--||||| THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! ||||||||-->
 							<!--<item id="8">
 								<description>Custom</description>
 								<label>20190</label>
 								<onclick>ActivateWindow(3077)</onclick>	
 								<visible>Skin.HasSetting(ShowHomeCustomIcons)</visible>
 							</item>-->
-					<!--|||||||||||||||||||||||||||||||| THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! |||||||||||||||||||||||||-->
-					
+					<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
 							<item id="1">
 								<description>Artists</description>
 								<label>133</label>
@@ -3849,7 +3762,7 @@
 							<item id="6">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>
 								<visible>!Skin.HasSetting(HideMusicAddonsButton)</visible>
 							</item>
 							<item id="3">
@@ -3924,7 +3837,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn1-NAME) + Skin.String(MusicSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3955,7 +3867,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn2-NAME) + Skin.String(MusicSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3986,7 +3897,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn3-NAME) + Skin.String(MusicSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -4017,7 +3927,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn4-NAME) + Skin.String(MusicSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -4048,7 +3957,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn5-NAME) + Skin.String(MusicSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -4079,7 +3987,6 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn6-NAME) + Skin.String(MusicSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -4110,7 +4017,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn7-NAME) + Skin.String(MusicSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 				
@@ -4126,7 +4033,6 @@
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
-						<!--HomeSubMenuOpenCloseAnim-->
 						<visible>Container(850).HasFocus(11) + !Skin.HasSetting(ShowAddonsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -4171,25 +4077,25 @@
 							<item id="1">
 								<description>VIDEO Add-Ons</description>
 								<label>$LOCALIZE[157]</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>		
 								<visible>!Skin.HasSetting(HideAddonsVideoButton)</visible>
 							</item>
 							<item id="2">
 								<description>MUSIC Add-Ons</description>
 								<label>$LOCALIZE[249]</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>			
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="3">
 								<description>XBMC.ORG Add-Ons</description>
 								<label>XBMC.ORG</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/,Return)</onclick>
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="5">
 								<description>LIBRARIES</description>
 								<label>.MODULES</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc4xbox/)</onclick>			
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc4xbox/,Return)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsModulesButton)</visible>
 							</item>
 							<item id="15">
@@ -4234,7 +4140,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn1-NAME) + Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
 							</item>
-						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -4265,7 +4170,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn2-NAME) + Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
 							</item>
-						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -4296,7 +4200,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn3-NAME) + Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
 							</item>
-						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -4327,7 +4230,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn4-NAME) + Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
 							</item>
-						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -4358,7 +4260,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn5-NAME) + Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
 							</item>
-						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -4389,7 +4290,6 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn6-NAME) + Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
 							</item>
-						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -4420,7 +4320,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn7-NAME) + Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
 							</item>
-						<!--Button7 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>
 					</control>	
 				</control>	

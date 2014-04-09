@@ -1,7 +1,7 @@
 <window id="109">
 	<defaultcontrol always="true">21</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<!-- DialogOpenCloseAnim -->
+	<!--DialogOpenCloseAnim-->
 	<animation type="WindowOpen" reversible="false">
 		<effect type="zoom" start="70" end="100" center="640,360" easing="out" tween="back" time="400" />
 		<effect type="fade" start="0" end="100" time="300" />
@@ -17,8 +17,8 @@
 	<controls>	
 		<control type="group">
 			<posy>56</posy>
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog) ">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) ">Conditional</animation>
 		
 			<!--************************************ GamepadDialogBox *******************************************-->
 			<control type="image">
@@ -85,19 +85,17 @@
 					<posx>-6</posx>
 					<posy>50</posy>
 					<width>240</width>
-				<!-- ROW 1 -->	
+				<!--ROW 1-->	
 					<control type="grouplist">
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
 						<control type="button" id="11">
 							<description>'1' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12311]</label>
 							<onup>-</onup>
 							<ondown>14</ondown>
@@ -109,13 +107,11 @@
 						</control>
 						<control type="button" id="12">
 							<description>'2' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12312]</label>
 							<onup>-</onup>
 							<ondown>15</ondown>
@@ -127,13 +123,11 @@
 						</control>
 						<control type="button" id="13">
 							<description>'3' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12313]</label>
 							<onup>-</onup>
 							<ondown>16</ondown>
@@ -146,12 +140,10 @@
 						<control type="button" id="23">
 							<description>Clear Key</description>
 							<height>104</height>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<font>ButtonFont</font>
 							<label>C</label>
 							<onup>-</onup>
@@ -163,7 +155,7 @@
 							<animation effect="zoom" start="105" center="auto" time="100">unfocus</animation>
 						</control>
 					</control>
-				<!-- ROW 2 -->	
+				<!--ROW 2-->	
 					<control type="grouplist">
 						<posy>56</posy>
 						<onright>23</onright>
@@ -172,13 +164,11 @@
 						<itemgap>10</itemgap>
 						<control type="button" id="14">
 							<description>'4' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12314]</label>
 							<onup>11</onup>
 							<ondown>17</ondown>
@@ -190,13 +180,11 @@
 						</control>
 						<control type="button" id="15">
 							<description>'5' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12315]</label>
 							<onup>12</onup>
 							<ondown>18</ondown>
@@ -208,13 +196,11 @@
 						</control>
 						<control type="button" id="16">
 							<description>'6' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12316]</label>
 							<onup>13</onup>
 							<ondown>19</ondown>
@@ -225,21 +211,18 @@
 							<animation effect="zoom" start="105" center="auto" time="100">unfocus</animation>
 						</control>
 					</control>
-				
-				<!-- ROW 3 -->		
+				<!--ROW 3-->		
 					<control type="grouplist">
 						<posy>111</posy>
 						<orientation>horizontal</orientation>
 						<itemgap>10</itemgap>
 						<control type="button" id="17">
 							<description>'7' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12317]</label>
 							<onup>14</onup>
 							<ondown>20</ondown>
@@ -251,13 +234,11 @@
 						</control>
 						<control type="button" id="18">
 							<description>'8' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12318]</label>
 							<onup>15</onup>
 							<ondown>10</ondown>
@@ -269,13 +250,11 @@
 						</control>
 						<control type="button" id="19">
 							<description>'9' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12319]</label>
 							<onup>16</onup>
 							<ondown>22</ondown>
@@ -290,12 +269,10 @@
 							<posx>160</posx>
 							<posy>103</posy>
 							<height>105</height>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<font>ButtonFont</font>
 							<label>E</label>
 							<onup>23</onup>
@@ -307,8 +284,7 @@
 							<animation effect="zoom" start="105" center="auto" time="100">unfocus</animation>
 						</control>
 					</control>
-				
-				<!-- ROW 4 -->		
+				<!--ROW 4-->		
 					<control type="grouplist">
 						<onright>21</onright>
 						<onleft>21</onleft>
@@ -317,13 +293,11 @@
 						<itemgap>10</itemgap>
 						<control type="button" id="20">
 							<description>Previous Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>&lt;&lt;</label>
 							<onup>17</onup>
 							<ondown>-</ondown>
@@ -335,13 +309,11 @@
 						</control>
 						<control type="button" id="10">
 							<description>'0' Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>$LOCALIZE[12310]</label>
 							<onup>18</onup>
 							<ondown>-</ondown>
@@ -353,13 +325,11 @@
 						</control>
 						<control type="button" id="22">
 							<description>Next Key</description>
-							<!---------- KeyboardSmallBtn ---------->
 							<width>48</width>
 							<height>48</height>
 							<font>font13</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<!---------- KeyboardSmallBtn ---------->
 							<label>&gt;&gt;</label>
 							<onup>19</onup>
 							<ondown>-</ondown>

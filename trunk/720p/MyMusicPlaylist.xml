@@ -4,15 +4,15 @@
 	<views>50,51,52</views>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(2003)">Conditional</animation> <!--FSD_ControlFade-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(2003)">Conditional</animation> <!--FSD_ControlFade-->
 			
 	<!--(((BACKGROUNDS)))=============================================================================================================================-->			
 			<control type="group">	
-				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
+				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
 							<posx>0</posx>
@@ -26,7 +26,7 @@
 							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
 						</control>
 					</control>
-				<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
+				<control type="group"> <!--UNIVERSAL CUSTOM BG-->
 					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 					<control type="image">
 						<posx>0</posx>
@@ -56,7 +56,7 @@
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<randomize>true</randomize>
 						<visible>Skin.HasSetting(ApplyAllMusicCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-						<!-- BackgroundMusicDimAnim -->
+						<!--BackgroundMusicDimAnim-->
 						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
 					</control>
 					<control type="image">
@@ -68,7 +68,7 @@
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<visible>!Skin.HasSetting(ApplyAllMusicCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-						<!-- BackgroundMusicDimAnim -->
+						<!--BackgroundMusicDimAnim-->
 						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
 					</control>
 				</control>
@@ -88,7 +88,7 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!-- BackgroundVizDimAnim -->
+						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>
 				</control>
@@ -108,15 +108,15 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!-- BackgroundVizDimAnim -->
+						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>	
 				</control>
 				<!--*****************************************************************************************************--> 
 				
-				<!-- BackgroundDimAnim -->
+				<!--BackgroundDimAnim-->
 				<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
-				<!-- BackgroundOpenCloseAnim -->
+				<!--BackgroundOpenCloseAnim-->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 			</control>
@@ -126,20 +126,21 @@
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)]">Conditional</animation>
 				
-				<!------------------------------------------------------------------------------- IconView ---------------------(50)------------>
+				<!--**************************************************************************** IconView *********************(50)*********-->
+				
 				<control type="group" id="500">	
 				<!--constant top menubar animations-->
 					<animation effect="zoom" end="94" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
-					<animation effect="slide" end="20,16"  time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
-					<animation effect="slide" end="20,18"  time="0" condition="!Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="20,16" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="20,18" time="0" condition="!Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
 					<defaultcontrol always="true">50</defaultcontrol>
 					<visible>Control.IsVisible(50)</visible>	
-					<!-- MediaViewOpenCloseAnim -->
+					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!-- InfoPaneHiddenSlideAnim -->
+					<!--InfoPaneHiddenSlideAnim-->
 					<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<control type="scrollbar" id="150">
 						<description>IconViewScrollbar</description>
@@ -163,7 +164,7 @@
 						<onright>150</onright>
 						<itemlayout height="207" width="228" >	
 						<!--Thumbs-->	
-							<control type="image"> <!--------- Infopane -->
+							<control type="image"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<description>Cover</description>
 								<posx>25</posx>
@@ -176,7 +177,7 @@
 								<bordersize>6</bordersize>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image"> <!------- NoInfopane -->
+							<control type="image"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<description>Cover</description>
 								<posx>25</posx>
@@ -190,7 +191,7 @@
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Icons-->
-							<control type="image"> <!--------- Infopane -->
+							<control type="image"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<description>Default Cover</description>
 								<posx>40</posx>
@@ -204,7 +205,7 @@
 								<colordiffuse>BBFFFFFF</colordiffuse>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image"> <!------- NoInfopane -->
+							<control type="image"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<description>Default Cover</description>
 								<posx>50</posx>
@@ -219,7 +220,7 @@
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Labels-->	
-							<control type="label"> <!--------- Infopane -->
+							<control type="label"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<posx>98</posx>
 								<posy>202</posy>
@@ -232,7 +233,7 @@
 								<aligny>top</aligny>
 								<info>ListItem.Label</info>
 							</control>
-							<control type="label"> <!------- NoInfopane -->
+							<control type="label"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<posx>116</posx>
 								<posy>174</posy>
@@ -249,7 +250,7 @@
 						</itemlayout>															
 						<focusedlayout height="211" width="234">
 						<!--Focus Selector-->
-							<control type="image"> <!--------- Infopane -->
+							<control type="image"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<posx></posx>
 								<posy>60</posy>
@@ -257,7 +258,7 @@
 								<height>179</height>
 								<texture border="10">Glass/keyfocus.png</texture>
 							</control>
-							<control type="image"> <!------- NoInfopane -->
+							<control type="image"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<posx>2</posx>
 								<posy>13</posy>
@@ -268,7 +269,7 @@
 								<animation effect="zoom" start="107" center="auto" time="0">unfocus</animation>
 							</control>	
 						<!--Thumbs-->	
-							<control type="image"> <!--------- Infopane -->
+							<control type="image"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<description>Cover</description>
 								<posx>27</posx>
@@ -283,7 +284,7 @@
 								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image"> <!------- NoInfopane -->
+							<control type="image"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<description>Cover</description>
 								<posx>25</posx>
@@ -299,7 +300,7 @@
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Icons-->
-							<control type="image"> <!--------- Infopane -->
+							<control type="image"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<description>Default Cover</description>
 								<posx>43</posx>
@@ -312,7 +313,7 @@
 								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
-							<control type="image"> <!------- NoInfopane -->
+							<control type="image"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<description>Default Cover</description>
 								<posx>50</posx>
@@ -326,7 +327,7 @@
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Labels-->	
-							<control type="label"> <!--------- Infopane -->
+							<control type="label"> <!--Infopane-->
 								<visible>Skin.HasSetting(HideInfoPane)</visible>
 								<posx>103</posx>
 								<posy>204</posy>
@@ -341,7 +342,7 @@
 								<animation effect="zoom" start="103" center="auto" time="0">unfocus</animation>
 								<info>ListItem.Label</info>
 							</control>
-							<control type="label"> <!------- NoInfopane -->
+							<control type="label"> <!--NoInfopane-->
 								<visible>!Skin.HasSetting(HideInfoPane)</visible>
 								<posx>124</posx>
 								<posy>184</posy>
@@ -369,15 +370,15 @@
 						<texturenofocus>-</texturenofocus>	
 						<visible>Control.IsVisible(50)</visible>
 					</control>
-					<!-- ViewsScreenFullFadeAnim -->
+					<!--ViewsScreenFullFadeAnim-->
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>
 				
-				<!------------------------------------------------------------------------------ BigIconView -------------------(51)------------>
+				<!--*************************************************************************** BigIconView ****************** (51) ********-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">51</defaultcontrol>
 					<visible>Control.IsVisible(51)</visible>	
-					<!-- MediaViewOpenCloseAnim -->
+					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -413,7 +414,7 @@
 								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 								<bordersize>9</bordersize>
-								<colordiffuse>ffAFAFAF</colordiffuse> <!-- slight dimming -->
+								<colordiffuse>ffAFAFAF</colordiffuse> <!--slight dimming-->
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<control type="image">
@@ -454,7 +455,7 @@
 								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
 								<bordersize>10</bordersize>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
-								<!-- AlbumThumbViewItemFocusAnim -->
+								<!--AlbumThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 								<pulseonselect>true</pulseonselect>
@@ -468,7 +469,7 @@
 								<texture background="true" border="10">Glass/SPE_Button.png</texture>
 								<colordiffuse>BBFFFFFF</colordiffuse>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
-								<!-- MoviesThumbViewItemFocusAnim -->
+								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 								<pulseonselect>true</pulseonselect>
@@ -481,7 +482,7 @@
 								<height>150</height>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
-								<!-- MoviesThumbViewItemFocusAnim -->
+								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
 								<pulseonselect>true</pulseonselect>
@@ -511,33 +512,33 @@
 						<texturenofocus>-</texturenofocus>	
 						<visible>Control.IsVisible(51)</visible>
 					</control>
-					<!-- ViewsScreenFullFadeAnim -->
+					<!--ViewsScreenFullFadeAnim-->
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>	
 				
-				<!------------------------------------------------------------------------------- ListView ---------------------(52)------------>
+				<!--**************************************************************************** ListView ******************** (52) ********-->
 				<control type="group" id="500">			    
 					<defaultcontrol always="true">52</defaultcontrol>
 					<visible>Control.IsVisible(52)</visible>
-					<!-- MediaViewOpenCloseAnim -->
+					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!---------------------------------------------------------------------------------------------------->
+					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="image">
-						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
+						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
 					</control>
 					<control type="image">
-						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
 					</control>
-					<!---------------------------------------------------------------------------------------------------->
+					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="scrollbar" id="150">
 						<description>ListViewScrollbar</description>
 						<posx>1240</posx>
@@ -548,7 +549,7 @@
 					</control>
 					<!--***************************** (ZOOM list with several options) ********************************-->
 					<control type="list" id="52">	
-						<!-- InfoPaneHiddenSlideAnim2 -->
+						<!--InfoPaneHiddenSlideAnim2-->
 						<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 						<viewtype label="31105">List</viewtype>
 						<posx>550</posx>
@@ -570,7 +571,7 @@
 								<width>630</width>
 								<height>40</height>	
 								<texture border="10">ListViewItemBack.png</texture>
-								<!-- ListViewItemBackgroundFadeAnim -->
+								<!--ListViewItemBackgroundFadeAnim-->
 								<animation effect="fade" end="65" condition="true">Conditional</animation>
 								<visible>Skin.HasSetting(ListViewHideSmallIcons)</visible>
 							</control>
@@ -580,7 +581,7 @@
 								<width>665</width>
 								<height>40</height>	
 								<texture border="10">ListViewItemBack.png</texture>
-								<!-- ListViewItemBackgroundFadeAnim -->
+								<!--ListViewItemBackgroundFadeAnim-->
 								<animation effect="fade" end="80" condition="true">Conditional</animation>
 								<visible>!Skin.HasSetting(ListViewHideSmallIcons)</visible>
 							</control>	
@@ -621,7 +622,7 @@
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>Skin.HasSetting(ListViewHideStars) + IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 							<control type="label">
 								<posx>47</posx>
@@ -638,7 +639,7 @@
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>!Skin.HasSetting(ListViewHideStars) | !IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--LABEL_2-->	
 							<control type="label">
@@ -655,10 +656,10 @@
 								<textcolor>AADCDCDC</textcolor><!--<textcolor>ListLabel2UnfocusedColor</textcolor>-->
 								<shadowcolor>ShadowColor</shadowcolor>			
 								<label>$INFO[ListItem.Label2]</label>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--STAR_RATING-->	
-							<control type="image"> <!---ItemLayout--->
+							<control type="image"> <!--ItemLayout-->
 								<description>IMDB rating</description>
 								<posx>602</posx>
 								<posy>14</posy>
@@ -667,7 +668,7 @@
 								<info>ListItem.StarRating</info>						
 								<colordiffuse>ThemeColor</colordiffuse>	
 								<visible>!Skin.HasSetting(ListViewHideStars) + IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--VIEWED-->
 							<control type="image">
@@ -677,7 +678,7 @@
 								<width>23</width>
 								<height>23</height>
 								<info>ListItem.Overlay</info>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						</itemlayout>		
 						<focusedlayout height="38">	
@@ -752,7 +753,7 @@
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>Skin.HasSetting(ListViewHideStars) + IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 							<control type="label">
 								<posx>47</posx>
@@ -766,7 +767,7 @@
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<visible>!Skin.HasSetting(ListViewHideStars) | !IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--LABEL_2-->
 							<control type="label">
@@ -783,10 +784,10 @@
 								<align>right</align>
 								<aligny>top</aligny>				
 								<label>$INFO[ListItem.Label2]</label>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--STAR_RATING-->
-							<control type="image"> <!---FocusedLayout--->
+							<control type="image"> <!--FocusedLayout-->
 								<description>IMDB rating</description>
 								<posx>595</posx>
 								<posy>11</posy>
@@ -795,7 +796,7 @@
 								<info>ListItem.StarRating</info>						
 								<colordiffuse>ThemeColor</colordiffuse>
 								<visible>!Skin.HasSetting(ListViewHideStars) + IsEmpty(ListItem.Label2)</visible>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						<!--VIEWED-->
 							<control type="image">
@@ -805,7 +806,7 @@
 								<width>28</width>
 								<height>28</height>
 								<info>ListItem.Overlay</info>
-								<animation effect="slide" end="-35,0"  condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						</focusedlayout>		
 					</control>
@@ -818,9 +819,9 @@
 						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
 						+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
 						<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
-						<!-- SmallIcons -->
+						<!--SmallIcons-->
 						<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
-						<!-- InfoPaneHiddenSlideAnim2 -->
+						<!--InfoPaneHiddenSlideAnim2-->
 						<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 						<control type="image">
 							<description>Cover</description>
@@ -869,14 +870,14 @@
 						<onfocus>ActivateWindow(3017)</onfocus>
 						<texturefocus>-</texturefocus>
 						<texturenofocus>-</texturenofocus>	
-						<!-- ViewOptionsHelperBtn -->
+						<!--ViewOptionsHelperBtn-->
 						<visible>Control.IsVisible(52)</visible>
 					</control>
-					<!-- ViewsScreenFullFadeAnim -->
+					<!--ViewsScreenFullFadeAnim-->
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>		
 				
-				<!-- ViewsScreenFullFadeAnim -->
+				<!--ViewsScreenFullFadeAnim-->
 				<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 			</control>	
 			
@@ -885,7 +886,7 @@
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)]">Conditional</animation>
 			<!--fade out for sub menu-->
-				<animation effect="fade"  start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>	
 				<height>34</height>
 				<posy>44</posy>
@@ -900,7 +901,7 @@
 				</control>
 				<!--********************************************* DefaultMenuBar ************************************************************-->
 				<control type="group" id="850">
-					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
+					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<visible>!Skin.HasSetting(KioskMode)</visible>
 					<onup>600</onup>
 					<onleft>600</onleft>
@@ -926,7 +927,7 @@
 					</control>
 					<control type="button" id="184">
 						<description>View Mode Options</description>
-						<visible>!Control.IsVisible(77)</visible>  <!-- Hide for viewtypes with no options -->
+						<visible>!Control.IsVisible(77)</visible>  <!--Hide for viewtypes with no options-->
 						<posx>40</posx>
 						<posy>3</posy>
 						<width>23</width>
@@ -1044,7 +1045,7 @@
 							<control type="button" id="3">
 								<visible>false</visible>
 							</control>
-							<!-- MenuBarOptionsSwitchAnim -->
+							<!--MenuBarOptionsSwitchAnim-->
 							<animation effect="slide" start="0,-35" time="350">Visible</animation>
 							<animation effect="slide" end="0,-35" time="350">Hidden</animation>
 							<visible>!Skin.HasSetting(ShowMediaExtraOptions)</visible>
@@ -1092,7 +1093,7 @@
 									<label>[UPPERCASE]$LOCALIZE[191][/UPPERCASE]</label>
 									<onclick>PlayerControl(Random)</onclick>
 									<onright>26</onright>
-									<animation effect="fade"  start="100" end="50" time="250" condition="!Control.IsEnabled(20)">Conditional</animation>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(20)">Conditional</animation>
 								</control>
 								<control type="image" id="109">
 									<description>MenuBarSeparator</description>
@@ -1120,7 +1121,7 @@
 									<onclick>PlayerControl(Repeat)</onclick>
 									<onleft>405</onleft>
 									<onright>21</onright>
-									<animation effect="fade"  start="100" end="50" time="250" condition="!Control.IsEnabled(26)">Conditional</animation>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(26)">Conditional</animation>
 								</control>
 								<control type="image" id="110">
 									<description>MenuBarSeparator</description>
@@ -1147,7 +1148,7 @@
 									<label>[UPPERCASE]$LOCALIZE[190][/UPPERCASE]</label>
 									<onleft>26</onleft>
 									<onright>22</onright>
-									<animation effect="fade"  start="100" end="50" time="250" condition="!Control.IsEnabled(21)">Conditional</animation>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(21)">Conditional</animation>
 								</control>
 								<control type="image" id="111">
 									<description>MenuBarSeparator</description>
@@ -1173,7 +1174,7 @@
 									<texturenofocus>-</texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[192][/UPPERCASE]</label>
 									<onleft>21</onleft>
-									<animation effect="fade"  start="100" end="50" time="250" condition="!Control.IsEnabled(22)">Conditional</animation>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(22)">Conditional</animation>
 								</control>
 								<control type="image" id="112">
 									<description>MenuBarSeparator</description>
@@ -1182,7 +1183,7 @@
 									<texture>menu-bar-separator.png</texture><!---->
 								</control>
 							</control>
-							<!-- MenuBarOptionsSwitchAnim -->
+							<!--MenuBarOptionsSwitchAnim-->
 							<animation effect="slide" start="0,-35" time="350">Visible</animation>
 							<animation effect="slide" end="0,-35" time="350">Hidden</animation>
 							<visible>Skin.HasSetting(ShowMediaExtraOptions)</visible>
@@ -1191,9 +1192,9 @@
 				</control>
 				<!--*************************************************************************************************************************-->
 				
-				<!-- MenuBarOpenCloseAnim -->
+				<!--MenuBarOpenCloseAnim-->
 				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
-				<!-- <animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation> -->
+				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
 				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
 					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
 					<effect type="fade" start="100" end="0" time="1" delay="200"/>
@@ -1210,7 +1211,7 @@
 						<width>ScreenWidth</width>
 						<height>53</height>
 						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
 					</control>
 					
 					<control type="image" id="1110">
@@ -1239,10 +1240,10 @@
 						<width>70</width>
 						<height>44</height> <!--BC HOME-->
 						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 					</control>	
 				 <!--home icon-->
-					<control type="button"  id="837">
+					<control type="button" id="837">
 						<posx>10</posx>
 						<posy>6</posy>
 						<width>31</width>
@@ -1277,7 +1278,7 @@
 					<posy>4</posy>
 					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
 					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
-					<!-- WeatherNotificationOpenCloseAnim -->
+					<!--WeatherNotificationOpenCloseAnim-->
 					<animation effect="fade" end="100" time="200">Visible</animation>
 					<animation effect="fade" end="0" time="200">Hidden</animation> 
 					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
@@ -1287,7 +1288,7 @@
 						<height>35</height>
 						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<onclick>ActivateWindow(MyWeather)</onclick>
 						<ondown>850</ondown>
 						<onright>346</onright>
@@ -1305,7 +1306,7 @@
 						<width>55</width>
 						<height>35</height>
 						<font>VolumeFont</font>
-						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[Weather.Temperature]</label>
@@ -1330,16 +1331,16 @@
 					<posx>780</posx>
 					<posy>4</posy>
 					<visible>Player.HasMedia</visible>
-					<!-- MediaPlayingNotificationOpenCloseAnim -->
+					<!--MediaPlayingNotificationOpenCloseAnim-->
 					<animation effect="fade" end="100" time="200">Visible</animation>
 					<animation effect="fade" end="0" time="200">Hidden</animation>
-					<!-- MediaPlayingNotificationShiftAnim3 -->
+					<!--MediaPlayingNotificationShiftAnim3-->
 					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
 					<control type="image">
 						<width>270</width>
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -1348,7 +1349,7 @@
 						<height>25</height>
 						<texture>defaultaudio.png</texture>
 						<visible>Player.HasAudio</visible>
-						<!-- MediaPlayingPulseAnim -->
+						<!--MediaPlayingPulseAnim-->
 						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
@@ -1358,7 +1359,7 @@
 						<height>25</height>
 						<texture>defaultvideo.png</texture>
 						<visible>Player.HasVideo</visible>
-						<!-- MediaPlayingPulseAnim -->
+						<!--MediaPlayingPulseAnim-->
 						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 					</control>
 					<control type="group">
@@ -1375,7 +1376,7 @@
 							<height>15</height>
 							<scrollout>false</scrollout>
 							<font>ScanContentFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<pauseatend>4000</pauseatend>
@@ -1392,7 +1393,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont2</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
@@ -1411,7 +1412,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
@@ -1476,7 +1477,7 @@
 					<height>14</height>
 					<texture>bottom-bar-top.png</texture>
 					<visible>!Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</visible>
-					<!-- BottomPaneTopHighlightFadeAnim -->
+					<!--BottomPaneTopHighlightFadeAnim-->
 					<animation effect="fade" end="15" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -1484,7 +1485,7 @@
 					<width>ScreenWidth</width>
 					<height>74</height>
 					<texture border="0,10,0,0">bottom-bar-background.png</texture>
-					<!-- BottomPaneFadeAnim -->
+					<!--BottomPaneFadeAnim-->
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -1493,16 +1494,16 @@
 					<width>ScreenWidth</width>
 					<height>74</height>
 					<texture>bottom-bar-overlay.png</texture>
-					<!-- BottomPaneOverlayFadeAnim -->
+					<!--BottomPaneOverlayFadeAnim-->
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
-					<!-- BottomPaneOverlayFadeAnim -->
+					<!--BottomPaneOverlayFadeAnim-->
 				</control>
 				<!--**************************************************************************************************************-->
 				
-				<!-- BottomPaneOpenCloseAnim -->
+				<!--BottomPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,74" time="200" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
-				<!-- InfoPaneSpecificCloseAnim -->
+				<!--InfoPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
 				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)</visible>
 				

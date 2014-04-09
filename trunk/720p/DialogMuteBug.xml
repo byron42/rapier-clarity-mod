@@ -17,7 +17,7 @@
 				<width>125</width>
 				<height>35</height>
 				<texture border="8">SystemTray/top-bar-status-background.png</texture>
-				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 			</control>
 			<control type="image">
 				<posx>8</posx>
@@ -25,7 +25,7 @@
 				<width>31</width>
 				<height>31</height>
 				<texture>volume-mute.png</texture>
-				<!-- TopBarStatusIconFadeAnim -->
+				<!--TopBarStatusIconFadeAnim-->
 				<animation effect="fade" end="50" condition="true">conditional</animation>
 			</control>
 			<control type="label">
@@ -33,7 +33,7 @@
 				<width>80</width>
 				<height>35</height>
 				<font>VolumeFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>$INFO[Player.Volume]</label>

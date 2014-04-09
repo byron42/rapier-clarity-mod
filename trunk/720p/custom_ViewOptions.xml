@@ -3,10 +3,10 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 		<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!--******************************** FullControlAreaBackground *******************************-->
 			<control type="image">
 				<posx>-10</posx>
@@ -15,16 +15,16 @@
 				<height>750</height>		
 				<texture>black.png</texture>
 				<colordiffuse></colordiffuse>
-				<!-- MediaViewOpenCloseAnim -->
+				<!--MediaViewOpenCloseAnim-->
 				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
 				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
 				<aspectratio>scale</aspectratio>
-				<!-- MediaViewOpenCloseAnim -->
+				<!--MediaViewOpenCloseAnim-->
 			</control>
 			<!--******************************************************************************************-->
 	
 	<!--(((MUSIC)))==========================================================================================================-->
-			<control type="grouplist" id="900"> <!-- 1032 -->
+			<control type="grouplist" id="900"> <!--1032-->
 				<description>Music View Options Menu</description>
 				<posx>35</posx>
 				<posy>75</posy>
@@ -36,7 +36,7 @@
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
 				<visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -45,7 +45,7 @@
 					<effect type="fade" end="0" time="150"/>
 				</animation>
 				<control type="image">
-					<!-- MenuBarItemViewOptionsTopBorder -->
+					<!--MenuBarItemViewOptionsTopBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
@@ -188,7 +188,7 @@
 					<onclick>Skin.ToggleSetting(HideMusicWideSlimListFanart)</onclick>
 					<visible>Skin.String(CurrentViewMode,78) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
 				</control>
-				<!-- <control type="radiobutton" id="1006">
+				<!--<control type="radiobutton" id="1006">
 					<description>List Info 2 Use List Style 1 (Albums)</description>
 					<width>450</width>
 					<height>38</height>
@@ -262,7 +262,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Container.SetViewMode(67)</onclick>
 					<visible>Skin.String(CurrentViewMode,67) + Container.Content(Albums)</visible>
-				</control> -->
+				</control>-->
 				<control type="radiobutton" id="1009">
 					<description>List Info 2 Hide Description (Albums)</description>
 					<width>450</width>
@@ -922,16 +922,16 @@
 					<visible>Skin.String(CurrentViewMode,64)</visible>
 				</control>
 				<control type="image">
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 				</control>
 			</control>	
 	
 	<!--(((VIDEO)))==========================================================================================================-->	
-			<control type="grouplist" id="900"> <!-- 2067 -->
+			<control type="grouplist" id="900"> <!--2067-->
 				<description>Videos View Options Menu</description>
 				<posx>35</posx>
 				<posy>75</posy>
@@ -943,7 +943,7 @@
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
 				<visible>Window.IsActive(VideoFiles) | Window.IsActive(VideoLibrary)</visible>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -952,7 +952,7 @@
 					<effect type="fade" end="0" time="150"/>
 				</animation>
 				<control type="image">
-					<!-- MenuBarItemViewOptionsTopBorder -->
+					<!--MenuBarItemViewOptionsTopBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
@@ -1384,7 +1384,7 @@
 					<onclick>Skin.ToggleSetting(HideMoviesListInfoFanart)</onclick>
 					<visible>Skin.String(CurrentViewMode,58) + Container.Content(Movies)</visible>
 				</control>
-				<!-- <control type="radiobutton" id="2010">
+				<!--<control type="radiobutton" id="2010">
 					<description>List Info 2 Use List Style 1 (Movies)</description>
 					<width>450</width>
 					<height>38</height>
@@ -1483,7 +1483,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Container.SetViewMode(76)</onclick>
 					<visible>Skin.String(CurrentViewMode,76) + Container.Content(Movies)</visible>
-				</control> -->
+				</control>-->
 				<control type="radiobutton" id="2013">
 					<description>List Info 2 Hide Plot (Movies)</description>
 					<width>450</width>
@@ -1606,7 +1606,7 @@
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
 				</control>-->
 	<!--oooooooooooooooooooooooooooooooooooooooooooooo I MIGHT USE THIS oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
-				<!-- <control type="radiobutton" id="2018">
+				<!--<control type="radiobutton" id="2018">
 					<description>Wrap List Info Use Wrap Style 2 (Movies)</description>
 					<width>450</width>
 					<height>38</height>
@@ -1630,7 +1630,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
 				</control>-->
-				<!-- <control type="radiobutton" id="2019">
+				<!--<control type="radiobutton" id="2019">
 					<description>Wrap List Info Use Wrap Style 3 (Movies)</description>
 					<width>450</width>
 					<height>38</height>
@@ -1654,7 +1654,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
 				</control>-->
-				<!-- <control type="radiobutton" id="2020">
+				<!--<control type="radiobutton" id="2020">
 					<description>Wrap List Info Hide Media Info Dialog (Movies)</description>
 					<width>450</width>
 					<height>38</height>
@@ -1677,7 +1677,7 @@
 					<onclick>Skin.ToggleSetting(HideMoviesWrapListMediaInfoDialog)</onclick>
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
 				</control>-->
-				<!-- <control type="radiobutton" id="2021">
+				<!--<control type="radiobutton" id="2021">
 					<description>Wrap List Info Hide DVD Case (Movies)</description>
 					<width>450</width>
 					<height>38</height>
@@ -1699,7 +1699,7 @@
 					<selected>Skin.HasSetting(HideMoviesWrapListInfoCase)</selected>
 					<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoCase)</onclick>
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
-				</control> -->
+				</control>-->
 				<!--<control type="radiobutton" id="2022">
 					<description>Wrap List Info Hide Plot (Movies)</description>
 					<width>450</width>
@@ -1722,7 +1722,7 @@
 					<selected>Skin.HasSetting(HideMoviesWrapListInfoPlot)</selected>
 					<onclick>Skin.ToggleSetting(HideMoviesWrapListInfoPlot)</onclick>
 					<visible>Skin.String(CurrentViewMode,53) + Container.Content(Movies)</visible>
-				</control> -->
+				</control>-->
 				<!--<control type="radiobutton" id="2023">
 					<description>Wrap List Info Use Full Plot (Movies)</description>
 					<width>450</width>
@@ -2452,7 +2452,7 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,66) + Container.Content(Movies)</visible>
 				</control>
-			<!---MOVIES_FANART--->	
+			<!--MOVIES_FANART-->	
 				<control type="radiobutton" id="2029">
 					<description>Fanart Hide Overlay (Movies)</description>
 					<width>450</width>
@@ -3029,7 +3029,7 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,61) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				</control>
-				<!-- <control type="radiobutton" id="2044">
+				<!--<control type="radiobutton" id="2044">
 					<description>List Info 2 Use List Style 1 (TV Shows)</description>
 					<width>450</width>
 					<height>38</height>
@@ -3103,7 +3103,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Container.SetViewMode(79)</onclick>
 					<visible>Skin.String(CurrentViewMode,79) + Container.Content(TVShows)</visible>
-				</control> -->
+				</control>-->
 				<control type="radiobutton" id="2047">
 					<description>List Info 2 Hide Plot (TV Shows)</description>
 					<width>450</width>
@@ -3177,7 +3177,7 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,79) + Container.Content(TVShows)</visible>
 				</control>
-				<!-- <control type="radiobutton" id="2050">
+				<!--<control type="radiobutton" id="2050">
 					<description>List Info 2 Use List Style 1 (Episodes)</description>
 					<width>450</width>
 					<height>38</height>
@@ -3251,7 +3251,7 @@
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Container.SetViewMode(80)</onclick>
 					<visible>Skin.String(CurrentViewMode,80) + Container.Content(Episodes)</visible>
-				</control> -->
+				</control>-->
 				<control type="radiobutton" id="2053">
 					<description>List Info 2 Hide Plot (Episodes)</description>
 					<width>450</width>
@@ -3776,7 +3776,7 @@
 					<selected>Skin.HasSetting(NoStars)</selected>
 					<onclick>Skin.ToggleSetting(NoStars)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
-					<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) |  Skin.String(CurrentViewMode,76) |  Skin.String(CurrentViewMode,60) |  Skin.String(CurrentViewMode,62)] + Window.IsActive(VideoLibrary)</visible>
+					<visible>[Skin.String(CurrentViewMode,52) | Skin.String(CurrentViewMode,58) | Skin.String(CurrentViewMode,76) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62)] + Window.IsActive(VideoLibrary)</visible>
 				</control>
 				<control type="radiobutton" id="2058">
 					<description>Use Poster For Covers (TV Shows) (Global)</description>
@@ -3801,19 +3801,19 @@
 					<onclick>Skin.ToggleSetting(UseTVShowsPosterCover)</onclick>
 					<onclick>Dialog.Close(3017[,force])</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
-					<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,63) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,60) |  Skin.String(CurrentViewMode,62)  |  Skin.String(CurrentViewMode,65)] </visible>
+					<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,63) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,65)] </visible>
 				</control>
 				<control type="image">
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 				</control>
 			</control>
 	
 	<!--(((OTHER)))==========================================================================================================-->		
-			<control type="grouplist" id="900"> <!-- 3002 -->
+			<control type="grouplist" id="900"> <!--3002-->
 				<description>Other View Options Menu</description>
 				<posx>35</posx>
 				<posy>75</posy>
@@ -3825,7 +3825,7 @@
 				<ondown>900</ondown>
 				<orientation>vertical</orientation>
 				<visible>Window.IsActive(Programs) | Window.IsActive(Pictures) | Window.IsActive(Scripts) | Window.IsActive(VideoPlaylist) | Window.IsActive(MusicPlaylist) | Window.IsActive(134) | Window.IsActive(3080)</visible>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -3833,13 +3833,13 @@
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
 				</animation>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<control type="image">
-					<!-- MenuBarItemViewOptionsTopBorder -->
+					<!--MenuBarItemViewOptionsTopBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
-					<!-- MenuBarItemViewOptionsTopBorder -->
+					<!--MenuBarItemViewOptionsTopBorder-->
 				</control>
 				<control type="radiobutton" id="3000">
 					<description>Icon Hide Scrollbar</description>
@@ -3983,11 +3983,11 @@
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
 				<control type="image">
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
-					<!-- MenuBarItemViewOptionsBottomBorder -->
+					<!--MenuBarItemViewOptionsBottomBorder-->
 				</control>
 			</control>
 		</control>

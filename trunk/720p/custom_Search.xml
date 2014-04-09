@@ -3,10 +3,10 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 		<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!--******************************** FullControlAreaBackground *******************************-->
 			<control type="image">
 				<posx>-10</posx>
@@ -15,11 +15,11 @@
 				<height>750</height>		
 				<texture>black.png</texture>
 				<colordiffuse></colordiffuse>
-				<!-- MediaViewOpenCloseAnim -->
+				<!--MediaViewOpenCloseAnim-->
 				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
 				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
 				<aspectratio>scale</aspectratio>
-				<!-- MediaViewOpenCloseAnim -->
+				<!--MediaViewOpenCloseAnim-->
 			</control>
 			<!--******************************************************************************************-->
 			<control type="grouplist" id="200">
@@ -33,7 +33,7 @@
 				<onright>Dialog.Close(3005)</onright>
 				<orientation>vertical</orientation>
 				<visible>Window.IsActive(VideoLibrary)</visible>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -41,13 +41,13 @@
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
 				</animation>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<control type="image">
-					<!-- MenuBarItemTopBorder -->
+					<!--MenuBarItemTopBorder-->
 					<width>350</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
-					<!-- MenuBarItemTopBorder -->
+					<!--MenuBarItemTopBorder-->
 				</control>
 				<control type="button" id="1">
 					<description>Library</description>
@@ -86,11 +86,11 @@
 					<onclick>SendClick(VideoLibrary,9)</onclick>
 				</control>
 				<control type="image">
-					<!-- MenuBarItemBottomBorder -->
+					<!--MenuBarItemBottomBorder-->
 					<width>350</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>
-					<!-- MenuBarItemBottomBorder -->
+					<!--MenuBarItemBottomBorder-->
 				</control>
 			</control>
 			<control type="grouplist" id="200">
@@ -102,7 +102,7 @@
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<visible>Window.IsActive(MusicLibrary)</visible>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -110,13 +110,13 @@
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
 				</animation>
-				<!-- MenuOpenCloseAnim -->
+				<!--MenuOpenCloseAnim-->
 				<control type="image">
-					<!-- MenuBarItemTopBorder -->
+					<!--MenuBarItemTopBorder-->
 					<width>350</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
-					<!-- MenuBarItemTopBorder -->
+					<!--MenuBarItemTopBorder-->
 				</control>
 				<control type="button" id="1">
 					<description>Library</description>
@@ -155,11 +155,11 @@
 					<onclick>SendClick(MusicLibrary,17)</onclick>
 				</control>
 				<control type="image">
-					<!-- MenuBarItemBottomBorder -->
+					<!--MenuBarItemBottomBorder-->
 					<width>350</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>
-					<!-- MenuBarItemBottomBorder -->
+					<!--MenuBarItemBottomBorder-->
 				</control>
 			</control>
 		</control>

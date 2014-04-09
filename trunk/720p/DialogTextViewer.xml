@@ -1,7 +1,7 @@
 <window id="147">
 	<defaultcontrol always="true">61</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<!-- BackgroundOpenCloseAnim -->
+	<!--BackgroundOpenCloseAnim-->
 	<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 	<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 	<coordinates>
@@ -10,11 +10,11 @@
 	</coordinates>	
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<!-- ************************************** ScriptInfoDialogBox ****************************************-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--************************************** ScriptInfoDialogBox ****************************************-->
 			<control type="image">
 				<width>1200</width>
 				<height>589</height>

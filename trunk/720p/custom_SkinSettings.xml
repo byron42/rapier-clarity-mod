@@ -3,14 +3,14 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">
-				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
+				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
 							<posx>0</posx>
@@ -24,7 +24,7 @@
 							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
 						</control>
 					</control>
-				<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
+				<control type="group"> <!--UNIVERSAL CUSTOM BG-->
 					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 					<control type="image">
 						<posx>0</posx>
@@ -54,7 +54,7 @@
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<randomize>true</randomize>
-						<!-- BackgroundSystemDimAnim -->
+						<!--BackgroundSystemDimAnim-->
 						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
 					</control>
 					<control type="image">
@@ -66,7 +66,7 @@
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-						<!-- BackgroundSystemDimAnim -->
+						<!--BackgroundSystemDimAnim-->
 						<animation effect="fade" start="98" end="30" condition="!Skin.HasSetting(DimSystemCustomBG)">Conditional</animation>
 					</control>
 				</control>
@@ -86,7 +86,7 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!-- BackgroundVizDimAnim -->
+						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>
 				</control>
@@ -106,7 +106,7 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!-- BackgroundVizDimAnim -->
+						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
 					</control>	
 				</control>
@@ -114,13 +114,13 @@
 				
 				<!--******************************* FullControlAreaBackground *****************************************-->
 				<control type="group">	
-					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
+					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
 					<control type="image">
 						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
 						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
-						<!-- MediaViewOpenCloseAnim -->
+						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -128,13 +128,13 @@
 					</control>
 				</control>
 				<control type="group">	
-					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
+					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 					<control type="image">
 						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
 						<include>VariableBackgroundHeight</include>		
 						<texture>control-area-background2.png</texture>
-						<!-- MediaViewOpenCloseAnim -->
+						<!--MediaViewOpenCloseAnim-->
 						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
@@ -143,7 +143,7 @@
 				</control>
 				<!--***************************************************************************************************-->
 			
-				<!-- BackgroundOpenCloseAnim -->
+				<!--BackgroundOpenCloseAnim-->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 			</control>
@@ -163,7 +163,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(ProgramsCustomBG)</info>		
 					<visible>Control.HasFocus(102) | Control.HasFocus(103)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" delay="500" time="400" >Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" >Hidden</animation>
 				</control>
@@ -179,7 +179,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(PicturesCustomBG)</info>		
 					<visible>Control.HasFocus(108) | Control.HasFocus(109)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -195,7 +195,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(MusicCustomBG)</info>		
 					<visible>Control.HasFocus(114) | Control.HasFocus(115)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -211,7 +211,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(VideosCustomBG)</info>		
 					<visible>Control.HasFocus(120) | Control.HasFocus(121)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -227,7 +227,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(MoviesCustomBG)</info>		
 					<visible>Control.HasFocus(144) | Control.HasFocus(145)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -243,7 +243,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(TVShowsCustomBG)</info>		
 					<visible>Control.HasFocus(138) | Control.HasFocus(139)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -259,7 +259,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(GeneralCustomBG)</info>		
 					<visible>Control.HasFocus(126) | Control.HasFocus(127)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -275,7 +275,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(SystemCustomBG)</info>		
 					<visible>Control.HasFocus(132) | Control.HasFocus(133)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -292,7 +292,7 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(WeatherCustomBG)</info>		
 					<visible>Control.HasFocus(162) | Control.HasFocus(163)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
@@ -310,11 +310,11 @@
 					<aspectratio aligny="middle">stretch</aspectratio>
 					<info>Skin.String(UniversalCustomBG)</info>		
 					<visible>Control.HasFocus(1502)</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
-				<!---ADD-ONS
+				<!--ADD-ONS
 				<control type="multiimage">
 					<timeperimage>1200</timeperimage>
 					<include>BackgroundOffset</include>
@@ -328,7 +328,7 @@
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400" delay="0">Hidden</animation>
 				</control>
-				--->
+				-->
 			<!--slight dimmer,path label-->
 				<control type="group">
 					<visible>[[Control.HasFocus(102) | Control.HasFocus(103)] + !IsEmpty(Skin.String(ProgramsCustomBG))] | [[Control.HasFocus(108) | Control.HasFocus(109)] + !IsEmpty(Skin.String(PicturesCustomBG))] 
@@ -336,7 +336,7 @@
 					| [[Control.HasFocus(144) | Control.HasFocus(145)] + !IsEmpty(Skin.String(MoviesCustomBG))] | [[Control.HasFocus(138) | Control.HasFocus(139)] + !IsEmpty(Skin.String(TVShowsCustomBG))] 
 					| [[Control.HasFocus(126) | Control.HasFocus(127)] + !IsEmpty(Skin.String(GeneralCustomBG))] | [[Control.HasFocus(132) | Control.HasFocus(133)] + !IsEmpty(Skin.String(SystemCustomBG))] 
 					| [[Control.HasFocus(162) | Control.HasFocus(163)] + !IsEmpty(Skin.String(WeatherCustomBG))] | [Control.HasFocus(1502) + !IsEmpty(Skin.String(UniversalCustomBG))]</visible>
-					<!-- CustomBackgroundPreviewFadeInAnim -->
+					<!--CustomBackgroundPreviewFadeInAnim-->
 					<animation effect="fade" start="0" end="50" time="400" delay="500">Visible</animation>
 					<animation effect="fade" start="50" end="0" time="400" delay="0">Hidden</animation>
 					<control type="image">
@@ -413,35 +413,35 @@
 				| [[Control.HasFocus(126) | Control.HasFocus(127)] + !IsEmpty(Skin.String(GeneralCustomBG))] | [[Control.HasFocus(132) | Control.HasFocus(133)] + !IsEmpty(Skin.String(SystemCustomBG))] 
 				| [[Control.HasFocus(162) | Control.HasFocus(163)] + !IsEmpty(Skin.String(WeatherCustomBG))] | [Control.HasFocus(1502) + !IsEmpty(Skin.String(UniversalCustomBG))]">Conditional</animation>
 				
-				<control type="group" id="850"> <!----- CATEGORY LIST ----->
+				<control type="group" id="850"> <!--CATEGORY LIST-->
 					<description>Category Area</description>
 					<posx>65</posx>
 					<posy>111</posy>
-					<!-- ControlsOpenCloseAnim -->
+					<!--ControlsOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!-- InfoPaneHiddenSlideAnim -->
+					<!--InfoPaneHiddenSlideAnim-->
 					<animation effect="slide" end="0,20" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
-					<control type="group"> <!-- 8 TOP BAR (907) -->
+					<control type="group"> <!--8 TOP BAR =======(907)-->
 						<control type="image">
 							<posx>4</posx>
-							<posy>9</posy> <!-- -8 -->
-							<width>282</width> <!-- 265 -->
-							<height>40</height> <!-- 65 -->
+							<posy>9</posy> <!--8-->
+							<width>282</width> <!--265-->
+							<height>40</height> <!--65-->
 							<texture border="10">search-focus.png</texture>
 							<colordiffuse>BBBBFFFF</colordiffuse>
 							<visible>Control.IsVisible(907)</visible>
 						</control>
 						<control type="button" id="1">
-							<posy>4</posy> <!-- -8 -->
+							<posy>4</posy> <!--8-->
 							<description>Top Bar Area</description>
 							<width>290</width>
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
 							<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -459,7 +459,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 1 GENERAL (900) -->
+					<control type="group"> <!--1 GENERAL =======(900)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>62</posy>
@@ -476,7 +476,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -492,7 +492,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 2 HOME (901) -->
+					<control type="group"> <!--2 HOME ==========(901)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>118</posy>
@@ -509,7 +509,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -524,7 +524,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 3 MEDIA (902) -->
+					<control type="group"> <!--3 MEDIA =========(902)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>174</posy>
@@ -541,7 +541,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -557,7 +557,7 @@
 						</control>	
 					</control>	
 					
-					<control type="group"> <!-- 4 BACKGROUNDS (903) -->
+					<control type="group"> <!--4 BACKGROUNDS ===(903)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>232</posy>
@@ -574,7 +574,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -590,7 +590,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 7 WEATHER (906) -->
+					<control type="group"> <!--7 WEATHER =======(906)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>289</posy>
@@ -607,7 +607,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -623,7 +623,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 5 SCRIPTS (904) -->
+					<control type="group"> <!--5 SCRIPTS =======(904)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>346</posy>
@@ -640,7 +640,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -656,7 +656,7 @@
 						</control>
 					</control>
 					
-					<control type="group"> <!-- 6 RESET (905) -->
+					<control type="group"> <!--6 RESET =========(905)-->
 						<control type="image">
 							<posx>4</posx>
 							<posy>404</posy>
@@ -673,7 +673,7 @@
 							<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 							<height>50</height>
 							<font>SETTINGS_CATEGORY</font>
-							<textcolor>Grey</textcolor> <!-- GREY -->
+							<textcolor>Grey</textcolor> <!--GREY-->
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -690,13 +690,12 @@
 					</control>	
 				</control>
 
-				<control type="group" id="851"> <!----- OPTIONS LIST ----->
-					<!-- ControlsOpenCloseAnim -->
+				<control type="group" id="851"> <!--OPTIONS LIST-->
+					<!--ControlsOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!-- ControlsOpenCloseAnim -->
-					<!-- InfoPaneHiddenSlideAnim -->
+					<!--InfoPaneHiddenSlideAnim-->
 					<animation effect="slide" end="0,40" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<posx>0</posx>
 					<posy>-40</posy>
@@ -708,7 +707,7 @@
 					<onleft>850</onleft>
 					<onright></onright>
 					
-					<control type="grouplist" id="907">	<!-- 8 TOP BAR  -->
+					<control type="grouplist" id="907">	<!--8 TOP BAR-->
 						<description>Top Bar Content Area</description>
 						<posx>375</posx>
 						<posy>140</posy>
@@ -728,7 +727,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31522</label> <!-- BREADCRUMB -->
+							<label>31522</label> <!--BREADCRUMB-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -817,7 +816,7 @@
 							<onclick>ActivateWindow(3001)</onclick>
 							<onright>-</onright>
 							<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -847,7 +846,7 @@
 							<onclick>Skin.SetString(TopBarColor,3)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -877,7 +876,7 @@
 							<onclick>Skin.SetString(TopBarColor,4)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -961,7 +960,7 @@
 							<onclick>Skin.SetString(IconColor,2)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandIconColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -991,7 +990,7 @@
 							<onclick>Skin.SetString(IconColor,3)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandIconColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1075,7 +1074,7 @@
 							<onclick>Skin.SetString(BreadCrumbBackgroundColor,2)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbBGColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1105,7 +1104,7 @@
 							<onclick>Skin.SetString(BreadCrumbBackgroundColor,3)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbBGColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1189,7 +1188,7 @@
 							<onclick>Skin.SetString(BreadCrumbFontColor,2)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbFontColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1219,7 +1218,7 @@
 							<onclick>Skin.SetString(BreadCrumbFontColor,3)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbFontColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1249,7 +1248,7 @@
 							<onclick>Skin.SetString(BreadCrumbFontColor,4)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbFontColorSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1258,7 +1257,7 @@
 						</control>
 					</control>
 					
-					<control type="grouplist" id="900">	<!-- 1 GENERAL  -->	
+					<control type="grouplist" id="900">	<!--1 GENERAL-->	
 						<description>General Content Area</description>
 						<posx>375</posx>
 						<posy>140</posy>
@@ -1278,7 +1277,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[128]</label> <!-- GENERAL -->
+							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -1311,7 +1310,7 @@
 							<label>31556</label>
 							<selected>!Skin.HasSetting(HideMenuBar)</selected>
 							<onclick>Skin.ToggleSetting(HideMenuBar)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1337,7 +1336,7 @@
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31537</label>
-							<selected>!Skin.HasSetting(HideInfoPane)</selected> <!-- ON -->
+							<selected>!Skin.HasSetting(HideInfoPane)</selected> <!--ON-->
 							<onclick>Skin.ToggleSetting(HideInfoPane)</onclick>
 						</control>
 						<control type="radiobutton" id="12">
@@ -1384,9 +1383,9 @@
 							<label>$LOCALIZE[31027]</label>
 							<selected>Skin.HasSetting(DoNotDimScreen)</selected>
 							<onclick>Skin.ToggleSetting(DoNotDimScreen)</onclick>
-							<disabledcolor>ff343434</disabledcolor> <!-- JET -->
+							<disabledcolor>ff343434</disabledcolor> <!--JET-->
 							<visible>!Control.IsEnabled(168)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1415,7 +1414,7 @@
 							<label>$LOCALIZE[31036]</label>
 							<selected>Skin.HasSetting(KioskMode)</selected>
 							<onclick>Skin.ToggleSetting(KioskMode)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1444,7 +1443,7 @@
 							clear - style menu backgrounds
 							<selected>!Skin.HasSetting(TransparentMenuBacks)</selected>
 							<onclick>Skin.ToggleSetting(TransparentMenuBacks)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1456,7 +1455,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[8]</label> <!-- WEATHER -->
+							<label>$LOCALIZE[8]</label> <!--WEATHER-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -1514,7 +1513,7 @@
 							<selected>Skin.HasSetting(ShowWeatherNotification)</selected>
 							<onclick>Skin.ToggleSetting(ShowWeatherNotification)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1546,7 +1545,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllWeatherNotification)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllWeatherNotification)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1555,7 +1554,7 @@
 						</control>
 					</control>
 					
-					<control type="grouplist" id="901">	<!-- 2 HOME  -->	
+					<control type="grouplist" id="901">	<!--2 HOME-->	
 						<description>Home Content Area</description>
 						<posx>375</posx>
 						<posy>140</posy>
@@ -1575,7 +1574,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[10000]</label> <!-- HOME -->
+							<label>$LOCALIZE[10000]</label> <!--HOME-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -1590,7 +1589,7 @@
 						<control type="button" id="11131"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -1654,7 +1653,7 @@
 						<control type="button" id="11132"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -1675,7 +1674,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[21866] $LOCALIZE[33061]</label> <!-- CATEGORY MENU -->
+							<label>$LOCALIZE[21866] $LOCALIZE[33061]</label> <!--CATEGORY MENU-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -1690,7 +1689,7 @@
 						<control type="button" id="11133"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -1759,7 +1758,7 @@
 							<selected>Skin.HasSetting(HideProgramsCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideProgramsCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1790,7 +1789,7 @@
 							<selected>Skin.HasSetting(HidePicturesCategory)</selected>
 							<onclick>Skin.ToggleSetting(HidePicturesCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1821,7 +1820,7 @@
 							<selected>Skin.HasSetting(HideMusicCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideMusicCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1852,7 +1851,7 @@
 							<selected>Skin.HasSetting(HideVideosCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideVideosCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1884,7 +1883,7 @@
 							<onclick>Skin.ToggleSetting(HideMusicVideosCategory)</onclick>
 							<enable>Library.HasContent(MusicVideos)</enable>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1916,7 +1915,7 @@
 							<onclick>Skin.ToggleSetting(HideMoviesCategory)</onclick>
 							<enable>Library.HasContent(Movies)</enable>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1948,7 +1947,7 @@
 							<onclick>Skin.ToggleSetting(HideTVShowsCategory)</onclick>
 							<enable>Library.HasContent(TVShows)</enable>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -1979,7 +1978,7 @@
 							<selected>Skin.HasSetting(HideGeneralCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideGeneralCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2010,7 +2009,7 @@
 							<selected>!Skin.HasSetting(HideScriptsCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideScriptsCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2041,7 +2040,7 @@
 							<selected>Skin.HasSetting(HideWeatherCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideWeatherCategory)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2071,9 +2070,9 @@
 							<label>31541</label>
 							<selected>Skin.HasSetting(HideAddonsCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideAddonsCategory)</onclick>
-				<!--------- <enable>System.HasAddon(Addons4xbox_Installer)</enable> ------------------------------------>
+				<!--<enable>System.HasAddon(Addons4xbox_Installer)</enable>-->
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2103,9 +2102,9 @@
 							<label>$LOCALIZE[137]</label>
 							<selected>!Skin.HasSetting(HideSearchCategory)</selected>
 							<onclick>Skin.ToggleSetting(HideSearchCategory)</onclick>
-				<!--------- <enable>System.HasAddon(Addons4xbox_Installer)</enable> ------------------------------------>
+				<!--<enable>System.HasAddon(Addons4xbox_Installer)</enable>-->
 							<visible>Skin.HasSetting(ExpandCategoryToggleSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2158,7 +2157,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2196,7 +2195,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2216,7 +2215,7 @@
 						<control type="button" id="11134"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -2237,7 +2236,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[21866] $LOCALIZE[1034]</label> <!-- CATEGORY SUB-MENU -->
+							<label>$LOCALIZE[21866] $LOCALIZE[1034]</label> <!--CATEGORY SUB-MENU-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -2252,7 +2251,7 @@
 						<control type="button" id="11135"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -2330,12 +2329,12 @@
 							<alttexturenofocus border="5">-</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31015]  " $LOCALIZE[15019] $LOCALIZE[15311] "  $LOCALIZE[31001] ( $LOCALIZE[593] $LOCALIZE[459] )</label>
+							<label>$LOCALIZE[31015]  " $LOCALIZE[15019] $LOCALIZE[15311] " $LOCALIZE[31001] ( $LOCALIZE[593] $LOCALIZE[459] )</label>
 							<selected>Skin.HasSetting(HideAddCustomButton)</selected>
 							<onclick>Skin.ToggleSetting(HideAddCustomButton)</onclick>
 						</control> 
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->					
-	<!----------------------------------------------- ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ---------------------------------------------------------------->
+	<!--============================================= ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ==============================================================-->
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 						<control type="radiobutton" id="10031">
 							<description>Customize Categories Sub Menu</description>
@@ -2389,7 +2388,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2427,7 +2426,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2466,7 +2465,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2504,7 +2503,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2542,7 +2541,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2581,7 +2580,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2620,7 +2619,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2659,7 +2658,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2698,7 +2697,7 @@
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -2717,7 +2716,7 @@
 							<enable>true</enable>
 						</control>
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->					
-	<!----------------------------------------------- ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ---------------------------------------------------------------->
+	<!--============================================= ATTEMPT AT  CUSTOM SUB MENU CATAGORIZATION ==============================================================-->
 	<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 						 <control type="button" id="10052"> 
 							<description>Submenu Filters</description>
@@ -2743,7 +2742,7 @@
 						<control type="button" id="11136"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -2764,7 +2763,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31804</label> <!-- RECENTLY ADDED -->
+							<label>31804</label> <!--RECENTLY ADDED-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -2779,7 +2778,7 @@
 						<control type="button" id="11137"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -2890,7 +2889,7 @@
 						<control type="button" id="13136"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -2911,7 +2910,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31543</label> <!-- INFO PANEL -->
+							<label>31543</label> <!--INFO PANEL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -2926,7 +2925,7 @@
 						<control type="button" id="13137"> <!--SPACER-->
 							<description>SPACER</description>
 							<width>-</width>
-							<height>13</height> <!----->
+							<height>13</height> <!--=-->
 							<font>-</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
@@ -3076,7 +3075,7 @@
 						</control>  
 					</control>
 					
-					<control type="grouplist" id="902"> <!-- 3 MEDIA  -->	
+					<control type="grouplist" id="902"> <!--3 MEDIA-->	
 						<description>Media Content Area</description>
 						<posx>375</posx>
 						<posy>140</posy>
@@ -3096,7 +3095,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[10005]</label> <!-- MUSIC -->
+							<label>$LOCALIZE[10005]</label> <!--MUSIC-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -3135,7 +3134,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[10006]</label> <!-- VIDEO -->
+							<label>$LOCALIZE[10006]</label> <!--VIDEO-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -3174,7 +3173,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[128]</label> <!-- GENERAL -->
+							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -3207,7 +3206,7 @@
 							<label>$LOCALIZE[31424]</label>
 							<selected>Skin.HasSetting(HideSmallVideoOverlay)</selected>
 							<onclick>Skin.ToggleSetting(HideSmallVideoOverlay)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3235,7 +3234,7 @@
 							<label>$LOCALIZE[31403]</label>
 							<selected>Skin.HasSetting(HidecdArt)</selected>
 							<onclick>Skin.ToggleSetting(HidecdArt)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3288,7 +3287,7 @@
 							<selected>Skin.HasSetting(HideUnSelectedMediaIcons)</selected>
 							<onclick>Skin.ToggleSetting(HideUnSelectedMediaIcons)</onclick>
 							<visible>Skin.HasSetting(ExpandHideMediaIconsSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3319,7 +3318,7 @@
 							<selected>Skin.HasSetting(HideSelectedMediaIcons)</selected>
 							<onclick>Skin.ToggleSetting(HideSelectedMediaIcons)</onclick>
 							<visible>Skin.HasSetting(ExpandHideMediaIconsSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3331,7 +3330,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31549</label> <!-- MEDIA FLAGGING -->
+							<label>31549</label> <!--MEDIA FLAGGING-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -3364,7 +3363,7 @@
 							<label>$LOCALIZE[31048]</label>
 							<selected>Skin.HasSetting(HideMediaFlags)</selected>
 							<onclick>Skin.ToggleSetting(HideMediaFlags)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3394,7 +3393,7 @@
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20342])[/COLOR]</label>
 							<selected>Skin.HasSetting(HideMovieStudioFlags)</selected>
 							<onclick>Skin.ToggleSetting(HideMovieStudioFlags)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3422,7 +3421,7 @@
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20343])[/COLOR]</label>
 							<selected>Skin.HasSetting(HideTVStudioFlags)</selected>
 							<onclick>Skin.ToggleSetting(HideTVStudioFlags)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3451,9 +3450,9 @@
 							<label>$LOCALIZE[31027]</label>
 							<selected>Skin.HasSetting(DoNotDimViewsScreen)</selected>
 							<onclick>Skin.ToggleSetting(DoNotDimViewsScreen)</onclick>
-							<disabledcolor>ff343434</disabledcolor> <!-- JET -->
+							<disabledcolor>ff343434</disabledcolor> <!--JET-->
 							<visible>!Control.IsEnabled(76)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3482,7 +3481,7 @@
 							<label>31550</label>
 							<selected>Skin.HasSetting(UseMPAARatingFlags)</selected>
 							<onclick>Skin.ToggleSetting(UseMPAARatingFlags)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3510,7 +3509,7 @@
 							<label>31551</label>
 							<selected>Skin.HasSetting(UseOFLCRatingFlags)</selected>
 							<onclick>Skin.ToggleSetting(UseOFLCRatingFlags)</onclick>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3522,7 +3521,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[20364]S</label> <!-- TV SHOWS -->
+							<label>$LOCALIZE[20364]S</label> <!--TV SHOWS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
 							<align>-</align><!---->
@@ -3560,7 +3559,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>31553</label> <!-- VIEW ANIMATIONS -->
+							<label>31553</label> <!--VIEW ANIMATIONS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
 							<align>-</align><!---->
@@ -3595,8 +3594,8 @@
 						</control>
 					</control>
 					
-					<!-- Global Media Settings -->
-					<control type="grouplist" id="903">	<!-- 4 BACKGROUNDS  -->	
+				<!--Global Media Settings-->
+					<control type="grouplist" id="903">	<!--4 BACKGROUNDS-->	
 						<description>Backgrounds Content Area</description>
 						<posx>375</posx>
 						<posy>140</posy>
@@ -3616,7 +3615,7 @@
 							<posx>-3</posx><!---->
 							<height>27</height><!---->
 							<width>840</width><!---->
-							<label>$LOCALIZE[33069]</label> <!-- BACKGROUNDS -->
+							<label>$LOCALIZE[33069]</label> <!--BACKGROUNDS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
 							<align>-</align><!---->
@@ -3651,7 +3650,7 @@
 							<selected>Skin.HasSetting(ExpandUniversal_CLASSIC_BG_Settings)</selected>
 							<onclick>Skin.ToggleSetting(ExpandUniversal_CLASSIC_BG_Settings)</onclick>
 						</control>
-						<control type="radiobutton" id="1490"> <!--ENABLE/DISABLE--->
+						<control type="radiobutton" id="1490"> <!--ENABLE/DISABLE-->
 							<description>ENABLE CLASSIC UNIVERSAL BG</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -3682,7 +3681,7 @@
 							</animation>
 							<enable>IsEmpty(Skin.String(UniversalCustomBG))</enable>
 						</control>
-						<control type="radiobutton" id="1491"> <!--BLUE--->
+						<control type="radiobutton" id="1491"> <!--BLUE-->
 							<description>BLUE</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -3714,7 +3713,7 @@
 							<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableClassicUniversalBG)">Conditional</animation>
 							<enable>Skin.HasSetting(EnableClassicUniversalBG)</enable>
 						</control>
-						<control type="radiobutton" id="1492"> <!--GREY--->
+						<control type="radiobutton" id="1492"> <!--GREY-->
 							<description>GREY</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -3746,7 +3745,7 @@
 							</animation>
 							<enable>Skin.HasSetting(EnableClassicUniversalBG)</enable>
 						</control>
-						<control type="radiobutton" id="1493"> <!--RED---->
+						<control type="radiobutton" id="1493"> <!--RED-->
 							<description>RED</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -3923,7 +3922,7 @@
 							<onclick>Skin.HasSetting(UniversalCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageUniversalBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3955,7 +3954,7 @@
 							<onclick>Skin.SetImage(UniversalCustomBG)</onclick>
 							<onclick >Skin.Reset(EnableClassicUniversalBG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings) + !Skin.HasSetting(UseMultiImageUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -3986,7 +3985,7 @@
 							<label2>[COLOR=ff71A6D2]$INFO[Skin.String(ProgramsCustomBG)][/COLOR]</label2>
 							<onclick>Skin.SetPath(ProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings) + Skin.HasSetting(UseMultiImageUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4019,7 +4018,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllUniversalCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllUniversalCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4051,7 +4050,7 @@
 							<selected>!Skin.HasSetting(DimUniversalCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimUniversalCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4085,7 +4084,7 @@
 							<onclick>Skin.Reset(ApplyAllUniversalCustomBG)</onclick>
 							<onclick>Skin.Reset(DimUniversalCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversalBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4141,7 +4140,7 @@
 							<onclick>Skin.HasSetting(ProgramsCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageProgramsBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4172,7 +4171,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(ProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings) + !Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4203,7 +4202,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(ProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings) + Skin.HasSetting(UseMultiImageProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4235,7 +4234,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllProgramsCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4266,7 +4265,7 @@
 							<selected>!Skin.HasSetting(DimProgramsCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4300,7 +4299,7 @@
 							<onclick>Skin.Reset(ApplyAllProgramsCustomBG)</onclick>
 							<onclick>Skin.Reset(DimProgramsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandProgramsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4356,7 +4355,7 @@
 							<onclick>Skin.HasSetting(PicturesCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImagePicturesBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4387,7 +4386,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(PicturesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings) + !Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4418,7 +4417,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(PicturesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings) + Skin.HasSetting(UseMultiImagePicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4450,7 +4449,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllPicturesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4482,7 +4481,7 @@
 							<onclick>Skin.ToggleSetting(DimPicturesCustomBG)</onclick>
 							<!--<onleft>Skin.ToggleSetting(ExpandPicturesBGSettings)</onleft>-->
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4516,7 +4515,7 @@
 							<onclick>Skin.Reset(ApplyAllPicturesCustomBG)</onclick>
 							<onclick>Skin.Reset(DimPicturesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandPicturesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4572,7 +4571,7 @@
 							<onclick>Skin.HasSetting(MusicCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageMusicBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4603,7 +4602,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(MusicCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings) + !Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4634,7 +4633,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(MusicCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings) + Skin.HasSetting(UseMultiImageMusicBGSettings)</visible>
-							<!-- BackgroundSettingsItemOpenCloseAnim -->
+							<!--BackgroundSettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4666,7 +4665,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllMusicCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllMusicCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4697,7 +4696,7 @@
 							<selected>!Skin.HasSetting(DimMusicCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimMusicCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4731,7 +4730,7 @@
 							<onclick>Skin.Reset(ApplyAllMusicCustomBG)</onclick>
 							<onclick>Skin.Reset(DimMusicCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMusicBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4787,7 +4786,7 @@
 							<onclick>Skin.HasSetting(VideosCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageVideosBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4818,7 +4817,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(VideosCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings) + !Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4849,7 +4848,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(VideosCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings) + Skin.HasSetting(UseMultiImageVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4881,7 +4880,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllVideosCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllVideosCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4912,7 +4911,7 @@
 							<selected>!Skin.HasSetting(DimVideosCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimVideosCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -4946,7 +4945,7 @@
 							<onclick>Skin.Reset(ApplyAllVideosCustomBG)</onclick>
 							<onclick>Skin.Reset(DimVideosCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandVideosBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5002,7 +5001,7 @@
 							<onclick>Skin.HasSetting(MoviesCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageMoviesBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5033,7 +5032,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(MoviesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings) + !Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5064,7 +5063,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(MoviesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings) + Skin.HasSetting(UseMultiImageMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5096,7 +5095,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllMoviesCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllMoviesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5127,7 +5126,7 @@
 							<selected>!Skin.HasSetting(DimMoviesCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimMoviesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5161,7 +5160,7 @@
 							<onclick>Skin.Reset(ApplyAllMoviesCustomBG)</onclick>
 							<onclick>Skin.Reset(DimMoviesCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandMoviesBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5217,7 +5216,7 @@
 							<onclick>Skin.HasSetting(TVShowsCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageTVShowsBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5248,7 +5247,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(TVShowsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + !Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5279,7 +5278,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(TVShowsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings) + Skin.HasSetting(UseMultiImageTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5311,7 +5310,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllTVShowsCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllTVShowsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5342,7 +5341,7 @@
 							<selected>!Skin.HasSetting(DimTVShowsCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimTVShowsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5376,7 +5375,7 @@
 							<onclick>Skin.Reset(ApplyAllTVShowsCustomBG)</onclick>
 							<onclick>Skin.Reset(DimTVShowsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandTVShowsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5432,7 +5431,7 @@
 							<onclick>Skin.HasSetting(GeneralCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageGeneralBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5463,7 +5462,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(GeneralCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings) + !Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5494,7 +5493,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(GeneralCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings) + Skin.HasSetting(UseMultiImageGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5526,7 +5525,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllGeneralCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllGeneralCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5557,7 +5556,7 @@
 							<selected>!Skin.HasSetting(DimGeneralCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimGeneralCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5591,7 +5590,7 @@
 							<onclick>Skin.Reset(ApplyAllGeneralCustomBG)</onclick>
 							<onclick>Skin.Reset(DimGeneralCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandGeneralBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5648,7 +5647,7 @@
 							<onclick>Skin.HasSetting(ScriptsCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageScriptsBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5679,7 +5678,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(ScriptsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings) + !Skin.HasSetting(UseMultiImageScriptsBGSettings)</visible>
-							<!-- BackgroundSettingsItemOpenCloseAnim -->
+							<!--BackgroundSettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5710,7 +5709,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(ScriptsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings) + Skin.HasSetting(UseMultiImageScriptsBGSettings)</visible>
-							<!-- BackgroundSettingsItemOpenCloseAnim -->
+							<!--BackgroundSettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5742,7 +5741,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllScriptsCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllScriptsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5773,7 +5772,7 @@
 							<selected>!Skin.HasSetting(DimScriptsCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimScriptsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5807,7 +5806,7 @@
 							<onclick>Skin.Reset(ApplyAllScriptsCustomBG)</onclick>
 							<onclick>Skin.Reset(DimScriptsCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandScriptsBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5863,7 +5862,7 @@
 							<onclick>Skin.HasSetting(SystemCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageSystemBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5894,7 +5893,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(SystemCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings) + !Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5925,7 +5924,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(SystemCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings) + Skin.HasSetting(UseMultiImageSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5957,7 +5956,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllSystemCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllSystemCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -5988,7 +5987,7 @@
 							<selected>!Skin.HasSetting(DimSystemCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimSystemCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6022,7 +6021,7 @@
 							<onclick>Skin.Reset(ApplyAllSystemCustomBG)</onclick>
 							<onclick>Skin.Reset(DimSystemCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6079,7 +6078,7 @@
 							<onclick>Skin.HasSetting(WeatherCustomBG)</onclick>
 							<onclick>Skin.ToggleSetting(UseMultiImageWeatherBGSettings)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6110,7 +6109,7 @@
 							<label2></label2>
 							<onclick>Skin.SetImage(WeatherCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings) + !Skin.HasSetting(UseMultiImageWeatherBGSettings)</visible>
-							<!-- BackgroundSettingsItemOpenCloseAnim -->
+							<!--BackgroundSettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6141,7 +6140,7 @@
 							<label2></label2>
 							<onclick>Skin.SetPath(WeatherCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings) + Skin.HasSetting(UseMultiImageWeatherBGSettings)</visible>
-							<!-- BackgroundSettingsItemOpenCloseAnim -->
+							<!--BackgroundSettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6173,7 +6172,7 @@
 							<usealttexture>!Skin.HasSetting(ApplyAllWeatherCustomBG)</usealttexture>
 							<onclick>Skin.ToggleSetting(ApplyAllWeatherCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6204,7 +6203,7 @@
 							<selected>!Skin.HasSetting(DimWeatherCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimWeatherCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6238,7 +6237,7 @@
 							<onclick>Skin.Reset(ApplyAllWeatherCustomBG)</onclick>
 							<onclick>Skin.Reset(DimWeatherCustomBG)</onclick>
 							<visible>Skin.HasSetting(ExpandWeatherBGSettings)</visible>
-							<!-- SettingsItemOpenCloseAnim -->
+							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
 								<effect type="fade" start="0" end="100" time="400"/>
@@ -6250,7 +6249,7 @@
 			<!--ADD-ONS_(no options as of now)-->	
 					</control>
 					
-					<control type="grouplist" id="904">	<!-- 5 SCRIPTS  -->
+					<control type="grouplist" id="904">	<!--5 SCRIPTS-->
 						<description>Scripts Content Area</description>
 						<posx>385</posx>
 						<posy>140</posy>
@@ -6285,7 +6284,7 @@
 						</control>
 					</control>
 					
-					<control type="grouplist" id="905">	<!-- 6 SKIN RESET  -->	
+					<control type="grouplist" id="905">	<!--6 SKIN RESET-->	
 						<description>Reset Settings</description>
 						<posx>385</posx>
 						<posy>140</posy>
@@ -6320,7 +6319,7 @@
 						</control>
 					</control>
 					
-					<control type="grouplist" id="906">	<!-- 7 WEATHER  -->
+					<control type="grouplist" id="906">	<!--7 WEATHER-->
 						<description>Weather Content Area</description>
 						<posx>385</posx>
 						<posy>140</posy>
@@ -6402,11 +6401,11 @@
 				<control type="group"> <!--arrows-->
 					<posx>5</posx>
 					<posy>0</posy>
-					<!-- ControlsOpenCloseAnim -->
+					<!--ControlsOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-					<!-- InfoPaneHiddenSlideAnim -->
+					<!--InfoPaneHiddenSlideAnim-->
 					<animation effect="slide" end="0,40" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<control type="image">
 						<description>Up Arrow</description>
@@ -6417,7 +6416,7 @@
 						<texture>arrow-scroll-up-focus2.png</texture>
 						<visible>[Container(907).HasPrevious + Control.IsVisible(20080)] | [Container(900).HasPrevious + Control.IsVisible(20081)]
 						| [Container(901).HasPrevious + Control.IsVisible(20082)] | [Container(902).HasPrevious + Control.IsVisible(20083)]
-						| [Container(903).HasPrevious  + Control.IsVisible(20084)]</visible>
+						| [Container(903).HasPrevious + Control.IsVisible(20084)]</visible>
 					</control>
 					<control type="image" id="11111123">
 						<description>Down Arrow</description>
@@ -6428,7 +6427,7 @@
 						<texture flipy="true">arrow-scroll-up-focus2.png</texture>
 						<visible>[Container(907).HasNext + Control.IsVisible(20080)] | [Container(900).HasNext + Control.IsVisible(20081)]
 						| [Container(901).HasNext + Control.IsVisible(20082)] | [Container(902).HasNext + Control.IsVisible(20083)]
-						| [Container(903).HasNext  + Control.IsVisible(20084)]</visible>
+						| [Container(903).HasNext + Control.IsVisible(20084)]</visible>
 					</control>
 				</control>
 				
@@ -6454,7 +6453,7 @@
 						<width>ScreenWidth</width>
 						<height>53</height>
 						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
 					</control>
 					<control type="image" id="1110">
 						<width>ScreenWidth</width>
@@ -6481,10 +6480,10 @@
 						<width>70</width>
 						<height>44</height> <!--BC HOME-->
 						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 					</control>	
 				 <!--home icon-->
-					<control type="button"  id="837">
+					<control type="button" id="837">
 						<posx>10</posx>
 						<posy>6</posy>
 						<width>31</width>
@@ -6519,7 +6518,7 @@
 					<posy>4</posy>
 					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
 					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
-					<!-- WeatherNotificationOpenCloseAnim -->
+					<!--WeatherNotificationOpenCloseAnim-->
 					<animation effect="fade" end="100" time="200">Visible</animation>
 					<animation effect="fade" end="0" time="200">Hidden</animation> 
 					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
@@ -6529,7 +6528,7 @@
 						<height>35</height>
 						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<onclick>ActivateWindow(MyWeather)</onclick>
 						<ondown>850</ondown>
 						<onright>346</onright>
@@ -6548,7 +6547,7 @@
 						<width>55</width>
 						<height>35</height>
 						<font>VolumeFont</font>
-						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[Weather.Temperature]</label>
@@ -6574,16 +6573,16 @@
 					<posx>780</posx>
 					<posy>4</posy>
 					<visible>Player.HasMedia</visible>
-					<!-- MediaPlayingNotificationOpenCloseAnim -->
+					<!--MediaPlayingNotificationOpenCloseAnim-->
 					<animation effect="fade" end="100" time="200">Visible</animation>
 					<animation effect="fade" end="0" time="200">Hidden</animation>
-					<!-- MediaPlayingNotificationShiftAnim3 -->
+					<!--MediaPlayingNotificationShiftAnim3-->
 					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
 					<control type="image">
 						<width>270</width>
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 					</control>
 					<control type="image">
 						<posx>8</posx>
@@ -6592,7 +6591,7 @@
 						<height>25</height>
 						<texture>defaultaudio.png</texture>
 						<visible>Player.HasAudio</visible>
-						<!-- MediaPlayingPulseAnim -->
+						<!--MediaPlayingPulseAnim-->
 						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
@@ -6602,7 +6601,7 @@
 						<height>25</height>
 						<texture>defaultvideo.png</texture>
 						<visible>Player.HasVideo</visible>
-						<!-- MediaPlayingPulseAnim -->
+						<!--MediaPlayingPulseAnim-->
 						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 					</control>
 					<control type="group">
@@ -6619,7 +6618,7 @@
 							<height>15</height>
 							<scrollout>false</scrollout>
 							<font>ScanContentFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<pauseatend>4000</pauseatend>
@@ -6636,7 +6635,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont2</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
@@ -6655,7 +6654,7 @@
 							<width>224</width>
 							<height>15</height>
 							<font>ScanContentFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
@@ -6680,7 +6679,7 @@
 			
 	<!--(((INFO PANE)))=======================================================================================================================-->		
 			<control type="group">
-				<!-- Custom_SubMenu_Fade_Animation -->
+				<!--Custom_SubMenu_Fade_Animation-->
 				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(FileBrowser) | Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
 				<description>Bottom Bar Area</description>
@@ -6694,7 +6693,7 @@
 					<height>14</height>
 					<texture>bottom-bar-top.png</texture>
 					<visible>!Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</visible>
-					<!-- BottomPaneTopHighlightFadeAnim -->
+					<!--BottomPaneTopHighlightFadeAnim-->
 					<animation effect="fade" end="15" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -6702,7 +6701,7 @@
 					<width>ScreenWidth</width>
 					<height>74</height>
 					<texture border="0,10,0,0">bottom-bar-background.png</texture>
-					<!-- BottomPaneFadeAnim -->
+					<!--BottomPaneFadeAnim-->
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -6711,13 +6710,13 @@
 					<width>ScreenWidth</width>
 					<height>74</height>
 					<texture>bottom-bar-overlay.png</texture>
-					<!-- BottomPaneOverlayFadeAnim -->
+					<!--BottomPaneOverlayFadeAnim-->
 					<animation effect="fade" end="50" condition="true">Conditional</animation>
 				</control>
-				<!-- BottomPaneOpenCloseAnim -->
+				<!--BottomPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,74" time="200" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
-				<!-- InfoPaneSpecificCloseAnim -->
+				<!--InfoPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
 				<visible>Skin.HasSetting(HideInfoPane)</visible>
 				<!--**************************************************************************************************************-->
@@ -6769,23 +6768,23 @@
 	<!--(((SCROLLBARS)))======================================================================================================================-->	
 			<control type="group">
 				<posy>-25</posy>
-				<!-- ControlsOpenCloseAnim -->
+				<!--ControlsOpenCloseAnim-->
 				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-				<!-- InfoPaneHiddenSlideAnim -->
+				<!--InfoPaneHiddenSlideAnim-->
 				<animation effect="slide" end="0,40" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
-				<!-- Custom_SubMenu_Fade_Animation -->
+				<!--Custom_SubMenu_Fade_Animation-->
 				<animation effect="fade" start="0" end="100" time="250" delay="400" condition="![Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)]">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" delay="-" condition="Window.IsActive(3021) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078) | Window.IsActive(3079) | Window.IsActive(3080) | Window.IsActive(3081) | Window.IsActive(3082) | Window.IsActive(3083)">Conditional</animation>
-				<!-- Custom_Background_Fade_Animation -->
+				<!--Custom_Background_Fade_Animation-->
 				<animation effect="fade" start="100" end="0" time="400" delay="500" condition="[[Control.HasFocus(102) | Control.HasFocus(103)] + !IsEmpty(Skin.String(ProgramsCustomBG))] | [[Control.HasFocus(108) | Control.HasFocus(109)] + !IsEmpty(Skin.String(PicturesCustomBG))] 
 				| [[Control.HasFocus(114) | Control.HasFocus(115)] + !IsEmpty(Skin.String(MusicCustomBG))] | [[Control.HasFocus(120) | Control.HasFocus(121)] + !IsEmpty(Skin.String(VideosCustomBG))] 
 				| [[Control.HasFocus(144) | Control.HasFocus(145)] + !IsEmpty(Skin.String(MoviesCustomBG))] | [[Control.HasFocus(138) | Control.HasFocus(139)] + !IsEmpty(Skin.String(TVShowsCustomBG))] 
 				| [[Control.HasFocus(126) | Control.HasFocus(127)] + !IsEmpty(Skin.String(GeneralCustomBG))] | [[Control.HasFocus(132) | Control.HasFocus(133)] + !IsEmpty(Skin.String(SystemCustomBG))] 
 				| [[Control.HasFocus(162) | Control.HasFocus(163)] + !IsEmpty(Skin.String(WeatherCustomBG))] | [Control.HasFocus(1502) + !IsEmpty(Skin.String(UniversalCustomBG))]">Conditional</animation>
 				
-				<control type="scrollbar" id="20080"> <!-- TOP BAR SCROLLBAR --------(907)-->
+				<control type="scrollbar" id="20080"> <!--TOP BAR SCROLLBAR ========(907)-->
 					<posx>1265</posx>
 					<posy>130</posy>
 					<height>515</height>
@@ -6804,7 +6803,7 @@
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation> 
 					<visible>Control.HasFocus(1) | ControlGroup(907).HasFocus | Control.HasFocus(20080)</visible>
 				</control>
-				<control type="scrollbar" id="20081"> <!-- GENERAL SCROLLBAR --------(900)-->
+				<control type="scrollbar" id="20081"> <!--GENERAL SCROLLBAR ========(900)-->
 					<posx>1265</posx>
 					<posy>130</posy>
 					<height>515</height>
@@ -6822,7 +6821,7 @@
 					<ondown>PageDown</ondown>
 					<visible>Control.HasFocus(2) | ControlGroup(900).HasFocus | Control.HasFocus(20081)</visible>
 				</control>
-				<control type="scrollbar" id="20082"> <!-- HOME SCROLLBAR -----------(901)-->
+				<control type="scrollbar" id="20082"> <!--HOME SCROLLBAR ===========(901)-->
 					<posx>1265</posx>
 					<posy>130</posy>
 					<height>515</height>
@@ -6840,7 +6839,7 @@
 					<ondown>PageDown</ondown>
 					<visible>Control.HasFocus(3) | ControlGroup(901).HasFocus | Control.HasFocus(20082)</visible>
 				</control>
-				<control type="scrollbar" id="20083"> <!-- MEDIA SCROLLBAR ----------(902)-->
+				<control type="scrollbar" id="20083"> <!--MEDIA SCROLLBAR ==========(902)-->
 					<posx>1265</posx>
 					<posy>130</posy>
 					<height>515</height>
@@ -6858,7 +6857,7 @@
 					<ondown>PageDown</ondown>
 					<visible>Control.HasFocus(4) | ControlGroup(902).HasFocus | Control.HasFocus(20083)</visible>
 				</control>
-				<control type="scrollbar" id="20084"> <!-- BACKGROUNDS SCROLLBAR ----(903)-->
+				<control type="scrollbar" id="20084"> <!--BACKGROUNDS SCROLLBAR ====(903)-->
 					<posx>1265</posx>
 					<posy>130</posy>
 					<height>515</height>
@@ -6879,5 +6878,4 @@
 			</control>
 		</control>
 	</controls>
-	
 </window>

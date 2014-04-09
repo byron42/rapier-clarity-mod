@@ -14,7 +14,7 @@
 	<!--(((FS volume)))================================================================================================================================-->	
 		<control type="group">
 			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
-			<!-- OSDOpenCloseAnim -->
+			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
 			<control type="image" id="0">
@@ -86,11 +86,11 @@
 		
 	<!--(((TopBar volume)))============================================================================================================================-->	
 		<control type="group">
-			<!-- SearchIconSlideAnim -->
+			<!--SearchIconSlideAnim-->
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
 			<control type="group">
 				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</visible>
-				<!-- NotificationOpenCloseAnim -->
+				<!--NotificationOpenCloseAnim-->
 				<animation effect="fade" end="100" time="200">Visible</animation>
 				<animation effect="fade" end="0" time="200">Hidden</animation> 
 				<animation effect="fade" end="100" time="200">WindowOpen</animation>
@@ -99,7 +99,7 @@
 					<width>125</width>
 					<height>35</height>
 					<texture border="8">SystemTray/top-bar-status-background.png</texture>
-					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 				</control>
 				<control type="image">
 					<posx>8</posx>
@@ -107,7 +107,7 @@
 					<width>31</width>
 					<height>31</height>
 					<texture>volume.png</texture>
-					<!-- TopBarStatusIconFadeAnim -->
+					<!--TopBarStatusIconFadeAnim-->
 					<animation effect="fade" end="50" condition="true">conditional</animation>
 				</control>
 				<control type="label">
@@ -115,7 +115,7 @@
 					<width>80</width>
 					<height>35</height>
 					<font>VolumeFont</font>
-					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[Player.Volume]</label>

@@ -7,10 +7,10 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 		<!--little dialog fade out-->
-			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
 			<posx></posx>
 			<posy></posy>
 			<control type="group" id="99">
@@ -31,7 +31,7 @@
 				<control type="group">
 					<posx>300</posx>
 					<posy>715r</posy>
-					<!-- Stuff to fill in for seekbar not being visible -->
+					<!--Stuff to fill in for seekbar not being visible-->
 					<!--<control type="label">
 						<description>Playing Label</description>
 						<posx>375</posx>
@@ -348,7 +348,7 @@
 						<texturenofocus>osd-rewind-focus-x32.png</texturenofocus>
 						<visible>Player.Rewinding32x</visible>
 					</control>
-					<!-- End Stuff to fill in for seekbar not being visible -->
+					<!--End Stuff to fill in for seekbar not being visible-->
 					<control type="label">
 						<posx>0</posx>
 						<posy>30</posy>
@@ -438,7 +438,7 @@
 						<texture background="true">$INFO[VideoPlayer.Cover]</texture> 
 						<aspectratio aligny="bottom">keep</aspectratio> 
 						<visible>VideoPlayer.Content(LiveTV)</visible> 
-					</control> -->
+					</control>-->
 					<control type="progress">
 						<description>Progressbar</description>
 						<posx>0</posx>
@@ -501,7 +501,7 @@
 				
 	<!--(((MEDIA FLAGS AREA)))================(not working)==============================================================================================-->		
 				<control type="group">		
-					<!------------------------------------ VideoInfoStudioMediaFlag ------------------------------------------------------->
+					<!--**************************** VideoInfoStudioMediaFlag **********************************-->
 					<control type="image">
 						<posx>900</posx>
 						<posy>115</posy>
@@ -511,7 +511,7 @@
 						<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
 					</control>
-					<!------------------------------------ VideoInfoStudioMediaFlag ------------------------------------------------------->
+					<!--****************************************************************************************-->
 				
 					<control type="grouplist">
 						<description>Media Flags Area</description>
@@ -522,7 +522,7 @@
 						<itemgap>0</itemgap>
 						<align>center</align>
 						<orientation>horizontal</orientation>
-						<!------------------------------------ VideoMediaFlags ------------------------------------------------------->
+						<!--***************************** VideoMediaFlags *************************************-->
 						<control type="image">
 							<description>Blu-ray Image</description>
 							<width>90</width>
@@ -541,7 +541,7 @@
 							<fadetime>MediaFlagsCrossfadeTime</fadetime>
 							<visible>substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)</visible>
 						</control>
-							<control type="image">
+						<control type="image">
 							<description>DVD Image</description>
 							<width>90</width>
 							<height>60</height>
@@ -620,9 +620,9 @@
 							<texture>$INFO[ListItem.VideoCodec,flagging/VideoCodec/,.png]</texture>
 							<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						</control>
-						<!------------------------------------ VideoMediaFlags ------------------------------------------------------->
+						<!--*********************************************************************************-->
 						
-						<!------------------------------------ AudioMediaFlags ------------------------------------------------------->
+						<!--********************************* AudioMediaFlags *******************************-->
 						<control type="image">
 							<description>MP3 Codec Image</description>
 							<width>80</width>
@@ -639,9 +639,9 @@
 							<texture>$INFO[ListItem.AudioChannels,flagging/AudioChannels/,.png]</texture>
 							<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						</control>
-						<!------------------------------------ AudioMediaFlags ------------------------------------------------------->
+						<!--*********************************************************************************-->
 						
-						<!------------------------------------ AspectMediaFlags ------------------------------------------------------->
+						<!--******************************** AspectMediaFlags *******************************-->
 						<control type="image">
 							<description>Aspectratio Image</description>
 							<width>60</width>
@@ -650,7 +650,7 @@
 							<texture>$INFO[ListItem.VideoAspect,flagging/AspectRatio/,.png]</texture>
 							<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						</control>
-						<!------------------------------------ AspectMediaFlags ------------------------------------------------------->
+						<!--*********************************************************************************-->
 					</control>
 				</control>
 			</control>
