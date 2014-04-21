@@ -13,7 +13,7 @@
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">	
 				<!--(AddonFanartFadeOut)-->
-				<animation effect="fade" end="0" time="200" conditon="!IsEmpty(Listitem.Property(Fanart_Image))">Conditional</animation>
+				<animation effect="fade" end="100" time="200" condition="IsEmpty(Listitem.Property(Fanart_Image))">Conditional</animation>
 				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
@@ -146,7 +146,7 @@
 					<include>VariableBackgroundHeight</include>		
 					<texture>background-dim.png</texture>
 					<!--CustomBackgroundPreviewFadeInAnim-->
-					<animation effect="fade" end="50" condition="true">Conditional</animation>
+					<animation effect="fade" end="60" condition="true">Conditional</animation>
 				</control>
 			</control>
 			<!--*************************************************************************************************-->
