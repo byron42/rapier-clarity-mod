@@ -1756,7 +1756,7 @@
 							<label>31919</label>
 							<icon>-</icon>
 							<thumb>$INFO[Skin.String(AddonsCustomBG)]</thumb>
-							<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/,return)</onclick>	
+							<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/,return)</onclick>		
 							<visible>!Skin.HasSetting(HideAddonsCategory)</visible>
 						</item>
 						<!--
@@ -2009,7 +2009,7 @@
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>		
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc.org,Return)</onclick>		
 								<visible>!Skin.HasSetting(HideVideoAddonsButton)</visible>
 							</item>
 							<item id="4">
@@ -2633,7 +2633,7 @@
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/,Return)</onclick>
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/,Return)</onclick>
 								<visible>!Skin.HasSetting(HideSystemAddonsButton)</visible>
 							</item>
 							
@@ -2811,7 +2811,7 @@
 							<item id="1">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.program.&amp;repoid=repository.xbmc4xbox/)</onclick>
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.program.&amp;repoid=repository.xbmc.org,Return)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsAddonsButton)</visible>
 							</item>	
 							<item id="4">
@@ -3762,7 +3762,7 @@
 							<item id="6">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc.org,Return)</onclick>
 								<visible>!Skin.HasSetting(HideMusicAddonsButton)</visible>
 							</item>
 							<item id="3">
@@ -4077,25 +4077,26 @@
 							<item id="1">
 								<description>VIDEO Add-Ons</description>
 								<label>$LOCALIZE[157]</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>		
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc.org,Return)</onclick>		
+										
 								<visible>!Skin.HasSetting(HideAddonsVideoButton)</visible>
 							</item>
 							<item id="2">
 								<description>MUSIC Add-Ons</description>
 								<label>$LOCALIZE[249]</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/,Return)</onclick>			
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc.org,Return)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="3">
 								<description>XBMC.ORG Add-Ons</description>
 								<label>XBMC.ORG</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/,Return)</onclick>
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/,Return)</onclick>
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="5">
 								<description>LIBRARIES</description>
 								<label>.MODULES</label>
-								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc4xbox/,Return)</onclick>			
+								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc.org,Return)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsModulesButton)</visible>
 							</item>
 							<item id="15">
