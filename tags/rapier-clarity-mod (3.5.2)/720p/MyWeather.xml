@@ -1,0 +1,507 @@
+<window id="2600">
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+	<!--(((BACKGROUNDS)))=========================================================================================================================-->		
+			<control type="group"> 	
+				<animation effect="fade"  start="100" end="50" delay="0" time="500" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+				<control type="multiimage">
+					<posx>0</posx>
+					<include>BackgroundOffset</include>
+					<width>1280</width>
+					<include>VariableBackgroundHeight</include>
+					<imagepath>special://skin/images/backgrounds/weather-conditional/$INFO[Weather.FanartCode]</imagepath>
+					<aspectratio>scale</aspectratio>
+					<timeperimage>5000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>2000</fadetime>		
+					<!-- KenBurnsAnim -->
+					<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+					<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+					<visible>!Skin.HasSetting(Disable_Weather_Conditional_Backgrounds)</visible>
+				</control>
+				<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
+					<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+					<control type="image">
+						<posx>0</posx>
+						<description>Universal Classic Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+					</control>
+				</control>
+				<control type="group"> <!-------- UNIVERSAL CUSTOM BG ---------->
+					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]] + [Skin.HasSetting(Disable_Weather_Conditional_Backgrounds)]</visible>
+					<control type="image">
+						<posx>0</posx>
+						<description>Universal Classic Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation>
+					</control>
+				</control>
+			
+				<!--*********************************** BackgroundWeather *********************************************-->
+				<control type="group">
+					<description>General Custom Background</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					<control type="multiimage">
+						<description>Custom Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather.jpg">$INFO[Skin.String(WeatherCustomBG)]</imagepath>
+						<visible>Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + Skin.HasSetting(ApplyAllWeatherCustomBG)</visible>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<!-- BackgroundGeneralDimAnim -->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimWeatherCustomBG)">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Default Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">special://skin/images/backgrounds/background-weather.jpg</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<visible>!Skin.HasSetting(ApplyAllWeatherCustomBG) + Skin.HasSetting(Disable_Weather_Conditional_Backgrounds)</visible>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimWeatherCustomBG)">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSVideo *********************************************-->
+				<control type="group">
+					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+					<control type="videowindow">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!-- BackgroundVizDimAnim -->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSViz ***********************************************-->
+				<control type="group">
+					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+					<control type="visualisation">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>	
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!-- BackgroundVizDimAnim -->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!-- BackgroundDimAnim -->
+				<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+				
+				<!--******************************* FullControlAreaBackground *******************************************-->
+				<control type="group">	
+					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!-- MediaViewOpenCloseAnim -->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<control type="group">	
+					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!-- skinwide equal viz bg -->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!-- MediaViewOpenCloseAnim -->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!-- BackgroundOpenCloseAnim -->
+				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+
+			</control>
+			
+			<control type="button" id="9001">
+				<description>fake button to steal focus</description>
+				<onup>850</onup>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onclick>-</onclick>
+			</control>
+			
+			<control type="group">
+				<!-- WeatherSlideAnim -->
+				<animation effect="slide" start="1280,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" end="1280,0" start="0,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<include condition="IsEmpty(Weather.Plugin)" file="includes_Weather.xml">weather</include>
+				<include condition="!IsEmpty(Weather.Plugin)" file="includes_Weather.xml">weatherplus</include>
+			</control>
+			
+	<!--(((MENU BAR)))=========================================================================================================================-->		
+			<control type="group">	
+				<animation effect="fade"  start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<description>Menu Bar Area</description>
+				<height>34</height>
+				<posy>44</posy>
+				<control type="image">
+					<width>ScreenWidth</width>
+					<height>34</height>
+					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+				</control>
+				<!--********************************* MyWeatherMenuBar ************************************************-->
+				<control type="grouplist" id="850">
+					<animation effect="fade"  start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
+					<description>Weather Menu Bar</description>
+					<posy>-3</posy>
+					<width>ScreenWidth</width>
+					<height>34</height>
+					<itemgap>0</itemgap>
+					<onup>600</onup>
+					<ondown>9001</ondown>
+					<orientation>horizontal</orientation>
+					<control type="spincontrolex" id="3">
+						<description>Select Location</description>
+						<width>500</width>
+						<height>36</height>	
+						<font>-</font>	
+						<textcolor>ButtonColor</textcolor>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textoffsetx>13</textoffsetx>
+						<textwidth>500</textwidth>
+						<align>left</align>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>false</pulseonselect>
+						<colordiffuse>-</colordiffuse>	
+						<texturenofocus>-</texturenofocus>
+						<reverse>-</reverse>
+						<texturenofocus>-</texturenofocus>		
+					</control>	
+					<control type="image" id="116">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="2">
+						<description>Refresh</description>
+						<width>180</width>
+						<height>36</height>	
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>SubMenuFont2</font>
+						<textcolor>ButtonColor</textcolor>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<align>center</align>
+						<textoffsetx>13</textoffsetx>
+						<textwidth>154</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[103][/UPPERCASE]</label>
+					</control>
+					<control type="image" id="117">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="4">
+						<description>Settings</description>
+						<width>180</width>
+						<height>36</height>	
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>SubMenuFont2</font>
+						<textcolor>ButtonColor</textcolor>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<align>center</align>
+						<textoffsetx>13</textoffsetx>
+						<textwidth>154</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
+						<onclick>ActivateWindow(WeatherSettings)</onclick>
+					</control>
+					<control type="image" id="118">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+				</control>
+			<!--location labels-->
+				<control type="label">
+					<description>location label</description>
+					<posx>8</posx>
+					<posy>-3</posy>
+					<width>450</width>
+					<textwidth>440</textwidth>
+					<height>36</height>
+					<label>$INFO[Weather.Location]</label>
+					<aligny>top</aligny>
+					<textoffsety>4</textoffsety>
+					<font>SubMenuFont2</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<align>left</align>
+					<visible>!Control.HasFocus(3)</visible>
+				</control>
+				<control type="label">
+					<description>location label</description>
+					<posx>8</posx>
+					<posy>-3</posy>
+					<width>450</width>
+					<textwidth>440</textwidth>
+					<height>36</height>
+					<label>$INFO[Weather.Location]</label>
+					<aligny>top</aligny>
+					<textoffsety>4</textoffsety>
+					<font>SubMenuFont2</font>
+					<textcolor>ButtonFocusColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<align>left</align>
+					<visible>Control.HasFocus(3)</visible>
+				</control>
+				<!--***************************************************************************************************-->
+			
+				<!-- MenuBarOpenCloseAnim -->
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<!-- <animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation> -->
+				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
+					<effect type="fade" start="100" end="0" time="1" delay="200"/>
+				</animation>
+			
+			</control>
+			
+	<!--(((TOP BAR)))============================================================================================================================-->		
+			<control type="group">	
+				<description>Top Bar Area</description>		
+				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
+				<control type="group">	
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<height>53</height>
+						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
+					</control>
+					
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<posy>1</posy>
+						<height>41</height>
+						<texture border="10">Glass/SquareThemeBorder.png</texture>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--************************************* (SystemTray) **********************************************-->
+				<include>SystemTray</include>
+				<!--*************************************************************************************************-->
+				
+				<!--********************************** (BreadCrumbWeather) ******************************************-->
+				
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+					</control>	
+				 <!--home icon-->
+					<control type="button"  id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** MediaPlayingNotification *****************************************-->
+				<control type="group">
+					<posx>780</posx>
+					<posy>4</posy>
+					<visible>Player.HasMedia</visible>
+					<!-- MediaPlayingNotificationOpenCloseAnim -->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation>
+					<!-- MediaPlayingNotificationShiftAnim3 -->
+					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+					<control type="image">
+						<width>270</width>
+						<height>35</height>
+						<texture border="8">SystemTray/top-bar-status-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultaudio.png</texture>
+						<visible>Player.HasAudio</visible>
+						<!-- MediaPlayingPulseAnim -->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultvideo.png</texture>
+						<visible>Player.HasVideo</visible>
+						<!-- MediaPlayingPulseAnim -->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>224</width>
+						<height>36</height>
+						<visible>Player.HasAudio</visible>
+						<control type="fadelabel">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>-2</posy>
+							<width>220</width>
+							<height>15</height>
+							<scrollout>false</scrollout>
+							<font>ScanContentFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<align>left</align>
+							<aligny>center</aligny>
+							<pauseatend>4000</pauseatend>
+							<info>MusicPlayer.Title</info>
+							<info>MusicPlayer.Artist</info>
+							<info>MusicPlayer.Album</info>
+							<info>MusicPlayer.Year</info>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>13</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont2</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>220</width>
+						<height>36</height>
+						<visible>Player.HasVideo</visible>
+						<control type="label">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont2</font>
+							<textcolor>TopBarStatusColor</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+				</control>
+				<!--*********************************** MediaPlayingNotification *****************************************-->
+			</control>
+		</control>
+	</controls>	
+</window>
