@@ -3,10 +3,10 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<control type="visualisation" id="2">
 				<description>visualisation</description>
 				<posx>0</posx>
@@ -36,7 +36,7 @@
 			<control type="group">
 				<posx></posx>
 				<posy>-10</posy>
-				<!--VisibleFadeEffect-->
+				<!-- VisibleFadeEffect -->
 				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-114" time="250" delay="200">Hidden</animation>
 				<visible>Player.ShowCodec + ![Window.IsVisible(121) | Window.IsVisible(122)]</visible>
@@ -196,7 +196,7 @@
 					<effect type="fade" time="400" start="100" end="0" />
 					<effect type="slide" time="400" start="0,0" end="0,151" easing="in" tween="cubic" />
 				</animation>
-			<!--Mod code start ===================-->
+			<!-- Mod code start --------------->
 				<control type="image">
 					<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 					<animation effect="fade" time="200">WindowClose</animation>
@@ -215,7 +215,7 @@
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
-			<!--Mod-group animation ==============-->
+			<!-- Mod-group animation ---------------->
 				<control type="group">
 					<posy>30</posy> 
 					<visible>!Skin.HasSetting(HidecdArt)</visible>
@@ -242,9 +242,9 @@
 						<width>245</width>
 						<height>245</height>
 						<posx>170</posx>
-						<!--112-->
+						<!-- 112 -->
 						<posy>-152</posy>
-						<!---143-->
+						<!-- -143 -->
 						<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 						<aspectratio align="bottom">keep</aspectratio>
 					</control>
@@ -338,7 +338,7 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 						
-					<!--===============================================-->
+					<!--------------------------------------------------->
 					  <!--+++++++++++++++++++++++++++++++++++++++++++-->
 						<control type="label" id="212">
 							<description>Elapsed Time Label</description>
@@ -373,7 +373,7 @@
 							<shadowcolor>ThemeColor</shadowcolor>
 						</control>
 					  <!--+++++++++++++++++++++++++++++++++++++++++++-->
-					<!--===============================================-->
+					<!--------------------------------------------------->
 					
 					</control>
 				</control>

@@ -1,7 +1,7 @@
 <window id="110">
 	<defaultcontrol>0</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<!--DialogOpenCloseAnim-->
+	<!-- DialogOpenCloseAnim -->
 	<animation type="WindowOpen" reversible="false">
 		<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="350" />
 		<effect type="fade" start="0" end="100" time="300" />
@@ -22,13 +22,13 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture>background-dim.png</texture>
-			<animation effect="fade" end="60" delay="" time="200" condition="true">Conditional</animation>
+			<animation effect="fade" end="60"  delay="" time="200" condition="true">Conditional</animation>
 		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 			<!--************************************ GamepadDialogBox *******************************************-->
 			<control type="group">

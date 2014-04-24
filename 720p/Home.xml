@@ -3,15 +3,15 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
-		<!--FAVOURITES FADE-->
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(FileBrowser)">Conditional</animation>
+		<!-- FAVOURITES FADE --------------->
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(FileBrowser)">Conditional</animation>
 		<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-		<!--CUSTOM SUB CATS FADE-->	
-			<animation effect="fade" start="100" end="0" delay="950" time="50" condition="Window.IsActive(3071) | Window.IsActive(3072)
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+		<!-- CUSTOM SUB CATS FADE ---------->	
+			<animation effect="fade"  start="100" end="0" delay="950" time="50" condition="Window.IsActive(3071) | Window.IsActive(3072)
 			| Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
-			<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+			<control type="group"> <!-------- UNIVERSAL RAM SAVING CLASSIC RAPIER BG ---------->
 				<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 				<control type="image">
 					<posx>0</posx>
@@ -23,9 +23,10 @@
 					<texture background="true">$VAR[RamSavingBackgrounds]</texture>
 					<aspectratio>stretch</aspectratio>
 					<fadetime>BackgroundCrossfadeTime</fadetime>
+					
 				</control>
 			</control>
-			<control type="group"> <!--***** UNIVERSAL CUSTOM BG **************************-->
+			<control type="group"> <!-------- UNIVERSAL CUSTOM BG ----------------------------->
 				<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 				<control type="image">
 					<posx>0</posx>
@@ -39,8 +40,8 @@
 					<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
 				</control>
 			</control>
-			<control type="group"> <!--***** HOME BACKGROUNDS *****************************-->
-			<!--PROGRAMS-->
+			<control type="group"> <!-------- HOME BACKGROUNDS -------------------------------->
+			<!-- PROGRAMS ----------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -57,7 +58,7 @@
 						<visible>Container(850).HasFocus(1) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--PICTURES-->
+			<!-- PICTURES ----------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -74,7 +75,7 @@
 						<visible>Container(850).HasFocus(2) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--MUSIC/MUSIC VIDEOS-->
+			<!-- MUSIC/MUSIC VIDEOS ------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -91,7 +92,7 @@
 						<visible>[Container(850).HasFocus(3) | Container(850).HasFocus(21)] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--VIDEO-->
+			<!-- VIDEO -------------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -108,7 +109,7 @@
 						<visible>Container(850).HasFocus(4) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--MOVIES-->
+			<!-- MOVIES ------------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -125,7 +126,7 @@
 						<visible>Container(850).HasFocus(5) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--TV SHOWS-->
+			<!-- TV SHOWS ----------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -142,7 +143,7 @@
 						<visible>Container(850).HasFocus(6) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--GENERAL-->
+			<!-- GENERAL ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -159,7 +160,7 @@
 						<visible>Container(850).HasFocus(7) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--SCRIPTS-->
+			<!-- SCRIPTS ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -176,7 +177,7 @@
 						<visible>Container(850).HasFocus(20) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--SYSTEM-->
+			<!-- SYSTEM ------------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -193,7 +194,7 @@
 						<visible>Container(850).HasFocus(8) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--WEATHER-->
+			<!-- WEATHER ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -220,13 +221,13 @@
 						<timeperimage>5000</timeperimage>
 						<randomize>true</randomize>
 						<fadetime>2000</fadetime>		
-						<!--KenBurnsAnim-->
+						<!-- KenBurnsAnim -->
 						<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
 						<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
 						<visible>Container(850).HasFocus(9) + Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + !Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--ADDONS-->
+			<!-- ADDONS ------------------------------------->
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -243,7 +244,7 @@
 						<visible>Container(850).HasFocus(11) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM1-->
+			<!-- CUSTOM1 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -260,7 +261,7 @@
 						<visible>Container(850).HasFocus(12) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM2-->
+			<!-- CUSTOM2 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -277,7 +278,7 @@
 						<visible>Container(850).HasFocus(13) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM3-->
+			<!-- CUSTOM3 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -294,7 +295,7 @@
 						<visible>Container(850).HasFocus(14) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM4-->
+			<!-- CUSTOM4 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -311,7 +312,7 @@
 						<visible>Container(850).HasFocus(15) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM5-->
+			<!-- CUSTOM5 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -328,7 +329,7 @@
 						<visible>Container(850).HasFocus(16) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM6-->
+			<!-- CUSTOM6 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -345,7 +346,7 @@
 						<visible>Container(850).HasFocus(17) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM7-->
+			<!-- CUSTOM7 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -362,7 +363,7 @@
 						<visible>Container(850).HasFocus(18) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			<!--CUSTOM8-->
+			<!-- CUSTOM8 ------------------------------------>
 				<control type="group">
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
@@ -393,9 +394,9 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
+						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<!--BackgroundVizDimAnim-->
+						<!-- BackgroundVizDimAnim -->
 					</control>
 				</control>
 				<!--*****************************************************************************************************-->
@@ -414,27 +415,39 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>background-dim.png</texture>
-						<!--BackgroundVizDimAnim-->
+						<!-- BackgroundVizDimAnim -->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<!--BackgroundVizDimAnim-->
+						<!-- BackgroundVizDimAnim -->
 					</control>	
 				</control>
 				<!--*****************************************************************************************************-->
 				
-				<!--BackgroundOpenCloseAnim-->
+				<!-- BackgroundOpenCloseAnim -->
 				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
 				
+				<!------------------------------ DialogPopUpScreenDim ------------------------------------>
+				<control type="image">
+					<!-- ScreenSize -->
+					<width>1300</width>
+					<height>675</height>
+					<posx></posx>
+					<posy>44</posy>
+					<!-- ScreenSize -->
+					<!--<texture border="10,10,10,10">special://skin/images/skin/extras/HomeScreenDim.png</texture>-->
+					<colordiffuse></colordiffuse>
+				</control>
+				<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 			</control>
 
 	<!--(((Recently Added)))=================================================================================================================-->
 			
-			<!--[5]    movies      ============(305)-->
-			<!--[6]    episodes    ============(306)-->
-			<!--[3]    albums      ============(307)-->
-			<!--[21]   music vids  ============(308)-->
+			<!-- [5]    movies      ------------(305)-->
+			<!-- [6]    episodes    ------------(306)-->
+			<!-- [3]    albums      ------------(307)-->
+			<!-- [21]   music vids  ------------(308)-->
 				
-			<control type="group" id="2013"> <!--Recently Added Fullscreen Fanart-->
+			<control type="group" id="2013"> <!-- Recently Added Fullscreen Fanart -->
 				<include>BackgroundOffset</include>
 				<width>1280</width>
 				<include>VariableBackgroundHeight</include>
@@ -501,23 +514,24 @@
 					<width>ScreenWidth</width>
 					<include>VariableBackgroundHeight</include>		
 					<texture>background-dim.png</texture>
-					<!--CustomBackgroundPreviewFadeInAnim-->
+					<!-- CustomBackgroundPreviewFadeInAnim -->
 					<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
+					<!-- CustomBackgroundPreviewFadeInAnim -->
 				</control>
 			</control>
-			<control type="group" id="304">	 <!--Recently Added Controls-->
+			<control type="group" id="304">	 <!-- Recently Added Controls ----------->
 				<posy>105</posy>
 				<posx>805</posx>
 				<onup>600</onup>
 				<width>500</width>
 				<visible>[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]</visible>
-				<!--animations to slide the control on visible or window close-->
+				<!-- animations to slide the control on visible or window close -->
 				<animation effect="slide" end="500" time="300">WindowClose</animation>
 				<animation effect="slide" start="500,0" end="0,0" time="300" delay="800">WindowOpen</animation>
 				<animation effect="slide" start="500,0" end="0,0" time="300">VisibleChange</animation>
-				<!--if we don't have focus, fade out (after a second)-->
+				<!-- if we don't have focus, fade out (after a second)-->
 				<animation effect="fade" start="100" end="75" time="200" delay="1000" condition="!Control.HasFocus(304)">Conditional</animation>
-				<!--fade in when focused, out when unfocused-->
+				<!-- fade in when focused, out when unfocused -->
 				<animation effect="fade" start="75" end="100" time="200">Focus</animation>
 				<control type="image">
 					<width>480</width>
@@ -532,7 +546,7 @@
 					<colordiffuse>BB0067A5</colordiffuse>
 					<visible>ControlGroup(304).HasFocus</visible>
 				</control>
-			<!--LISTS ================================-->				
+			<!-- LISTS -------------------------------->				
 				<control type="group">
 					<posy>5</posy>
 					<posx>25</posx>
@@ -953,7 +967,7 @@
 						<aspectratio align="left">stretch</aspectratio>
 						<bordertexture border="10">Glass/SquareThemeBorder.png</bordertexture>
 						<bordersize>10</bordersize>
-						<texture background="true" fallback="defaultvideobigposterH.png">$INFO[Container(306).ListItem.Property(ItemThumb)]</texture>
+						<texture background="true"  fallback="defaultvideobigposterH.png">$INFO[Container(306).ListItem.Property(ItemThumb)]</texture>
 						<visible>!Container(850).HasFocus(3) + !Container(850).HasFocus(5) + !Container(850).HasFocus(21) + Control.IsVisible(306)</visible>
 					</control>
 				<!--thumbs(songs)-->
@@ -981,6 +995,7 @@
 						<visible>!Container(850).HasFocus(6) + !Container(850).HasFocus(3) + !Container(850).HasFocus(5) + Control.IsVisible(308)</visible>
 					</control>
 				</control>
+			
 			</control>
 	
 	<!--(((System Info)))====================================================================================================================-->
@@ -988,7 +1003,7 @@
 				<visible>Container(850).HasFocus(8) + Skin.HasSetting(HideHomeSysInfo)</visible>
 				<posx>810</posx>
 				<posy>400</posy>
-				<!--fade in when focused, out when unfocused-->
+				<!-- fade in when focused, out when unfocused -->
 				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
@@ -1066,24 +1081,24 @@
 				<description>Category Icon Area</description>		
 				<posx>512</posx>
 				<posy>315</posy>
-				<visible>Skin.HasSetting(HideHomeCategoryIcons) + !Window.IsActive(PlayerControls) + !Window.IsActive(111) + !Window.IsActive(NumericInput)</visible>
+				<visible>Skin.HasSetting(HideHomeCategoryIcons)  + !Window.IsActive(PlayerControls) + !Window.IsActive(111) + !Window.IsActive(NumericInput)</visible>
 				<visible>![Player.HasVideo + Skin.HasSetting(HideHomeCategoryIconsWhenVideo)]</visible>
-				<!--HomeMenuIconOpenCloseAnim-->
+				<!-- HomeMenuIconOpenCloseAnim -->
 				<animation effect="fade" start="0" end="100" time="250" condition="Control.HasFocus(100)">Conditional</animation>
 				<animation effect="fade" end="0" time="250">WindowClose</animation> 
 				
-				<control type="image"> <!--programs-->
+				<control type="image"> <!-- programs -->
 					<description>Programs Icon</description> 
 					<width>256</width>
 					<height>256</height>
 					<texture>home-programs-icon.png</texture>
 					<visible>Container(850).HasFocus(1)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1091,18 +1106,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--pictures-->
+				<control type="image"> <!-- pictures -->
 					<description>Pictures Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-pictures-icon.png</texture>
 					<visible>Container(850).HasFocus(2)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1110,18 +1125,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--music-->
+				<control type="image"> <!-- music ----->
 					<description>Music Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-music-icon.png</texture>
 					<visible>Container(850).HasFocus(3)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1129,18 +1144,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--videos-->
+				<control type="image"> <!-- videos ---->
 					<description>Music Videos Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-musicvids-icon.png</texture>
 					<visible>Container(850).HasFocus(21)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1148,18 +1163,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--videos-->
+				<control type="image"> <!-- videos ---->
 					<description>Videos Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-videos-icon.png</texture>
 					<visible>Container(850).HasFocus(4)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1167,18 +1182,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--movies-->
+				<control type="image"> <!-- movies ---->
 					<description>Movies Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-movies-icon.png</texture>
 					<visible>Container(850).HasFocus(5)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1186,18 +1201,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--tv shows-->
+				<control type="image"> <!-- tv shows -->
 					<description>TV Shows Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-tvshows-icon.png</texture>
 					<visible>Container(850).HasFocus(6)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1205,18 +1220,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--general-->
+				<control type="image"> <!-- general --->
 					<description>General Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-general-icon.png</texture>
 					<visible>Container(850).HasFocus(7)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1224,18 +1239,18 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--system-->
+				<control type="image"> <!-- system ---->
 					<description>System Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-settings-icon.png</texture>
 					<visible>Container(850).HasFocus(8)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1243,19 +1258,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--weather-->
+				<control type="image"> <!-- weather --->
 					<posy>10</posy>
 					<description>Weather Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-weather-icon.png</texture>
 					<visible>Container(850).HasFocus(9)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1263,19 +1278,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--addons-->
+				<control type="image"> <!-- addons ---->
 					<posy>10</posy>
 					<description>Add-ons Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-addons-icon.png</texture>
 					<visible>Container(850).HasFocus(11)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1283,19 +1298,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--scripts-->
+				<control type="image"> <!-- scripts ---->
 					<posy>10</posy>
 					<description>Scripts Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>home-scripts-icon.png</texture>
 					<visible>Container(850).HasFocus(20)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1303,20 +1318,20 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<!--*********************************** CUSTOM ICONS **************************************-->
-				<control type="image"> <!--custom1-->
+				<!--------------------------------------------------------------------------------------- CUSTOM ICONS --------->
+				<control type="image"> <!-- custom1 --->
 					<description>Custom1 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom1IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(12)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1324,19 +1339,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom2-->
+				<control type="image"> <!-- custom2 --->
 					<description>Custom2 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom2IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(13)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1344,19 +1359,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom3-->
+				<control type="image"> <!-- custom3 --->
 					<description>Custom3 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom3IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(14)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1364,19 +1379,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom4-->
+				<control type="image"> <!-- custom4 --->
 					<description>Custom4 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom4IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(15)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1384,19 +1399,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom5-->
+				<control type="image"> <!-- custom5 --->
 					<description>Custom5 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom5IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(16)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1404,19 +1419,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom6-->
+				<control type="image"> <!-- custom6 --->
 					<description>Custom6 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom6IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(17)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation>
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1424,19 +1439,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom7-->
+				<control type="image"> <!-- custom7 --->
 					<description>Custom7 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom7IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(18)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1444,19 +1459,19 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<control type="image"> <!--custom8-->
+				<control type="image"> <!-- custom8 --->
 					<description>Custom8 Icon</description>
 					<width>256</width>
 					<height>256</height>
 					<texture>$INFO[Skin.String(Custom8IconPath)]</texture>
 					<aspectratio>keep</aspectratio>
 					<visible>Container(850).HasFocus(19)</visible>
-					<!--HomeMenuIconAnim-->
+					<!-- HomeMenuIconAnim -->
 					<animation type="Visible">
 						<effect type="fade" end="100" time="250"/>
 						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
 					</animation> 
-					<!--SubMenuIconClickAnim-->
+					<!-- SubMenuIconClickAnim -->
 					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
@@ -1464,15 +1479,15 @@
 					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
-				<!--*********************************************************************************-->
+				<!--------------------------------------------------------------------------------------- CUSTOM ICONS --------->
 			</control>
 	
-			<control type="group">	<!--SUBMENU IMAGE-->
+			<control type="group">	<!-- SUBMENU IMAGE -->
 				<animation effect="slide" start="0,114" time="250" >WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
-				<animation effect="slide" start="0,114" end="0,34" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<!--<animation effect="slide" end="0,-5" time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>-->
-				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<animation effect="slide" start="0,114" end="0,34"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!-- <animation effect="slide" end="0,-5"time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation> -->
+				<animation effect="fade"  start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<control type="image">
 					<animation effect="fade" start="100" end="0" time="50" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<!--if sub has focus on dialog open-->
@@ -1490,12 +1505,12 @@
 					<texture border="80,4,80,4">$VAR[SubMenuImage]</texture>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 					<aspectratio aligny="top">scale</aspectratio>
-					<!--<visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible>-->
+					<!-- <visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible> -->
 					<visible>!Skin.HasSetting(ConstantHomeSubmenu) + ![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
 				</control>
 			</control>
 	
-			<!--*************************** DialogPopUpScreenDim ********************************-->
+			<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 			<control type="image">
 				<include>BackgroundOffset</include>
 				<width>1280</width>
@@ -1507,7 +1522,7 @@
 				<visible>Window.IsActive(ShutdownMenu) | Window.IsActive(LockSettings) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(SelectDialog)
 				| Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)</visible>
 			</control>
-			<!--*********************************************************************************-->
+			<!------------------------------ DialogPopUpScreenDim ------------------------------------>
 			
 	<!--(((Main Menu)))======================================================================================================================-->	
 			<control type="group" id="510">	
@@ -1524,7 +1539,7 @@
 					<texture>bottom-bar-top.png</texture>
 					<visible>!Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</visible>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
-					<!--BottomPaneTopHighlightFadeAnim-->
+					<!-- BottomPaneTopHighlightFadeAnim -->
 					<animation effect="fade" end="15" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -1544,28 +1559,32 @@
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 					<visible>Window.IsVisible(3006) | Window.IsVisible(3007)</visible>
 				</control>
-				<!--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+				<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| (MENU PANE IMAGE) |||||||||||||-->
 				
-				<!--HomeMenuPaneOpenCloseAnim-->
+				<!-- HomeMenuPaneOpenCloseAnim -->
 				<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
 				<animation effect="slide" start="0,114" time="250" delay="1000" tween="circle" easing="out" condition="Window.Next(SystemInfo)">Conditional</animation>
-				<!--HomeMenuPaneSpecificCloseAnim-->
+				
+				<!-- HomeMenuPaneSpecificCloseAnim -->
 				<animation effect="slide" end="0,114" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(NumericInput)">Conditional</animation>
 				<animation effect="slide" end="0,114" time="100" condition=" Window.IsActive(script_HomeSearch.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(SelectDialog)">Conditional</animation>
 				<animation effect="slide" end="0,114" time="200" delay="250" condition="Window.IsActive(virtualkeyboard)">Conditional</animation>
-				<!--CUSTOM_SUB_ANIMATION-->
+				
+				<!-- CUSTOM_SUB_ANIMATION -->
 				<animation effect="slide" end="0,114" time="250" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073)
 				| Window.IsActive(3074) | Window.IsActive(3075) | Window.IsActive(3076) | Window.IsActive(3078)">Conditional</animation>
 				
 				<visible>!Window.IsVisible(Favourites) | !Window.IsVisible(ShutdownMenu) | !Window.IsVisible(3071) | !Window.IsVisible(3072)
 				| !Window.IsVisible(3073) | !Window.IsVisible(3074) | !Window.IsVisible(3075) | !Window.IsVisible(3076) | !Window.IsVisible(3078)</visible>
 			
-			<!--MAIN MENU START ************************************************************-->
+			<!-- MAIN MENU START ------------------------------------------------------------------------------------------>
 				<control type="wraplist" id="850">
 					<animation effect="slide" start="0,0" end="0,-3" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="[Window.IsActive(133) | Window.IsActive(112)] + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 					<animation effect="slide" end="0,11" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!-- no category sub slide -->
+					<!-- <animation effect="slide" end="0,-10" time="0" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Container(850).HasFocus(2) | Container(850).HasFocus(9)]">Conditional</animation> -->
 					<description>Home Menu</description>
 					<posx>15</posx>
 					<posy>27</posy>
@@ -1579,13 +1598,25 @@
 					<preloaditems>2</preloaditems>
 					<onup>900</onup>
 					<ondown>-</ondown>
-					<!--HomeMenuOpenCloseAnim-->
+					<!-- HomeMenuOpenCloseAnim -->
 					<animation effect="fade" end="100" time="650">WindowOpen</animation> 
 					<animation effect="fade" end="0" time="650">WindowClose</animation>
-					<!--HomeMenuFocusAnim-->
+			
+					<!-- HomeMenuFocusAnim -->
 					<animation effect="fade" start="30" end="100" time="650">Focus</animation>
 					<animation effect="fade" start="100" end="30" time="650">Unfocus</animation>
+				
 					<itemlayout width="400">
+					<!--
+						<control type="image">
+							<width>350</width>
+							<height>64</height>
+							<posx>0</posx>
+							<posy>0</posy>
+							<texture>special://skin/images/skin/default-background-blue-center.jpg</texture>
+							<colordiffuse>bbbbbbbb</colordiffuse>
+						</control>
+					-->
 						<control type="label">
 							<posx>175</posx>
 							<posy>0</posy>
@@ -1616,6 +1647,16 @@
 						</control>
 					</itemlayout>	
 					<focusedlayout width="500">
+					<!--	
+						<control type="image">
+							<width>534</width>
+							<height>64</height>
+							<posx>-42</posx>
+							<posy>0</posy>
+							<texture>special://skin/images/skin/default-background-blue-center.jpg</texture>
+							<colordiffuse>bbbbbbbb</colordiffuse>
+						</control>
+					-->
 						<control type="label">
 							<Description>Home Menu Bar Focus</Description>
 							<posx>226</posx>
@@ -1629,9 +1670,10 @@
 							<font>HomeMenuFontFocus</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<!--HomeMenuCategoryFocusAnim-->
+							<!-- HomeMenuCategoryFocusAnim -->
 							<animation effect="zoom" delay="140" start="75" end="100" center="250,32" time="150">Focus</animation>
 							<animation effect="zoom" start="100" end="75" center="250,32" time="90">Unfocus</animation>
+							<!-- HomeMenuCategoryFocusAnim -->
 						</control>
 						<control type="label">
 							<Description>Home Menu Bar Focus</Description>
@@ -1646,12 +1688,14 @@
 							<font>HomeMenuFontFocus</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<!--HomeMenuCategoryFocusAnim-->
+							<!-- HomeMenuCategoryFocusAnim -->
 							<animation effect="zoom" delay="140" start="75" end="100" center="250,32" time="150">Focus</animation>
 							<animation effect="zoom" start="100" end="75" center="250,32" time="90">Unfocus</animation>
+							<!-- HomeMenuCategoryFocusAnim -->
 							<visible>!IsEmpty(Skin.String(Custom1BtnParam)) | !IsEmpty(Skin.String(Custom2BtnParam)) | !IsEmpty(Skin.String(Custom3BtnParam)) | !IsEmpty(Skin.String(Custom4BtnParam))
 							| !IsEmpty(Skin.String(Custom5BtnParam)) | !IsEmpty(Skin.String(Custom6BtnParam)) | !IsEmpty(Skin.String(Custom7BtnParam)) | !IsEmpty(Skin.String(Custom8BtnParam))</visible>
 						</control>
+					<!-------------------------------------------------- CUSTOM HOME CATS FOCUS -------------------------------------------------------------->		
 					</focusedlayout>
 					<content>				
 						<item id="4">
@@ -1665,7 +1709,7 @@
 						<item id="5">
 							<description>Movies Category</description>
 							<label>20342</label>
-							<!--<label>|</label>-->
+							<!--<label>|</label>--->
 							<icon>-</icon>
 							<thumb>$INFO[Skin.String(MoviesCustomBG)]</thumb>
 							<onclick>ActivateWindow(VideoLibrary,MovieTitles,Return)</onclick>  
@@ -1756,7 +1800,7 @@
 							<label>31919</label>
 							<icon>-</icon>
 							<thumb>$INFO[Skin.String(AddonsCustomBG)]</thumb>
-							<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/,return)</onclick>		
+							<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/,return)</onclick>	
 							<visible>!Skin.HasSetting(HideAddonsCategory)</visible>
 						</item>
 						<!--
@@ -1768,8 +1812,8 @@
 							<visible>Skin.HasSetting(HideSearchCategory)</visible>
 						</item>
 						-->
-					<!--CUSTOM ITEMS-->	
-						<item id="12"> <!--CUSTOM_HOME_MENU_CAT_1-->
+					<!-----------------------------------------------------------(((CustomHomeCatsNo_Focus/Focus)------------------>	
+						<item id="12"> <!---CUSTOM_HOME_MENU_CAT_1--->
 							<description>Custom1 Category</description>
 							<label2>$INFO[Skin.String(Custom1Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1777,7 +1821,7 @@
 							<onclick>$INFO[Skin.String(Custom1BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom1BtnParam))</visible>
 						</item>
-						<item id="13"> <!--CUSTOM_HOME_MENU_CAT_2-->
+						<item id="13"> <!---CUSTOM_HOME_MENU_CAT_2--->
 							<description>Custom2 Category</description>
 							<label2>$INFO[Skin.String(Custom2Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1785,7 +1829,7 @@
 							<onclick>$INFO[Skin.String(Custom2BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom2BtnParam))</visible>
 						</item>
-						<item id="14"> <!--CUSTOM_HOME_MENU_CAT_3-->
+						<item id="14"> <!---CUSTOM_HOME_MENU_CAT_3--->
 							<description>Custom3 Category</description>
 							<label2>$INFO[Skin.String(Custom3Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1793,7 +1837,7 @@
 							<onclick>$INFO[Skin.String(Custom3BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom3BtnParam))</visible>
 						</item>
-						<item id="15"> <!--CUSTOM_HOME_MENU_CAT_4-->
+						<item id="15"> <!---CUSTOM_HOME_MENU_CAT_4--->
 							<description>Custom4 Category</description>
 							<label2>$INFO[Skin.String(Custom4Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1801,7 +1845,7 @@
 							<onclick>$INFO[Skin.String(Custom4BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom4BtnParam))</visible>
 						</item>
-						<item id="16"> <!--CUSTOM_HOME_MENU_CAT_5-->
+						<item id="16"> <!---CUSTOM_HOME_MENU_CAT_5--->
 							<description>Custom5 Category</description>
 							<label2>$INFO[Skin.String(Custom5Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1809,7 +1853,7 @@
 							<onclick>$INFO[Skin.String(Custom5BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom5BtnParam))</visible>
 						</item>
-						<item id="17"> <!--CUSTOM_HOME_MENU_CAT_6-->
+						<item id="17"> <!---CUSTOM_HOME_MENU_CAT_6--->
 							<description>Custom6 Category</description>
 							<label2>$INFO[Skin.String(Custom6Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1817,7 +1861,7 @@
 							<onclick>$INFO[Skin.String(Custom6BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom6BtnParam))</visible>
 						</item>
-						<item id="18"> <!--CUSTOM_HOME_MENU_CAT_7-->
+						<item id="18"> <!---CUSTOM_HOME_MENU_CAT_7--->
 							<description>Custom7 Category</description>
 							<label2>$INFO[Skin.String(Custom7Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1825,7 +1869,7 @@
 							<onclick>$INFO[Skin.String(Custom7BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom7BtnParam))</visible>
 						</item>
-						<item id="19"> <!--CUSTOM_HOME_MENU_CAT_8-->
+						<item id="19"> <!---CUSTOM_HOME_MENU_CAT_8--->
 							<description>Custom8 Category</description>
 							<label2>$INFO[Skin.String(Custom8Btn-NAME)]</label2>
 							<icon>-</icon>
@@ -1833,9 +1877,10 @@
 							<onclick>$INFO[Skin.String(Custom8BtnParam)]</onclick>
 							<visible>!IsEmpty(Skin.String(Custom8BtnParam))</visible>
 						</item>
+					<!-----------------------------------------------------------(((CustomHomeCatsNo_Focus/Focus)------------------>	
 					</content>			
 				</control>
-			<!--MAIN MENU END **************************************************************-->			
+			<!-- MAIN MENU END -------------------------------------------------------------------------------------------->			
 				
 				<control type="image">
 					<description>Home Menu-Pane Overlay</description>
@@ -1844,7 +1889,7 @@
 					<height>120</height>
 					<texture>bottom-bar-overlay3.png</texture>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
-					<!--<visible>[!Window.IsVisible(3006) + !Window.IsVisible(3007)] + !Skin.HasSetting(ConstantHomeSubmenu)</visible>-->
+					<!-- <visible>[!Window.IsVisible(3006) + !Window.IsVisible(3007)] + !Skin.HasSetting(ConstantHomeSubmenu)</visible> -->
 					<visible>[!Window.IsVisible(3006) + !Window.IsVisible(3007)]</visible>
 				</control>	
 				<control type="image">
@@ -1885,9 +1930,10 @@
 				<onup>600</onup>
 				<animation effect="slide" start="0,114" time="250" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,114" time="250" delay="250" tween="circle" easing="out">WindowClose</animation>
-				<animation effect="slide" start="0,114" end="0,33" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<animation effect="fade" start="100" end="60" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<animation effect="slide" start="0,114" end="0,33"time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!-- <animation effect="slide" end="0,-5"time="0" condition="!Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation> -->
+				<animation effect="fade"  start="100" end="60" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<animation effect="fade"  start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<control type="group">	
 					<height>40</height>
 					<onup>600</onup>
@@ -1912,13 +1958,12 @@
 						<visible>Skin.HasSetting(ConstantHomeSubmenu) + ![Container(850).HasFocus(2) | Container(850).HasFocus(9)]</visible>
 					</control>
 					
-					<control type="group"> <!--arrows-->
-						<!--ControlsOpenCloseAnim-->
+					<control type="group"> <!-- arrows -->
+						<!-- ControlsOpenCloseAnim -->
 						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 						<animation effect="fade" start="100" end="0" time="50" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
-						<animation effect="fade" start="100" end="0" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 						<control type="image">
 							<description>Left Submenu Arrow</description>
 							<posx>5</posx>
@@ -1941,7 +1986,7 @@
 					
 					<visible>![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
 
-					<control type="list" id="110"> <!--VIDEOS ======(((4)====--> <!--(((3072)-->
+					<control type="list" id="110"> <!--VIDEOS----(((4)--> <!--(((3072)-->
 						<description>Videos Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -1950,9 +1995,10 @@
 						<ondown>850</ondown>
 						<onup>600</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(4) + !Skin.HasSetting(ShowVideosSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -1994,6 +2040,7 @@
 							</control>
 						</focusedlayout>
 						<content>
+							
 							<item id="2">
 								<description>Video Plugins</description>
 								<label>24001</label>
@@ -2009,7 +2056,7 @@
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc.org,Return)</onclick>		
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
 								<visible>!Skin.HasSetting(HideVideoAddonsButton)</visible>
 							</item>
 							<item id="4">
@@ -2040,9 +2087,9 @@
 								<onclick>ActivateWindow(3072,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideVideosAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--'''''''''''''''''''''''''''''''''''' CUSTOM VIDEOS SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM VIDEOS SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(VideosSubMenuBtn1-scripticon)]</icon>
@@ -2072,6 +2119,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn1-NAME) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2102,6 +2150,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn2-NAME) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2132,6 +2181,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn3-NAME) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -2162,6 +2212,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn4-NAME) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -2192,6 +2243,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn5-NAME) + Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -2222,6 +2274,7 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -2252,11 +2305,11 @@
 								<onclick>$INFO[Skin.String(VideosSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(VideosSubMenuBtn7-NAME) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>						
 					</control>	
 			
-					<control type="list" id="110"> <!--GENERAL =====(((7)====--> <!--(((3076)-->
+					<control type="list" id="110"> <!--GENERAL---(((7)--> <!--(((3076)-->
 						<description>General Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2265,9 +2318,10 @@
 						<ondown>850</ondown>
 						<onup>600</onup>
 						<orientation>horizontal</orientation>	
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(7) + !Skin.HasSetting(ShowGeneralSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2349,9 +2403,9 @@
 								<onclick>ActivateWindow(3076,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideGeneralAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--'''''''''''''''''''''''''''''''''''' CUSTOM General SUB-MENUS '''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM General SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(GeneralSubMenuBtn1-scripticon)]</icon>
@@ -2381,6 +2435,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn1-NAME) + Skin.String(GeneralSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2411,6 +2466,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn2-NAME) + Skin.String(GeneralSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2441,6 +2497,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn3-NAME) + Skin.String(GeneralSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -2471,6 +2528,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn4-NAME) + Skin.String(GeneralSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -2501,6 +2559,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn5-NAME) + Skin.String(GeneralSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -2531,6 +2590,7 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn6-NAME) + Skin.String(GeneralSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -2561,11 +2621,11 @@
 								<onclick>$INFO[Skin.String(GeneralSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(GeneralSubMenuBtn7-NAME) + Skin.String(GeneralSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>	
 					</control>			
 			
-					<control type="list" id="110"> <!--SYSTEM ======(((8)====================-->
+					<control type="list" id="110"> <!--SYSTEM----(((8)---------------->
 						<description>System Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2574,9 +2634,10 @@
 						<ondown>850</ondown>
 						<onup>600</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(8) + !Skin.HasSetting(ShowSystemSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2630,10 +2691,11 @@
 								<onclick>ActivateWindow(3001)</onclick>	
 								<visible>!Skin.HasSetting(HideSystemSkinSettingsButton)</visible>
 							</item>
+							
 							<item id="3">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/,Return)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/)</onclick>
 								<visible>!Skin.HasSetting(HideSystemAddonsButton)</visible>
 							</item>
 							
@@ -2652,7 +2714,7 @@
 						</content>						
 					</control>
 					
-					<control type="list" id="110"> <!--MusicVids ===(((21)===================-->
+					<control type="list" id="110"> <!--MusicVids-(((21)---------------->
 						<description>MusicVids Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2661,9 +2723,10 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(21) + !Skin.HasSetting(ShowMusicVidsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -2723,12 +2786,14 @@
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoArtists,Return)</onclick>	
 								<visible>!Skin.HasSetting(HideMusicVidsArtistButton)</visible>
 							</item>
+							
 							<item id="3">
 								<description>genres</description>
 								<label>135</label>
 								<onclick>ActivateWindow(VideoLibrary,MusicVideoGenres,Return)</onclick>
 								<visible>!Skin.HasSetting(HideMusicVidsGenreButton)</visible>
 							</item>
+							
 							<item id="4">
 								<description>directors</description>
 								<label>20348</label>
@@ -2744,7 +2809,8 @@
 						</content>						
 					</control>
 					
-					<control type="list" id="110"> <!--PROGRAMS ====(((1)====--> <!--(((3071)-->
+					
+					<control type="list" id="110"> <!--PROGRAMS--(((1)--> <!--(((3071)-->
 						<description>Programs Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2802,6 +2868,7 @@
 								<onclick>ActivateWindow(Programs,Plugins,return)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsPluginButton)</visible>
 							</item>
+							
 							<item id="2">
 								<description>Games</description>
 								<label>15016</label>
@@ -2811,7 +2878,7 @@
 							<item id="1">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.program.&amp;repoid=repository.xbmc.org,Return)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.program.&amp;repoid=repository.xbmc4xbox/)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsAddonsButton)</visible>
 							</item>	
 							<item id="4">
@@ -2836,9 +2903,9 @@
 								<onclick>ActivateWindow(3071,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideProgramsAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--'''''''''''''''''''''''''''''''''''' CUSTOM Programs SUB-MENUS ''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM Programs SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(ProgramsSubMenuBtn1-scripticon)]</icon>
@@ -2868,6 +2935,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn1-NAME) + Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -2898,6 +2966,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn2-NAME) + Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -2928,6 +2997,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn3-NAME) + Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -2958,6 +3028,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn4-NAME) + Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -2988,6 +3059,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn5-NAME) + Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3018,6 +3090,7 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn6-NAME) + Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3048,15 +3121,15 @@
 								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(ProgramsSubMenuBtn7-NAME) + Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>						
 					</control>	
 					
-					<!--=======================--> <!--PICTURES ====(((2)====================-->
+					<!---------------------------> <!--PICTURES--(((2)---------------->
 					
-					<!--=======================--> <!--WEATHER =====(((9)====================-->
+					<!---------------------------> <!--WEATHER---(((9)---------------->
 					
-					<control type="list" id="110"> <!--MOVIES ======(((5)====--> <!--(((3073)-->
+					<control type="list" id="110"> <!--MOVIES----(((5)--> <!--(((3073)-->
 						<description>Movies Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3065,9 +3138,10 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(5) + !Skin.HasSetting(ShowMoviesSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3155,9 +3229,9 @@
 								<onclick>ActivateWindow(3073,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMoviesAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--'''''''''''''''''''''''''''''''''''' CUSTOM MOVIES SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM MOVIES SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(MoviesSubMenuBtn1-scripticon)]</icon>
@@ -3187,6 +3261,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn1-NAME) + Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3217,6 +3292,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn2-NAME) + Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3247,6 +3323,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn3-NAME) + Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3277,6 +3354,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn4-NAME) + Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3307,6 +3385,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn5-NAME) + Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3337,6 +3416,7 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn6-NAME) + Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3367,11 +3447,11 @@
 								<onclick>$INFO[Skin.String(MoviesSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(MoviesSubMenuBtn7-NAME) + Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>						
 					</control>					
 				
-					<control type="list" id="110"> <!--TV SHOWS ====(((6)====--> <!--(((3074)-->
+					<control type="list" id="110"> <!--TV SHOWS--(((6)--> <!--(((3074)-->
 						<description>TV Shows Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3380,9 +3460,10 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(6) + !Skin.HasSetting(ShowTvShowsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3460,6 +3541,7 @@
 								<onclick>UpdateLibrary(video)</onclick>
 								<visible>!Skin.HasSetting(HideTvShowsUpdateButton)</visible>
 							</item>	
+						
 							<item id="15">
 								<description>Custom Items</description>
 								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
@@ -3470,9 +3552,9 @@
 								<onclick>ActivateWindow(3074,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideTvShowsAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--''''''''''''''''''''''''''''''''''' CUSTOM TVShows SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM TVShows SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(TVShowsSubMenuBtn1-scripticon)]</icon>
@@ -3502,6 +3584,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn1-NAME) + Skin.String(TVShowsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3532,6 +3615,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn2-NAME) + Skin.String(TVShowsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3562,6 +3646,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn3-NAME) + Skin.String(TVShowsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3592,6 +3677,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn4-NAME) + Skin.String(TVShowsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3622,6 +3708,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn5-NAME) + Skin.String(TVShowsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3652,6 +3739,7 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn6-NAME) + Skin.String(TVShowsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -3682,11 +3770,11 @@
 								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(TVShowsSubMenuBtn7-NAME) + Skin.String(TVShowsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>
 					</control>		
 				
-					<control type="list" id="110"> <!--MUSIC =======(((3)====--> <!--(((3075)-->
+					<control type="list" id="110"> <!--MUSIC-----(((3)--> <!--(((3075)-->
 						<description>Music Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3695,9 +3783,10 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(3) + !Skin.HasSetting(ShowMusicSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -3739,14 +3828,16 @@
 							</control>
 						</focusedlayout>
 						<content>
-					<!--||||| THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! ||||||||-->
+							
+					<!--||||||||||||||||||||||||||||||||  THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! |||||||||||||||||||||||||-->
 							<!--<item id="8">
 								<description>Custom</description>
 								<label>20190</label>
 								<onclick>ActivateWindow(3077)</onclick>	
 								<visible>Skin.HasSetting(ShowHomeCustomIcons)</visible>
 							</item>-->
-					<!--||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||-->
+					<!--||||||||||||||||||||||||||||||||  THIS WILL BE FOR SLIDE OUT LIST AND ICON WHEN I GET AROUND TO IT! |||||||||||||||||||||||||-->
+					
 							<item id="1">
 								<description>Artists</description>
 								<label>133</label>
@@ -3762,7 +3853,7 @@
 							<item id="6">
 								<description>Add-Ons</description>
 								<label>31919</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc.org,Return)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>
 								<visible>!Skin.HasSetting(HideMusicAddonsButton)</visible>
 							</item>
 							<item id="3">
@@ -3805,9 +3896,9 @@
 								<onclick>ActivateWindow(3075,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMusicAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--''''''''''''''''''''''''''''''''''''' CUSTOM MUSIC SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM MUSIC SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(MusicSubMenuBtn1-scripticon)]</icon>
@@ -3837,6 +3928,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn1-NAME) + Skin.String(MusicSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -3867,6 +3959,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn2-NAME) + Skin.String(MusicSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -3897,6 +3990,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn3-NAME) + Skin.String(MusicSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -3927,6 +4021,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn4-NAME) + Skin.String(MusicSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -3957,6 +4052,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn5-NAME) + Skin.String(MusicSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -3987,6 +4083,7 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn6-NAME) + Skin.String(MusicSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -4017,11 +4114,11 @@
 								<onclick>$INFO[Skin.String(MusicSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(MusicSubMenuBtn7-NAME) + Skin.String(MusicSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>						
 					</control>	
 				
-					<control type="list" id="110"> <!--ADD-ONS =====(((11)===--> <!--(((3078)-->
+					<control type="list" id="110"> <!--ADD-ONS---(((11)-> <!--(((3078)-->
 						<description>Add-Ons Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -4030,9 +4127,10 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
-						<!--HomeSubMenuOpenCloseAnim-->
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
+						<!-- HomeSubMenuOpenCloseAnim -->
 						<visible>Container(850).HasFocus(11) + !Skin.HasSetting(ShowAddonsSubmenu)</visible>
 						<itemlayout width="242">
 							<control type="label">
@@ -4077,26 +4175,25 @@
 							<item id="1">
 								<description>VIDEO Add-Ons</description>
 								<label>$LOCALIZE[157]</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc.org,Return)</onclick>		
-										
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.video.&amp;repoid=repository.xbmc4xbox/)</onclick>		
 								<visible>!Skin.HasSetting(HideAddonsVideoButton)</visible>
 							</item>
 							<item id="2">
 								<description>MUSIC Add-Ons</description>
 								<label>$LOCALIZE[249]</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc.org,Return)</onclick>			
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=plugin.audio.&amp;repoid=repository.xbmc4xbox/)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="3">
 								<description>XBMC.ORG Add-Ons</description>
 								<label>XBMC.ORG</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/,Return)</onclick>
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listcataddon&amp;repoid=repository.xbmc.org/)</onclick>
 								<visible>!Skin.HasSetting(HideAddonsMusicButton)</visible>
 							</item>
 							<item id="5">
 								<description>LIBRARIES</description>
 								<label>.MODULES</label>
-								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc.org,Return)</onclick>			
+								<onclick>ActivateWindow(programs,plugin://programs/Addons4Xbox Installer?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc4xbox/)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsModulesButton)</visible>
 							</item>
 							<item id="15">
@@ -4109,9 +4206,9 @@
 								<onclick>ActivateWindow(3078,return)</onclick>
 								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideAddonsAddCustomButton)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--''''''''''''''''''''''''''''''''''' CUSTOM Add-Ons SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
-						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!------------------------------------------------------------------------------------------------------------>	
+						<!--------------------------------------- CUSTOM Add-Ons SUB-MENUS --------------------------------------------->	
+						<!--Button1--------------------------------------------------------------------------------------------------->
 							<item id="1">
 								<description>Custom Script Button 1</description>
 								<icon>$INFO[Skin.String(Add_onsSubMenuBtn1-scripticon)]</icon>
@@ -4141,6 +4238,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn1Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn1-NAME) + Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
 							</item>
+						<!--Button1-->
 						<!--Button2-->
 							<item id="2">
 								<description>Custom Script Button 2</description>
@@ -4171,6 +4269,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn2Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn2-NAME) + Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
 							</item>
+						<!--Button2-->
 						<!--Button3-->
 							<item id="3">
 								<description>Custom Script Button 3</description>
@@ -4201,6 +4300,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn3Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn3-NAME) + Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
 							</item>
+						<!--Button3-->
 						<!--Button4-->
 							<item id="4">
 								<description>Custom Script Button 4</description>
@@ -4231,6 +4331,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn4Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn4-NAME) + Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
 							</item>
+						<!--Button4-->
 						<!--Button5-->
 							<item id="5">
 								<description>Custom Script Button 5</description>
@@ -4261,6 +4362,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn5Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn5-NAME) + Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
 							</item>
+						<!--Button5-->
 						<!--Button6-->
 							<item id="6">
 								<description>Custom Script Button 6</description>
@@ -4291,6 +4393,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn6Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn6-NAME) + Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
 							</item>
+						<!--Button6-->
 						<!--Button7-->
 							<item id="7">
 								<description>Custom Script Button 7</description>
@@ -4321,7 +4424,7 @@
 								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn7Param)]</onclick>
 								<visible>Skin.string(Add_onsSubMenuBtn7-NAME) + Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
 							</item>
-						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+						<!--Button7------------------------------------------------------------------------------------------------------------>
 						</content>
 					</control>	
 				</control>	
@@ -4330,7 +4433,7 @@
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
 				<visible>Player.HasMedia</visible>
-			<!--VIDEO-->
+			<!-- VIDEO ----------------------------->
 				<control type="group" id="1243">	
 					<posy>105</posy>
 					<visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingVideos)</visible>
@@ -4344,7 +4447,7 @@
 					<control type="group">
 						<posy>5</posy>
 						<posx>155</posx>
-						<!--Movie Case with Cover-->
+						<!-- Movie Case with Cover -->
 						<control type="image">
 							<posy>7</posy>
 							<posx>-140</posx>
@@ -4365,7 +4468,7 @@
 							<texture>home/nowplaying_overlay.png</texture>
 							<aspectratio align="center">keep</aspectratio>
 						</control>
-						<!--Movie Case with Cover-->
+						<!--  Movie Case with Cover -->
 						<control type="label">
 							<description>Title/Year</description>
 							<posy>2</posy>
@@ -4447,21 +4550,21 @@
 							<width>316</width>
 							<height>78</height>
 							<font>font12</font>
-							<!--DefaultPlot-->
+							<!-- DefaultPlot -->
 							<font>MediaInfoFont</font>
 							<textcolor>MediaInfoDetailsColor</textcolor>
 							<align>justify</align>
-							<!--DefaultPlot-->
+							<!-- DefaultPlot -->
 							<label>$INFO[VideoPlayer.Plot]</label>
 							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
-							<!--ControlsOpenCloseAnim-->
+							<!-- ControlsOpenCloseAnim -->
 							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 				</control>
-			<!--AUDIO-->		
+			<!-- AUDIO ----------------------------->			
 				<control type="group">
 					<posy>105</posy>
 					<visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingMusic)</visible>
@@ -4475,11 +4578,11 @@
 					<control type="group">
 						<posy>5</posy>
 						<posx>155</posx>
-						<!--Mod Rotating CD with Cover-->
+						<!-- Mod Rotating CD with Cover -->
 						<control type="group">
 							<posy>0</posy>
 							<posx>-8</posx>
-							<!--Rotating CD Code-->
+							<!-- Rotating CD Code -->
 							<control type="image">
 								<description>Cd overlay</description>
 								<animation type="WindowOpen">
@@ -4497,8 +4600,8 @@
 								<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
 								<width>120</width>
 								<height>120</height>
-								<posx>-85</posx><!--112-->
-								<posy>10</posy><!--143-->
+								<posx>-85</posx><!-- 112 -->
+								<posy>10</posy><!-- -143 -->
 								<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 								<aspectratio align="bottom">keep</aspectratio>
 							</control>
@@ -4521,7 +4624,7 @@
 								</control>
 							</control>
 						</control>
-						<!--End Mod Rotating CD with cover-->
+						<!-- End Mod Rotating CD with cover-->
 						<control type="label">
 							<description>Title/Year</description>
 							<posy>2</posy>
@@ -4611,7 +4714,7 @@
 						</control>
 					</control>
 				</control>
-				<!--NowPlayingOpenCloseAnim-->
+				<!-- NowPlayingOpenCloseAnim -->
 				<animation effect="slide" start="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowOpen</animation>
 				<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowClose</animation>
 				<animation effect="slide" end="-700,0" time="150" tween="cubic" easing="out" condition="Player.HasMedia + [Window.IsActive(ShutdownMenu)
@@ -4619,7 +4722,7 @@
 				| Window.IsActive(3076) | Window.IsActive(3078)]">Conditional</animation>
 			</control>
 	
-			<control type="group" id="505">	<!--RSS FEEDS-->
+			<control type="group" id="505">	<!--------- RSS FEEDS ------------->
 				<description>Menu Bar Area</description>			
 				<posy>MenuBarOffsetY</posy>	
 				<height>34</height>
@@ -4630,7 +4733,7 @@
 					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
 					<aspectratio>stretch</aspectratio>
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
-					<!--MenuBarRSSFeedsOpenCloseAnim-->
+					<!-- MenuBarRSSFeedsOpenCloseAnim -->
 					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
 				</control>
 				<control type="rss">
@@ -4643,13 +4746,13 @@
 					<textcolor>Grey</textcolor>
 					<titlecolor>ThemeColor</titlecolor>
 					<headlinecolor>ff8A795D</headlinecolor>
-					<!--MenuBarRSSFeedsOpenCloseAnim-->
+					<!-- MenuBarRSSFeedsOpenCloseAnim -->
 					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
 				</control>
-				<!--MenuBarRSSFeedsOpenCloseAnim-->
+				<!-- MenuBarRSSFeedsOpenCloseAnim -->
 				<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
 				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowClose</animation>
-				<animation effect="slide" start="0,-86" time="300" delay="250" condition="Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
+				<animation effect="slide" start="0,-86" time="300" delay="250"condition="Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
 				<animation effect="slide" end="0,-86" time="300" condition="Skin.HasSetting(TransparentMenuBacks)">WindowClose</animation>
 				<visible>System.GetBool(LookAndFeel.EnableRSSFeeds)</visible>
 			</control>
@@ -4662,7 +4765,7 @@
 						<width>ScreenWidth</width>
 						<height>53</height>
 						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
-						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 					</control>
 					<control type="image" id="1110">
 						<width>ScreenWidth</width>
@@ -4681,14 +4784,14 @@
 					<posy>4</posy>
 					<defaultcontrol always="true">350</defaultcontrol>
 					<control type="group">	
-						<!--SearchIconSlideAnim-->
+						<!-- SearchIconSlideAnim -->
 						<animation effect="slide" start="0,0" end="-30,0" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon)">WindowOpen</animation>
 						<animation effect="slide" start="-30,0" end="0,0" delay="200" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon)">WindowClose</animation>
 						<control type="image">			
 							<width>219</width>
 							<height>35</height>
 							<texture border="8">SystemTray/top-bar-status-background.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						</control>
 						<control type="label">
 							<description>Time</description>
@@ -4697,7 +4800,7 @@
 							<width>145</width>
 							<height>35</height>
 							<font>TimeFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 							<aligny>center</aligny>
 							<label>$INFO[System.Time]</label>
 						</control>
@@ -4720,7 +4823,7 @@
 								<ondown>850</ondown>
 								<onleft>346</onleft>
 								<onright>350</onright>
-								<!--SystemTrayButtonFocusAnim-->
+								<!-- SystemTrayButtonFocusAnim -->
 								<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
 								<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
 							</control>
@@ -4750,7 +4853,7 @@
 								<ondown>850</ondown>
 								<onleft>458</onleft>
 								<onright>345</onright>
-								<!--SystemTrayButtonFocusAnim-->
+								<!-- SystemTrayButtonFocusAnim -->
 								<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
 								<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
 							</control>
@@ -4778,7 +4881,7 @@
 							<width>35</width>
 							<height>35</height>
 							<texture border="8">SystemTray/top-bar-status-background.png</texture>
-							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 						</control>
 						<control type="button" id="350">
 							<description>SEARCH ICON</description>
@@ -4796,7 +4899,7 @@
 							<ondown>850</ondown>
 							<onleft>345</onleft>
 							<onright>837</onright>
-							<!--SystemTrayButtonFocusAnim-->
+							<!-- SystemTrayButtonFocusAnim -->
 							<animation effect="zoom" end="110" center="20,17" time="100">Focus</animation>
 							<animation effect="zoom" start="110" end="100" center="20,17" time="100">Unfocus</animation>
 						</control>
@@ -4821,10 +4924,10 @@
 						<width>70</width>
 						<height>44</height> <!--BC HOME-->
 						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
-						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 					</control>	
 				 <!--home icon-->
-					<control type="button" id="837">
+					<control type="button"  id="837">
 						<posx>10</posx>
 						<posy>6</posy>
 						<width>31</width>
@@ -4863,7 +4966,7 @@
 						<height>35</height>
 						<texture border="8">SystemTray/top-bar-status-background.png</texture>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse>
-						<!--<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>-->
+						<!-- <animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation> -->
 					</control>	
 				<!--xbumc4xbox logo-->		
 					<control type="button" id="837"> 
@@ -4873,7 +4976,7 @@
 						<height>33</height>
 						<texturefocus>Breadcrumb/xbmc4xbox_logo_focus.png</texturefocus>
 						<texturenofocus></texturenofocus>
-						<colordiffuse></colordiffuse> <!--DEFAULT-->
+						<colordiffuse></colordiffuse> <!-- DEFAULT -->
 						<onclick>ActivateWindow(Home)</onclick>
 						<pulseonselect time="400">true</pulseonselect>
 						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
@@ -4881,7 +4984,7 @@
 						<onright>458</onright>
 						<onleft>350</onleft>
 						<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
-						<!--<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>-->
+						<!-- <animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation> -->
 					</control>
 					<control type="image">
 						<description>xbmc4xbox Icon No Focus</description>
@@ -4898,7 +5001,7 @@
 				
 				<!--********************************** (WeatherNotification) ****************************************-->
 				<control type="group">
-					<!--SearchIconSlideAnim-->
+					<!-- SearchIconSlideAnim -->
 					<animation effect="slide" start="0,0" end="-30,0" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon) + [!Player.HasMedia | Player.HasMedia]">WindowOpen</animation>
 					<animation effect="slide" start="-30,0" end="0,0" delay="200" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon) + [!Player.HasMedia | Player.HasMedia]">WindowClose</animation>
 					<control type="group" id="456">
@@ -4906,7 +5009,7 @@
 						<posy>4</posy>
 						<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
 						+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
-						<!--WeatherNotificationOpenCloseAnim-->
+						<!-- WeatherNotificationOpenCloseAnim -->
 						<animation effect="fade" end="100" time="200">Visible</animation>
 						<animation effect="fade" end="0" time="200">Hidden</animation> 
 						<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
@@ -4935,7 +5038,7 @@
 							<width>55</width>
 							<height>35</height>
 							<font>VolumeFont</font>
-							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[Weather.Temperature]</label>
@@ -4959,17 +5062,17 @@
 				
 				<!--******************************** (MediaPlayingNotification) *************************************-->
 				<control type="group">
-					<!--SearchIconSlideAnim-->
+					<!-- SearchIconSlideAnim -->
 					<animation effect="slide" start="0,0" end="-30,0" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon) + [!Player.HasMedia | Player.HasMedia]">WindowOpen</animation>
 					<animation effect="slide" start="-30,0" end="0,0" delay="200" time="300" condition="!Skin.HasSetting(HideGlobalSearchIcon) + [!Player.HasMedia | Player.HasMedia]">WindowClose</animation>
 					<control type="group">
 						<posx>780</posx>
 						<posy>4</posy>
 						<visible>Player.HasMedia</visible>
-						<!--MediaPlayingNotificationOpenCloseAnim-->
+						<!-- MediaPlayingNotificationOpenCloseAnim -->
 						<animation effect="fade" end="100" time="200">Visible</animation>
 						<animation effect="fade" end="0" time="200">Hidden</animation>
-						<!--MediaPlayingNotificationShiftAnim3-->
+						<!-- MediaPlayingNotificationShiftAnim3 -->
 						<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
 						<control type="image">
 							<width>270</width>
@@ -4984,7 +5087,7 @@
 							<height>25</height>
 							<texture>defaultaudio.png</texture>
 							<visible>Player.HasAudio</visible>
-							<!--MediaPlayingPulseAnim-->
+							<!-- MediaPlayingPulseAnim -->
 							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
@@ -4994,7 +5097,7 @@
 							<height>25</height>
 							<texture>defaultvideo.png</texture>
 							<visible>Player.HasVideo</visible>
-							<!--MediaPlayingPulseAnim-->
+							<!-- MediaPlayingPulseAnim -->
 							<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
 						</control>
 						<control type="group">
@@ -5011,7 +5114,7 @@
 								<height>15</height>
 								<scrollout>false</scrollout>
 								<font>ScanContentFont</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 								<align>left</align>
 								<aligny>center</aligny>
 								<pauseatend>4000</pauseatend>
@@ -5028,7 +5131,7 @@
 								<width>224</width>
 								<height>15</height>
 								<font>ScanContentFont2</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
@@ -5047,7 +5150,7 @@
 								<width>224</width>
 								<height>15</height>
 								<font>ScanContentFont</font>
-								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
@@ -5067,9 +5170,9 @@
 							</control>
 						</control>
 					</control>
-				</control>
+				</control>	
 				<!--*************************************************************************************************-->
 			</control>
 		</control>
-	</controls>
+	</controls>	
 </window>

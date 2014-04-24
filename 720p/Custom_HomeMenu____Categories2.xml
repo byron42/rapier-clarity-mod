@@ -1,12 +1,12 @@
-<window type="dialog" id="3083"> <!--HOME-CATEGORIES-->
+<window type="dialog" id="3083"> <!-- HOME-CATEGORIES -->
 	<defaultcontrol always="true">939</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
 			
 		<!--(((CONTROLS)))=================================================================================================================================-->	
 			<control type="group">
@@ -14,8 +14,8 @@
 				<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(3001)">WindowClose</animation>
 				<!---->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3080) | Window.IsActive(126)">Conditional</animation>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="![Window.IsActive(3080) | Window.IsActive(126)]">Conditional</animation>
-				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS (-)-->
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="![Window.IsActive(3080)  | Window.IsActive(126)]">Conditional</animation>
+				<control type="group"> <!---------- CUSTOM SUBMENU ITEMS /SEPARATORS (-) --------------------->
 					<posx>30</posx>
 					<posy>80</posy>
 					<control type="label" id="-">
@@ -35,21 +35,21 @@
 						<aligny>center</aligny>
 					</control>
 					<!--******************************* separators ******************************-->
-					<control type="image"> <!--TOP-->
+					<control type="image"> <!-- TOP -->
 						<description>top bar</description>
 						<posy>34</posy>
 						<width>1220</width>
 						<height>5</height>
 						<texture>separatio_FS.png</texture>
 					</control>
-					<control type="image"> <!--BOTTOM-->
+					<control type="image"> <!-- BOTTOM -->
 						<description>BOTTOM bar</description>
 						<posy>565</posy>
 						<width>1220</width>
 						<height>5</height>
 						<texture>separatio_FS.png</texture>
 					</control>
-					<control type="image"> <!--BOTTOM 2-->
+					<control type="image"> <!-- BOTTOM 2-->
 						<description>BOTTOM bar</description>
 						<posy>620</posy>
 						<width>1220</width>
@@ -59,7 +59,7 @@
 					<!--*************************************************************************-->
 				</control>
 		
-				<control type="image"> <!--CUSTOM BUTTON BG-->
+				<control type="image"> <!------------------- CUSTOM BUTTON BG -------------------------->
 					<description>Network Setting BG</description>
 					<posx>430</posx>
 					<posy>140</posy>
@@ -74,11 +74,11 @@
 					<onleft>1939</onleft>
 					<description>Expanded Add More Categories Area</description>
 					<visible>Skin.HasSetting(ExpandCustom2HomeMenuSettings)</visible>
-				 <!--RADIO BUTTONS(5-8)-->		
+				 <!-- RADIO BUTTONS (5-8) ---------------------------->		
 					<control type="grouplist" id="939">
 						<!--***************************************************************************************-->
 						<animation type="WindowOpen" condition= "Window.IsActive(3001)" reversible="false">
-							<effect type="slide" start="-270" end="0" delay="200" time="0" />
+							<effect type="slide" start="-270" end="0"  delay="200" time="0" />
 							<effect type="fade" start="0" end="100" delay="350" time="1000" />
 							<!--<effect type="zoom" start="0" end="100" delay="175" center="auto" easing="out" tween="sine" time="650" />-->
 							<!--<effect type="zoom" start="0" end="100" delay="250" center="auto" easing="inout" tween="back" time="650" />-->
@@ -251,13 +251,13 @@
 							<texture border="10">scrollbar-background.png</texture>
 						</control>
 					</control>
-				 <!--BUTTON PARAMS-->	
+				 <!-- BUTTON PARAMS. --------------------------------->	
 					<control type="group" id="920"> <!--Button5-->
 						<description>Custom Category 1 Controls Area</description>
 						<visible>Skin.String(SelectedExpandedBtn,5)</visible>
 						<enable>Skin.HasSetting(EnableCustomCategory5)</enable>
 						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory5)">Conditional</animation>
-						<control type="label" > <!--BUTTON LABEL(custom params)-->
+						<control type="label" > <!----- BUTTON LABEL (custom params)------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -273,7 +273,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom5Btn-NAME))</visible>
 						</control>
-						<control type="label" > <!--BUTTON LABEL(empty)-->
+						<control type="label" > <!----- BUTTON LABEL (empty) ------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -289,7 +289,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom5Btn-NAME))</visible>
 						</control>
-					<!--PROPERTIES-->		
+					<!-- PROPERTIES ----------------------------->		
 						<control type="grouplist" id="921">
 							<description>Button Properties Area</description>
 							<posx>438</posx>
@@ -302,7 +302,7 @@
 							<onleft>2305</onleft>
 							<onright>-</onright>
 							<usecontrolcoords>true</usecontrolcoords>
-							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER--->
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -311,7 +311,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -322,7 +322,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
-							<control type="button" id="2331"> <!--favourites path-->
+							<control type="button" id="2331"> <!----favourites path---------->
 								<description>Favourite Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -348,7 +348,7 @@
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom5Btn)</onclick>
 								<onclick>ActivateWindow(3080)</onclick>
 							</control>
-							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER--------->
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -357,7 +357,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -368,7 +368,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
-							<control type="button" id="2333"> <!--custom icon path-->
+							<control type="button" id="2333"> <!----custom icon path--------->
 								<description>Custom Icon Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -390,7 +390,7 @@
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom5IconPath)]</label>
 								<onclick>Skin.SetImage(Custom5IconPath)</onclick>
 							</control>
-							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER----->
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -399,7 +399,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -411,7 +411,7 @@
 								<label>$LOCALIZE[31084]</label>
 							</control>
 							
-							<control type="button" id="2336"> <!--HOME MENU LABEL 5-->
+							<control type="button" id="2336"> <!----HOME MENU LABEL 5--------------->
 								<description>Custom Category Focus Image Path</description>
 								<posx>20</posx>
 								
@@ -437,7 +437,7 @@
 								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
 							
-							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+							<control type="button" id="2337"> <!--BACKGROUND HEADER---------->
 								<description>Custom Background Path Label</description>
 								
 								<width>760</width>
@@ -447,7 +447,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -459,7 +459,7 @@
 								
 								<label>$LOCALIZE[33070]</label>
 							</control>
-							<control type="button" id="2338"> <!--background path-->
+							<control type="button" id="2338"> <!----background path---------->
 								<description>Custom Background Image Path</description>
 								<posx>20</posx>
 								
@@ -484,7 +484,7 @@
 								<onclick>Skin.SetImage(Custom5BackgroundImagePath)</onclick>
 							</control>
 						</control>
-						<!--ImagePreview-->
+						<!--ImagePreview ---------->
 						<control type="image">
 							<posx>105</posx>
 							<posy>404</posy>
@@ -527,7 +527,7 @@
 						<visible>Skin.String(SelectedExpandedBtn,6)</visible>
 						<enable>Skin.HasSetting(EnableCustomCategory6)</enable>
 						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory6)">Conditional</animation>
-						<control type="label" > <!--BUTTON LABEL(custom params)-->
+						<control type="label" > <!----- BUTTON LABEL (custom params)------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -543,7 +543,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom6Btn-NAME))</visible>
 						</control>
-						<control type="label" > <!--BUTTON LABEL(empty)-->
+						<control type="label" > <!----- BUTTON LABEL (empty) ------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -559,7 +559,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom6Btn-NAME))</visible>
 						</control>
-					<!--PROPERTIES-->	
+					<!-- PROPERTIES ----------------------------->	
 						<control type="grouplist" id="921">
 							<description>Button Properties Area</description>
 							<posx>438</posx>
@@ -572,7 +572,7 @@
 							<onleft>2306</onleft>
 							<onright>-</onright>
 							<usecontrolcoords>true</usecontrolcoords>
-							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER--->
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -581,7 +581,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -592,7 +592,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
-							<control type="button" id="2331"> <!--favourites path-->
+							<control type="button" id="2331"> <!----favourites path---------->
 								<description>Favourite Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -618,7 +618,7 @@
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom6Btn)</onclick>
 								<onclick>ActivateWindow(3080)</onclick>
 							</control>
-							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER--------->
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -627,7 +627,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -638,7 +638,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
-							<control type="button" id="2333"> <!--custom icon path-->
+							<control type="button" id="2333"> <!----custom icon path--------->
 								<description>Custom Icon Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -660,7 +660,7 @@
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom6IconPath)]</label>
 								<onclick>Skin.SetImage(Custom6IconPath)</onclick>
 							</control>
-							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER----->
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -669,7 +669,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -680,7 +680,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
-							<control type="button" id="2336"> <!--HOME MENU LABEL 6-->
+							<control type="button" id="2336"> <!----HOME MENU LABEL 6--------------->
 								<description>Custom Category Focus Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -703,7 +703,7 @@
 								<onclick>Skin.SetString(Custom6Btn-NAME)</onclick>
 								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
-							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+							<control type="button" id="2337"> <!--BACKGROUND HEADER---------->
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -712,7 +712,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -723,7 +723,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
-							<control type="button" id="2338"> <!--background path-->
+							<control type="button" id="2338"> <!----background path---------->
 								<description>Custom Background Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -746,7 +746,7 @@
 								<onclick>Skin.SetImage(Custom6BackgroundImagePath)</onclick>
 							</control>
 						</control>
-						<!--ImagePreview-->
+						<!--ImagePreview ---------->
 						<control type="image">
 							<posx>105</posx>
 							<posy>404</posy>
@@ -789,7 +789,7 @@
 						<visible>Skin.String(SelectedExpandedBtn,7)</visible>
 						<enable>Skin.HasSetting(EnableCustomCategory7)</enable>
 						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory7)">Conditional</animation>
-						<control type="label" > <!--BUTTON LABEL(custom params)-->
+						<control type="label" > <!----- BUTTON LABEL (custom params)------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -805,7 +805,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom7Btn-NAME))</visible>
 						</control>
-						<control type="label" > <!--BUTTON LABEL(empty)-->
+						<control type="label" > <!----- BUTTON LABEL (empty) ------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -821,7 +821,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom7Btn-NAME))</visible>
 						</control>
-					<!--PROPERTIES-->		
+					<!-- PROPERTIES ----------------------------->		
 						<control type="grouplist" id="921">
 							<description>Button Properties Area</description>
 							<posx>438</posx>
@@ -834,7 +834,7 @@
 							<onleft>2307</onleft>
 							<onright>-</onright>
 							<usecontrolcoords>true</usecontrolcoords>
-							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER--->
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -843,7 +843,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -854,7 +854,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
-							<control type="button" id="2331"> <!--favourites path-->
+							<control type="button" id="2331"> <!----favourites path---------->
 								<description>Favourite Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -880,7 +880,7 @@
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom7Btn)</onclick>
 								<onclick>ActivateWindow(3080)</onclick>
 							</control>
-							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER--------->
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -889,7 +889,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -900,7 +900,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
-							<control type="button" id="2333"> <!--custom icon path-->
+							<control type="button" id="2333"> <!----custom icon path--------->
 								<description>Custom Icon Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -922,7 +922,7 @@
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom7IconPath)]</label>
 								<onclick>Skin.SetImage(Custom7IconPath)</onclick>
 							</control>
-							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER----->
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -931,7 +931,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -942,7 +942,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
-							<control type="button" id="2336"> <!--HOME MENU LABEL 7-->
+							<control type="button" id="2336"> <!----HOME MENU LABEL 7--------------->
 								<description>Custom Category Focus Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -965,7 +965,7 @@
 								<onclick>Skin.SetString(Custom7Btn-NAME)</onclick>
 								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
-							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+							<control type="button" id="2337"> <!--BACKGROUND HEADER---------->
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -974,7 +974,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -985,7 +985,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
-							<control type="button" id="2338"> <!--background path-->
+							<control type="button" id="2338"> <!----background path---------->
 								<description>Custom Background Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -1008,7 +1008,7 @@
 								<onclick>Skin.SetImage(Custom7BackgroundImagePath)</onclick>
 							</control>
 						</control>
-						<!--ImagePreview-->
+						<!--ImagePreview ---------->
 						<control type="image">
 							<posx>105</posx>
 							<posy>404</posy>
@@ -1051,7 +1051,7 @@
 						<visible>Skin.String(SelectedExpandedBtn,8)</visible>
 						<enable>Skin.HasSetting(EnableCustomCategory8)</enable>
 						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory8)">Conditional</animation>
-						<control type="label" > <!--BUTTON LABEL(custom params)-->
+						<control type="label" > <!----- BUTTON LABEL (custom params)------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -1067,7 +1067,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom8Btn-NAME))</visible>
 						</control>
-						<control type="label" > <!--BUTTON LABEL(empty)-->
+						<control type="label" > <!----- BUTTON LABEL (empty) ------->
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
@@ -1083,7 +1083,7 @@
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom8Btn-NAME))</visible>
 						</control>
-					<!--PROPERTIES-->	
+					<!-- PROPERTIES ----------------------------->	
 						<control type="grouplist" id="921">
 							<description>Button Properties Area</description>
 							<posx>438</posx>
@@ -1096,7 +1096,7 @@
 							<onleft>2308</onleft>
 							<onright>-</onright>
 							<usecontrolcoords>true</usecontrolcoords>
-							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER--->
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -1105,7 +1105,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -1116,7 +1116,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
-							<control type="button" id="2331"> <!--favourites path-->
+							<control type="button" id="2331"> <!----favourites path---------->
 								<description>Favourite Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -1142,7 +1142,7 @@
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom8Btn)</onclick>
 								<onclick>ActivateWindow(3080)</onclick>
 							</control>
-							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER--------->
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -1151,7 +1151,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -1162,7 +1162,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
-							<control type="button" id="2333"> <!--custom icon path-->
+							<control type="button" id="2333"> <!----custom icon path--------->
 								<description>Custom Icon Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -1184,7 +1184,7 @@
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom8IconPath)]</label>
 								<onclick>Skin.SetImage(Custom8IconPath)</onclick>
 							</control>
-							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER----->
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -1193,7 +1193,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -1204,7 +1204,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
-							<control type="button" id="2336"> <!--HOME MENU LABEL 8-->
+							<control type="button" id="2336"> <!----HOME MENU LABEL 8--------------->
 								<description>Custom Category Focus Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -1227,7 +1227,7 @@
 								<onclick>Skin.SetString(Custom8Btn-NAME)</onclick>
 								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
-							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+							<control type="button" id="2337"> <!--BACKGROUND HEADER---------->
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
@@ -1236,7 +1236,7 @@
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
 								<shadowcolor>-</shadowcolor>
-								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<disabledcolor>AA555555</disabledcolor> <!-- Davy's Grey -->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<colordiffuse>-</colordiffuse>
@@ -1247,7 +1247,7 @@
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
-							<control type="button" id="2338"> <!--background path-->
+							<control type="button" id="2338"> <!----background path---------->
 								<description>Custom Background Image Path</description>
 								<posx>20</posx>
 								<width>720</width>
@@ -1270,7 +1270,7 @@
 								<onclick>Skin.SetImage(Custom8BackgroundImagePath)</onclick>
 							</control>
 						</control>
-						<!--ImagePreview-->
+						<!--ImagePreview ---------->
 						<control type="image">
 							<posx>105</posx>
 							<posy>404</posy>
@@ -1310,7 +1310,7 @@
 				</control>
 	
 		<!--(((OK/RESET ALL)))=================================================================================================================================-->
-				<control type="grouplist" id="1939"> <!--OK / RESET ALL BUTTONS-->
+				<control type="grouplist" id="1939"> <!------- OK / RESET ALL BUTTONS --------->
 					<description>Dialog Button Area</description>				
 					<posx>300</posx>
 					<posy>650</posy>
@@ -1329,7 +1329,7 @@
 						<textwidth>160</textwidth>
 						<texturefocus border="10,10,10,10">-</texturefocus>
 						<texturenofocus>-</texturenofocus>
-						<disabledcolor>ff343434</disabledcolor> <!--JET-->
+						<disabledcolor>ff343434</disabledcolor> <!-- JET -->
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 						<label>$LOCALIZE[13012]</label>

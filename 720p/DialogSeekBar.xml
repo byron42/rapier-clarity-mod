@@ -1,7 +1,7 @@
 <window id="115">
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
-	<!--DialogOpenCloseAnim-->
+	<!-- DialogOpenCloseAnim -->
 	<animation type="WindowOpen">
 		<effect type="fade" end="100" time="150"/>
 		<effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/>
@@ -18,13 +18,13 @@
 	<controls>
 		<control type="group" id="1111">
 			<visible>Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)</visible>
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
 			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="Window.IsActive(142)">Conditional</animation>
-			<!--OSDOpenCloseAnim-->
+			<!-- OSDOpenCloseAnim -->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
 		<!--	
@@ -55,7 +55,7 @@
 			</control>
 			<control type="group">
 				<posy>3</posy>
-				<!--playstate images-->
+				<!-- playstate images -->
 				<control type="label">
 					<description>Playing Label</description>
 					<posx>239</posx>
@@ -227,7 +227,7 @@
 					<label>$LOCALIZE[31304] x32</label>
 					<visible>Player.Forwarding32x + !Player.Seeking</visible>
 				</control>
-				<!--progressbar dialog-->
+				<!-- progressbar dialog -->
 				<control type="label" id="22">
 					<description>Elapsed Time Label</description>
 					<posx>210</posx>

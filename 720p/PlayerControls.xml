@@ -10,14 +10,14 @@
 	</coordinates>	
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 			<!--******************************* FullControlAreaBackground *********************************-->
 			<control type="image">
-				<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
+				<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!-- skinwide equal viz bg -->
 				<posy>-530</posy>
 				<posx>-245</posx>
 				<visible>Player.HasMedia</visible>
@@ -25,11 +25,11 @@
 				<width>ScreenWidth</width>
 				<height>676</height>		
 				<texture>control-area-background2.png</texture>
-				<!--MediaViewOpenCloseAnim-->
+				<!-- MediaViewOpenCloseAnim -->
 				<animation effect="fade" start="100" end="0" delay="0" time="500">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="400" condition="Player.HasMedia">Conditional</animation>
 				<animation effect="fade" start="0" end="0" time="400" condition="!Player.HasMedia">Conditional</animation>
-				<!--MediaViewOpenCloseAnim-->
+				<!-- MediaViewOpenCloseAnim -->
 			</control>
 			<control type="image">
 				<visible>Skin.HasSetting(EnableClassicUniversalBG)</visible>
@@ -39,18 +39,18 @@
 				<height>676</height>		
 				<texture>background-dim2.png</texture>
 				<colordiffuse>BBBBBBBB</colordiffuse>
-				<!--MediaViewOpenCloseAnim-->
+				<!-- MediaViewOpenCloseAnim -->
 				<animation effect="fade" start="100" end="0" delay="0" time="500">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="400" condition="Player.HasMedia">Conditional</animation>
 				<animation effect="fade" start="0" end="0" time="400" condition="!Player.HasMedia">Conditional</animation>
-				<!--MediaViewOpenCloseAnim-->
+				<!-- MediaViewOpenCloseAnim -->
 			</control>
 			<!--*******************************************************************************************-->
 			
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
 				<visible>!Window.IsActive(Home) + !Window.IsActive(SlideShow)</visible>
-			<!--VIDEO-->
+			<!-- VIDEO ----------------------------->
 				<control type="group">	
 					<posx>-245</posx>
 					<posy>-404</posy>
@@ -65,7 +65,7 @@
 					<control type="group">
 						<posy>5</posy>
 						<posx>155</posx>
-						<!--Movie Case with Cover-->
+						<!-- Movie Case with Cover -->
 						<control type="image">
 							<posy>7</posy>
 							<posx>-140</posx>
@@ -86,7 +86,7 @@
 							<texture>home/nowplaying_overlay.png</texture>
 							<aspectratio align="bottom">stretch</aspectratio>
 						</control>
-						<!-- Movie Case with Cover-->
+						<!--  Movie Case with Cover -->
 						<control type="label">
 							<description>Title/Year</description>
 							<posy>7</posy>
@@ -168,21 +168,21 @@
 							<width>316</width>
 							<height>78</height>
 							<font>font12</font>
-							<!--DefaultPlot-->
+							<!-- DefaultPlot -->
 							<font>MediaInfoFont</font>
 							<textcolor>MediaInfoDetailsColor</textcolor>
 							<align>justify</align>
-							<!--DefaultPlot-->
+							<!-- DefaultPlot -->
 							<label>$INFO[VideoPlayer.Plot]</label>
 							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
-							<!--ControlsOpenCloseAnim-->
+							<!-- ControlsOpenCloseAnim -->
 							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 						</control>
 					</control>
 				</control>
-			<!--AUDIO-->	
+			<!-- AUDIO ----------------------------->	
 				<control type="group">
 					<posx>-245</posx>
 					<posy>-469</posy>
@@ -197,11 +197,11 @@
 					<control type="group">
 						<posy>5</posy>
 						<posx>155</posx>
-						<!--Mod Rotating CD with Cover-->
+						<!-- Mod Rotating CD with Cover -->
 						<control type="group">
 							<posy>0</posy>
 							<posx>-8</posx>
-							<!--Rotating CD Code-->
+							<!-- Rotating CD Code -->
 							<control type="image">
 								<description>Cd overlay</description>
 								<animation type="WindowOpen">
@@ -219,8 +219,8 @@
 								<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
 								<width>120</width>
 								<height>120</height>
-								<posx>-85</posx><!--112-->
-								<posy>10</posy><!---143-->
+								<posx>-85</posx><!-- 112 -->
+								<posy>10</posy><!-- -143 -->
 								<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 								<aspectratio align="bottom">keep</aspectratio>
 							</control>
@@ -243,7 +243,7 @@
 								</control>
 							</control>
 						</control>
-						<!--End Mod Rotating CD with cover-->
+						<!-- End Mod Rotating CD with cover-->
 						<control type="label">
 							<description>Title/Year</description>
 							<posy>7</posy>
@@ -333,7 +333,7 @@
 						</control>
 					</control>
 				</control>
-				<!--NowPlayingPlayerControlsOpenCloseAnim-->
+				<!-- NowPlayingPlayerControlsOpenCloseAnim -->
 				<animation effect="slide" start="-700,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out">WindowClose</animation>
 			</control>
@@ -343,7 +343,7 @@
 				<control type="group" id="9000">
 					<posx>220</posx>
 					<posy>5</posy>
-					<!--PlayerControlsOpenCloseAnim-->
+					<!-- PlayerControlsOpenCloseAnim -->
 					<animation effect="slide" start="0,150" time="200" delay="350" tween="circle" easing="out" condition="Window.IsActive(Home)">WindowOpen</animation>
 					<animation effect="slide" start="0,150" time="300" tween="circle" easing="out" condition="!Window.IsActive(Home)">WindowOpen</animation>
 					<animation effect="slide" end="0,150" time="200" tween="circle" easing="out">WindowClose</animation>

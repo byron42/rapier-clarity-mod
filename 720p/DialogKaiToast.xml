@@ -1,8 +1,8 @@
 <window id="107">
 	<defaultcontrol always="true">-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<animation effect="fade"  end="100" delay="" time="500" condition="Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)">Conditional</animation>
-	<!--DialogOpenCloseAnim-->
+	<animation effect="fade"   end="100" delay="" time="500" condition="Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)">Conditional</animation>
+	<!-- DialogOpenCloseAnim -->
 	<animation type="WindowOpen" condition="![Window.IsActive(VideoLibrary) + Container.Content(Movies) + Skin.String(CurrentViewMode,75)]" reversible="false">
 		<effect type="zoom" start="30" end="100" center="225,667" easing="out" tween="back" time="600" />
 		<effect type="fade" start="0" end="100" time="300" />
@@ -18,20 +18,20 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<control type="group">
 				<posy>1</posy>
-				<!--*************************** KaiToastDialogBox ****************************************-->
+				<!-------- KaiToastDialogBox --------------------------------------------------------------------------->
 				<control type="image">
 					<width>400</width>
 					<height>75</height>
 					<colordiffuse>FF526877</colordiffuse>
 					<texture border="10,10,10,10">Glass/SquareThemeBorder.png</texture>
 				</control>
-				<!--**************************************************************************************-->
+				<!------------------------------------------------------------------------------------------------------>
 				<control type="image">
 					<posx>-10</posx>
 					<posy>-10</posy>

@@ -10,10 +10,10 @@
 			<texture>special://skin/images/backgrounds/default-background.jpg</texture>
 			<aspectratio>stretch</aspectratio>
 			<fadetime>BackgroundCrossfadeTime</fadetime>
-			<!--BackgroundOpenCloseAnim-->
+			<!-- BackgroundOpenCloseAnim -->
 			<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
 			<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
-			<!--BackgroundOpenCloseAnim-->
+			<!-- BackgroundOpenCloseAnim -->
 		</control>
 		<!--*******************************************************************************************************-->			
 		<control type="group">

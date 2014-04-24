@@ -6,14 +6,14 @@
 	<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(7)">Hidden</animation>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 		<!--(((fanart images)))================================================================================================================================-->		
 			<control type="group">	
-				<control type="image" id="99"> <!--FANART-->
+				<control type="image" id="99"> <!--- FANART --->
 					<posx>0</posx>
 					<posy>42</posy>
 					<width>1280</width>
@@ -25,7 +25,7 @@
 					<animation effect="fade" time="FanartCrossfadeTime" condition="![Control.HasFocus(111) | Control.HasFocus(121) | Control.HasFocus(131) | Control.HasFocus(141) | Control.HasFocus(151) | Control.HasFocus(161) | Control.HasFocus(171) | Control.HasFocus(181) | Control.HasFocus(201)]">Hidden</animation>
 					<visible>Control.HasFocus(111) | Control.HasFocus(121) | Control.HasFocus(131) | Control.HasFocus(141) | Control.HasFocus(151) | Control.HasFocus(161) | Control.HasFocus(171) | Control.HasFocus(181) | Control.HasFocus(201)</visible>
 				</control>
-				<control type="image"> <!--FANART BG DIM-->
+				<control type="image"> <!--- FANART BG DIM ---->
 					<posx>0</posx>
 					<posy>42</posy>
 					<width>1280</width>
@@ -140,55 +140,55 @@
 						</focusedlayout>
 						<content>
 							<item id="1">
-								<label>$LOCALIZE[342]</label> <!--MOVIES-->
+								<label>$LOCALIZE[342]</label> <!---MOVIES--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(110)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(119)</visible>
 							</item>
 							<item id="2">
-								<label>$LOCALIZE[20343]</label> <!--TV_SHOWS-->
+								<label>$LOCALIZE[20343]</label> <!---TV_SHOWS--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(120)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(129)</visible>
 							</item>
 							<item id="3">
-								<label>$LOCALIZE[344]</label> <!--ACTORS-->
+								<label>$LOCALIZE[344]</label> <!---ACTORS--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(130)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(139)</visible>
 							</item>
 							<item id="4">
-								<label>$LOCALIZE[20360]</label> <!--EPISODES-->
+								<label>$LOCALIZE[20360]</label> <!---EPISODES--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(140)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(149)</visible>
 							</item>
 							<item id="5">
-								<label>$LOCALIZE[20389]</label> <!--MUSIC VIDEO-->
+								<label>$LOCALIZE[20389]</label> <!---MUSIC VIDEO--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(150)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(159)</visible>
 							</item>
 							<item id="6">
-								<label>$LOCALIZE[133]</label> <!--ARTIST-->
+								<label>$LOCALIZE[133]</label> <!---ARTIST--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(160)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(169)</visible>
 							</item>
 							<item id="7">
-								<label>$LOCALIZE[132]</label> <!--ALBUMS-->
+								<label>$LOCALIZE[132]</label> <!---ALBUMS--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(170)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(179)</visible>
 							</item>
 							<item id="8">
-								<label>$LOCALIZE[134]</label> <!--SONGS-->
+								<label>$LOCALIZE[134]</label> <!---SONGS--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(180)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(189)</visible>
 							</item>
 							<item id="9">
-								<label>31932</label> <!--GAMES-->
+								<label>31932</label> <!---GAMES--->
 								<label2>$LOCALIZE[31604] $INFO[Control.GetLabel(180)] $LOCALIZE[31605]</label2>
 								<onclick>-</onclick>
 								<visible>Control.IsVisible(209)</visible>
@@ -202,10 +202,11 @@
 							</item>
 						</content>
 					</control>
-					<!--'''''''''''''''''''''''''' CONTENT BACKGROUND/LABELS '''''''''''''''''''''''''-->
+				<!------------------------------ CONTENT BACKGROUND/LABELS -------------------------------------------------------->
 					<control type="group"> 
 						<posx>50</posx>
 						<posy>20</posy>
+						
 						<control type="image">
 							<posx>268</posx>
 							<posy>10</posy>
@@ -262,7 +263,7 @@
 							<visible>!Control.IsVisible(198)</visible>
 						</control>
 						<control type="label" id="190">
-							<!--Hide this Control off the screen because we use the label above instead-->
+							<!-- Hide this Control off the screen because we use the label above instead -->
 							<posx>2000</posx>
 							<posy>2000</posy>
 							<width>100</width>
@@ -272,7 +273,7 @@
 							<textcolor>-</textcolor>
 						</control>
 						<control type="label" id="191">
-							<!--Hide this Control off the screen because we use the label above instead-->
+							<!-- Hide this Control off the screen because we use the label above instead -->
 							<posx>2000</posx>
 							<posy>2000</posy>
 							<width>100</width>
@@ -292,7 +293,7 @@
 							<aligny>center</aligny>
 						</control>
 					</control>
-					<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+				<!------------------------------ CONTENT BACKGROUND/LABELS -------------------------------------------------------->
 				</control>
 				<!--******************************************************************************************-->	
 				
@@ -304,7 +305,7 @@
 						<posx>380</posx>
 						<posy>90</posy>
 						<control type="button" id="198">
-							<!--Hide this button  off the screen because we use the list above to pass to it instead-->
+							<!-- Hide this button  off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
 							<posy>2000</posy>
 							<width>10</width>
@@ -328,7 +329,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="110">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -337,7 +338,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-			<!--MOVIES-->						
+			<!---MOVIES--->						
 								<control type="list" id="111">
 									<visible>Container(9000).HasFocus(1)</visible>
 									<!--VisibleFadeEffect-->
@@ -390,7 +391,7 @@
 											<info>ListItem.Overlay</info>
 											<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
@@ -498,7 +499,7 @@
 											<texture>OverlayWatched.png</texture>
 											<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
@@ -611,7 +612,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="120">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -620,7 +621,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--TV_SHOWS BANNERS-->						
+		<!---TV_SHOWS BANNERS--->						
 								<control type="list" id="121">
 									<visible>Container(9000).HasFocus(2)</visible>
 									<!--VisibleFadeEffect-->
@@ -666,7 +667,7 @@
 											<colordiffuse>ffcccccc</colordiffuse>	
 											<visible>IsEmpty(ListItem.Icon)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
@@ -751,7 +752,7 @@
 											<animation effect="zoom" start="110" center="80,52" time="0">unfocus</animation>	
 											<visible>IsEmpty(ListItem.Icon)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
@@ -813,7 +814,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="130">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -822,7 +823,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--ACTORS-->						
+		<!---ACTORS--->						
 								<control type="list" id="131"> 
 									<visible>Container(9000).HasFocus(3)</visible>
 									<!--VisibleFadeEffect-->
@@ -855,7 +856,7 @@
 											<height>70</height>
 											<texture background="true" fallback="defaultactor.png">$INFO[ListItem.Icon ]</texture>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
@@ -959,7 +960,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="140">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -968,7 +969,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--TV_EPISODES-->						
+		<!---TV_EPISODES--->						
 								<control type="list" id="141">
 									<visible>Container(9000).HasFocus(4)</visible>
 									<posx>-17</posx>
@@ -1162,7 +1163,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="150">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -1171,7 +1172,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 									</control>
-		<!--MUSIC_VIDEOS-->							
+		<!---MUSIC_VIDEOS--->							
 								<control type="list" id="151">
 									<visible>Container(9000).HasFocus(5)</visible>
 									<!--VisibleFadeEffect-->
@@ -1232,8 +1233,7 @@
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
 										</control>
-						<!--===========================================================-->		
-						<!--===========================================================-->		
+						<!----------------------------------------------------------------->			
 										<control type="label">
 											<posx>750</posx>
 											<posy>15</posy>
@@ -1307,7 +1307,7 @@
 											<animation effect="zoom" end="115" center="160,10" time="100">focus</animation>
 											<animation effect="zoom" start="115" center="160,10" time="0">unfocus</animation>	
 										</control>
-						<!--===========================================================-->
+						<!----------------------------------------------------------------------------->
 										<control type="label">
 											<posx>750</posx>
 											<posy>15</posy>
@@ -1371,7 +1371,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="160">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -1380,7 +1380,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--ARTISTS-->
+		<!---ARTISTS--->
 								<control type="list" id="161">
 									<visible>Container(9000).HasFocus(6)</visible>
 									<!--VisibleFadeEffect-->
@@ -1413,7 +1413,7 @@
 											<height>70</height>
 											<texture background="true" fallback="defaultactor.png">$INFO[ListItem.Icon]</texture>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
@@ -1538,7 +1538,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="170">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -1547,7 +1547,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--ALBUMS-->
+		<!---ALBUMS--->
 								<control type="list" id="171">
 									<visible>Container(9000).HasFocus(7)</visible>
 									<!--VisibleFadeEffect-->
@@ -1580,7 +1580,7 @@
 											<texture background="true" fallback="defaultalbumcover.png">$INFO[ListItem.Icon ]</texture>
 											<visible>!IsEmpty(ListItem.Icon)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
@@ -1727,7 +1727,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="180">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -1736,7 +1736,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--SONGS-->
+		<!---SONGS--->
 								<control type="list" id="181">
 									<visible>Container(9000).HasFocus(8)</visible>
 									<!--VisibleFadeEffect-->
@@ -1770,7 +1770,7 @@
 											<texture background="true" fallback="defaultalbumcover.png">$INFO[ListItem.Icon ]</texture>
 											<visible>!IsEmpty(ListItem.Icon)</visible>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
@@ -1936,7 +1936,7 @@
 								<width>750</width>
 								<height>530</height>
 								<control type="label" id="200">
-									<!--Hide this Control off the screen because we use the list above to pass to it instead-->
+									<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 									<posx>2000</posx>
 									<posy>2000</posy>
 									<width>100</width>
@@ -1945,7 +1945,7 @@
 									<font>-</font>
 									<textcolor>-</textcolor>
 								</control>
-		<!--GAMES-->
+		<!---GAMES--->
 								<control type="list" id="201">
 									<visible>Container(9000).HasFocus(9)</visible>
 									<!--VisibleFadeEffect-->
@@ -1979,7 +1979,7 @@
 											<texture background="true">$INFO[ListItem.Icon]</texture>
 											<aspectratio>keep</aspectratio>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
@@ -2010,7 +2010,7 @@
 											<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
 											<aspectratio>keep</aspectratio>
 										</control>
-										<control type="label"> <!--LINE 1/title-->
+										<control type="label"> <!-- LINE 1/title-->
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>

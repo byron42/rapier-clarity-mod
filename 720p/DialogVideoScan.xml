@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
-	<!--MenuBarOpenCloseAnim2-->
+	<!-- MenuBarOpenCloseAnim2 -->
 	<animation effect="slide" start="0,43" end="0,-43" time="250" delay="200">WindowOpen</animation>
 	<animation effect="slide" start="0,-43" end="0,43" time="300">WindowClose</animation>
 	<animation effect="slide" start="0,43" end="0,-43" time="250">Visible</animation>
@@ -22,12 +22,12 @@
 				<width>ScreenWidth</width>
 				<height>48</height>
 				<texture flipy="true" border="0,0,0,7">$VAR[TopBarImage]</texture>
-				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<!--****************************************************************************************************************-->
 	
-		<!--PROGRESS BAR-->		
+		<!-- PROGRESS BAR -------------------------------->		
 			<control type="progress" id="403">
 				<description>Memory BAR</description>
 				<texturebg border="2">-</texturebg>
@@ -50,7 +50,7 @@
 				<height>10</height>
 				<visible>true</visible>
 			</control>		
-		<!--DOWNLOADING...-->			
+		<!-- DOWNLOADING... ------------------------------>			
 			<control type="label" id="1">
 				<description>Caption</description>
 				<posx>8</posx>
@@ -58,12 +58,12 @@
 				<width>190</width>
 				<height>40</height>
 				<font>ListLabel2Font</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[13413]...</label>
 			</control>
-		<!--CURRENT DIRECTORY-->		
+		<!-- CURRENT DIRECTORY --------------------------->		
 			<control type="label" id="402">
 				<description>Current Directory</description>
 				<posx>195</posx>
@@ -71,13 +71,13 @@
 				<width>1070</width>
 				<height>40</height>
 				<font>ScanContentFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<haspath>true</haspath>
 				<visible>Skin.HasSetting(No_Media_Titles_In_Scanner)</visible>
 			</control>
-		<!--CURRENT ITEM-->			
+		<!-- CURRENT ITEM -------------------------------->			
 			<control type="label" id="405">
 				<description>Current Title</description>
 				<posx>195</posx>
@@ -85,7 +85,7 @@
 				<width>1070</width>
 				<height>40</height>
 				<font>ScanContentFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<visible>!Skin.HasSetting(No_Media_Titles_In_Scanner)</visible>

@@ -2,8 +2,8 @@
 
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
-	<!--Views.xml-->
-	<!--(???) includes_OSDNotification (???)-->
+	<!-- Views.xml -->
+	<!-- (???) includes_OSDNotification (???) -->
 
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
@@ -43,7 +43,7 @@
 	<include name="ContextMenuBtn">
 		<width>280</width>
 		<textwidth>230</textwidth>
-		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
 		<font>MenuBarButtonFont</font>
 		<textcolor>ff626262</textcolor>
 		<focusedcolor>ThemeColor</focusedcolor>
@@ -53,7 +53,7 @@
 	<include name="ShutdownContextMenuBtn">
 		<width>280</width>
 		<textwidth>230</textwidth>
-		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
+		<!-- ADDED THIS FOR DIALOGBUTTONMENU.XML -->
 		<font>MenuBarButtonFont</font>
 		<textcolor>ff626262</textcolor>
 		<focusedcolor>ThemeColor</focusedcolor>
@@ -91,7 +91,7 @@
 				<width>219</width>
 				<height>35</height>
 				<texture border="8">SystemTray/top-bar-status-background.png</texture>
-				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
 			</control>
 			<control type="label">
 				<description>Time</description>
@@ -100,7 +100,7 @@
 				<width>145</width>
 				<height>35</height>
 				<font>TimeFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<aligny>center</aligny>
 				<label>$INFO[System.Time]</label>
 			</control>
@@ -123,7 +123,7 @@
 					<ondown>850</ondown>
 					<onleft>346</onleft>
 					<onright>837</onright>
-					<!--SystemTrayButtonFocusAnim-->
+					<!-- SystemTrayButtonFocusAnim -->
 					<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
 					<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
 				</control>
@@ -153,7 +153,7 @@
 					<ondown>850</ondown>
 					<onleft>458</onleft>
 					<onright>345</onright>
-					<!--SystemTrayButtonFocusAnim-->
+					<!-- SystemTrayButtonFocusAnim -->
 					<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
 					<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
 				</control>
@@ -174,18 +174,18 @@
 	<include name="BreadCrumbButtonLeft">
 		<control type="group">		
 			<posx>60</posx>
-			<!--BreadCrumbOpenCloseAnim-->
+			<!-- BreadCrumbOpenCloseAnim -->
 			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
 			<control type="button">
 				<description>Left Button</description>
-				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 				<posy>4</posy>
 				<include condition="![Window.IsActive(3) | Window.IsActive(1)]">BreadCrumbButtonSmall_Left</include>
 				<include condition="Window.IsActive(3) | Window.IsActive(1)">BreadCrumbButtonMid_Left</include>
 				<height>35</height>
 				<font>BreadCrumbFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<textoffsetx>-</textoffsetx>
 				<align>center</align>
 				<aligny>top</aligny>
@@ -195,8 +195,8 @@
 				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
-				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+				<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 				<label>$VAR[BreadCrumbLabel_Left]</label>
 			</control>
 		</control>
@@ -205,12 +205,12 @@
 	<include name="BreadCrumbButtonRight">
 		<control type="group">			
 			<posx>290</posx>
-			<!--BreadCrumbOpenCloseAnim-->
+			<!-- BreadCrumbOpenCloseAnim -->
 			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out" condition="![Window.IsActive(3) | Window.IsActive(1)]">WindowOpen</animation>
 			<animation effect="slide" start="-220,0" end="40,0" time="150" tween="cubic" easing="out" condition="Window.IsActive(3) | Window.IsActive(1)">WindowOpen</animation>
 			<control type="button">
 				<description>Right Button</description>
-				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 				<posy>4</posy>
 				<include condition="![Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(12) | Window.IsActive(13)
 				| Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)
@@ -220,7 +220,7 @@
 				<include condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503)">BreadCrumbButtonBig_Right</include>
 				<height>35</height>
 				<font>BreadCrumbFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<textoffsetx>-</textoffsetx>
 				<align>center</align>
 				<aligny>top</aligny>
@@ -230,8 +230,8 @@
 				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
 				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
-				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!-- BLUE -->
+				<!---------------------------------------------------------------[BreadCrumbBtn]---------------->
 				<label>$VAR[BreadCrumbLabel_Right]</label>
 			</control>		
 		</control>

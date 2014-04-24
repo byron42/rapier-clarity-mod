@@ -3,10 +3,10 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  | Window.IsActive(selectdialog)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 		<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade"  start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!--************************* FullControlAreaBackground ******************************-->
 			<control type="image">
 				<posx>-10</posx>
@@ -15,7 +15,7 @@
 				<height>750</height>		
 				<texture>black.png</texture>
 				<colordiffuse></colordiffuse>
-				<!--MediaViewOpenCloseAnim-->
+				<!-- MediaViewOpenCloseAnim -->
 				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
 				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
 				<aspectratio>scale</aspectratio>
@@ -31,7 +31,7 @@
 				<onright>Dialog.Close(3002)</onright>
 				<orientation>vertical</orientation>
 				<textoffset>10</textoffset>
-				<!--MenuOpenCloseAnim-->
+				<!-- MenuOpenCloseAnim -->
 				<animation type="WindowOpen">
 					<effect type="fade" end="100" time="250"/>
 					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
@@ -131,7 +131,7 @@
 				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
 					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31108]</label> <!--Wide Icon-->
+					<label>$LOCALIZE[31108]</label> <!-- Wide Icon -->
 					<onclick>Container.SetViewMode(56)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
@@ -157,7 +157,7 @@
 				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
 					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31108]</label> 	<!--Wide Icon-->
+					<label>$LOCALIZE[31108]</label> 	<!-- Wide Icon -->
 					<onclick>Container.SetViewMode(57)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
@@ -298,11 +298,11 @@
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[31120]</label>
-					<onclick>Container.SetViewMode(76)</onclick>	<!--ListInfo 2-->
+					<onclick>Container.SetViewMode(76)</onclick>	<!-- ListInfo 2 -->
 					<onclick>Skin.SetString(MoviesViewMode,76)</onclick>
 					<onclick>Dialog.Close(3002)</onclick>
-					<!--<onclick>ReplaceWindow(25)</onclick>-->
-					<!--<onclick>ReloadSkin()</onclick>-->
+					<!-- <onclick>ReplaceWindow(25)</onclick> -->
+					<!-- <onclick>ReloadSkin()</onclick> -->
 					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies)]</visible>
 				</control>
 			<!--************************************************************************************************************-->
@@ -423,7 +423,7 @@
 				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31112])</usealttexture>
 					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31112]</label>	 <!--Episode List-->
+					<label>$LOCALIZE[31112]</label>	 <!-- Episode List -->
 					<onclick>Container.SetViewMode(60)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
@@ -449,7 +449,7 @@
 				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31113])</usealttexture>
 					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31113]</label>		<!--Episode List-->
+					<label>$LOCALIZE[31113]</label>		<!-- Episode List -->
 					<onclick>Container.SetViewMode(62)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
@@ -525,29 +525,6 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
 					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
-				</control>
-				<control type="togglebutton" id="2001">
-					<description>Large Poster (Games)</description>
-					<width>400</width>
-					<height>38</height>
-					<font>MediaTitleFont</font>
-					<textcolor>MenuItemColor</textcolor>
-					<focusedcolor>MenuItemFocusColor</focusedcolor>
-					<textoffsetx>18</textoffsetx>
-					<align>left</align>
-					<aligny>top</aligny>
-					<textwidth>382</textwidth>
-					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
-					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
-					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
-				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
-				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31116])</usealttexture>
-					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31116]</label>
-					<onclick>Container.SetViewMode(100)</onclick>
-					<!--<onclick>ReloadSkin()</onclick>-->
-					<onclick>Dialog.Close(3002)</onclick>
-					<visible>Window.IsActive(Programs,games)</visible>
 				</control>
 			<!--************************************************************************************************************-->
 				
@@ -737,7 +714,7 @@
 				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
 					<pulseonselect>false</pulseonselect>
-					<label>$LOCALIZE[31120] </label>		<!--ListInfo 2-->
+					<label>$LOCALIZE[31120] </label>		<!-- ListInfo 2 -->
 					<onclick>Container.SetViewMode(80)</onclick>
 					<onclick>Dialog.Close(3002)</onclick>
 					<!--<onclick>ActivateWindow(25)</onclick>-->

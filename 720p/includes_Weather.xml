@@ -3,7 +3,9 @@
 	<include name="weather">
 		<control type="group">
 			<posy>55</posy>
-			<!--*********************** ContentPanel ***********************-->
+			<animation effect="slide" start="0,0" end="75,0" time="200" delay="200" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<!----------------------- ContentPanel ------------------------------------------------>
+			<include condition="Skin.HasSetting(HateTransparency)">T-Panel1</include>
 			<control type="image">
 				<posx>151</posx>
 				<posy>38</posy>
@@ -12,6 +14,8 @@
 				<texture border="30">weather_panel.png</texture>
 				<bordertexture border="45">panel-shadow.png</bordertexture>
 				<bordersize>22</bordersize>
+				<animation effect="zoom" start="153,88,976,545" end ="153,88,976,391" time="300" condition="[Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(598)] + Skin.HasSetting(FanartShort)">Conditional</animation>
+				<animation effect="zoom" start="153,88,976,545" end ="153,88,976,820" time="300" condition="[Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(598)] + Skin.HasSetting(FanartLong)">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>192</posx>
@@ -24,6 +28,7 @@
 				<align>left</align>
 				<label>[UPPERCASE][B]$INFO[Window(Weather).Property(Location)][/B][/UPPERCASE]</label>
 			</control>
+			
 			<control type="image">
 				<posx>173</posx>
 				<posy>60</posy>
@@ -38,7 +43,7 @@
 				<height>50</height>
 				<texture border="5,1,36,1">black-back-light-right.png</texture>
 			</control>
-			<!--************************************************************-->
+			<!----------------------- ContentPanel ------------------------------------------------>
 			<control type="group">
 				<posx>175</posx>
 				<posy>110</posy>
@@ -90,7 +95,7 @@
 				</control>
 				<include condition="!Skin.HasSetting(StaticWeatherIcons)">Weather_Animated_Current_Icon</include>
 				<include condition="Skin.HasSetting(StaticWeatherIcons)">Weather_Current_Icon</include>
-		<!--LABELS FOR CONDITIONS-->		
+		<!---LABELS FOR CONDITIONS--->		
 				<control type="label">
 					<description>current condition label</description>
 					<posx>20</posx>
@@ -194,7 +199,7 @@
 					<label>$LOCALIZE[404] :</label>
 					<textcolor>ThemeColor2</textcolor>
 				</control>
-		<!--VALUES FOR CONDITIONS-->	
+		<!---VALUES FOR CONDITIONS--->	
 				<control type="label">
 					<description>current feels like Value</description>
 					<posx>175</posx>

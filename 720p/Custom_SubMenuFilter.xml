@@ -4,11 +4,11 @@
 <!--(((CONTROLS)))========================================================================================================================-->
 	<controls>	
 		<control type="group">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade"  start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu)  |  Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="300" delay="400" >WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="0" >WindowClose</animation>
-			<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS (-)-->
+			<control type="group"> <!---------- CUSTOM SUBMENU ITEMS /SEPARATORS (-) --------------------->
 				<posx>30</posx>
 				<posy>80</posy>
 				<control type="label" id="-">
@@ -28,7 +28,7 @@
 					<aligny>center</aligny>
 				</control>
 				<!--******************************* separators ******************************-->
-				<control type="image"> <!--TOP-->
+				<control type="image"> <!-- TOP -->
 					<description>top bar</description>
 					<posy>34</posy>
 					<width>1220</width>
@@ -38,29 +38,29 @@
 				<!--*************************************************************************-->
 			</control>
 			
-			<control type="group" id="850"> <!--CATEGORY LIST-->
+			<control type="group" id="850"> <!----- CATEGORY LIST ----->
 				<description>Category Area</description>
 				<posx>65</posx>
 				<posy>150</posy>
 				
-				<control type="group"> <!--8 VIDEO (907)-->
+				<control type="group"> <!-- 8 VIDEO (907) -->
 					<control type="image">
 						<posx>4</posx>
-						<posy>9</posy> <!---8-->
-						<width>282</width> <!--265-->
-						<height>40</height> <!--65-->
+						<posy>9</posy> <!-- -8 -->
+						<width>282</width> <!-- 265 -->
+						<height>40</height> <!-- 65 -->
 						<texture border="10">search-focus.png</texture>
 						<colordiffuse>BBBBFFFF</colordiffuse>
 						<visible>Control.IsVisible(907)</visible>
 					</control>
 					<control type="button" id="1">
-						<posy>4</posy> <!---8-->
+						<posy>4</posy> <!-- -8 -->
 						<description>Video Submenus</description>
 						<width>290</width>
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -78,7 +78,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--1 GENERAL (900)-->
+				<control type="group"> <!-- 1 GENERAL (900) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>62</posy>
@@ -95,7 +95,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -111,7 +111,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--2 SYSTEM (901)-->
+				<control type="group"> <!-- 2 SYSTEM (901) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>118</posy>
@@ -128,7 +128,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -143,7 +143,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--3 PROGRAMS (902)-->
+				<control type="group"> <!-- 3 PROGRAMS (902) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>174</posy>
@@ -160,7 +160,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -176,11 +176,11 @@
 					</control>	
 				</control>	
 				
-				<!--PICTURES-->
+				<!-- PICTURES -->
 				
-				<!--WEATHER-->
+				<!-- WEATHER -->
 				
-				<control type="group"> <!--4 MOVIES (903)-->
+				<control type="group"> <!-- 4 MOVIES (903) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>232</posy>
@@ -197,7 +197,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -213,7 +213,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--7 TV SHOWS (906)-->
+				<control type="group"> <!-- 7 TV SHOWS (906) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>289</posy>
@@ -230,7 +230,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -246,7 +246,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--5 MUSIC (904)-->
+				<control type="group"> <!-- 5 MUSIC (904) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>346</posy>
@@ -263,7 +263,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -279,7 +279,7 @@
 					</control>
 				</control>
 				
-				<control type="group"> <!--6 ADDONS (905)-->
+				<control type="group"> <!-- 6 ADDONS (905) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>404</posy>
@@ -296,7 +296,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -312,7 +312,7 @@
 					</control>	
 				</control>	
 				
-				<control type="group"> <!--8 MUSIC VIDS (908)-->
+				<control type="group"> <!-- 8 MUSIC VIDS (908) -->
 					<control type="image">
 						<posx>4</posx>
 						<posy>466</posy>
@@ -329,7 +329,7 @@
 						<textwidth>285</textwidth><!--SkinSettingsMenuWidth-->
 						<height>50</height>
 						<font>SETTINGS_CATEGORY</font>
-						<textcolor>Grey</textcolor> <!--GREY-->
+						<textcolor>Grey</textcolor> <!-- GREY -->
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -345,7 +345,7 @@
 				</control>
 			</control>
 		
-			<control type="group" id="851"> <!--OPTIONS LIST-->
+			<control type="group" id="851"> <!----- OPTIONS LIST ----->
 				<posx>0</posx>
 				<posy>20</posy>
 				<include>VariableBackgroundHeight</include><!--518-->
@@ -356,7 +356,7 @@
 				<onleft>850</onleft>
 				<onright></onright>
 				
-				<control type="grouplist" id="907">	<!--8 VIDEO -->
+				<control type="grouplist" id="907">	<!-- 8 VIDEO  -->
 					<description>Video Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -376,7 +376,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[3] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[3] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -391,7 +391,7 @@
 					<control type="button" id="1001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -590,7 +590,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="900">	<!--1 GENERAL -->
+				<control type="grouplist" id="900">	<!-- 1 GENERAL  -->
 					<description>General Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -610,7 +610,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[16000] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[16000] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -625,7 +625,7 @@
 					<control type="button" id="2001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -802,7 +802,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="901">	<!--2 SYSTEM -->
+				<control type="grouplist" id="901">	<!-- 2 SYSTEM  -->
 					<description>System Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -821,7 +821,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[13000] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[13000] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -836,7 +836,7 @@
 					<control type="button" id="3001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -991,7 +991,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="902">	<!--3 PROGRAMS -->
+				<control type="grouplist" id="902">	<!-- 3 PROGRAMS  -->
 					<description>Programs Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -1011,7 +1011,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[0] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[0] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -1026,7 +1026,7 @@
 					<control type="button" id="4001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -1203,7 +1203,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="903">	<!--4 MOVIES -->
+				<control type="grouplist" id="903">	<!-- 4 MOVIES  -->
 					<description>Movies Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -1223,7 +1223,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20342] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20342] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -1238,7 +1238,7 @@
 					<control type="button" id="5001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -1437,7 +1437,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="906">	<!--7 TV SHOWS -->
+				<control type="grouplist" id="906">	<!-- 7 TV SHOWS  -->
 					<description>TvShows Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -1456,7 +1456,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20343] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20343] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -1471,7 +1471,7 @@
 					<control type="button" id="6001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -1670,7 +1670,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="904">	<!--5 MUSIC -->
+				<control type="grouplist" id="904">	<!-- 5 MUSIC  -->
 					<description>Music Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -1689,7 +1689,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[2] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[2] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -1704,7 +1704,7 @@
 					<control type="button" id="7001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -1947,7 +1947,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="905">	<!--6 ADDONS -->
+				<control type="grouplist" id="905">	<!-- 6 ADDONS  -->
 					<description>Addons Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -1967,7 +1967,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[31919] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[31919] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -1982,7 +1982,7 @@
 					<control type="button" id="8001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>
@@ -2137,7 +2137,7 @@
 					</control>
 				</control>
 				
-				<control type="grouplist" id="908">	<!--8 MUSIC VIDS -->
+				<control type="grouplist" id="908">	<!-- 8 MUSIC VIDS  -->
 					<description>System Subs Config</description>
 					<posx>375</posx>
 					<posy>140</posy>
@@ -2156,7 +2156,7 @@
 						<posx>-3</posx><!---->
 						<height>27</height><!---->
 						<width>840</width><!---->
-						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20389] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
+						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20389] $LOCALIZE[1034]...</label> <!-- BREADCRUMB -->
 						<font>CustomSkinSeparator</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
 						<align>-</align><!---->
@@ -2171,7 +2171,7 @@
 					<control type="button" id="9001"> <!--SPACER-->
 						<description>SPACER</description>
 						<width>-</width>
-						<height>13</height> <!--=-->
+						<height>13</height> <!----->
 						<font>-</font>
 						<textcolor>-</textcolor>
 						<focusedcolor>-</focusedcolor>

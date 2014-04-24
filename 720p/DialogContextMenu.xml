@@ -24,8 +24,8 @@
 			<posy>-185</posy>
 			<texture border="10,10,10,10">background-dim.png</texture>
 			<colordiffuse></colordiffuse>
-			<!--BackgroundOpenCloseAnim-->
-			<animation effect="fade" start="0" end="20" time="100" condition="true">Conditional</animation> 
+			<!-- BackgroundOpenCloseAnim -->
+			<animation effect="fade" start="0" end="20"  time="100" condition="true">Conditional</animation> 
 		</control>
 		<!--************************************************************************************************-->
 		<control type="grouplist" id="996">

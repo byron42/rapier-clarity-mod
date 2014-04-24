@@ -2,7 +2,7 @@
 	<defaultcontrol always="true">-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
-	<!--MenuBarOpenCloseAnim2-->
+	<!-- MenuBarOpenCloseAnim2 -->
 	<animation effect="slide" start="0,43" end="0,-43" time="250" delay="200">WindowOpen</animation>
 	<animation effect="slide" start="0,-43" end="0,43" time="300">WindowClose</animation>
 	<animation effect="slide" start="0,43" end="0,-43" time="250">Visible</animation>
@@ -22,12 +22,12 @@
 				<width>ScreenWidth</width>
 				<height>48</height>
 				<texture flipy="true" border="0,0,0,7">$VAR[TopBarImage]</texture>
-				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!-- BLUE -->
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<!--****************************************************************************************************************-->
 
-		<!--PROGRESS BAR-->		
+		<!-- PROGRESS BAR -------------------------------->		
 			<control type="progress" id="403">
 				<description>Memory BAR</description>
 				<texturebg border="2">-</texturebg>
@@ -38,7 +38,7 @@
 				<colordiffuse>BB71A6D2</colordiffuse>
 				<height>10</height>
 			</control>	
-		<!--DOWNLOADING...-->		
+		<!-- DOWNLOADING... ------------------------------>		
 			<control type="label" id="1">
 				<description>Caption</description>
 				<posx>8</posx>
@@ -46,12 +46,12 @@
 				<width>185</width>
 				<height>40</height>
 				<font>ListLabel2Font</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[13413]...</label>
 			</control>
-		<!--CURRENT ITEM-->	
+		<!-- CURRENT ITEM -------------------------------->	
 			<control type="label" id="402">
 				<description>Current Directory</description>
 				<posx>195</posx>
@@ -59,7 +59,7 @@
 				<width>1070</width>
 				<height>40</height>
 				<font>ScanContentFont</font>
-				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!-- GREY -->
 				<align>left</align>
 				<aligny>center</aligny>
 				<haspath>true</haspath>
