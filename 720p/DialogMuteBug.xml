@@ -1,0 +1,43 @@
+<window id="113">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<origin x="895" y="4">!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)</origin>
+		<origin x="925" y="4">!Skin.HasSetting(HideGlobalSearchIcon) + !Window.IsActive(Home)</origin>
+		<origin x="925" y="4">true</origin>
+	</coordinates>
+	<controls>
+		<control type="group">	
+			<animation effect="slide" end="0,0" time="300" condition="Window.Previous(Home) + !Skin.HasSetting(HideGlobalSearchIcon)">Conditional</animation>
+			<animation effect="slide" end="0,0" time="300" delay="1000"condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.Next(Home)">Conditional</animation>
+			<!---->
+			<animation effect="fade" end="0" time="0">WindowClose</animation>
+			<control type="image">
+				<width>125</width>
+				<height>35</height>
+				<texture border="8">SystemTray/top-bar-status-background.png</texture>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+			</control>
+			<control type="image">
+				<posx>8</posx>
+				<posy>2</posy>
+				<width>31</width>
+				<height>31</height>
+				<texture>volume-mute.png</texture>
+				<!--TopBarStatusIconFadeAnim-->
+				<animation effect="fade" end="50" condition="true">conditional</animation>
+			</control>
+			<control type="label">
+				<posx>117</posx>
+				<width>80</width>
+				<height>35</height>
+				<font>VolumeFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Player.Volume]</label>
+			</control>
+		</control>
+	</controls>
+</window>

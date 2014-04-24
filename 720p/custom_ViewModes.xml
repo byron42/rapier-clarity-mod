@@ -1,0 +1,757 @@
+<window type="dialog" id="3002">
+	<defaultcontrol always="true">200</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--************************* FullControlAreaBackground ******************************-->
+			<control type="image">
+				<posx>-10</posx>
+				<posy>77</posy>
+				<width>1300</width>
+				<height>750</height>		
+				<texture>black.png</texture>
+				<colordiffuse></colordiffuse>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
+				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<!--**********************************************************************************-->
+			<control type="grouplist" id="200">
+				<description>View Mode Menu</description>
+				<posx>83</posx>
+				<posy>75</posy>
+				<width>400</width>
+				<itemgap>2</itemgap>
+				<onleft>Dialog.Close(3002)</onleft>
+				<onright>Dialog.Close(3002)</onright>
+				<orientation>vertical</orientation>
+				<textoffset>10</textoffset>
+				<!--MenuOpenCloseAnim-->
+				<animation type="WindowOpen">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="WindowClose">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
+				<control type="image">
+					<description>MenuBarBigItemTopBorder</description>
+					<width>400</width>
+					<height>8</height>
+					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
+				</control>
+				<control type="togglebutton" id="1">
+					<description>Icon</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31103])</usealttexture>
+					<colordiffuse>-</colordiffuse>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31103]</label>
+					<onclick>Container.SetViewMode(50)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+				</control>
+				<control type="togglebutton" id="2">
+					<description>Big Icon</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31104])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31104]</label>
+					<onclick>Container.SetViewMode(51)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+				</control>
+				<control type="togglebutton" id="3">
+					<description>Wide Icon (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31108]</label>
+					<onclick>Container.SetViewMode(55)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>
+				
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="4">
+					<description>Wide Icon (TVShows)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31108]</label> <!--Wide Icon-->
+					<onclick>Container.SetViewMode(56)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+				</control>
+			<!--************************************************************************************************************-->	
+			
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="5">
+					<description>Wide Icon (Episodes)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31108]</label> 	<!--Wide Icon-->
+					<onclick>Container.SetViewMode(57)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				</control>
+			<!--************************************************************************************************************-->
+
+				<control type="togglebutton" id="6">
+					<description>Wide Icon (Music)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31108]</label>
+					<onclick>Container.SetViewMode(68)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+				</control>
+				
+				<control type="togglebutton" id="7">
+					<description>Thumbnail (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31107])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31107]</label>
+					<onclick>Container.SetViewMode(54)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(MusicVideos)]</visible>
+				</control>
+				<control type="togglebutton" id="8">
+					<description>Thumbnail (Music)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31107])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31107]</label>
+					<onclick>Container.SetViewMode(63)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(MusicFiles) | Container.Content(Songs) | Container.Content(Albums)</visible>
+				</control>
+				<control type="togglebutton" id="9">
+					<description>List</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31105])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31105]</label>
+					<onclick>Container.SetViewMode(52)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+				</control>
+				<control type="togglebutton" id="10">
+					<description>List Media Info (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31111]</label>
+					<onclick>Container.SetViewMode(58)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>
+				
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="11">
+					<description>ListInfo2 View (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31120]</label>
+					<onclick>Container.SetViewMode(76)</onclick>	<!--ListInfo 2-->
+					<onclick>Skin.SetString(MoviesViewMode,76)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ReplaceWindow(25)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies)]</visible>
+				</control>
+			<!--************************************************************************************************************-->
+
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="12">
+					<description>ListInfo (TVShows)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31111]</label>
+					<onclick>Container.SetViewMode(61)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + [Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)]</visible>
+				</control>
+			<!--************************************************************************************************************-->			
+
+				<control type="togglebutton" id="13">
+					<description>ListInfo (Music)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31111])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31111]</label>
+					<onclick>Container.SetViewMode(62)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
+				</control>
+				<!--<control type="togglebutton" id="14">
+					<description>Wrap List Media Info</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31106])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31106]</label>
+					<onclick>Container.SetViewMode(53)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>-->
+				
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="15">
+					<description>Fanart (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31110])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31110]</label>
+					<onclick>Container.SetViewMode(59)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>
+			<!--************************************************************************************************************-->			
+				
+			<!--********************************************* USING THIS ***************************************************-->			
+				<control type="togglebutton" id="16">
+					<description>Episode List</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31112])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31112]</label>	 <!--Episode List-->
+					<onclick>Container.SetViewMode(60)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				</control>
+			<!--************************************************************************************************************-->
+
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="17">
+					<description>Episode List</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31113])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31113]</label>		<!--Episode List-->
+					<onclick>Container.SetViewMode(62)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				</control>
+			<!--************************************************************************************************************-->		
+				
+				<!--<control type="togglebutton" id="18">
+					<description>Banner List</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31114])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31114]</label>
+					<onclick>Container.SetViewMode(63)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+				</control>-->
+				<!--<control type="togglebutton" id="19">
+					<description>Episode Showcase</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31115])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31115]</label>
+					<onclick>Container.SetViewMode(65)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				</control>-->
+				
+			<!--********************************************* USING THIS ***************************************************-->			
+				<control type="togglebutton" id="20">
+					<description>Large Poster (Movies)(Seasons)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31116])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31116]</label>
+					<onclick>Container.SetViewMode(66)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
+				</control>
+				<control type="togglebutton" id="2001">
+					<description>Large Poster (Games)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31116])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31116]</label>
+					<onclick>Container.SetViewMode(100)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(Programs,games)</visible>
+				</control>
+			<!--************************************************************************************************************-->
+				
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="21">
+					<description>Wall View (Movies)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31117])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31117]</label>
+					<onclick>Container.SetViewMode(77)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>
+			<!--************************************************************************************************************-->			
+				
+				<!--<control type="togglebutton" id="23">
+					<description>Movies 3D Wrap View</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31119])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31119]</label>
+					<onclick>Container.SetViewMode(74)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>-->
+				<control type="togglebutton" id="24">
+					<description>Slim Wide List</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31118])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31118]</label>
+					<onclick>Container.SetViewMode(78)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(MusicLibrary)</visible>
+				</control>
+				<control type="togglebutton" id="25">
+					<description>Showcase Split View</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31115])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>31115</label>
+					<onclick>Container.SetViewMode(75)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Movies)</visible>
+				</control>
+				<control type="togglebutton" id="26">
+					<description>WrapInfo (Music)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31106])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31106]</label>
+					<onclick>Container.SetViewMode(64)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+				</control>
+				<control type="togglebutton" id="27">
+					<description>ListInfo 2 (Music)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31120]</label>
+					<onclick>Container.SetViewMode(67)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ActivateWindow(502)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+				</control>
+				
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="28">
+					<description>ListInfo 2 (TVShows)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31120]</label>
+					<onclick>Container.SetViewMode(79)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ActivateWindow(25)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(TVShows)</visible>
+				</control>
+			<!--************************************************************************************************************-->
+
+			<!--********************************************* USING THIS ***************************************************-->
+				<control type="togglebutton" id="29">
+					<description>ListInfo 2 (Episodes)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31120])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31120] </label>		<!--ListInfo 2-->
+					<onclick>Container.SetViewMode(80)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ActivateWindow(25)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(VideoLibrary) + Container.Content(Episodes)</visible>
+				</control>
+			<!--************************************************************************************************************-->
+				<control type="image">
+					<description>MenuBarItemBigBottomBorder</description>
+					<width>400</width>
+					<height>8</height>
+					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>	
+				</control>
+			</control>
+		</control>
+	</controls>	
+</window>
