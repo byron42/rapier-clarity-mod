@@ -526,6 +526,29 @@
 					<onclick>Dialog.Close(3002)</onclick>
 					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
 				</control>
+				<control type="togglebutton" id="2001">
+					<description>Large Poster (Games)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31116])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31116]</label>
+					<onclick>Container.SetViewMode(100)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Window.IsActive(Programs,games)</visible>
+				</control>
 			<!--************************************************************************************************************-->
 				
 			<!--********************************************* USING THIS ***************************************************-->

@@ -19,7 +19,6 @@
 				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
 				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
 				<aspectratio>scale</aspectratio>
-				<!--MediaViewOpenCloseAnim-->
 			</control>
 			<!--******************************************************************************************-->
 	
@@ -2028,7 +2027,7 @@
 					<selected>Skin.HasSetting(HideLargePosterShadow)</selected>
 					<onclick>Skin.ToggleSetting(HideLargePosterShadow)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
-					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
+					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons) | Window.IsActive(Programs,Games)]</visible>
 				</control>
 				<control type="radiobutton" id="2100">
 					<description>Episode View Hide Plot (TVShows)</description>
@@ -3804,11 +3803,10 @@
 					<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + ![Skin.String(CurrentViewMode,50) | Skin.String(CurrentViewMode,51) | Skin.String(CurrentViewMode,63) | Skin.String(CurrentViewMode,66) | Skin.String(CurrentViewMode,60) | Skin.String(CurrentViewMode,62) | Skin.String(CurrentViewMode,65)] </visible>
 				</control>
 				<control type="image">
-					<!--MenuBarItemViewOptionsBottomBorder-->
+					<description>MenuBar Bottom Border</description>
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
-					<!--MenuBarItemViewOptionsBottomBorder-->
 				</control>
 			</control>
 	
@@ -3833,13 +3831,11 @@
 				<animation type="WindowClose">
 					<effect type="fade" end="0" time="150"/>
 				</animation>
-				<!--MenuOpenCloseAnim-->
 				<control type="image">
-					<!--MenuBarItemViewOptionsTopBorder-->
+					<description>MenuBar TOP Border</description>
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
-					<!--MenuBarItemViewOptionsTopBorder-->
 				</control>
 				<control type="radiobutton" id="3000">
 					<description>Icon Hide Scrollbar</description>
@@ -3908,7 +3904,6 @@
 					<label>$LOCALIZE[31015] $LOCALIZE[33067]</label>
 					<selected>Skin.HasSetting(ListViewHideStars)</selected>
 					<onclick>Skin.ToggleSetting(ListViewHideStars)</onclick>
-					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
 				<control type="radiobutton" id="20632">
@@ -3932,7 +3927,6 @@
 					<label>$LOCALIZE[31015] - $LOCALIZE[31001] $LOCALIZE[737]</label>
 					<selected>Skin.HasSetting(ListViewHideThemeColoredSelector)</selected>
 					<onclick>Skin.ToggleSetting(ListViewHideThemeColoredSelector)</onclick>
-					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
 				<control type="radiobutton" id="20633">
@@ -3956,7 +3950,6 @@
 					<label>$LOCALIZE[31015] $LOCALIZE[535] $LOCALIZE[536]</label>
 					<selected>Skin.HasSetting(ListViewHideSmallIcons)</selected>
 					<onclick>Skin.ToggleSetting(ListViewHideSmallIcons)</onclick>
-					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
 				<control type="radiobutton" id="3002">
@@ -3982,12 +3975,82 @@
 					<onclick>Skin.ToggleSetting(HideListViewScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
+			<!--GAMES LARGE POSTER-->
+				<control type="radiobutton" id="202811">
+					<description>Large Poster Hide Overlay (Games)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Hide Gloss</label>
+					<!--<label>$LOCALIZE[31046]</label>-->
+					<selected>Skin.HasSetting(HideGamesLargePosterViewGlossOverlay)</selected>
+					<onclick>Skin.ToggleSetting(HideGamesLargePosterViewGlossOverlay)</onclick>
+					<visible>Skin.String(CurrentViewMode,100)</visible>
+				</control>
+				<control type="radiobutton" id="207911">
+					<description>Large Poster Hide Wraplist Shadow (Games)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31421]</label>
+					<selected>Skin.HasSetting(HideLargePosterShadow)</selected>
+					<onclick>Skin.ToggleSetting(HideLargePosterShadow)</onclick>
+					<visible>Skin.String(CurrentViewMode,100)</visible>
+				</control>
+				<control type="radiobutton" id="206511">
+					<description>Large Poster Hide Scrollbar (Games)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideLargePosterGamesScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideLargePosterGamesScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,100)</visible>
+				</control>
 				<control type="image">
-					<!--MenuBarItemViewOptionsBottomBorder-->
+					<description>MenuBar Bottom Border</description>
 					<width>450</width>
 					<height>8</height>
 					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
-					<!--MenuBarItemViewOptionsBottomBorder-->
 				</control>
 			</control>
 		</control>
