@@ -547,7 +547,7 @@
 					<onclick>Container.SetViewMode(100)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
-					<visible>Window.IsActive(Programs,games)</visible>
+					<visible>Substring(Container.Folderpath,games)</visible>
 				</control>
 			<!--************************************************************************************************************-->
 				
