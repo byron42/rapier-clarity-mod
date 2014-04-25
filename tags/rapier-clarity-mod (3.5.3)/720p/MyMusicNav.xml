@@ -1,0 +1,4057 @@
+<window id="502">
+	<defaultcontrol always="true">500</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>Home</previouswindow>
+	<views>50,51,52,62,63,68,78,67,64</views>
+	<controls>	
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(musicinformation) | Window.IsActive(songinformation)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(135) | Window.IsActive(2001) | Window.IsActive(132)">Conditional</animation> <!--FSD_ControlFade-->
+			
+	<!--(((BACKGROUNDS)))=============================================================================================================================-->		
+			<control type="group">
+				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<posx>0</posx>
+							<description>Universal Classic Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
+					</control>
+				<control type="group"> <!--UNIVERSAL CUSTOM BG-->
+					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+					<control type="image">
+						<posx>0</posx>
+						<description>Universal Classic Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation>
+					</control>
+				</control>
+			
+				<!--*********************************** BackgroundMusic ***********************************************-->
+				<control type="group">
+					<description>Music Custom Background</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<description>Custom Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/images/backgrounds/background-music.jpg">$INFO[Skin.String(MusicCustomBG)]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Skin.HasSetting(ApplyAllMusicCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<!--BackgroundMusicDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Default Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<visible>!Skin.HasSetting(ApplyAllMusicCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<!--BackgroundMusicDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--********************************** BackgroundFanart ***********************************************-->
+				<control type="group">
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="group">
+						<visible>[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]
+						+ [[Control.IsVisible(52) + !Skin.HasSetting(HideMusicListFanart)] 
+						| [Control.IsVisible(62) + !Skin.HasSetting(HideMusicListInfoFanart)]
+						| [Control.IsVisible(78) + !Skin.HasSetting(HideMusicWideSlimListFanart)]
+						| [Control.IsVisible(64) + !Skin.HasSetting(HideMusicWrapListInfoFanart)]]</visible>
+						<control type="largeimage">
+							<description>Fanart Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<!--KenBurnsAnim-->
+							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<include>BackgroundOffset</include>
+							<width>ScreenWidth</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>background-dim.png</texture>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+							<!--BackgroundFanartDimAnim-->
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSVideo *********************************************-->
+				<control type="group">
+					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+					<control type="videowindow">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSViz ***********************************************-->
+				<control type="group">
+					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+					<control type="visualisation">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>	
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--BackgroundDim-->
+				<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+				<!--BackgroundOpenCloseAnim-->
+				<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+			</control>
+
+	<!--(((VIEWS)))===================================================================================================================================-->		
+			<control type="group">
+			<!--PLAYLIST EDITOR FADE IN/OUT-->
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
+			
+				<!--**************************************************************************** IconView ******************** (50) ********-->
+				<control type="group" id="500">	
+					<!--constant top menubar animations-->
+					<animation effect="zoom" end="94" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="20,16" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="20,18" time="0" condition="!Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<defaultcontrol always="true">50</defaultcontrol>
+					<visible>Control.IsVisible(50)</visible>	
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim-->
+					<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<control type="scrollbar" id="150">
+						<description>IconViewScrollbar</description>
+						<posx>1250</posx>
+						<posy>92</posy>
+						<height>538</height>
+						<visible>!Skin.HasSetting(HideIconViewScrollbar) + Control.IsVisible(50)</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="panel" id="50">
+						<viewtype label="31103">Icon</viewtype>
+						<posx>60</posx>
+						<posy>-10</posy>
+						<width>1200</width>
+						<height>653</height>
+						<pagecontrol>150</pagecontrol>	
+						<preloaditems>2</preloaditems>
+						<onup>50</onup>
+						<ondown>50</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<itemlayout height="207" width="228" >	
+						<!--Thumbs-->	
+							<control type="image"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>78</posy>
+								<width>150</width>
+								<height>122</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio aligny="bottom">keep</aspectratio>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>32</posy>
+								<width>175</width>
+								<height>144</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio aligny="bottom">keep</aspectratio>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+						<!--Icons-->
+							<control type="image"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<description>Default Cover</description>
+								<posx>40</posx>
+								<posy>88</posy>
+								<width>115</width>
+								<height>115</height>
+								<aspectratio align="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>9</bordersize>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<description>Default Cover</description>
+								<posx>50</posx>
+								<posy>46</posy>
+								<width>125</width>
+								<height>125</height>
+								<aspectratio align="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>9</bordersize>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+						<!--Labels-->	
+							<control type="label"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<posx>98</posx>
+								<posy>202</posy>
+								<width>150</width>
+								<font>ListLabel2Font</font>
+								<textcolor>gray</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>center</align>
+								<aligny>top</aligny>
+								<info>ListItem.Label</info>
+								<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesIconLabel)] 
+								+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsIconLabel)]
+								+ ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicIconLabel)]</visible>
+							</control>
+							<control type="label"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<posx>116</posx>
+								<posy>174</posy>
+								<width>165</width>
+								<textwidth>169</textwidth>
+								<font>ListLabel2Font</font>
+								<textcolor>gray</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>center</align>
+								<aligny>top</aligny>
+								<info>ListItem.Label</info>
+								<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesIconLabel)] 
+								+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsIconLabel)]
+								+ ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicIconLabel)]</visible>
+							</control>
+						</itemlayout>															
+						<focusedlayout height="211" width="234">
+						<!--Focus Selector-->
+							<control type="image"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<posx></posx>
+								<posy>60</posy>
+								<width>204</width>
+								<height>179</height>
+								<texture border="10">Glass/keyfocus.png</texture>
+							</control>
+							<control type="image"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<posx>2</posx>
+								<posy>13</posy>
+								<width>221</width>
+								<height>201</height>
+								<texture border="10">Glass/keyfocus.png</texture>
+								<animation effect="zoom" end="107" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="107" center="auto" time="0">unfocus</animation>
+							</control>	
+						<!--Thumbs-->	
+							<control type="image"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<description>Cover</description>
+								<posx>27</posx>
+								<posy>78</posy>
+								<width>150</width>
+								<height>122</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>32</posy>
+								<width>175</width>
+								<height>144</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+						<!--Icons-->
+							<control type="image"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<description>Default Cover</description>
+								<posx>43</posx>
+								<posy>88</posy>
+								<width>115</width>
+								<height>115</height>
+								<aspectratio align="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<description>Default Cover</description>
+								<posx>50</posx>
+								<posy>46</posy>
+								<width>125</width>
+								<height>125</height>
+								<aspectratio align="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+						<!--Labels-->	
+							<control type="label"> <!--Infopane-->
+								<visible>Skin.HasSetting(HideInfoPane)</visible>
+								<posx>103</posx>
+								<posy>204</posy>
+								<width>152</width>
+								<font>ListLabel2Font</font>
+								<textcolor>ThemeColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>center</align>
+								<aligny>top</aligny>
+								<animation effect="zoom" end="103" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="0">unfocus</animation>
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label"> <!--NoInfopane-->
+								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+								<posx>124</posx>
+								<posy>184</posy>
+								<width>158</width>
+								<font>ListLabel2Font</font>
+								<textcolor>ThemeColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>center</align>
+								<aligny>top</aligny>
+								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,50)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(50)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>
+				
+				<!--*************************************************************************** BigIconView ****************** (51) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">51</defaultcontrol>
+					<visible>Control.IsVisible(51)</visible>	
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<control type="scrollbar" id="150">
+						<description>BigIconViewScrollbar</description>
+						<posx>1250</posx>
+						<posy>92</posy>
+						<height>538</height>
+						<visible>!Skin.HasSetting(HideBigIconViewScrollbar) + Control.IsVisible(51)</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="panel" id="51">
+						<viewtype label="31104">Big Icon</viewtype>
+						<posx>40</posx>
+						<posy>85</posy>
+						<width>1200</width>
+						<height>555</height>
+						<pagecontrol>150</pagecontrol>
+						<preloaditems>2</preloaditems>
+						<onup>51</onup>
+						<ondown>51</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<itemlayout height="270" width="300">				
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>25</posy>
+								<width>250</width>
+								<height>200</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>9</bordersize>
+								<colordiffuse>ffAFAFAF</colordiffuse> <!--slight dimming-->
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>50</posx>
+								<posy>50</posy>
+								<width>200</width>
+								<height>150</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>9</bordersize>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="label">
+								<posx>150</posx>
+								<posy>237</posy>
+								<width>250</width>
+								<font>LargeListLabelFont</font>
+								<textcolor>DefaultColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>center</align>
+								<info>ListItem.Label</info>	
+								<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesBigIconLabel)] 
+								+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsBigIconLabel)]
+								+ ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicIconLabel)]</visible>
+							</control>
+						</itemlayout>															
+						<focusedlayout height="270" width="300">																	
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>25</posy>
+								<width>250</width>
+								<height>200</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+								<bordersize>10</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+								<!--AlbumThumbViewItemFocusAnim-->
+								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
+								<pulseonselect>true</pulseonselect>
+							</control>
+							<control type="image">
+								<description>Default Cover Background</description>
+								<posx>50</posx>
+								<posy>25</posy>
+								<width>200</width>
+								<height>200</height>
+								<texture background="true" border="10">Glass/SPE_Button.png</texture>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<!--MoviesThumbViewItemFocusAnim-->
+								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
+								<pulseonselect>true</pulseonselect>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>50</posx>
+								<posy>50</posy>
+								<width>200</width>
+								<height>150</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<!--MoviesThumbViewItemFocusAnim-->
+								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
+								<pulseonselect>true</pulseonselect>
+							</control>
+							<control type="label">
+								<posx>150</posx>
+								<posy>237</posy>
+								<width>250</width>
+								<font>DialogTitleFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>center</align>
+								<aligny>top</aligny>
+								<info>ListItem.Label</info>
+							</control>	
+						</focusedlayout>			
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,51)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(51)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>	
+				
+				<!--***************************************************************************** ListView ******************** (52) ********-->
+				<control type="group" id="500">			    
+					<defaultcontrol always="true">52</defaultcontrol>
+					<visible>Control.IsVisible(52)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+					<control type="image">
+						<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
+						<width>1280</width>
+						<include>BackgroundOffset</include>
+						<include>VariableBackgroundHeight</include>
+						<texture>listview-background-dim.png</texture>
+					</control>
+					<control type="image">
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
+						<width>1280</width>
+						<include>BackgroundOffset</include>
+						<include>VariableBackgroundHeight</include>
+						<texture>listview-background-dim.png</texture>
+					</control>
+					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+					<control type="scrollbar" id="150">
+						<description>ListViewScrollbar</description>
+						<posx>1250</posx>
+						<posy>92</posy>
+						<height>538</height>
+						<visible>!Skin.HasSetting(HideListViewScrollbar) + Control.IsVisible(52)</visible>
+						<onleft>500</onleft>
+					</control>
+					<!--***************************** (ZOOM list with several options) ********************************-->
+					<control type="list" id="52">	
+						<!--InfoPaneHiddenSlideAnim2-->
+						<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+						<viewtype label="31105">List</viewtype>
+						<posx>550</posx>
+						<posy>92</posy>
+						<width>710</width>
+						<height>535</height>
+						<pagecontrol>150</pagecontrol>
+						<onup>52</onup>
+						<ondown>52</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>	
+						<animation effect="slide" end="20,0" condition="!Control.IsVisible(150)">Conditional</animation>
+						<animation effect="slide" end="-35,0" time="250" delay="200" condition="!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+						<itemlayout height="38">
+						<!--LIST BACK(with/without small icons)-->
+							<control type="image">
+								<posx>7</posx>
+								<posy></posy>
+								<width>630</width>
+								<height>40</height>	
+								<texture border="10">ListViewItemBack.png</texture>
+								<!--ListViewItemBackgroundFadeAnim-->
+								<animation effect="fade" end="65" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>
+							<control type="image">
+								<posx>7</posx>
+								<posy></posy>
+								<width>665</width>
+								<height>40</height>	
+								<texture border="10">ListViewItemBack.png</texture>
+								<!--ListViewItemBackgroundFadeAnim-->
+								<animation effect="fade" end="80" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>	
+						<!--ICONS/THUMBS-->
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>12</posx>
+								<posy>8</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>	
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>12</posx>
+								<posy>8</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>IsEmpty( ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>	
+						<!--LABEL-->	
+							<control type="label">
+								<posx>47</posx>
+								<posy>3</posy>
+								<width>620</width>
+								<height>36</height>
+								<font>ListLabelFont</font>
+								<height>36</height>
+								<scroll>false</scroll>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabelUnfocusedColor</textcolor>	
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(ListViewHideStarsMusicLibrary) + IsEmpty(ListItem.Label2)</visible>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>47</posx>
+								<posy>3</posy>
+								<width>458</width>
+								<height>36</height>
+								<font>ListLabelFont</font>
+								<height>36</height>
+								<scroll>false</scroll>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabelUnfocusedColor</textcolor>	
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(ListViewHideStarsMusicLibrary) | !IsEmpty(ListItem.Label2)</visible>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+						<!--LABEL_2-->	
+							<control type="label">
+								<posx>665</posx>
+								<posy>5</posy>
+								<width>150</width>
+								<height>36</height>
+								<font>MenuFont</font>
+								<height>36</height>
+								<scroll>false</scroll>	
+								<align>right</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>AADCDCDC</textcolor><!--<textcolor>ListLabel2UnfocusedColor</textcolor>-->
+								<shadowcolor>ShadowColor</shadowcolor>			
+								<label>$INFO[ListItem.Label2]</label>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+								<visible>Skin.HasSetting(NoStars) + !Skin.HasSetting(ListViewHideStarsMusicLibrary)</visible>
+							</control>
+						<!--STAR_RATING-->	
+							<control type="image"> <!--ItemLayout-->
+								<description>IMDB rating</description>
+								<posx>602</posx>
+								<posy>14</posy>
+								<width>60</width>
+								<height>13</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ThemeColor</colordiffuse>	
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+								<visible>!Skin.HasSetting(NoStars) + !Skin.HasSetting(ListViewHideStarsMusicLibrary)</visible>
+							</control>
+						<!--VIEWED-->
+							<control type="image">
+								<description>Overlay</description>
+								<posx>676</posx>
+								<posy>8</posy>
+								<width>23</width>
+								<height>23</height>
+								<info>ListItem.Overlay</info>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+						</itemlayout>		
+						<focusedlayout height="38">	
+						<!--LIST BACK(with/without small icons)-->
+							<control type="image">
+								<posx></posx>
+								<posy>1</posy>
+								<width>645</width>
+								<height>39</height>	
+								<texture border="10">Glass/SquareThemeBorder.png</texture>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>Skin.HasSetting(ListViewHideSmallIconsMusicLibrary) + Control.HasFocus(52) + !Skin.HasSetting(ListViewHideThemeColoredSelectorMusicLibrary)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>1</posy>
+								<width>680</width>
+								<height>39</height>	
+								<texture border="10">Glass/SquareThemeBorder.png</texture>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary) + Control.HasFocus(52) + !Skin.HasSetting(ListViewHideThemeColoredSelectorMusicLibrary)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>1</posy>
+								<width>645</width>
+								<height>39</height>
+								<colordiffuse></colordiffuse>
+								<texture border="10">scrollbar-background.png</texture>
+								<visible>Skin.HasSetting(ListViewHideSmallIconsMusicLibrary) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelectorMusicLibrary)]</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>1</posy>
+								<width>680</width>
+								<height>39</height>
+								<colordiffuse></colordiffuse>
+								<texture border="10">scrollbar-background.png</texture>
+								<visible>!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary) + [!Control.HasFocus(52) | Skin.HasSetting(ListViewHideThemeColoredSelectorMusicLibrary)]</visible>
+							</control>
+						<!--ICONS/THUMBS-->
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>28</width>
+								<height>28</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>!Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>28</width>
+								<height>28</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>IsEmpty( ListItem.Thumb) + !Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)</visible>
+							</control>
+						<!--LABEL-->
+							<control type="label">
+								<posx>47</posx>
+								<posy>3</posy>
+								<width>620</width>
+								<height>36</height>
+								<font>DialogTitleFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>-</shadowcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(ListViewHideStarsMusicLibrary) + IsEmpty(ListItem.Label2)</visible>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>47</posx>
+								<posy>3</posy>
+								<width>453</width>
+								<height>36</height>
+								<font>DialogTitleFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>-</shadowcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(ListViewHideStarsMusicLibrary) | !IsEmpty(ListItem.Label2)</visible>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+						<!--LABEL_2-->
+							<control type="label">
+								<posx>665</posx>
+								<posy>5</posy>
+								<width>150</width>
+								<!--ListLabel2-->
+								<font>ListLabel2Font</font>
+								<height>36</height>
+								<scroll>false</scroll>	
+								<width>150</width>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<!--ListLabel2-->
+								<textcolor>ListLabel2FocusedColor</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>right</align>
+								<aligny>top</aligny>				
+								<label>$INFO[ListItem.Label2]</label>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+								<visible>Skin.HasSetting(NoStars) + !Skin.HasSetting(ListViewHideStarsMusicLibrary)</visible>
+							</control>
+						<!--STAR_RATING-->
+							<control type="image"> <!--FocusedLayout-->
+								<description>IMDB rating</description>
+								<posx>595</posx>
+								<posy>11</posy>
+								<width>75</width>
+								<height>18</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ThemeColor</colordiffuse>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+								<visible>!Skin.HasSetting(NoStars) + !Skin.HasSetting(ListViewHideStarsMusicLibrary)</visible>
+							</control>
+						<!--VIEWED-->
+							<control type="image">
+								<description>Overlay</description>
+								<posx>681</posx>
+								<posy>6</posy>
+								<width>28</width>
+								<height>28</height>
+								<info>ListItem.Overlay</info>
+								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation>
+							</control>
+						</focusedlayout>		
+					</control>
+					<!--***********************************************************************************************-->
+					<control type="grouplist">					
+						<posx>80</posx>
+						<posy>150</posy>
+						<usecontrolcoords>true</usecontrolcoords>	
+						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
+						+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
+						<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
+						<!--NoSmallIcons-->
+						<animation effect="slide" end="15,0" condition="Skin.HasSetting(ListViewHideSmallIconsMusicLibrary)">Conditional</animation><!---->
+						<!--InfoPaneHiddenSlideAnim2-->
+						<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+						<control type="image">
+							<description>Cover</description>
+							<width>400</width>
+							<height>400</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+							<bordersize>14</bordersize>
+							<aspectratio aligny="bottom">keep</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>		
+						</control>
+						<control type="image">
+							<description>Default Cover</description>
+							<posx>50</posx>
+							<posy>50</posy>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+							<bordersize>50</bordersize>
+							<aspectratio aligny="bottom">keep</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<colordiffuse>BBFFFFFF</colordiffuse>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+						</control>
+						<control type="image">
+							<description>Cover Reflection</description>
+							<posy>12</posy>
+							<width>400</width>
+							<height>400</height>
+							<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+							<bordersize>14</bordersize>
+							<aspectratio aligny="top">keep</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+						</control>
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,52)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(52)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>		
+				
+				<!--************************************************************************ MusicWideIconView *************** (68) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">68</defaultcontrol>
+					<visible>Control.IsVisible(68)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim2-->
+					<animation effect="slide" end="0,35" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<control type="scrollbar" id="150">
+						<description>WideIconViewScrollbar</description>
+						<posx>1255</posx>
+						<posy>78</posy>
+						<height>544</height>
+						<visible>!Skin.HasSetting(HideWideIconViewScrollbar) + Control.IsVisible(68)</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="panel" id="68">
+						<viewtype label="31108">Wide Icon</viewtype>
+						<posx>40</posx>
+						<posy>80</posy>
+						<width>1210</width>
+						<height>555</height>
+						<pagecontrol>150</pagecontrol>
+						<preloaditems>2</preloaditems>
+						<onup>68</onup>
+						<ondown>68</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<!--<scrolltime>250</scrolltime>-->
+						<visible>Window.IsActive(MusicLibrary) + [Container.Content(Albums) | Container.Content(Songs)]</visible>
+						<itemlayout height="185" width="605">				
+							<control type="image">
+								<description>BUTTON BG</description>
+								<width>590</width>
+								<height>172</height>	
+								<texture border="9">Glass/ShutDownButton.png</texture>
+							</control>		
+							<!--****************************** INFO_BG ******************************************-->
+							<control type="image">
+								<description>info line bg 1</description>
+								<posx>170</posx><!--edge-->
+								<posy>40</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="image">
+								<description>info line bg 2</description>
+								<posx>170</posx><!--edge-->
+								<posy>64</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 3</description>
+								<posx>170</posx><!--edge-->
+								<posy>88</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 4</description>
+								<posx>170</posx><!--edge-->
+								<posy>112</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 5</description>
+								<posx>170</posx><!--edge-->
+								<posy>136</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="image">
+								<description>info line bg 5</description>
+								<posx>170</posx><!--edge-->
+								<posy>136</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>Grey</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+							<!--*********************************************************************************-->
+							<control type="image"> 
+								<description>header separator</description>
+								<posx>165</posx>
+								<posy>35</posy>
+								<width>418</width>
+								<height>3</height>
+								<texture>slider_nibfo.png</texture>
+								<colordiffuse>cc626262</colordiffuse>
+							</control>
+						<!--icons,thumbs-->
+							<control type="image">
+								<description>Cover</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>160</width>
+								<height>160</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover Background</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>160</width>
+								<height>160</height>
+								<texture border="5">item-noshadow-background.png</texture>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>46</posx>
+								<posy>45</posy>
+								<width>80</width>
+								<height>80</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<colordiffuse>gray</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<!--icon_dimmer-->
+							<control type="image">
+								<description>Cover</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>160</width>
+								<height>160</height>
+								<texture background="true">black.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+								<animation effect="fade" end="43" condition="true">Conditional</animation>
+							</control>
+						<!--title-->
+							<control type="label">
+								<description>Title and year</description>
+								<width>405</width>
+								<posy>5</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<height>20</height>
+								<font>MenuFont</font>
+								<textcolor>aadcdcdc</textcolor>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						<!--Artist-->
+							<control type="label">
+								<description>Artist</description>
+								<posy>44</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B][UPPERCASE]$LOCALIZE[557][/UPPERCASE][/B]</label>
+							</control>
+							<control type="label">
+								<description>artist</description>
+								<posy>44</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Artist][/B]</label>
+							</control>
+						<!--Genre-->	
+							<control type="label">
+								<description>Genre</description>
+								<posy>68</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<height>20</height>
+								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<description>Genre</description>
+								<posy>68</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<height>20</height>
+								<label>[B]$INFO[ListItem.Genre][/B]</label>
+							</control>
+						<!--Year-->	
+							<control type="label">
+								<description>Year</description>
+								<posy>92</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[562][/B][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<description>Year</description>
+								<posy>92</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Year][/B]</label>
+							</control>
+						<!--Rating(Albums)-->	
+							<control type="label">
+								<description>Rating</description>
+								<posy>116</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+							<control type="label">
+								<description>Rating</description>
+								<posy>116</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
+								<visible>Container.Content(Albums)</visible>
+							</control>	
+						<!--Rating(songs)-->	
+							<control type="label">
+								<description>Rating</description>
+								<posy>140</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="label">
+								<description>Rating</description>
+								<posy>140</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>	
+						<!--Artist-->	
+							<control type="label">
+								<description>Artist</description>
+								<posy>116</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[558][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="label">
+								<description>Artist</description>
+								<posy>116</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>Grey</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Album][/B]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>	
+						</itemlayout>															
+						<focusedlayout height="185" width="600">
+							<control type="image">
+								<description>BUTTON BG</description>
+								<width>590</width>
+								<height>172</height>	
+								<texture border="9">Glass/keyfocus.png</texture>
+							</control>	
+							<!--****************************** INFO_BG ******************************************-->
+							<control type="image">
+								<description>info line bg 1</description>
+								<posx>170</posx><!--edge-->
+								<posy>40</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="image">
+								<description>info line bg 2</description>
+								<posx>170</posx><!--edge-->
+								<posy>64</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 3</description>
+								<posx>170</posx><!--edge-->
+								<posy>88</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 4</description>
+								<posx>170</posx><!--edge-->
+								<posy>112</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<description>info line bg 5</description>
+								<posx>170</posx><!--edge-->
+								<posy>136</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="image">
+								<description>info line bg 5</description>
+								<posx>170</posx><!--edge-->
+								<posy>136</posy>
+								<width>408</width>
+								<height>30</height>
+								<colordiffuse>Grey</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+							<!--*********************************************************************************-->
+							<control type="image"> 
+								<description>header separator</description>
+								<posx>165</posx>
+								<posy>35</posy>
+								<width>418</width>
+								<height>3</height>
+								<texture>slider_nibfo.png</texture>
+								<colordiffuse>cc626262</colordiffuse>
+							</control>
+						<!--icons,thumbs-->
+							<control type="image">
+								<description>Cover</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>160</width>
+								<height>160</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover Background</description>
+								<posx>7</posx>
+								<posy>6</posy>
+								<width>160</width>
+								<height>160</height>
+								<texture border="5">item-noshadow-background.png</texture>
+								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordersize>6</bordersize>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>46</posx>
+								<posy>45</posy>
+								<width>80</width>
+								<height>80</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<colordiffuse>gray</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+						<!--title-->
+							<control type="label">
+								<description>Title and year</description>
+								<width>405</width>
+								<posy>5</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<height>20</height>
+								<font>MenuFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<scroll>false</scroll>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						<!--Artist-->
+							<control type="label">
+								<description>Artist</description>
+								<posy>44</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B][UPPERCASE]$LOCALIZE[557][/UPPERCASE][/B]</label>
+							</control>
+							<control type="label">
+								<description>artist</description>
+								<posy>44</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Artist][/B]</label>
+							</control>
+						<!--Genre-->	
+							<control type="label">
+								<description>Genre</description>
+								<posy>68</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<height>20</height>
+								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<description>Genre</description>
+								<posy>68</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<height>20</height>
+								<label>[B]$INFO[ListItem.Genre][/B]</label>
+							</control>
+						<!--Year-->	
+							<control type="label">
+								<description>Year</description>
+								<posy>92</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[562][/B][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<description>Year</description>
+								<posy>92</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Year][/B]</label>
+							</control>
+						<!--Rating(Albums)-->	
+							<control type="label">
+								<description>Rating</description>
+								<posy>116</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+							<control type="label">
+								<description>Rating</description>
+								<posy>116</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
+								<visible>Container.Content(Albums)</visible>
+							</control>	
+						<!--Rating(songs)-->	
+							<control type="label">
+								<description>Rating</description>
+								<posy>140</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="label">
+								<description>Rating</description>
+								<posy>140</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>	
+						<!--Artist-->	
+							<control type="label">
+								<description>Artist</description>
+								<posy>116</posy>
+								<posx>175</posx><!--w.i.l.l.-->
+								<align>left</align>
+								<width>150</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[UPPERCASE][B]$LOCALIZE[558][/B][/UPPERCASE]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>
+							<control type="label">
+								<description>Artist</description>
+								<posy>116</posy>
+								<posx>575</posx><!--w.i.l.l.-->
+								<align>right</align>
+								<width>300</width>
+								<height>20</height>
+								<font>WideIconDetailFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<scroll>false</scroll>
+								<label>[B]$INFO[ListItem.Album][/B]</label>
+								<visible>Container.Content(Songs)</visible>
+							</control>	
+						</focusedlayout>			
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,68)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(68)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation> 
+				</control>	
+				
+				<!--************************************************************************ AlbumThumbnailView ************** (63) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">63</defaultcontrol>
+					<visible>Control.IsVisible(63)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim2-->
+					<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<control type="scrollbar" id="150">
+						<description>ThumbnailViewScrollbar</description>
+						<posx>1250</posx>
+						<posy>92</posy>
+						<height>538</height>
+						<visible>!Skin.HasSetting(HideThumbnailViewScrollbar) + [Control.IsVisible(54) | Control.IsVisible(63)]</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="panel" id="63">
+						<viewtype label="31107">Album Thumbnail</viewtype>
+						<posx>40</posx>
+						<posy>85</posy>
+						<width>1200</width>
+						<height>540</height>
+						<pagecontrol>150</pagecontrol>
+						<preloaditems>2</preloaditems>
+						<onup>63</onup>
+						<ondown>63</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<visible>Window.IsActive(MusicFiles) | Container.Content(Songs) | Container.Content(Albums)</visible>
+						<itemlayout height="270" width="240">				
+							<control type="image">
+								<description>Cover</description>
+								<posx>12</posx>
+								<posy>16</posy>
+								<width>216</width>
+								<height>216</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>9</bordersize>
+								<colordiffuse>ffAFAFAF</colordiffuse>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>12</posx>
+								<posy>16</posy>
+								<width>216</width>
+								<height>216</height>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
+								<bordersize>40</bordersize>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<!--
+							<control type="image">
+								<posx>21</posx>
+								<posy>25</posy>
+								<width>198</width>
+								<height>198</height>
+								<texture>background-dim.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+								<animation effect="fade" end="30" time="1000" condition="true">Conditional</animation>
+							</control>
+							-->
+							<control type="label">
+								<posx>120</posx>
+								<posy>241</posy>
+								<width>226</width>
+								<font>DefaultFont</font>
+								<textcolor>DefaultColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>center</align>
+								<info>ListItem.Label</info>	
+								<visible>!Skin.HasSetting(HideMusicThumbnailLabel)</visible>
+							</control>
+						</itemlayout>															
+						<focusedlayout height="270" width="240">											
+							<control type="image">
+								<description>Cover</description>
+								<posx>12</posx>
+								<posy>16</posy>
+								<width>216</width>
+								<height>216</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+								<bordersize>10</bordersize>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+								<!--AlbumThumbViewItemFocusAnim-->
+								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>12</posx>
+								<posy>16</posy>
+								<width>216</width>
+								<height>216</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="10">Glass/SPE_Button.png</bordertexture>
+								<bordersize>35</bordersize>
+								<aspectratio>stretch</aspectratio>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<!--AlbumThumbViewItemFocusAnim-->
+								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
+								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
+							</control>
+							<control type="label">
+								<posx>120</posx>
+								<posy>241</posy>
+								<width>226</width>
+								<font>ListLabelFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<selectedcolor>SelectedColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>center</align>
+								<info>ListItem.Label</info>	
+							</control>
+						</focusedlayout>			
+					</control>
+					<control type="button" id="188">
+						<description>ViewOptionsHelperBtn</description>
+						<onfocus>Skin.SetString(CurrentViewMode,63)</onfocus>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(63)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>	
+				
+				<!--************************************************************************* MusicListInfoView ************** (62) ********-->
+				<control type="group" id="500">			    
+					<defaultcontrol always="true">62</defaultcontrol>
+					<visible>Control.IsVisible(62)</visible>
+					<!--InfoPaneHiddenSlideAnim-->
+					<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<animation effect="slide" end="0,0" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					
+					<!--************************* ListMediaControlAreaBackground ******************************-->
+					<control type="image">
+						<posx>-10</posx>
+						<posy>332</posy>
+						<width>1300</width>
+						<height>320</height>
+						<texture border="">black.png</texture>
+						<colordiffuse></colordiffuse>
+						<animation effect="fade" end="40" condition="true">Conditional</animation> 
+						<visible>Skin.HasSetting(DoNotDimMusicFanart)</visible>
+					</control>
+					<control type="image">
+						<posx>-10</posx>
+						<posy>332</posy>
+						<width>1300</width>
+						<height>320</height>
+						<texture border="10">Glass/ShutDownButtonF.png</texture>
+						<colordiffuse></colordiffuse>
+						<animation effect="fade" end="70" condition="true">Conditional</animation> 
+					</control>
+					<!--***************************************************************************************-->
+					<control type="scrollbar" id="150">
+						<description>ListInfoViewScrollbar</description>
+						<posx>1270</posx>
+						<posy>350</posy>
+						<width>5</width>
+						<height>289</height>
+						<visible>!Skin.HasSetting(HideListInfoViewScrollbar) + [Control.IsVisible(58) | Control.IsVisible(61) | Control.IsVisible(62)]</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="list" id="62">	
+						<viewtype label="31111">List Info</viewtype>
+						<posx>730</posx>
+						<posy>342</posy>
+						<width>520</width>
+						<height>305</height>
+						<pagecontrol>150</pagecontrol>
+						<onup>58</onup>
+						<ondown>58</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<itemgap></itemgap>
+						<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)</visible>
+						<itemlayout height="30" width="500">
+							<control type="image">
+								<width>520</width>
+								<height>34</height>	
+								<texture border="10">ListViewItemBack.png</texture>
+								<animation effect="fade" end="70" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>5</posx>
+								<posy>6</posy>
+								<width>23</width>
+								<height>23</height>
+								<colordiffuse></colordiffuse>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HideUnSelectedMediaIcons)</visible>
+							</control>					
+							<control type="label">
+								<posx>35</posx>
+								<posy>4.5</posy>
+								<width>420</width>
+								<font>LibraryCatFontSmall</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>left</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ThemeColor2</textcolor>
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label">
+								<posx>510</posx>
+								<posx>35</posx>
+								<posy>4</posy>
+								<width>140</width>
+								<font>DefaultFont</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>right</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>AADCDCDC</textcolor>
+								<info>ListItem.Label2</info>
+								<visible>!Container.Content(Albums)</visible>
+							</control>
+							<control type="label">
+								<posx>510</posx>
+								<posx>35</posx>
+								<posy>4</posy>
+								<width>140</width>
+								<font>DefaultFont</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>right</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>AADCDCDC</textcolor>
+								<info>ListItem.Year</info>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+						</itemlayout>		
+						<focusedlayout height="30" width="500">	
+							<control type="image">
+								<posy>2</posy>
+								<width>520</width>
+								<height>30</height>		
+								<texture border="10">scrollbar-background.png</texture>
+								<animation effect="zoom" end="102" center="auto" time="0">focus</animation>
+								<animation effect="zoom" start="102" center="auto" time="0">unfocus</animation>
+								<visible>Control.HasFocus(62)</visible>
+							</control>
+							<control type="image">
+								<posy>2</posy>
+								<width>520</width>
+								<height>30</height>		
+								<texture border="">button-list-alt-focus.png</texture>
+								<visible>!Control.HasFocus(62)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>1</posx>
+								<posy>3</posy>
+								<width>27</width>
+								<height>27</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HideSelectedMediaIcons)</visible>
+							</control>
+							<control type="label">
+								<description>Title</description>
+								<posx>35</posx>
+								<posy>3</posy>
+								<width>420</width>
+								<font>LibraryCatFontBig</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>left</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabelFocusedColor</textcolor>
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label">
+								<posx>515</posx>
+								<posx>35</posx>
+								<posy>4</posy>
+								<width>140</width>
+								<font>LibraryCatFontSmall</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>right</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ThemeColor</textcolor>	
+								<info>ListItem.Label2</info>
+								<visible>!Container.Content(Albums)</visible>
+							</control>
+							<control type="label">
+								<posx>515</posx>
+								<posx>35</posx>
+								<posy>4</posy>
+								<width>140</width>
+								<font>LibraryCatFontSmall</font>
+								<height>34</height>	
+								<scroll>false</scroll>
+								<align>right</align>
+								<aligny>top</aligny>
+								<textoffsety>-3</textoffsety>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ThemeColor</textcolor>
+								<info>ListItem.Year</info>
+								<visible>Container.Content(Albums)</visible>
+							</control>
+						</focusedlayout>		
+					</control>	
+				<!--FAKE LIST FOR MEDIA INFO BG-->
+					<control type="list">	
+						<posx>20</posx>
+						<posy>342</posy>
+						<width>685</width>
+						<height>210</height>
+						<itemgap></itemgap>
+						<itemlayout height="30" width="500">
+							<control type="image">
+								<width>685</width>
+								<height>34</height>	
+								<texture border="10">ListViewItemBack.png</texture>
+								<animation effect="fade" end="70" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<description>shell</description>
+								<posx></posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>34</height>
+								<font>MediaInfoFont</font>
+								<textcolor>aadcdcdc</textcolor>
+								<aligny>top</aligny>
+								<textoffsety>2</textoffsety>
+								<scroll>false</scroll>
+								<label> [UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="30" width="500">
+							<control type="image">
+								<width>685</width>
+								<height>34</height>	
+								<texture border="10">ListViewItemBack.png</texture>
+								<animation effect="fade" end="70" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<description>shell</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>300</width>
+								<height>34</height>
+								<font>MediaInfoFont</font>
+								<textcolor>aadcdcdc</textcolor>
+								<aligny>top</aligny>
+								<textoffsety>2</textoffsety>
+								<scroll>false</scroll>
+								<label> [UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Artist Biogrophy</description>
+								<label>$LOCALIZE[557] $LOCALIZE[21887]</label>
+								<!--<label2>$INFO[ListItem.Director]</label2>-->
+								<onclick>-</onclick>
+								<visible>Container.Content(artists)</visible>
+							</item>
+							<item id="1">
+								<description>Album Description</description>
+								<label>$LOCALIZE[558] $LOCALIZE[21821]</label>
+								<!--<label2>$INFO[ListItem.Writer]</label2>-->
+								<onclick>-</onclick>
+								<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+							</item>
+						</content>
+					</control>
+			<!--BIOGROPHY/ALBUM INFO-->
+					<control type="group">
+						<control type="image">
+							<posx>20</posx>
+							<posy>375</posy>
+							<width>405</width>
+							<height>5</height>
+							<texture>separator3.png</texture>
+						</control>
+						<control type="textbox">
+							<description>Artist Biogrophy</description>
+							<posx>20</posx>
+							<posy>380</posy>
+							<width>405</width>
+							<height>250</height>
+							<font>font15</font>
+							<textcolor>ThemeColor2</textcolor>
+							<align>justify</align>
+							<wrapmultiline>true</wrapmultiline>
+							<label>[B]$INFO[ListItem.Property(Artist_Description)][/B]</label>
+							<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+							<visible>Container.Content(artists)</visible>
+						</control>
+						<control type="textbox">
+							<description>Album Description</description>
+							<posx>20</posx>
+							<posy>380</posy>
+							<width>405</width>
+							<height>250</height>
+							<font>font15</font>
+							<textcolor>ThemeColor2</textcolor>
+							<align>justify</align>
+							<wrapmultiline>true</wrapmultiline>
+							<label>[B]$INFO[ListItem.Property(Album_Description)][/B]</label>
+							<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+							<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+						</control>
+					</control>
+				<!--ICONS-->	
+					<control type="group">					
+						<posx>440</posx>
+						<posy>379</posy>
+						<control type="image">
+							<description>Cover</description>
+							<width>260</width>
+							<height>260</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio align="center" aligny="center">stretch</aspectratio>
+							<bordertexture border="10">search-focus.png</bordertexture>
+							<bordersize>6</bordersize>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Thumb)</visible>
+						</control>
+						<control type="image">
+							<description>Default Cover Background</description>
+							<width>260</width>
+							<height>260</height>
+							<texture border="5">item-noshadow-background.png</texture>
+							<bordertexture border="6">search-focus.png</bordertexture>
+							<bordersize>6</bordersize>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<visible>IsEmpty(ListItem.Thumb)</visible>
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Default Cover</description>
+							<posx>60</posx>
+							<posy>53</posy>
+							<width>151</width>
+							<height>151</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<visible>IsEmpty(ListItem.Thumb)</visible>		
+						</control>		
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,62)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(62)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>	
+				
+				<!--*********************************************************************** MusicSlimListWideView ************ (78) ********-->
+				<control type="group" id="500">			    
+					<defaultcontrol always="true">78</defaultcontrol>
+					<visible>Control.IsVisible(78)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--************************* ListMediaControlAreaBackground ******************************-->
+					<control type="image">
+						<posy>325</posy>
+						<width>ScreenWidth</width>
+						<height>326</height>
+						<texture border="0,15,0,15">control-area-background.png</texture>
+						<!--ControlAreaBackgroundFadeAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						 <posy>330</posy>
+						 <width>ScreenWidth</width>
+						 <height>316</height>
+						 <texture>bottom-bar-overlay.png</texture>
+						 <animation effect="fade" end="50" condition="true">Conditional</animation> 
+					</control>
+					<!--***************************************************************************************-->
+					<!--InfoPaneHiddenSlideAnim-->
+					<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<control type="list" id="78">
+						<viewtype label="31118">Slim Wide List</viewtype>
+						<posx>20</posx>
+						<posy>350</posy>
+						<width>1240</width>
+						<height>274</height>
+						<pagecontrol>150</pagecontrol>
+						<onup>68</onup>
+						<ondown>68</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>			
+						<visible>Window.IsActive(MusicLibrary)</visible>
+						<itemlayout height="36">
+							<control type="image">
+								<width>1240</width>
+								<height>36</height>	
+								<texture border="0,2,0,0">button-list-nofocus.png</texture>
+								<animation effect="fade" end="70" condition="true">Conditional</animation>
+							</control>	
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>6</posx>
+								<posy>8</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>					
+							<control type="label">
+								<posx>35</posx>
+								<posy>2</posy>
+								<width>900</width>
+								<height>36</height>
+								<font>ListLabelFont</font>
+								<height>36</height>
+								<scroll>false</scroll>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabelUnfocusedColor</textcolor>			
+								<info>ListItem.Label</info>
+							</control>
+							<control type="label">
+								<posx>1210</posx>
+								<posy>3</posy><!---->
+								<width>100</width>
+								<height>36</height>
+								<font>ListLabel2Font</font>
+								<height>36</height>
+								<scroll>false</scroll>	
+								<align>right</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabel2UnfocusedColor</textcolor>	
+								<info>ListItem.Year</info>
+								<visible>Container.Content(albums)</visible>
+							</control>
+							<control type="label">
+								<posx>1210</posx>
+								<posy>3</posy><!---->
+								<width>100</width>
+								<height>36</height>
+								<font>ListLabel2Font</font>
+								<height>36</height>
+								<scroll>false</scroll>	
+								<align>right</align>
+								<aligny>top</aligny>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<textcolor>ListLabel2UnfocusedColor</textcolor>	
+								<info>ListItem.Duration</info>
+								<visible>Container.Content(songs)</visible>
+							</control>
+						</itemlayout>	
+						<focusedlayout height="200">	
+							<control type="group">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1240</width>
+								<height>200</height>	
+								<control type="image">
+									<posy>0</posy>
+									<width>1240</width>
+									<height>200</height>	
+									<texture border="5">button-list-focus.png</texture>
+									<visible>Control.HasFocus(64)</visible>
+								</control>
+								<control type="image">
+									<posy>0</posy>
+									<width>1240</width>
+									<height>200</height>	
+									<texture border="5">button-list-alt-focus.png</texture>
+									<visible>!Control.HasFocus(64)</visible>
+								</control>
+							<!--icons,thumbs-->
+								<control type="group">
+									<posx>25</posx>
+									<posy>25</posy>
+									<width>150</width>
+									<height>150</height>
+									<animation effect="zoom" start="90" end="100" center="auto" time="500" tween="back" easing="inout" reversible="false">Focus</animation>
+									<control type="image">
+										<description>Cover</description>
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>150</width>
+										<height>150</height>
+										<texture background="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio align="center" aligny="center">scale</aspectratio>
+										<bordertexture border="6">item-shadow-border.png</bordertexture>
+										<bordersize>6</bordersize>
+										<visible>!IsEmpty(ListItem.Thumb)</visible>
+									</control>
+									<control type="image">
+										<description>Cover</description>
+										<posx>0</posx>
+										<posy>0</posy>
+										<width>150</width>
+										<height>150</height>
+										<texture background="true">$INFO[ListItem.Icon]</texture>
+										<aspectratio align="center" aligny="center">keep</aspectratio>
+										<bordertexture border="6">item-shadow-border.png</bordertexture>
+										<bordersize>6</bordersize>
+										<visible>IsEmpty(ListItem.Thumb)</visible>
+									</control>
+								</control>
+							<!--desc. boxes-->
+								<control type="group">
+									<posx>200</posx>
+									<width>1000</width>
+									<height>150</height>
+									<control type="label">
+										<posx>0</posx>
+										<posy>20</posy>
+										<width>965</width>
+										<height>36</height>
+										<font>ListLabelFont</font>
+										<height>36</height>
+										<scroll>false</scroll>
+										<align>left</align>
+										<aligny>top</aligny>
+										<selectedcolor>SelectedColor</selectedcolor>
+										<textcolor>ThemeColor</textcolor>
+										<label>$INFO[ListItem.Label]</label>
+									</control>
+								<!--Artists-->
+									<control type="textbox">
+										<description>Artist Description</description>
+										<posx>0</posx>
+										<posy>70</posy>
+										<width>1010</width>
+										<height>94</height>
+										<!--WideListPlot-->
+										<font>MediaInfoFont</font>
+										<align>justify</align>
+										<wrapmultiline>true</wrapmultiline>
+										<!--WideListPlot-->
+										<textcolor>ListLabelFocusedColor</textcolor>
+										<label>$INFO[ListItem.Property(Artist_Description)]</label>
+										<autoscroll time="2000" delay="10000" repeat="10000" condition="true">Conditional</autoscroll>
+										<visible>Container.Content(artists)</visible>
+									</control>
+								<!--Albums-->
+									<control type="label">
+										<posx>1010</posx>
+										<posy>21</posy>
+										<width>300</width>
+										<font>ListLabel2Font</font>
+										<height>36</height>
+										<scroll>false</scroll>	
+										<align>right</align>
+										<aligny>top</aligny>
+										<selectedcolor>SelectedColor</selectedcolor>
+										<textcolor>ListLabel2UnfocusedColor</textcolor>
+										<info>ListItem.Year</info>
+										<visible>Container.Content(albums)</visible>
+									</control>
+									<control type="label">
+										<posx>0</posx>
+										<posy>45</posy>
+										<width>965</width>
+										<height>36</height>
+										<font>WideListAiredFont</font>
+										<height>20</height>
+										<scroll>false</scroll>
+										<align>left</align>
+										<aligny>top</aligny>	
+										<textcolor>ListLabelFocusedColor</textcolor>		
+										<label>$INFO[ListItem.Artist]</label>
+										<visible>Container.Content(albums)</visible>
+									</control>
+									<control type="textbox">
+										<description>Album Description</description>
+										<posx>0</posx>
+										<posy>70</posy>
+										<width>1010</width>
+										<height>94</height>
+										<font>MediaInfoFont</font>
+										<align>justify</align>
+										<wrapmultiline>true</wrapmultiline>
+										<textcolor>ListLabelFocusedColor</textcolor>
+										<label>$INFO[ListItem.Property(Album_Description)]</label>
+										<autoscroll time="2000" delay="10000" repeat="10000" condition="true">Conditional</autoscroll>
+										<visible>Container.Content(albums)</visible>
+									</control>
+								<!--Songs-->
+									<control type="label">
+										<posx>0</posx>
+										<posy>45</posy>
+										<width>965</width>
+										<height>36</height>
+										<font>WideListAiredFont</font>
+										<height>20</height>
+										<scroll>false</scroll>
+										<align>left</align>
+										<aligny>top</aligny>	
+										<textcolor>ListLabelFocusedColor</textcolor>		
+										<label>on '$INFO[ListItem.Album]' by '$INFO[ListItem.Artist]'</label>
+										<visible>Container.Content(songs)</visible>
+									</control>
+									<control type="label">
+										<posx>1010</posx>
+										<posy>21</posy>
+										<width>300</width>
+										<font>ListLabel2Font</font>
+										<height>36</height>
+										<scroll>false</scroll>	
+										<align>right</align>
+										<aligny>top</aligny>
+										<selectedcolor>SelectedColor</selectedcolor>
+										<textcolor>ListLabel2UnfocusedColor</textcolor>
+										<info>ListItem.Label2</info>
+										<visible>Container.Content(songs)</visible>
+									</control>
+								</control>
+							</control>
+						</focusedlayout>		
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,78)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(78)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>
+				
+				<!--************************************************************************ MusicListInfoView2 ************** (67) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">67</defaultcontrol>
+					<visible>Control.IsVisible(67)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim2-->
+					<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<control type="scrollbar" id="150">
+						<description>ListInfo2ViewScrollbar</description>
+						<posx>1250</posx>
+						<posy>97</posy>
+						<height>542</height>
+						<visible>!Skin.HasSetting(HideListInfo2ViewScrollbar) + [Control.IsVisible(76) | Control.IsVisible(79) | Control.IsVisible(80) | Control.IsVisible(67)]</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="group">
+						<description>Media Info Area</description>
+						<posx>40</posx>
+						<posy>70</posy>
+						<!--******************************* SEPARATORS *********************************-->	
+						<control type="group"> <!--TOP-->
+							<posy>300</posy>
+							<posx>5</posx>
+							<control type="image">
+								<posx>5</posx>
+								<description>top bar</description>
+								<posy>34</posy>
+								<width>303</width>
+								<height>2</height>
+								<texture>separator.png</texture>
+							</control>
+							<control type="image">
+								<posx>240</posx>
+								<posy>34</posy>
+								<width>303</width>
+								<height>2</height>
+								<texture flipx="true">separator.png</texture>
+							</control>
+						</control>	
+						<control type="group"> <!--BOTTOM-->
+							<posy>344</posy>
+							<posx>5</posx>
+							<control type="image">
+								<posx>5</posx>
+								<description>top bar</description>
+								<posy>34</posy>
+								<width>303</width>
+								<height>3</height>
+								<texture>separator.png</texture>
+							</control>
+							<control type="image">
+								<posx>240</posx>
+								<posy>34</posy>
+								<width>303</width>
+								<height>3</height>
+								<texture flipx="true">separator.png</texture>
+							</control>
+						</control>	
+						<!--****************************************************************************-->				
+						<control type="image">
+							<posx>-13</posx>
+							<description>Default Background</description>
+							<width>586</width>
+							<height>335</height>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+							<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
+						</control>	
+						<control type="largeimage">
+							<posx>-6</posx>
+							<posy>3</posy>
+							<description>Fanart</description>
+							<width>570</width>
+							<height>329</height>
+							<bordertexture border="7">item-shadow-border.png</bordertexture>
+							<bordersize>5</bordersize>
+							<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>	
+						</control>
+						<control type="group">
+							<visible>!Container.OnNext + !Container.OnPrevious</visible>
+							<!--ControlsOpenCloseAnim-->
+							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+							<control type="image">
+								<description>Genre Background</description>
+								<posx>0</posx>
+								<posy>5</posy>
+								<width>562</width>
+								<height>30</height>
+								<colordiffuse>BFFFFFFF</colordiffuse>
+								<texture border="5">home-submenu-cover1.png</texture>
+								<visible>!IsEmpty(ListItem.Genre) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+								<animation effect="fade" end="100" condition="true">Conditional</animation>
+							</control>	
+							<control type="label">
+								<description>Genre</description>
+								<posx>10</posx>
+								<posy>18</posy>
+								<width>540</width>
+								<font>MediaInfoAltHeadFont2</font>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>	
+								<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+							</control>
+							<control type="group">	
+								<posy>22</posy>
+								<control type="label">
+									<description>Media Info Row 1</description>
+									<posx>5</posx>
+									<posy>333</posy>
+									<width>380</width>
+									<font>MediaInfoAltHeadFont2</font>
+									<textcolor>DefaultColor</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<aligny>center</aligny>	
+									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[557]:[/COLOR][/UPPERCASE] $INFO[ListItem.Artist]</label>
+									<visible>!IsEmpty(ListItem.Artist)</visible>
+								</control>
+								<control type="label">
+									<description>Media Info Row 1</description>
+									<posx>555</posx>
+									<posy>333</posy>
+									<width>160</width>
+									<font>MediaInfoAltHeadFont2</font>
+									<textcolor>DefaultColor</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<aligny>center</aligny>	
+									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+									<align>right</align>
+									<visible>!IsEmpty(ListItem.Year)</visible>
+								</control>
+								<control type="label">
+									<description>Media Info Row 1</description>
+									<posx>555</posx>
+									<posy>333</posy>
+									<width>160</width>
+									<font>MediaInfoAltHeadFont2</font>
+									<textcolor>DefaultColor</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<aligny>center</aligny>	
+									<label>[UPPERCASE][COLOR=MediaInfoItemColor]$LOCALIZE[345]:[/COLOR][/UPPERCASE] $INFO[ListItem.Year]</label>
+									<align>right</align>
+									<visible>!IsEmpty(ListItem.Year)</visible>
+								</control>
+							</control>
+						<!--INFO_BG-->
+							<control type="image">
+								<description>INFO BACKGROUND FOR DESCRIPTION</description>
+								<posx>-13</posx>
+								<posy>379</posy>
+								<width>587</width>
+								<height>198</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						<!--desc. boxes-->
+							<control type="group">
+								<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideAlbumsListInfo2Description)</visible>
+								<control type="textbox">
+									<description>Description</description>
+									<posx>5</posx>
+									<posy>394</posy>
+									<width>550</width>
+									<height>160</height>
+									<font>MediaInfoFont</font>
+									<textcolor>ThemeColor2</textcolor>
+									<align>justify</align>
+									<wrapmultiline>true</wrapmultiline>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>$INFO[ListItem.Property(Album_Description)]</label>
+									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollAlbumsListInfo2Description)</autoscroll>
+									<!--ControlsOpenCloseAnim-->
+									<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+								</control>	
+							</control>
+						</control>
+					</control>
+					
+					<!--<include condition="Skin.String(MusicListInfo2Style,1)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2ClassicStyle</include>
+					<include condition="Skin.String(MusicListInfo2Style,2) | Skin.String(MusicListInfo2Style,)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2BannerStyle</include>
+					<include condition="Skin.String(MusicListInfo2Style,3)" file="VIEWS_MUSIC_ListInfo2.xml">MusicListInfo2IconStyle</include>-->
+					
+					<control type="list" id="67">	
+						<viewtype label="$LOCALIZE[31120]">List Info 2</viewtype>
+						<posx>610</posx>
+						<posy>74</posy>
+						<width>626</width>
+						<height>572</height>
+						<pagecontrol>150</pagecontrol>
+						<onup>67</onup>
+						<ondown>67</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>	
+						<itemlayout height="95">
+							<control type="image">
+								<description>Background</description>
+								<posx>20</posx>
+								<posy>2</posy>
+								<width>590</width>
+								<height>87</height>
+								<texture border="5">button-nofocus.png</texture>
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+							</control>	
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordertexture border="7">item-shadow-border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>								
+							<control type="label">
+								<description>Title</description>
+								<posx>115</posx>
+								<posy>9</posy>
+								<width>490</width>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>DefaultColor</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<posx>120</posx>
+								<posy>60</posy>
+								<width>490</width>
+								<font>MediaInfoCatFont</font>
+								<textcolor>MediaInfoHeadColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>				
+								<info>ListItem.Label2</info>
+								<visible>Skin.HasSetting(NoStars)</visible>
+							</control>
+							<control type="image">
+								<description>IMDB rating</description>
+								<posx>67</posx>
+								<align>left</align>
+								<posy>50</posy>
+								<width>220</width>
+								<height>25</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ffcccccc</colordiffuse>	
+								<visible>!Skin.HasSetting(NoStars)</visible>
+							</control>
+						</itemlayout>		
+						<focusedlayout height="95">	
+							<control type="image">
+								<posx>2</posx>
+								<posy>-5</posy>
+								<width>626</width>
+								<height>100</height>
+								<visible>Control.HasFocus(67)</visible>
+								<texture border="10">Glass/keyfocus.png</texture>
+								<bordersize>9</bordersize>
+							</control>
+							<control type="image">
+								<posx>2</posx>
+								<posy>-5</posy>
+								<width>626</width>
+								<height>100</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">Glass/keyfocus.png</texture>
+								<bordersize>9</bordersize>
+								<visible>!Control.HasFocus(67)</visible>
+							</control>
+							<control type="image">
+								<description>Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordertexture border="7">item-shadow-border.png</bordertexture>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>80</width>
+								<height>80</height>
+								<bordersize>5</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+								<animation effect="zoom" end="130" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="130" center="auto" time="0">unfocus</animation>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>				
+							<control type="label">
+								<description>Title</description>
+								<posx>120</posx>
+								<posy>9</posy>
+								<width>405</width>
+								<textwidth>405</textwidth>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<animation effect="zoom" end="120" center="120,15" time="100">focus</animation>
+								<animation effect="zoom" start="120" center="120,15" time="100">unfocus</animation>	
+							</control>
+							<control type="label">
+								<posx>120</posx>
+								<posy>60</posy>
+								<width>490</width>
+								<font>MediaInfoCatFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>	
+								<animation effect="zoom" end="120" center="120,55" time="100">focus</animation>
+								<animation effect="zoom" start="120" center="120,55" time="100">unfocus</animation>	
+								<info>ListItem.Label2</info>
+								<visible>Skin.HasSetting(NoStars)</visible>
+							</control>
+							<control type="image">
+								<description>IMDB rating</description>
+								<posx>67</posx>
+								<posy>50</posy>
+								<width>220</width>
+								<height>25</height>
+								<info>ListItem.StarRating</info>						
+								<colordiffuse>ThemeColor</colordiffuse>	
+								<visible>!Skin.HasSetting(NoStars)</visible>
+								<animation effect="zoom" end="110" center="85,52" time="100">focus</animation>
+								<animation effect="zoom" start="110" center="85,52" time="100">unfocus</animation>	
+							</control>
+						</focusedlayout>		
+					</control>	
+					
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,67)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(67)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>	
+				
+				<!--*************************************** (needs work!!!) *************** MusicWrapListInfoView ************ (64) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">64</defaultcontrol>
+					<visible>Control.IsVisible(64)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+				<!--MusicWrapInfoFlatStyle-->
+					 <control type="group">
+						<!--MusicWrapInfoViewStyleBottomPaneOpenCloseAnim-->
+						<animation effect="slide" start="0,200" time="500" tween="circle" easing="out">WindowOpen</animation>
+						<animation effect="slide" end="0,200" time="500" tween="circle" easing="out">WindowClose</animation>
+					<!--BG_Image-->
+						<control type="image">
+							<description>Bottom Pane Background</description>
+							<posy>561</posy>
+							<width>ScreenWidth</width>
+							<height>159</height>
+							<texture border="0,6,0,0">bottom-info-background.png</texture>
+							<!--BottomPaneFadeAnim-->
+							<animation effect="fade" end="80" condition="true">Conditional</animation>
+						</control>	
+					<!--content-->
+						<control type="wraplist" id="64">
+							<viewtype label="31106">Wrap Info</viewtype>
+							<posx>1</posx>
+							<posy>570</posy>
+							<width>1278</width>
+							<height>142</height>
+							<focusposition>4</focusposition>
+							<pagecontrol>150</pagecontrol>
+							<scrolltime>200</scrolltime>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<onup>850</onup>
+							<ondown>150</ondown>
+							<visible>Window.IsActive(MusicLibrary) + Container.Content(Albums)</visible>
+							<itemlayout width="142">
+								<control type="image">
+									<description>Background</description>
+									<width>142</width>
+									<height>142</height>
+									<texture border="9">item-background.png</texture>
+									<aspectratio>stretch</aspectratio>
+								</control>
+								<control type="image">
+									<description>Cover</description>
+									<width>142</width>
+									<height>142</height>
+									<bordersize>9</bordersize>
+									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!IsEmpty(ListItem.Thumb)</visible>
+								</control>
+								<control type="image">
+									<description>Default Cover</description>
+									<width>142</width>
+									<height>142</height>
+									<bordersize>9</bordersize>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<aspectratio>keep</aspectratio>
+									<visible>IsEmpty(ListItem.Thumb)</visible>
+								</control>
+								<control type="image">
+									<description>Cover Dim</description>
+									<width>142</width>
+									<height>142</height>
+									<bordersize>9</bordersize>
+									<texture>background-dim.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!IsEmpty(ListItem.Thumb)</visible>
+									<animation effect="fade" end="50" condition="true">Conditional</animation>
+								</control>
+							</itemlayout>    
+							<focusedlayout width="142">
+								 <control type="image">
+									<description>Background</description>
+									<width>142</width>
+									<height>142</height>
+									<texture border="9">search-focus.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>Control.HasFocus(64)</visible>
+									<!--3DViewFocusAnim-->
+									<animation effect="zoom" end="135" center="70,100" time="150">Focus</animation>
+									<animation effect="zoom" start="135" end="100" center="auto" time="150">UnFocus</animation>
+								</control>
+								 <control type="image">
+									<description>Background</description>
+									<width>142</width>
+									<height>142</height>
+									<texture border="9">item-background.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!Control.HasFocus(64)</visible>
+									<!--3DViewFocusAnim-->
+									<animation effect="zoom" end="135" center="70,100" time="150">Focus</animation>
+									<animation effect="zoom" start="135" end="100" center="auto" time="150">UnFocus</animation>
+								</control>
+								<control type="image">
+									<description>Cover</description>
+									<width>142</width>
+									<height>142</height>
+									<bordersize>12</bordersize>
+									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!IsEmpty(ListItem.Thumb)</visible>
+									<!--3DViewFocusAnim-->
+									<animation effect="zoom" end="135" center="70,100" time="150">Focus</animation>
+									<animation effect="zoom" start="135" end="100" center="auto" time="150">UnFocus</animation>
+								</control>
+								<control type="image">
+									<description>Default Cover</description>
+									<width>142</width>
+									<height>142</height>
+									<bordersize>12</bordersize>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<aspectratio>keep</aspectratio>
+									<aspectratio>keep</aspectratio>
+									<visible>IsEmpty(ListItem.Thumb)</visible>
+									<!--3DViewFocusAnim-->
+									<animation effect="zoom" end="135" center="70,100" time="150">Focus</animation>
+									<animation effect="zoom" start="135" end="100" center="auto" time="150">UnFocus</animation>
+								</control>
+							</focusedlayout>                    
+						</control>
+						
+						<control type="image">
+							<description>Bottom Pane Overlay</description>
+							<posy>560</posy>
+							<width>ScreenWidth</width>
+							<height>160</height>
+							<texture>bottom-bar-overlay.png</texture>
+							<visible>!Skin.HasSetting(HideMusicWrapListInfoShadow)</visible>
+						</control>	
+					</control>
+				 <!--DIALOG AREA-->	
+					<control type="group">
+						<visible>!Skin.HasSetting(HideMusicWrapListMediaInfoDialog)</visible>
+						<control type="group">
+							<posy>-15</posy>
+							<control type="image">
+								<description>Media Info Background</description>
+								<posx>90</posx>
+								<posy>115</posy>
+								<width>1100</width>
+								<height>427</height>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+							<!--********************* SEPARATORS **********************************-->
+							<control type="group"> <!--TOP-->
+								<control type="image">
+									<description>top bar</description>
+									<posx>110</posx>
+									<posy>160</posy>
+									<width>529</width>
+									<height>3</height>
+									<texture>separator.png</texture>
+								</control>
+								<control type="image">
+									<posx>639</posx>
+									<posy>160</posy>
+									<width>529</width>
+									<height>3</height>
+									<texture flipx="true">separator.png</texture>
+								</control>
+							</control>	
+							<control type="group"> <!--BOTTOM-->
+								<control type="image">
+									<description>top bar</description>
+									<posx>110</posx>
+									<posy>520</posy>
+									<width>529</width>
+									<height>3</height>
+									<texture>separator.png</texture>
+								</control>
+								<control type="image">
+									<posx>639</posx>
+									<posy>520</posy>
+									<width>529</width>
+									<height>3</height>
+									<texture flipx="true">separator.png</texture>
+								</control>
+							</control>	
+							<!--*******************************************************************-->
+						
+						<!--album case-->
+							<control type="group">	
+								<description>Album Case Area</description>
+								<posx>120</posx>
+								<posy>175</posy>
+								<control type="image">
+									<description>Album Case</description>
+									<posx>0</posx>
+									<posy>2</posy>
+									<width>361</width>
+									<height>328</height>
+									<texture border="45,10,10,10">dvd-case.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!Skin.HasSetting(HideMusicWrapListInfoCase)</visible>
+								</control>
+								<control type="image">
+									<description>Cover</description>
+									<posx>35</posx>
+									<posy>6</posy>
+									<width>320</width>
+									<height>320</height>
+									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio>stretch</aspectratio>
+									<fadetime>IconCrossfadeTime</fadetime>
+								</control>
+								<control type="image">
+									<description>DVD Case Gloss</description>
+									<posx>32</posx>
+									<posy>2</posy>
+									<width>328</width>
+									<height>328</height>
+									<texture border="16,8,16,8">dvd-case-gloss.png</texture>
+									<aspectratio>stretch</aspectratio>
+									<visible>!Skin.HasSetting(HideMusicWrapListInfoCase)</visible>
+								</control>
+							</control>
+						<!--dialog box-->
+							<control type="group">				
+								<description>Info Dialog Box Area</description>
+								<posx>540</posx>
+								<posy>102</posy>
+								<visible>!Container.OnNext + !Container.OnPrevious</visible>
+								<!--ControlsOpenCloseAnim-->
+								<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+								<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+								<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+								<control type="label">
+									<description>Title</description>
+									<posx>-430</posx>
+									<posy>23</posy>
+									<width>800</width>
+									<font>Font_Lib21</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<align>left</align>
+									<label>$INFO[ListItem.Album] $INFO[ListItem.Year,(,)]</label>
+									<scroll>yes</scroll>
+								</control>	
+								<control type="label">
+									<description>Genre</description>
+									<posx>620</posx>
+									<posy>28</posy>
+									<width>280</width>
+									<align>right</align>
+									<font>MediaInfoAltHeadFont2</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label fallback="31000">$INFO[ListItem.Genre]</label>
+								</control>
+								<control type="list">
+									<posx>-40</posx>
+									<posy>80</posy>
+									<visible>!IsEmpty(ListItem.Album)</visible>	
+									<width>655</width>
+									<height>210</height>
+									<itemgap></itemgap>
+									<itemlayout width="655" height="36">
+										<control type="image">
+											<width>655</width>
+											<height>40</height>
+											<colordiffuse>-</colordiffuse>
+											<texture border="10">ListViewItemBack.png</texture>
+										</control>	
+										<control type="label">
+											<posx>5</posx>
+											<width>135</width>
+											<height>38</height>
+											<font>LibraryCatFontSmall</font> <!--CAT. LABEL-->
+											<aligny>center</aligny>
+											<textcolor>Grey</textcolor>
+											<shadowcolor>ShadowColor</shadowcolor>
+											<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+										</control>
+										<control type="label">
+											<posx>150</posx>
+											<posy>-1</posy>
+											<width>500</width>
+											<height>38</height>
+											<font>LibraryCatFontBig</font> <!--INFO LABEL-->
+											<aligny>center</aligny>
+											<textcolor>Grey</textcolor>
+											<shadowcolor>ShadowColor</shadowcolor>
+											<label fallback="31000">$INFO[ListItem.Label2]</label>
+										</control>
+									</itemlayout>	
+									<focusedlayout width="655" height="36">
+										<control type="image">
+											<width>655</width>
+											<height>40</height>
+											<colordiffuse>-</colordiffuse>
+											<texture border="10">ListViewItemBack.png</texture>
+										</control>	
+										<control type="label">
+											<posx>5</posx>
+											<width>135</width>
+											<height>38</height>
+											<font>LibraryCatFontSmall</font> <!--CAT. LABEL-->
+											<aligny>center</aligny>
+											<textcolor>Grey</textcolor>
+											<shadowcolor>ShadowColor</shadowcolor>
+											<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+										</control>
+										<control type="label">
+											<posx>150</posx>
+											<posy>-1</posy>
+											<width>500</width>
+											<height>38</height>
+											<font>LibraryCatFontBig</font> <!--INFO LABEL-->
+											<aligny>center</aligny>
+											<textcolor>Grey</textcolor>
+											<shadowcolor>ShadowColor</shadowcolor>
+											<label fallback="31000">$INFO[ListItem.Label2]</label>
+										</control>
+									</focusedlayout>
+									<content>
+										<item id="1">
+											<description>Artist</description>
+											<label>$LOCALIZE[557]</label>
+											<label2>$INFO[ListItem.Artist]</label2>
+											<onclick>-</onclick>
+										</item>
+										<item id="2">
+											<description>moods</description>
+											<label>$LOCALIZE[175]</label>
+											<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
+											<onclick>-</onclick>
+										</item>
+										<item id="3">
+											<description>styles</description>
+											<label>$LOCALIZE[176]</label>
+											<label2>$INFO[ListItem.Property(Album_Style)]</label2>
+											<onclick>-</onclick>
+										</item>
+										<item id="4">
+											<description>themes</description>
+											<label>$LOCALIZE[21895]</label>
+											<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
+											<onclick>-</onclick>
+										</item>
+										<item id="5">
+											<description>rating</description>
+											<label>$LOCALIZE[563]</label>
+											<label2>$INFO[ListItem.Rating]</label2>
+											<onclick>-</onclick>
+										</item>
+									</content>
+								</control>
+								<!--<control type="group">			
+									<posx>DialogMarginOffsetX</posx>
+									<visible>!IsEmpty(ListItem.Album)</visible>	
+									<control type="label">
+										<description>ARTIST</description>
+										<posy>80</posy>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>Grey</textcolor>
+										<label>[UPPERCASE]$LOCALIZE[557][/UPPERCASE]</label>
+									</control>
+									<control type="label">
+										<description>MOODS</description>
+										<posy>118</posy>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>Grey</textcolor>
+										<label>[UPPERCASE]$LOCALIZE[175][/UPPERCASE]</label>
+									</control>
+									<control type="label">
+										<description>STYLES</description>
+										<posy>156</posy>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>Grey</textcolor>
+										<label>[UPPERCASE]$LOCALIZE[176][/UPPERCASE]</label>
+									</control>
+									<control type="label">
+										<description>THEMES</description>
+										<posy>194</posy>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>Grey</textcolor>
+										<label>[UPPERCASE]$LOCALIZE[21895][/UPPERCASE]</label>
+									</control>
+									<control type="label">
+										<description>RATING</description>
+										<posy>232</posy>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>Grey</textcolor>
+										<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE]</label>
+									</control>
+								</control>
+								<control type="group">	
+									<control type="image">
+										<posy>213</posy>
+										<width>625</width>
+										<height>38</height>
+										<colordiffuse>-</colordiffuse>
+										<texture border="10">ListViewItemBack.png</texture>
+									</control>
+									<control type="image">
+										<posy>175</posy>
+										<width>625</width>
+										<height>38</height>
+										<colordiffuse>-</colordiffuse>
+										<texture border="10">ListViewItemBack.png</texture>
+									</control>
+									<control type="image">
+										<posy>137</posy>
+										<width>625</width>
+										<height>38</height>
+										<colordiffuse>-</colordiffuse>
+										<texture border="10">ListViewItemBack.png</texture>
+									</control>
+									<control type="image">
+										<posy>99</posy>
+										<width>625</width>
+										<height>38</height>
+										<colordiffuse>-</colordiffuse>
+										<texture border="10">ListViewItemBack.png</texture>
+									</control>	
+									<control type="image">
+										<posy>61</posy>
+										<width>625</width>
+										<height>38</height>
+										<colordiffuse>-</colordiffuse>
+										<texture border="10">ListViewItemBack.png</texture>
+									</control>	
+								</control>
+								<control type="group">	
+									<posx>115</posx>
+									<visible>!IsEmpty(ListItem.Album)</visible>	
+									<control type="label">
+										<description>ARTIST Value</description>
+										<posy>80</posy>
+										<width>430</width>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>White</textcolor>
+										<label fallback="31000">$INFO[ListItem.Artist]</label>
+									</control>
+									<control type="label">
+										<description>MOODS Value</description>
+										<posy>118</posy>
+										<width>430</width>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>White</textcolor>
+										<label fallback="31000">$INFO[ListItem.Property(Album_Mood)]</label>
+									</control>
+									<control type="label">
+										<description>STYLE Value</description>
+										<posy>156</posy>
+										<width>430</width>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>White</textcolor>
+										<label fallback="31000">$INFO[ListItem.Property(Album_Style)]</label>
+									</control>
+									<control type="label">
+										<description>THEME Value</description>
+										<posy>194</posy>
+										<width>430</width>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>White</textcolor>
+										<label fallback="31000">$INFO[ListItem.Property(Album_Theme)]</label>
+									</control>
+									<control type="label">
+										<description>THEME Value</description>
+										<posy>232</posy>
+										<width>430</width>
+										<font>LibraryCatFontSmall</font>
+										<textcolor>White</textcolor>
+										<label fallback="31000">$INFO[ListItem.Rating]</label>
+									</control>
+								</control>-->
+								<control type="image">
+									<posx>-40</posx>
+									<posy>250</posy>
+									<width>655</width>
+									<height>185</height>
+									<colordiffuse>-</colordiffuse>
+									<texture border="10">ListViewItemBack.png</texture>
+								</control>
+								<control type="textbox">
+									<description>Album Description</description>
+									<posx>-35</posx>
+									<posy>255</posy>
+									<width>645</width>
+									<height>175</height>
+									<font>VolumeFont</font>
+									<textcolor>ThemeColor2</textcolor>
+									<align>justify</align>
+									<label fallback="31000">$INFO[ListItem.Property(Album_Description)]</label>
+									<wrapmultiline>true</wrapmultiline>
+									<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMusicWrapListInfoDescription)</autoscroll>
+									<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideMusicWrapListInfoDescription)</visible>
+								</control>
+							</control>
+						</control>
+						
+						<!--<include condition="Skin.String(MusicWrapListStyle,) | Skin.String(MusicWrapListStyle,1)" file="VIEWS_MUSIC_WrapInfo.xml">MusicWrapInfo3DStyle</include>-->
+						<!--<include condition="Skin.String(MusicWrapListStyle,2)" file="VIEWS_MUSIC_WrapInfo.xml">MusicWrapInfoFlatStyle</include>-->
+						<!--<include condition="Skin.String(MusicWrapListStyle,3)" file="VIEWS_MUSIC_WrapInfo.xml">MusicWrapInfoSmallFlatStyle</include>-->
+						
+						<control type="scrollbar" id="150">
+							<description>MusicWrapInfoViewScrollbar</description>
+							<posx>-1</posx>
+							<posy>710</posy>
+							<height>10</height>
+							<width>1282</width>
+							<orientation>horizontal</orientation>
+							<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
+							<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
+							<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+							<visible>Skin.HasSetting(ShowWrapInfoViewScrollbar) + Control.IsVisible(64)</visible>
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+							<onup>500</onup>
+							<ondown>-</ondown>
+						</control>
+						
+						<control type="button" id="188">
+							<onfocus>Skin.SetString(CurrentViewMode,64)</onfocus>
+							<description>ViewOptionsHelperBtn</description>
+							<width>1</width>
+							<height>1</height>
+							<onfocus>SetFocus(184)</onfocus>
+							<onfocus>ActivateWindow(3017)</onfocus>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>	
+							<visible>Control.IsVisible(64)</visible>
+						</control>
+						<!--ViewsScreenFullFadeAnim-->
+						<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+					</control>	
+				</control>
+			</control>	
+			
+	<!--(((MENU BAR)))================================================================================================================================-->			
+			<control type="group" id="505">	
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
+			<!--fade out for sub menu-->
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<description>Menu Bar Area</description>		
+				<height>34</height>
+				<posy>44</posy>
+				<visible>!Window.IsActive(MusicInformation) + !Window.IsActive(135)</visible>
+				<control type="image">
+					<description>MenuBarImage</description>
+					<width>ScreenWidth</width>
+					<height>34</height>
+					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+				</control>
+				<!--********************************************* DefaultMenuBar ************************************************************-->
+				<control type="group" id="850">
+					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
+					<visible>!Skin.HasSetting(KioskMode)</visible>
+					<onup>600</onup>
+					<onleft>600</onleft>
+					<ondown>500</ondown>
+					<control type="togglebutton" id="185">
+						<description>Menu Bar Options</description>
+						<posx>10</posx>
+						<posy>3</posy>
+						<width>30</width>
+						<height>30</height>
+						<texturefocus>view-options-focus.png</texturefocus>
+						<texturenofocus>view-options-nofocus.png</texturenofocus>
+						<alttexturefocus>view-options-extra-focus.png</alttexturefocus>
+						<alttexturenofocus>view-options-extra-nofocus.png</alttexturenofocus>
+						<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
+						<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<onup>600</onup>
+						<ondown>500</ondown>
+						<onleft>-</onleft>
+						<onright>184</onright>
+					</control>
+					<control type="button" id="184">
+						<description>View Mode Options</description>
+						<visible>!Control.IsVisible(77)</visible>  <!--Hide for viewtypes with no options-->
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>23</width>
+						<height>23</height>
+						<texturefocus diffuse="info-background.png">viewprefs.png</texturefocus>
+						<texturenofocus>viewprefs.png</texturenofocus>
+						<onclick>SetFocus(188)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<onup>600</onup>
+						<ondown>500</ondown>
+						<onleft>185</onleft>
+						<onright>564</onright>
+						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
+						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>	
+					</control>
+					<control type="group" id="564">	
+						<control type="group">      				
+						<!--MenuBarOptions-->
+							<control type="grouplist" id="212">
+								<visible>Window.IsVisible(MusicLibrary)</visible>
+								<posx>80</posx>
+								<posy>-3</posy>
+								<width>ScreenWidth</width>
+								<height>34</height>
+								<itemgap>0</itemgap>
+								<onup>600</onup>
+								<ondown>500</ondown>
+								<onleft>184</onleft>
+								<onright>-</onright>
+								<orientation>horizontal</orientation>
+								<control type="image" id="350">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="400">
+									<description>View As</description>
+									<width>270</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>left</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>220</textwidth>
+									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
+									<onclick>ActivateWindow(3002)</onclick>
+									<onclick>SetFocus(500)</onclick>
+								</control>	
+								<control type="image" id="351">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="401">
+									<description>Sort By</description>
+									<width>250</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>left</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>195</textwidth>
+									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
+									<enable>!Container.SortDirection(None)</enable>
+									<onclick>ActivateWindow(3003)</onclick>
+									<onclick>SetFocus(500)</onclick>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(401)">Conditional</animation>
+								</control>
+								<control type="image" id="352">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="436">
+									<description>Music Library</description>
+									<width>155</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>left</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>125</textwidth>
+									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+									<onclick>ActivateWindow(3004)</onclick>
+									<onclick>SetFocus(500)</onclick>
+									<enable>Substring(Container.FolderPath,musicdb,Left)</enable>
+									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(436)">Conditional</animation>
+								</control>
+								<control type="image" id="369">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+									<visible>Window.IsVisible(MusicLibrary)</visible>
+								</control>
+								<control type="button" id="403">			
+									<description>Search</description>
+									<width>155</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>left</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>125</textwidth>
+									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<label>[UPPERCASE]$LOCALIZE[137][/UPPERCASE]</label>
+									<onclick>ActivateWindow(3005)</onclick>
+									<onclick>SetFocus(500)</onclick>
+								</control>
+								<control type="image" id="354">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>	
+								<control type="button" id="404">			
+									<description>Favourites</description>
+									<width>180</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>center</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>154</textwidth>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>ThemeColor</colordiffuse>
+									<texturenofocus>-</texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
+									<onclick>ActivateWindow(Favourites)</onclick>
+								</control>
+								<control type="image" id="355">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="button" id="406">			
+									<description>Music Settings</description>
+									<width>145</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<align>center</align>
+									<textoffsetx>13</textoffsetx>
+									<textwidth>130</textwidth>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>ThemeColor</colordiffuse>
+									<texturenofocus>-</texturenofocus>
+									<align>center</align>
+									<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
+									<onclick>ActivateWindow(MusicSettings)</onclick>
+								</control>
+								<control type="image" id="357">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+							</control>
+							<control type="button" id="2">
+								<visible>false</visible>
+							</control>
+							<control type="button" id="3">
+								<visible>false</visible>
+							</control>
+							<!--MenuBarOptionsSwitchAnim-->
+							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
+							<animation effect="fade" end="0" time="200">Hidden</animation>
+							<visible>!Skin.HasSetting(ShowMediaExtraOptions)</visible>
+						</control>
+						<control type="group">   			
+						<!--MenuBar Extra Options-->
+							<control type="grouplist" id="212">
+								<visible>Window.IsVisible(MusicLibrary)</visible>
+								<posx>80</posx>
+								<posy>-3</posy>
+								<width>ScreenWidth</width>
+								<height>34</height>
+								<itemgap>0</itemgap>
+								<onup>600</onup>
+								<ondown>500</ondown>
+								<onleft>184</onleft>
+								<onright>-</onright>
+								<orientation>horizontal</orientation>
+								<control type="image" id="99">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="radiobutton" id="163">
+									<description>Library</description>
+									<width>180</width>
+									<height>36</height>
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<textcolor>ButtonColor</textcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
+									<textwidth>135</textwidth>
+									<textoffsetx>13</textoffsetx>
+									<radioposx>153</radioposx>
+									<radioposy>-</radioposy>
+									<radiowidth>14</radiowidth>
+									<radioheight>14</radioheight>
+									<texturenofocus>-</texturenofocus>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus>-</texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
+									<onclick>ReplaceWindow(MusicFiles)</onclick>
+									<selected>Window.IsVisible(MusicLibrary)</selected>
+									<visible>Window.IsVisible(MusicLibrary)</visible>
+								</control>
+								<control type="image" id="247">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="radiobutton" id="16">
+									<description>Party Mode</description>
+									<width>220</width>
+									<height>36</height>
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<textcolor>ButtonColor</textcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
+									<textwidth>200</textwidth>
+									<textoffsetx>13</textoffsetx>
+									<radioposx>193</radioposx>
+									<radioposy>-</radioposy>
+									<radiowidth>14</radiowidth>
+									<radioheight>14</radioheight>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus>-</texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[589][/UPPERCASE]</label>
+								</control>
+								<control type="image" id="105">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="radiobutton" id="19">
+									<description>Filter</description>
+									<width>190</width>
+									<height>36</height>
+									<aligny>top</aligny>
+									<align>center</align>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>	
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<textcolor>ButtonColor</textcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
+									<textwidth>145</textwidth>
+									<textoffsetx>13</textoffsetx>
+									<radioposx>163</radioposx>
+									<radioposy>-</radioposy>
+									<radiowidth>14</radiowidth>
+									<radioheight>14</radioheight>	
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>-</colordiffuse>
+									<texturenofocus>-</texturenofocus>
+									<textureradiofocus>-</textureradiofocus>
+									<textureradionofocus>-</textureradionofocus>
+									<label>[UPPERCASE]$LOCALIZE[587][/UPPERCASE]</label>
+								</control>
+								<control type="image" id="101">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+							</control>
+							<!--MenuBarOptionsSwitchAnim-->
+							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
+							<animation effect="fade" end="0" time="200">Hidden</animation>
+							<visible>Skin.HasSetting(ShowMediaExtraOptions)</visible>
+						</control>		
+					</control>
+				</control>
+				<!--*************************************************************************************************************************-->
+				
+				<!--MenuBarOpenCloseAnim-->
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
+				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
+					<effect type="fade" start="100" end="0" time="1" delay="200"/>
+				</animation>
+				
+			</control>
+			
+	<!--(((TOP BAR)))=================================================================================================================================-->		
+			<control type="group">	
+				<description>Top Bar Area</description>		
+				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
+				<control type="group">	
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<height>53</height>
+						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+					</control>
+					
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<posy>1</posy>
+						<height>41</height>
+						<texture border="10">Glass/SquareThemeBorder.png</texture>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--************************************* (SystemTray) **********************************************-->
+				<include>SystemTray</include>
+				<!--*************************************************************************************************-->
+				
+				
+				<!--******************************** (BreadCrumbMusicLibrary) ***************************************-->
+				<control type="group">			
+					<posx>285</posx>			
+					<!--BreadCrumbOpenCloseAnim2-->
+					<animation effect="slide" start="-440,0" time="300" tween="cubic" easing="out">WindowOpen</animation>
+					<visible>!Window.IsActive(MusicInformation) + !Window.IsActive(SongInformation)</visible>
+					<control type="button">
+						<description>2nd label</description>
+						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+						<posy>4</posy>
+						<width>240</width>
+						<height>35</height>
+						<font>BreadCrumbFont</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+						<textoffsetx>-</textoffsetx>
+						<align>center</align>
+						<aligny>top</aligny>
+						<shadowcolor></shadowcolor> <!--BrCr-->
+						<textoffsety>2</textoffsety> <!--BrCr-->
+						<textwidth>230</textwidth> <!--BrCr-->
+						<scroll>true</scroll> <!--BrCr-->
+						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+						<label>$VAR[MusicLibraryBreadCrumbLabel_1]</label>
+						<visible>IsEmpty(Container.FolderPath) | Substring(Container.FolderPath,musicdb://1/,Left) | Substring(Container.FolderPath,musicdb://2/,Left) 
+						| Substring(Container.FolderPath,musicdb://3/,Left) | Substring(Container.FolderPath,musicdb://10/,Left) | Substring(Container.FolderPath,musicdb://4/,Left)
+						| Substring(Container.FolderPath,musicdb://9/,Left) | Substring(Container.FolderPath,musicdb://5/,Left) | Substring(Container.FolderPath,musicdb://8/,Left)
+						| [Substring(Container.FolderPath,special://musicplaylists/,Left) | Substring(Container.FolderPath,special://profile/playlists/,Left)]
+						| Substring(Container.FolderPath,videodb://3/,Left) | Substring(Container.FolderPath,plugin://music/,Left)</visible>
+						<!--BreadCrumbVisibleAnim2-->
+						<animation effect="slide" start="-440,0" time="300" delay="150" tween="cubic" easing="out">Visible</animation>
+					</control>
+					<control type="button">
+						<description>1st label midsize</description>
+						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn_Big]'''''''''''''-->
+						<posy>4</posy>
+						<width>320</width>
+						<height>35</height>
+						<font>BreadCrumbFont</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+						<textoffsetx>-</textoffsetx>
+						<align>center</align>
+						<aligny>top</aligny>
+						<shadowcolor></shadowcolor> <!--BrCr-->
+						<textoffsety>2</textoffsety> <!--BrCr-->
+						<textwidth>310</textwidth> <!--BrCr_Mid-->
+						<scroll>true</scroll> <!--BrCr-->
+						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn_Big]'''''''''''''-->
+						<label>$VAR[MusicLibraryBreadCrumbLabel_Big]</label>
+						<visible>Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left) | Substring(Container.FolderPath,musicdb://8/,Left)</visible>
+						<!--BreadCrumbVisibleAnim2-->
+						<animation effect="slide" start="-440,0" time="300" delay="150" tween="cubic" easing="out">Visible</animation>
+					</control>
+				</control>
+				
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>	
+				 <!--home icon-->
+					<control type="button" id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+
+				<!--*********************************** WeatherNotification *****************************************-->
+				<control type="group" id="456">
+					<posx>950</posx>
+					<posy>4</posy>
+					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
+					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+					<!--WeatherNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation> 
+					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+					<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+					<control type="button" id="458">
+						<width>100</width>
+						<height>35</height>
+						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
+						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<onclick>ActivateWindow(MyWeather)</onclick>
+						<ondown>850</ondown>
+						<onright>346</onright>
+						<onleft>837</onleft>
+					</control>
+					<control type="image" id="457">
+						<posx>8</posx>
+						<posy>4</posy>
+						<width>27</width>
+						<height>27</height>
+						<texture>$INFO[Weather.Conditions]</texture>
+					</control>
+					<control type="label">
+						<posx>92</posx>
+						<width>55</width>
+						<height>35</height>
+						<font>VolumeFont</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>!Control.HasFocus(458)</visible>
+					</control>
+					<control type="label">
+						<posx>92</posx>
+						<width>55</width>
+						<height>35</height>
+						<font>VolumeFont</font>
+						<textcolor>TopBarStatusColor2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>Control.HasFocus(458)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** MediaPlayingNotification ************************************-->
+				<control type="group">
+					<posx>780</posx>
+					<posy>4</posy>
+					<visible>Player.HasMedia</visible>
+					<!--MediaPlayingNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation>
+					<!--MediaPlayingNotificationShiftAnim3-->
+					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+					<control type="image">
+						<width>270</width>
+						<height>35</height>
+						<texture border="8">SystemTray/top-bar-status-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultaudio.png</texture>
+						<visible>Player.HasAudio</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultvideo.png</texture>
+						<visible>Player.HasVideo</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>224</width>
+						<height>36</height>
+						<visible>Player.HasAudio</visible>
+						<control type="fadelabel">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>-2</posy>
+							<width>220</width>
+							<height>15</height>
+							<scrollout>false</scrollout>
+							<font>ScanContentFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<pauseatend>4000</pauseatend>
+							<info>MusicPlayer.Title</info>
+							<info>MusicPlayer.Artist</info>
+							<info>MusicPlayer.Album</info>
+							<info>MusicPlayer.Year</info>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>13</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont2</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>220</width>
+						<height>36</height>
+						<visible>Player.HasVideo</visible>
+						<control type="label">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>ScanContentFont2</font>
+							<textcolor>TopBarStatusColor</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+			</control>	
+				
+			<!--************************************ SortLetterNotification *****************************************-->
+			<control type="group">		<!--<views>50,51,52,60,62,63,78,67,64</views>-->
+				<posy>SortLetterOffsetY</posy>
+				<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling 
+				| Control.IsVisible(60) + Container.Scrolling | Control.IsVisible(62) + Container.Scrolling | Control.IsVisible(63) + Container.Scrolling 
+				| Control.IsVisible(78) + Container.Scrolling | Control.IsVisible(67) + Container.Scrolling | Control.IsVisible(64) + Container.Scrolling
+				| Control.IsVisible(68) + Container.Scrolling</visible>
+				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
+				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
+				<control type="image">
+					<posx>-15</posx>
+					<width>60</width>
+					<height>60</height>
+					<texture border="15">item-focus-background.png</texture>
+				</control>
+				<control type="label">
+					<posx>-11</posx>
+					<posy>11</posy>
+					<width>60</width>
+					<height>60</height>
+					<font>SortLetterFont</font>
+					<textcolor>MediaInfoHeadColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.SortLetter]</label>
+				</control>			
+			</control>
+			<!--*****************************************************************************************************-->
+			
+	<!--(((INFO PANE)))=================================================================================================================================-->	
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
+				<description>Bottom Bar Area</description>
+				<posy>BottomPaneOffsetY</posy>	
+				
+				<!--***************************************** InfoPaneImage ******************************************************-->
+				<control type="image">
+					<description>BottomPaneTopHighlightImage</description>
+					<posy>-14</posy>
+					<width>ScreenWidth</width>
+					<height>14</height>
+					<texture>bottom-bar-top.png</texture>
+					<visible>!Skin.HasSetting(HideHomeBottomPaneWhiteHighlight)</visible>
+					<!--BottomPaneTopHighlightFadeAnim-->
+					<animation effect="fade" end="15" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>BottomPaneImage</description>
+					<width>ScreenWidth</width>
+					<height>74</height>
+					<texture border="0,10,0,0">bottom-bar-background.png</texture>
+					<!--BottomPaneFadeAnim-->
+					<animation effect="fade" end="80" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<description>BottomPaneOverlay</description>
+					<posy>6</posy>
+					<width>ScreenWidth</width>
+					<height>74</height>
+					<texture>bottom-bar-overlay.png</texture>
+					<!--BottomPaneOverlayFadeAnim-->
+					<animation effect="fade" end="50" condition="true">Conditional</animation>
+				</control>
+				<!--**************************************************************************************************************-->
+				
+				<!--BottomPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,74" time="200" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
+				<!--InfoPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
+								
+									<!--<views>50,51,52,60,62,63,78,67,64</views>-->
+				
+				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) 
+				| Control.IsVisible(52) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(60) + Skin.HasSetting(HideInfoPane) 
+				| Control.IsVisible(62) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(63) + Skin.HasSetting(HideInfoPane) 
+				| Control.IsVisible(78) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(67) + Skin.HasSetting(HideInfoPane) 
+				| Control.IsVisible(64) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(68) + Skin.HasSetting(HideInfoPane)</visible>
+				
+				<!--************************************** InfoPaneMediaDetails **************************************************-->
+				<control type="group">	
+					<visible>!Container.OnNext + !Container.OnPrevious</visible>
+					<animation effect="fade" start="0" end="100" time="400" delay="300" reversible="false" >Visible</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<control type="group">
+						<visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible>
+						<control type="image">
+							<description>InfoPaneIcon</description>
+							<animation effect="slide" start="0,0" end="0,-30" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
+							<posx>10</posx>
+							<posy>12</posy>
+							<width>54</width>
+							<height>54</height>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<aspectratio>keep</aspectratio>
+							<animation effect="fade" end="70" condition="true">Conditional</animation>
+							<texture>$INFO[ListItem.Icon]</texture>	
+						</control>
+						<control type="label">
+							<description>InfoPaneHeaderLabel</description>
+							<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
+							<posx>76</posx>
+							<posy>6</posy>
+							<width>1190</width>
+							<textcolor>InfoPaneHeaderColor</textcolor>
+							<font>InfoPaneHeaderFont</font>
+							<label>$INFO[ListItem.Label]</label>	
+						</control>
+						<control type="label">
+							<description>InfoPaneDetailLabel</description>
+							<posx>76</posx>
+							<posy>37</posy>
+							<width>800</width>
+							<textcolor>InfoPaneDetailsColor</textcolor>
+							<font>InfoPaneDetailFont</font>
+							<label>$INFO[ListItem.Label2,,   ]$INFO[Container.NumItems,[, $LOCALIZE[127]]]</label>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Star Rating</description>
+							<posx>1080</posx>
+							<posy>20</posy>
+							<width>180</width>
+							<height>40</height>
+							<texture background="true">$INFO[ListItem.Rating]</texture>
+							<aspectratio align="right">keep</aspectratio>
+							<visible>Container.Content(Songs)</visible>
+							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--**************************************************************************************************************-->
+			</control>
+		
+			<!--********************************** ViewsDialogPopUpScreenDim ****************************************-->
+			<control type="image">
+				<width>1280</width>
+				<include>VariableBackgroundHeight</include>
+				<texture>background-dim.png</texture>
+				<animation effect="fade" start="0" end="60" time="500">Visible</animation>
+				<animation effect="fade" start="60" end="0" time="450">Hidden</animation>
+				<visible>!Skin.HasSetting(DoNotDimViewsScreen)</visible>
+				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
+			</control>
+			<!--*****************************************************************************************************-->
+		</control>
+	</controls>	
+</window>

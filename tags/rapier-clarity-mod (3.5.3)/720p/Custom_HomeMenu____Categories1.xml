@@ -1,0 +1,1358 @@
+<window type="dialog" id="3082"> <!--HOME-CATEGORIES-->
+	<defaultcontrol always="true">939</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+		<!--(((CONTROLS)))=================================================================================================================================-->	
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="300" delay="300" condition="Window.IsActive(3001)">WindowOpen</animation> <!--delay="200"-->
+				<animation effect="fade" start="100" end="0" time="200" delay="0" condition="Window.IsActive(3001)">WindowClose</animation>
+				<!---->
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3080) | Window.IsActive(126)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="![Window.IsActive(3080) | Window.IsActive(126)]">Conditional</animation>
+				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS (-)-->
+					<posx>30</posx>
+					<posy>80</posy>
+					<control type="label" id="-">
+						<description>CUSTOM SUBMENU LABEL</description>
+						<posx></posx>
+						<posy>8</posy>
+						<font>PluginSettingsHead</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$LOCALIZE[20190] $LOCALIZE[10000] $LOCALIZE[21866]</label>
+						<posy>DialogHeadingOffsetY</posy>
+						<width>700</width>
+						<font>MediaInfoTitleFont2</font>
+						<textcolor>DialogTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--******************************* separators ******************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<posy>34</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM-->
+						<description>BOTTOM bar</description>
+						<posy>565</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM 2-->
+						<description>BOTTOM bar</description>
+						<posy>620</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--*************************************************************************-->
+				</control>
+		
+				<control type="image"> <!--CUSTOM BUTTON BG-->
+					<description>Network Setting BG</description>
+					<posx>430</posx>
+					<posy>140</posy>
+					<width>780</width>
+					<height>480</height>
+					<texture border="10,10,10,10">dialog-box2.jpg</texture> <!--RCCB-->
+					<colordiffuse>BBFFFFFF</colordiffuse>
+				</control>
+
+		<!--(((Custom_Home_Cats)))=================================================================================================================================-->	
+				<control type="group" id="850">
+					<onleft>1939</onleft>
+					<description>Expanded Add More Categories Area</description>
+					<visible>Skin.HasSetting(ExpandCustom1HomeMenuSettings)</visible>
+				 <!--RADIO BUTTONS (1-4)-->	
+					<control type="grouplist" id="939">
+						<!--***************************************************************************************-->
+						<animation type="WindowOpen" condition= "Window.IsActive(3001)" reversible="false">
+							<effect type="slide" start="-270" end="0" delay="200" time="0" />
+							<effect type="fade" start="0" end="100" delay="350" time="1000" />
+							<!--<effect type="zoom" start="0" end="100" delay="175" center="auto" easing="out" tween="sine" time="650" />-->
+							<!--<effect type="zoom" start="0" end="100" delay="250" center="auto" easing="inout" tween="back" time="650" />-->
+							<!--<effect type="zoom" start="0" end="100" delay="305" center="auto" easing="inout" tween="sine" time="560" />-->
+						</animation>
+						<!--***************************************************************************************-->
+						<description>Add More Categories Area</description>
+						<posx>60</posx>
+						<posy>145</posy>
+						<width>345</width>
+						<height>500</height>
+						<itemgap>8</itemgap>
+						<onup>939</onup>
+						<ondown>939</ondown>
+						<onleft>1939</onleft>
+						<onright>920</onright>
+						<usecontrolcoords>true</usecontrolcoords>
+						<!--<include>ControlsOpenCloseAnim</include>-->
+						<control type="radiobutton" id="2301">
+							<description>Custom Category 1</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 1</label>
+							<selected>Skin.HasSetting(EnableCustomCategory1)</selected>
+							<onclick>Skin.ToggleSetting(EnableCustomCategory1)</onclick>
+							<onclick>Skin.Reset(Custom1Btn-NAME)</onclick>
+							<onclick>Skin.Reset(Custom1BtnParam)</onclick>
+							<onclick>Skin.Reset(Custom1IconPath)</onclick>
+							<onclick>Skin.SetString(Custom1BackgroundImagePath,special://skin/backgrounds/default-background-blue.jpg)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,1)</onfocus>
+						</control>
+						<control type="radiobutton" id="2302">
+							<description>Custom Category 2</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 2</label>
+							<selected>Skin.HasSetting(EnableCustomCategory2)</selected>
+							<onclick>Skin.ToggleSetting(EnableCustomCategory2)</onclick>
+							<onclick>Skin.Reset(Custom2Btn-NAME)</onclick>
+							<onclick>Skin.Reset(Custom2BtnParam)</onclick>
+							<onclick>Skin.Reset(Custom2IconPath)</onclick>
+							<onclick>Skin.SetString(Custom2BackgroundImagePath,special://skin/backgrounds/default-background-blue.jpg)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,2)</onfocus>
+						</control>
+						<control type="radiobutton" id="2303">
+							<description>Custom Category 3</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 3</label>
+							<selected>Skin.HasSetting(EnableCustomCategory3)</selected>
+							<onclick>Skin.ToggleSetting(EnableCustomCategory3)</onclick>
+							<onclick>Skin.Reset(Custom3Btn-NAME)</onclick>
+							<onclick>Skin.Reset(Custom3BtnParam)</onclick>
+							<onclick>Skin.Reset(Custom3IconPath)</onclick>
+							<onclick>Skin.SetString(Custom3BackgroundImagePath,special://skin/backgrounds/default-background-blue.jpg)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,3)</onfocus>
+						</control>	
+						<control type="radiobutton" id="2304">
+							<description>Custom Category 4</description>
+							<width>345</width>
+							<height>55</height>
+							<font>Font_LibBold24</font>
+							<textcolor>Grey</textcolor>
+							<focusedcolor>ThemeColor</focusedcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<textoffsety>7</textoffsety>
+							<textwidth>215</textwidth>
+							<aligny>top</aligny>
+							<radioposx>248</radioposx>
+							<radioposy>-8</radioposy>
+							<radiowidth>90</radiowidth>
+							<radioheight>68</radioheight>
+							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
+							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="50">unfocus</animation>
+							<pulseonselect>false</pulseonselect>
+							<label>$LOCALIZE[31001] 4</label>
+							<selected>Skin.HasSetting(EnableCustomCategory4)</selected>
+							<onclick>Skin.ToggleSetting(EnableCustomCategory4)</onclick>
+							<onclick>Skin.Reset(Custom4Btn-NAME)</onclick>
+							<onclick>Skin.Reset(Custom4BtnParam)</onclick>
+							<onclick>Skin.Reset(Custom4IconPath)</onclick>
+							<onclick>Skin.SetString(Custom4BackgroundImagePath,special://skin/backgrounds/default-background-blue.jpg)</onclick>
+							<onfocus>Skin.SetString(SelectedExpandedBtn,4)</onfocus>
+						</control>
+						<control type="image">
+							<description>Image Preview Background</description>
+							<posx>5</posx>
+							<posy>-</posy>
+							<width>335</width>
+							<height>230</height>
+							<texture border="10">scrollbar-background.png</texture>
+						</control>
+					</control>
+				 <!--BUTTON PARAMS-->	
+					<control type="group" id="920"> <!--Button1-->
+						<description>Custom Category 1 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,1)</visible>
+						<enable>Skin.HasSetting(EnableCustomCategory1)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory1)">Conditional</animation>
+						<control type="label" > <!--BUTTON LABEL(custom params)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $INFO[Skin.String(Custom1Btn-NAME)] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>500</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>!IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
+						</control>
+						<control type="label" > <!--BUTTON LABEL(empty)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $LOCALIZE[504] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>700</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
+						</control>
+					<!--PROPERTIES-->
+						<control type="grouplist" id="921">
+							<description>Button Properties Area</description>
+							<posx>438</posx>
+							<posy>148</posy>
+							<width>760</width>
+							<height>480</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2301</onleft>
+							<onright>-</onright>
+							<usecontrolcoords>true</usecontrolcoords>
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+								<description>Button Properties Label (HEADER)</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31098]</label>
+							</control>
+							<control type="button" id="2331"> <!--favourites path-->
+								<description>Favourite Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<scroll>true</scroll>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1BtnParam)]</label>
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,Custom1BtnParam)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,Custom1Btn-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom1Btn)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+							</control>
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+								<description>Custom Icon Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31082]</label>
+							</control>
+							<control type="button" id="2333"> <!--custom icon path-->
+								<description>Custom Icon Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1IconPath)]</label>
+								<onclick>Skin.SetImage(Custom1IconPath)</onclick>
+							</control>
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+								<description>Custom Category Images Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[21899]</label>
+							</control>
+							<control type="button" id="2336"> <!--HOME MENU LABEL 1-->
+								<description>Custom Category Focus Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1Btn-NAME)]</label>
+								<onclick>Skin.SetString(Custom1Btn-NAME)</onclick>
+								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
+							</control>
+							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+								<description>Custom Background Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[33070]</label>
+							</control>
+							<control type="button" id="2338"> <!--background path-->
+								<description>Custom Background Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1BackgroundImagePath)]</label>
+								<onclick>Skin.SetImage(Custom1BackgroundImagePath)</onclick>
+							</control>							
+						</control>
+					<!--ImagePreview-->	
+						<control type="image">
+							<description>ExpandedSettingsImagePreview</description>
+							<posx>105</posx>
+							<posy>404</posy>
+							<width>258</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[Skin.String(Custom1IconPath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2333)</visible>
+						</control>
+						<control type="label">
+							<posx>86</posx>
+							<posy>404</posy>
+							<description>ImagePreview LABEL</description>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>CustomButtonLabelFont</font>
+							<textwidth>288</textwidth> <!---->
+							<textcolor>BBF3E5AB</textcolor>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<label>[UPPERCASE]$INFO[Skin.String(Custom1Btn-NAME)][/UPPERCASE]</label>
+							<visible>ControlGroup(921).HasFocus(2336)</visible>
+						</control>
+						<control type="image">
+							<posx>86</posx>
+							<posy>404</posy>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<texture fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Skin.String(Custom1BackgroundImagePath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2338)</visible>
+						</control>
+					</control>
+					
+					<control type="group" id="920"> <!--Button2-->
+						<description>Custom Category 2 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,2)</visible>
+						<enable>Skin.HasSetting(EnableCustomCategory2)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory2)">Conditional</animation>
+						<control type="label" > <!--BUTTON LABEL(custom params)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $INFO[Skin.String(Custom2Btn-NAME)] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>500</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>!IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
+						</control>
+						<control type="label" > <!--BUTTON LABEL(empty)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $LOCALIZE[504] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>700</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
+						</control>
+				<!--PROPERTIES-->	
+						<control type="grouplist" id="921">
+							<description>Button Properties Area</description>
+							<posx>438</posx>
+							<posy>148</posy>
+							<width>760</width>
+							<height>480</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2302</onleft>
+							<onright>-</onright>
+							<usecontrolcoords>true</usecontrolcoords>
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+								<description>Button Properties Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31098]</label>
+							</control>
+							<control type="button" id="2331"> <!--favourites path-->
+								<description>Favourite Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<scroll>true</scroll>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2BtnParam)]</label>
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,Custom2BtnParam)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,Custom2Btn-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom2Btn)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+							</control>
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+								<description>Custom Icon Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31082]</label>
+							</control>
+							<control type="button" id="2333"> <!--custom icon path-->
+								<description>Custom Icon Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2IconPath)]</label>
+								<onclick>Skin.SetImage(Custom2IconPath)</onclick>
+							</control>
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+								<description>Custom Category Images Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31084]</label>
+							</control>
+							<control type="button" id="2336"> <!--HOME MENU LABEL 2-->
+								<description>Custom Category Focus Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2Btn-NAME)]</label>
+								<onclick>Skin.SetString(Custom2Btn-NAME)</onclick>
+								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
+							</control>
+							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+								<description>Custom Background Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[33070]</label>
+							</control>
+							<control type="button" id="2338"> <!--background path-->
+								<description>Custom Background Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2BackgroundImagePath)]</label>
+								<onclick>Skin.SetImage(Custom2BackgroundImagePath)</onclick>
+							</control>
+						</control>
+						<!--ImagePreview-->
+						<control type="image">
+							<posx>105</posx>
+							<posy>404</posy>
+							<width>258</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[Skin.String(Custom2IconPath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2333)</visible>
+						</control>
+						<control type="label">
+							<posx>86</posx>
+							<posy>404</posy>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>CustomButtonLabelFont</font>
+							<textwidth>288</textwidth> <!---->
+							<textcolor>BBF3E5AB</textcolor>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<label>[UPPERCASE]$INFO[Skin.String(Custom2Btn-NAME)][/UPPERCASE]</label>
+							<visible>ControlGroup(921).HasFocus(2336)</visible>
+						</control>
+						<control type="image">
+							<posx>86</posx>
+							<posy>404</posy>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<texture fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Skin.String(Custom2BackgroundImagePath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2338)</visible>
+						</control>
+					</control>
+					
+					<control type="group" id="920"> <!--Button3-->
+						<description>Custom Category 3 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,3)</visible>
+						<enable>Skin.HasSetting(EnableCustomCategory3)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory3)">Conditional</animation>
+						<control type="label" > <!--BUTTON LABEL(custom params)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $INFO[Skin.String(Custom3Btn-NAME)] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>500</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>!IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
+						</control>
+						<control type="label" > <!--BUTTON LABEL(empty)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $LOCALIZE[504] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>700</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
+						</control>
+					<!--PROPERTIES-->	
+						<control type="grouplist" id="921">
+							<description>Button Properties Area</description>
+							<posx>438</posx>
+							<posy>148</posy>
+							<width>760</width>
+							<height>480</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2303</onleft>
+							<onright>-</onright>
+							<usecontrolcoords>true</usecontrolcoords>
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+								<description>Button Properties Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31098]</label>
+							</control>
+							<control type="button" id="2331"> <!--favourites path-->
+								<description>Favourite Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<scroll>true</scroll>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3BtnParam)]</label>
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,Custom3BtnParam)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,Custom3Btn-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom3Btn)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+							</control>
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+								<description>Custom Icon Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31082]</label>
+							</control>
+							<control type="button" id="2333"> <!--custom icon path-->
+								<description>Custom Icon Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3IconPath)]</label>
+								<onclick>Skin.SetImage(Custom3IconPath)</onclick>
+							</control>
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+								<description>Custom Category Images Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31084]</label>
+							</control>
+							<control type="button" id="2336"> <!--HOME MENU LABEL 3-->
+								<description>Custom Category Focus Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3Btn-NAME)]</label>
+								<onclick>Skin.SetString(Custom3Btn-NAME)</onclick>
+								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
+							</control>
+							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+								<description>Custom Background Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[33070]</label>
+							</control>
+							<control type="button" id="2338"> <!--background path-->
+								<description>Custom Background Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3BackgroundImagePath)]</label>
+								<onclick>Skin.SetImage(Custom3BackgroundImagePath)</onclick>
+							</control>
+						</control>
+						<!--ImagePreview-->
+						<control type="image">
+							<posx>105</posx>
+							<posy>404</posy>
+							<width>258</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[Skin.String(Custom3IconPath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2333)</visible>
+						</control>
+						<control type="label">
+							<posx>86</posx>
+							<posy>404</posy>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>CustomButtonLabelFont</font>
+							<textwidth>288</textwidth> <!---->
+							<textcolor>BBF3E5AB</textcolor>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<label>[UPPERCASE]$INFO[Skin.String(Custom3Btn-NAME)][/UPPERCASE]</label>
+							<visible>ControlGroup(921).HasFocus(2336)</visible>
+						</control>
+						<control type="image">
+							<posx>86</posx>
+							<posy>404</posy>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<texture fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Skin.String(Custom3BackgroundImagePath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2338)</visible>
+						</control>
+					</control>
+					
+					<control type="group" id="920"> <!--Button4-->
+						<description>Custom Category 4 Controls Area</description>
+						<visible>Skin.String(SelectedExpandedBtn,4)</visible>
+						<enable>Skin.HasSetting(EnableCustomCategory4)</enable>
+						<animation effect="fade" start="100" end="50" time="300" condition="!Skin.HasSetting(EnableCustomCategory4)">Conditional</animation>
+						<control type="label" > <!--BUTTON LABEL(custom params)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $INFO[Skin.String(Custom4Btn-NAME)] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>500</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>!IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
+						</control>
+						<control type="label" > <!--BUTTON LABEL(empty)-->
+							<description>Category</description>
+							<posx>1250</posx>
+							<posy>89</posy>
+							<font>PluginSettingsHead2</font>
+							<label>[B]( $LOCALIZE[504] )[/B]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<width>700</width>
+							<font>MediaInfoTitleFont2</font>
+							<textcolor>DialogTitleColor</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<visible>IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
+						</control>
+					<!--PROPERTIES-->	
+						<control type="grouplist" id="921">
+							<description>Button Properties Area</description>
+							<posx>438</posx>
+							<posy>148</posy>
+							<width>760</width>
+							<height>480</height>
+							<itemgap>15</itemgap>
+							<onup>921</onup>
+							<ondown>921</ondown>
+							<onleft>2304</onleft>
+							<onright>-</onright>
+							<usecontrolcoords>true</usecontrolcoords>
+							<control type="button" id="2330"> <!--BUTTON PROPERTIES HEADER-->
+								<description>Button Properties Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31098]</label>
+							</control>
+							<control type="button" id="2331"> <!--favourites path-->
+								<description>Favourite Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<scroll>true</scroll>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4BtnParam)]</label>
+								<onclick>Skin.SetString(CustomBtnFavouritesParam,Custom4BtnParam)</onclick>
+								<onclick>Skin.SetString(CustomBtnFavouritesName,Custom4Btn-NAME)</onclick>
+								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,Custom4Btn)</onclick>
+								<onclick>ActivateWindow(3080)</onclick>
+							</control>
+							<control type="button" id="2332"> <!--CUSTOM ICON HEADER-->
+								<description>Custom Icon Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31082]</label>
+							</control>
+							<control type="button" id="2333"> <!--custom icon path-->
+								<description>Custom Icon Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4IconPath)]</label>
+								<onclick>Skin.SetImage(Custom4IconPath)</onclick>
+							</control>
+							<control type="button" id="2334"> <!--CATEGORY IMAGES HEADER-->
+								<description>Custom Category Images Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[31084]</label>
+							</control>
+							<control type="button" id="2336"> <!--HOME MENU LABEL 4-->
+								<description>Custom Category Focus Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4Btn-NAME)]</label>
+								<onclick>Skin.SetString(Custom4Btn-NAME)</onclick>
+								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
+							</control>
+							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
+								<description>Custom Background Path Label</description>
+								<width>760</width>
+								<height>48</height>
+								<font>SystemInfoHead</font>
+								<textcolor>Grey</textcolor>
+								<focusedcolor>Grey</focusedcolor>
+								<textoffsetx>-</textoffsetx>
+								<shadowcolor>-</shadowcolor>
+								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+								<colordiffuse>FFC1EBFF</colordiffuse>
+								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
+								<colordiffuse>-</colordiffuse>
+								<align>center</align>
+								<textwidth>700</textwidth><!--PROPERTIES-->
+								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
+								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
+								<enable>false</enable>
+								<label>$LOCALIZE[33070]</label>
+							</control>
+							<control type="button" id="2338"> <!--background path-->
+								<description>Custom Background Image Path</description>
+								<posx>20</posx>
+								<width>720</width>
+								<height>40</height>
+								<font>WeatherCurrentConditionFont</font>
+								<aligny>top</aligny>
+								<textoffsety>1</textoffsety>
+								<textcolor>ff4B4C7F</textcolor>
+								<focusedcolor>ThemeColor</focusedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<align>left</align>
+								<textoffsetx>10</textoffsetx>
+								<textwidth>700</textwidth>
+								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
+								<texturenofocus border="10">button-nofocus.png</texturenofocus>
+								<pulseonselect>false</pulseonselect>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4BackgroundImagePath)]</label>
+								<onclick>Skin.SetImage(Custom4BackgroundImagePath)</onclick>
+							</control>
+						</control>
+						<!--ImagePreview-->	
+						<control type="image">
+							<description>ExpandedSettingsImagePreview</description>
+							<posx>105</posx>
+							<posy>404</posy>
+							<width>258</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<texture>$INFO[Skin.String(Custom4IconPath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2333)</visible>
+						</control>
+						<control type="label">
+							<posx>86</posx>
+							<posy>404</posy>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>CustomButtonLabelFont</font>
+							<textwidth>288</textwidth> <!---->
+							<textcolor>BBF3E5AB</textcolor>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>keep</aspectratio>
+							<label>[UPPERCASE]$INFO[Skin.String(Custom4Btn-NAME)][/UPPERCASE]</label>
+							<visible>ControlGroup(921).HasFocus(2336)</visible>
+						</control>
+						<control type="image">
+							<posx>86</posx>
+							<posy>404</posy>
+							<width>291</width>
+							<height>218</height>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<texture fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Skin.String(Custom4BackgroundImagePath)]</texture>
+							<visible>ControlGroup(921).HasFocus(2338)</visible>
+						</control>
+					</control>
+				</control>
+			
+		<!--(((OK/RESET ALL)))=================================================================================================================================-->
+				<control type="grouplist" id="1939">
+					<description>Dialog Button Area</description>				
+					<posx>300</posx>
+					<posy>650</posy>
+					<itemgap>220</itemgap>
+					<orientation>horizontal</orientation>	
+					<onup>850</onup>
+					<control type="button" id="18">
+						<description>Exit Window</description>
+						<width>215</width>
+						<height>50</height>
+						<font>PluginSettingsFoot</font>
+						<aligny>top</aligny>
+						<textoffsety>5</textoffsety>
+						<textcolor>AAFFFFFF</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<disabledcolor>ff343434</disabledcolor> <!--JET-->
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[13012]</label>
+						<onclick>Dialog.Close(3082)</onclick>
+					</control>	
+					<control type="button" id="1932">
+						<description>Clear list</description>
+						<width>215</width>
+						<height>50</height>
+						<font>PluginSettingsFoot</font>
+						<aligny>top</aligny>
+						<textoffsety>5</textoffsety>
+						<textcolor>AAFFFFFF</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>400</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[192] $LOCALIZE[535] </label>
+						<description>Back</description>	
+						<onclick>Skin.Reset(Custom1Btn-NAME)</onclick>
+						<onclick>Skin.Reset(Custom2Btn-NAME)</onclick>
+						<onclick>Skin.Reset(Custom3Btn-NAME)</onclick>
+						<onclick>Skin.Reset(Custom4Btn-NAME)</onclick>
+						<onclick>Skin.Reset(Custom1BtnParam)</onclick>
+						<onclick>Skin.Reset(Custom2BtnParam)</onclick>
+						<onclick>Skin.Reset(Custom3BtnParam)</onclick>
+						<onclick>Skin.Reset(Custom4BtnParam)</onclick>
+						<onclick>Skin.Reset(Custom1IconPath)</onclick>
+						<onclick>Skin.Reset(Custom2IconPath)</onclick>
+						<onclick>Skin.Reset(Custom3IconPath)</onclick>
+						<onclick>Skin.Reset(Custom4IconPath)</onclick>
+						<onclick>Skin.Reset(EnableCustomCategory1)</onclick>
+						<onclick>Skin.Reset(EnableCustomCategory2)</onclick>
+						<onclick>Skin.Reset(EnableCustomCategory3)</onclick>
+						<onclick>Skin.Reset(EnableCustomCategory4)</onclick>
+						<onclick>Dialog.Close(3082)</onclick>
+					</control>	
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
