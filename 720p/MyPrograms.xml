@@ -932,6 +932,7 @@
 						 <height>502</height>
 						 <texture border="10">Glass/ShutDownButtonF.png</texture>
 						 <animation effect="fade" end="60" condition="true">Conditional</animation> 
+						 <visible>Substring(Container.Folderpath,games)</visible>
 					</control>
 					<!--************************************************************************************-->
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
