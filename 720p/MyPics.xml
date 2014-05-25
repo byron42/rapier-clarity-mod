@@ -13,7 +13,9 @@
 	<!--(((BACKGROUNDS)))=============================================================================================================================-->			
 			<control type="group">
 				<!--(AddonFanartFadeOut)-->
-				<animation effect="fade" start="100" end="0" time="200" condition="!IsEmpty(Listitem.Property(Fanart_Image))">Conditional</animation>
+				<animation effect="fade" start="20" end="200" time="200">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<visible>!Control.IsVisible(1121)</visible>
 				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
 						<control type="image">
@@ -124,11 +126,11 @@
 			</control>
 			
 			<!--********************************** BackgroundFanart *********************************************-->
-			<control type="group">
+			<control type="group" id="1121">
 				<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 				<!--(VisibleFadeEffect)-->
 				<animation effect="fade" time="200">Visible</animation>
-				<animation effect="fade" time="200">Hidden</animation>
+				<animation effect="fade" time="0">Hidden</animation>
 				<control type="image">
 					<description>Fanart Background</description>
 					<include>BackgroundOffset</include>
