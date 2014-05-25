@@ -1941,7 +1941,7 @@
 					
 					<visible>![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
 
-					<control type="list" id="110"> <!--VIDEOS ======(((4)====--> <!--(((3072)-->
+					<control type="fixedlist" id="110"> <!--VIDEOS ======(((4)====--> <!--(((3072)-->
 						<description>Videos Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -1950,6 +1950,9 @@
 						<ondown>850</ondown>
 						<onup>600</onup>
 						<orientation>horizontal</orientation>
+						<!-- <scrolltime>300</scrolltime> -->
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -2256,7 +2259,7 @@
 						</content>						
 					</control>	
 			
-					<control type="list" id="110"> <!--GENERAL =====(((7)====--> <!--(((3076)-->
+					<control type="fixedlist" id="110"> <!--GENERAL =====(((7)====--> <!--(((3076)-->
 						<description>General Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2264,7 +2267,9 @@
 						<height>34</height>
 						<ondown>850</ondown>
 						<onup>600</onup>
-						<orientation>horizontal</orientation>	
+						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -2565,7 +2570,7 @@
 						</content>	
 					</control>			
 			
-					<control type="list" id="110"> <!--SYSTEM ======(((8)====================-->
+					<control type="fixedlist" id="110"> <!--SYSTEM ======(((8)====================-->
 						<description>System Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2574,6 +2579,8 @@
 						<ondown>850</ondown>
 						<onup>600</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -2652,7 +2659,7 @@
 						</content>						
 					</control>
 					
-					<control type="list" id="110"> <!--MusicVids ===(((21)===================-->
+					<control type="fixedlist" id="110"> <!--MusicVids ===(((21)===================-->
 						<description>MusicVids Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2661,6 +2668,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -2744,7 +2753,7 @@
 						</content>						
 					</control>
 					
-					<control type="list" id="110"> <!--PROGRAMS ====(((1)====--> <!--(((3071)-->
+					<control type="fixedlist" id="110"> <!--PROGRAMS ====(((1)====--> <!--(((3071)-->
 						<description>Programs Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -2753,6 +2762,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
 						<visible>Container(850).HasFocus(1) + !Skin.HasSetting(ShowProgramsSubmenu)</visible>
@@ -3056,7 +3067,7 @@
 					
 					<!--=======================--> <!--WEATHER =====(((9)====================-->
 					
-					<control type="list" id="110"> <!--MOVIES ======(((5)====--> <!--(((3073)-->
+					<control type="fixedlist" id="110"> <!--MOVIES ======(((5)====--> <!--(((3073)-->
 						<description>Movies Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3065,6 +3076,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -3371,7 +3384,7 @@
 						</content>						
 					</control>					
 				
-					<control type="list" id="110"> <!--TV SHOWS ====(((6)====--> <!--(((3074)-->
+					<control type="fixedlist" id="110"> <!--TV SHOWS ====(((6)====--> <!--(((3074)-->
 						<description>TV Shows Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3380,6 +3393,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -3686,7 +3701,7 @@
 						</content>
 					</control>		
 				
-					<control type="list" id="110"> <!--MUSIC =======(((3)====--> <!--(((3075)-->
+					<control type="fixedlist" id="110"> <!--MUSIC =======(((3)====--> <!--(((3075)-->
 						<description>Music Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -3695,6 +3710,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
@@ -4021,7 +4038,7 @@
 						</content>						
 					</control>	
 				
-					<control type="list" id="110"> <!--ADD-ONS =====(((11)===--> <!--(((3078)-->
+					<control type="fixedlist" id="110"> <!--ADD-ONS =====(((11)===--> <!--(((3078)-->
 						<description>Add-Ons Menu Bar</description>
 						<posx>24</posx>
 						<posy>0</posy>
@@ -4030,6 +4047,8 @@
 						<ondown>850</ondown>
 						<onup>304</onup>
 						<orientation>horizontal</orientation>
+						<focusposition>2</focusposition>
+						<movement>2</movement>
 						<!--HomeSubMenuOpenCloseAnim-->
 						<animation effect="fade" end="100" time="400" delay="250">WindowOpen</animation>
 						<animation effect="fade" end="0" time="100">WindowClose</animation> 
