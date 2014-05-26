@@ -940,6 +940,28 @@
 						<enable>!Skin.HasSetting(ShowSystemSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(3005)">Conditional</animation>
 					</control>
+					<control type="radiobutton" id="30061">
+						<description>Hide Debugging</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[14092]</label>
+						<selected>!Skin.HasSetting(HideSystemDebugButton)</selected>
+						<onclick>Skin.ToggleSetting(HideSystemDebugButton)</onclick>
+						<enable>!Skin.HasSetting(ShowSystemSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(30061)">Conditional</animation>
+					</control>
 					<control type="radiobutton" id="3006">
 						<description>Hide credits</description>
 						<posx>10</posx>
