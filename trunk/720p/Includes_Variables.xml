@@ -117,7 +117,7 @@
 	<variable name="MusicLibraryBreadCrumbLabel_Big">
 			<value condition="Substring(Container.FolderPath,musicdb://6/,Left) | Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31804][/UPPERCASE] </value> <!--recently added-->
 			<value condition="Substring(Container.FolderPath,musicdb://8/,Left)">[UPPERCASE]$LOCALIZE[521][/UPPERCASE] </value> <!--compilations-->
-			<!--<value condition="Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31939][/UPPERCASE] </value> <!--Recently PLAYED-->-->
+			<!--<value condition="Substring(Container.FolderPath,musicdb://7/,Left)">[UPPERCASE]$LOCALIZE[31939][/UPPERCASE] </value>--> <!--Recently PLAYED-->
 	</variable>  
 	
 <!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
@@ -325,5 +325,11 @@
 		<value condition="ControlGroup(305).HasFocus(4002)">$VAR[RecentItem.3.Label]</value>
 		<value condition="ControlGroup(305).HasFocus(4003)">$VAR[RecentItem.4.Label]</value>
 		<value condition="ControlGroup(305).HasFocus(4004)">$VAR[RecentItem.5.Label]</value>
+	</variable>
+	
+	<!--SubMenuDebugLabel-->
+	<variable name="SubMenuDebugLabel">
+		<value condition="Skin.HasSetting(EnableDebugLogging)">[COLOR=cc497F49]$LOCALIZE[14092][/COLOR]</value> 
+		<value condition="!Skin.HasSetting(EnableDebugLogging)">$LOCALIZE[14092]</value> 
 	</variable>
 </includes>
