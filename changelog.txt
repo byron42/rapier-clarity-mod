@@ -3,6 +3,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 5.16.14 Version 3.5.31
 
+	5.29.14
+------------------------------------------------------------------------------
+		=  Hid a couple of residual images that are showing in PROGRAMS
+		   from what should only be visible in games container.  When
+		   a4x installer is hanging they were showing up but not any
+		   more
+
 	5.25.14
 ------------------------------------------------------------------------------
 		=  Added a button to SYSTEM sub-menu that can enable/disable

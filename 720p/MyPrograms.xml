@@ -919,7 +919,7 @@
 						<texture border="0,15,0,15">black.png</texture>
 						<!--ControlAreaBackgroundFadeAnim-->
 						<animation effect="fade" end="75" condition="true">Conditional</animation>
-						<visible>!Skin.HasSetting(HideLargePosterShadow)</visible>
+						<visible>!Skin.HasSetting(HideLargePosterShadow) + Substring(Container.Folderpath,games)</visible>
 					</control>
 					<control type="image">
 						<posx>-18</posx>
@@ -1099,7 +1099,7 @@
 							<height>600</height>
 							<texture>bottom-bar-overlay.png</texture>
 							<colordiffuse>BBBBBBBB</colordiffuse>
-							<visible>!Skin.HasSetting(HideLargePosterShadow)</visible>
+							<visible>!Skin.HasSetting(HideLargePosterShadow) + Substring(Container.Folderpath,games)</visible>
 						</control>
 					</control>	
 				
