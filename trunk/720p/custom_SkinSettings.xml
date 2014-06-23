@@ -5598,7 +5598,7 @@
 							</animation>
 						</control>
 				<!--SCRIPTS-->
-						<control type="radiobutton" id="166">
+						<control type="radiobutton" id="1660">
 							<description>Scripts Background Settings</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -5616,12 +5616,12 @@
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<label>$LOCALIZE[12600]</label>
+							<label>$LOCALIZE[247]</label>
 							<selected>Skin.HasSetting(ExpandScriptsBGSettings)</selected>
 							<onclick>Skin.ToggleSetting(ExpandScriptsBGSettings)</onclick>
 							<onclick condition="!Control.IsVisible(11111123)">PageDown(20084) </onclick>
 						</control>
-						<control type="togglebutton" id="167">
+						<control type="togglebutton" id="1670">
 							<description>Image/Multi Image Toggle</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -5654,7 +5654,7 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-						<control type="button" id="168">
+						<control type="button" id="16800">
 							<description>Scripts Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -5685,7 +5685,7 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-						<control type="button" id="169">
+						<control type="button" id="16900">
 							<description>Scripts Multi Custom Background Path</description>
 							<posx>10</posx>
 							<width>800</width>
@@ -5716,7 +5716,7 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-						<control type="togglebutton" id="167">
+						<control type="togglebutton" id="1671">
 							<description>Scripts Apply To All Windows</description>
 							<posx>10</posx>
 							<width>800</width>
