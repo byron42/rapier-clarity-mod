@@ -332,4 +332,37 @@
 		<value condition="Skin.HasSetting(EnableDebugLogging)">[COLOR=cc497F49]$LOCALIZE[14092][/COLOR]</value> 
 		<value condition="!Skin.HasSetting(EnableDebugLogging)">$LOCALIZE[14092]</value> 
 	</variable>
+
+<!--(((FULLSCREEN VID INFO )))=================================-->
+	<variable name="PlayerControlActionLabel">
+		<value condition="Window.IsActive(142) + Player.Seeking">[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</value> <!-- seeking -->
+		<value condition="Window.IsActive(142) + [[Player.Paused + !Player.Caching] + !Player.Seeking]">[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</value> <!-- paused -->
+		<value condition="Window.IsActive(142) + [[Player.Paused + Player.Caching] + !Player.Seeking]">[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</value> <!-- cache -->
+		<value condition="Window.IsActive(142) + Player.Forwarding2x">[UPPERCASE]$LOCALIZE[31723][/UPPERCASE]</value> <!-- FFx2 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding4x">[UPPERCASE]$LOCALIZE[31724][/UPPERCASE]</value> <!-- FFx4 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding8x">[UPPERCASE]$LOCALIZE[31725][/UPPERCASE]</value> <!-- FFx8 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding16x">[UPPERCASE]$LOCALIZE[31726][/UPPERCASE]</value> <!-- FFx16 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding32x">[UPPERCASE]$LOCALIZE[31727][/UPPERCASE]</value> <!-- FFx32 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding2x">[UPPERCASE]$LOCALIZE[31728][/UPPERCASE]</value> <!-- RWx2 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding4x">[UPPERCASE]$LOCALIZE[31729][/UPPERCASE]</value> <!-- RWx4 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding8x">[UPPERCASE]$LOCALIZE[31730][/UPPERCASE]</value> <!-- RWx8 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding16x">[UPPERCASE]$LOCALIZE[31731][/UPPERCASE]</value> <!-- RWx16 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding32x">[UPPERCASE]$LOCALIZE[31732][/UPPERCASE]</value> <!-- RWx32 -->
+	</variable>
+	<variable name="PlayerControlActionImage">
+		<value condition="Window.IsActive(142) + Player.Seeking">osd-pause-focus.png</value> <!-- seeking -->
+		<value condition="Window.IsActive(142) + [[Player.Paused + !Player.Caching] + !Player.Seeking]">osd-pause-focus.png</value> <!-- paused -->
+		<value condition="Window.IsActive(142) + [[Player.Paused + Player.Caching] + !Player.Seeking]">osd-pause-focus.png</value> <!-- cache -->
+		<value condition="Window.IsActive(142) + Player.Forwarding2x">osd-forward-focus.png</value> <!-- FFx2 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding4x">osd-forward-focus.png</value> <!-- FFx4 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding8x">osd-forward-focus.png</value> <!-- FFx8 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding16x">osd-forward-focus.png</value> <!-- FFx16 -->
+		<value condition="Window.IsActive(142) + Player.Forwarding32x">osd-forward-focus-x32.png</value> <!-- FFx32 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding2x">osd-rewind-focus.png</value> <!-- RWx2 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding4x">osd-rewind-focus.png</value> <!-- RWx4 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding8x">osd-rewind-focus.png</value> <!-- RWx8 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding16x">osd-rewind-focus.png</value> <!-- RWx16 -->
+		<value condition="Window.IsActive(142) + Player.Rewinding32x">osd-rewind-focus-x32.png</value> <!-- RWx32 -->
+	</variable>
+	
 </includes>
