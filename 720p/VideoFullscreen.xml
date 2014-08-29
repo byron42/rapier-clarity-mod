@@ -1,20 +1,24 @@
 <window id="2005">
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>	
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--VIDEO OSD IS VISIBLE FADE-->
+			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsVisible(2901)">Conditional</animation>
 			<control type="group">
 				<!--*********************************************** Codec Box ***************************************************-->
 				<posx></posx>
 				<posy></posy>
 				<!--VisibleFadeEffect-->
-				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="0" >WindowOpen</animation>
-				<animation effect="fade" start="0" end="0,110" time="250" delay="200">WindowClose</animation>
-				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200" >Visible</animation>
-				<animation effect="fade" start="0" end="0,110" time="250" delay="200">Hidden</animation>
+				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="0">WindowOpen</animation>
+				<animation effect="slide" start="0" end="0,-114" time="250" delay="200">WindowClose</animation>
+				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
+				<!-- OSD/FullscreenVid Both Visible -->
+				<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
+				
 				<!--*************************************************************************************************************-->
 				<visible>Player.HasVideo + !Window.IsActive(142)</visible>
 				<control type="image">
@@ -24,14 +28,10 @@
 					<width>1360</width>
 					<height>155</height>
 					<colordiffuse>BBBBBBBB</colordiffuse>
-					<texture border="10,10,10,10">media-background2.jpg</texture>
+					<texture border="10,10,10,10">media-background2.png</texture>
 				</control>
 				<control type="grouplist">
 					<visible>Player.HasVideo + !Window.IsActive(142)</visible>
-					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="0" >WindowOpen</animation>
-					<animation effect="fade" start="0" end="0,110" time="250" delay="200">WindowClose</animation>
-					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200" >Visible</animation>
-					<animation effect="fade" start="0" end="0,110" time="250" delay="200">Hidden</animation>
 					<posx>10</posx>
 					<posy>0</posy>
 					<itemgap>40</itemgap>
