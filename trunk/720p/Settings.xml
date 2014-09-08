@@ -177,7 +177,7 @@
 					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Settings Menu Bar</description>
 					<posx>390</posx>
-					<posy>155</posy>
+					<posy>125</posy>
 					<itemgap>10</itemgap>
 					<onup>850</onup>
 					<ondown>850</ondown>
@@ -204,15 +204,15 @@
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
-				<!--MUSIC-->
-					<control type="button" id="103">
-						<description>MUSIC</description>
+				<!--PROGRAMS-->
+					<control type="button" id="1100">
+						<description>PROGRAMS</description>
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
 						<font>ButtonMenuFont</font>
-						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
-						<onclick>ReplaceWindow(MusicSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+						<onclick>ReplaceWindow(ProgramsSettings)</onclick>	
 						<align>center</align>
 						<aligny>top</aligny>
 						<textoffsetx></textoffsetx>
@@ -220,6 +220,7 @@
 						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
 						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
 						<colordiffuse>FFFFFFFF</colordiffuse>
+						<disabledcolor>AA555555</disabledcolor> <!--JET-->
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
@@ -299,6 +300,25 @@
 						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
 						<colordiffuse>FFFFFFFF</colordiffuse>
 						<disabledcolor>AA555555</disabledcolor> <!--JET-->
+						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
+					</control>
+				<!--MUSIC-->
+					<control type="button" id="103">
+						<description>MUSIC</description>
+						<width>500</width>
+						<height>50</height>
+						<textwidth>480</textwidth>
+						<font>ButtonMenuFont</font>
+						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
+						<onclick>ReplaceWindow(MusicSettings)</onclick>	
+						<align>center</align>
+						<aligny>top</aligny>
+						<textoffsetx></textoffsetx>
+						<textoffsety>8</textoffsety> <!--SDM-->
+						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
 					</control>
