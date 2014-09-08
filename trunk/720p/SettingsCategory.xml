@@ -393,9 +393,9 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--MUSIC-->
-					<control type="button" id="104">
-						<description>Music</description>
+				<!--PROGRAMS-->
+					<control type="button" id="1070">
+						<description>Programs</description>
 						<width>175</width>
 						<height>36</height>	
 						<font>SubMenuFont</font>	
@@ -407,8 +407,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
-						<onclick>ReplaceWindow(MusicSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
+						<onclick>ReplaceWindow(ProgramsSettings)</onclick>	
 					</control>
 					<control type="image" id="119">
 						<description>MenuBarSeparator</description>
@@ -439,12 +439,12 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--PROGRAMS-->
-					<control type="button" id="1070">
-						<description>Programs</description>
-						<width>175</width>
+				<!--PICTURES-->
+					<control type="button" id="103">
+						<description>Pictures</description>
+						<width>180</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>SubMenuFont</font>
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -453,8 +453,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[0][/UPPERCASE]</label>
-						<onclick>ReplaceWindow(ProgramsSettings)</onclick>	
+						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
+						<onclick>ReplaceWindow(PicturesSettings)</onclick>
 					</control>
 					<control type="image" id="118">
 						<description>MenuBarSeparator</description>
@@ -508,12 +508,12 @@
 						<height>34</height>
 						<texture>menu-bar-separator.png</texture><!---->
 					</control>
-				<!--PICTURES-->
-					<control type="button" id="103">
-						<description>Pictures</description>
-						<width>180</width>
+				<!--MUSIC-->
+					<control type="button" id="104">
+						<description>Music</description>
+						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>
+						<font>SubMenuFont</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -522,8 +522,8 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<label>[UPPERCASE]$LOCALIZE[10002][/UPPERCASE]</label>
-						<onclick>ReplaceWindow(PicturesSettings)</onclick>
+						<label>[UPPERCASE]$LOCALIZE[10005][/UPPERCASE]</label>
+						<onclick>ReplaceWindow(MusicSettings)</onclick>	
 					</control>
 					<control type="image" id="1222">
 						<description>MenuBarSeparator</description>
