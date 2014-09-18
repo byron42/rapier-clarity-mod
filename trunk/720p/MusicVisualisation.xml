@@ -1,4 +1,5 @@
 <window id="2006">
+	<onload condition="Window.Previous(10001) + Player.Paused">PlayerControl(Play)</onload>
 	<onunload>Dialog.Close(all,true)</onunload>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -7,6 +8,8 @@
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="[Window.IsActive(120) + Control.HasFocus(503)] | Window.IsVisible(121) | Window.IsVisible(122)">Conditional</animation>
 			<control type="visualisation" id="2">
 				<description>visualisation</description>
 				<posx>0</posx>
@@ -18,7 +21,7 @@
 			<control type="multiimage">
 				<description>artist slideshow</description>
 				<posx>0</posx>
-				<posy>-</posy>
+				<posy></posy>
 				<width>1280</width>
 				<height>720</height>
 				<imagepath>backdrops/artist_fanart/$INFO[MusicPlayer.Artist]</imagepath>
@@ -39,6 +42,8 @@
 				<!--VisibleFadeEffect-->
 				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-114" time="250" delay="200">Hidden</animation>
+				<!--MUSIC OSD IS VISIBLE FADE-->
+				<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsVisible(120)">Conditional</animation>
 				<visible>Player.ShowCodec + ![Window.IsVisible(121) | Window.IsVisible(122)]</visible>
 				<control type="group">
 					<control type="image">
@@ -48,7 +53,7 @@
 						<width>1360</width>
 						<height>155</height>
 						<colordiffuse>BBBBBBBB</colordiffuse>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
+						<texture border="10,10,10,10">media-background2.png</texture>
 					</control>
 					<control type="image">
 						<description>small box left</description>
@@ -57,7 +62,7 @@
 						<width>400</width>
 						<height>120</height>
 						<colordiffuse>BB555555</colordiffuse>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
+						<texture border="10,10,10,10">media-background2.png</texture>
 					</control>
 					<control type="image">
 						<description>small box mid</description>
@@ -66,7 +71,7 @@
 						<width>400</width>
 						<height>120</height>
 						<colordiffuse>BB555555</colordiffuse>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
+						<texture border="10,10,10,10">media-background2.png</texture>
 					</control>
 					<control type="image">
 						<description>small box right</description>
@@ -75,7 +80,7 @@
 						<width>400</width>
 						<height>120</height>
 						<colordiffuse>BB555555</colordiffuse>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
+						<texture border="10,10,10,10">media-background2.png</texture>
 					</control>
 				</control>
 				<control type="label">
@@ -88,7 +93,7 @@
 					<aligny>center</aligny>
 					<font>MediaInfoTitleFont2</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 				</control>
 				<control type="label">
 					<posx>470</posx>
@@ -100,7 +105,7 @@
 					<aligny>top</aligny>
 					<font>DefaultFont</font>
 					<textcolor>gray</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 				</control>
 				<control type="label">
 					<posx>665</posx>
@@ -112,7 +117,7 @@
 					<aligny>top</aligny>
 					<font>DefaultFont</font>
 					<textcolor>gray</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 				</control>
 				<control type="label">
 					<posx>35</posx>
@@ -124,7 +129,7 @@
 					<aligny>center</aligny>
 					<font>MediaInfoTitleFont2</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -136,7 +141,7 @@
 					<aligny>top</aligny>
 					<font>DefaultFont</font>
 					<textcolor>gray</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 					<visible>Visualisation.Locked</visible>
 				</control>
 				<control type="label">
@@ -149,7 +154,7 @@
 					<aligny>top</aligny>
 					<font>DefaultFont</font>
 					<textcolor>gray</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 					<visible>!Visualisation.Locked</visible>
 				</control>
 				<control type="label">
@@ -162,7 +167,7 @@
 					<aligny>center</aligny>
 					<font>MediaInfoTitleFont2</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 				</control>
 				<control type="label">
 					<posx>890</posx>
@@ -175,7 +180,7 @@
 					<font>font12</font>
 					<scroll>true</scroll>
 					<textcolor>gray</textcolor>
-					<shadowcolor>-</shadowcolor>
+					<shadowcolor></shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>
 			</control>
@@ -188,21 +193,15 @@
 				<width>1280</width>
 				<height>151</height>
 				<visible>true</visible>
-				<animation type="Visible">
-					<effect type="fade" time="400" start="0" end="100" />
-					<effect type="slide" time="400" start="0,151" end="0,0" easing="out" tween="cubic" />
-				</animation>
-				<animation type="Hidden">
-					<effect type="fade" time="400" start="100" end="0" />
-					<effect type="slide" time="400" start="0,0" end="0,151" easing="in" tween="cubic" />
-				</animation>
+				<animation effect="fade" end="100" time="400">Visible</animation>
+				<animation effect="fade" end="0" time="400">Hidden</animation>
 			<!--Mod code start ===================-->
 				<control type="image">
 					<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 					<animation effect="fade" time="200">WindowClose</animation>
 					<animation type="Visible">
 						<effect type="fade" time="400" start="0" end="100" />
-						<effect type="slide" time="400" start="0,151" end="0,0" easing="out" tween="cubic" />
+						<effect type="slide" time="0" start="0,151" end="0,0" easing="out" tween="cubic" />
 					</animation>
 					<animation type="Hidden">
 						<effect type="fade" time="400" start="100" end="0" />
@@ -220,7 +219,7 @@
 					<posy>30</posy> 
 					<visible>!Skin.HasSetting(HidecdArt)</visible>
 					<control type="image">
-						<visible>Player.ShowInfo+ !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+						<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 						<description>Cd overlay</description>
 						<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000" reversible="false">WindowOpen</animation>
 						<animation effect="fade" start="0" end="100" time="900" delay="1000">Visible</animation>
@@ -281,7 +280,7 @@
 							<width>810</width>
 							<height>30</height>
 							<align>left</align>
-							<aligny>-</aligny>
+							<aligny></aligny>
 							<font>Font_OSDMusicTitle</font>
 							<textcolor>ThemeColor</textcolor>
 							<shadowcolor>white</shadowcolor>
@@ -294,7 +293,7 @@
 							<width>790</width>
 							<height>24</height>
 							<align>left</align>
-							<aligny>-</aligny>
+							<aligny></aligny>
 							<font>Font_OSDMusicArtist</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>
@@ -307,7 +306,7 @@
 							<width>780</width>
 							<height>24</height>
 							<align>left</align>
-							<aligny>-</aligny>
+							<aligny></aligny>
 							<font>Font_OSDMusicArtist</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>
@@ -321,7 +320,7 @@
 							<width>780</width>
 							<height>24</height>
 							<align>left</align>
-							<aligny>-</aligny>
+							<aligny></aligny>
 							<font>Font_OSDMusicArtist</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>

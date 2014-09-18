@@ -364,5 +364,5 @@
 		<value condition="Window.IsActive(142) + Player.Rewinding16x">osd-rewind-focus.png</value> <!-- RWx16 -->
 		<value condition="Window.IsActive(142) + Player.Rewinding32x">osd-rewind-focus-x32.png</value> <!-- RWx32 -->
 	</variable>
-	
+
 </includes>
