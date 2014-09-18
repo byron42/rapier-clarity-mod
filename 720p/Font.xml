@@ -533,6 +533,12 @@
 			<size>56</size>	
 		</font>
 		<font>
+			<name>VizSelect</name>
+			<filename>XBMC-caps.ttf</filename>
+			<style></style>
+			<size>55</size>	
+		</font>
+		<font>
 			<name>SearchFontBig</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
