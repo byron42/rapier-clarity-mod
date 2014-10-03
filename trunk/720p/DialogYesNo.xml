@@ -1,4 +1,5 @@
 <window id="100">
+	<!-- <onload condition="[Window.IsActive(musicosd) | Window.IsActive(videoosd)] + Player.Playing">PlayerControl(Play)</onload> -->
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<!--BackgroundOpenCloseAnim-->
@@ -142,6 +143,7 @@
 				<texturenofocus>-</texturenofocus>
 				<texturefocus border="0">menu-bar-button-focus2.png</texturefocus>
 				<colordiffuse>aaffffff</colordiffuse>
+				<onclick condition="[Window.IsActive(musicosd) | Window.IsActive(videoosd)] + Player.Paused">PlayerControl(Play)</onclick>
 				<onleft>11</onleft>
 				<onright>11</onright>
 				<onup>10</onup>

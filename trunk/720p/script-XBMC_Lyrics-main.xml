@@ -1,0 +1,611 @@
+<window>
+	<defaultcontrol>1121</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(SliderDialog)">Conditional</animation>
+			
+	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
+			<control type="group">	
+				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="0" delay="100" time="400">WindowClose</animation>
+				<visible>true</visible> <!--skinwide equal viz bg-->
+				<!--************************* FullControlAreaBackground ******************************-->
+				<control type="image">
+					<width>ScreenWidth</width>
+					<height>720</height>
+					<texture>black.png</texture>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="85" time="400">Visible</animation>
+					<animation effect="fade" start="85" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="85" time="400">WindowOpen</animation>
+					<animation effect="fade" start="85" end="0" time="400">WindowClose</animation>
+				</control>
+				<!--***************************************************************************************************--> 
+			</control>
+			<control type="group">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation effect="fade" start="100" end="0" delay="100" time="100">WindowClose</animation>
+				<posy>-40</posy>
+			<!--header,separators-->
+				<control type="group">
+					<posx>30</posx>
+					<posy>80</posy>
+					<control type="label" id="2">
+						<description>PLUGIN/ADDON NAME</description>
+						<posx></posx>
+						<posy>8</posy>
+						<label>$LOCALIZE[SCRIPT0]</label>
+						<font>PluginSettingsHead</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<!-- <label>$INFO[Listitem.Label]</label> -->
+						<posy>DialogHeadingOffsetY</posy>
+						<width>600</width>
+						<font>MediaInfoTitleFont2</font>
+						<textcolor>DialogTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label" id="200"> <!--TOP BAR LABEL (Right)-->
+						<description>SCRAPER</description>
+						<posx>1220</posx>
+						<posy>9</posy>
+						<font>PluginSettingsHead2</font>
+						<label></label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<width>600</width>
+						<font>MediaInfoTitleFont2</font>
+						<textcolor>DialogTitleColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+					</control>
+					<!--**************************************** SEPARATORS ****************************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<posy>34</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--TOP-->
+						<description>middle</description>
+						<posy>324</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM-->
+						<description>BOTTOM bar</description>
+						<posy>620</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--********************************************************************************************-->
+				</control>
+			
+
+	<!--(((MEDIA INFO)))=================================================================================================================-->
+				<control type="group">
+					<posx>45</posx>
+					<posy>99</posy>
+					<!-- <width>1280</width> -->
+					<!-- <height>151</height> -->
+					<!-- <visible>true</visible> -->
+					<control type="image">
+						<description>Cover image</description>
+						<width>275</width>
+						<height>275</height>
+						<texture background="true">$INFO[MusicPlayer.Cover]</texture>
+						<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+						<aspectratio align="bottom">keep</aspectratio>
+						<posy>25</posy>
+					</control>
+					<control type="label">
+						<posx>320</posx>
+						<posy>45</posy>
+						<width>810</width>
+						<height>30</height>
+						<align>left</align>
+						<aligny></aligny>
+						<font>Font_OSDMusicTitle</font>
+						<textcolor>ThemeColor</textcolor>
+						<shadowcolor>white</shadowcolor>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>320</posx>
+						<posy>93</posy>
+						<width>790</width>
+						<height>24</height>
+						<align>left</align>
+						<aligny></aligny>
+						<font>Font_OSDMusicArtist</font>
+						<textcolor>ThemeColor2</textcolor>
+						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
+						<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
+						<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>320</posx>
+						<posy>130</posy>
+						<width>780</width>
+						<height>24</height>
+						<align>left</align>
+						<aligny></aligny>
+						<font>Font_OSDMusicArtist</font>
+						<textcolor>ThemeColor2</textcolor>
+						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
+						<scroll>true</scroll>
+						<label>[UPPERCASE]$INFO[MusicPlayer.Album][/UPPERCASE]</label>
+						<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>320</posx>
+						<posy>165</posy>
+						<width>780</width>
+						<height>24</height>
+						<align>left</align>
+						<aligny></aligny>
+						<font>Font_OSDMusicArtist</font>
+						<textcolor>ThemeColor2</textcolor>
+						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
+						<scroll>true</scroll>
+						<label>[UPPERCASE]$INFO[MusicPlayer.Year][/UPPERCASE]</label>
+						<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>318</posx>
+						<posy>174</posy>
+						<width>160</width>
+						<height>60</height>
+						<texture>$INFO[MusicPlayer.Rating]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				<!--===============================================-->
+				  <!--+++++++++++++++++++++++++++++++++++++++++++-->
+					<control type="label" id="212">
+						<description>Elapsed Time Label</description>
+						<posx>320</posx>
+						<posy>252</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>Font_OSDMusicArtist</font>
+						<textcolor>BBF3E5AB</textcolor>
+						<shadowcolor></shadowcolor>
+						<align>left</align>
+						<label>$INFO[Player.Time]</label>
+						<visible>!Player.Seeking</visible>
+					</control>
+					<control type="progress">
+						<description>Progressbar</description>
+						<posx>320</posx>
+						<posy>225</posy>
+						<width>870</width>
+						<height>10</height>
+						<info>Player.Progress</info>
+					</control>   
+					<control type="label" id="212">
+						<posx>1190</posx>
+						<posy>252</posy>
+						<width>150</width>
+						<height>30</height>
+						<label>$INFO[Player.Duration]</label>
+						<align>right</align>
+						<font>Font_OSDMusicArtist</font>
+						<textcolor>BBF3E5AB</textcolor>
+						<shadowcolor></shadowcolor>
+					</control>
+				  <!--+++++++++++++++++++++++++++++++++++++++++++-->
+				<!--===============================================-->
+				
+				<!-- media controls	 -->
+					<control type="grouplist" id="999">
+						<!-- <animation effect="fade" end="60" time="100">WindowOpen</animation> -->
+						<animation effect="fade" start="100" end="60" time="100" condition="!ControlGroup(999).HasFocus">Conditional</animation>
+						<posx>435</posx>
+						<posy>250</posy>
+						<width>650</width>
+						<height>40</height>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<orientation>horizontal</orientation>
+						<itemgap>45</itemgap>
+						<control type="button" id="600">
+							<width>40</width>
+							<height>40</height>
+							<label>210</label>
+							<font>-</font>
+							<texturefocus>osd-skip-prev-focus.png</texturefocus>
+							<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Previous)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+						<control type="button" id="601">
+							<width>40</width>
+							<height>40</height>
+							<label>31354</label>
+							<font>-</font>
+							<texturefocus>osd-rewind-focus.png</texturefocus>
+							<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Rewind)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+						<control type="togglebutton" id="602">
+							<width>40</width>
+							<height>40</height>
+							<label>31351</label>
+							<altlabel>208</altlabel>
+							<font>-</font>
+							<texturefocus>osd-pause-focus.png</texturefocus>
+							<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+							<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+							<alttexturefocus>osd-play-focus.png</alttexturefocus>
+							<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+							<onclick>PlayerControl(Play)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+						<control type="button" id="603">
+							<width>40</width>
+							<height>40</height>
+							<label>31352</label>
+							<font>-</font>
+							<texturefocus>osd-stop-focus.png</texturefocus>
+							<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Stop)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+						<control type="button" id="604">
+							<width>40</width>
+							<height>40</height>
+							<label>31353</label>
+							<font>-</font>
+							<texturefocus>osd-forward-focus.png</texturefocus>
+							<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Forward)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+						<control type="button" id="605">
+							<width>40</width>
+							<height>40</height>
+							<label>209</label>
+							<font>-</font>
+							<texturefocus>osd-skip-next-focus.png</texturefocus>
+							<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Next)</onclick>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+					<!-- repeat -->
+						<control type="button" id="400">
+							<description>Repeat</description>
+							<width>40</width>
+							<height>40</height>
+							<label>RPT$INFO[Playlist.Repeat, : ]</label>
+							<font></font>
+							<texturefocus>osd-repeat-focus.png</texturefocus>
+							<texturenofocus>osd-repeat-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Repeat)</onclick>
+							<pulseonselect>false</pulseonselect>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+							<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>'
+						</control>
+						<control type="button" id="498">
+							<description>Repeat</description>
+							<width>40</width>
+							<height>40</height>
+							<label>RPT$INFO[Playlist.Repeat, : ]</label>
+							<font></font>
+							<texturefocus>osd-repeat-one-focus.png</texturefocus>
+							<texturenofocus>osd-repeat-one-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Repeat)</onclick>
+							<pulseonselect>false</pulseonselect>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+							<visible>Playlist.IsRepeatOne</visible>
+						</control>
+						<control type="button" id="499">
+							<description>Repeat</description>
+							<width>40</width>
+							<height>40</height>
+							<label>RPT$INFO[Playlist.Repeat, : ]</label>
+							<font></font>
+							<texturefocus>osd-repeat-all-focus.png</texturefocus>
+							<texturenofocus>osd-repeat-all-nofocus.png</texturenofocus>
+							<onclick>PlayerControl(Repeat)</onclick>
+							<pulseonselect>false</pulseonselect>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+							<visible>Playlist.IsRepeat</visible>
+						</control>
+						<control type="togglebutton" id="607">
+							<description>RANDOM BUTTON</description>
+							<width>40</width>
+							<height>40</height>
+							<label>$INFO[Playlist.Random]</label>
+							<font></font>
+							<align>center</align>
+							<texturefocus>osd-random-off-focus.png</texturefocus>
+							<texturenofocus>osd-random-off-nofocus.png</texturenofocus>
+							<usealttexture>Playlist.IsRandom</usealttexture>
+							<alttexturefocus>osd-random-on-focus.png</alttexturefocus>
+							<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
+							<pulseonselect>false</pulseonselect>
+							<onclick>XBMC.PlayerControl(Random)</onclick>
+							<selected>Playlist.IsRandom</selected>
+							<pulseonselect>false</pulseonselect>
+							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						</control>
+					</control>
+				
+				</control>
+			
+	<!--(((CONTROLS)))===========================================================================================================================-->		
+				<control type="group" id="9000">
+					<posx>45</posx>
+					<posy>411</posy>
+					<onup>999</onup>
+				<!--==========================================================================================-->
+				<!--============================== DO NOT CHANGE <id> or <type> ==============================-->
+				<!--==========================================================================================-->
+					<control type="textbox" id="100">
+						<description>textarea</description>
+						<width>1075</width>
+						<height>280</height>
+						<onup>101</onup>
+						<ondown>101</ondown>
+						<onleft>101</onleft>
+						<onright>101</onright>
+						<pagecontrol>101</pagecontrol>
+						<font>font13</font>
+						<textcolor>DDFFFFFF</textcolor>
+					</control>
+					<control type="spincontrol" id="101">
+						<description>Next page button</description>
+						<posx>1125</posx>
+						<posy>300</posy>
+						<width>27</width>
+						<height>27</height>
+						<font>font13</font>
+						<align>right</align>
+						<subtype>page</subtype>
+						<textcolor>BBF3E5AB</textcolor>
+						<onleft>101</onleft>
+						<onright>101</onright>
+						<ondown>101</ondown>
+						<onup>101</onup>
+						<showonepage>false</showonepage>
+						<textureup>arrow-scroll-up-nofocus2.png</textureup>
+						<texturedown flipy="true">arrow-scroll-up-nofocus2.png</texturedown>
+						<textureupfocus>arrow-scroll-up-focus2.png</textureupfocus>
+						<texturedownfocus flipy="true">arrow-scroll-up-focus2.png</texturedownfocus>
+						<visible>Control.IsVisible(100)</visible>
+					</control>  
+					
+					<!--((LIST 1)) *******************************************-->
+					<control type="list" id="110">
+						<!-- <width>1075</width> -->
+						<width>1190</width>
+						<height>280</height>
+						<onleft>111</onleft>
+						<onright>111</onright>
+						<onup>999</onup>
+						<ondown>110</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>111</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="35">
+							<control type="image">
+								<posx>15</posx>
+								<posy>0</posy>
+								<width>1160</width>
+								<height>40</height>
+								<texture border="10">ListViewItemBack.png</texture><!---->
+							</control>
+							<control type="label">
+								<posx>25</posx>
+								<posy>5</posy>
+								<width>1160</width>
+								<height>30</height>
+								<font>LibraryCatFontSmall</font>
+								<textcolor>gray</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>ThemeColor</selectedcolor>
+								<align>left</align>
+								<info>ListItem.Label</info>
+							</control>
+						</itemlayout>
+						<focusedlayout height="35">
+							<control type="image">
+								<posx>0</posx>
+								<posy>5</posy>
+								<width>1190</width>
+								<height>30</height>
+								<visible>!Control.HasFocus(110)</visible>
+								<texture>scrollbar-background.png</texture>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>5</posy>
+								<width>1190</width>
+								<height>30</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<visible>Control.HasFocus(110)</visible>
+								<texture border="10">scrollbar-background.png</texture>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>3</posy>
+								<width>1150</width>
+								<height>30</height>
+								<font>MediaTitleFont</font>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>ThemeColor</selectedcolor>
+								<align>left</align>
+								<textcolor>ButtonFocusColor</textcolor>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="spincontrol" id="111">
+						<description>Next page button</description>
+						<posx>1125</posx>
+						<posy>300</posy>
+						<width>27</width>
+						<height>27</height>
+						<font>font13</font>
+						<align>right</align>
+						<subtype>page</subtype>
+						<textcolor>FFFFFFFF</textcolor>
+						<onleft>110</onleft>
+						<onright>110</onright>
+						<ondown>110</ondown>
+						<onup>110</onup>
+						<showonepage>false</showonepage>
+						<textureup>arrow-scroll-up-nofocus2.png</textureup>
+						<texturedown flipy="true">arrow-scroll-up-nofocus2.png</texturedown>
+						<textureupfocus>arrow-scroll-up-focus2.png</textureupfocus>
+						<texturedownfocus flipy="true">arrow-scroll-up-focus2.png</texturedownfocus>
+						<visible>Control.IsVisible(110)</visible>
+					</control> 
+					<!--******************************************************-->
+				
+					<!--((LIST 2)) *******************************************-->
+					<control type="list" id="120">
+						<width>1190</width>
+						<height>280</height>
+						<onleft>121</onleft>
+						<onright>121</onright>
+						<onup>999</onup>
+						<ondown>120</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>121</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="40">
+							<control type="image">
+								<posx>15</posx>
+								<posy>0</posy>
+								<width>1160</width>
+								<height>45</height>
+								<texture border="10">ListViewItemBack.png</texture><!---->
+							</control>
+							<control type="label">
+								<posx>25</posx>
+								<posy>7</posy>
+								<width>1160</width>
+								<height>35</height>
+								<font>ListLabel2Font</font>
+								<textcolor>gray</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>ThemeColor</selectedcolor>
+								<align>left</align>
+								<info>ListItem.Label</info>
+							</control>
+						</itemlayout>
+						<focusedlayout height="40">
+							<control type="image">
+								<posx>0</posx>
+								<posy>5</posy>
+								<width>1190</width>
+								<height>35</height>
+								<visible>!Control.HasFocus(120)</visible>
+								<texture>scrollbar-background.png</texture>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>5</posy>
+								<width>1190</width>
+								<height>35</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<visible>Control.HasFocus(120)</visible>
+								<texture border="0,0,0,0">scrollbar-background.png</texture>
+							</control>
+							<control type="label">
+								<posx>20</posx>
+								<posy>4</posy>
+								<width>1150</width>
+								<height>35</height>
+								<font>DialogTitleFont</font>
+								<align>left</align>
+								<aligny>top</aligny>
+								<selectedcolor>ThemeColor</selectedcolor>
+								<align>left</align>
+								<textcolor>ButtonFocusColor</textcolor>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+					<control type="spincontrol" id="121">
+						<description>Next page button</description>
+						<posx>1125</posx>
+						<posy>300</posy>
+						<width>27</width>
+						<height>27</height>
+						<font>font13</font>
+						<align>right</align>
+						<subtype>page</subtype>
+						<textcolor>FFFFFFFF</textcolor>
+						<onleft>120</onleft>
+						<onright>120</onright>
+						<ondown>120</ondown>
+						<onup>120</onup>
+						<showonepage>false</showonepage>
+						<textureup>arrow-scroll-up-nofocus2.png</textureup>
+						<texturedown flipy="true">arrow-scroll-up-nofocus2.png</texturedown>
+						<textureupfocus>arrow-scroll-up-focus2.png</textureupfocus>
+						<texturedownfocus flipy="true">arrow-scroll-up-focus2.png</texturedownfocus>
+						<visible>Control.IsVisible(120)</visible>
+					</control> 
+					<!--******************************************************-->
+				<!--==========================================================================================-->
+					
+					<control type="label">
+						<description>Playlist Pos No</description>
+						<posx>45</posx>
+						<posy>300</posy>
+						<width>200</width>
+						<label>$INFO[MusicPlayer.Playlistposition,$LOCALIZE[435] ]$INFO[MusicPlayer.Playlistlength,/]</label>
+						<font>font13</font>
+						<align>right</align>
+						<textcolor>BBF3E5AB</textcolor>
+						<visible>!MusicPartyMode.Enabled</visible>
+					</control>
+					<control type="label">
+						<description>PartyMode Enabled</description>
+						<posx>45</posx>
+						<posy>300</posy>
+						<width>200</width>
+						<label>589</label>
+						<font>font13</font>
+						<align>center</align>
+						<textcolor>BBF3E5AB</textcolor>
+						<visible>MusicPartyMode.Enabled</visible>
+					</control>
+					
+				</control>	
+			</control>	
+		</control>	
+	</controls>
+</window>

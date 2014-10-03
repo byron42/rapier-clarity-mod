@@ -119,7 +119,6 @@
 						<font></font>
 						<texturefocus>osd-subtitles-focus.png</texturefocus>
 						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
-						<!-- <onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=CU+LRC+Lyrics&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.cu.lrclyrics%2Fscript.cu.lrclyrics-1.0.7.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.cu.lrclyrics&amp;type=zip&amp;repoid=repository.xbmc.org)</onclick> -->
 						<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">PlayerControl(Play)</onclick>
 						<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
 						<onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://skin/scripts/CU LRC Lyrics/CU Replacer.py)</onclick>
