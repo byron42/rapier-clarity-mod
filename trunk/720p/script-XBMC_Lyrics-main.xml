@@ -502,20 +502,20 @@
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>121</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="40">
+						<itemlayout height="35">
 							<control type="image">
 								<posx>15</posx>
 								<posy>0</posy>
 								<width>1160</width>
-								<height>45</height>
+								<height>40</height>
 								<texture border="10">ListViewItemBack.png</texture><!---->
 							</control>
 							<control type="label">
 								<posx>25</posx>
-								<posy>7</posy>
+								<posy>5</posy>
 								<width>1160</width>
-								<height>35</height>
-								<font>ListLabel2Font</font>
+								<height>30</height>
+								<font>LibraryCatFontSmall</font>
 								<textcolor>gray</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -524,12 +524,12 @@
 								<info>ListItem.Label</info>
 							</control>
 						</itemlayout>
-						<focusedlayout height="40">
+						<focusedlayout height="35">
 							<control type="image">
 								<posx>0</posx>
 								<posy>5</posy>
 								<width>1190</width>
-								<height>35</height>
+								<height>30</height>
 								<visible>!Control.HasFocus(120)</visible>
 								<texture>scrollbar-background.png</texture>
 							</control>
@@ -537,17 +537,17 @@
 								<posx>0</posx>
 								<posy>5</posy>
 								<width>1190</width>
-								<height>35</height>
+								<height>30</height>
 								<colordiffuse>BBBBBBBB</colordiffuse>
 								<visible>Control.HasFocus(120)</visible>
-								<texture border="0,0,0,0">scrollbar-background.png</texture>
+								<texture border="10">scrollbar-background.png</texture>
 							</control>
 							<control type="label">
 								<posx>20</posx>
-								<posy>4</posy>
+								<posy>3</posy>
 								<width>1150</width>
-								<height>35</height>
-								<font>DialogTitleFont</font>
+								<height>30</height>
+								<font>MediaTitleFont</font>
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
