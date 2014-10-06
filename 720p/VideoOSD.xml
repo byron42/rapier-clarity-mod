@@ -51,7 +51,9 @@
 						<alttexturefocus></alttexturefocus>
 						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
-						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org,Return)</onclick>
+						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">PlayerControl(Play)</onclick>
+						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
+						<!-- INSTALLED -->
 						<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
 						<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + !IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [TV]$INFO[VideoPlayer.Season] $INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVshowtitle][/TV])</onclick>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
