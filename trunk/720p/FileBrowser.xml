@@ -3,12 +3,14 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>	
 		<control type="group">
+			
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(yesnodialog) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(okdialog)">Conditional</animation>
 			<control type="group">
-				<animation effect="fade" start="0" end="0" condition="Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(3001) | Window.IsActive(PluginSettings)">Conditional</animation>
+				<animation effect="fade" start="0" end="0" condition="[Window.IsActive(mediasource) + !Window.IsActive(networksetup)] | Window.IsActive(profiles) | Window.IsActive(3001) | Window.IsActive(PluginSettings)">Conditional</animation>
+				<animation effect="fade" end="100" condition="[Window.IsActive(mediasource) + Window.IsActive(networksetup)]">Conditional</animation>
 				
 	<!--(((BACKGROUNDS)))=========================================================================================================================-->			
 				<control type="group">	
@@ -150,7 +152,7 @@
 					<!--BackgroundOpenCloseAnim-->
 					<animation effect="fade" start="40" end="100" delay="0" time="450">WindowOpen</animation> 
 					<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
-					<animation effect="fade" start="0" end="0" condition="Window.IsActive(129)">Hidden</animation>
+					<!-- <animation effect="fade" start="0" end="0" condition="Window.IsActive(129)">Hidden</animation> -->
 				</control>
 				
 	<!--(((TOP BAR)))=============================================================================================================================-->				
@@ -194,7 +196,7 @@
 							<height>35</height>
 							<font>BreadCrumbFont</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<align>center</align>
 							<aligny>top</aligny>
 							<shadowcolor></shadowcolor> <!--BrCr-->
@@ -221,7 +223,7 @@
 							<height>35</height>
 							<font>BreadCrumbFont</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
-							<textoffsetx>-</textoffsetx>
+							<textoffsetx></textoffsetx>
 							<align>center</align>
 							<aligny>top</aligny>
 							<shadowcolor></shadowcolor> <!--BrCr-->
@@ -444,6 +446,9 @@
 		
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
+				<!--for BROWSE button-->
+				<animation effect="fade" start="100" end="0" time="175" condition="Window.IsTopmost(networksetup)">Conditional</animation>
+
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowOpen</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="Window.IsActive(PluginSettings)">WindowOpen</animation>
 				<!--<animation effect="fade" start="0" end="100" time="250" delay="400" condition="Window.IsVisible(locksettings)">WindowOpen</animation>-->
@@ -459,8 +464,8 @@
 				</animation>
 				
 				<!--ThisWasAlreadyHere-->
-				<animation effect="fade" start="0" end="100" time="250" delay="425" condition="![Window.IsActive(NetworkSetup) | Window.IsActive(locksettings)]">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(NetworkSetup) | Window.IsActive(locksettings)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="425" condition="!Window.IsActive(locksettings)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(locksettings)">Conditional</animation>
 			<!--header,separators-->
 				<control type="group">
 					<posx>30</posx>
@@ -486,7 +491,7 @@
 						<posx>1220</posx>
 						<posy>17</posy>
 						<font>LibraryCatFontBig</font>
-						<label>-</label>
+						<label></label>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>ThemeColor2</textcolor>
@@ -784,10 +789,10 @@
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>
-						<shadowcolor>-</shadowcolor>
+						<shadowcolor></shadowcolor>
 						<textwidth>160</textwidth>
-						<texturefocus border="10,10,10,10">-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus border="10,10,10,10"></texturefocus>
+						<texturenofocus></texturenofocus>
 						<disabledcolor>ff343434</disabledcolor> <!--JET-->
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
@@ -802,10 +807,10 @@
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>
-						<shadowcolor>-</shadowcolor>
+						<shadowcolor></shadowcolor>
 						<textwidth>160</textwidth>
-						<texturefocus border="10,10,10,10">-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus border="10,10,10,10"></texturefocus>
+						<texturenofocus></texturenofocus>
 						<label>$LOCALIZE[222]</label>
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
@@ -819,10 +824,10 @@
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>
-						<shadowcolor>-</shadowcolor>
+						<shadowcolor></shadowcolor>
 						<textwidth>215</textwidth>
-						<texturefocus border="10,10,10,10">-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<texturefocus border="10,10,10,10"></texturefocus>
+						<texturenofocus></texturenofocus>
 						<disabledcolor>ff343434</disabledcolor> <!--JET-->
 						<label>$LOCALIZE[119]</label>	
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
@@ -831,5 +836,6 @@
 				</control>
 			</control><!---->
 		</control>
+		
 	</controls>	
 </window>

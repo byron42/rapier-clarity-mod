@@ -391,6 +391,10 @@
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
 				<control type="group">
+					<!--for BROWSE button-->
+					<animation effect="fade" start="100" end="0" time="250" condition="Window.IsTopmost(filebrowser) | [Window.IsActive(okdialog)]">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="250" delay="400" condition="!Window.IsTopmost(filebrowser)">Conditional</animation>
+					
 					<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(NumericInput) | Window.IsActive(VirtualKeyboard)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="250" delay="300" condition="![Window.IsActive(NumericInput) | Window.IsActive(VirtualKeyboard)]">Conditional</animation>
 					<!---->
@@ -477,8 +481,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="470,0" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="470,0" time="200">unfocus</animation>
 							<label>$LOCALIZE[1008]</label>
@@ -501,8 +505,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<onup>10</onup>
@@ -539,8 +543,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<onup>11</onup>
@@ -561,8 +565,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[792]</label>
@@ -584,8 +588,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[1014]</label>
@@ -607,8 +611,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">-</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturefocus border="5,2,10,0"></alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[15052]</label>
@@ -635,10 +639,10 @@
 							<aligny>top</aligny>
 							<textoffsety>5</textoffsety>
 							<textcolor>FFFFFFFF</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<textwidth>160</textwidth>
-							<texturefocus border="10,10,10,10">-</texturefocus>
-							<texturenofocus>-</texturenofocus>
+							<texturefocus border="10,10,10,10"></texturefocus>
+							<texturenofocus></texturenofocus>
 							<disabledcolor>ff343434</disabledcolor> <!--JET-->
 							<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 							<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
@@ -653,10 +657,10 @@
 							<aligny>top</aligny>
 							<textoffsety>5</textoffsety>
 							<textcolor>FFFFFFFF</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<textwidth>160</textwidth>
-							<texturefocus border="10,10,10,10">-</texturefocus>
-							<texturenofocus>-</texturenofocus>
+							<texturefocus border="10,10,10,10"></texturefocus>
+							<texturenofocus></texturenofocus>
 							<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 							<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 							<label>$LOCALIZE[222]</label>
