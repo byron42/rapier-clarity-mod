@@ -3,7 +3,7 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>	
 		<control type="group">
-			
+			<!-- <visible>![Window.IsActive(networksetup) + [Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput)]] | ![Window.IsActive(networksetup) + [Window.Previous(virtualkeyboard) | Window.Previous(numericinput)]]</visible> -->
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog)">Conditional</animation>
 			<!--little dialog fade out-->
@@ -446,9 +446,12 @@
 		
 	<!--(((CONTROLS)))============================================================================================================================-->		
 			<control type="group">
-				<!--for BROWSE button-->
+			<!--for BROWSE button-->
+				<visible>![Window.IsActive(networksetup) + [Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput)]]</visible>
+				<animation effect="fade" start="0" end="0" time="0">Hidden</animation>
+				<animation effect="fade" start="100" end="100" time="0" delay="1000">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="175" condition="Window.IsTopmost(networksetup)">Conditional</animation>
-
+			<!--=================-->
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="Window.IsActive(3001) | Window.IsActive(mediasource) | Window.IsActive(profiles) | Window.IsActive(virtualkeyboard) | Window.IsActive(locksettings) | Window.IsActive(3082) | Window.IsActive(3083)">WindowOpen</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="Window.IsActive(PluginSettings)">WindowOpen</animation>
 				<!--<animation effect="fade" start="0" end="100" time="250" delay="400" condition="Window.IsVisible(locksettings)">WindowOpen</animation>-->
@@ -466,6 +469,8 @@
 				<!--ThisWasAlreadyHere-->
 				<animation effect="fade" start="0" end="100" time="250" delay="425" condition="!Window.IsActive(locksettings)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(locksettings)">Conditional</animation>
+				
+				
 			<!--header,separators-->
 				<control type="group">
 					<posx>30</posx>
