@@ -150,6 +150,7 @@
 	
 	<variable name="BreadCrumbLabel_Right">
 		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)] + !Window.IsActive(PluginSettings)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!--PLUGINS-->
+		<value condition="Window.IsVisible(132) | Window.IsVisible(129) | Window.IsVisible(128) | Window.IsVisible(10140) | Window.IsVisible(126) | Window.IsVisible(4)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!--SETTINGS-->
 		<value condition="Window.IsActive(501) | Window.IsActive(2) | [Window.IsActive(1) + !Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + !Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[1214][/UPPERCASE] </value> <!--FILES-->
 		<value condition="Window.IsActive(503)">[UPPERCASE]$LOCALIZE[10503][/UPPERCASE] </value> <!--PLAYLIST EDITOR-->
 		<value condition="Window.IsActive(500) | Window.IsActive(28)">[UPPERCASE]$LOCALIZE[13350][/UPPERCASE] </value> <!--PLAYLIST-->
@@ -165,7 +166,7 @@
 		<value condition="Window.IsActive(3001)">[UPPERCASE]$LOCALIZE[166][/UPPERCASE] </value> <!--SKIN-->
 		<value condition="Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)">[UPPERCASE]$LOCALIZE[1034][/UPPERCASE] </value> <!--SUB-MENU-->
 		<value condition="Window.IsVisible(2001) | Window.IsVisible(2003) | Window.IsVisible(135) | Window.IsVisible(139)">[UPPERCASE]$LOCALIZE[31019][/UPPERCASE] </value> <!--INFORMATION-->
-		<value condition="Window.IsVisible(132) | Window.IsVisible(129) | Window.IsVisible(128) | Window.IsVisible(10140) | Window.IsVisible(126) | Window.IsVisible(4)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!--SETTINGS-->
+		
 	</variable>
 	
 <!--(((FILE MANAGER/PLAYLIST EDITOR)))=================================-->
