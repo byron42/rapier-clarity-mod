@@ -181,8 +181,8 @@
 				<description>Left Button</description>
 				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 				<posy>4</posy>
-				<include condition="![Window.IsActive(3) | Window.IsActive(1)]">BreadCrumbButtonSmall_Left</include>
-				<include condition="Window.IsActive(3) | Window.IsActive(1)">BreadCrumbButtonMid_Left</include>
+				<include condition="![Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)]">BreadCrumbButtonSmall_Left</include>
+				<include condition="Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)">BreadCrumbButtonMid_Left</include>
 				<height>35</height>
 				<font>BreadCrumbFont</font>
 				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
