@@ -1,30 +1,16 @@
-<window id="1">
+<window id="35">
 	
-	<defaultcontrol always="true">5000</defaultcontrol>
+	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,100</views>
 	<controls>
 	
-		<control type="button" id="5000"> <!--Lyrics-->
-			<description>HIDDEN BUTTON FOR INSTALLING LYRICS/SUBTITLES ADDONS</description>
-			<width>25</width>
-			<height>25</height>
-			<label></label>
-			<focusedcolor></focusedcolor>
-			<font></font>
-			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
-			<onfocus condition="!System.HasAddon(script.xbmc.subtitles) + Window.Previous(2005)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org)</onfocus>
-			<onfocus condition="!System.HasAddon(script.cu.lrc.lyrics) + Window.Previous(2006)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=CU+LRC+Lyrics&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.cu.lrclyrics%2Fscript.cu.lrclyrics-1.0.7.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.cu.lrclyrics&amp;type=zip&amp;repoid=repository.xbmc.org)</onfocus>
-			<onfocus>SetFocus(500)</onfocus>
-		</control>
-		
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(127)">Conditional</animation> <!--FSD_ControlFade-->
+			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132)">Conditional</animation> <!--FSD_ControlFade-->
 			
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">	
@@ -1204,12 +1190,12 @@
 						<alttexturefocus>view-options-extra-focus.png</alttexturefocus>
 						<alttexturenofocus>view-options-extra-nofocus.png</alttexturenofocus>
 						<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
-						<!-- <enable>!Window.IsVisible(Programs)</enable> -->
-						<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
+						<enable>false</enable>
+						<onclick>Skin.ToggleSetting(ShowGamesMediaExtraOptions)</onclick>
 						<pulseonselect>false</pulseonselect>
 						<onup>600</onup>
 						<ondown>500</ondown>
-						<onleft></onleft>
+						<onleft>-</onleft>
 						<onright>184</onright>
 					</control>
 					<control type="button" id="184">
@@ -1252,6 +1238,7 @@
 								</control>
 								<control type="button" id="400">
 									<description>View As</description>
+									<!--MenuBarArrowBigBtn-->
 									<width>280</width>
 									<height>36</height>	
 									<aligny>top</aligny>
@@ -1265,6 +1252,7 @@
 									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
 									<colordiffuse>-</colordiffuse>
 									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<!--MenuBarArrowBigBtn-->
 									<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
 									<onclick>ActivateWindow(3002)</onclick>
 									<onclick>SetFocus(500)</onclick>
@@ -1277,6 +1265,7 @@
 								</control>
 								<control type="button" id="401">
 									<description>Sort By</description>
+									<!--MenuBarArrowBigBtn-->
 									<width>250</width>
 									<height>36</height>	
 									<aligny>top</aligny>
@@ -1290,6 +1279,7 @@
 									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
 									<colordiffuse>-</colordiffuse>
 									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
+									<!--MenuBarArrowBigBtn-->
 									<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
 									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(401)">Conditional</animation>
 									<enable>!Container.SortDirection(None)</enable>
@@ -1302,8 +1292,9 @@
 									<height>34</height>
 									<texture>menu-bar-separator.png</texture><!---->
 								</control>
-								<control type="button" id="404">			
-									<description>Favourites</description>
+								<control type="edit" id="19">			
+									<description>Filter</description>
+									<!--MenuBarBtn-->
 									<width>180</width>
 									<height>36</height>	
 									<aligny>top</aligny>
@@ -1319,8 +1310,9 @@
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>ThemeColor</colordiffuse>
 									<texturenofocus>-</texturenofocus>
-									<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
-									<onclick>ActivateWindow(Favourites)</onclick>
+									<!--MenuBarBtn-->
+									<label>[UPPERCASE]$LOCALIZE[587][/UPPERCASE]</label>
+									<!-- <onclick>ActivateWindow(Favourites)</onclick> -->
 								</control>
 								<control type="image" id="355">
 									<description>MenuBarSeparator</description>
@@ -1329,20 +1321,23 @@
 									<texture>menu-bar-separator.png</texture><!---->
 								</control>
 							</control>
-						<!-- real hidden controls -->
 							<control type="button" id="2">
 								<visible>false</visible>
 							</control>
 							<control type="button" id="3">
 								<visible>false</visible>
 							</control>
+							<!-- <control type="edit" id="19">
+								<visible>false</visible>
+							</control> -->
+							
 							<!--MenuBarOptionsSwitchAnim-->
 							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
 							<animation effect="fade" end="0" time="200">Hidden</animation>
-							<visible>!Skin.HasSetting(ShowMediaExtraOptions)</visible>
+							<visible>!Skin.HasSetting(ShowGamesMediaExtraOptions)</visible>
 						</control>
 						<control type="group">  
-						<!--MenuBarExtraOptions ============ (For Games Stuff) ============-->
+						<!--MenuBarExtraOptions ============ (Replace For Games Maybe?) ======= (REMOVING FOR NOW) ======-->
 							<control type="grouplist" id="212">
 								<posx>80</posx>
 								<posy>-3</posy>
@@ -1355,97 +1350,11 @@
 								<onright>-</onright>
 								<orientation>horizontal</orientation>
 								<!--==============-->
-								<control type="button" id="405">			
-									<description>GameSaves</description>
-									<width>180</width>
-									<height>36</height>	
-									<aligny>top</aligny>
-									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
-									<textcolor>ButtonColor</textcolor>
-									<focusedcolor>ButtonFocusColor</focusedcolor>
-									<align>center</align>
-									<aligny>center</aligny>
-									<textoffsetx>13</textoffsetx>
-									<textwidth>154</textwidth>
-									<texturefocus border="10"></texturefocus>
-									<pulseonselect>true</pulseonselect>
-									<colordiffuse>ThemeColor</colordiffuse>
-									<texturenofocus>-</texturenofocus>
-									<label>[UPPERCASE]$LOCALIZE[20315][/UPPERCASE]</label>
-									<onclick>ActivateWindow(gamesaves)</onclick>
-								</control>
-								<control type="image" id="356">
-									<description>MenuBarSeparator</description>
-									<width>4</width>
-									<height>34</height>
-									<texture>menu-bar-separator.png</texture><!---->
-								</control>
-								<control type="button" id="6">
-									<description>game,emulator,rom,previews</description>
-									<width>226</width>
-									<height>36</height>	
-									<aligny>top</aligny>
-									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
-									<textcolor>ButtonColor</textcolor>
-									<focusedcolor>ButtonFocusColor</focusedcolor>
-									<align>center</align>
-									<aligny>center</aligny>
-									<textoffsetx>13</textoffsetx>
-									<textwidth>200</textwidth>
-									<texturefocus border="10"></texturefocus>
-									<pulseonselect>true</pulseonselect>
-									<colordiffuse>ThemeColor</colordiffuse>
-									<texturenofocus>-</texturenofocus>
-									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[20410][/UPPERCASE]</label>
-									<onclick>xbmc.playmedia(F:/Previews/$INFO[ListItem.Label].xmv,1)</onclick>
-									<visible>substring(container.folderpath,plugin://programs/Launcher)</visible>
-									<enable></enable>
-									<!-- <lab$INFO[listitem.filenameandpath]fanart.jpg> -->
-								</control>	
-								<control type="image" id="358">
-									<description>MenuBarSeparator</description>
-									<width>4</width>
-									<height>34</height>
-									<texture>menu-bar-separator.png</texture><!---->
-									<visible>Control.IsVisible(6)</visible>
-								</control>
-								<control type="radiobutton" id="99">
-									<description>games library</description>
-									<width>300</width>
-									<height>36</height>	
-									<aligny>top</aligny>
-									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
-									<textcolor>ButtonColor</textcolor>
-									<focusedcolor>ButtonFocusColor</focusedcolor>
-									<disabledcolor>ff343434</disabledcolor>
-									<align>left</align>
-									<aligny>center</aligny>
-									<textoffsetx>25</textoffsetx>
-									<textwidth>250</textwidth>
-									<texturefocus border="10"></texturefocus>
-									<pulseonselect>true</pulseonselect>
-									<colordiffuse>ThemeColor</colordiffuse>'
-									<texturenofocus></texturenofocus>
-									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[15100][/UPPERCASE]</label>
-									<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
-									<visible>substring(container.folderpath,Games)</visible>
-									<enable>System.HasAddon(script.rom.collection.browser)</enable>
-								</control>
-								<control type="image" id="357">
-									<description>MenuBarSeparator</description>
-									<width>4</width>
-									<height>34</height>
-									<texture>menu-bar-separator.png</texture><!---->
-								</control>
-								
 							</control>
 							<!--MenuBarOptionsSwitchAnim-->
 							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
 							<animation effect="fade" end="0" time="200">Hidden</animation>
-							<visible>Skin.HasSetting(ShowMediaExtraOptions)</visible><!--Skin.HasSetting(ShowMediaExtraOptions)-->
+							<visible>false</visible><!--Skin.HasSetting(ShowGamesMediaExtraOptions)-->
 						</control>		
 					</control>
 				</control>
@@ -1489,7 +1398,6 @@
 				<!--*************************************************************************************************-->
 				
 				<!--********************************** BreadCrumbPrograms *******************************************-->
-				<include>BreadCrumbButtonRight</include>
 				<include>BreadCrumbButtonLeft</include>
 				
 			<!--BreadCrumbHome-->
@@ -1816,7 +1724,7 @@
 				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
 			</control>
 			<!--***********************************************************************************************************************-->
-		</control>'
+		</control>
 		
 	</controls>		
 </window>
