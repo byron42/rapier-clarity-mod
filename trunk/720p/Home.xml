@@ -2655,14 +2655,14 @@
 								<selected>!Skin.HasSetting(EnableDebugLogging)</selected>
 								<label>$VAR[SubMenuDebugLabel]</label>
 								<label2>14092</label2>
-								<onclick>ActivateWindow(SystemSettings)</onclick>
-								<onclick>Action(Down)</onclick>
+								<onclick>ToggleDebug</onclick>
+								<!-- <onclick>Action(Down)</onclick>
 								<onclick>Action(Down)</onclick>
 								<onclick>Action(Down)</onclick>
 								<onclick>Action(Down)</onclick>
 								<onclick>Action(Right)</onclick>
 								<onclick>Action(Select)</onclick>
-								<onclick>Action(Back)</onclick>
+								<onclick>Action(Back)</onclick> -->
 								<onclick>Skin.ToggleSetting(EnableDebugLogging)</onclick>
 								<visible>!Skin.HasSetting(HideSystemDebugButton)</visible>
 							</item>
