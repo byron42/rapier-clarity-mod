@@ -1,5 +1,4 @@
 <window id="1">
-	
 	<defaultcontrol always="true">5000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,100</views>
@@ -405,8 +404,8 @@
 						<height>1</height>
 						<onfocus>SetFocus(184)</onfocus>
 						<onfocus>ActivateWindow(3017)</onfocus>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>	
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>	
 						<visible>Control.IsVisible(50)</visible>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->
@@ -547,8 +546,8 @@
 						<height>1</height>
 						<onfocus>SetFocus(184)</onfocus>
 						<onfocus>ActivateWindow(3017)</onfocus>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>	
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>	
 						<visible>Control.IsVisible(51)</visible>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->
@@ -595,7 +594,7 @@
 						<viewtype label="31105">List</viewtype>
 						<posx>550</posx>
 						<posy>92</posy>
-						<width>680</width>
+						<width>730</width>
 						<height>535</height>
 						<pagecontrol>150</pagecontrol>
 						<onup>52</onup>
@@ -715,10 +714,12 @@
 							<control type="image">
 								<description>Overlay</description>
 								<posx>676</posx>
-								<posy>8</posy>
-								<width>23</width>
-								<height>23</height>
-								<info>ListItem.Overlay</info>
+								<posy>3</posy>
+								<width>40</width>
+								<height>40</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<aspectratio align="center" aligny="top">keep</aspectratio>  
+								<visible>!IsEmpty(ListItem.Overlay)</visible>
 								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						</itemlayout>		
@@ -789,7 +790,7 @@
 								<height>36</height>
 								<font>DialogTitleFont</font>
 								<textcolor>ThemeColor</textcolor>
-								<shadowcolor>-</shadowcolor>
+								<shadowcolor></shadowcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -803,7 +804,7 @@
 								<height>36</height>
 								<font>DialogTitleFont</font>
 								<textcolor>ThemeColor</textcolor>
-								<shadowcolor>-</shadowcolor>
+								<shadowcolor></shadowcolor>
 								<align>left</align>
 								<aligny>top</aligny>
 								<label>$INFO[ListItem.Label]</label>
@@ -845,10 +846,12 @@
 							<control type="image">
 								<description>Overlay</description>
 								<posx>681</posx>
-								<posy>6</posy>
-								<width>28</width>
-								<height>28</height>
-								<info>ListItem.Overlay</info>
+								<posy>1</posy>
+								<width>45</width>
+								<height>45</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<aspectratio align="center" aligny="top">keep</aspectratio>  
+								<visible>!IsEmpty(ListItem.Overlay)</visible>
 								<animation effect="slide" end="-35,0" condition="Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							</control>
 						</focusedlayout>		
@@ -910,8 +913,8 @@
 						<height>1</height>
 						<onfocus>SetFocus(184)</onfocus>
 						<onfocus>ActivateWindow(3017)</onfocus>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>	
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>	
 						<visible>Control.IsVisible(52)</visible>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->
@@ -921,7 +924,7 @@
 				<!--************************************************************************** GamesLargePoster ************* (100) ********-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">100</defaultcontrol>
-					<visible>Control.IsVisible(100)</visible>
+					<visible>Control.IsVisible(100) + Substring(Container.Folderpath,games)</visible>
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
@@ -1010,16 +1013,27 @@
 									<visible>!IsEmpty(ListItem.Thumb)</visible>
 									<animation effect="fade" end="30" condition="true">Conditional</animation>
 								</control>
-							<!-- 	<control type="image">
-									<description>Watched Overlay</description>
-									<posx>130</posx>
-									<posy>6</posy>
+								<control type="image">
+									<description>Trainers Overlay Shadow</description>
+									<posx>122</posx>
+									<posy>3</posy>
+									<width>64</width>
+									<height>58</height>
+									<colordiffuse>BBBBBBBB</colordiffuse>
+									<texture>TrainerShadow.png</texture>
+									<aspectratio align="center" aligny="top">keep</aspectratio> 
+									<visible>!IsEmpty(ListItem.Overlay)</visible>
+								</control>
+								<control type="image">
+									<description>Trainers Overlay</description>
+									<posx>122</posx>
+									<posy>3</posy>
 									<width>64</width>
 									<height>64</height>
 									<texture>$INFO[ListItem.Overlay]</texture>
 									<aspectratio align="center" aligny="top">keep</aspectratio> 
-									<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesLargePosterViewOverlay)] + ![Container.Content(Seasons) + Skin.HasSetting(HideTVShowsLargePosterViewOverlay)]</visible> 
-								</control> -->
+									<visible>!IsEmpty(ListItem.Overlay)</visible>
+								</control>
 							</itemlayout>	
 							<focusedlayout width="200">
 								<control type="group">	
@@ -1071,16 +1085,6 @@
 										<visible>!Skin.HasSetting(HideGamesLargePosterViewGlossOverlay)</visible>
 									</control> 
 								<!--watched overlay-->
-									<!-- <control type="image">
-										<description>Default Cover</description>
-										<posx>120</posx>
-										<posy>6</posy>
-										<width>64</width>
-										<height>64</height>
-										<texture>$INFO[ListItem.Overlay]</texture>
-										<aspectratio align="center" aligny="top">stretch</aspectratio>  
-										<visible>!Skin.HasSetting(HideMoviesLargePosterViewOverlay)</visible>
-									</control>  -->
 									<control type="image">
 										<posx></posx>
 										<posy>300</posy>
@@ -1104,6 +1108,27 @@
 										<fadetime>IconCrossfadeTime</fadetime>
 										<visible>!IsEmpty(ListItem.Thumb)</visible>
 									</control>
+									<control type="image">
+										<description>Trainer Overlay Shadow</description>
+										<posx>122</posx>
+										<posy>3</posy>
+										<width>64</width>
+										<height>58</height>
+										<texture>TrainerShadow.png</texture>
+										<colordiffuse>BBBBBBBB</colordiffuse>
+										<aspectratio align="center" aligny="top">keep</aspectratio>  
+										<visible>!IsEmpty(ListItem.Overlay)</visible>
+									</control> 
+									<control type="image">
+										<description>Trainer Overlay</description>
+										<posx>122</posx>
+										<posy>3</posy>
+										<width>64</width>
+										<height>64</height>
+										<texture>$INFO[ListItem.Overlay]</texture>
+										<aspectratio align="center" aligny="top">keep</aspectratio>  
+										<visible>!IsEmpty(ListItem.Overlay)</visible>
+									</control> 
 								</control>
 							</focusedlayout>	
 						</control>
@@ -1153,8 +1178,8 @@
 						<height>1</height>
 						<onfocus>SetFocus(184)</onfocus>
 						<onfocus>ActivateWindow(3017)</onfocus>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>	
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>	
 						<visible>Control.IsVisible(100)</visible>
 					</control>
 					<control type="scrollbar" id="150">
@@ -1204,15 +1229,16 @@
 						<alttexturefocus>view-options-extra-focus.png</alttexturefocus>
 						<alttexturenofocus>view-options-extra-nofocus.png</alttexturenofocus>
 						<usealttexture>Skin.HasSetting(ShowMediaExtraOptions)</usealttexture>
-						<!-- <enable>!Window.IsVisible(Programs)</enable> -->
 						<onclick>Skin.ToggleSetting(ShowMediaExtraOptions)</onclick>
 						<pulseonselect>false</pulseonselect>
 						<onup>600</onup>
 						<ondown>500</ondown>
 						<onleft></onleft>
 						<onright>184</onright>
+						<enable>Substring(Container.Folderpath,games)</enable>
 					</control>
 					<control type="button" id="184">
+						<onfocus condition="Skin.HasSetting(ShowMediaExtraOptions) + Control.IsVisible(213) + !Substring(Container.Folderpath,games)">Skin.ToggleSetting(ShowMediaExtraOptions)</onfocus>
 						<description>View Mode Options</description>
 						<visible>!Control.IsVisible(77)</visible>  <!--Hide for viewtypes with no options-->
 						<posx>40</posx>
@@ -1242,7 +1268,7 @@
 								<onup>600</onup>
 								<ondown>500</ondown>
 								<onleft>184</onleft>
-								<onright>-</onright>
+								<onright></onright>
 								<orientation>horizontal</orientation>
 								<control type="image" id="350">
 									<description>MenuBarSeparator</description>
@@ -1263,7 +1289,7 @@
 									<textoffsetx>13</textoffsetx>
 									<textwidth>230</textwidth>
 									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
-									<colordiffuse>-</colordiffuse>
+									<colordiffuse></colordiffuse>
 									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
 									<label>[UPPERCASE]$INFO[Control.GetLabel(2)][/UPPERCASE]</label>
 									<onclick>ActivateWindow(3002)</onclick>
@@ -1288,7 +1314,7 @@
 									<textoffsetx>13</textoffsetx>
 									<textwidth>195</textwidth>
 									<texturefocus border="0,0,32,2">menu-bar-button-arrow-focus.png</texturefocus>
-									<colordiffuse>-</colordiffuse>
+									<colordiffuse></colordiffuse>
 									<texturenofocus border="0,0,32,2">menu-bar-button-arrow-nofocus.png</texturenofocus>		
 									<label>[UPPERCASE]$INFO[Control.GetLabel(3)][/UPPERCASE]</label>
 									<animation effect="fade" start="100" end="50" time="250" condition="!Control.IsEnabled(401)">Conditional</animation>
@@ -1318,7 +1344,7 @@
 									<texturefocus border="10"></texturefocus>
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>ThemeColor</colordiffuse>
-									<texturenofocus>-</texturenofocus>
+									<texturenofocus></texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
 									<onclick>ActivateWindow(Favourites)</onclick>
 								</control>
@@ -1343,7 +1369,7 @@
 						</control>
 						<control type="group">  
 						<!--MenuBarExtraOptions ============ (For Games Stuff) ============-->
-							<control type="grouplist" id="212">
+							<control type="grouplist" id="213">
 								<posx>80</posx>
 								<posy>-3</posy>
 								<width>ScreenWidth</width>
@@ -1352,7 +1378,7 @@
 								<onup>600</onup>
 								<ondown>500</ondown>
 								<onleft>184</onleft>
-								<onright>-</onright>
+								<onright></onright>
 								<orientation>horizontal</orientation>
 								<!--==============-->
 								<control type="button" id="405">			
@@ -1364,6 +1390,7 @@
 									<font>SubMenuFont2</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
 									<align>center</align>
 									<aligny>center</aligny>
 									<textoffsetx>13</textoffsetx>
@@ -1371,11 +1398,48 @@
 									<texturefocus border="10"></texturefocus>
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>ThemeColor</colordiffuse>
-									<texturenofocus>-</texturenofocus>
+									<texturenofocus></texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[20315][/UPPERCASE]</label>
 									<onclick>ActivateWindow(gamesaves)</onclick>
+									<visible allowhiddenfocus="false">true</visible>
+									<enable>substring(container.folderpath,Games)</enable>
+									<animation effect="fade" start="100" end="55" time="200" condition="!Control.IsEnabled(405)">Conditional</animation>
 								</control>
 								<control type="image" id="356">
+									<description>MenuBarSeparator</description>
+									<width>4</width>
+									<height>34</height>
+									<texture>menu-bar-separator.png</texture><!---->
+								</control>
+								<control type="radiobutton" id="99">
+									<description>games library</description>
+									<width>300</width>
+									<height>36</height>	
+									<aligny>top</aligny>
+									<textoffsety>4</textoffsety>
+									<font>SubMenuFont2</font>
+									<textcolor>ButtonColor</textcolor>
+									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>25</textoffsetx>
+									<radioposx>273</radioposx>
+									<radioposy></radioposy>
+									<radiowidth>14</radiowidth>
+									<radioheight>14</radioheight>
+									<textwidth>250</textwidth>
+									<texturefocus border="10"></texturefocus>
+									<pulseonselect>true</pulseonselect>
+									<colordiffuse>ThemeColor</colordiffuse>'
+									<texturenofocus></texturenofocus>
+									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[15100][/UPPERCASE]</label>
+									<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
+									<visible allowhiddenfocus="false">true</visible>
+									<enable>System.HasAddon(script.rom.collection.browser) + substring(container.folderpath,Games)</enable>
+									<animation effect="fade" start="100" end="55" time="200" condition="!Control.IsEnabled(99)">Conditional</animation>
+								</control>
+								<control type="image" id="357">
 									<description>MenuBarSeparator</description>
 									<width>4</width>
 									<height>34</height>
@@ -1390,6 +1454,7 @@
 									<font>SubMenuFont2</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
+									<disabledcolor>DisabledColor</disabledcolor>
 									<align>center</align>
 									<aligny>center</aligny>
 									<textoffsetx>13</textoffsetx>
@@ -1397,11 +1462,12 @@
 									<texturefocus border="10"></texturefocus>
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>ThemeColor</colordiffuse>
-									<texturenofocus>-</texturenofocus>
+									<texturenofocus></texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[20410][/UPPERCASE]</label>
 									<onclick>xbmc.playmedia(F:/Previews/$INFO[ListItem.Label].xmv,1)</onclick>
-									<visible>substring(container.folderpath,plugin://programs/Launcher)</visible>
-									<enable></enable>
+									<visible allowhiddenfocus="false">true</visible>
+									<enable>substring(container.folderpath,plugin://programs/Launcher) + substring(container.folderpath,Games)</enable>
+									<animation effect="fade" start="100" end="55" time="200" condition="!Control.IsEnabled(6)">Conditional</animation>
 									<!-- <lab$INFO[listitem.filenameandpath]fanart.jpg> -->
 								</control>	
 								<control type="image" id="358">
@@ -1409,38 +1475,8 @@
 									<width>4</width>
 									<height>34</height>
 									<texture>menu-bar-separator.png</texture><!---->
-									<visible>Control.IsVisible(6)</visible>
+									<!-- <visible>Control.IsVisible(6)</visible> -->
 								</control>
-								<control type="radiobutton" id="99">
-									<description>games library</description>
-									<width>300</width>
-									<height>36</height>	
-									<aligny>top</aligny>
-									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
-									<textcolor>ButtonColor</textcolor>
-									<focusedcolor>ButtonFocusColor</focusedcolor>
-									<disabledcolor>ff343434</disabledcolor>
-									<align>left</align>
-									<aligny>center</aligny>
-									<textoffsetx>25</textoffsetx>
-									<textwidth>250</textwidth>
-									<texturefocus border="10"></texturefocus>
-									<pulseonselect>true</pulseonselect>
-									<colordiffuse>ThemeColor</colordiffuse>'
-									<texturenofocus></texturenofocus>
-									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[15100][/UPPERCASE]</label>
-									<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
-									<visible>substring(container.folderpath,Games)</visible>
-									<enable>System.HasAddon(script.rom.collection.browser)</enable>
-								</control>
-								<control type="image" id="357">
-									<description>MenuBarSeparator</description>
-									<width>4</width>
-									<height>34</height>
-									<texture>menu-bar-separator.png</texture><!---->
-								</control>
-								
 							</control>
 							<!--MenuBarOptionsSwitchAnim-->
 							<animation effect="fade" end="100" time="200" delay="250">Visible</animation>
