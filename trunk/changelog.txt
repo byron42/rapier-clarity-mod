@@ -1,6 +1,48 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+10.14.14 Version 3.5.4
+
+	10.14.14
+------------------------------------------------------------------------------
+		= Overhauled both Video/Music OSD icons and control structure.
+		  This is much cleaner looking and way easier for someone
+		  that's never used xbmc to understand.  Also updated all
+		  corresponding windows that extend from these menus to match
+		  the other fullscreen dialogs that I've been implementing for 
+		  some time now...
+
+		= Added a debug sub-menu item to systems sub-menu.  This makes
+		  the process of entering debug logging much less of a headache,
+		  especially for the noob
+
+		= Added much support for games...apparently there was none before
+		  I started updating this section (TrainerSettings.xml and
+		  GameSaves.xml have been added to this skin)
+
+		= Added programs to the system settings menus and sub-menus
+
+		= Added full support for lyrics...when the lyrics/subtitles button
+		  is clicked (and the scripts are not installed), the skin will 
+		  install automatically for you.  As for lyrics, I made the	
+		  script-XBMC_Lyrics-main.xml from scratch so that when using 
+		  lyrics it's a much better looking and easy to read experience
+
+		= Fixed the "BROWSE" button for (NetworkSetup).  Still needs to
+		  be revisited at some point but is working.
+
+		= Fixed numerous breadcrumb labels that were either cut off or
+		  not working for their specified containers...it'll take time
+		  to get them all ironed out, but I'll keep plugging along
+
+		= Changed (PluginSettings) spincontrolex button to match the
+	          the rest of the other buttons.  Don't know why I never noticed
+		  that it was different.
+
+		= 
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 5.16.14 Version 3.5.31
 
 	5.29.14
