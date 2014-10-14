@@ -122,7 +122,7 @@
 	
 <!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
 	<variable name="BreadCrumbLabel_Left">
-		<value condition="Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[15016][/UPPERCASE] </value> <!--trainer-->
+		<value condition="Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[15016][/UPPERCASE] </value> <!--games-->
 		<value condition="Window.IsActive(3010)">[UPPERCASE]$LOCALIZE[470][/UPPERCASE] </value> <!--credits-->
 		<value condition="Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(132)">[UPPERCASE]$LOCALIZE[31910][/UPPERCASE] </value> <!--media-->
 		<value condition="Window.IsVisible(139)">[UPPERCASE]$LOCALIZE[31911][/UPPERCASE] </value> <!--picture-->
@@ -151,11 +151,12 @@
 	</variable>
 	
 	<variable name="BreadCrumbLabel_Right">
+		<value condition="Substring(Container.Folderpath,games) + !Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[15016][/UPPERCASE] </value> <!--games-->
 		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)] + !Window.IsActive(PluginSettings)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!--PLUGINS-->
 		<value condition="Window.IsVisible(132) | Window.IsVisible(129) | Window.IsVisible(128) | Window.IsVisible(10140) | Window.IsVisible(126) | Window.IsVisible(4) | Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!--SETTINGS-->
 		<value condition="Window.IsActive(501) | Window.IsActive(2) | [Window.IsActive(1) + !Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + !Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[1214][/UPPERCASE] </value> <!--FILES-->
 		<value condition="Window.IsActive(503)">[UPPERCASE]$LOCALIZE[10503][/UPPERCASE] </value> <!--PLAYLIST EDITOR-->
-		<value condition="Window.IsActive(500) | Window.IsActive(28)">[UPPERCASE]$LOCALIZE[13350][/UPPERCASE] </value> <!--PLAYLIST-->
+		<value condition="Window.IsActive(500) | Window.IsActive(28)">[UPPERCASE]$LOCALIZE[559][/UPPERCASE] </value> <!--PLAYLIST-->
 		<value condition="Window.IsActive(34) | Window.IsActive(131) | Window.IsActive(130)">[UPPERCASE]$LOCALIZE[1036][/UPPERCASE] </value> <!--PROFILES-->
 		<value condition="Window.IsActive(picturessettings)">$LOCALIZE[1] </value>
 		<value condition="Window.IsActive(programssettings)">$LOCALIZE[0] </value>
