@@ -175,12 +175,12 @@
 					<description>Skin Name</description>
 					<posx>30</posx>
 					<posy>95</posy>
-					<font>SystemInfoHead</font>
+					<font>PluginSettingsHead</font>
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
 					<textcolor>DefaultColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label>Rapier Clarity Mod</label>
+					<label>rapier - clarity - mod</label>
 				</control>
 				<control type="label">
 					<description>Skin Version</description>
@@ -192,7 +192,7 @@
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label> [I]Version: 3.5.31[/I] </label>
+					<label> [I]Version: 3.5.4[/I] </label>
 				</control>
 				
 				<control type="label">
@@ -214,6 +214,7 @@
 				<posx>95</posx>
 				<posy>164</posy>
 				<width>1090</width>
+				<height>320</height>
 				<itemgap>35</itemgap>
 				<control type="label">
 					<font>LibraryCatFontBig</font>
