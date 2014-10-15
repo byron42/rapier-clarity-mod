@@ -1,0 +1,185 @@
+<window id="122">
+	<defaultcontrol>2</defaultcontrol>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(SliderDialog)">Conditional</animation>
+			
+	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
+			<control type="group">	
+				<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="0" delay="100" time="400">WindowClose</animation>
+				<visible>true</visible> <!--skinwide equal viz bg-->
+				<!--************************* FullControlAreaBackground ******************************-->
+				<control type="image">
+					<width>ScreenWidth</width>
+					<height>720</height>
+					<texture>black.png</texture>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="80" time="400">Visible</animation>
+					<animation effect="fade" start="80" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="80" time="400">WindowOpen</animation>
+					<animation effect="fade" start="80" end="0" time="400">WindowClose</animation>
+				</control>
+				<!--***************************************************************************************************--> 
+			</control>
+		<!--header,separators-->
+			<control type="group">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation effect="fade" start="100" end="0" delay="100" time="100">WindowClose</animation>
+				<posx>30</posx>
+				<posy>80</posy>
+				<control type="label" id="3">
+					<description>PLUGIN/ADDON NAME</description>
+					<posx></posx>
+					<posy>8</posy>
+					<font>PluginSettingsHead</font>
+					<textcolor>ThemeColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<!-- <label>$INFO[Listitem.Label]</label> -->
+					<posy>DialogHeadingOffsetY</posy>
+					<width>600</width>
+					<font>MediaInfoTitleFont2</font>
+					<textcolor>DialogTitleColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+				</control>
+				<!--**************************************** SEPARATORS ****************************************-->
+				<control type="image"> <!--TOP-->
+					<description>top bar</description>
+					<posy>34</posy>
+					<width>1220</width>
+					<height>5</height>
+					<texture>separatio_FS.png</texture>
+				</control>
+				<control type="image"> <!--BOTTOM-->
+					<description>BOTTOM bar</description>
+					<posy>565</posy>
+					<width>1220</width>
+					<height>5</height>
+					<texture>separatio_FS.png</texture>
+				</control>
+				<!--********************************************************************************************-->
+			
+			<!--ARROWS-->
+				<!-- <control type="image">
+					<posx>1091</posx>
+					<posy>65</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture>arrow-scroll-up-focus2.png</texture>
+					<visible>Control.IsVisible(61)</visible>
+				</control>
+				<control type="image">
+					<posx>1091</posx>
+					<posy>495</posy>
+					<width>40</width>
+					<height>40</height>
+					<texture flipy="true">arrow-scroll-up-focus2.png</texture>
+					<visible>Control.IsVisible(61)</visible>
+				</control> -->
+			</control>
+			
+	<!--(((CONTROLS)))===========================================================================================================================-->		
+			<control type="group" id="1121">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation effect="fade" start="100" end="0" delay="100" time="100">WindowClose</animation>
+				<posx>190</posx>
+				<posy>150</posy>
+				<control type="label" id="4">
+					<description>No Presets label</description>
+					<posx>-160</posx>
+					<posy>180</posy>
+					<width>1200</width>
+					<height>40</height>
+					<label>13389</label>
+					<align>center</align>
+					<font>Font_Lib30</font>
+					<textcolor>FF757575</textcolor>
+				</control>
+				<control type="list" id="2">
+					<width>900</width>
+					<height>470</height>
+					<!-- <itemgap>5</itemgap> -->
+					<onleft>61</onleft>
+					<onright>61</onright>
+					<pagecontrol>61</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="52">
+						<control type="image">
+							<posx>15</posx>
+							<posy>0</posy>
+							<width>870</width>
+							<height>45</height>
+							<texture border="10">ListViewItemBack.png</texture><!---->
+						</control>
+						<control type="label">
+							<posx>455</posx>
+							<posy>7</posy>
+							<width>850</width>
+							<height>35</height>
+							<font>ListLabel2Font</font>
+							<textcolor>gray</textcolor>
+							<align>center</align>
+							<aligny>top</aligny>
+							<selectedcolor>ThemeColor</selectedcolor>
+							<align>left</align>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="52">
+						<control type="image">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>45</height>
+							<visible>!Control.HasFocus(2)</visible>
+							<texture>scrollbar-background.png</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>900</width>
+							<height>45</height>
+							<visible>Control.HasFocus(2)</visible>
+							<texture border="10">scrollbar-background.png</texture>
+						</control>
+						<control type="label">
+							<posx>455</posx>
+							<posy>4</posy>
+							<width>850</width>
+							<height>35</height>
+							<font>DialogTitleFont</font>
+							<align>center</align>
+							<aligny>top</aligny>
+							<selectedcolor>ThemeColor</selectedcolor>
+							<align>left</align>
+							<textcolor>ButtonFocusColor</textcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="61">
+					<description>Next Page</description>
+					<posx>948</posx>
+					<posy>5</posy>
+					<height>460</height>
+					<onleft>2</onleft>
+					<onright>2</onright>
+					<ondown>61</ondown>
+					<onup>61</onup>
+				</control>
+			</control>	
+		</control>	
+	</controls>
+</window>

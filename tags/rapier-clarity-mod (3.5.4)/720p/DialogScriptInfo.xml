@@ -1,0 +1,50 @@
+<window id="2004">
+	<defaultcontrol always="true">61</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<!--BackgroundOpenCloseAnim-->
+	<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+	<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<origin x="40" y="120">true</origin>
+	</coordinates>	
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<!--********************************* ScriptInfoDialogBox *********************************************-->
+			<control type="image">
+				<width>1200</width>
+				<height>589</height>
+				<texture border="50,70,50,50">dialog-box1.jpg</texture>
+			</control>	
+			<!--***************************************************************************************************-->
+			
+			<control type="label">
+				<include file="includes.xml">DialogTitle</include>
+				<width>1120</width>
+				<label>$LOCALIZE[262]</label>
+			</control>
+			<control type="textbox" id="5">
+				<description>Text Area</description>
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<width>1096</width>
+				<height>489</height>
+				<font>DefaultFont</font>
+				<textcolor>DefaultColor</textcolor>
+				<align>justify</align>
+				<pagecontrol>61</pagecontrol>
+			</control>
+			<control type="scrollbar" id="61">
+				<posx>1146</posx>
+				<posy>DialogMarginOffsetY</posy>
+				<height>489</height>
+				<visible>!Skin.HasSetting(HideScrollbar)</visible>
+			</control>	
+		</control>	
+	</controls>
+</window>

@@ -1,0 +1,95 @@
+<window id="133">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<!--MenuBarOpenCloseAnim2-->
+	<animation effect="slide" start="0,43" end="0,-43" time="250" delay="200">WindowOpen</animation>
+	<animation effect="slide" start="0,-43" end="0,43" time="300">WindowClose</animation>
+	<animation effect="slide" start="0,43" end="0,-43" time="250">Visible</animation>
+	<animation effect="slide" start="0,43" end="0,43" time="250">Hidden</animation>
+	<coordinates>
+		<system>1</system>
+		<origin x="0" y="685">true</origin>
+	</coordinates>
+	<controls>	
+		<control type="group">
+			<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(FullscreenVideo) | Window.IsActive(Visualisation)">conditional</animation>
+			<posy>MenuBarOffsetY</posy>		
+			
+			<!--*********************************************** MenuBarImage ***************************************************-->
+			<control type="image" id="9991">
+				<posy>-5</posy>	
+				<width>ScreenWidth</width>
+				<height>48</height>
+				<texture flipy="true" border="0,0,0,7">$VAR[TopBarImage]</texture>
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<!--****************************************************************************************************************-->
+	
+		<!--PROGRESS BAR-->		
+			<control type="progress" id="403">
+				<description>Memory BAR</description>
+				<texturebg border="2">-</texturebg>
+				<midtexture  border="10">SystemTray/top-bar-status-background.png</midtexture>
+				<posx>-5</posx>
+				<posy>11</posy>
+				<width>1290</width>
+				<colordiffuse>BB71A6D2</colordiffuse>
+				<height>10</height>
+				<visible>true</visible>
+			</control>	
+			<control type="progress" id="404">
+				<description>Memory BAR</description>
+				<texturebg border="2">-</texturebg>
+				<midtexture  border="10">SystemTray/top-bar-status-background.png</midtexture>
+				<posx>-5</posx>
+				<posy>11</posy>
+				<width>1290</width>
+				<colordiffuse>BB71A6D2</colordiffuse>
+				<height>10</height>
+				<visible>true</visible>
+			</control>		
+		<!--DOWNLOADING...-->			
+			<control type="label" id="1">
+				<description>Caption</description>
+				<posx>8</posx>
+				<posy>-4</posy>
+				<width>190</width>
+				<height>40</height>
+				<font>ListLabel2Font</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13413]...</label>
+			</control>
+		<!--CURRENT DIRECTORY-->		
+			<control type="label" id="402">
+				<description>Current Directory</description>
+				<posx>195</posx>
+				<posy>-2</posy>
+				<width>1070</width>
+				<height>40</height>
+				<font>ScanContentFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<align>left</align>
+				<aligny>center</aligny>
+				<haspath>true</haspath>
+				<visible>Skin.HasSetting(No_Media_Titles_In_Scanner)</visible>
+			</control>
+		<!--CURRENT ITEM-->			
+			<control type="label" id="405">
+				<description>Current Title</description>
+				<posx>195</posx>
+				<posy>-2</posy>
+				<width>1070</width>
+				<height>40</height>
+				<font>ScanContentFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Skin.HasSetting(No_Media_Titles_In_Scanner)</visible>
+			</control>
+		</control>
+	</controls>	
+</window>

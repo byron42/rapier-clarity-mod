@@ -1,0 +1,264 @@
+<includes>
+
+	<include file="Defaults.xml"/>
+	<include file="Includes_Variables.xml"/>
+	<!--Views.xml-->
+	<!--(???) includes_OSDNotification (???)-->
+
+	<constant name="ScreenWidth">1280</constant>
+	<constant name="ScreenHeight">720</constant>
+	<constant name="DialogMarginOffsetX">40</constant>
+	<constant name="DialogHeadingOffsetY">27</constant>
+	<constant name="DialogMarginOffsetY">59</constant>
+	<constant name="MenuBarOffsetY">44</constant>
+	<constant name="BottomPaneOffsetY">646</constant>
+	<constant name="BackgroundCrossfadeTime">300</constant>
+	<constant name="IconCrossfadeTime">300</constant>
+	<constant name="FanartCrossfadeTime">2000</constant>	
+	<constant name="MediaFlagsCrossfadeTime">400</constant>
+	<constant name="SortLetterOffsetY">280</constant>
+	
+	<include name="DialogTitle">
+		<posx>DialogMarginOffsetX</posx>
+		<posy>DialogHeadingOffsetY</posy>
+		<width>600</width>
+		<font>MenuBarButtonFont4</font>
+		<textcolor>DialogTitleColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	
+	<include name="DialogTitle2">
+		<posx>DialogMarginOffsetX</posx>
+		<posy>26</posy>
+		<width>420</width>
+		<font>DialogTitleFont</font>
+		<textcolor>DialogTitleColor</textcolor>
+		<shadowcolor>ShadowColor</shadowcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+	</include>
+	
+	<include name="ContextMenuBtn">
+		<width>280</width>
+		<textwidth>230</textwidth>
+		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
+		<font>MenuBarButtonFont</font>
+		<textcolor>ff626262</textcolor>
+		<focusedcolor>ThemeColor</focusedcolor>
+		<scroll>yes</scroll>
+	</include>
+	
+	<include name="ShutdownContextMenuBtn">
+		<width>280</width>
+		<textwidth>230</textwidth>
+		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
+		<font>MenuBarButtonFont</font>
+		<textcolor>ff626262</textcolor>
+		<focusedcolor>ThemeColor</focusedcolor>
+		<scroll>yes</scroll>
+	</include>
+	
+	<include name="VariableBackgroundHeight">
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
+	</include>
+	<include name="TallBackground">
+		<height>720</height>
+	</include>
+	<include name="NormalBackground">
+		<height>676</height>
+	</include>
+	
+	<include name="BackgroundOffset">
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
+	</include>
+	<include name="BackgroundOffsetTransparency">
+		<posy>0</posy>
+	</include>
+	<include name="BackgroundOffsetNoTransparency">
+		<posy>44</posy>
+	</include>
+	
+	<include name="SystemTray">
+		<control type="group" id="600">
+			<posx>1055</posx>
+			<posy>4</posy>
+			<defaultcontrol always="true">345</defaultcontrol>
+			<control type="image">			
+				<width>219</width>
+				<height>35</height>
+				<texture border="8">SystemTray/top-bar-status-background.png</texture>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+			</control>
+			<control type="label">
+				<description>Time</description>
+				<posx>9.5</posx>
+				<posy>1</posy>
+				<width>145</width>
+				<height>35</height>
+				<font>TimeFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<aligny>center</aligny>
+				<label>$INFO[System.Time]</label>
+			</control>
+		<!--shutdown/play icons-->
+			<control type="group">
+				<posx>2</posx>
+				<control type="button" id="345">
+					<description>Shutdown</description>
+					<posx>183</posx>
+					<posy>2.85</posy>
+					<width>29</width>
+					<height>29</height>
+					<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<pulseonselect>true</pulseonselect>
+					<onup>-</onup>
+					<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+					<ondown>850</ondown>
+					<onleft>346</onleft>
+					<onright>837</onright>
+					<!--SystemTrayButtonFocusAnim-->
+					<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+					<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+				</control>
+				<control type="image">
+					<description>Shutdown No Focus</description>
+					<posx>183</posx>
+					<posy>2.85</posy>
+					<width>29</width>
+					<height>29</height>
+					<texture>$VAR[SystemTrayShutdownIcon]</texture>
+					<colordiffuse></colordiffuse>
+					<visible>!Control.HasFocus(345)</visible>
+				</control>
+				<control type ="button" id="346">
+					<description>Play Icon</description>
+					<posx>148</posx>
+					<posy>2.85</posy>
+					<width>34</width>
+					<height>29</height>
+					<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<onclick>XBMC.PlayDVD </onclick>
+					<pulseonselect>true</pulseonselect>
+					<onup>-</onup>
+					<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+					<ondown>850</ondown>
+					<onleft>458</onleft>
+					<onright>345</onright>
+					<!--SystemTrayButtonFocusAnim-->
+					<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+					<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+				</control>
+				<control type="image">
+					<description>Play No Focus</description>
+					<posx>148</posx>
+					<posy>2.85</posy>
+					<width>34</width>
+					<height>29</height>
+					<texture>$VAR[SystemTrayPlayIcon]</texture>
+					<colordiffuse></colordiffuse>
+					<visible>!Control.HasFocus(346)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbButtonLeft">
+		<control type="group">		
+			<posx>60</posx>
+			<!--BreadCrumbOpenCloseAnim-->
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
+			<control type="button">
+				<description>Left Button</description>
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<posy>4</posy>
+				<include condition="![Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)]">BreadCrumbButtonSmall_Left</include>
+				<include condition="Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)">BreadCrumbButtonMid_Left</include>
+				<height>35</height>
+				<font>BreadCrumbFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textoffsetx>-</textoffsetx>
+				<align>center</align>
+				<aligny>top</aligny>
+				<shadowcolor></shadowcolor> <!--BrCr-->
+				<textoffsety>2</textoffsety> <!--BrCr-->
+				<scroll>true</scroll> <!--BrCr-->
+				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<label>$VAR[BreadCrumbLabel_Left]</label>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbButtonRight">
+		<control type="group">			
+			<posx>290</posx>
+			<!--BreadCrumbOpenCloseAnim-->
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out" condition="![Window.IsActive(3) | Window.IsActive(1)]">WindowOpen</animation>
+			<animation effect="slide" start="-220,0" end="40,0" time="150" tween="cubic" easing="out" condition="Window.IsActive(3) | Window.IsActive(1)">WindowOpen</animation>
+			<control type="button">
+				<description>Right Button</description>
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<posy>4</posy>
+				<include condition="![Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(12) | Window.IsActive(13)
+				| Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)
+				| Window.IsActive(503)]">BreadCrumbButtonSmall_Right</include>
+				<include condition="Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17)
+				| Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)">BreadCrumbButtonMid_Right</include>
+				<include condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503)">BreadCrumbButtonBig_Right</include>
+				<height>35</height>
+				<font>BreadCrumbFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textoffsetx>-</textoffsetx>
+				<align>center</align>
+				<aligny>top</aligny>
+				<shadowcolor></shadowcolor> <!--BrCr-->
+				<textoffsety>2</textoffsety> <!--BrCr-->
+				<scroll>true</scroll> <!--BrCr-->
+				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<label>$VAR[BreadCrumbLabel_Right]</label>
+			</control>		
+		</control>
+	</include>
+	
+<!--LEFT SIZE-->
+	<include name="BreadCrumbButtonSmall_Left">
+		<width>240</width>
+		<textwidth>230</textwidth>
+	</include>
+	<include name="BreadCrumbButtonMid_Left">
+		<width>280</width>
+		<textwidth>270</textwidth>
+	</include>
+	
+<!--RIGHT SIZE-->
+	<include name="BreadCrumbButtonSmall_Right">
+		<width>240</width>
+		<textwidth>240</textwidth>
+	</include>
+	<include name="BreadCrumbButtonMid_Right">
+		<width>280</width>
+		<textwidth>270</textwidth>
+	</include>
+	<include name="BreadCrumbButtonBig_Right">
+		<width>320</width>
+		<textwidth>310</textwidth>
+	</include>
+	
+</includes>
