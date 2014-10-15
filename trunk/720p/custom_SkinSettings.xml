@@ -446,9 +446,9 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="10"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<label>31520</label>
 							<textoffsety>13</textoffsety>
@@ -481,7 +481,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31010]</label>
 							<textoffsety>14</textoffsety>
@@ -514,7 +514,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31011]</label>
 							<onup>2</onup>
@@ -546,7 +546,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31013]</label>
 							<textoffsety>14</textoffsety>
@@ -579,7 +579,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[31012]</label>
 							<textoffsety>14</textoffsety>
@@ -612,7 +612,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[12600]</label>
 							<textoffsety>14</textoffsety>
@@ -645,7 +645,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>$LOCALIZE[247]</label>
 							<textoffsety>14</textoffsety>
@@ -678,7 +678,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-							<texturenofocus border="5">-</texturenofocus>
+							<texturenofocus border="5"></texturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<label>31521</label>
 							<textoffsety>14</textoffsety>
@@ -730,7 +730,7 @@
 							<label>31522</label> <!--BREADCRUMB-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -814,7 +814,7 @@
 							<selected>Skin.String(TopBarColor,2)</selected>
 							<onclick>Skin.SetString(TopBarColor,2)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<onright>-</onright>
+							<onright></onright>
 							<visible>Skin.HasSetting(ExpandTopBarColorSettings)</visible>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
@@ -929,7 +929,7 @@
 							<selected>Skin.String(IconColor,) | Skin.String(IconColor,1)</selected>
 							<onclick>Skin.SetString(IconColor,1)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<onclick>-</onclick>
+							<onclick></onclick>
 							<visible>Skin.HasSetting(ExpandIconColorSettings)</visible>
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -1043,7 +1043,7 @@
 							<selected>Skin.String(BreadCrumbBackgroundColor,) | Skin.String(BreadCrumbBackgroundColor,1)</selected>
 							<onclick>Skin.SetString(BreadCrumbBackgroundColor,1)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<onclick>-</onclick>
+							<onclick></onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbBGColorSettings)</visible>
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -1157,7 +1157,7 @@
 							<selected>Skin.String(BreadCrumbFontColor,) | Skin.String(BreadCrumbFontColor,1)</selected>
 							<onclick>Skin.SetString(BreadCrumbFontColor,1)</onclick>
 							<onclick>ActivateWindow(3001)</onclick>
-							<onclick>-</onclick>
+							<onclick></onclick>
 							<visible>Skin.HasSetting(ExpandBreadcrumbFontColorSettings)</visible>
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -1280,7 +1280,7 @@
 							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1299,12 +1299,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31556</label>
@@ -1327,12 +1327,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31537</label>
@@ -1349,12 +1349,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31024]</label>
@@ -1372,12 +1372,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31027]</label>
@@ -1403,12 +1403,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31036]</label>
@@ -1431,12 +1431,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31520] $LOCALIZE[1397] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[13324]</label>
@@ -1458,7 +1458,7 @@
 							<label>$LOCALIZE[8]</label> <!--WEATHER-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1477,7 +1477,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -1499,7 +1499,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1530,7 +1530,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1577,7 +1577,7 @@
 							<label>$LOCALIZE[10000]</label> <!--HOME-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1588,19 +1588,19 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11131"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -1615,12 +1615,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31538</label>
@@ -1637,12 +1637,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31539</label>
@@ -1652,19 +1652,19 @@
 						
 						<control type="button" id="11132"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -1677,7 +1677,7 @@
 							<label>$LOCALIZE[21866] $LOCALIZE[33061]</label> <!--CATEGORY MENU-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1688,19 +1688,19 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11133"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -1715,7 +1715,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -1744,7 +1744,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1775,7 +1775,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1806,7 +1806,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1837,7 +1837,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1868,7 +1868,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1900,7 +1900,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1932,7 +1932,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1964,7 +1964,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -1995,7 +1995,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2026,7 +2026,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2057,7 +2057,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2089,7 +2089,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2122,7 +2122,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -2145,7 +2145,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2163,7 +2163,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2183,7 +2183,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2201,7 +2201,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2214,19 +2214,19 @@
 						</control>
 						<control type="button" id="11134"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2239,7 +2239,7 @@
 							<label>$LOCALIZE[21866] $LOCALIZE[1034]</label> <!--CATEGORY SUB-MENU-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -2250,19 +2250,19 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11135"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2277,12 +2277,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[513] $LOCALIZE[1034] $LOCALIZE[13108]</label>
@@ -2299,12 +2299,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31557</label>
@@ -2321,12 +2321,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015]  " $LOCALIZE[15019] $LOCALIZE[15311] " $LOCALIZE[31001] ( $LOCALIZE[593] $LOCALIZE[459] )</label>
@@ -2346,7 +2346,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -2376,7 +2376,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2394,7 +2394,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2414,7 +2414,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2432,7 +2432,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2453,7 +2453,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2471,7 +2471,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2491,7 +2491,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2509,7 +2509,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2529,7 +2529,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2547,7 +2547,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2568,7 +2568,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2586,7 +2586,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2607,7 +2607,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2625,7 +2625,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2646,7 +2646,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2664,7 +2664,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2672,7 +2672,7 @@
 							<selected>Skin.HasSetting(ExpandWeatherSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandWeatherSubMenuSettings)</onclick>
 							<onclick>Skin.SetBool(ExpandedSettings)</onclick>
-							<onclick>-</onclick>
+							<onclick></onclick>
 							<visible>Skin.HasSetting(ExpandCategorySubMenuToggleSettings)</visible>
 							<enable>false</enable>
 						</control>
@@ -2685,7 +2685,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -2703,7 +2703,7 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
-							<radioposx>-</radioposx>
+							<radioposx></radioposx>
 							<radioposy></radioposy>
 							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
@@ -2728,12 +2728,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[24022] / $LOCALIZE[24021]  $LOCALIZE[1034]  $LOCALIZE[31605]</label>
@@ -2741,19 +2741,19 @@
 						</control>
 						<control type="button" id="11136"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2766,7 +2766,7 @@
 							<label>31804</label> <!--RECENTLY ADDED-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -2777,19 +2777,19 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->					
 						<control type="button" id="11137"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2804,12 +2804,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20386]</label>
@@ -2827,12 +2827,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20387]</label>
@@ -2850,12 +2850,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[359]</label>
@@ -2873,12 +2873,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20390]</label>
@@ -2888,19 +2888,19 @@
 						</control>
 						<control type="button" id="13136"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2913,7 +2913,7 @@
 							<label>31543</label> <!--INFO PANEL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -2924,19 +2924,19 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->					
 						<control type="button" id="13137"> <!--SPACER-->
 							<description>SPACER</description>
-							<width>-</width>
+							<width></width>
 							<height>13</height> <!--=-->
-							<font>-</font>
-							<textcolor>-</textcolor>
-							<focusedcolor>-</focusedcolor>
-							<disabledcolor>-</disabledcolor>
+							<font></font>
+							<textcolor></textcolor>
+							<focusedcolor></focusedcolor>
+							<disabledcolor></disabledcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textoffsetx>-</textoffsetx>
-							<texturefocus border="5">-</texturefocus>
-							<colordiffuse>-</colordiffuse>
-							<texturenofocus border="5">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
+							<textoffsetx></textoffsetx>
+							<texturefocus border="5"></texturefocus>
+							<colordiffuse></colordiffuse>
+							<texturenofocus border="5"></texturenofocus>
+							<colordiffuse></colordiffuse>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
@@ -2951,12 +2951,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31544</label>
@@ -2973,12 +2973,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31545</label>
@@ -2995,12 +2995,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31071]</label>
@@ -3017,12 +3017,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31072]</label>
@@ -3039,12 +3039,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31075]</label>
@@ -3061,12 +3061,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31080]</label>
@@ -3098,7 +3098,7 @@
 							<label>$LOCALIZE[10005]</label> <!--MUSIC-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3117,12 +3117,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31022]</label>
@@ -3137,7 +3137,7 @@
 							<label>$LOCALIZE[10006]</label> <!--VIDEO-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3156,12 +3156,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31023]</label>
@@ -3176,7 +3176,7 @@
 							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3195,12 +3195,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31424]</label>
@@ -3223,12 +3223,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31403]</label>
@@ -3251,7 +3251,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -3273,7 +3273,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -3304,7 +3304,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -3333,7 +3333,7 @@
 							<label>31549</label> <!--MEDIA FLAGGING-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3352,12 +3352,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31048]</label>
@@ -3382,12 +3382,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20342])[/COLOR]</label>
@@ -3410,12 +3410,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20343])[/COLOR]</label>
@@ -3439,12 +3439,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31027]</label>
@@ -3470,12 +3470,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31550</label>
@@ -3498,12 +3498,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31551</label>
@@ -3524,7 +3524,7 @@
 							<label>$LOCALIZE[20364]S</label> <!--TV SHOWS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3543,12 +3543,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31552</label>
@@ -3562,7 +3562,7 @@
 							<label>31553</label> <!--VIEW ANIMATIONS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3581,12 +3581,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31552</label>
@@ -3618,7 +3618,7 @@
 							<label>$LOCALIZE[33069]</label> <!--BACKGROUNDS-->
 							<font>CustomSkinSeparator</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align>-</align><!---->
+							<align></align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3818,7 +3818,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -3850,7 +3850,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -3884,7 +3884,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -3906,7 +3906,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -3971,7 +3971,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4003,7 +4003,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4036,7 +4036,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4067,7 +4067,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -4102,7 +4102,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -4124,7 +4124,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4219,7 +4219,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4251,7 +4251,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4282,7 +4282,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -4317,7 +4317,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -4339,7 +4339,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4348,7 +4348,7 @@
 							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse>-</colordiffuse>
+							<colordiffuse></colordiffuse>
 							<label>$LOCALIZE[31057]</label>
 							<altlabel>$LOCALIZE[31056]</altlabel>
 							<usealttexture>!Skin.HasSetting(UseMultiImagePicturesBGSettings)</usealttexture>
@@ -4434,7 +4434,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4443,7 +4443,7 @@
 							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
-							<colordiffuse>-</colordiffuse>
+							<colordiffuse></colordiffuse>
 							<label>$LOCALIZE[31052] $LOCALIZE[1] $LOCALIZE[31061]</label>
 							<altlabel>$LOCALIZE[31051]</altlabel>
 							<usealttexture>!Skin.HasSetting(ApplyAllPicturesCustomBG)</usealttexture>
@@ -4466,7 +4466,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4498,7 +4498,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -4533,7 +4533,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -4555,7 +4555,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4650,7 +4650,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4682,7 +4682,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4713,7 +4713,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -4748,7 +4748,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -4770,7 +4770,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4865,7 +4865,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4897,7 +4897,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -4928,7 +4928,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -4963,7 +4963,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -4985,7 +4985,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5080,7 +5080,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5112,7 +5112,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5143,7 +5143,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -5178,7 +5178,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -5200,7 +5200,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5295,7 +5295,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5327,7 +5327,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5358,7 +5358,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -5393,7 +5393,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -5415,7 +5415,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5510,7 +5510,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5542,7 +5542,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5573,7 +5573,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -5608,7 +5608,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -5631,7 +5631,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5726,7 +5726,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5789,7 +5789,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -5824,7 +5824,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -5846,7 +5846,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5941,7 +5941,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -5973,7 +5973,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -6004,7 +6004,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -6039,7 +6039,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
 							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
@@ -6062,7 +6062,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -6157,7 +6157,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
@@ -6220,7 +6220,7 @@
 							<aligny>top</aligny>
 							<textoffsety>2</textoffsety>
 							<textcolor>ff555555</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
@@ -6270,12 +6270,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31500]</label>
@@ -6305,13 +6305,13 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>center</align>
 							<texturefocus border="5,2,10,0">search-focus2.png</texturefocus>
 							<texturenofocus border="0">search-focus2.png</texturenofocus>
 							<colordiffuse>BBBBBBBB</colordiffuse>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31999]</label>
@@ -6340,12 +6340,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31510]</label>
@@ -6361,12 +6361,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31938</label>
@@ -6383,12 +6383,12 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>-</shadowcolor>
+							<shadowcolor></shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31511]</label>
@@ -6792,8 +6792,8 @@
 					<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 					<texturesliderbar border="2">scrollbar-slider-nofocus.png</texturesliderbar>
 					<texturesliderbarfocus border="2">scrollbar-slider-focus.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib></textureslidernib>
+					<textureslidernibfocus></textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<pulseonselect>false</pulseonselect>
 					<onleft>907</onleft>
@@ -6811,8 +6811,8 @@
 					<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 					<texturesliderbar border="2">scrollbar-slider-nofocus.png</texturesliderbar>
 					<texturesliderbarfocus border="2">scrollbar-slider-focus.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib></textureslidernib>
+					<textureslidernibfocus></textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<pulseonselect>false</pulseonselect>
 					<onleft>900</onleft>
@@ -6829,8 +6829,8 @@
 					<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 					<texturesliderbar border="2">scrollbar-slider-nofocus.png</texturesliderbar>
 					<texturesliderbarfocus border="2">scrollbar-slider-focus.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib></textureslidernib>
+					<textureslidernibfocus></textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<pulseonselect>false</pulseonselect>
 					<onleft>901</onleft>
@@ -6847,8 +6847,8 @@
 					<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 					<texturesliderbar border="2">scrollbar-slider-nofocus.png</texturesliderbar>
 					<texturesliderbarfocus border="2">scrollbar-slider-focus.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib></textureslidernib>
+					<textureslidernibfocus></textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<pulseonselect>false</pulseonselect>
 					<onleft>902</onleft>
@@ -6865,8 +6865,8 @@
 					<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
 					<texturesliderbar border="2">scrollbar-slider-nofocus.png</texturesliderbar>
 					<texturesliderbarfocus border="2">scrollbar-slider-focus.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib></textureslidernib>
+					<textureslidernibfocus></textureslidernibfocus>
 					<showonepage>false</showonepage>
 					<pulseonselect>false</pulseonselect>
 					<onleft>903</onleft>
