@@ -18,7 +18,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 		= Added much support for games...apparently there was none before
 		  I started updating this section (TrainerSettings.xml and
-		  GameSaves.xml have been added to this skin)
+		  GameSaves.xml have been added)
 
 		= Added programs to the system settings menus and sub-menus
 
@@ -29,7 +29,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		  lyrics it's a much better looking and easy to read experience
 
 		= Fixed the "BROWSE" button for (NetworkSetup).  Still needs to
-		  be revisited at some point but is working.
+		  be revisited at some point but is working well enough for now.
 
 		= Fixed numerous breadcrumb labels that were either cut off or
 		  not working for their specified containers...it'll take time
@@ -39,7 +39,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 	          the rest of the other buttons.  Don't know why I never noticed
 		  that it was different.
 
-		= Fixed missing xbmc4xbox colored NF icons on homescreen
+		= Fixed missing xbmc4xbox colored NoFocus icons on homescreen
+
+		= Fixed the messed up menu in DialogAlbumInfo.xml - also changed
+		  the way that the window closes and also made the top bar's in
+		  all of these media info windows un-navigable (added too much
+		  confusion).  Also added fanart into all of these windows...
+
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
