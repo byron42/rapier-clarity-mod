@@ -174,7 +174,7 @@
 					<height>34</height>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<onup>600</onup>
+					<onup>850</onup>
 					<ondown>961</ondown>
 					<control type="button" id="5">
 						<description>Cast/Plot</description>
@@ -329,7 +329,7 @@
 			
 	<!--(((TOP BAR)))============================================================================================================================-->		
 			<control type="group">
-				<animation effect="fade" start="100" end="0" time="250" delay="500">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="100" delay="500">WindowClose</animation>
 				<description>Top Bar Area</description>
 				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 				<control type="group">	
@@ -376,6 +376,7 @@
 						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
 						<texturenofocus></texturenofocus>
 						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>Dialog.Close(2001)</onclick>
 						<onclick>ActivateWindow(Home)</onclick>
 						<pulseonselect>true</pulseonselect>
 						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>

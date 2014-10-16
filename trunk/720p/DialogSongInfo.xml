@@ -1,5 +1,5 @@
 <window id="135">
-	<defaultcontrol always="true">987</defaultcontrol>
+	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
@@ -113,6 +113,37 @@
 				</control>
 				<!--***************************************************************************************************-->
 				
+				<!--********************************** BackgroundFanart ***********************************************-->
+				<control type="group">
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="group">
+						<control type="largeimage">
+							<description>Fanart Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<!--KenBurnsAnim-->
+							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<include>BackgroundOffset</include>
+							<width>ScreenWidth</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>background-dim.png</texture>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+							<!--BackgroundFanartDimAnim-->
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
 				<!--******************************* FullControlAreaBackground *****************************************-->
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
@@ -153,7 +184,7 @@
 			
 	<!--(((MENU BAR)))==============================================================================================================================-->			
 			<control type="group" id="505">		
-				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>		
 				<height>34</height>
 				<posy>44</posy>
@@ -166,15 +197,15 @@
 				</control>
 				
 				<!--********************************************* SongInfoMenuBar ***********************************************************-->
-				<control type="grouplist" id="987">
-					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(987).HasFocus">Conditional</animation>
+				<control type="grouplist" id="850">
+					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Song Info Menu Bar</description>
 					<width>ScreenWidth</width>
 					<posy>-3</posy>
 					<height>34</height>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<onup>600</onup>
+					<onup>850</onup>
 					<ondown>961</ondown>
 					<control type="button" id="12">
 						<description>Album Info</description>
@@ -315,9 +346,9 @@
 				<!--*************************************************************************************************************************-->
 				
 				<!--MenuBarOpenCloseAnim-->
-				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
-				<animation type="WindowClose" condition="[ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
 					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
 					<effect type="fade" start="100" end="0" time="1" delay="200"/>
 				</animation>
@@ -327,7 +358,7 @@
 			
 	<!--(((TOP BAR)))============================================================================================================================-->		
 			<control type="group">
-				<animation effect="fade" start="100" end="0" time="250" delay="500">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="100" delay="500">WindowClose</animation>
 				<description>Top Bar Area</description>
 				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 				<control type="group">	
@@ -733,9 +764,9 @@
 						<posy>82</posy>
 						<width>730</width>
 						<height>210</height>
-						<onup>987</onup>
+						<onup>850</onup>
 						<ondown>50</ondown>
-						<onleft>987</onleft>
+						<onleft>850</onleft>
 						<onright>61</onright>
 						<itemlayout width="660" height="35">
 							<control type="image">
