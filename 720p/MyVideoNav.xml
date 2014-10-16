@@ -10256,7 +10256,8 @@
 				<animation effect="slide" start="0,74" time="200" tween="circle" easing="out">WindowOpen</animation>
 				<animation effect="slide" end="0,100" time="200" tween="circle" easing="out">WindowClose</animation>
 				<!--InfoPaneSpecificCloseAnim-->
-				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
+				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+				<animation effect="slide" end="0,74" time="100" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="300" condition="[Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)] + [Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)]">Conditional</animation>
 				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)
 				| Control.IsVisible(56) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(57) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(59) + Skin.HasSetting(HideInfoPane)

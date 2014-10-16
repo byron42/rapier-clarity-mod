@@ -1,5 +1,5 @@
 <window id="2001">
-	<defaultcontrol always="true">987</defaultcontrol>
+	<defaultcontrol always="true">850</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
@@ -114,6 +114,37 @@
 				</control>
 				<!--***************************************************************************************************-->
 				
+				<!--********************************** BackgroundFanart ***********************************************-->
+				<control type="group">
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="group">
+						<control type="largeimage">
+							<description>Fanart Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<!--KenBurnsAnim-->
+							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<include>BackgroundOffset</include>
+							<width>ScreenWidth</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>background-dim.png</texture>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+							<!--BackgroundFanartDimAnim-->
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
 				<!--******************************* FullControlAreaBackground *****************************************-->
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
@@ -154,7 +185,7 @@
 
 	<!--(((MENU BAR)))==============================================================================================================================-->			
 			<control type="group" id="505">	
-				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>		
 				<height>34</height>
 				<posy>44</posy>	
@@ -166,15 +197,15 @@
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 				</control>
 				<!--******************************************** AlbumInfoMenuBar ***********************************************************-->
-				<control type="grouplist" id="987">
-					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(987).HasFocus">Conditional</animation>
+				<control type="grouplist" id="850">
+					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(850).HasFocus">Conditional</animation>
 					<description>Music Info Menu Bar</description>
 					<width>ScreenWidth</width>
 					<posy>-3</posy>
 					<height>34</height>
 					<itemgap>0</itemgap>
 					<orientation>horizontal</orientation>
-					<onup>600</onup>
+					<onup>850</onup>
 					<ondown>961</ondown>
 					<control type="button" id="5">
 						<description>Tracks</description>
@@ -269,9 +300,9 @@
 				<!--*************************************************************************************************************************-->
 				
 				<!--MenuBarOpenCloseAnim-->
-				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
-				<animation type="WindowClose" condition="[ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+				<animation type="WindowClose" condition="[ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
 					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
 					<effect type="fade" start="100" end="0" time="1" delay="200"/>
 				</animation>
@@ -280,7 +311,7 @@
 			
 	<!--(((TOP BAR)))============================================================================================================================-->		
 			<control type="group">
-				<animation effect="fade" start="100" end="0" time="250" delay="500">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="100" delay="500">WindowClose</animation>
 				<description>Top Bar Area</description>
 				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 				<control type="group">	
@@ -328,13 +359,14 @@
 						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
 						<texturenofocus></texturenofocus>
 						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>Dialog.Close(2001)</onclick>
 						<onclick>ActivateWindow(Home)</onclick>
 						<pulseonselect>true</pulseonselect>
-						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
 						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+						<enable></enable>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -763,9 +795,9 @@
 						<posy>82</posy>
 						<width>730</width>
 						<height>210</height>
-						<onup>987</onup>
+						<onup>850</onup>
 						<ondown>50</ondown>
-						<onleft>987</onleft>
+						<onleft>850</onleft>
 						<onright>61</onright>
 						<itemgap></itemgap>
 						<itemlayout width="660" height="35">
@@ -803,8 +835,8 @@
 								<posx>-5</posx>
 								<width>730</width>
 								<height>35</height>
-								<colordiffuse>-</colordiffuse>
-								<texture border="10,10,10,10"></texture>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
 								<visible>Control.HasFocus(901)</visible>
 							</control>	
 							<control type="image">
@@ -813,7 +845,7 @@
 								<height>35</height>	
 								<colordiffuse>-</colordiffuse>
 								<!--AltTexture-->
-								<texture border="10"></texture>
+								<texture border="10">scrollbar-background.png</texture>
 								<visible>!Control.HasFocus(901)</visible>
 							</control>
 						<!--==============-->
@@ -845,37 +877,37 @@
 								<description>Artist</description>
 								<label>$LOCALIZE[557]</label>
 								<label2>$INFO[ListItem.Artist]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="2">
 								<description>Rating</description>
 								<label>$LOCALIZE[563]</label>
 								<label2>$INFO[ListItem.Rating]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="3">
 								<description>Moods</description>
 								<label>$LOCALIZE[175]</label>
 								<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="4">
 								<description>Styles</description>
 								<label>$LOCALIZE[176]</label>
 								<label2>$INFO[ListItem.Property(Album_Style)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="5">
 								<description>Themes</description>
 								<label>$LOCALIZE[21895]</label>
 								<label2>$INFO[ListItem.Property(Album_Theme)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="6">
 								<description>File Path</description>
 								<label>$LOCALIZE[21801]</label>
 								<label2>$INFO[ListItem.FileNameAndPath]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 						</content>
 					</control>
@@ -1033,9 +1065,9 @@
 						<posy>82</posy>
 						<width>730</width>
 						<height>210</height>
-						<onup>987</onup>
+						<onup>850</onup>
 						<ondown>50</ondown>
-						<onleft>987</onleft>
+						<onleft>850</onleft>
 						<onright>61</onright>
 						<itemlayout width="660" height="35">
 							<control type="image">
@@ -1072,17 +1104,17 @@
 								<posx>-5</posx>
 								<width>730</width>
 								<height>35</height>
-								<colordiffuse>-</colordiffuse>
-								<texture border="10,10,10,10"></texture>
+								<colordiffuse></colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
 								<visible>Control.HasFocus(901)</visible>
 							</control>
 							<control type="image">
 								<posx>-5</posx>
 								<width>730</width>
 								<height>35</height>	
-								<colordiffuse>-</colordiffuse>
+								<colordiffuse>BBBBBBBB</colordiffuse>
 								<!--AltTexture-->
-								<texture border="10"></texture>
+								<texture border="10">scrollbar-background.png</texture>
 								<visible>!Control.HasFocus(901)</visible>
 							</control>
 						<!--==============-->
@@ -1115,81 +1147,81 @@
 								<description>Born</description>
 								<label>$LOCALIZE[21893] / $LOCALIZE[21894]</label>
 								<label2>$INFO[ListItem.Property(Artist_Born)] / $LOCALIZE[31000]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 							</item>
 							<item id="2">
 								<description>Formed</description>
 								<label>$LOCALIZE[21893] / $LOCALIZE[21894]</label>
 								<label2>$LOCALIZE[31000] / $INFO[ListItem.Property(Artist_Formed)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 							</item>
 							<item id="3">
 								<description>Born/Formed</description>
 								<label>$LOCALIZE[21893] / $LOCALIZE[21894]</label>
 								<label2>$INFO[ListItem.Property(Artist_Born)] / $INFO[ListItem.Property(Artist_Formed)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Born)) + !IsEmpty(ListItem.Property(Artist_Formed))</visible>
 							</item>
 							<item id="4">
 								<description>Born/Formed No Value</description>
 								<label>$LOCALIZE[21893] / $LOCALIZE[21894]</label>
 								<label2>$LOCALIZE[31000]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>IsEmpty(ListItem.Property(Artist_Born)) + IsEmpty(ListItem.Property(Artist_Formed))</visible>
 							</item>
 							<item id="5">
 								<description>Moods</description>
 								<label>$LOCALIZE[175]</label>
 								<label2>$INFO[ListItem.Property(Artist_Mood)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="6">
 								<description>Styles</description>
 								<label>$LOCALIZE[176]</label>
 								<label2>$INFO[ListItem.Property(Artist_Style)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="7">
 								<description>Instruments</description>
 								<label>$LOCALIZE[21892]</label>
 								<label2>$INFO[ListItem.Property(Artist_Instrument)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="8">
 								<description>Died</description>
 								<label>$LOCALIZE[21897] / $LOCALIZE[21896]</label>
 								<label2>$INFO[ListItem.Property(Artist_Died)] / $LOCALIZE[31000]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
 							</item>
 							<item id="9">
 								<description>Disbanded</description>
 								<label>$LOCALIZE[21897] / $LOCALIZE[21896]</label>
 								<label2>$LOCALIZE[31000] / $INFO[ListItem.Property(Artist_Disbanded)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
 							</item>
 							<item id="10">
 								<description>Died/Disbanded</description>
 								<label>$LOCALIZE[21897] / $LOCALIZE[21896]</label>
 								<label2>$INFO[ListItem.Property(Died)] / $INFO[ListItem.Property(Artist_Disbanded)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>!IsEmpty(ListItem.Property(Artist_Died)) + !IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
 							</item>
 							<item id="11">
 								<description>Died/Disbanded No Value</description>
 								<label>$LOCALIZE[21897] / $LOCALIZE[21896]</label>
 								<label2>$LOCALIZE[31000]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 								<visible>IsEmpty(ListItem.Property(Artist_Died)) + IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
 							</item>
 							<item id="12">
 								<description>Years Active</description>
 								<label>$LOCALIZE[21898]</label>
 								<label2>$INFO[ListItem.Property(Artist_YearsActive)]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>					
 						</content>
 					</control>
@@ -1266,14 +1298,15 @@
 								<width>725</width>
 								<visible>Control.HasFocus(50)</visible>
 								<height>35</height>
-								<texture border="10,10,10,10"></texture>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
 							</control>
 							<control type="image">
 								<posx>-5</posx>
 								<width>725</width>
 								<height>35</height>	
 								<!--AltTexture-->
-								<texture border="10"></texture>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
 								<visible>!Control.HasFocus(50)</visible>
 							</control>
 						<!--==============-->
@@ -1300,7 +1333,7 @@
 					<!--ARTISTS-->
 						<itemlayout condition="Container.Content(Artists)" height="35" width="330">		
 							<control type="image">
-								<width>670</width>
+								<width>710</width>
 								<height>38</height>
 								<texture border="10">ListViewItemBack.png</texture>
 							</control>	
@@ -1313,22 +1346,33 @@
 							</control>
 							<control type="label">
 								<posx>35</posx>
+								<posy>-1</posy>
 								<width>660</width>
 								<height>33</height>
-								<font>ListLabelFont</font>
+								<font>LibraryCatFontSmall</font>
 								<textcolor>Grey</textcolor>
 								<selectedcolor>ThemeColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
-								<aligny>top</aligny>
+								<aligny>center</aligny>
 								<info>ListItem.Label</info>
 							</control>				
 						</itemlayout>
 						<focusedlayout condition="Container.Content(Artists)" height="35" width="330">				
 							<control type="image">
-								<width>329</width>
-								<height>33</height>
+								<posx>-5</posx>
+								<width>725</width>
 								<visible>Control.HasFocus(50)</visible>
-								<texture border="5">button-focus.png</texture>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<width>725</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>!Control.HasFocus(50)</visible>
 							</control>
 							<control type="image">
 								<posx>5</posx>
@@ -1338,11 +1382,12 @@
 								<texture background="true">DefaultAudio.png.png</texture>
 							</control>
 							<control type="label">
-								<posx>35</posx>
-								<width>290</width>
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>710</width>
 								<height>33</height>
-								<font>FSMediaInfoFont</font>
-								<textcolor>DefaultColor</textcolor>
+								<font>LibraryCatFontBig</font>
+								<textcolor>ThemeColor2</textcolor>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>
