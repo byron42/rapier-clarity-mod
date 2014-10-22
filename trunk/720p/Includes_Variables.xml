@@ -369,5 +369,8 @@
 		<value condition="Window.IsActive(142) + Player.Rewinding16x">osd-rewind-focus.png</value> <!-- RWx16 -->
 		<value condition="Window.IsActive(142) + Player.Rewinding32x">osd-rewind-focus-x32.png</value> <!-- RWx32 -->
 	</variable>
-
+	<variable name="ListViewExtraInfo">
+		<value condition="!IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
+		<value condition="IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+	</variable>
 </includes>

@@ -3587,6 +3587,33 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52) + Window.IsActive(VideoFiles)</visible>
 				</control>
+				
+		<!-- videofiles (musicfiles? and programfiles?) -->
+				<control type="radiobutton" id="26003">
+					<description>List View Show Extra Info (Non Library)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[544]</label>
+					<selected>Skin.HasSetting(HideVideosExtraInfo)</selected>
+					<onclick>Skin.ToggleSetting(HideVideosExtraInfo)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Skin.String(CurrentViewMode,52) + Window.IsActive(VideoFiles)</visible>
+				</control>
+				
 				<control type="radiobutton" id="2063">
 					<description>List Hide Scrollbar</description>
 					<width>450</width>
