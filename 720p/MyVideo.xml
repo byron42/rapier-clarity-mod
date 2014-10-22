@@ -838,53 +838,98 @@
 					</control>
 					<!--***********************************************************************************************-->
 				<!--icons,thumbs-->
-					<control type="grouplist">					
-						<posx>80</posx>
-						<posy>150</posy>
-						<usecontrolcoords>true</usecontrolcoords>	
-						<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
-						+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
-						<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
-						<!--SmallIcons-->
-						<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+					<control type="group">
 						<!--InfoPaneHiddenSlideAnim2-->
 						<animation effect="slide" end="0,20" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
-						<control type="image">
-							<description>Cover</description>
-							<width>400</width>
-							<height>400</height>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-							<bordersize>14</bordersize>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Thumb)</visible>		
+						<control type="grouplist">					
+							<posx>80</posx>
+							<posy>150</posy>
+							<usecontrolcoords>true</usecontrolcoords>	
+							<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
+							+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
+							<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
+							<!-- for extra info -->
+							<animation effect="zoom" center="245,0" end="80" time="150" condition="[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(HideVideosExtraInfo)">Conditional</animation>
+							<!--SmallIcons-->
+							<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+							<control type="image">
+								<description>Cover</description>
+								<width>400</width>
+								<height>400</height>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+								<bordersize>14</bordersize>
+								<aspectratio aligny="bottom">keep</aspectratio>
+								<fadetime>IconCrossfadeTime</fadetime>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>		
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<posx>50</posx>
+								<posy>50</posy>
+								<width>300</width>
+								<height>300</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+								<bordersize>50</bordersize>
+								<aspectratio aligny="bottom">keep</aspectratio>
+								<fadetime>IconCrossfadeTime</fadetime>
+								<colordiffuse>BBFFFFFF</colordiffuse>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Cover Reflection</description>
+								<posy>12</posy>
+								<width>400</width>
+								<height>400</height>
+								<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
+								<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+								<bordersize>14</bordersize>
+								<aspectratio aligny="top">keep</aspectratio>
+								<fadetime>IconCrossfadeTime</fadetime>
+								<visible>!IsEmpty(ListItem.Thumb) + !Control.IsVisible(9009)</visible>
+							</control>
 						</control>
-						<control type="image">
-							<description>Default Cover</description>
-							<posx>50</posx>
-							<posy>50</posy>
-							<width>300</width>
-							<height>300</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-							<bordersize>50</bordersize>
-							<aspectratio aligny="bottom">keep</aspectratio>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<colordiffuse>BBFFFFFF</colordiffuse>
-							<visible>IsEmpty(ListItem.Thumb)</visible>
-						</control>
-						<control type="image">
-							<description>Cover Reflection</description>
-							<posy>12</posy>
-							<width>400</width>
-							<height>400</height>
-							<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
-							<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
-							<bordersize>14</bordersize>
-							<aspectratio aligny="top">keep</aspectratio>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<visible>!IsEmpty(ListItem.Thumb)</visible>
+						<!-- EXTRA INFO -->
+						<control type="group" id="9009">
+							<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
+							<animation effect="fade" end="100" time="100" delay="100">Visible</animation>
+							<animation effect="fade" end="0" time="0" delay="0">Hidden</animation>
+							<posx>40</posx>
+							<posy>470</posy>
+							<visible>[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(HideVideosExtraInfo)</visible>
+							<control type="image">
+								<description>INFO BACKGROUND FOR PLOT</description>
+								<posx>-13</posx>
+								<posy></posy>
+								<width>495</width>
+								<height>168</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/ShutDownButtonF.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+							<control type="textbox">
+								<description>Plot</description>
+								<posx>5</posx>
+								<posy>11</posy>
+								<width>460</width>
+								<height>138</height>
+								<font>MediaInfoFont</font>
+								<!-- <textcolor>ThemeColor2</textcolor> -->
+								<!-- <textcolor>BBDCDCDC</textcolor> -->
+								<textcolor>ThemeColor2</textcolor>
+								<align>justify</align>
+								<wrapmultiline>true</wrapmultiline>
+								<label fallback="161">$VAR[ListViewExtraInfo]</label>
+								<autoscroll time="2000" delay="5000" repeat="10000">true</autoscroll>
+								<!--ControlsOpenCloseAnim-->
+								<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+								<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+								<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+								<visible>!IsEmpty(ListItem.PlotOutline) | [IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot)]</visible>
+							</control>
+							
 						</control>
 					</control>
 					<control type="button" id="188">

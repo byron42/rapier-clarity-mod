@@ -1,6 +1,19 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+10.21.14 Version 3.5.41
+
+	10.21.14
+------------------------------------------------------------------------------
+		= started making changes to the standard list view...some media
+		  info now automatically pops up when available (videofiles). 
+		  The goal is to spread this trough all of the list views that 
+		  have some sort of media info available so this will be a work 
+		  in progress. 	
+	
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 10.14.14 Version 3.5.4
 
 	10.14.14
@@ -26,7 +39,7 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		  is clicked (and the scripts are not installed), the skin will 
 		  install automatically for you.  As for lyrics, I made the	
 		  script-XBMC_Lyrics-main.xml from scratch so that when using 
-		  lyrics it's a much better looking and easy to read experience
+		  lyrics it's a much cleaner looking and easy to read experience
 
 		= Fixed the "BROWSE" button for (NetworkSetup).  Still needs to
 		  be revisited at some point but is working well enough for now.
