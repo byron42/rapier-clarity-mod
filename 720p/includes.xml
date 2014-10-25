@@ -214,10 +214,11 @@
 				<posy>4</posy>
 				<include condition="![Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(12) | Window.IsActive(13)
 				| Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)
-				| Window.IsActive(503)]">BreadCrumbButtonSmall_Right</include>
+				| Window.IsActive(503) | Window.IsActive(DialogRepoInfo.xml)]">BreadCrumbButtonSmall_Right</include>
 				<include condition="Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17)
 				| Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)">BreadCrumbButtonMid_Right</include>
-				<include condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503)">BreadCrumbButtonBig_Right</include>
+				<include condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503)
+				| Window.IsActive(DialogRepoInfo.xml)">BreadCrumbButtonBig_Right</include>
 				<height>35</height>
 				<font>BreadCrumbFont</font>
 				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
