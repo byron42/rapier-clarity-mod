@@ -849,7 +849,7 @@
 							+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
 							<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
 							<!-- for extra info -->
-							<animation effect="zoom" center="245,0" end="80" time="150" condition="[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(HideVideosExtraInfo)">Conditional</animation>
+							<animation effect="zoom" center="245,0" end="80" time="150" condition="[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation>
 							<!--SmallIcons-->
 							<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 							<control type="image">
@@ -897,7 +897,7 @@
 							<animation effect="fade" end="0" time="0" delay="0">Hidden</animation>
 							<posx>40</posx>
 							<posy>470</posy>
-							<visible>[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(HideVideosExtraInfo)</visible>
+							<visible>[!IsEmpty(ListItem.PlotOutline) | !IsEmpty(ListItem.Plot)] + !Skin.HasSetting(ListViewHideExtraInfo)</visible>
 							<control type="image">
 								<description>INFO BACKGROUND FOR PLOT</description>
 								<posx>-13</posx>
@@ -906,7 +906,7 @@
 								<height>168</height>
 								<reveal>-</reveal>
 								<info>-</info>
-								<texture border="10,10,10,10">Glass/ShutDownButtonF.png</texture> <!--replace-->
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
 							</control>
 							<control type="textbox">
@@ -916,8 +916,6 @@
 								<width>460</width>
 								<height>138</height>
 								<font>MediaInfoFont</font>
-								<!-- <textcolor>ThemeColor2</textcolor> -->
-								<!-- <textcolor>BBDCDCDC</textcolor> -->
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -929,7 +927,6 @@
 								<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 								<visible>!IsEmpty(ListItem.PlotOutline) | [IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot)]</visible>
 							</control>
-							
 						</control>
 					</control>
 					<control type="button" id="188">

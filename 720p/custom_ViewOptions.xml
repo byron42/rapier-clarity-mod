@@ -827,6 +827,32 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52) + Window.IsActive(MusicFiles)</visible>
 				</control>
+				<control type="radiobutton" id="10277">
+					<description>List View Show Extra Info (Non Library)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[544]</label>
+					<selected>Skin.HasSetting(ListViewHideExtraInfo)</selected>
+					<onclick>Skin.ToggleSetting(ListViewHideExtraInfo)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Skin.String(CurrentViewMode,52) + Window.IsActive(MusicFiles)</visible>
+					<enable>false</enable>
+					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(10277)">Conditional</animation>
+				</control>
 				<control type="radiobutton" id="10276">
 					<description>List Hide Scrollbar</description>
 					<width>450</width>
@@ -3608,8 +3634,8 @@
 					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[31015] $LOCALIZE[544]</label>
-					<selected>Skin.HasSetting(HideVideosExtraInfo)</selected>
-					<onclick>Skin.ToggleSetting(HideVideosExtraInfo)</onclick>
+					<selected>Skin.HasSetting(ListViewHideExtraInfo)</selected>
+					<onclick>Skin.ToggleSetting(ListViewHideExtraInfo)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52) + Window.IsActive(VideoFiles)</visible>
 				</control>
@@ -3977,6 +4003,32 @@
 					<label>$LOCALIZE[31015] $LOCALIZE[535] $LOCALIZE[536]</label>
 					<selected>Skin.HasSetting(ListViewHideSmallIcons)</selected>
 					<onclick>Skin.ToggleSetting(ListViewHideSmallIcons)</onclick>
+					<visible>Skin.String(CurrentViewMode,52)</visible>
+				</control>
+				<control type="radiobutton" id="26004">
+					<description>List View Show Extra Info (Programs)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[544]</label>
+					<selected>Skin.HasSetting(ListViewHideExtraInfo)</selected>
+					<onclick>Skin.ToggleSetting(ListViewHideExtraInfo)</onclick>
+					<enable>false</enable>
+					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(26004)">Conditional</animation>
+					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
 				<control type="radiobutton" id="3002">
