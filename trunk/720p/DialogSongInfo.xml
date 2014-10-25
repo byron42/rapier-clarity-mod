@@ -845,37 +845,37 @@
 								<description>Artist</description>
 								<label>$LOCALIZE[557]</label>
 								<label2>$INFO[ListItem.Artist]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="2">
 								<description>Album</description>
 								<label>$LOCALIZE[558]</label>
 								<label2>$INFO[ListItem.Album]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="3">
 								<description>Track</description>
 								<label>$LOCALIZE[554]</label>
 								<label2>$INFO[ListItem.TrackNumber]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="4">
 								<description>Rating</description>
 								<label>$LOCALIZE[563]</label>
 								<label2>$INFO[ListItem.Rating]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="5">
 								<description>File Path</description>
 								<label>$LOCALIZE[21801]</label>
 								<label2>$INFO[ListItem.FileNameAndPath]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 							<item id="6">
 								<description>Comment</description>
 								<label>$LOCALIZE[569]</label>
 								<label2>$INFO[ListItem.Comment]</label2>
-								<onclick></onclick>
+								<onclick>-</onclick>
 							</item>
 						</content>
 					</control>
