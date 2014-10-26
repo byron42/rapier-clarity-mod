@@ -113,6 +113,37 @@
 				</control>
 				<!--***************************************************************************************************-->
 				
+				<!--********************************** BackgroundFanart ***********************************************-->
+				<control type="group">
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="group">
+						<control type="largeimage">
+							<description>Fanart Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<!--KenBurnsAnim-->
+							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<include>BackgroundOffset</include>
+							<width>ScreenWidth</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>background-dim.png</texture>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+							<!--BackgroundFanartDimAnim-->
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
 				<!--******************************* FullControlAreaBackground *****************************************-->
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
