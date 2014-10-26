@@ -2053,7 +2053,7 @@
 					<selected>Skin.HasSetting(HideLargePosterShadow)</selected>
 					<onclick>Skin.ToggleSetting(HideLargePosterShadow)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
-					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons) | Window.IsActive(Programs,Games)]</visible>
+					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons) | Substring(Container.Folderpath,games)]</visible>
 				</control>
 				<control type="radiobutton" id="2100">
 					<description>Episode View Hide Plot (TVShows)</description>

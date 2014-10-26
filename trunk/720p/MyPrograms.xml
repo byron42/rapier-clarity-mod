@@ -869,7 +869,7 @@
 							<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
 							
 							<!-- for extra info (((needs to be revisited))) -->
-							<!-- <animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(ListItem.Property(Addon.Summary)) + !Skin.HasSetting(ListHideExtraInfo)">Conditional</animation> -->
+							<!-- <animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(Window.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation> -->
 							
 							<!--SmallIcons-->
 							<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
@@ -919,7 +919,7 @@
 							<posx>40</posx>
 							<posy>470</posy>
 							
-							<!-- <visible>!IsEmpty(ListItem.Property(Addon.Summary)) + !Skin.HasSetting(ListHideExtraInfo)</visible> -->
+							<!-- <visible>!IsEmpty(Window.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)</visible> -->
 							<visible>false</visible>
 							
 							<control type="image">
@@ -940,22 +940,19 @@
 								<width>460</width>
 								<height>138</height>
 								<font>MediaInfoFont</font>
-								<!-- <textcolor>ThemeColor2</textcolor> -->
-								<!-- <textcolor>BBDCDCDC</textcolor> -->
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
-								<label fallback="161">$VAR[ListViewExtraInfo]</label>
+								<label fallback="161">$INFO[Window.Property(Addon.Description)]</label>
 								<autoscroll time="2000" delay="5000" repeat="10000">true</autoscroll>
 								<!--ControlsOpenCloseAnim-->
 								<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 								<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 								<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-								<visible>!IsEmpty(ListItem.Property(Addon.Summary))</visible>
+								<visible>!IsEmpty(Window.Property(Addon.Description))</visible>
 							</control>
 						</control>
 					</control>
-							
 					<control type="button" id="188">
 						<onfocus>Skin.SetString(CurrentViewMode,52)</onfocus>
 						<description>ViewOptionsHelperBtn</description>
