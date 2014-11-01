@@ -2053,7 +2053,7 @@
 					<selected>Skin.HasSetting(HideLargePosterShadow)</selected>
 					<onclick>Skin.ToggleSetting(HideLargePosterShadow)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
-					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons) | Substring(Container.Folderpath,games)]</visible>
+					<visible>Skin.String(CurrentViewMode,66) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
 				</control>
 				<control type="radiobutton" id="2100">
 					<description>Episode View Hide Plot (TVShows)</description>
@@ -4054,9 +4054,9 @@
 					<onclick>Skin.ToggleSetting(HideListViewScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,52)</visible>
 				</control>
-			<!--GAMES LARGE POSTER-->
+			<!--PROGRAMS LARGE POSTER-->
 				<control type="radiobutton" id="202811">
-					<description>Large Poster Hide Overlay (Games)</description>
+					<description>Large Poster Hide Overlay (PROGRAMS)</description>
 					<width>450</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
@@ -4080,7 +4080,7 @@
 					<visible>Skin.String(CurrentViewMode,100)</visible>
 				</control>
 				<control type="radiobutton" id="207911">
-					<description>Large Poster Hide Wraplist Shadow (Games)</description>
+					<description>Large Poster Hide Wraplist Shadow (PROGRAMS)</description>
 					<width>450</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
@@ -4103,7 +4103,7 @@
 					<visible>Skin.String(CurrentViewMode,100)</visible>
 				</control>
 				<control type="radiobutton" id="206511">
-					<description>Large Poster Hide Scrollbar (Games)</description>
+					<description>Large Poster Hide Scrollbar (PROGRAMS)</description>
 					<width>450</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
