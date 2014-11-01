@@ -3,6 +3,38 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 10.21.14 Version 3.5.41
 
+	11.1.14
+------------------------------------------------------------------------------
+		= Changed Large Poster (Programs) to work in all programs 
+		  windows (not just games anymore).  Suggestion would be to
+  		  use this view only in containers where thumbs are readily
+		  available...otherwise it becomes difficult to use if the 
+                  folder icons are the only thing that's visible (list view
+		  would be better for these containers)
+
+
+	10.25.14
+------------------------------------------------------------------------------
+		= (MusicFiles) and (Programs) are now set up to work with List
+		  View extra media...however I can't figure out anything that 
+		  works to put in the box at this point.  At least it's set up
+		  to work at this point from Custom View Options and will be 
+		  easily implimented when ready.
+
+		= Added fanart to DialogVideoInfo
+
+		= Fixed a bug with (FileBrowser) and (ContextMenu) being visible
+		  at the same time.
+
+		= Added DialogReopInfo.xml to the skin...looks like all of the 
+		  other media info windows for the most part, not sure what to 
+		  do with it at this point since I'm not sure how much of it 
+		  works as far as the "List of Built in Controls" is concerned.
+		  This will need to be revisited eventually, but it works with 
+		  the skin better than the default one that's packaged with a4x
+		  installer.
+	
+
 	10.21.14
 ------------------------------------------------------------------------------
 		= started making changes to the standard list view...some media

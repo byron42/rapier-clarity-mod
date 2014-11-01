@@ -527,7 +527,7 @@
 					<visible>Window.IsActive(VideoLibrary) + [Container.Content(Movies) | Container.Content(Seasons)]</visible>
 				</control>
 				<control type="togglebutton" id="2001">
-					<description>Large Poster (Games)</description>
+					<description>Large Poster (programs)</description>
 					<width>400</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
@@ -547,7 +547,7 @@
 					<onclick>Container.SetViewMode(100)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
-					<visible>Substring(Container.Folderpath,games)</visible>
+					<visible>Window.IsActive(programs)</visible>
 				</control>
 			<!--************************************************************************************************************-->
 				
