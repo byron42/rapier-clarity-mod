@@ -3,6 +3,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 10.21.14 Version 3.5.41
 
+	11.5.14
+------------------------------------------------------------------------------
+		= Fixed a bug with a Large Poster texture showing up every time
+		  a4x installer opened from home menu
+
+		= Completely remade TextViewer.xml to a fullscreen dialog...
+		  it looks pretty now
+
 	11.1.14
 ------------------------------------------------------------------------------
 		= Changed Large Poster (Programs) to work in all programs 

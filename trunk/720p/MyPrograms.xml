@@ -20,7 +20,7 @@
 		
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(147)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(127) | Window.IsActive(DialogRepoInfo.xml)">Conditional</animation> <!--FSD_ControlFade-->
@@ -985,15 +985,16 @@
 						<texture border="0,15,0,15">black.png</texture>
 						<!--ControlAreaBackgroundFadeAnim-->
 						<animation effect="fade" end="75" condition="true">Conditional</animation>
-						<visible>!Skin.HasSetting(HideLargePosterShadow)</visible>
+						<visible>!Skin.HasSetting(HideLargePosterShadow) + !Window.IsActive(101) + Control.IsVisible(100)</visible>
 					</control>
 					<control type="image">
 						<posx>-18</posx>
-						 <posy>148</posy>
-						 <width>1300</width>
-						 <height>502</height>
-						 <texture border="10">Glass/ShutDownButtonF.png</texture>
-						 <animation effect="fade" end="60" condition="true">Conditional</animation> 
+						<posy>148</posy>
+						<width>1300</width>
+						<height>502</height>
+						<texture border="10">Glass/ShutDownButtonF.png</texture>
+						<animation effect="fade" end="60" condition="true">Conditional</animation>
+						<visible>!Window.IsActive(101) + Control.IsVisible(100)</visible>
 					</control>
 					<!--************************************************************************************-->
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
