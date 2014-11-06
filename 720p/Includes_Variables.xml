@@ -122,7 +122,7 @@
 	
 <!--(((ALL OTHER BREADCRUMB LABELS)))=================================-->
 	<variable name="BreadCrumbLabel_Left">
-		<value condition="Window.IsVisible(DialogRepoInfo.xml)">[UPPERCASE]$LOCALIZE[24000][/UPPERCASE] </value> <!--Add-on-->
+		<value condition="Window.IsVisible(DialogRepoInfo.xml) | Window.IsVisible(textviewer)">[UPPERCASE]$LOCALIZE[24000][/UPPERCASE] </value> <!--Add-on-->
 		<value condition="Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[15016][/UPPERCASE] </value> <!--games-->
 		<value condition="Window.IsActive(3010)">[UPPERCASE]$LOCALIZE[470][/UPPERCASE] </value> <!--credits-->
 		<value condition="Window.IsVisible(126) | Window.IsVisible(128) | Window.IsVisible(129) | Window.IsVisible(132)">[UPPERCASE]$LOCALIZE[31910][/UPPERCASE] </value> <!--media-->
@@ -153,7 +153,7 @@
 	
 	<variable name="BreadCrumbLabel_Right">
 		<value condition="Substring(Container.Folderpath,games) + !Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[15016][/UPPERCASE] </value> <!--games-->
-		<value condition="Window.IsVisible(2001) | Window.IsVisible(2003) | Window.IsVisible(135) | Window.IsVisible(139) | Window.IsVisible(DialogRepoInfo.xml)">[UPPERCASE]$LOCALIZE[31019][/UPPERCASE] </value> <!--INFORMATION-->
+		<value condition="Window.IsVisible(2001) | Window.IsVisible(2003) | Window.IsVisible(135) | Window.IsVisible(139) | Window.IsVisible(DialogRepoInfo.xml) | Window.IsVisible(textviewer)">[UPPERCASE]$LOCALIZE[31019][/UPPERCASE] </value> <!--INFORMATION-->
 		<value condition="[Window.IsActive(1) + Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + Substring(Container.FolderPath,plugin://video/,Left)] + !Window.IsActive(PluginSettings)">[UPPERCASE]$LOCALIZE[24001][/UPPERCASE] </value> <!--PLUGINS-->
 		<value condition="Window.IsVisible(132) | Window.IsVisible(129) | Window.IsVisible(128) | Window.IsVisible(10140) | Window.IsVisible(126) | Window.IsVisible(4) | Window.IsVisible(127)">[UPPERCASE]$LOCALIZE[5][/UPPERCASE] </value> <!--SETTINGS-->
 		<value condition="Window.IsActive(501) | Window.IsActive(2) | [Window.IsActive(1) + !Substring(Container.FolderPath,plugin://programs/,Left)] | [Window.IsActive(videofiles) + !Window.IsActive(MovieInformation) + !Substring(Container.FolderPath,plugin://video/,Left)]">[UPPERCASE]$LOCALIZE[1214][/UPPERCASE] </value> <!--FILES-->
