@@ -167,10 +167,16 @@
 			<control type="group">   
 				<!--**************************************************************************** IconView *********************(50)*********-->
 				<control type="group" id="500">	
-					<!--constant top menubar animations-->
-					<animation effect="zoom" end="94" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
-					<animation effect="slide" end="20,16" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<!-- BOTTOM PANE + PERMANANT TOP MENU(shrink it to size AND move it) -->
+					<animation effect="zoom" end="88" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="13,52" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<!-- BOTTOM PANE + !PERMANANT TOP MENU(shrink it to size AND move it) -->
+					<animation effect="zoom" end="92" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<animation effect="slide" end="-2,0" time="0" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<!-- !BOTTOM PANE + PERMANANT TOP MENU -->
 					<animation effect="slide" end="20,18" time="0" condition="!Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+					<!-- BOTTOM PANE + !PERMANANT TOP MENU -->
+					<animation effect="slide" end="15,40" time="0" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 					<defaultcontrol always="true">50</defaultcontrol>
 					<visible>Control.IsVisible(50)</visible>	
 					<!--MediaViewOpenCloseAnim-->
@@ -183,10 +189,13 @@
 					<control type="scrollbar" id="150">
 						<description>IconViewScrollbar</description>
 						<posx>1250</posx>
-						<posy>92</posy>
+						<posy>42</posy>
 						<height>538</height>
 						<visible>!Skin.HasSetting(HideIconViewScrollbar) + Control.IsVisible(50)</visible>
 						<onleft>500</onleft>
+						<animation effect="slide" end="75,0" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
+						<animation effect="slide" end="45,0" time="0" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+						<animation effect="slide" end="-15,0" time="0" condition="!Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
 					</control>
 					<control type="panel" id="50">
 						<viewtype label="31103">Icon</viewtype>
@@ -202,21 +211,7 @@
 						<onright>150</onright>
 						<itemlayout height="207" width="228" >	
 						<!--Thumbs-->	
-							<control type="image"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<description>Cover</description>
-								<posx>25</posx>
-								<posy>78</posy>
-								<width>150</width>
-								<height>122</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio aligny="bottom">keep</aspectratio>
-								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
-								<bordersize>6</bordersize>
-								<visible>!IsEmpty(ListItem.Thumb)</visible>
-							</control>
-							<control type="image"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="image"> 
 								<description>Cover</description>
 								<posx>25</posx>
 								<posy>32</posy>
@@ -229,22 +224,7 @@
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Icons-->
-							<control type="image"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<description>Default Cover</description>
-								<posx>40</posx>
-								<posy>88</posy>
-								<width>115</width>
-								<height>115</height>
-								<aspectratio align="center">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
-								<bordersize>9</bordersize>
-								<colordiffuse>BBFFFFFF</colordiffuse>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
-							</control>
-							<control type="image"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="image"> 
 								<description>Default Cover</description>
 								<posx>50</posx>
 								<posy>46</posy>
@@ -258,21 +238,7 @@
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Labels-->	
-							<control type="label"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<posx>98</posx>
-								<posy>202</posy>
-								<width>150</width>
-								<font>ListLabel2Font</font>
-								<textcolor>gray</textcolor>
-								<selectedcolor>SelectedColor2</selectedcolor>
-								<shadowcolor>black</shadowcolor>
-								<align>center</align>
-								<aligny>top</aligny>
-								<info>ListItem.Label</info>
-							</control>
-							<control type="label"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="label"> 
 								<posx>116</posx>
 								<posy>174</posy>
 								<width>165</width>
@@ -288,16 +254,7 @@
 						</itemlayout>															
 						<focusedlayout height="211" width="234">
 						<!--Focus Selector-->
-							<control type="image"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<posx></posx>
-								<posy>60</posy>
-								<width>204</width>
-								<height>179</height>
-								<texture border="10">Glass/keyfocus.png</texture>
-							</control>
-							<control type="image"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="image"> 
 								<posx>2</posx>
 								<posy>13</posy>
 								<width>221</width>
@@ -307,23 +264,7 @@
 								<animation effect="zoom" start="107" center="auto" time="0">unfocus</animation>
 							</control>	
 						<!--Thumbs-->	
-							<control type="image"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<description>Cover</description>
-								<posx>27</posx>
-								<posy>78</posy>
-								<width>150</width>
-								<height>122</height>
-								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
-								<bordersize>6</bordersize>
-								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
-								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
-								<visible>!IsEmpty(ListItem.Thumb)</visible>
-							</control>
-							<control type="image"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="image"> 
 								<description>Cover</description>
 								<posx>25</posx>
 								<posy>32</posy>
@@ -338,21 +279,7 @@
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Icons-->
-							<control type="image"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<description>Default Cover</description>
-								<posx>43</posx>
-								<posy>88</posy>
-								<width>115</width>
-								<height>115</height>
-								<aspectratio align="center">keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
-								<animation effect="zoom" start="115" center="auto" time="0">unfocus</animation>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
-							</control>
-							<control type="image"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="image"> 
 								<description>Default Cover</description>
 								<posx>50</posx>
 								<posy>46</posy>
@@ -365,23 +292,7 @@
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 							</control>
 						<!--Labels-->	
-							<control type="label"> <!--Infopane-->
-								<visible>Skin.HasSetting(HideInfoPane)</visible>
-								<posx>103</posx>
-								<posy>204</posy>
-								<width>152</width>
-								<font>ListLabel2Font</font>
-								<textcolor>ThemeColor</textcolor>
-								<selectedcolor>SelectedColor2</selectedcolor>
-								<shadowcolor>black</shadowcolor>
-								<align>center</align>
-								<aligny>top</aligny>
-								<animation effect="zoom" end="103" center="auto" time="0">focus</animation>
-								<animation effect="zoom" start="103" center="auto" time="0">unfocus</animation>
-								<info>ListItem.Label</info>
-							</control>
-							<control type="label"> <!--NoInfopane-->
-								<visible>!Skin.HasSetting(HideInfoPane)</visible>
+							<control type="label"> 
 								<posx>124</posx>
 								<posy>184</posy>
 								<width>158</width>
@@ -1000,13 +911,14 @@
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
 					<animation effect="slide" end="0,67" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<control type="group">
+						
 					<!--MediaInfo_+_InfoPane_Slide-->
 						<animation effect="slide" end="0,40" time="300" condition="true">Conditional</animation>
 						<control type="wraplist" id="100">
 							<viewtype label="31116">Large Poster</viewtype>
-							<posx>-60</posx>
+							<posx>-110</posx>
 							<posy>180</posy>
-							<width>1350</width>
+							<width>1410</width>
 							<height>400</height>
 							<focusposition>3</focusposition>
 							<pagecontrol>150</pagecontrol>
@@ -1016,14 +928,15 @@
 							<itemgap></itemgap>
 							<onup>505</onup>
 							<ondown>150</ondown>
-							<itemlayout width="200">
+							<itemlayout width="215">
 								<control type="image">
 									<description>Cover</description>
 									<posx></posx>
 									<posy>0</posy>
-									<width>195</width>
-									<height>300</height>
-									<texture background="true">$INFO[ListItem.Thumb]</texture>
+									<width>214</width>
+									<height>299</height>
+									<texture background="true" colordiffuse="BBBB0000">$INFO[ListItem.Thumb]</texture>
+									<colordiffuse>B0FFFFFF</colordiffuse>
 									<aspectratio>stretch</aspectratio>
 									<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 									<bordersize>9</bordersize>
@@ -1034,15 +947,16 @@
 									<description>Default Cover BG</description>
 									<posx></posx>
 									<posy></posy>
-									<width>195</width>
-									<height>300</height>
+									<width>214</width>
+									<height>299</height>
 									<texture background="true" border="10">Glass/ShutDownButton.png</texture>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
+									<!-- <animation effect="fade" start="100" end="100" time="0">Visible</animation> -->
 								</control>
 								<control type="image">
 									<description>Default Cover</description>
-									<posx>48</posx>
-									<posy>100</posy>
+									<posx>57</posx>
+									<posy>99</posy>
 									<width>100</width>
 									<height>100</height>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -1050,19 +964,19 @@
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 								</control>
 								<!--*********************************************************************-->
-								<control type="image">
+								<!-- <control type="image">
 									<posx>8</posx>
 									<posy>5</posy>
-									<width>184</width>
-									<height>292</height>
+									<width>203</width>
+									<height>291</height>
 									<texture>background-dim.png</texture>
 									<aspectratio>stretch</aspectratio>
 									<visible>!IsEmpty(ListItem.Thumb)</visible>
 									<animation effect="fade" end="30" condition="true">Conditional</animation>
-								</control>
+								</control> -->
 								<control type="image">
 									<description>Trainers Overlay Shadow</description>
-									<posx>122</posx>
+									<posx>138</posx>
 									<posy>3</posy>
 									<width>64</width>
 									<height>58</height>
@@ -1073,7 +987,7 @@
 								</control>
 								<control type="image">
 									<description>Trainers Overlay</description>
-									<posx>122</posx>
+									<posx>138</posx>
 									<posy>3</posy>
 									<width>64</width>
 									<height>64</height>
@@ -1082,17 +996,17 @@
 									<visible>!IsEmpty(ListItem.Overlay)</visible>
 								</control>
 							</itemlayout>	
-							<focusedlayout width="200">
+							<focusedlayout width="215">
 								<control type="group">	
 									<!--3DViewFocusAnim()-->
-									<animation effect="zoom" end="135" center="96,150" time="150">Focus</animation>
-									<animation effect="zoom" start="135" end="100" center="96,150" time="150">UnFocus</animation>
+									<animation effect="zoom" end="142,130" center="108,150" time="150">Focus</animation>
+									<animation effect="zoom" start="142,130" end="100,100" center="111,150" time="150">UnFocus</animation>
 									<control type="image">
 										<description>Cover</description>
 										<posx></posx>
 										<posy></posy>
-										<width>195</width>
-										<height>300</height>
+										<width>214</width>
+										<height>299</height>
 										<texture  background="true">$INFO[ListItem.Thumb]</texture>
 										<bordertexture border="10">Glass/keyfocus.png</bordertexture>
 										<bordersize>10</bordersize>
@@ -1100,64 +1014,75 @@
 										<visible>!IsEmpty(ListItem.Thumb)</visible>
 									</control>
 									<!--********************** Default_Image(ICON)***************************-->
-									<control type="image">
+									<control type="image" id="123">
 										<description>Default Cover BG</description>
 										<posx></posx>
 										<posy></posy>
-										<width>195</width>
-										<height>300</height>
-										<texture  background="true" border="10">Glass/keyfocus.png</texture>
+										<width>214</width>
+										<height>299</height>
+										<texture border="10">Glass/keyfocus.png</texture>
 										<visible>IsEmpty(ListItem.Thumb)</visible>
 									</control>
 									<control type="image">
 										<description>Default Cover</description>
-										<posx>48</posx>
-										<posy>100</posy>
-										<width>100</width>
+										<posx>64</posx>
+										<posy>99</posy>
+										<width>88</width>
 										<height>100</height>
 										<texture background="true">$INFO[ListItem.Icon]</texture>
 										<aspectratio>center</aspectratio>
 										<visible>IsEmpty(ListItem.Thumb)</visible>
 									</control>
 									<!--*********************************************************************-->
-								<!--glosss overlay-->	
+								<!--gloss overlay-->	
 									<control type="image">
 										<description>overlay</description>
 										<posx>5</posx>
 										<posy>5</posy>
-										<width>184</width>
-										<height>290</height>
+										<width>205</width>
+										<height>291</height>
 										<texture>item-focus-gloss-overlay.png</texture>
 										<aspectratio aligny="top">stretch</aspectratio> 
-										<visible>!Skin.HasSetting(HideGamesLargePosterViewGlossOverlay)</visible>
+										<visible>!Skin.HasSetting(HideGamesLargePosterViewGlossOverlay) + Control.HasFocus(100)</visible>
+										<animation effect="fade" start="0" end="100" time="0">Focus</animation>
+										<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+										<animation effect="fade" start="0" end="100" delay="" time="150">VisibleChange</animation>
+										<animation effect="fade" start="100" end="0" time="0" condition="Control.HasFocus(150)">Conditional</animation>
 									</control> 
 								<!--watched overlay-->
 									<control type="image">
 										<posx></posx>
 										<posy>300</posy>
-										<width>195</width>
-										<height>300</height>
+										<width>214</width>
+										<height>299</height>
 										<texture diffuse="reflection.png">background-dim.png</texture>
 										<aspectratio>stretch</aspectratio>
 										<visible>!IsEmpty(ListItem.Thumb)</visible>
 										<animation effect="fade" end="90" condition="true">Conditional</animation>
+										<animation effect="fade" start="0" end="100" time="0">Focus</animation>
+										<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+										<animation effect="fade" start="0" end="100" delay="" time="150">VisibleChange</animation>
+										<visible>Control.HasFocus(100)</visible>
 									</control>
 									<control type="image">
 										<description>Cover Reflection</description>
 										<posx></posx>
 										<posy>300</posy>
-										<width>195</width>
-										<height>300</height>
+										<width>214</width>
+										<height>299</height>
 										<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
 										<bordertexture flipy="true" border="10" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
 										<bordersize>10</bordersize>
 										<aspectratio aligny="top">keep</aspectratio>
-										<fadetime>IconCrossfadeTime</fadetime>
 										<visible>!IsEmpty(ListItem.Thumb)</visible>
+										<animation effect="fade" start="0" end="100" time="0">Focus</animation>
+										<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+										<animation effect="fade" start="0" end="100" delay="" time="150">VisibleChange</animation>
+										<visible>Control.HasFocus(100)</visible>
 									</control>
 									<control type="image">
 										<description>Trainer Overlay Shadow</description>
-										<posx>122</posx>
+										<posx>138</posx>
 										<posy>3</posy>
 										<width>64</width>
 										<height>58</height>
@@ -1168,7 +1093,7 @@
 									</control> 
 									<control type="image">
 										<description>Trainer Overlay</description>
-										<posx>122</posx>
+										<posx>138</posx>
 										<posy>3</posy>
 										<width>64</width>
 										<height>64</height>
@@ -1239,7 +1164,7 @@
 						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
 						<visible>!Skin.HasSetting(HideLargePosterGamesScrollbar)</visible>
 						<onup>500</onup>
-						<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
+						<animation effect="slide" end="0,66" condition="!Skin.HasSetting(HideInfoPane) | Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					</control>
 				</control>	
 			</control>	
@@ -1779,7 +1704,8 @@
 				<!--************************************ SortLetterNotification ******************************************-->
 				<control type="group">
 					<posy>SortLetterOffsetY</posy>
-					<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling</visible>
+					<visible>[Control.IsVisible(50) + Container.Scrolling] | [Control.IsVisible(51) + Container.Scrolling] | [Control.IsVisible(52) + Container.Scrolling]</visible>
+					<animation effect="fade" start="100" end="0" time="0" delay="0" condition="Window.IsActive(101)">Conditional</animation>
 					<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 					<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 					<control type="image">
@@ -1842,7 +1768,7 @@
 				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
 				<!--InfoPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
-				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)</visible>
+				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(100) + Skin.HasSetting(HideInfoPane)</visible>
 				<!--****************************************************************************************************************-->
 				
 				<!--************************************* InfoPaneMediaDetails *****************************************************-->
@@ -1900,7 +1826,7 @@
 				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
 			</control>
 			<!--***********************************************************************************************************************-->
-		</control>'
+		</control>
 		
 	</controls>		
 </window>
