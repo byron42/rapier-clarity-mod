@@ -890,13 +890,22 @@
 					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 					<!--************************ ListMediaControlAreaBackground ****************************-->
 					<control type="image">
-						<posy>450</posy>
-						<width>ScreenWidth</width>
-						<height>400</height>
-						<texture border="0,15,0,15">black.png</texture>
-						<!--ControlAreaBackgroundFadeAnim-->
-						<animation effect="fade" end="75" condition="true">Conditional</animation>
-						<visible>!Skin.HasSetting(HideLargePosterShadow) + !Window.IsActive(101) + Control.IsVisible(100)</visible>
+						<posx>-18</posx>
+						<posy>148</posy>
+						<width>1300</width>
+						<height>502</height>
+						<texture border="10">special://skin/images/skin/LightPosterBG.png</texture>
+						<animation effect="fade" end="65" condition="true">Conditional</animation>
+						<visible>!Window.IsActive(101) + Control.IsVisible(100) + !Skin.HasSetting(RemovePosterLighterBackgound)</visible>
+					</control>
+					<control type="image">
+						<posx>-18</posx>
+						<posy>148</posy>
+						<width>1300</width>
+						<height>502</height>
+						<texture border="10">special://skin/images/skin/DarkPosterBG.png</texture>
+						<animation effect="fade" end="65" condition="true">Conditional</animation>
+						<visible>!Window.IsActive(101) + Control.IsVisible(100) + Skin.HasSetting(RemovePosterLighterBackgound)</visible>
 					</control>
 					<control type="image">
 						<posx>-18</posx>
@@ -911,9 +920,9 @@
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
 					<animation effect="slide" end="0,67" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 					<control type="group">
-						
+					<animation effect="slide" end="0,40" time="300" condition="true">Conditional</animation>
 					<!--MediaInfo_+_InfoPane_Slide-->
-						<animation effect="slide" end="0,40" time="300" condition="true">Conditional</animation>
+						<animation effect="slide" end="0,-55" time="300" condition="!Skin.HasSetting(HideInfoPane)">Conditional</animation>
 						<control type="wraplist" id="100">
 							<viewtype label="31116">Large Poster</viewtype>
 							<posx>-110</posx>
@@ -951,7 +960,6 @@
 									<height>299</height>
 									<texture background="true" border="10">Glass/ShutDownButton.png</texture>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
-									<!-- <animation effect="fade" start="100" end="100" time="0">Visible</animation> -->
 								</control>
 								<control type="image">
 									<description>Default Cover</description>
@@ -964,16 +972,18 @@
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 								</control>
 								<!--*********************************************************************-->
-								<!-- <control type="image">
-									<posx>8</posx>
-									<posy>5</posy>
-									<width>203</width>
-									<height>291</height>
-									<texture>background-dim.png</texture>
-									<aspectratio>stretch</aspectratio>
+								<control type="image">
+									<description>Cover Reflection</description>
+									<posx></posx>
+									<posy>301</posy>
+									<width>214</width>
+									<height>299</height>
+									<texture background="true" flipy="true" diffuse="reflection.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture flipy="true" border="10" diffuse="reflection.png">Glass/ShutDownButton.png</bordertexture>
+									<bordersize>10</bordersize>
+									<aspectratio aligny="top">keep</aspectratio>
 									<visible>!IsEmpty(ListItem.Thumb)</visible>
-									<animation effect="fade" end="30" condition="true">Conditional</animation>
-								</control> -->
+								</control>
 								<control type="image">
 									<description>Trainers Overlay Shadow</description>
 									<posx>138</posx>
@@ -999,8 +1009,8 @@
 							<focusedlayout width="215">
 								<control type="group">	
 									<!--3DViewFocusAnim()-->
-									<animation effect="zoom" end="142,130" center="108,150" time="150">Focus</animation>
-									<animation effect="zoom" start="142,130" end="100,100" center="111,150" time="150">UnFocus</animation>
+									<animation effect="zoom" end="130,130" center="108,150" time="150">Focus</animation>
+									<animation effect="zoom" start="130,130" end="100,100" center="111,150" time="150">UnFocus</animation>
 									<control type="image">
 										<description>Cover</description>
 										<posx></posx>
@@ -1062,7 +1072,7 @@
 										<animation effect="fade" start="0" end="100" time="0">Focus</animation>
 										<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 										<animation effect="fade" start="0" end="100" delay="" time="150">VisibleChange</animation>
-										<visible>Control.HasFocus(100)</visible>
+										<visible>false</visible>
 									</control>
 									<control type="image">
 										<description>Cover Reflection</description>
@@ -1075,10 +1085,6 @@
 										<bordersize>10</bordersize>
 										<aspectratio aligny="top">keep</aspectratio>
 										<visible>!IsEmpty(ListItem.Thumb)</visible>
-										<animation effect="fade" start="0" end="100" time="0">Focus</animation>
-										<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
-										<animation effect="fade" start="0" end="100" delay="" time="150">VisibleChange</animation>
-										<visible>Control.HasFocus(100)</visible>
 									</control>
 									<control type="image">
 										<description>Trainer Overlay Shadow</description>
@@ -1124,21 +1130,13 @@
 						<posy>580</posy>
 						<control type="label">
 							<width>920</width>
-							<posx>20</posx>
-							<posy>8</posy>
+							<posx>185</posx>
+							<posy>0</posy>
+							<align>center</align>
 							<textcolor>Grey</textcolor>
 							<font>InfoPaneHeaderFont</font>
 							<label>$INFO[ListItem.Label]</label>
 							<scroll>true</scroll>
-						</control>
-						<control type="label">
-							<width>300</width>
-							<posx>1265</posx>
-							<posy>8</posy>
-							<align>right</align>
-							<textcolor>Grey</textcolor>
-							<font>InfoPaneHeaderFont</font>
-							<label>$INFO[ListItem.Year]</label>
 						</control>
 					</control>
 					<!--ViewsScreenFullFadeAnim-->

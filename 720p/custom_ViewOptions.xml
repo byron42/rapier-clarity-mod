@@ -4102,6 +4102,29 @@
 					<onclick>Skin.ToggleSetting(HideLargePosterShadow)</onclick>
 					<visible>Skin.String(CurrentViewMode,100)</visible>
 				</control>
+				<control type="radiobutton" id="20790">
+					<description>Large Poster Use Dark Background (PROGRAMS)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[377] $LOCALIZE[33068]</label>
+					<selected>Skin.HasSetting(RemovePosterLighterBackgound)</selected>
+					<onclick>Skin.ToggleSetting(RemovePosterLighterBackgound)</onclick>
+					<visible>Skin.String(CurrentViewMode,100)</visible>
+				</control>
 				<control type="radiobutton" id="206511">
 					<description>Large Poster Hide Scrollbar (PROGRAMS)</description>
 					<width>450</width>
