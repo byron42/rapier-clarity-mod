@@ -11,6 +11,10 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 		= Changed the gloss overlay animation in LargePoster so it 
 		  disappears immediately. 
+
+		= Reproduced Icon veiw from what I did in programs through all
+		  of the other 9 times this view is active in main windows...
+		  got rid of about 900 lines of garbage code in the process.
 		  
 
 	11.5.14
