@@ -1649,6 +1649,28 @@
 							<selected>Skin.HasSetting(HideGlobalSearchIcon)</selected>
 							<onclick>Skin.ToggleSetting(HideGlobalSearchIcon)</onclick>
 						</control> 
+						<control type="radiobutton" id="100299"> 
+							<description>Do Not Dim Background When Media Is Playing</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[352] $LOCALIZE[12005] $LOCALIZE[1397] $LOCALIZE[250]</label>
+							<selected>!Skin.HasSetting(HideFSBackgroundDim)</selected>
+							<onclick>Skin.ToggleSetting(HideFSBackgroundDim)</onclick>
+						</control> 
 						
 						<control type="button" id="11132"> <!--SPACER-->
 							<description>SPACER</description>

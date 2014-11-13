@@ -395,7 +395,7 @@
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<!--BackgroundVizDimAnim-->
+						<visible>!Skin.HasSetting(HideFSBackgroundDim)</visible>
 					</control>
 				</control>
 				<!--*****************************************************************************************************-->
@@ -416,7 +416,7 @@
 						<texture>background-dim.png</texture>
 						<!--BackgroundVizDimAnim-->
 						<animation effect="fade" end="70" condition="true">Conditional</animation>
-						<!--BackgroundVizDimAnim-->
+						<visible>!Skin.HasSetting(HideFSBackgroundDim)</visible>
 					</control>	
 				</control>
 				<!--*****************************************************************************************************-->
