@@ -755,6 +755,75 @@
 					<onclick>Skin.ToggleSetting(HideThumbnailViewScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,63)</visible>
 				</control>
+				<control type="radiobutton" id="10310">
+					<description>CoverFlow Hide Case (MusicLibrary)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Hide CD Case</label>
+					<selected>Skin.HasSetting(HideMusicCase)</selected>
+					<onclick>Skin.ToggleSetting(HideMusicCase)</onclick>
+					<visible>Skin.String(CurrentViewMode,570) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible>
+				</control>
+				<control type="radiobutton" id="10311">
+					<description>CoverFlow Hide Hi-lite for reflections(ALL MUSIC)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[377] $LOCALIZE[33068]</label>
+					<selected>Skin.HasSetting(RemoveCoverFlowLighterBackgound)</selected>
+					<onclick>Skin.ToggleSetting(RemoveCoverFlowLighterBackgound)</onclick>
+					<visible>Skin.String(CurrentViewMode,570)</visible>
+				</control>
+				<control type="radiobutton" id="10266">
+					<description>CoverFlow (Music)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideCoverFlowScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideCoverFlowScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,570)</visible>
+				</control>
 				<control type="radiobutton" id="10270">
 					<description>List View Hide Star Rating (Non Library)</description>
 					<width>450</width>
