@@ -378,6 +378,16 @@
 <!--((( These will need to be figured out!!! )))-->
 		<!-- <value condition="!IsEmpty(ListItem.Property(Album_Description)) + Window.IsVisible(MusicFiles)">$INFO[ListItem.Property(Album_Description)]</value> -->
 		<!-- <value condition="!IsEmpty(ListItem.Property(Addon.Summary) + Window.IsVisible(Programs)">$INFO[ListItem.Property(Addon.Summary)]</value> -->
-	
 	</variable>
+	
+<!-- COVERFLOW VARS -->
+	<variable name="ViewCoverFlowLabel1">
+		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label2]</value>
+		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="ViewCoverFlowLabel2">
+		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label][/B]</value>
+		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label2][/B]</value>
+	</variable>
+	
 </includes>
