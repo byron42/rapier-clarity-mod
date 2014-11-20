@@ -1586,25 +1586,6 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
-						<control type="button" id="11131"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
 						<control type="radiobutton" id="30"> 
 							<description>Hide xbmc4xbox home icon</description>
 							<posx>10</posx>
@@ -1648,6 +1629,28 @@
 							<label>31539</label>
 							<selected>Skin.HasSetting(HideGlobalSearchIcon)</selected>
 							<onclick>Skin.ToggleSetting(HideGlobalSearchIcon)</onclick>
+						</control>
+						<control type="radiobutton" id="100300"> 
+							<description>Dim HomeScreen Backgrounds</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[352] $LOCALIZE[513] $LOCALIZE[33069]</label>
+							<selected>!Skin.HasSetting(DimHomeScreenBG)</selected>
+							<onclick>Skin.ToggleSetting(DimHomeScreenBG)</onclick>
 						</control> 
 						<control type="radiobutton" id="100299"> 
 							<description>Do Not Dim Background When Media Is Playing</description>
@@ -1670,27 +1673,7 @@
 							<label>$LOCALIZE[352] $LOCALIZE[12005] $LOCALIZE[1397] $LOCALIZE[250]</label>
 							<selected>!Skin.HasSetting(HideFSBackgroundDim)</selected>
 							<onclick>Skin.ToggleSetting(HideFSBackgroundDim)</onclick>
-						</control> 
-						
-						<control type="button" id="11132"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
+						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11905">
 							<posx>-3</posx><!---->
@@ -1708,25 +1691,6 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
-						<control type="button" id="11133"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
 				<!-- HIDE CATEGORIES -->
 						<control type="radiobutton" id="31">
 							<description>Hide Categories</description>
@@ -2614,27 +2578,6 @@
 							</animation>
 							<enable>!Skin.HasSetting(HideAddonsCategory)</enable>
 						</control>
-							
-						<control type="button" id="11134"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
-						
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11906">
 							<posx>-3</posx><!---->
@@ -2652,25 +2595,6 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
-						<control type="button" id="11135"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
 						<control type="radiobutton" id="10130"> 
 							<description>Always Show Home Submenus</description>
 							<posx>10</posx>
@@ -3143,25 +3067,6 @@
 							<label>$LOCALIZE[24022] / $LOCALIZE[24021]  $LOCALIZE[1034]  $LOCALIZE[31605]</label>
 							<onclick>ActivateWindow(3021)</onclick>
 						</control>
-						<control type="button" id="11136"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11907">
 							<posx>-3</posx><!---->
@@ -3179,25 +3084,6 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->					
-						<control type="button" id="11137"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>
 						<control type="radiobutton" id="150">
 							<description>Hide Recent Movies</description>
 							<posx>10</posx>
@@ -3290,25 +3176,6 @@
 							<onclick>Skin.ToggleSetting(HideRecentMusicVideos)</onclick>
 							<enable>Library.HasContent(MusicVideos)</enable>
 						</control>
-						<control type="button" id="13136"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>	
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="12908">
 							<posx>-3</posx><!---->
@@ -3326,25 +3193,6 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->					
-						<control type="button" id="13137"> <!--SPACER-->
-							<description>SPACER</description>
-							<width></width>
-							<height>13</height> <!--=-->
-							<font></font>
-							<textcolor></textcolor>
-							<focusedcolor></focusedcolor>
-							<disabledcolor></disabledcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textoffsetx></textoffsetx>
-							<texturefocus border="5"></texturefocus>
-							<colordiffuse></colordiffuse>
-							<texturenofocus border="5"></texturenofocus>
-							<colordiffuse></colordiffuse>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<enable>false</enable>
-						</control>
 						<control type="radiobutton" id="41">
 							<description>Always Hide Category Icons</description>
 							<posx>10</posx>
