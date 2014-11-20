@@ -45,7 +45,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -62,7 +63,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -79,7 +81,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -96,7 +99,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -113,7 +117,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -130,7 +135,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -147,7 +153,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -164,7 +171,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -181,7 +189,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -198,7 +207,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -210,7 +220,8 @@
 						<visible>Container(850).HasFocus(9) + [[!Skin.HasSetting(Enable_Weather_Conditional_Backgrounds_HOME) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]] | [Skin.HasSetting(Disable_Weather_Conditional_Backgrounds) + [!Control.IsEnabled(1015) | Control.IsEnabled(1015)]]] + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<posx>0</posx>
 						<include>BackgroundOffset</include>
 						<width>1280</width>
@@ -231,7 +242,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -248,7 +260,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -265,7 +278,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -282,7 +296,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -299,7 +314,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -316,7 +332,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -333,7 +350,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -350,7 +368,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
@@ -367,7 +386,8 @@
 					<description>Home Backgrounds</description>
 					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 					<control type="multiimage">
-						<animation effect="fade" end="69" condition="true">Conditional</animation> <!--SETupForCustomRamSaver-->
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
