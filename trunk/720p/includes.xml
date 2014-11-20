@@ -262,7 +262,7 @@
 		<textwidth>310</textwidth>
 	</include>
 	
-<!--===============================================================((( HOME BACKGROUND RESOLUTIONS )))=================-->
+<!--((( HOME BACKGROUND RESOLUTIONS )))==============================================================-->
 <!-- HOME Programs -->
 	<include name="HomeProgramsBackground_And_Res">
 		<include condition="!Skin.HasSetting(UseHighResBG)">HomeProgramsNormal</include>
@@ -346,10 +346,10 @@
 		<include condition="Skin.HasSetting(UseHighResBG)">HomeWeatherHiRes</include>
 	</include>
 	<include name="HomeWeatherNormal">
-		<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 	</include>
 	<include name="HomeWeatherHiRes">
-		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-weather-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 	</include>
 <!-- HOME Addons -->
 	<include name="HomeAddonsBackground_And_Res">
@@ -362,66 +362,15 @@
 	<include name="HomeAddonsHiRes">
 		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
 	</include>
-<!--===============================================================((( ALL OTHER BACKGROUND RESOLUTIONS )))=================-->	
-	<!-- System -->
-	<include name="SystemBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">SystemNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">SystemHiRes</include>
-	</include>
-	<include name="SystemNormal">
-		<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
-	</include>
-	<include name="SystemHiRes">
-		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system.jpg</texture>
-	</include>
-	<!-- Music -->
-	<include name="MusicBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">MusicNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">MusicHiRes</include>
-	</include>
-	<include name="MusicNormal">
-		<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
-	</include>
-	<include name="MusicHiRes">
-		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music.jpg</texture>
-	</include>
-	<!-- General -->
-	<include name="GeneralBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">GeneralNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">GeneralHiRes</include>
-	</include>
-	<include name="GeneralNormal">
-		<texture background="true">special://skin/images/backgrounds/background-general.jpg</texture>
-	</include>
-	<include name="GeneralHiRes">
-		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general.jpg</texture>
-	</include>
-	<!-- Scripts -->
-	<include name="ScriptsBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">ScriptsNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">ScriptsHiRes</include>
-	</include>
-	<include name="ScriptsNormal">
-		<texture background="true">special://skin/images/backgrounds/background-scripts.jpg</texture>
-	</include>
-	<include name="ScriptsHiRes">
-		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts.jpg</texture>
-	</include>
-	<!-- Videos -->
-	<include name="VideosBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">VideosNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">VideosHiRes</include>
-	</include>
-	<include name="VideosNormal">
-		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
-	</include>
-	<include name="VideosHiRes">
-		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
-	</include>
-	<!-- Programs -->
+
+<!--((( ALL OTHER BACKGROUND RESOLUTIONS )))=========================================================-->	
+	
+	<!--********************************************************** PROGRAMS *********************-->
 	<include name="ProgramsBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">ProgramsNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">ProgramsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimProgramsCustomBG)">ProgramsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimProgramsCustomBG)">ProgramsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimProgramsCustomBG)">ProgramsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimProgramsCustomBG)">ProgramsHiResNoDim</include>
 	</include>
 	<include name="ProgramsNormal">
 		<texture background="true">special://skin/images/backgrounds/background-programs.jpg</texture>
@@ -429,10 +378,21 @@
 	<include name="ProgramsHiRes">
 		<texture background="true">special://skin/images/backgrounds/HI-RES/background-programs.jpg</texture>
 	</include>
-	<!-- Pictures -->
+																			<!--no dim-->
+	<include name="ProgramsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-programs-home.jpg</texture>
+	</include>
+	<include name="ProgramsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-programs-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** PICTURES *********************-->
 	<include name="PicturesBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">PicturesNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">PicturesHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimPicturesCustomBG)">PicturesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimPicturesCustomBG)">PicturesHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimPicturesCustomBG)">PicturesNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimPicturesCustomBG)">PicturesHiResNoDim</include>
 	</include>
 	<include name="PicturesNormal">
 		<texture background="true">special://skin/images/backgrounds/background-pictures.jpg</texture>
@@ -440,10 +400,175 @@
 	<include name="PicturesHiRes">
 		<texture background="true">special://skin/images/backgrounds/HI-RES/background-pictures.jpg</texture>
 	</include>
-	<!-- Weather -->
+																			<!--no dim-->
+	<include name="PicturesNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-pictures-home.jpg</texture>
+	</include>
+	<include name="PicturesHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-pictures-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** MUSIC ***********************-->
+	<include name="MusicBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMusicCustomBG)">MusicNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMusicCustomBG)">MusicHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMusicCustomBG)">MusicNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMusicCustomBG)">MusicHiResNoDim</include>
+	</include>
+	<include name="MusicNormal">
+		<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
+	</include>
+	<include name="MusicHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="MusicNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-music-home.jpg</texture>
+	</include>
+	<include name="MusicHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** VIDEO ***********************-->
+	<include name="VideosBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimVideosCustomBG)">VideosNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimVideosCustomBG)">VideosHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimVideosCustomBG)">VideosNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimVideosCustomBG)">VideosHiResNoDim</include>
+	</include>
+	<include name="VideosNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="VideosHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="VideosNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="VideosHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** MOVIES **********************-->
+	<include name="MoviesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMoviesCustomBG)">MoviesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMoviesCustomBG)">MoviesHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMoviesCustomBG)">MoviesNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMoviesCustomBG)">MoviesHiResNoDim</include>
+	</include>
+	<include name="MoviesNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="MoviesHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="MoviesNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="MoviesHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** TV SHOWS **********************-->
+	<include name="TvShowsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimTvShowsCustomBG)">TvShowsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimTvShowsCustomBG)">TvShowsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimTvShowsCustomBG)">TvShowsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimTvShowsCustomBG)">TvShowsHiResNoDim</include>
+	</include>
+	<include name="TvShowsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="TvShowsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="TvShowsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="TvShowsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* GENERAL ***********************-->
+	<include name="GeneralBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimGeneralCustomBG)">GeneralNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimGeneralCustomBG)">GeneralHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimGeneralCustomBG)">GeneralNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimGeneralCustomBG)">GeneralHiResNoDim</include>
+	</include>
+	<include name="GeneralNormal">
+		<texture background="true">special://skin/images/backgrounds/background-general.jpg</texture>
+	</include>
+	<include name="GeneralHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="GeneralNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-general-home.jpg</texture>
+	</include>
+	<include name="GeneralHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* SCRIPTS ***********************-->
+	<include name="ScriptsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimScriptsCustomBG)">ScriptsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimScriptsCustomBG)">ScriptsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimScriptsCustomBG)">ScriptsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimScriptsCustomBG)">ScriptsHiResNoDim</include>
+	</include>
+	<include name="ScriptsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-scripts.jpg</texture>
+	</include>
+	<include name="ScriptsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="ScriptsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-scripts-home.jpg</texture>
+	</include>
+	<include name="ScriptsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** SYSTEM ***********************-->
+	<include name="SystemBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimSystemCustomBG)">SystemNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimSystemCustomBG)">SystemHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimSystemCustomBG)">SystemNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimSystemCustomBG)">SystemHiResNoDim</include>
+	</include>
+	<include name="SystemNormal">
+		<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
+	</include>
+	<include name="SystemHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="SystemNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-system-NoDim.jpg</texture>
+	</include>
+	<include name="SystemHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* WEATHER ***********************-->
 	<include name="WeatherBackground_And_Res">
-		<include condition="!Skin.HasSetting(UseHighResBG)">WeatherNormal</include>
-		<include condition="Skin.HasSetting(UseHighResBG)">WeatherHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimWeatherCustomBG)">WeatherNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimWeatherCustomBG)">WeatherHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimWeatherCustomBG)">WeatherNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimWeatherCustomBG)">WeatherHiResNoDim</include>
 	</include>
 	<include name="WeatherNormal">
 		<texture background="true">special://skin/images/backgrounds/background-weather.jpg</texture>
@@ -451,4 +576,12 @@
 	<include name="WeatherHiRes">
 		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather.jpg</texture>
 	</include>
+																			<!--no dim-->
+	<include name="WeatherNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-weather-home.jpg</texture>
+	</include>
+	<include name="WeatherHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
 </includes>

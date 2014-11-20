@@ -66,7 +66,7 @@
 							<include>BackgroundOffset</include>
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
-							<include>VideosBackground_And_Res</include>
+							<include>MoviesBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(ApplyAllMoviesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
@@ -101,7 +101,7 @@
 							<include>BackgroundOffset</include>
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
-							<include>VideosBackground_And_Res</include>
+							<include>TvShowsBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(ApplyAllTVShowsCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
@@ -238,6 +238,7 @@
 				<!--******************************* FullControlAreaBackground *******************************************-->
 				<control type="group">	
 					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
+					<animation effect="fade" start="100" end="0" time="0" condition="Control.IsVisible(52)">Conditional</animation>
 					<control type="image">
 						<include>BackgroundOffset</include>
 						<width>ScreenWidth</width>
