@@ -62,7 +62,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
+						<include>MusicBackground_And_Res</include>
 						<colordiffuse>-</colordiffuse>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>

@@ -49,7 +49,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeProgramsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -66,7 +66,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomePicturesBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -83,7 +83,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeMusicBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -100,7 +100,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -117,7 +117,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -134,7 +134,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeVideosBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -151,7 +151,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeGeneralBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -168,7 +168,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeScriptsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -185,7 +185,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeSystemBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -202,7 +202,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeWeatherBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
@@ -235,7 +235,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<imagepath background="true" fallback="special://skin/images/backgrounds/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<include>HomeAddonsBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<timeperimage>10000</timeperimage>
 						<fadetime>BackgroundCrossfadeTime</fadetime>

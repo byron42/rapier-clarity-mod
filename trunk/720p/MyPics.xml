@@ -61,19 +61,19 @@
 						<randomize>true</randomize>
 						<visible>Skin.HasSetting(ApplyAllPicturesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<!--BackgroundPicturesDimAnim-->
-						<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimProgramsCustomBG)">Conditional</animation>
+						<animation effect="fade" start="100" end="30" condition="Skin.HasSetting(DimPicturesCustomBG)">Conditional</animation>
 					</control>
 					<control type="image">
 						<description>Default Background</description>
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<texture background="true">special://skin/images/backgrounds/background-pictures.jpg</texture>
+						<include>PicturesBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<visible>!Skin.HasSetting(ApplyAllPicturesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 						<!--BackgroundPicturesDimAnim-->
-						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimProgramsCustomBG)">Conditional</animation>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimPicturesCustomBG)">Conditional</animation>
 					</control>
 				</control>
 				<!--***************************************************************************************************-->

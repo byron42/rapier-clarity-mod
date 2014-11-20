@@ -66,7 +66,7 @@
 							<include>BackgroundOffset</include>
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
-							<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+							<include>VideosBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(ApplyAllMoviesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
@@ -101,7 +101,7 @@
 							<include>BackgroundOffset</include>
 							<width>1280</width>
 							<include>VariableBackgroundHeight</include>
-							<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+							<include>VideosBackground_And_Res</include>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>BackgroundCrossfadeTime</fadetime>
 							<visible>!Skin.HasSetting(ApplyAllTVShowsCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
