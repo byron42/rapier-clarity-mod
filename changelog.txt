@@ -1,7 +1,24 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-11.19.14 Version 3.5.41
+11.19.14 Version 3.5.42
+	
+	11.20.14
+------------------------------------------------------------------------------
+		= Added a skin settings option for switching to a higher 
+		  background resolution...most of the code was added into
+		  includes and surprisingly it didn't really impact RAM
+		  usage all that much.  In fact it appears at first glance
+		  that when backing out to the home screen RAM usage is 
+		  less than before I implemented this.  Same backgrounds,
+		  except at 960x540 resolution...
+		
+		= Fixed a bug with pictures backgrounds not un-dimming 
+		  when told to do so
+	
+		= Found and fixed the overly dark background dimming for 
+		  list view in (videolibrary)
+
 
 	11.19.14
 ------------------------------------------------------------------------------

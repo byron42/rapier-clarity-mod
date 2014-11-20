@@ -4042,7 +4042,7 @@
 							<aligny>top</aligny>
 							<textoffsety>9</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
+							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
@@ -6415,6 +6415,7 @@
 							<label>$LOCALIZE[31060]</label>
 							<selected>!Skin.HasSetting(DimSystemCustomBG)</selected>
 							<onclick>Skin.ToggleSetting(DimSystemCustomBG)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
 							<visible>Skin.HasSetting(ExpandSystemBGSettings)</visible>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
