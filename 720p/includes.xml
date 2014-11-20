@@ -262,4 +262,193 @@
 		<textwidth>310</textwidth>
 	</include>
 	
+<!--===============================================================((( HOME BACKGROUND RESOLUTIONS )))=================-->
+<!-- HOME Programs -->
+	<include name="HomeProgramsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeProgramsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeProgramsHiRes</include>
+	</include>
+	<include name="HomeProgramsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeProgramsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Pictures -->
+	<include name="HomePicturesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomePicturesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomePicturesHiRes</include>
+	</include>
+	<include name="HomePicturesNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomePicturesHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Music -->
+	<include name="HomeMusicBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeMusicNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeMusicHiRes</include>
+	</include>
+	<include name="HomeMusicNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeMusicHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Videos -->
+	<include name="HomeVideosBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeVideosNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeVideosHiRes</include>
+	</include>
+	<include name="HomeVideosNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeVideosHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME General -->
+	<include name="HomeGeneralBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeGeneralNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeGeneralHiRes</include>
+	</include>
+	<include name="HomeGeneralNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeGeneralHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Scripts -->
+	<include name="HomeScriptsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeScriptsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeScriptsHiRes</include>
+	</include>
+	<include name="HomeScriptsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeScriptsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME System -->
+	<include name="HomeSystemBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeSystemNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeSystemHiRes</include>
+	</include>
+	<include name="HomeSystemNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeSystemHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Weather -->
+	<include name="HomeWeatherBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeWeatherNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeWeatherHiRes</include>
+	</include>
+	<include name="HomeWeatherNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeWeatherHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-weather.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Addons -->
+	<include name="HomeAddonsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeAddonsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeAddonsHiRes</include>
+	</include>
+	<include name="HomeAddonsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeAddonsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!--===============================================================((( ALL OTHER BACKGROUND RESOLUTIONS )))=================-->	
+	<!-- System -->
+	<include name="SystemBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">SystemNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">SystemHiRes</include>
+	</include>
+	<include name="SystemNormal">
+		<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
+	</include>
+	<include name="SystemHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system.jpg</texture>
+	</include>
+	<!-- Music -->
+	<include name="MusicBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">MusicNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">MusicHiRes</include>
+	</include>
+	<include name="MusicNormal">
+		<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
+	</include>
+	<include name="MusicHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music.jpg</texture>
+	</include>
+	<!-- General -->
+	<include name="GeneralBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">GeneralNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">GeneralHiRes</include>
+	</include>
+	<include name="GeneralNormal">
+		<texture background="true">special://skin/images/backgrounds/background-general.jpg</texture>
+	</include>
+	<include name="GeneralHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general.jpg</texture>
+	</include>
+	<!-- Scripts -->
+	<include name="ScriptsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">ScriptsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">ScriptsHiRes</include>
+	</include>
+	<include name="ScriptsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-scripts.jpg</texture>
+	</include>
+	<include name="ScriptsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts.jpg</texture>
+	</include>
+	<!-- Videos -->
+	<include name="VideosBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">VideosNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">VideosHiRes</include>
+	</include>
+	<include name="VideosNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="VideosHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+	<!-- Programs -->
+	<include name="ProgramsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">ProgramsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">ProgramsHiRes</include>
+	</include>
+	<include name="ProgramsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-programs.jpg</texture>
+	</include>
+	<include name="ProgramsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-programs.jpg</texture>
+	</include>
+	<!-- Pictures -->
+	<include name="PicturesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">PicturesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">PicturesHiRes</include>
+	</include>
+	<include name="PicturesNormal">
+		<texture background="true">special://skin/images/backgrounds/background-pictures.jpg</texture>
+	</include>
+	<include name="PicturesHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-pictures.jpg</texture>
+	</include>
+	<!-- Weather -->
+	<include name="WeatherBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">WeatherNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">WeatherHiRes</include>
+	</include>
+	<include name="WeatherNormal">
+		<texture background="true">special://skin/images/backgrounds/background-weather.jpg</texture>
+	</include>
+	<include name="WeatherHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather.jpg</texture>
+	</include>
 </includes>

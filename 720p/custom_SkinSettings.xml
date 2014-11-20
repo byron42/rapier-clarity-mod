@@ -62,7 +62,7 @@
 						<include>BackgroundOffset</include>
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
-						<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
+						<include>SystemBackground_And_Res</include>
 						<aspectratio>stretch</aspectratio>
 						<fadetime>BackgroundCrossfadeTime</fadetime>
 						<visible>!Skin.HasSetting(ApplyAllSystemCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
@@ -1727,6 +1727,7 @@
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
 						</control>	
+				<!-- HIDE CATEGORIES -->
 						<control type="radiobutton" id="31">
 							<description>Hide Categories</description>
 							<posx>10</posx>
@@ -2234,6 +2235,386 @@
 							<onclick>ActivateWindow(3083)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryHomeCustomMenuToggleSettings)</visible>
 						</control>
+				<!--OPTIONAL STARTUP WINDOW-->			
+						<control type="radiobutton" id="19019">
+							<description>Custom Startup Window</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
+							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[512]</label>
+							<selected>Skin.HasSetting(ExpandHomeStartupSettings)</selected>
+							<onclick>Skin.ToggleSetting(ExpandHomeStartupSettings)</onclick>
+							<enable>false</enable>
+							<!-- <animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(19019)">Conditional</animation> -->
+						</control>
+						<control type="radiobutton" id="19020">
+							<description>PROGRAMS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>10001</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,) | Skin.String(StartupWindow,1)</selected>
+							<onclick>Skin.SetString(StartupWindow,1)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideProgramsCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19021">
+							<description>PICTURES</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>10002</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,2)</selected>
+							<onclick>Skin.SetString(StartupWindow,2)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<onright></onright>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HidePicturesCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19022">
+							<description>MUSIC</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>10005</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,3)</selected>
+							<onclick>Skin.SetString(StartupWindow,3)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideMusicCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19023">
+							<description>VIDEOS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>10006</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,4)</selected>
+							<onclick>Skin.SetString(StartupWindow,4)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideVideosCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19024">
+							<description>MUSIC VIDEOS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>20389</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,5)</selected>
+							<onclick>Skin.SetString(StartupWindow,5)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>Library.HasContent(MusicVideos) + !Skin.HasSetting(HideMusicVideosCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19025">
+							<description>MOVIES</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>342</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,6)</selected>
+							<onclick>Skin.SetString(StartupWindow,6)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<onright></onright>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>Library.HasContent(Movies) + !Skin.HasSetting(HideMoviesCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19026">
+							<description>TV SHOWS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>20343</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,7)</selected>
+							<onclick>Skin.SetString(StartupWindow,7)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>Library.HasContent(TvShows) + !Skin.HasSetting(HideTVShowsCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19027">
+							<description>GENERAL</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>128</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,8)</selected>
+							<onclick>Skin.SetString(StartupWindow,8)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideGeneralCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19028">
+							<description>SCRIPTS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>247</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,9)</selected>
+							<onclick>Skin.SetString(StartupWindow,9)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>Skin.HasSetting(HideScriptsCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19029">
+							<description>WEATHER</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>8</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,10)</selected>
+							<onclick>Skin.SetString(StartupWindow,10)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideWeatherCategory)</enable>
+						</control>
+						<control type="radiobutton" id="19030">
+							<description>ADD ONS</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>MediaInfoCatFont</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
+							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<label>31919</label>
+							<!-- <disabledcolor>ff343434</disabledcolor> -->
+							<selected>Skin.String(StartupWindow,11)</selected>
+							<onclick>Skin.SetString(StartupWindow,11)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HideAddonsCategory)</enable>
+						</control>
+							
 						<control type="button" id="11134"> <!--SPACER-->
 							<description>SPACER</description>
 							<width></width>
@@ -2253,6 +2634,7 @@
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<enable>false</enable>
 						</control>	
+						
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11906">
 							<posx>-3</posx><!---->
@@ -3649,6 +4031,31 @@
 							<enable>false</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->	
+				<!-- HIGH RES BG'S -->
+						<control type="radiobutton" id="14890"> 
+							<description>Use High Resolution Backgrounds</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>CustomSkinHead</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[24022] $LOCALIZE[13508] $LOCALIZE[169] $LOCALIZE[33069]</label>
+							<selected>Skin.HasSetting(UseHighResBG)</selected>
+							<onclick>Skin.ToggleSetting(UseHighResBG)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+						</control> 
+				
 				<!--UNIVERSAL BACKGROUND-->
 						<control type="radiobutton" id="1489">
 							<description>UNIVERSAL BACKGROUND TOGGLE</description>
