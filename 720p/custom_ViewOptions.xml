@@ -1264,6 +1264,146 @@
 					<onclick>Skin.ToggleSetting(HideMoviesThumbnailOverlay)</onclick>	
 					<visible>Skin.String(CurrentViewMode,54) + Container.Content(MusicVideos)</visible>
 				</control>
+				
+				<control type="radiobutton" id="10317">
+					<description>CoverFlow Hide Plot (Videos)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31044]</label>
+					<selected>Skin.HasSetting(HideCoverFlowPlot)</selected>
+					<onclick>Skin.ToggleSetting(HideCoverFlowPlot)</onclick>
+					<visible>Skin.String(CurrentViewMode,571) + [Container.Content(Movies) | Container.Content(Sets)]</visible>
+				</control>
+				<control type="radiobutton" id="10318">
+					<description>CoverFlow Hide Plot (TvShows)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31044]</label>
+					<selected>Skin.HasSetting(HideCoverFlowTVPlot)</selected>
+					<onclick>Skin.ToggleSetting(HideCoverFlowTVPlot)</onclick>
+					<visible>Skin.String(CurrentViewMode,571) + [Container.Content(TvShows) | Container.Content(Sets)]</visible>
+				</control>
+				<control type="radiobutton" id="10313">
+					<description>CoverFlow Hide Case (Movies)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Hide Case</label>
+					<selected>Skin.HasSetting(HideMovieCase)</selected>
+					<onclick>Skin.ToggleSetting(HideMovieCase)</onclick>
+					<visible>Skin.String(CurrentViewMode,571) + [Container.Content(Movies) | Container.Content(Sets)]</visible>
+				</control>
+				<control type="radiobutton" id="10316">
+					<description>CoverFlow Hide Case (TvShows)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Hide Case</label>
+					<selected>Skin.HasSetting(HideTVShowCase)</selected>
+					<onclick>Skin.ToggleSetting(HideTVShowCase)</onclick>
+					<visible>Skin.String(CurrentViewMode,571) + [Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)]</visible>
+				</control>
+				<control type="radiobutton" id="10314">
+					<description>CoverFlow Hide Hi-lite for reflections(Globa VideoLibrary)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[377] $LOCALIZE[33068]</label>
+					<selected>Skin.HasSetting(RemoveCoverFlowLighterBackgound)</selected>
+					<onclick>Skin.ToggleSetting(RemoveCoverFlowLighterBackgound)</onclick>
+					<visible>Skin.String(CurrentViewMode,571)</visible>
+				</control>
+				<control type="radiobutton" id="10315">
+					<description>CoverFlow (Global Videolibrary)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideCoverFlowScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideCoverFlowScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,571)</visible>
+				</control>
+				
 				<control type="radiobutton" id="2004">
 					<description>List Hide Cover (Movies)</description>
 					<width>450</width>
@@ -4216,6 +4356,52 @@
 					<selected>Skin.HasSetting(HideLargePosterGamesScrollbar)</selected>
 					<onclick>Skin.ToggleSetting(HideLargePosterGamesScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,100)</visible>
+				</control>
+				<control type="radiobutton" id="10414">
+					<description>CoverFlow Hide Hi-lite for reflections(Global)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[377] $LOCALIZE[33068]</label>
+					<selected>Skin.HasSetting(RemoveCoverFlowLighterBackgound)</selected>
+					<onclick>Skin.ToggleSetting(RemoveCoverFlowLighterBackgound)</onclick>
+					<visible>Skin.String(CurrentViewMode,572)</visible>
+				</control>
+				<control type="radiobutton" id="10415">
+					<description>CoverFlow (Global)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>[COLOR=FFFF0000]$LOCALIZE[31422][/COLOR] | $LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideCoverFlowScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideCoverFlowScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,572)</visible>
 				</control>
 				<control type="image">
 					<description>MenuBar Bottom Border</description>

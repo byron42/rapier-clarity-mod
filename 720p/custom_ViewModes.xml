@@ -715,6 +715,54 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists) | Window.IsActive(musicfiles)</visible>
 				</control>
+				<control type="togglebutton" id="271">
+					<description>CoverFlow (Videos)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[33031])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[33031]</label>
+					<onclick>Container.SetViewMode(571)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ActivateWindow(502)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(VideoFiles) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)</visible>
+				</control>
+				<control type="togglebutton" id="271">
+					<description>CoverFlow (Scripts,Programs,Pics)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[33031])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[33031]</label>
+					<onclick>Container.SetViewMode(572)</onclick>
+					<onclick>Dialog.Close(3002)</onclick>
+					<!--<onclick>ActivateWindow(502)</onclick>-->
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<visible>Window.IsActive(Programs) | Container.Content(Scripts) | Container.Content(Pictures)</visible>
+				</control>
 				
 			<!--********************************************* USING THIS ***************************************************-->
 				<control type="togglebutton" id="28">

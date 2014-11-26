@@ -381,6 +381,10 @@
 	</variable>
 	
 <!-- COVERFLOW VARS -->
+	<variable name="CoverFlowBorder">
+		<value condition="Window.IsActive(VideoLibrary) + !Skin.HasSetting(HideMovieCase)">CoverFlow/CFIB_Case.png</value>
+		<value condition="Window.IsActive(VideoLibrary) + Skin.HasSetting(HideMovieCase)">CoverFlow/CoverFlowBorderF.png</value>
+	</variable>
 	<variable name="ViewCoverFlowLabel1">
 		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label2]</value>
 		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">$INFO[ListItem.Label]</value>
@@ -389,5 +393,53 @@
 		<value condition="Container.Content(Albums) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label][/B]</value>
 		<value condition="Container.Content(Songs) + !Window.IsVisible(MusicFiles)">[B]$INFO[ListItem.Label2][/B]</value>
 	</variable>
-	
+	<variable name="ViewCoverFlowLabel2_VL">
+		<value condition="Container.Content(Movies)">$INFO[ListItem.StarRating]</value>
+		<value condition="!Container.Content(Movies)">$INFO[ListItem.Label2]</value>
+	</variable>
+	<!-- <variable name="Icon(-4)Poster">
+		<value condition="!IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
+		<value>$INFO[ListItem(-4).Icon]</value>
+	</variable>
+	<variable name="Icon(-3)Poster">
+		<value condition="!IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
+		<value>$INFO[ListItem(-3).Icon]</value>
+	</variable>
+	<variable name="Icon(-2)Poster">
+		<value condition="!IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
+		<value>$INFO[ListItem(-2).Icon]</value>
+	</variable>
+	<variable name="Icon(-1)Poster">
+		<value condition="!IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
+		<value>$INFO[ListItem(-1).Icon]</value>
+	</variable>
+	<variable name="Icon(0)Poster">
+		<value condition="!IsEmpty(ListItem(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
+		<value>$INFO[ListItem(0).Icon]</value>
+	</variable>
+	<variable name="Icon(1)Poster">
+		<value condition="!IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
+		<value>$INFO[ListItem(1).Icon]</value>
+	</variable>
+	<variable name="Icon(2)Poster">
+		<value condition="!IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
+		<value>$INFO[ListItem(2).Icon]</value>
+	</variable>
+	<variable name="Icon(3)Poster">
+		<value condition="!IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
+		<value>$INFO[ListItem(3).Icon]</value>
+	</variable>
+	<variable name="Icon(4)Poster">
+		<value condition="!IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
+		<value>$INFO[ListItem(4).Icon]</value>
+	</variable>
+	<variable name="PartlyWatched">
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,0) + !IntegerGreaterThan(ListItem.PercentPlayed,19)">OverlayPartlywatched1.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,19) + !IntegerGreaterThan(ListItem.PercentPlayed,31)">OverlayPartlywatched2.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,31) + !IntegerGreaterThan(ListItem.PercentPlayed,43)">OverlayPartlywatched3.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,43) + !IntegerGreaterThan(ListItem.PercentPlayed,56)">OverlayPartlywatched4.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,56) + !IntegerGreaterThan(ListItem.PercentPlayed,68)">OverlayPartlywatched5.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,68) + !IntegerGreaterThan(ListItem.PercentPlayed,81)">OverlayPartlywatched6.png</value>
+		<value condition="IntegerGreaterThan(ListItem.PercentPlayed,81)">special://skin/images/CoverFlow/OverlayPartlywatched7.png</value>
+	</variable> -->
 </includes>
