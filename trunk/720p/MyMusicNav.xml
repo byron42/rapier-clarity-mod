@@ -3157,8 +3157,8 @@
 							<height>238</height><!--cf_back-->
 							<texture border="10">Glass/ShutdownButtonF.png</texture><!---->
 							<!-- VisibleFadeEffect3 -->
-							<animation effect="fade" end="65" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
-							<animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+							<!-- <animation effect="fade" end="65" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+							<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 							<animation effect="fade" time="400">Visible</animation>
 							<animation effect="fade" time="400">Hidden</animation>
 							<animation effect="fade" time="400">WindowOpen</animation>
@@ -3167,9 +3167,9 @@
 						</control>
 						<control type="image">
 							<posx>-10</posx>
-							<posy>520</posy>
+							<posy>527</posy>
 							<width>1300</width>
-							<height>238</height><!--cf_back-->
+							<height>245</height><!--cf_back-->
 							<texture flipy="true">CoverFlow/white-reflect.png</texture>
 							<!-- VisibleFadeEffect3 -->
 							<animation effect="fade" time="400">Visible</animation>
@@ -3201,7 +3201,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-4).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3262,7 +3262,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3323,7 +3323,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3386,7 +3386,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3447,7 +3447,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3508,7 +3508,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(1).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3574,7 +3574,7 @@
 											<width>318</width>
 											<height>318</height>
 											<aspectratio scalediffuse="false">scale</aspectratio>
-											<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+											<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(0).Icon]</texture>
 											<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3636,7 +3636,7 @@
 											<width>318</width>
 											<height>318</height>
 											<aspectratio scalediffuse="false">scale</aspectratio>
-											<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+											<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-1).Icon]</texture>
 											<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3710,7 +3710,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(4).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3771,7 +3771,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3832,7 +3832,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3895,7 +3895,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -3956,7 +3956,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4017,7 +4017,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-1).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4083,7 +4083,7 @@
 											<width>318</width>
 											<height>318</height>
 											<aspectratio scalediffuse="false">scale</aspectratio>
-											<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+											<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(0).Icon]</texture>
 											<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4145,7 +4145,7 @@
 											<width>318</width>
 											<height>318</height>
 											<aspectratio scalediffuse="false">scale</aspectratio>
-											<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+											<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(1).Icon]</texture>
 											<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4217,7 +4217,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4282,7 +4282,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4347,7 +4347,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(-1).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4412,7 +4412,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(3).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4477,7 +4477,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(2).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4542,7 +4542,7 @@
 										<width>318</width>
 										<height>318</height>
 										<aspectratio scalediffuse="false">scale</aspectratio>
-										<bordertexture>CoverFlow/CoverFlowBorder.png</bordertexture>
+										<bordertexture flipy="true">CoverFlow/CoverFlowBorder.png</bordertexture>
 										<bordersize>10</bordersize>
 										<texture  background="true" diffuse="CoverFlow/ThumbMask.png">$INFO[ListItem(1).Icon]</texture>
 										<visible>Container.Content(Artists) | [[Container.Content(Albums) | Container.Content(Songs)] + Skin.HasSetting(HideMusicCase)]</visible>
@@ -4698,7 +4698,7 @@
 							<!--Window_OpenClose_Visible_TopInfo_Animation-->
 							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-							<animation effect="slide" start="0,-150" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 							<visible>Control.IsVisible(570)</visible>
 							<animation effect="slide" end="0,66" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
 							<control type="image">
@@ -4707,16 +4707,15 @@
 								<width>1400</width>
 								<height>91</height>
 								<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
-								<animation effect="fade" end="75" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
-								<animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+								<!-- <animation effect="fade" end="75" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+								<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 							</control>
 							<control type="label">
 								<posx>35</posx>
-								<posy>39</posy>
+								<posy>37</posy>
 								<width>1200</width>
 								<height>40</height>
 								<font>PluginSettingsHead</font>
-								<!-- <textcolor>BBDCDCDC</textcolor> -->
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ff000000</shadowcolor>
 								<align>center</align>

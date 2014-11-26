@@ -584,4 +584,17 @@
 		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather-home.jpg</texture>
 	</include>
 	<!--*****************************************************************************************-->
+	
+	<!-- 
+	<include name="CoverFlowBorder">
+		<include condition="Skin.HasSetting(HideMovieCase)">CoverFlowRoundBorder</include>
+		<include condition="!Skin.HasSetting(HideMovieCase)">CoverFlowSquareBorder</include>
+	</include>
+	<include name="CoverFlowRoundBorder">
+		<texture>CoverFlow/CoverFlowBorderF.png</texture>
+	</include>
+	<include name="CoverFlowSquareBorder">
+		<texture>CoverFlow/CFIB_Case.png</texture>
+	</include>
+	 -->
 </includes>

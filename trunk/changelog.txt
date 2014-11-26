@@ -3,6 +3,18 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 11.19.14 Version 3.5.42
 	
+	11.25.14
+------------------------------------------------------------------------------
+		= Added CoverFlow view to VideoLibrary (Movies,TvShows,Seasons,
+		  Sets)
+
+		= Added CoverFlow view to Programs, Scripts, Pictures, Videos...
+		  I'm still uncertain of a couple of things (label visible while
+		  infopane is?), and before I push another release I would like
+		  to possibly add a "tall" option for programs (games).  This 
+		  view is pretty well wrapped up for now
+
+
 	11.20.14
 ------------------------------------------------------------------------------
 		= Added a skin settings option for switching to a higher 

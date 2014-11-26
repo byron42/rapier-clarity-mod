@@ -1,7 +1,7 @@
 <window id="25">
 	<defaultcontrol always="true">500</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,51,52,54,55,56,57,58,59,60,61,76,79,80,62,66,75,77</views>
+	<views>50,51,52,54,55,56,57,58,59,60,61,76,79,80,62,66,75,77,571</views>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(movieinformation)">Conditional</animation>
@@ -5711,6 +5711,2170 @@
 				</control>
 			</control>
 		
+	<!--(((VIEWS-BOTH)))==========================================================================================================================-->
+			<control type="group">
+				<!--PlaylistEditorFade-->
+				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
+				<!--***************************************************************************** CoverFlow ****************** (571) ********-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">571</defaultcontrol>
+					<visible>Control.IsVisible(571)</visible>	
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<animation effect="slide" end="0,-66" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+					<posy>-40</posy>
+					<control type="group">
+						<!-- 
+						<control type="videowindow">
+							<description>trailer preview</description>
+							<posx>351</posx>
+							<posy>120</posy>
+							<width>578</width>
+							<height>155</height>
+							<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+							<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+							<visible>Control.IsVisible(571) + [Player.HasVideo + !Skin.HasSetting(VideoBackgrounds)] + !Skin.HasSetting(Fullscreen_Trailer)</visible>
+						</control>
+						 -->
+						<control type="image">
+							<posx>-10</posx>
+							<posy>520</posy>
+							<width>1300</width>
+							<height>238</height><!--cf_back-->
+							<texture border="10">Glass/ShutdownButtonF.png</texture><!---->
+							<!-- VisibleFadeEffect3 -->
+							<animation effect="fade" end="80" condition="true">Conditional</animation>
+							<!-- <animation effect="fade" end="65" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+							<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+							<animation effect="fade" time="400">Visible</animation>
+							<animation effect="fade" time="400">Hidden</animation>
+							<animation effect="fade" time="400">WindowOpen</animation>
+							<animation effect="fade" time="400">WindowClose</animation>
+							<visible>Control.IsVisible(571)</visible>
+						</control>
+						<control type="image">
+							<posx>-10</posx>
+							<posy>527</posy>
+							<width>1300</width>
+							<height>245</height><!--cf_back-->
+							<texture flipy="true">CoverFlow/white-reflect.png</texture>
+							<!-- VisibleFadeEffect3 -->
+							<animation effect="fade" time="400">Visible</animation>
+							<animation effect="fade" time="400">Hidden</animation>
+							<animation effect="fade" time="400">WindowOpen</animation>
+							<animation effect="fade" time="400">WindowClose</animation>
+							<visible>Control.IsVisible(571) + !Skin.HasSetting(RemoveCoverFlowLighterBackgound)</visible>
+						</control>
+				<!--main group for positioning	-->
+						<control type="group">
+							<posx></posx>	
+							<animation effect="slide" end="0,30" time="200" condition="Skin.HasSetting(HideInfoPane) + [!Skin.HasSetting(HideCoverFlowPlot)]">Conditional</animation>
+							<animation effect="slide" end="0,-15" time="200" condition="[[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]] + Skin.HasSetting(HideInfoPane)">Conditional</animation>
+							<control type="group" id="7001">
+								<!-- Window_OpenClose_Animation -->
+								<animation effect="fade" time="200">WindowOpen</animation>
+								<animation effect="fade" time="200">WindowClose</animation>
+								<posy>260</posy>
+								<visible>Control.IsVisible(571) + Container.OnNext</visible>
+								<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+								<control type="group">
+									<posx>80</posx>
+									<visible>Container.OnNext</visible>
+									<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-4).Label,..) | stringcompare(ListItem(-4).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-4).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-4).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-4).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-4).Label,..) | stringcompare(ListItem(-4).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-4).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-4).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-4).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>280</posx>
+									<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>1000</posx>
+									<visible>!Container.OnNext</visible>
+									<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+									<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>900</posx>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<visible>Container.OnNext</visible>
+									<animation effect="slide" end="-110,0" time="250" reversible="false">Hidden</animation>
+									<control type="group">
+										<posx>700</posx>
+										<visible>Container.OnNext</visible>
+										<animation effect="rotatey" center="1020" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+										<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+										<control type="image">
+											<posx>20</posx>
+											<posy>424</posy> <!--DVD reflect-->
+											<width>260</width>
+											<height>370</height>
+											<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(0).Label,..) | stringcompare(ListItem(0).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(0).Label,..) | stringcompare(ListItem(0).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture>CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+										</control>
+									</control>
+									<control type="group">
+										<posx>490</posx>
+										<visible>Container.OnNext</visible>
+										<animation effect="rotatey" center="470" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+										<control type="image">
+											<posx>20</posx>
+											<posy>424</posy> <!--DVD reflect-->
+											<width>260</width>
+											<height>370</height>
+											<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true">$INFO[ListItem(-1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture>CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+										</control>
+									</control>
+								</control>
+							</control>
+							<control type="group" id="7002">
+								<!-- Window_OpenClose_Animation -->
+								<animation effect="fade" time="200">WindowOpen</animation>
+								<animation effect="fade" time="200">WindowClose</animation>
+								<posy>260</posy>
+								<visible>Control.IsVisible(571) + Container.OnPrevious</visible>
+								<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+								<control type="group">
+									<posx>900</posx>
+									<visible>Container.OnPrevious</visible>
+									<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(4).Label,..) | stringcompare(ListItem(4).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(4).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(4).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(4).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(4).Label,..) | stringcompare(ListItem(4).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(4).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(4).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(4).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(4).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>700</posx>
+									<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>-20</posx>
+									<visible>!Container.OnPrevious</visible>
+									<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+									<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>80</posx>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<visible>Container.OnPrevious</visible>
+									<animation effect="slide" end="110,0" time="250" reversible="false">Hidden</animation>
+									<control type="group">
+										<posx>280</posx>
+										<visible>Container.OnPrevious</visible>
+										<animation effect="rotatey" center="260" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+										<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+										<control type="image">
+											<posx>20</posx>
+											<posy>424</posy> <!--DVD reflect-->
+											<width>260</width>
+											<height>370</height>
+											<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(0).Label,..) | stringcompare(ListItem(0).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(0).Label,..) | stringcompare(ListItem(0).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture>CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+										</control>
+									</control>
+									<control type="group">
+										<posx>490</posx>
+										<visible>Container.OnPrevious</visible>
+										<animation effect="rotatey" center="810" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+										<control type="image">
+											<posx>20</posx>
+											<posy>424</posy> <!--DVD reflect-->
+											<width>260</width>
+											<height>370</height>
+											<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>404</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true">$INFO[ListItem(1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+											<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+										</control>
+										<control type="image">
+											<posx>20</posx>
+											<posy>12</posy>
+											<width>278</width>
+											<height>428</height>
+											<texture>CoverFlow/case-tv.png</texture>
+											<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+										</control>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+											<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+										</control>
+									</control>
+								</control>
+							</control>
+							<control type="group" id="7000">
+								<posy>260</posy>
+								<visible>Control.IsVisible(571) + !Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+								<control type="group">
+									<posx>80</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-3)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-3).Label,..) | stringcompare(ListItem(-3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-2)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-2).Label,..) | stringcompare(ListItem(-2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>280</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-1)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="200" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(-1).Label,..) | stringcompare(ListItem(-1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(-1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(-1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>900</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(3)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(3).Label,..) | stringcompare(ListItem(3).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(3).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(3).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(2)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(2).Label,..) | stringcompare(ListItem(2).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(2).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(2).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>700</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(1)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="200" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<control type="image">
+										<posx>20</posx>
+										<posy>422</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(1).Label,..) | stringcompare(ListItem(1).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(1).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(1).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>490</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(0)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="0,500" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+									<control type="image">
+										<posx>21</posx>
+										<posy>424</posy> <!--DVD reflect-->
+										<width>260</width>
+										<height>370</height>
+										<bordersize></bordersize>
+										<texture     flipy="true" diffuse="reflection.png" background="true">$INFO[ListItem(0).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png" fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>404</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture flipy="true" diffuse="CoverFlow/diffuse_mirror_case.png">CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<bordertexture border="">CoverFlow/CFIB_CaseTallF.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true">$INFO[ListItem(0).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(HideTVShowCase)]] + [!stringcompare(ListItem(0).Label,..) | stringcompare(ListItem(0).Label,..)]</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture fallback="CoverFlow/case-sets.png">CoverFlow/case$INFO[ListItem(0).VideoResolution].png</texture>
+										<visible>![Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideMovieCase)</visible>
+									</control>
+									<control type="image">
+										<posx>20</posx>
+										<posy>12</posy>
+										<width>278</width>
+										<height>428</height>
+										<texture>CoverFlow/case-tv.png</texture>
+										<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + !stringcompare(ListItem(0).Label,..) + !Skin.HasSetting(HideTVShowCase)</visible>
+									</control>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="">CoverFlow/CoverFlowBorderTallF.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTvShowCase)]]</visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTallF.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+										<visible>[![Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideMovieCase)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(HideTVShowCase)]]</visible>
+									</control>
+								</control>
+							</control>
+						</control>
+					<!--title-->
+						<control type="group">
+							<posx></posx>
+							<posy>125</posy>
+							<!--Window_OpenClose_Visible_TopInfo_Animation-->
+							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+							<animation effect="fade" start="0" end="100" time="100">Visible</animation>
+							<visible>Control.IsVisible(571) + !Control.IsVisible(7031)</visible>
+							<animation effect="fade" end="0" time="0" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+							<control type="image">
+								<posx>-60</posx>
+								<posy>13</posy>
+								<width>1400</width>
+								<height>91</height>
+								<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
+								<animation effect="fade" end="80" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+								<!-- <animation effect="fade" end="75" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+								<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
+							</control>
+							<control type="group">
+								<animation effect="fade" start="0" end="100" time="400" delay="400" reversible="false">Visible</animation>
+								<visible>!Container.OnNext + !Container.OnPrevious</visible>
+								<control type="label">
+									<posx>35</posx>
+									<posy>37</posy>
+									<width>1200</width>
+									<height>40</height>
+									<font>PluginSettingsHead</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>ff000000</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Container.Content(Seasons)]</visible>
+								</control>
+								<control type="label">
+									<posx>40</posx>
+									<posy>20</posy>
+									<width>1200</width>
+									<height>40</height>
+									<font>PluginSettingsHead</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>ff000000</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Container.Content(Seasons)]</visible>
+								</control>
+								<control type="label">
+									<posx>40</posx>
+									<posy>58</posy>
+									<width>1200</width>
+									<height>35</height>
+									<font>DialogTitleFont</font>
+									<textcolor>BBDCDCDC</textcolor>
+									<shadowcolor>ff000000</shadowcolor>
+									<align>center</align>
+									<aligny>center</aligny>
+									<label>$VAR[ViewCoverFlowLabel2_VL]</label>
+									<visible>![Container.Content(Seasons) | Container.Content(Movies)]</visible>
+								</control>
+								<control type="image">
+									<description>IMDB rating</description>
+									<posx>540</posx>
+									<posy>58</posy>
+									<width>200</width>
+									<height>35</height>
+									<texture>$VAR[ViewCoverFlowLabel2_VL]</texture>						
+									<colordiffuse>BBDCDCDC</colordiffuse>	
+									<visible>Container.Content(Movies) + !stringcompare(ListItem.Label,..)</visible>
+								</control>
+							</control>
+						</control>
+						<control type="wraplist" id="571">
+							<!-- Window_OpenClose_Animation -->
+							<animation effect="fade" time="200">WindowOpen</animation>
+							<animation effect="fade" time="200">WindowClose</animation>
+							<description>Fake list to control coverflow movement</description>
+							<visible>Container.Content(Movies) | Container.Content(Sets) | [Container.Content(TVShows) + !Skin.HasSetting(TVShowsPosters)] | Container.Content(Seasons)</visible>
+							<posx>-410</posx>
+							<posy>260</posy>
+							<width>2100</width>
+							<height>428</height>
+							<onleft>571</onleft>
+							<onright>571</onright>
+							<onup>850</onup>
+							<ondown>150</ondown>
+							<viewtype label="33031">icon</viewtype>
+							<pagecontrol>150</pagecontrol>
+							<orientation>horizontal</orientation>
+							<scrolltime>250</scrolltime>
+							<focusposition>3</focusposition>
+							<preloaditems>2</preloaditems>
+							<hitrect x="510" y="300" w="260" h="380"/>
+							<itemlayout width="300" height="440"/>
+							<focusedlayout width="300" height="440">
+								<control type="image">
+									<posx>0</posx>
+									<posy>12</posy>
+									<width>300</width>
+									<height>440</height>
+									<texture></texture>
+								</control>
+							</focusedlayout>
+						</control>
+					<!-- plot and other controls -->	
+						<control type="group">
+							<posx>0</posx>
+							<posy>15</posy>
+							<!--Window_OpenClose_Visible_TopInfo_Animation-->
+							<animation effect="slide" start="0,-150" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+							<animation effect="slide" start="0,0" end="0,-150" time="300" tween="quadratic" easing="out">WindowClose</animation>
+							<animation effect="slide" start="0,-150" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+							<!-- <visible>Control.IsVisible(571)</visible> -->
+							<visible>false</visible>
+							<control type="button" id="7024">
+								<posx>1147</posx>
+								<posy>60</posy>
+								<width>40</width>
+								<height>40</height>
+								<label>-</label>
+								<font>-</font>
+								<texturefocus>trailer-focus.png</texturefocus>
+								<texturenofocus>trailer-nofocus.png</texturenofocus>
+								<onup>9000</onup>
+								<ondown>571</ondown>
+								<onleft>9000</onleft>
+								<onright>9000</onright>
+								<onclick condition="Skin.HasSetting(Fullscreen_Trailer)">PlayMedia(&quot;$INFO[ListItem.Trailer]&quot;)</onclick>
+								<onclick condition="!Skin.HasSetting(Fullscreen_Trailer)">PlayMedia(&quot;$INFO[ListItem.Trailer]&quot;,1)</onclick>
+								<visible>!Skin.HasSetting(Hide_Trailer_Icon) + !IsEmpty(Listitem.Trailer)</visible>
+							</control>
+						</control>
+					<!-- PLOT -->
+						<control type="group">
+							<posx>0</posx>
+							<posy></posy>
+							<!-- Window_OpenClose_Animation -->
+							<animation effect="fade" time="200">WindowOpen</animation>
+							<animation effect="fade" time="400">WindowClose</animation>
+							<visible>Control.IsVisible(571) + !Container.Content(Sets) + !Container.Content(Seasons)</visible>
+							<visible></visible>
+						<!-- without info pane -->
+							<control type="group" id="7031">
+								<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200">Visible</animation>
+								<animation effect="zoom" start="0,0,1280,720" end="0,200,1280,1" time="200">Hidden</animation>
+								<visible>Control.IsVisible(571) + !Skin.HasSetting(HideInfoPane) + ![Container.Content(Movies) + IsEmpty(ListItem.Plot)] + !stringcompare(ListItem.Label,..) + !Control.IsVisible(7001) + !Control.IsVisible(7002) + [System.IdleTime(3) + ControlGroup(500).HasFocus + !Skin.HasSetting(HideCoverFlowPlot)]</visible>
+								<control type="image">
+									<posx>-60</posx>
+									<posy>125</posy>
+									<width>1400</width>
+									<height>130</height>
+									<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
+									<animation effect="fade" time="400">Visible</animation>
+									<animation effect="fade" time="400">Hidden</animation>
+									<animation effect="fade" time="400">WindowOpen</animation>
+									<animation effect="fade" time="400">WindowClose</animation>
+									<visible>Control.IsVisible(571)</visible>
+								</control>
+								<control type="textbox">
+									<posx>40</posx>
+									<posy>130</posy>
+									<width>1200</width>
+									<height>110</height>
+									<font>font-20</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>justify</align>
+									<label>$INFO[ListItem.Plot]</label>
+									<autoscroll time="2000" delay="18000" repeat="5000">true</autoscroll>
+								</control>
+							</control>
+						<!-- with info pane -->
+							<control type="group" id="7032">
+								<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200">Visible</animation>
+								<animation effect="zoom" start="0,0,1280,720" end="0,200,1280,1" time="200">Hidden</animation>
+								<visible>Control.IsVisible(571) + Skin.HasSetting(HideInfoPane) + ![Container.Content(Movies) + IsEmpty(ListItem.Plot)] + !stringcompare(ListItem.Label,..) + [ControlGroup(500).HasFocus + !Skin.HasSetting(HideCoverFlowPlot)]</visible>
+								<animation effect="slide" end="0,30" condition="Skin.HasSetting(HideInfoPane)">Conditional</animation>
+								<control type="image">
+									<posx>-60</posx>
+									<posy>125</posy>
+									<width>1400</width>
+									<height>130</height>
+									<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
+									<animation effect="fade" time="400">Visible</animation>
+									<animation effect="fade" time="400">Hidden</animation>
+									<animation effect="fade" time="400">WindowOpen</animation>
+									<animation effect="fade" time="400">WindowClose</animation>
+									<visible>Control.IsVisible(571)</visible>
+								</control>
+								<control type="textbox">
+									<posx>40</posx>
+									<posy>130</posy>
+									<width>1200</width>
+									<height>110</height>
+									<font>font-20</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>justify</align>
+									<label>$INFO[ListItem.Plot]</label>
+									<autoscroll time="2000" delay="18000" repeat="5000">true</autoscroll>
+									<animation effect="fade" start="0" end="100" time="400" delay="400" reversible="false">Visible</animation>
+									<visible>!Container.OnNext + !Container.OnPrevious</visible>
+								</control>
+							</control>
+						</control>
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,571)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(571)</visible>
+					</control>
+					<control type="scrollbar" id="150">
+						<posy>750</posy>
+						<height>6</height>
+						<width>1280</width>
+						<orientation>horizontal</orientation>
+						<texturesliderbackground border="2">scrollbar-background.png</texturesliderbackground>
+						<texturesliderbar border="2">scrollbar-slider-horz-nofocus.png</texturesliderbar>
+						<texturesliderbarfocus border="2">scrollbar-slider-horz-focus.png</texturesliderbarfocus>
+						<visible>!Skin.HasSetting(HideCoverFlowScrollbar)</visible>
+						<onup>500</onup>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>
+			</control>
+			
 	<!--(((VIEWS-TVSHOWS)))==========================================================================================================================-->	
 			<control type="group">
 				<!--PlaylistEditorFade-->
@@ -10074,7 +12238,8 @@
 				| Control.IsVisible(60) + Container.Scrolling | Control.IsVisible(61) + Container.Scrolling | Control.IsVisible(76) + Container.Scrolling 
 				| Control.IsVisible(79) + Container.Scrolling | Control.IsVisible(80) + Container.Scrolling | Control.IsVisible(62) + Container.Scrolling
 				| Control.IsVisible(66) + Container.Scrolling | Control.IsVisible(77) + Container.Scrolling | Control.IsVisible(58) + Container.Scrolling
-				| Control.IsVisible(55) + Container.Scrolling | Control.IsVisible(54) + Container.Scrolling | Control.IsVisible(75) + Container.Scrolling</visible>
+				| Control.IsVisible(55) + Container.Scrolling | Control.IsVisible(54) + Container.Scrolling | Control.IsVisible(75) + Container.Scrolling
+				| Control.IsVisible(571) + Container.Scrolling</visible>
 				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 				<control type="image">
@@ -10174,7 +12339,7 @@
 				| Control.IsVisible(79) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(80) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(62) + Skin.HasSetting(HideInfoPane)
 				| Control.IsVisible(66) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist) | Control.IsVisible(55) + Skin.HasSetting(HideInfoPane)
 				| Control.IsVisible(58) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(54) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(75) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(77) + Skin.HasSetting(HideInfoPane)</visible>
+				| Control.IsVisible(77) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(571) + Skin.HasSetting(HideInfoPane)</visible>
 				
 				<!--***************************************** InfoPaneMediaDetails ******************************************************-->
 				<control type="group">	
