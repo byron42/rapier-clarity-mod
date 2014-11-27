@@ -889,9 +889,12 @@
 							<animation effect="fade" time="400">WindowClose</animation>
 							<visible>Control.IsVisible(572) + !Skin.HasSetting(RemoveCoverFlowLighterBackgound)</visible>
 						</control>
-				<!--main group for positioning	-->
+				<!--main group for positioning	(normal)-->
 						<control type="group">
-							<posx>-16</posx>	
+							<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+							<posx>-16</posx>
+							<visible>!Skin.HasSetting(UseCoverFlowTallIcons)</visible>
 							<control type="group" id="7001">
 								<!-- Window_OpenClose_Animation -->
 								<animation effect="fade" time="200">WindowOpen</animation>
@@ -1565,39 +1568,738 @@
 									</control>
 								</control>
 							</control>
-							<control type="wraplist" id="572">
+						</control>
+				<!--main group for positioning (tall)-->
+						<control type="group">
+							<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+							<posx></posx>	
+							<visible>Skin.HasSetting(UseCoverFlowTallIcons)</visible>
+							<control type="group" id="7001">
 								<!-- Window_OpenClose_Animation -->
 								<animation effect="fade" time="200">WindowOpen</animation>
 								<animation effect="fade" time="200">WindowClose</animation>
-								<description>Fake list to control coverflow movement</description>
-								<visible></visible>
-								<posx>-473</posx>
-								<posy>347</posy><!--mirror_y-->
-								<width>2226</width>
-								<height>318</height>
-								<onleft>572</onleft>
-								<onright>572</onright>
-								<onup>850</onup>
-								<ondown>150</ondown>
-								<viewtype label="33031">icon</viewtype>
-								<pagecontrol>150</pagecontrol>
-								<orientation>horizontal</orientation>
-								<scrolltime>250</scrolltime>
-								<focusposition>3</focusposition>
-								<preloaditems>2</preloaditems>
-								<hitrect x="490" y="370" w="318" h="318"/>
-								<itemlayout width="318" height="318"/>
-								<focusedlayout width="318" height="318">
+								<posy>260</posy>
+								<visible>Control.IsVisible(572) + Container.OnNext</visible>
+								<animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
+								<control type="group">
+									<posx>80</posx>
+									<visible>Container.OnNext</visible>
+									<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
 									<control type="image">
-										<posx>34</posx>
-										<posy>28</posy>
-										<width>318</width>
-										<height>318</height>
-										<texture></texture>
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-4).Icon]</texture>
+										<visible></visible>
 									</control>
-								</focusedlayout>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-4).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>280</posx>
+									<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>1000</posx>
+									<visible>!Container.OnNext</visible>
+									<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
+									<animation effect="rotatey" center="1320" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>900</posx>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<visible>Container.OnNext</visible>
+									<animation effect="slide" end="-110,0" time="250" reversible="false">Hidden</animation>
+									<control type="group">
+										<posx>700</posx>
+										<visible>Container.OnNext</visible>
+										<animation effect="rotatey" center="1020" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+										<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+											<visible></visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible></visible>
+										</control>
+									</control>
+									<control type="group">
+										<posx>490</posx>
+										<visible>Container.OnNext</visible>
+										<animation effect="rotatey" center="470" start="0" end="-60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+											<visible></visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+											<visible></visible>
+										</control>
+									</control>
+								</control>
+							</control>
+							<control type="group" id="7002">
+								<!-- Window_OpenClose_Animation -->
+								<animation effect="fade" time="200">WindowOpen</animation>
+								<animation effect="fade" time="200">WindowClose</animation>
+								<posy>260</posy>
+								<visible>Control.IsVisible(572) + Container.OnPrevious</visible>
+								<animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
+								<control type="group">
+									<posx>900</posx>
+									<visible>Container.OnPrevious</visible>
+									<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(4).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(4).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>700</posx>
+									<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>-20</posx>
+									<visible>!Container.OnPrevious</visible>
+									<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
+									<animation effect="rotatey" center="-40" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>80</posx>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<visible>Container.OnPrevious</visible>
+									<animation effect="slide" end="110,0" time="250" reversible="false">Hidden</animation>
+									<control type="group">
+										<posx>280</posx>
+										<visible>Container.OnPrevious</visible>
+										<animation effect="rotatey" center="260" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+										<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+											<visible></visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+											<visible></visible>
+										</control>
+									</control>
+									<control type="group">
+										<posx>490</posx>
+										<visible>Container.OnPrevious</visible>
+										<animation effect="rotatey" center="810" start="0" end="60" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+									<!--no case-->
+										<control type="image">
+											<posx>21</posx>
+											<posy>45</posy>
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+											<visible></visible>
+										</control>
+										<control type="image">
+											<posx>21</posx>
+											<posy>418</posy> <!--mirror y-->
+											<width>260</width>
+											<height>370</height>
+											<aspectratio scalediffuse="false">stretch</aspectratio>
+											<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+											<bordersize>10</bordersize>
+											<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+											<visible></visible>
+										</control>
+									</control>
+								</control>
+							</control>
+							<control type="group" id="7000">
+								<posy>260</posy>
+								<visible>Control.IsVisible(572) + !Control.IsVisible(7001) + !Control.IsVisible(7002)</visible>
+								<control type="group">
+									<posx>80</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-3)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="60" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>180</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-2)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="160" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>280</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(-1)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="-700,0" end="0,0" time="200" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="260" start="-60" end="-60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(-1).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(-1).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>900</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(3)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1220" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(3).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>800</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(2)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="300" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1120" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(2).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>700</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(1)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="700,0" end="0,0" time="200" tween="quadratic" easing="out">Visible</animation>
+									<animation effect="rotatey" center="1020" start="60" end="60" time="0" condition="true">Conditional</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="" flipy="true">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(1).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTall.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(1).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
+								<control type="group">
+									<posx>490</posx>
+									<!-- Window_OpenClose_Visible_Coverflow(0)_Animation -->
+									<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+									<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+									<animation effect="slide" start="0,500" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+								<!--no case-->
+									<control type="image">
+										<posx>21</posx>
+										<posy>45</posy>
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture border="">CoverFlow/CoverFlowBorderTallF.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture  background="true" diffuse="CoverFlow/ThumbMaskTall.png">$INFO[ListItem(0).Icon]</texture>
+										<visible></visible>
+									</control>
+									<control type="image">
+										<posx>21</posx>
+										<posy>418</posy> <!--mirror y-->
+										<width>260</width>
+										<height>370</height>
+										<aspectratio scalediffuse="false">stretch</aspectratio>
+										<bordertexture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" border="">CoverFlow/CoverFlowBorderTallF.png</bordertexture>
+										<bordersize>10</bordersize>
+										<texture flipy="true" diffuse="CoverFlow/ThumbMaskMirror.png" background="true">$INFO[ListItem(0).Icon]</texture>
+										<visible></visible>
+									</control>
+								</control>
 							</control>
 						</control>
+						
+						<control type="wraplist" id="572">
+							<!-- Window_OpenClose_Animation -->
+							<animation effect="fade" time="200">WindowOpen</animation>
+							<animation effect="fade" time="200">WindowClose</animation>
+							<description>Fake list to control coverflow movement</description>
+							<visible></visible>
+							<posx>-473</posx>
+							<posy>347</posy><!--mirror_y-->
+							<width>2226</width>
+							<height>318</height>
+							<onleft>572</onleft>
+							<onright>572</onright>
+							<onup>850</onup>
+							<ondown>150</ondown>
+							<viewtype label="33031">icon</viewtype>
+							<pagecontrol>150</pagecontrol>
+							<orientation>horizontal</orientation>
+							<scrolltime>250</scrolltime>
+							<focusposition>3</focusposition>
+							<preloaditems>2</preloaditems>
+							<hitrect x="490" y="370" w="318" h="318"/>
+							<itemlayout width="318" height="318"/>
+							<focusedlayout width="318" height="318">
+								<control type="image">
+									<posx>34</posx>
+									<posy>28</posy>
+									<width>318</width>
+									<height>318</height>
+									<texture></texture>
+								</control>
+							</focusedlayout>
+						</control>
+						
 						<control type="group">
 							<posx></posx>
 							<posy>125</posy>
@@ -1613,7 +2315,7 @@
 								<width>1400</width>
 								<height>91</height>
 								<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
-								<animation effect="fade" end="80" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+								<animation effect="fade" end="80" condition="true">Conditional</animation>
 								<!-- <animation effect="fade" end="75" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 								<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 							</control>
