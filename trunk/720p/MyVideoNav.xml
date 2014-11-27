@@ -7656,7 +7656,7 @@
 								<width>1400</width>
 								<height>91</height>
 								<texture diffuse="CoverFlow/underlay-diffuse.png" border="0,10,0,10">Glass/ShutDownButtonF.png</texture>
-								<animation effect="fade" end="80" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation>
+								<animation effect="fade" end="80" condition="true">Conditional</animation>
 								<!-- <animation effect="fade" end="75" condition="!Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 								<!-- <animation effect="fade" end="100" condition="Skin.HasSetting(DimMusicCustomBG)">Conditional</animation> -->
 							</control>

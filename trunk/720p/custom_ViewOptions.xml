@@ -1358,7 +1358,7 @@
 					<visible>Skin.String(CurrentViewMode,571) + [Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)]</visible>
 				</control>
 				<control type="radiobutton" id="10314">
-					<description>CoverFlow Hide Hi-lite for reflections(Globa VideoLibrary)</description>
+					<description>CoverFlow Hide Hi-lite for reflections(Global VideoLibrary)</description>
 					<width>450</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
@@ -1379,6 +1379,29 @@
 					<selected>Skin.HasSetting(RemoveCoverFlowLighterBackgound)</selected>
 					<onclick>Skin.ToggleSetting(RemoveCoverFlowLighterBackgound)</onclick>
 					<visible>Skin.String(CurrentViewMode,571)</visible>
+				</control>
+				<control type="radiobutton" id="10320">
+					<description>CoverFlow Use Taller Icons(VideoFiles)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Poster $LOCALIZE[31423] $LOCALIZE[536]</label>
+					<selected>Skin.HasSetting(UseCoverFlowTallIcons)</selected>
+					<onclick>Skin.ToggleSetting(UseCoverFlowTallIcons)</onclick>
+					<visible>Skin.String(CurrentViewMode,571) + Window.IsActive(VideoFiles)</visible>
 				</control>
 				<control type="radiobutton" id="10315">
 					<description>CoverFlow (Global Videolibrary)</description>
@@ -4378,6 +4401,29 @@
 					<label>$LOCALIZE[31015] $LOCALIZE[377] $LOCALIZE[33068]</label>
 					<selected>Skin.HasSetting(RemoveCoverFlowLighterBackgound)</selected>
 					<onclick>Skin.ToggleSetting(RemoveCoverFlowLighterBackgound)</onclick>
+					<visible>Skin.String(CurrentViewMode,572)</visible>
+				</control>
+				<control type="radiobutton" id="10416">
+					<description>CoverFlow Use Taller Icons(Global)</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>         
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>Poster $LOCALIZE[31423] $LOCALIZE[536]</label>
+					<selected>Skin.HasSetting(UseCoverFlowTallIcons)</selected>
+					<onclick>Skin.ToggleSetting(UseCoverFlowTallIcons)</onclick>
 					<visible>Skin.String(CurrentViewMode,572)</visible>
 				</control>
 				<control type="radiobutton" id="10415">

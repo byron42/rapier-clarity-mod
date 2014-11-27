@@ -739,7 +739,7 @@
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<visible>Window.IsActive(VideoFiles) | Container.Content(Movies) | Container.Content(Sets) | Container.Content(TvShows) | Container.Content(Seasons)</visible>
 				</control>
-				<control type="togglebutton" id="271">
+				<control type="togglebutton" id="2710">
 					<description>CoverFlow (Scripts,Programs,Pics)</description>
 					<width>400</width>
 					<height>38</height>
