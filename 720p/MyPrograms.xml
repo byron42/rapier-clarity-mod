@@ -490,7 +490,7 @@
 						<texture>listview-background-dim.png</texture>
 					</control>
 					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
-					<control type="scrollbar" id="150">
+					<control type="scrollbar" id="151">
 						<description>ListViewScrollbar</description>
 						<posx>1240</posx>
 						<posy>92</posy>
@@ -507,12 +507,12 @@
 						<posy>92</posy>
 						<width>730</width>
 						<height>535</height>
-						<pagecontrol>150</pagecontrol>
+						<pagecontrol>151</pagecontrol>
 						<onup>52</onup>
 						<ondown>52</ondown>
 						<onleft>850</onleft>
-						<onright>150</onright>	
-						<animation effect="slide" end="20,0" condition="!Control.IsVisible(150)">Conditional</animation>
+						<onright>151</onright>	
+						<animation effect="slide" end="20,0" condition="!Control.IsVisible(151)">Conditional</animation>
 						<animation effect="slide" end="-35,0" time="250" delay="200" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 						<itemlayout height="38">
 						<!--LIST BACK(with/without small icons)-->
@@ -777,7 +777,7 @@
 							<usecontrolcoords>true</usecontrolcoords>	
 							<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
 							+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
-							<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
+							<animation effect="slide" end="10,0" condition="!Control.IsVisible(151)">Conditional</animation>
 							
 							<!-- for extra info (((needs to be revisited))) -->
 							<!-- <animation effect="zoom" center="245,0" end="80" time="150" condition="!IsEmpty(Window.Property(Addon.Description)) + !Skin.HasSetting(ListViewHideExtraInfo)">Conditional</animation> -->
