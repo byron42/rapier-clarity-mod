@@ -188,7 +188,31 @@
 					<onclick>Dialog.Close(3002)</onclick>
 					<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
 				</control>
-				
+<!-- WIDE ICON GAMES EXPERIMENT *********************************************-->				
+				<control type="togglebutton" id="560">
+					<description>Wide Icon (Programs,Games)</description>
+					<width>400</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>382</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
+				    <alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
+				    <usealttexture>StringCompare(Container.ViewMode,$LOCALIZE[31108])</usealttexture>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31108]</label>
+					<onclick>Container.SetViewMode(560)</onclick>
+					<!--<onclick>ReloadSkin()</onclick>-->
+					<onclick>Dialog.Close(3002)</onclick>
+					<visible>Substring(Container.Folderpath,games)</visible>
+				</control>
+<!--*************************************************************************-->				
 				<control type="togglebutton" id="7">
 					<description>Thumbnail (Movies)</description>
 					<width>400</width>
