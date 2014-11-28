@@ -1,7 +1,7 @@
 <window id="1">
 	<defaultcontrol always="true">5000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,100,572</views>
+	<views>50,51,52,100,560,572</views>
 	<controls>
 	
 		<control type="button" id="5000"> <!--Lyrics-->
@@ -2676,6 +2676,168 @@
 					<!--ViewsScreenFullFadeAnim-->
 					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
 				</control>
+			
+				<!--************************** [[EXPERIMENTAL]] ******************************** WideIconView **************** (560) *******-->
+				<control type="group" id="500">	
+					<defaultcontrol always="true">560</defaultcontrol>
+					<visible>Control.IsVisible(560) + Substring(Container.Folderpath,games)</visible>
+					<!--MediaViewOpenCloseAnim-->
+					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					<!--InfoPaneHiddenSlideAnim2-->
+					<animation effect="slide" end="0,35" condition="!Skin.HasSetting(HideInfoPane) ">Conditional</animation>
+					<animation effect="slide" end="0,5" condition="true">Conditional</animation>
+					<!-- <animation effect="slide" end="0,5" condition="Skin.HasSetting(HideInfoPane) + !Skin.HasSetting(UseTVShowsPosterCover)">Conditional</animation> -->
+					<control type="scrollbar" id="150">
+						<description>WideIconViewScrollbar</description>
+						<posx>1255</posx>
+						<posy>78</posy>
+						<height>544</height>
+						<visible>!Skin.HasSetting(HideWideIconViewScrollbar) + [Control.IsVisible(55) | Control.IsVisible(560) | Control.IsVisible(57) | Control.IsVisible(60)]</visible>
+						<onleft>500</onleft>
+					</control>
+					<control type="panel" id="560">
+						<viewtype label="31108">Wide Icon</viewtype>
+						<posx>40</posx>
+						<posy>80</posy>
+						<width>1210</width>
+						<height>555</height>
+						<pagecontrol>150</pagecontrol>
+						<preloaditems>2</preloaditems>
+						<onup>560</onup>
+						<ondown>560</ondown>
+						<onleft>850</onleft>
+						<onright>150</onright>
+						<visible></visible>
+						<itemlayout height="185" width="605">
+					<!--(((BANNERS)))======================================================================-->
+							<control type="image">
+								<description>Background</description>
+								<width>590</width>
+								<height>140</height>	
+								<texture border="10">ViewOptionsButtonNFS.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<!--WideIconViewItemBackgroundFadeAnim-->
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+								<visible></visible>
+							</control>	
+							<control type="image">
+								<description>Cover</description>
+								<width>590</width>
+								<height>140</height>
+								<bordersize>12</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<width>590</width>
+								<height>140</height>
+								<bordersize>20</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Dim</description>
+								<width>590</width>
+								<height>140</height>
+								<bordersize>12</bordersize>
+								<texture>background-dim.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+								<animation effect="fade" end="50" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<description>label bg </description>
+								<posx></posx><!--edge-->
+								<posy>134</posy>
+								<width>590</width>
+								<height>40</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<!-- <visible>!Skin.HasSetting(UseTVShowsPosterCover)</visible> -->
+							</control>	
+							<control type="label">
+								<description>Title</description>
+								<posx>12</posx>
+								<posy>136</posy>
+								<width>560</width>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor></shadowcolor>
+								<label>$INFO[ListItem.Label]</label>	
+								<visible>Skin.HasSetting(ShowWideIconBannerLabel)</visible>
+							</control>
+						</itemlayout>															
+						<focusedlayout height="185" width="605">
+					<!--(((BANNERS)))======================================================================-->
+							<control type="image">
+								<description>Background</description>
+								<width>590</width>
+								<height>140</height>	
+								<texture border="10">Glass/SquareThemeBorder.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<!-- <visible>!Skin.HasSetting(UseTVShowsPosterCover)</visible> -->
+							</control>
+							<control type="image">
+								<description>Cover</description>
+								<width>590</width>
+								<height>140</height>
+								<bordersize>12</bordersize>
+								<texture background="true">$INFO[ListItem.Thumb]</texture>
+								<aspectratio>stretch</aspectratio>
+								<visible>!IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>Default Cover</description>
+								<width>590</width>
+								<height>140</height>
+								<bordersize>20</bordersize>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>IsEmpty(ListItem.Thumb)</visible>
+							</control>
+							<control type="image">
+								<description>label bg </description>
+								<posx></posx><!--edge-->
+								<posy>135</posy>
+								<width>590</width>
+								<height>40</height>
+								<colordiffuse>BBBBBBBB</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+								<!-- <visible>!Skin.HasSetting(UseTVShowsPosterCover)</visible> -->
+							</control>	
+							<control type="label">
+								<description>Title</description>
+								<posx>12</posx>
+								<posy>137</posy>
+								<width>560</width>
+								<font>MediaInfoHeadFont</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor></shadowcolor>
+								<label>$INFO[ListItem.Label]</label>	
+								<visible>Skin.HasSetting(ShowWideIconBannerLabel)</visible>
+							</control>
+						</focusedlayout>			
+					</control>
+					<control type="button" id="188">
+						<onfocus>Skin.SetString(CurrentViewMode,560)</onfocus>
+						<description>ViewOptionsHelperBtn</description>
+						<width>1</width>
+						<height>1</height>
+						<onfocus>SetFocus(184)</onfocus>
+						<onfocus>ActivateWindow(3017)</onfocus>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>	
+						<visible>Control.IsVisible(560)</visible>
+					</control>
+					<!--ViewsScreenFullFadeAnim-->
+					<animation effect="fade" start="100" end="0" time="150" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135) | Window.IsActive(TextViewer)">Conditional</animation> 
+				</control>		
+				
+			
 			</control>	
 			
 	<!--(((MENU BAR)))===========================================================================================================================-->		

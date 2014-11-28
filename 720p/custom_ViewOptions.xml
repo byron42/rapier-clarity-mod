@@ -4449,6 +4449,54 @@
 					<onclick>Skin.ToggleSetting(HideCoverFlowScrollbar)</onclick>
 					<visible>Skin.String(CurrentViewMode,572)</visible>
 				</control>
+	<!-- WIDE ICON GAMES EXPERIMENT **********************-->
+				<control type="radiobutton" id="20690">
+					<description>Show Wide Icon Banner Label</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>        
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>  
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31015] $LOCALIZE[369]</label>
+					<selected>!Skin.HasSetting(ShowWideIconBannerLabel)</selected>
+					<onclick>Skin.ToggleSetting(ShowWideIconBannerLabel)</onclick>
+					<visible>Skin.String(CurrentViewMode,560)</visible>
+				</control>
+				<control type="radiobutton" id="20691">
+					<description>Wide Icon Hide Scrollbar</description>
+					<width>450</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradiofocus>radio-button-focus.png</textureradiofocus>        
+					<textureradionofocus>radio-button-nofocus.png</textureradionofocus>  
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31025]</label>
+					<selected>Skin.HasSetting(HideWideIconViewScrollbar)</selected>
+					<onclick>Skin.ToggleSetting(HideWideIconViewScrollbar)</onclick>
+					<visible>Skin.String(CurrentViewMode,560)</visible>
+				</control>
+	<!--**************************************************-->			
 				<control type="image">
 					<description>MenuBar Bottom Border</description>
 					<width>450</width>
