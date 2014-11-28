@@ -196,7 +196,8 @@
 				<animation effect="fade" end="100" time="400">Visible</animation>
 				<animation effect="fade" end="0" time="400">Hidden</animation>
 			<!--Mod code start ===================-->
-				<!-- <control type="image">
+				<control type="image">
+					<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 					<animation effect="fade" time="200">WindowClose</animation>
 					<animation type="Visible">
 						<effect type="fade" time="400" start="0" end="100" />
@@ -212,13 +213,14 @@
 					<height>300</height>
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BBBBBBBB</colordiffuse>
-				</control> -->
+				</control>
 			<!--Mod-group animation ==============-->
 				<control type="group">
 					<posy>30</posy> 
-					<visible>!Skin.HasSetting(HidecdArt)</visible>
-					<control type="image">
-						<!-- <visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible> -->
+					
+					<control type="image" id="215">
+						<visible>!Skin.HasSetting(HidecdArt)</visible>
+						<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 						<description>Cd overlay</description>
 						<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000" reversible="false">WindowOpen</animation>
 						<animation effect="fade" start="0" end="100" time="900" delay="1000">Visible</animation>
@@ -249,7 +251,7 @@
 					
 					<!--***************************************** CASE/INFO ANIMATION (NOT CD) ********************************************************-->
 					<control type="group">
-						<!-- <visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible> -->
+						<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
 						<posx>70</posx>
 						<posy>-180</posy>
 						<animation effect="fade" start="0" end="100" time="900" delay="400">WindowOpen</animation>
@@ -257,118 +259,133 @@
 						<animation effect="fade" start="-500" end="-500" time="500">Hidden</animation>
 						<animation effect="fade" start="-500" end="-500" time="500">WindowClose</animation>
 					<!--*******************************************************************************************************************************-->
-						<control type="image">
-							<description>Cover image</description>
-							<width>250</width>
-							<height>250</height>
-							<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
-							<aspectratio align="bottom">keep</aspectratio>
-							<posy>25</posy>
+						<control type="group">	
+							<animation effect="slide" end="15,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							<control type="image">
+								<description>Cover image</description>
+								<width>250</width>
+								<height>250</height>
+								<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
+								<aspectratio align="bottom">keep</aspectratio>
+								<posy>25</posy>
+							</control>
+							<control type="image">
+								<description>Cover image overlay</description>
+								<width>250</width>
+								<height>250</height>
+								<texture>home/nowplaying_overlay.png</texture>
+								<aspectratio align="bottom">keep</aspectratio>
+								<posy>25</posy>
+							</control>
 						</control>
-						<control type="image">
-							<description>Cover image overlay</description>
-							<width>250</width>
-							<height>250</height>
-							<texture>home/nowplaying_overlay.png</texture>
-							<aspectratio align="bottom">keep</aspectratio>
-							<posy>25</posy>
-						</control>
-						<control type="label">
-							<posx>340</posx>
-							<posy>45</posy>
-							<width>810</width>
-							<height>30</height>
-							<align>left</align>
-							<aligny></aligny>
-							<font>Font_OSDMusicTitle</font>
-							<textcolor>ThemeColor</textcolor>
-							<shadowcolor>white</shadowcolor>
-							<label>$INFO[MusicPlayer.Title]</label>
-							<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
-						</control>
-						<control type="label">
-							<posx>360</posx>
-							<posy>93</posy>
-							<width>790</width>
-							<height>24</height>
-							<align>left</align>
-							<aligny></aligny>
-							<font>Font_OSDMusicArtist</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
-							<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
-						</control>
-						<control type="label">
-							<posx>370</posx>
-							<posy>130</posy>
-							<width>780</width>
-							<height>24</height>
-							<align>left</align>
-							<aligny></aligny>
-							<font>Font_OSDMusicArtist</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<scroll>true</scroll>
-							<label>[UPPERCASE]$INFO[MusicPlayer.Album][/UPPERCASE]</label>
-							<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
-						</control>
-						<control type="label">
-							<posx>370</posx>
-							<posy>165</posy>
-							<width>780</width>
-							<height>24</height>
-							<align>left</align>
-							<aligny></aligny>
-							<font>Font_OSDMusicArtist</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<scroll>true</scroll>
-							<label>[UPPERCASE]$INFO[MusicPlayer.Year][/UPPERCASE]</label>
-							<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
-						</control>
-						<control type="image">
-							<posx>355</posx>
-							<posy>175</posy>
-							<width>160</width>
-							<height>60</height>
-							<texture>$INFO[MusicPlayer.Rating]</texture>
-							<aspectratio>keep</aspectratio>
-						</control>
-						
-					<!--===============================================-->
-					  <!--+++++++++++++++++++++++++++++++++++++++++++-->
-						<control type="label" id="212">
-							<description>Elapsed Time Label</description>
-							<posx>340</posx>
-							<posy>240</posy>
-							<width>1280</width>
-							<height>30</height>
-							<font>Font_OSDMusicArtist</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<align>left</align>
-							<label>$INFO[Player.Time]</label>
-							<visible>!Player.Seeking</visible>
-						</control>
-						<control type="progress">
-							<description>Progressbar</description>
-							<posx>355</posx>
-							<posy>225</posy>
-							<width>770</width>
-							<height>14</height>
-							<info>Player.Progress</info>
-						</control>   
-						<control type="label" id="212">
-							<posx>1140</posx>
-							<posy>240</posy>
-							<width>1280</width>
-							<height>30</height>
-							<label>$INFO[Player.Duration]</label>
-							<align>right</align>
-							<font>Font_OSDMusicArtist</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
+					<!-- LABELS	 -->
+						<control type="group">
+							
+							<animation effect="slide" end="-30,-5" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							<control type="label">
+								<posx>340</posx>
+								<posy>45</posy>
+								<width>810</width>
+								<height>30</height>
+								<align>left</align>
+								<aligny></aligny>
+								<font>Font_OSDMusicTitle</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>white</shadowcolor>
+								<label>$INFO[MusicPlayer.Title]</label>
+								<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+								
+							</control>
+							<control type="label">
+								<posx>360</posx>
+								<posy>93</posy>
+								<width>790</width>
+								<height>24</height>
+								<align>left</align>
+								<aligny></aligny>
+								<font>Font_OSDMusicArtist</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
+								<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+								<animation effect="slide" end="-20,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>370</posx>
+								<posy>130</posy>
+								<width>780</width>
+								<height>24</height>
+								<align>left</align>
+								<aligny></aligny>
+								<font>Font_OSDMusicArtist</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<scroll>true</scroll>
+								<label>[UPPERCASE]$INFO[MusicPlayer.Album][/UPPERCASE]</label>
+								<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+								<animation effect="slide" end="-30,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>370</posx>
+								<posy>165</posy>
+								<width>780</width>
+								<height>24</height>
+								<align>left</align>
+								<aligny></aligny>
+								<font>Font_OSDMusicArtist</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<scroll>true</scroll>
+								<label>[UPPERCASE]$INFO[MusicPlayer.Year][/UPPERCASE]</label>
+								<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>
+								<animation effect="slide" end="-30,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>355</posx>
+								<posy>175</posy>
+								<width>160</width>
+								<height>60</height>
+								<texture>$INFO[MusicPlayer.Rating]</texture>
+								<aspectratio>keep</aspectratio>
+								<animation effect="slide" end="-15,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>
+							
+						<!--===============================================-->
+						  <!--+++++++++++++++++++++++++++++++++++++++++++-->
+							<control type="label" id="212">
+								<description>Elapsed Time Label</description>
+								<posx>340</posx>
+								<posy>240</posy>
+								<width>1280</width>
+								<height>30</height>
+								<font>Font_OSDMusicArtist</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<align>left</align>
+								<label>$INFO[Player.Time]</label>
+								<visible>!Player.Seeking</visible>
+							</control>
+							<control type="progress">
+								<description>Progressbar</description>
+								<posx>355</posx>
+								<posy>225</posy>
+								<width>770</width>
+								<height>14</height>
+								<info>Player.Progress</info>
+								<animation effect="slide" end="-15,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>   
+							<control type="label" id="212">
+								<posx>1140</posx>
+								<posy>240</posy>
+								<width>1280</width>
+								<height>30</height>
+								<label>$INFO[Player.Duration]</label>
+								<align>right</align>
+								<font>Font_OSDMusicArtist</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>ThemeColor</shadowcolor>
+								<animation effect="slide" end="-30,0" time="200" condition="Skin.HasSetting(HidecdArt)">Conditional</animation>
+							</control>
 						</control>
 					  <!--+++++++++++++++++++++++++++++++++++++++++++-->
 					<!--===============================================-->
