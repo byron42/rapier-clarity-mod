@@ -62,7 +62,7 @@
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<control type="scrollbar" id="150">
+				<control type="scrollbar" id="151">
 					<description>ListViewScrollbar</description>
 					<posx>1240</posx>
 					<posy>130</posy>
@@ -75,12 +75,12 @@
 					<posy>130</posy>
 					<width>680</width>
 					<height>500</height>
-					<pagecontrol>150</pagecontrol>
+					<pagecontrol>151</pagecontrol>
 					<onup>450</onup>
 					<ondown>450</ondown>
 					<onleft>450</onleft>
-					<onright>150</onright>		
-					<animation effect="slide" end="20,0" condition="!Control.IsVisible(150)">Conditional</animation>
+					<onright>151</onright>		
+					<animation effect="slide" end="20,0" condition="!Control.IsVisible(151)">Conditional</animation>
 					<animation effect="slide" end="-35,0" time="250" delay="200" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 					<itemlayout height="38">
 					<!--LIST BACK(with/without small icons)-->
@@ -469,7 +469,7 @@
 					<usecontrolcoords>true</usecontrolcoords>	
 					<visible>![Container.Content(Movies) + Skin.HasSetting(HideMoviesListCover)] + ![[Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)] + Skin.HasSetting(HideMusicListCover)]
 					+ ![Container.Content(TVShows) + Skin.HasSetting(HideTVShowsListCover)] + ![Container.Content(Episodes) + Skin.HasSetting(HideEpisodesListCover)]</visible>
-					<animation effect="slide" end="10,0" condition="!Control.IsVisible(150)">Conditional</animation>
+					<animation effect="slide" end="10,0" condition="!Control.IsVisible(151)">Conditional</animation>
 					<!--SmallIcons-->
 					<animation effect="slide" end="-15,0" time="250" delay="" condition="!Skin.HasSetting(ListViewHideSmallIcons)">Conditional</animation>
 					<!--InfoPaneHiddenSlideAnim2-->

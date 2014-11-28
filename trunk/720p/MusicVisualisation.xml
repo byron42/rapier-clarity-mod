@@ -196,8 +196,7 @@
 				<animation effect="fade" end="100" time="400">Visible</animation>
 				<animation effect="fade" end="0" time="400">Hidden</animation>
 			<!--Mod code start ===================-->
-				<control type="image">
-					<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+				<!-- <control type="image">
 					<animation effect="fade" time="200">WindowClose</animation>
 					<animation type="Visible">
 						<effect type="fade" time="400" start="0" end="100" />
@@ -213,13 +212,13 @@
 					<height>300</height>
 					<texture border="10,10,10,10">media-background2.jpg</texture>
 					<colordiffuse>BBBBBBBB</colordiffuse>
-				</control>
+				</control> -->
 			<!--Mod-group animation ==============-->
 				<control type="group">
 					<posy>30</posy> 
 					<visible>!Skin.HasSetting(HidecdArt)</visible>
 					<control type="image">
-						<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+						<!-- <visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible> -->
 						<description>Cd overlay</description>
 						<animation effect="slide" start="-118" end="0" time="900" tween="cubic" easing="out" delay="1000" reversible="false">WindowOpen</animation>
 						<animation effect="fade" start="0" end="100" time="900" delay="1000">Visible</animation>
@@ -250,7 +249,7 @@
 					
 					<!--***************************************** CASE/INFO ANIMATION (NOT CD) ********************************************************-->
 					<control type="group">
-						<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible>
+						<!-- <visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml)</visible> -->
 						<posx>70</posx>
 						<posy>-180</posy>
 						<animation effect="fade" start="0" end="100" time="900" delay="400">WindowOpen</animation>
