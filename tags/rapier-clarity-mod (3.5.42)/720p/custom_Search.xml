@@ -1,0 +1,167 @@
+<window type="dialog" id="3005">
+	<defaultcontrol always="true">200</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--******************************** FullControlAreaBackground *******************************-->
+			<control type="image">
+				<posx>-10</posx>
+				<posy>77</posy>
+				<width>1300</width>
+				<height>750</height>		
+				<texture>black.png</texture>
+				<colordiffuse></colordiffuse>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
+				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
+				<aspectratio>scale</aspectratio>
+				<!--MediaViewOpenCloseAnim-->
+			</control>
+			<!--******************************************************************************************-->
+			<control type="grouplist" id="200">
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(videolibrary)">Conditional</animation>
+				<description>Video Library Search</description>
+				<posx>782</posx>
+				<posy>75</posy>
+				<width>350</width>
+				<itemgap>2</itemgap>
+				<onleft>Dialog.Close(3005)</onleft>
+				<onright>Dialog.Close(3005)</onright>
+				<orientation>vertical</orientation>
+				<visible>Window.IsActive(VideoLibrary)</visible>
+				<!--MenuOpenCloseAnim-->
+				<animation type="WindowOpen">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="WindowClose">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
+				<!--MenuOpenCloseAnim-->
+				<control type="image">
+					<!--MenuBarItemTopBorder-->
+					<width>350</width>
+					<height>8</height>
+					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
+					<!--MenuBarItemTopBorder-->
+				</control>
+				<control type="button" id="1">
+					<description>Library</description>
+					<width>350</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>332</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[14022]...</label>
+					<onclick>Dialog.Close(3005)</onclick>
+					<onclick>SendClick(VideoLibrary,8)</onclick>
+				</control>
+				<control type="button" id="2">
+					<description>IMDB</description>
+					<width>350</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>332</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[368]...</label>
+					<onclick>Dialog.Close(3005)</onclick>
+					<onclick>SendClick(VideoLibrary,9)</onclick>
+				</control>
+				<control type="image">
+					<!--MenuBarItemBottomBorder-->
+					<width>350</width>
+					<height>8</height>
+					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>
+					<!--MenuBarItemBottomBorder-->
+				</control>
+			</control>
+			<control type="grouplist" id="200">
+				<description>Music Library Search</description>
+				<animation effect="slide" end="-10,0" condition="Window.IsActive(musiclibrary)">Conditional</animation>
+				<posx>782</posx>
+				<posy>75</posy>
+				<width>350</width>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>Window.IsActive(MusicLibrary)</visible>
+				<!--MenuOpenCloseAnim-->
+				<animation type="WindowOpen">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="WindowClose">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
+				<!--MenuOpenCloseAnim-->
+				<control type="image">
+					<!--MenuBarItemTopBorder-->
+					<width>350</width>
+					<height>8</height>
+					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
+					<!--MenuBarItemTopBorder-->
+				</control>
+				<control type="button" id="1">
+					<description>Library</description>
+					<width>350</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>332</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[14022]...</label>
+					<onclick>Dialog.Close(3005)</onclick>
+					<onclick>SendClick(MusicLibrary,8)</onclick>
+				</control>
+				<control type="button" id="2">
+					<description>CDDB</description>
+					<width>350</width>
+					<height>38</height>
+					<font>MediaTitleFont</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>18</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textwidth>332</textwidth>
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[255]...</label>
+					<onclick>Dialog.Close(3005)</onclick>
+					<onclick>SendClick(MusicLibrary,17)</onclick>
+				</control>
+				<control type="image">
+					<!--MenuBarItemBottomBorder-->
+					<width>350</width>
+					<height>8</height>
+					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>
+					<!--MenuBarItemBottomBorder-->
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
