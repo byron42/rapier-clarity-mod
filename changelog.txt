@@ -3,6 +3,21 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 11.19.14 Version 3.5.42
 
+	11.29.14
+------------------------------------------------------------------------------	
+		= Changed Label fading time (CoverFlow) when InfoPane isn't 
+		  visible...no reason to have a delay when switching items 
+		  imo...thought originally that it would help smoothness, not
+		  the case.  I'm not sure anything can help smoothness with
+		  64mb RAM and a lame processor with that much going on 
+		
+		= Made a hack with the seekbar...been trying to figure this
+		  out for a looooooong time, slider now works in FullScreen-
+		  videoInfo without the whole seekbar entourage being visible.
+		  I gotta pat myself on the back for this one, next step is 
+		  to transfer this into HomeNowPlaying and PlayerControls
+	
+
 	11.27.14
 ------------------------------------------------------------------------------	
 		= CoverFlow should be wrapped up at this point unless I missed 

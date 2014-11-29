@@ -1,5 +1,5 @@
 <window id="142">
-	<defaultcontrol always="true">401</defaultcontrol>
+	<defaultcontrol always="true">1</defaultcontrol>
 	
 	<controls>
 		<control type="group">
@@ -27,7 +27,7 @@
 					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
 				
-	<!--(((MAIN BAR WITH CONTROLS)))================(sloppy code needs cleanup!)=========================================================================-->		
+	<!--(((MAIN BAR WITH CONTROLS)))================(less sloppy and getting better!)=========================================================================-->		
 				<control type="group">
 					<posx>300</posx>
 					<posy>715r</posy>
@@ -47,9 +47,26 @@
 						<shadowcolor>black</shadowcolor>
 						<label>$VAR[PlayerControlActionLabel]</label>
 					</control>
+					<control type="image">
+						<description>PlayerControlImage(default)</description>
+						<posx>850</posx>
+						<posy>12</posy>
+						<width>100</width>
+						<height>100</height>
+						<align>center</align>
+						<aligny>-</aligny>
+						<textoffsety>103</textoffsety>
+						<textwidth>120</textwidth>
+						<font>MenuBarButtonFont2</font>
+						<textcolor>gray</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<texture>osd-play-focus.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<visible></visible>
+					</control>
 					<control type="image" id="1000">
 						<animation effect="fade" start="0" end="100" time="0" easing="out">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="250" easing="out">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="0" easing="out">Hidden</animation>
 						<description>PlayerControlImage</description>
 						<posx>850</posx>
 						<posy>12</posy>
@@ -63,6 +80,7 @@
 						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<texture>$VAR[PlayerControlActionImage]</texture>
+						<visible>!Player.Playing | Player.Seeking</visible>
 					</control>
 					<!--*******************************************************************************-->
 					<control type="label">
@@ -84,7 +102,7 @@
 						<posy>30</posy>
 						<width>870</width>
 						<height>25</height>
-						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey2] (,)[/COLOR]]</label>
+						<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=gray] (,)[/COLOR]]</label>
 						<scroll>true</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -216,7 +234,6 @@
 				</control>
 				
 	<!--(((MEDIA FLAGS AREA)))==============================================================================================================-->		
-				
 				<control type="group">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -233,7 +250,6 @@
 						<!-- <texture>$INFO[VideoPlayer.Studio,flagging/Studios/,.png]</texture> -->
 					</control>
 					<!--****************************************************************************************-->
-				
 					<control type="grouplist">
 						<description>Media Flags Area</description>
 						<posx>410</posx>
@@ -441,6 +457,5 @@
 				</control>-->
 			</control>
 		</control>
-	
 	</controls>
 </window>
