@@ -2,7 +2,20 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 11.19.14 Version 3.5.42
+
+	11.27.14
+------------------------------------------------------------------------------	
+		= CoverFlow should be wrapped up at this point unless I missed 
+		  something
+
+		= Added an experimental wide icon view to games
+
+		= fixed a bug with the list view jumping when upper menu is 
+		  accessed (problem with the scrollbar id)
 	
+		= made a quick fix for Now Playing Music when spinning cd isn't
+		  visible
+
 	11.27.14
 ------------------------------------------------------------------------------	
 		= added a Poster style icon option for CoverFlow in pictures, 
