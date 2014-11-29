@@ -1,19 +1,26 @@
 <window id="115">
+	<zorder>1000</zorder>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 	<!--DialogOpenCloseAnim-->
-	<animation type="WindowOpen">
+	<animation condition="!Window.IsVisible(142)" type="WindowOpen">
 		<effect type="fade" end="100" time="150"/>
-		<effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/>
+		<!-- <effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/> -->
 	</animation>	
-	<animation type="WindowClose">
+	<animation condition="!Window.IsVisible(142)" type="WindowClose">
 		<effect type="fade" end="0" time="150" />
-		<effect type="slide" end="0,45" time="200" tween="circle" easing="out"/>
+		<!-- <effect type="slide" end="0,45" time="200" tween="circle" easing="out"/> -->
 	</animation>
+
+<!--*************** for FullScreenInfo's (and player controls!) update ********************************-->
+	<animation effect="fade" end="100" time="0"  condition="Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]">WindowOpen</animation>
+	<animation effect="fade"  end="0"  easing="out" condition="Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]">WindowClose</animation>
+<!--***************************************************************************************************-->
+	
 	<coordinates>
 		<system>1</system>
 		<posx>278</posx>
-		<posy>20</posy>
+		<posy>65</posy>
 	</coordinates>
 	<controls>
 		<control type="group" id="1111">
@@ -23,7 +30,7 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
-			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="Window.IsActive(142)">Conditional</animation>
+			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="Window.IsVisible(142)">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
@@ -302,7 +309,26 @@
 				<ondown>1</ondown>
 				<onleft>1</onleft>
 				<onright>1</onright>
+				<visible>!Window.IsVisible(142)</visible>
 			</control>
 		</control>
+<!--******** HACKED!!! ************************-->
+		<control type="slider" id="401">
+			<description>Seek Slider</description>
+			<posx>20</posx>
+			<posy>27</posy>
+			<width>800</width>
+			<height>14</height>
+			<texturesliderbar>seekslider.png</texturesliderbar>
+			<textureslidernib>slider_nibFO.png</textureslidernib>
+			<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+			<visible>Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
+			<onup>1</onup>
+			<ondown>1</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
+			<animation effect="fade" end="15" condition="Window.IsVisible(videoosd)">Conditional</animation>
+		</control>
+<!--*******************************************-->
 	</controls>
 </window>
