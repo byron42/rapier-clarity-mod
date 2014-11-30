@@ -882,7 +882,7 @@
 				<!--************************************************************************** ProgramsLargePoster ********** (100) ********-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">100</defaultcontrol>
-					<visible>Control.IsVisible(100)</visible>
+					<visible>Control.IsVisible(100) + StringCompare(Container.ViewMode,$LOCALIZE[31116])</visible>
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
@@ -896,7 +896,7 @@
 						<height>502</height>
 						<texture border="10">special://skin/images/skin/LightPosterBG.png</texture>
 						<animation effect="fade" end="65" condition="true">Conditional</animation>
-						<visible>!Window.IsActive(101) + Control.IsVisible(100) + !Skin.HasSetting(RemovePosterLighterBackgound)</visible>
+						<visible>!Skin.HasSetting(RemovePosterLighterBackgound)</visible>
 					</control>
 					<control type="image">
 						<posx>-18</posx>
@@ -905,7 +905,7 @@
 						<height>502</height>
 						<texture border="10">special://skin/images/skin/DarkPosterBG.png</texture>
 						<animation effect="fade" end="65" condition="true">Conditional</animation>
-						<visible>!Window.IsActive(101) + Control.IsVisible(100) + Skin.HasSetting(RemovePosterLighterBackgound)</visible>
+						<visible>Skin.HasSetting(RemovePosterLighterBackgound)</visible>
 					</control>
 					<control type="image">
 						<posx>-18</posx>
@@ -914,7 +914,7 @@
 						<height>502</height>
 						<texture border="10">Glass/ShutDownButtonF.png</texture>
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
-						<visible>!Window.IsActive(101) + Control.IsVisible(100)</visible>
+						<!-- <visible>!Window.IsActive(101) + Control.IsVisible(100)</visible> -->
 					</control>
 					<!--************************************************************************************-->
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
@@ -1169,7 +1169,7 @@
 				<!--*******************************************************************+********* CoverFlow ****************** (572) *******-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">572</defaultcontrol>
-					<visible>Control.IsVisible(572)</visible>	
+					<visible>Control.IsVisible(572) + StringCompare(Container.ViewMode,$LOCALIZE[33031])</visible>	
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
@@ -3074,13 +3074,13 @@
 									<textwidth>250</textwidth>
 									<texturefocus border="10"></texturefocus>
 									<pulseonselect>true</pulseonselect>
-									<colordiffuse>ThemeColor</colordiffuse>'
+									<!-- <colordiffuse>ThemeColor</colordiffuse> -->
 									<texturenofocus></texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[15016] $LOCALIZE[15100][/UPPERCASE]</label>
 									<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
 									<visible allowhiddenfocus="false">true</visible>
 									<!-- <enable>System.HasAddon(script.rom.collection.browser) + substring(container.folderpath,Games)</enable> -->
-									<enable>false</enable>
+									<!-- <enable>false</enable> -->
 									<animation effect="fade" start="100" end="55" time="200" condition="!Control.IsEnabled(99)">Conditional</animation>
 								</control>
 								<control type="image" id="357">
