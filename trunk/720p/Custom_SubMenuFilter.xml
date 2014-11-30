@@ -1108,6 +1108,28 @@
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(4003)">Conditional</animation>
 					</control>
+					<control type="radiobutton" id="40030">
+						<description>Hide RCB</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>CustomSkinHead</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>R.C.B</label>
+						<selected>!Skin.HasSetting(HideProgramsRCBButton)</selected>
+						<onclick>Skin.ToggleSetting(HideProgramsRCBButton)</onclick>
+						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(40030)">Conditional</animation>
+					</control>
 					<control type="radiobutton" id="4004">
 						<description>Hide addons</description>
 						<posx>10</posx>
@@ -1147,7 +1169,7 @@
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						<label>$LOCALIZE[31921]</label>
-						<selected>!Skin.HasSetting(HideProgramsAppsButton)</selected>
+						<selected>Skin.HasSetting(HideProgramsAppsButton)</selected>
 						<onclick>Skin.ToggleSetting(HideProgramsAppsButton)</onclick>
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(4005)">Conditional</animation>
@@ -1169,7 +1191,7 @@
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						<label>$LOCALIZE[31922]</label>
-						<selected>!Skin.HasSetting(HideProgramsEmusButton)</selected>
+						<selected>Skin.HasSetting(HideProgramsEmusButton)</selected>
 						<onclick>Skin.ToggleSetting(HideProgramsEmusButton)</onclick>
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(4006)">Conditional</animation>
