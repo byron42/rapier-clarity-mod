@@ -1,6 +1,29 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+11.29.14 Version 3.5.43
+
+	11.29.14
+------------------------------------------------------------------------------	
+		= Wasn't my intention to start with this...but I finally think
+		  I figured a way to make all of the fluff from programs views
+		  disappear when window loads with progress dialog visible. 
+  		  Not very exciting to most I'm sure...but I've been trying to 
+		  figure this out for a REALLY long time (stringcompare the 
+		  veiw's label!)
+
+		= Added RCB into skin/scripts...figured out how to hack the labels
+		  to show up finally by adding the strings (original string id's
+	   	  in tact) into my skin's strings.xml's - also added the fonts
+		  (.ttf) + the font code into my skin's Font.xml
+
+		= Added R.C.B. onto PROGRAMS submenu...runs the script right from
+		  home.  Also made Apps and Emus not visible on program's 
+		  submenu (default)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 11.19.14 Version 3.5.42
 
 	11.29.14
