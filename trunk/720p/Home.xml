@@ -2863,7 +2863,7 @@
 							</item>	
 							<item id="13">
 								<description>RCB</description>
-								<label>R.C.B.</label>
+								<label>RCB</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsRCBButton)</visible>
 							</item>
@@ -2871,13 +2871,13 @@
 								<description>Apps</description>
 								<label>31921</label>
 								<onclick>ActivateWindow(Programs,Apps,return)</onclick>
-								<visible>Skin.HasSetting(HideProgramsAppsButton)</visible>
+								<visible>!Skin.HasSetting(HideProgramsAppsButton)</visible>
 							</item>
 							<item id="3">
 								<description>Emus</description>
 								<label>31922</label>
 								<onclick>ActivateWindow(Programs,Emulators,return)</onclick>
-								<visible>Skin.HasSetting(HideProgramsEmusButton)</visible>
+								<visible>!Skin.HasSetting(HideProgramsEmusButton)</visible>
 							</item>
 							<item id="15">
 								<description>Custom Items</description>

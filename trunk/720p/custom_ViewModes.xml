@@ -190,7 +190,7 @@
 				</control>
 <!-- WIDE ICON GAMES EXPERIMENT *********************************************-->				
 				<control type="togglebutton" id="560">
-					<description>Wide Icon (Programs,Games)</description>
+					<description>Wide Icon (Programs-Games,apps,emulators)</description>
 					<width>400</width>
 					<height>38</height>
 					<font>MediaTitleFont</font>
@@ -210,7 +210,7 @@
 					<onclick>Container.SetViewMode(560)</onclick>
 					<!--<onclick>ReloadSkin()</onclick>-->
 					<onclick>Dialog.Close(3002)</onclick>
-					<visible>Substring(Container.Folderpath,games)</visible>
+					<visible>Window.IsActive(Programs) + [Substring(Container.Folderpath,games) | Substring(Container.Folderpath,apps) | SubString(Container.Folderpath,emus]</visible>
 				</control>
 <!--*************************************************************************-->				
 				<control type="togglebutton" id="7">

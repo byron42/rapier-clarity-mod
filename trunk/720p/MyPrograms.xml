@@ -2680,7 +2680,7 @@
 				<!--************************** [[EXPERIMENTAL]] ******************************** WideIconView **************** (560) *******-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">560</defaultcontrol>
-					<visible>Control.IsVisible(560) + Substring(Container.Folderpath,games)</visible>
+					<visible>Control.IsVisible(560) + [Substring(Container.Folderpath,games) | Substring(Container.Folderpath,apps) | SubString(Container.Foldername,emus)] + StringCompare(Container.ViewMode,$LOCALIZE[31108])</visible>
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
