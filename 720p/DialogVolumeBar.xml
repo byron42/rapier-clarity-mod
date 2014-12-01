@@ -14,6 +14,7 @@
 	<!--(((FS volume)))================================================================================================================================-->	
 		<control type="group">
 			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+			<animation effect="zoom" end="70" center="362,0" time="0" condition="Skin.HasSetting(SmallFSVolume)">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
@@ -24,7 +25,7 @@
 				<width>1260</width>
 				<height>50</height>
 				<colordiffuse>BBBBBBBB</colordiffuse>
-				<texture border="10,10,10,10">media-background1.png</texture>
+				<texture border="10">Glass/ShutDownButton.png</texture>
 				<aspectratio>-</aspectratio>
 			</control>
 			<control type="label">
@@ -38,7 +39,7 @@
 				<shadowcolor>ThemeColor</shadowcolor>
 				<align>right</align>
 				<aligny>top</aligny>
-				<label>13376</label>
+				<label>31707</label>
 			</control>
 			<control type="image">
 				<description>VOLUME BORDER</description>
