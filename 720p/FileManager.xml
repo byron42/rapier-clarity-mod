@@ -576,13 +576,14 @@
 					</control>
 				<!--center area-->	
 					<control type="grouplist">
-						<posy>245</posy>
-						<width>200</width>
+						<posx>-12</posx>
+						<posy>225</posy>
+						<width>224</width>
 						<control type="label">
 							<description>CPU Freq</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -590,11 +591,11 @@
 							<align>center</align>
 							<label>CPU</label>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>CPU Freq Value</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
@@ -605,7 +606,7 @@
 							<description>Free Memory</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -613,22 +614,23 @@
 							<align>center</align>
 							<label>$LOCALIZE[158]</label>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>Free Memory Value</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
 							<align>center</align>
 							<label fallback="31000">$INFO[System.FreeMemory]</label>
+							<!-- <label>ooooooooooooooooooooooooooooooooooooooooo</label> -->
 						</control>
 						<control type="label">
 							<description>Free Space (C)</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -637,11 +639,11 @@
 							<label>C Drive:</label>
 							<visible>!IsEmpty(System.Freespace(C))</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>Free Space Value (C)</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
@@ -653,7 +655,7 @@
 							<description>Free Space (D)</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -662,11 +664,11 @@
 							<label>D Drive:</label>
 							<visible>!IsEmpty(System.Freespace(D))</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>Free Space Value (D)</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
@@ -678,7 +680,7 @@
 							<description>Free Space (E)</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -687,11 +689,11 @@
 							<label>E Drive:</label>
 							<visible>!IsEmpty(System.Freespace(E))</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>Free Space Value (E)</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
@@ -703,7 +705,7 @@
 							<description>Free Space (F)</description>
 							<posx>100</posx>
 							<posy>7</posy>
-							<width>200</width>
+							<width>224</width>
 							<height>20</height>
 							<font>ListLabel2Font</font>
 							<textcolor>ThemeColor2</textcolor>
@@ -712,17 +714,42 @@
 							<label>F Drive:</label>
 							<visible>!IsEmpty(System.Freespace(F))</visible>
 						</control>
-						<control type="textbox">
+						<control type="label">
 							<description>Free Space Value (F)</description>
 							<posx>100</posx>
-							<width>200</width>
-							<height>45</height>
+							<width>224</width>
+							<height>40</height>
 							<font>VolumeFont</font>
 							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 							<shadowcolor>-</shadowcolor>
 							<align>center</align>
 							<label fallback="31000">$INFO[System.Freespace(F)]</label>
 							<visible>!IsEmpty(System.Freespace(F))</visible>
+						</control>
+						<control type="label">
+							<description>Free Space (G)</description>
+							<posx>100</posx>
+							<posy>7</posy>
+							<width>224</width>
+							<height>20</height>
+							<font>ListLabel2Font</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>center</align>
+							<label>G Drive:</label>
+							<visible>!IsEmpty(System.Freespace(G))</visible>
+						</control>
+						<control type="label">
+							<description>Free Space Value (G)</description>
+							<posx>100</posx>
+							<width>224</width>
+							<height>40</height>
+							<font>VolumeFont</font>
+							<textcolor>ff8A795D</textcolor> <!--VANILLA-->
+							<shadowcolor>-</shadowcolor>
+							<align>center</align>
+							<label fallback="31000">$INFO[System.Freespace(G)]</label>
+							<visible>!IsEmpty(System.Freespace(G))</visible>
 						</control>
 					</control>
 				</control>
