@@ -1124,7 +1124,7 @@
 						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-						<label>R.C.B</label>
+						<label>RCB</label>
 						<selected>!Skin.HasSetting(HideProgramsRCBButton)</selected>
 						<onclick>Skin.ToggleSetting(HideProgramsRCBButton)</onclick>
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
@@ -1169,7 +1169,7 @@
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						<label>$LOCALIZE[31921]</label>
-						<selected>Skin.HasSetting(HideProgramsAppsButton)</selected>
+						<selected>!Skin.HasSetting(HideProgramsAppsButton)</selected>
 						<onclick>Skin.ToggleSetting(HideProgramsAppsButton)</onclick>
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(4005)">Conditional</animation>
@@ -1191,7 +1191,7 @@
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						<label>$LOCALIZE[31922]</label>
-						<selected>Skin.HasSetting(HideProgramsEmusButton)</selected>
+						<selected>!Skin.HasSetting(HideProgramsEmusButton)</selected>
 						<onclick>Skin.ToggleSetting(HideProgramsEmusButton)</onclick>
 						<enable>!Skin.HasSetting(ShowProgramsSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(4006)">Conditional</animation>
