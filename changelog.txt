@@ -3,6 +3,18 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 11.29.14 Version 3.5.43
 
+	12.5.14
+------------------------------------------------------------------------------
+		= Removing all RCB fonts originally added to font.xml - it was
+		  ultimately not needed (rcb works with out this) and it was
+		  snatching 1.5mb of RAM at startup...glad I caught this, and
+		  this also opens my eyes to cleaning up font.xml because there
+		  are many fonts of the same style and type with different names.
+		  Perhaps by unifying these I'll be able to gain a decent amout
+		  of RAM back that otherwise would be wasted due to sloppy 
+		  coding.
+
+
 	11.30.14
 ------------------------------------------------------------------------------
 		= Added an option to change the volume display size for 
