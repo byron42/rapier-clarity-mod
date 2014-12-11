@@ -12,7 +12,7 @@
 				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,-10" end="0,-120" time="250" delay="200">WindowClose</animation>
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
 				<!--HomeMenuPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
 				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
@@ -28,8 +28,8 @@
 					<!-- <texture>FSVid_icons_top.png</texture>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>FFFFFFFF</colordiffuse> -->
-					<texture border="10,10,10,10">media-background2.png</texture>
-					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				
 				<control type="grouplist" id="900">	
@@ -183,7 +183,7 @@
 				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,602" end="0,730" time="250" delay="200">WindowClose</animation>
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
 				<!--HomeMenuPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(123) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
 				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
@@ -197,8 +197,8 @@
 					<!-- <texture>FSVid_icons_bottom.png</texture>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>FFFFFFFF</colordiffuse> -->
-					<texture border="10,10,10,10">media-background2.png</texture>
-					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				
 	<!--(((MAIN BUTTONS)))============================================================================================================-->	
@@ -293,10 +293,9 @@
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 					</control>
-					
 				</control>	
 			<!--labels/time-->
-				<control type="label">
+				<control type="label" id="2222">
 					<posx>25</posx>
 					<posy>47</posy>
 					<width>260</width>
@@ -311,6 +310,21 @@
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>'
 					<visible>Window.IsTopmost(VideoOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>ListLabelFont</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
 				</control>
 				<control type="label">
 					<posx>1005</posx>

@@ -7,15 +7,16 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!--VIDEO OSD IS VISIBLE FADE-->
-			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsVisible(2901)">Conditional</animation>
+			<!-- <animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsVisible(2901)">Conditional</animation> -->
 			<control type="group">
 				<!--*********************************************** Codec Box ***************************************************-->
 				<posx></posx>
 				<posy></posy>
 				<!--VisibleFadeEffect-->
-				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="0">WindowOpen</animation>
-				<animation effect="slide" start="0" end="0,-114" time="250" delay="200">WindowClose</animation>
-				<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
+				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="0">WindowOpen</animation>
+				<animation effect="slide" start="0" end="0,-400" time="250" delay="200">WindowClose</animation>
+				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
+				<animation effect="slide" end="0,123" time="250" tween="quadratic" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 				<!-- OSD/FullscreenVid Both Visible -->
 				<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
 				
@@ -27,11 +28,11 @@
 					<posy>-10</posy>
 					<width>1360</width>
 					<height>155</height>
-					<colordiffuse>BBBBBBBB</colordiffuse>
-					<texture border="10,10,10,10">media-background2.png</texture>
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				<control type="grouplist">
-					<visible>Player.HasVideo + !Window.IsActive(142)</visible>
+					<visible>Player.HasVideo + !Window.IsActive(142)</visible><animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
 					<posx>10</posx>
 					<posy>0</posy>
 					<itemgap>40</itemgap>
