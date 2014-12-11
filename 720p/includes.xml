@@ -585,16 +585,16 @@
 	</include>
 	<!--*****************************************************************************************-->
 	
-	<!-- 
-	<include name="CoverFlowBorder">
-		<include condition="Skin.HasSetting(HideMovieCase)">CoverFlowRoundBorder</include>
-		<include condition="!Skin.HasSetting(HideMovieCase)">CoverFlowSquareBorder</include>
+	
+	<include name="PlayerControlItemGap">
+		<include condition="Player.HasVideo">VideoPlayerItemGap</include>
+		<include condition="Player.HasAudio">MusicPlayerItemGap</include>
 	</include>
-	<include name="CoverFlowRoundBorder">
-		<texture>CoverFlow/CoverFlowBorderF.png</texture>
+	<include name="VideoPlayerItemGap">
+		<itemgap>52</itemgap>
 	</include>
-	<include name="CoverFlowSquareBorder">
-		<texture>CoverFlow/CFIB_Case.png</texture>
+	<include name="MusicPlayerItemGap">
+		<itemgap>29</itemgap>
 	</include>
-	 -->
+	
 </includes>
