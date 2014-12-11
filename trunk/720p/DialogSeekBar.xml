@@ -3,18 +3,18 @@
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 	<!--DialogOpenCloseAnim-->
-	<animation condition="!Window.IsVisible(142)" type="WindowOpen">
+	<animation condition="![Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="WindowOpen">
 		<effect type="fade" end="100" time="150"/>
 		<!-- <effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/> -->
 	</animation>	
-	<animation condition="!Window.IsVisible(142)" type="WindowClose">
+	<animation condition="![Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="WindowClose">
 		<effect type="fade" end="0" time="150" />
 		<!-- <effect type="slide" end="0,45" time="200" tween="circle" easing="out"/> -->
 	</animation>
 
 <!--*************** for FullScreenInfo's (and player controls!) update ********************************-->
-	<animation effect="fade" end="100" time="0"  condition="Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]">WindowOpen</animation>
-	<animation effect="fade"  end="0"  easing="out" condition="Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]">WindowClose</animation>
+	<animation effect="fade" end="100" time="0"  condition="[Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowOpen</animation>
+	<animation effect="fade"  end="0"  easing="out" condition="[Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowClose</animation>
 <!--***************************************************************************************************-->
 	
 	<coordinates>
@@ -22,33 +22,20 @@
 		<posx>278</posx>
 		<posy>65</posy>
 	</coordinates>
+	
 	<controls>
 		<control type="group" id="1111">
-			<visible>Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)</visible>
+			<visible>Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]</visible>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
-			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="Window.IsVisible(142)">Conditional</animation>
+			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="[Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114)]">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
-		<!--	
-			<control type="image">
-				<description>SEEKBAR BORDER</description>
-				<posx>90</posx>
-				<posy>-8</posy>
-				<width>551</width>
-				<height>60</height>
-				<reveal>-</reveal>
-				<info>-</info>
-				<colordiffuse>BBBBBBBB</colordiffuse>
-				<texture border="10">scrollbar-background.png</texture>
-				<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-				<bordersize>14</bordersize>
-			</control>
-		-->	
+		
 			<control type="image">
 				<description>Media Overlay Image1</description>
 				<posx>100</posx>
@@ -60,7 +47,8 @@
 				<bordertexture border="10,10,10,10">Glass/keyfocus.png</bordertexture>
 				<bordersize>6</bordersize>
 			</control>
-			<control type="group">
+			
+			<control type="group" id="6000">
 				<posy>3</posy>
 				<!--playstate images-->
 				<control type="label">
@@ -309,25 +297,38 @@
 				<ondown>1</ondown>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<visible>!Window.IsVisible(142)</visible>
+				<visible>![Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114)]</visible>
 			</control>
 		</control>
 <!--******** HACKED!!! ************************-->
-		<control type="slider" id="401">
-			<description>Seek Slider</description>
-			<posx>20</posx>
-			<posy>27</posy>
-			<width>800</width>
-			<height>14</height>
-			<texturesliderbar>seekslider.png</texturesliderbar>
-			<textureslidernib>slider_nibFO.png</textureslidernib>
-			<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
-			<visible>Window.IsVisible(142) + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
-			<onup>1</onup>
-			<ondown>1</ondown>
-			<onleft>1</onleft>
-			<onright>1</onright>
-			<animation effect="fade" end="15" condition="Window.IsVisible(videoosd)">Conditional</animation>
+		<control type="group">
+			<!--normal zoom for video/no music cd-->
+			<animation effect="zoom" start="300,715r,1280,720" end="300,715r,1080,720" time="150" condition="[Player.HasVideo + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]] | [[Player.HasAudio + !Skin.HasSetting(HidecdArt)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]">VisibleChange</animation>
+			<!--zoom for no music cd specific-->
+			<animation effect="zoom" start="285,715r,1280,720" end="285,715r,1095,720" time="150" condition="Player.HasAudio + [Skin.HasSetting(HidecdArt) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]">VisibleChange</animation>
+			<!--empty thumb/no cd-->
+			<animation effect="slide" end="-10,0" condition="Player.HasAudio + Skin.HasSetting(HidecdArt)">Conditional</animation>
+			<animation effect="slide" end="20,0" condition="Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
+			<!-- visualization with musicOSD -->
+			<animation effect="zoom" start="0,0,1280,720" end="0,0,1510,720" time="150" condition="[Window.IsActive(2006) + Player.ShowInfo + Window.IsActive(120)] | Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="Window.IsActive(120) | Window.IsActive(2901)">Conditional</animation>
+			<control type="slider" id="401">
+				<description>Seek Slider</description>
+				<posx>20</posx>
+				<posy>32</posy>
+				<width>800</width>
+				<height>11</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>slider_nibFO.png</textureslidernib>
+				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+				<visible>[Window.IsVisible(142) | [Window.IsVisible(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<!-- <animation effect="fade" end="15" condition="Window.IsVisible(videoosd)">Conditional</animation> -->
+				<animation effect="fade" end="0" condition="Window.IsActive(Shutdownmenu)">Conditional</animation>
+			</control>
 		</control>
 <!--*******************************************-->
 	</controls>
