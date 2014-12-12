@@ -17,29 +17,26 @@
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 				<animation effect="fade" start="100" end="0"  time="250" condition="Window.IsActive(ShutdownMenu) + Window.IsActive(2901)">Conditional</animation>
 				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">WindowOpen</animation>
-				<!-- <animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out" condition="!Window.IsActive(2901)">VisibleChange</animation> -->
 				<animation effect="fade" end="100" time="250" delay="150" condition="">Visible</animation>
 				<animation effect="fade" end="100" time="250" condition="">Hidden</animation>
 				<animation effect="slide" start="0,0" end="0,-400" time="250" delay="0" tween="quadratic" easing="out">WindowClose</animation>
 				<!-- videoOSD visible slide -->
-				<animation effect="slide" end="0,285" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+				<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 				<control type="image">
 					<description>media info background image</description>
 					<posx>-10</posx>
-					<posy>-38</posy>
+					<posy>-3</posy>
 					<width>1300</width>
-					<height>200</height>
+					<height>165</height>
 					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
 					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
-					<animation effect="zoom" end="100,140" time="200" condition="Window.IsActive(2901)">Conditional</animation>
-					<animation effect="slide" end="0,-23" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 				</control>
 				
 				<!--**************************PLAYER CONTROL ACTION *******************************-->
 				<control type="group">	
 					<posx>300</posx>
 					<posy>715r</posy>
-					<animation effect="fade" start="0" end="100" time="250" delay="50">Visible</animation>
+					<animation effect="fade" start="0" end="100" time="250" delay="100">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="250" condition="!Window.IsActive(2901)">Hidden</animation>
 					<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(2901)">Conditional</animation>
 					<visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
@@ -79,8 +76,6 @@
 				
 	<!--(((MAIN BAR WITH CONTROLS)))========================================================================================================-->		
 				<control type="group">	
-					<!--VideoOsd Visible Slide-->
-					<animation effect="slide" end="0,-35" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 					<!--zoom for Player Actions-->
 					<animation effect="zoom" start="300,715r,1280,720" end="300,715r,1080,720" time="150" condition="Player.HasVideo  + !Window.IsActive(2901) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 					<control type="group">
@@ -103,7 +98,6 @@
 								<font>Font_OSDMusicTitle</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>ThemeColor</shadowcolor>
-								<animation effect="slide" end="0,-15" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 							</control>
 							<control type="label">
 								<posx></posx>
@@ -116,7 +110,6 @@
 								<label>$VAR[PlayerControlArtist]</label>
 								<align>left</align>
 								<aligny>center</aligny>
-								<animation effect="slide" end="0,-5" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 							</control>
 							<control type="image">
 								<posx>-10</posx>
@@ -126,13 +119,11 @@
 								<texture>$INFO[Player.StarRating]</texture>
 								<aspectratio>stretch</aspectratio>
 								<colordiffuse>ThemeColor2</colordiffuse>
-								<animation effect="slide" end="0,-5" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 							</control>
 						</control>
 					<!--progress-->
 						<control type="group">
 							<posy>5</posy>
-							<animation effect="slide" end="0,5" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 							<control type="progress">
 								<description>Progressbar</description>
 								<posx>0</posx>
@@ -215,7 +206,6 @@
 						<height>60</height>
 						<visible>Player.HasVideo</visible>
 						<animation effect="fade" end="45" condition="true">Conditional</animation>
-						<animation effect="slide" end="0,8" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 						<!--**************************** VideoInfoStudioMediaFlag **********************************-->
 						<control type="image">
 							<posx>900</posx>
@@ -379,8 +369,6 @@
 					<posx></posx>
 					<posy></posy>
 					<visible>Player.HasVideo</visible>
-					
-					<animation effect="slide" end="-5,-110" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 					<control type="image">
 						<description>cover image</description>
 						<posx>7</posx>
