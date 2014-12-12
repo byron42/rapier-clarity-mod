@@ -28,45 +28,16 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
-			<!--*********************************** BackgroundFSVideo ***********************************************-->
-			<control type="group">
-				<visible>Player.HasVideo</visible>
-				<control type="videowindow">
-					<include>BackgroundOffset</include>
-					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
-				</control>
-				<control type="image">
-					<description>Dim Background</description>
-					<include>BackgroundOffset</include>
-					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
-					<texture>background-dim.png</texture>
-					<!--BackgroundVizDimAnim-->
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
-					<!--BackgroundVizDimAnim-->
-				</control>
-			</control>
-			<!--*****************************************************************************************************-->
-			
-			<!--************************************ BackgroundFSViz ************************************************-->
-			<control type="group">
-				<visible>Player.HasAudio</visible>
-				<control type="visualisation" id="2">
-					<include>BackgroundOffset</include>
-					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
-				</control>
-				<control type="image">
-					<description>Dim Background</description>
-					<include>BackgroundOffset</include>
-					<width>1280</width>
-					<include>VariableBackgroundHeight</include>
-					<texture>background-dim.png</texture>
-					<!--BackgroundVizDimAnim-->
-					<animation effect="fade" end="70" condition="true">Conditional</animation>
-					<!--BackgroundVizDimAnim-->
-				</control>
+			<!--*********************************** Background Dim ***************************************************-->
+			<control type="image">
+				<visible>Player.Media</visible>
+				<description>Dim Background</description>
+				<include>BackgroundOffset</include>
+				<width>1280</width>
+				<include>VariableBackgroundHeight</include>
+				<texture>background-dim.png</texture>
+				<!--BackgroundVizDimAnim-->
+				<animation effect="fade" end="70" condition="true">Conditional</animation>
 			</control>
 			<!--*****************************************************************************************************-->
 			
