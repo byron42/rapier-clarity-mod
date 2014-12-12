@@ -3,6 +3,25 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 11.29.14 Version 3.5.43
 
+	12.11.14
+------------------------------------------------------------------------------
+		= REVAMPED (PlayerControls)...looks good and works properly
+
+		= Changed FullScreenInfo and Viz ShowInfo to match what I did with
+		  (PLayerControls)
+
+		= Made Changes to Video/MusicOSD to follow suit with what I 
+		  changed from (PlayerControls)...It looks really nice now
+		  that there's congruency between all of these media windows.
+
+		= Added the ability to change the OSD backing color (gray,theme,
+		  theme 2) from skin settings
+
+		= Fixed a bug with coverflow images being visible when entering 
+		  containers while the view isn't visible (mostly when progress 
+		  dialog is visible)
+
+
 	12.5.14
 ------------------------------------------------------------------------------
 		= Removing all RCB fonts originally added to font.xml - it was
