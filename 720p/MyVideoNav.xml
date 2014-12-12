@@ -5,7 +5,7 @@
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(movieinformation)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(2003)">Conditional</animation> <!--FSD_ControlFade-->
