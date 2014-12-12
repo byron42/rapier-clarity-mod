@@ -3141,7 +3141,7 @@
 				<!--***************************************************************************** CoverFlow ****************** (570) ********-->
 				<control type="group" id="500">	
 					<defaultcontrol always="true">570</defaultcontrol>
-					<visible>Control.IsVisible(570)</visible>	
+					<visible>Control.IsVisible(570) + StringCompare(Container.ViewMode,$LOCALIZE[33031])</visible>	
 					<!--MediaViewOpenCloseAnim-->
 					<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
