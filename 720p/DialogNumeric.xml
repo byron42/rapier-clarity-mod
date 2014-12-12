@@ -18,7 +18,7 @@
 		<control type="group">
 			<posy>56</posy>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) ">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) ">Conditional</animation>
 		
 			<!--************************************ GamepadDialogBox *******************************************-->
 			<control type="image">
