@@ -1,10 +1,9 @@
 <window type="buttonMenu" id="111">
-<onload condition="Window.IsActive(ContextMenu)">Dialog.Close(ContextMenu)</onload>
+	<onload condition="Window.IsActive(ContextMenu)">Dialog.Close(ContextMenu)</onload>
 	<defaultcontrol always="false">103</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">	
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(PlayerControls)">Conditional</animation>
 	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
 			<control type="group">	
 			<!--BackgroundDimAnim-->
@@ -422,7 +421,7 @@
 						<onclick>ActivateWindow(134)</onclick>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-						<enable>!Window.IsActive(VirtualKeyboard)</enable>
+						<enable>!Window.IsActive(VirtualKeyboard) | !Window.IsActive(Playercontrols)</enable>
 					</control>
 					<control type="button" id="111">
 						<description>System Info</description>

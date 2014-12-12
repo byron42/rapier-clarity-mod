@@ -5,7 +5,7 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="100" delay="400" condition="Window.IsActive(Home)">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.Next(Favourites)">Conditional</animation>	
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) ">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) ">Conditional</animation>
 			
 	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
 			<control type="group">
