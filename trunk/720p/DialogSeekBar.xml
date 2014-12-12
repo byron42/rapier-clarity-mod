@@ -311,7 +311,8 @@
 			<animation effect="slide" end="20,0" condition="Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 			<!-- visualization with musicOSD -->
 			<animation effect="zoom" start="0,0,1280,720" end="0,0,1510,720" time="150" condition="[Window.IsActive(2006) + Player.ShowInfo + Window.IsActive(120)] | Window.IsActive(2901)">Conditional</animation>
-			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="Window.IsActive(120) | Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="Window.IsActive(120)">Conditional</animation>
+			<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
 			<control type="slider" id="401">
 				<description>Seek Slider</description>
 				<posx>20</posx>
