@@ -28,9 +28,25 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
-			<!--*********************************** Background Dim ***************************************************-->
+		<!--***************************************** Backgrounds *********************************************-->
+		<!--BackgroundFSVideo-->
+			<control type="videowindow">
+				<include>BackgroundOffset</include>
+				<width>1280</width>
+				<include>VariableBackgroundHeight</include>
+				<visible>Player.HasVideo + !Window.IsActive(ShutdownMenu)</visible>
+			</control>
+		<!--BackgroundFSViz-->
+			<control type="visualisation">
+				<posx></posx>
+				<posy></posy>
+				<include>BackgroundOffset</include>
+				<width>1280</width>
+				<height>720</height>
+				<visible>Player.HasAudio + !Window.IsActive(ShutdownMenu)</visible>
+			</control>	
+		<!--Background Dim-->
 			<control type="image">
-				<visible>Player.Media</visible>
 				<description>Dim Background</description>
 				<include>BackgroundOffset</include>
 				<width>1280</width>
@@ -38,8 +54,9 @@
 				<texture>background-dim.png</texture>
 				<!--BackgroundVizDimAnim-->
 				<animation effect="fade" end="70" condition="true">Conditional</animation>
+				<visible>Player.Media</visible>
 			</control>
-			<!--*****************************************************************************************************-->
+		<!--***************************************************************************************************-->
 			
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
@@ -465,9 +482,6 @@
 							<posx></posx>
 							<posy></posy>
 							<visible>Player.HasVideo</visible>
-							<animation effect="slide" start="0,0" end="0,-400" time="250"  condition="Window.IsVisible(SliderDialog) | [[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + !Window.IsActive(2901)] | Window.IsVisible(VideoBookmarks) | Window.IsVisible(111)">Conditional</animation>
-							<!-- OSD/FullscreenVid Both Visible -->
-							<animation effect="slide" start="0,0" end="0,-400" time="150"  condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
 							<control type="image">
 								<description>cover image</description>
 								<posx>7</posx>
@@ -498,7 +512,6 @@
 							<posx></posx>
 							<posy></posy>
 							<visible>Player.HasAudio</visible>
-							<animation effect="slide" start="0,0" end="0,-400" time="250"  condition="Window.IsVisible(SliderDialog) | [[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + !Window.IsActive(2901)] | Window.IsVisible(VideoBookmarks) | Window.IsVisible(111)">Conditional</animation>
 						<!--cd sleeve and disc	-->
 							<control type="group">	
 								<visible>!Skin.HasSetting(HidecdArt)</visible>
