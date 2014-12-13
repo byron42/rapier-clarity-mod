@@ -356,7 +356,7 @@
 								<posy>174</posy>
 								<width>165</width>
 								<textwidth>169</textwidth>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>black</shadowcolor>
@@ -412,7 +412,7 @@
 								<posx>124</posx>
 								<posy>184</posy>
 								<width>158</width>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>black</shadowcolor>
@@ -498,7 +498,7 @@
 								<posx>150</posx>
 								<posy>237</posy>
 								<width>250</width>
-								<font>LargeListLabelFont</font>
+								<font>font_22_B</font>
 								<textcolor>DefaultColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -557,7 +557,7 @@
 								<posx>150</posx>
 								<posy>237</posy>
 								<width>250</width>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -681,7 +681,7 @@
 								<posy>3</posy>
 								<width>620</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -698,7 +698,7 @@
 								<posy>3</posy>
 								<width>458</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -716,7 +716,7 @@
 								<posy>5</posy>
 								<width>150</width>
 								<height>36</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -816,7 +816,7 @@
 								<posy>3</posy>
 								<width>620</width>
 								<height>36</height>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>-</shadowcolor>
 								<align>left</align>
@@ -830,7 +830,7 @@
 								<posy>3</posy>
 								<width>453</width>
 								<height>36</height>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>-</shadowcolor>
 								<align>left</align>
@@ -845,7 +845,7 @@
 								<posy>5</posy>
 								<width>150</width>
 								<!--ListLabel2-->
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<width>150</width>
@@ -1035,7 +1035,7 @@
 								<posx>120</posx>
 								<posy>241</posy>
 								<width>226</width>
-								<font>DefaultFont</font>
+								<font>font_21</font>
 								<textcolor>DefaultColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1094,7 +1094,7 @@
 								<posx>120</posx>
 								<posy>241</posy>
 								<width>226</width>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1280,7 +1280,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>aadcdcdc</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label] ($INFO[ListItem.Year])</label>
@@ -1293,7 +1293,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[20339][/UPPERCASE][/B]</label>
@@ -1305,7 +1305,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Director][/B]</label>
@@ -1318,7 +1318,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -1331,7 +1331,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -1345,7 +1345,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[2050][/B][/UPPERCASE]</label>
@@ -1357,7 +1357,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Duration][/B]</label>
@@ -1370,7 +1370,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
@@ -1382,7 +1382,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
@@ -1395,7 +1395,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -1407,7 +1407,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -1526,7 +1526,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label] ($INFO[ListItem.Year])</label>
@@ -1539,7 +1539,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[20339][/UPPERCASE][/B]</label>
@@ -1551,7 +1551,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Director][/B]</label>
@@ -1564,7 +1564,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<height>20</height>
@@ -1577,7 +1577,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<height>20</height>
@@ -1591,7 +1591,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[2050][/B][/UPPERCASE]</label>
@@ -1603,7 +1603,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Duration][/B]</label>
@@ -1616,7 +1616,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
@@ -1628,7 +1628,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
@@ -1641,7 +1641,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -1653,7 +1653,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -1752,7 +1752,7 @@
 								<posx>35</posx>
 								<posy>4.5</posy>
 								<width>380</width>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>left</align>
@@ -1767,7 +1767,7 @@
 								<posx>489</posx>
 								<posy>4.5</posy>
 								<width>100</width>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -1904,7 +1904,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -1925,7 +1925,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<colordiffuse>BBBBBBBB</colordiffuse>
 									<aligny>top</aligny>
@@ -1982,7 +1982,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -1996,7 +1996,7 @@
 								<posy>30</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2010,7 +2010,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2024,7 +2024,7 @@
 								<posy>90</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2038,7 +2038,7 @@
 								<posy>120</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2052,7 +2052,7 @@
 								<posy>150</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2074,7 +2074,7 @@
 							<posy>533</posy>
 							<width>475</width>
 							<height>114</height>
-							<font>font15</font>
+							<font>font_19</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
 							<wrapmultiline>true</wrapmultiline>
@@ -2365,7 +2365,7 @@
 								<posx>-430</posx>
 								<posy>23</posy>
 								<width>800</width>
-								<font>Font_Lib21</font>
+								<font>font_24_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -2378,7 +2378,7 @@
 								<posy>28</posy>
 								<width>280</width>
 								<align>right</align>
-								<font>MediaInfoAltHeadFont2</font>
+								<font>font_19_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Genre]</label>
@@ -2391,7 +2391,7 @@
 									<posx>-430</posx>
 									<posy>60</posy>
 									<width>1050</width>
-									<font>Font_Lib21</font>
+									<font>font_24_B</font>
 									<textcolor>AADCDCDC</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<align>left</align>
@@ -2405,7 +2405,7 @@
 									<posx>-430</posx>
 									<posy>60</posy>
 									<width>1060</width>
-									<font>Font_Lib21</font>
+									<font>font_24_B</font>
 									<textcolor>AADCDCDC</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<align>left</align>
@@ -2446,7 +2446,7 @@
 											<posy></posy>
 											<width>135</width>
 											<height>25</height>
-											<font>LibraryCat</font> <!--CAT. LABEL-->
+											<font>font_19_C</font> <!--CAT. LABEL-->
 											<aligny>center</aligny>
 											<textcolor>Grey</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -2465,7 +2465,7 @@
 											<posy></posy>
 											<width>135</width>
 											<height>25</height>
-											<font>LibraryCat</font> <!--CAT. LABEL-->
+											<font>font_19_C</font> <!--CAT. LABEL-->
 											<aligny>center</aligny>
 											<textcolor>Grey</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -2506,7 +2506,7 @@
 									<posy>106</posy>
 									<width>700</width>
 									<height>17</height>
-									<font>LibraryCatFontSmall</font> <!--CAT LABEL-->
+									<font>font_21_B</font> <!--CAT LABEL-->
 									<align>right</align>
 									<aligny>center</aligny>
 									<textcolor>Grey</textcolor>
@@ -2519,7 +2519,7 @@
 									<posy>138</posy>
 									<width>700</width>
 									<height>17</height>
-									<font>LibraryCatFontSmall</font> <!--CAT LABEL-->
+									<font>font_21_B</font> <!--CAT LABEL-->
 									<align>right</align>
 									<aligny>center</aligny>
 									<textcolor>Grey</textcolor>
@@ -2532,7 +2532,7 @@
 									<posy>170</posy>
 									<width>700</width>
 									<height>17</height>
-									<font>LibraryCatFontSmall</font> <!--CAT LABEL-->
+									<font>font_21_B</font> <!--CAT LABEL-->
 									<align>right</align>
 									<aligny>center</aligny>
 									<textcolor>Grey</textcolor>
@@ -2545,7 +2545,7 @@
 									<posy>202</posy>
 									<width>700</width>
 									<height>17</height>
-									<font>LibraryCatFontSmall</font> <!--CAT LABEL-->
+									<font>font_21_B</font> <!--CAT LABEL-->
 									<align>right</align>
 									<aligny>center</aligny>
 									<textcolor>Grey</textcolor>
@@ -2558,7 +2558,7 @@
 									<posy>234</posy>
 									<width>700</width>
 									<height>17</height>
-									<font>LibraryCatFontSmall</font> <!--CAT LABEL-->
+									<font>font_21_B</font> <!--CAT LABEL-->
 									<align>right</align>
 									<aligny>center</aligny>
 									<textcolor>Grey</textcolor>
@@ -2579,7 +2579,7 @@
 									<posy>310</posy>
 									<width>1035</width>
 									<height>74</height>
-									<font>VolumeFont</font>
+									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<label>$INFO[ListItem.Plot]</label>
@@ -2633,9 +2633,9 @@
 								<description>TV Show Title</description>
 								<posy>-4</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20364]:[/COLOR][/B] $INFO[VideoPlayer.TvShowTitle]</label>
@@ -2645,9 +2645,9 @@
 								<description>Movie Title</description>
 								<posy>-4</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20338]:[/COLOR][/B] $INFO[VideoPlayer.Title]</label>
@@ -2657,9 +2657,9 @@
 								<description>Year</description>
 								<posy>10</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[562]:[/COLOR][/B] $INFO[VideoPlayer.Year]</label>
@@ -2668,9 +2668,9 @@
 								<description>Season / Episode</description>
 								<posy>24</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20373]:[/COLOR][/B] $INFO[VideoPlayer.Season] [B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20359]:[/COLOR][/B] $INFO[VideoPlayer.Episode]</label>
@@ -2680,9 +2680,9 @@
 								<description>Director</description>
 								<posy>24</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20339]:[/COLOR][/B] $INFO[VideoPlayer.Director]</label>
@@ -2701,8 +2701,8 @@
 								<posy>48</posy>
 								<width>316</width>
 								<height>74</height>
-								<font>font12</font>
-								<font>MediaInfoFont</font>
+								<font>font_17</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -2724,9 +2724,9 @@
 								<description>Time / Player</description>
 								<posy>129</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]Time:[/COLOR][/B] $INFO[Player.Time] [B][COLOR=MediaInfoHeaderColor]Duration:[/COLOR][/B] $INFO[Player.Duration]</label>
@@ -2989,7 +2989,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>30</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>Grey</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -3010,7 +3010,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>30</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>Grey</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -3069,7 +3069,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3083,7 +3083,7 @@
 								<posy>25</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3097,7 +3097,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3111,7 +3111,7 @@
 								<posy>75</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3125,7 +3125,7 @@
 								<posy>100</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3139,7 +3139,7 @@
 								<posy>125</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3160,7 +3160,7 @@
 								<posy>5</posy>
 								<width>475</width>
 								<height>145</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -3174,7 +3174,7 @@
 								<posy>5</posy>
 								<width>475</width>
 								<height>147</height>-->
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -3214,7 +3214,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>Grey</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
@@ -3235,7 +3235,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>Grey</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
@@ -3288,7 +3288,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3302,7 +3302,7 @@
 								<posy>30</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3316,7 +3316,7 @@
 								<posy>60</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3330,7 +3330,7 @@
 								<posy>90</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3344,7 +3344,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -3365,7 +3365,7 @@
 								<posy>5</posy>
 								<width>475</width>
 								<height>145</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -3387,7 +3387,7 @@
 							<posx>20</posx>
 							<posy>8</posy>
 							<textcolor>Grey</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>
 							<scroll>true</scroll>
 						</control>
@@ -3398,7 +3398,7 @@
 							<width>200</width>
 							<align>right</align>
 							<textcolor>Grey</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Year,(,) - ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						</control>
 					</control>
@@ -4495,7 +4495,7 @@
 							<posx>13</posx>
 							<posy>88</posy>
 							<width>1100</width>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>gray</textcolor>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
@@ -4541,7 +4541,7 @@
 										<posy>0</posy>
 										<width>200</width>
 										<height>34</height>
-										<font>MediaInfoFont</font>
+										<font>font_20</font>
 										<textcolor>Grey</textcolor><!--lic-->
 										<aligny>top</aligny>
 										<textoffsety>2</textoffsety>
@@ -4562,7 +4562,7 @@
 										<posy>0</posy>
 										<width>200</width>
 										<height>34</height>
-										<font>MediaInfoFont</font>
+										<font>font_20</font>
 										<textcolor>Grey</textcolor><!--lic-->
 										<colordiffuse>BBBBBBBB</colordiffuse>
 										<aligny>top</aligny>
@@ -4611,7 +4611,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -4625,7 +4625,7 @@
 								<posy>30</posy>
 								<width>330</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -4639,7 +4639,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -4653,7 +4653,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -4667,7 +4667,7 @@
 								<posy>120</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>Grey</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -4691,7 +4691,7 @@
 							<posy>307</posy>
 							<width>585</width>
 							<height>283</height>
-							<font>SortLetterFont</font>
+							<font>font_24</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
 							<label>$INFO[ListItem.Plot]</label>
@@ -4705,7 +4705,7 @@
 							<posy>307</posy>
 							<width>585</width>
 							<height>283</height>
-							<font>SortLetterFont</font>
+							<font>font_24</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
 							<label>$INFO[ListItem.PlotOutline]</label>
@@ -4757,7 +4757,7 @@
 							<control type="label">
 								<description>Play Trailer Label</description>
 								<width min="1" max="500">auto</width>
-								<font>Font_LibBold20</font>
+								<font>font_24_B</font>
 								<textcolor>Grey</textcolor>					
 								<label>[UPPERCASE]$LOCALIZE[208] $LOCALIZE[20410][/UPPERCASE]</label>	
 								<align>left</align>
@@ -4767,7 +4767,7 @@
 								<posx>1090</posx>
 								<description>Play Trailer Label is empty</description>
 								<width>500</width>
-								<font>Font_LibBold20</font>
+								<font>font_24_B</font>
 								<textcolor>ff343434</textcolor>					
 								<label>[UPPERCASE] - $LOCALIZE[20410] $LOCALIZE[416][/UPPERCASE] - </label>	
 								<align>right</align>
@@ -5388,7 +5388,7 @@
 								<posx>10</posx>
 								<posy>18</posy>
 								<width>540</width>
-								<font>MediaInfoAltHeadFont2</font>
+								<font>font_19_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>	
@@ -5401,7 +5401,7 @@
 									<posx>5</posx>
 									<posy>333</posy>
 									<width>380</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -5413,7 +5413,7 @@
 									<posx>555</posx>
 									<posy>333</posy>
 									<width>160</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -5433,7 +5433,7 @@
 									<posx>5</posx>
 									<posy>378</posy>
 									<width>380</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -5445,7 +5445,7 @@
 									<posx>555</posx>
 									<posy>378</posy>
 									<width>160</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -5474,7 +5474,7 @@
 									<posy>435</posy>
 									<width>550</width>
 									<height>127</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<wrapmultiline>true</wrapmultiline>
@@ -5494,7 +5494,7 @@
 									<posy>435</posy>
 									<width>550</width>
 									<height>127</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<wrapmultiline>true</wrapmultiline>
@@ -5571,7 +5571,7 @@
 								<posx>115</posx>
 								<posy>60</posy>
 								<width>490</width>
-								<font>MediaInfoCatFont</font>
+								<font>font_21_U</font>
 								<textcolor>MediaInfoHeadColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>				
@@ -5662,7 +5662,7 @@
 								<posx>115</posx>
 								<posy>60</posy>
 								<width>490</width>
-								<font>MediaInfoCatFont</font>
+								<font>font_21_U</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>	
@@ -7668,7 +7668,7 @@
 									<posy>37</posy>
 									<width>1200</width>
 									<height>40</height>
-									<font>PluginSettingsHead</font>
+									<font>font_32_B</font>
 									<textcolor>ThemeColor2</textcolor>
 									<shadowcolor>ff000000</shadowcolor>
 									<align>center</align>
@@ -7681,7 +7681,7 @@
 									<posy>20</posy>
 									<width>1200</width>
 									<height>40</height>
-									<font>PluginSettingsHead</font>
+									<font>font_32_B</font>
 									<textcolor>ThemeColor2</textcolor>
 									<shadowcolor>ff000000</shadowcolor>
 									<align>center</align>
@@ -7694,7 +7694,7 @@
 									<posy>58</posy>
 									<width>1200</width>
 									<height>35</height>
-									<font>DialogTitleFont</font>
+									<font>font_25_B</font>
 									<textcolor>BBDCDCDC</textcolor>
 									<shadowcolor>ff000000</shadowcolor>
 									<align>center</align>
@@ -8103,7 +8103,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>aadcdcdc</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label] ($INFO[ListItem.Year]) </label>
@@ -8117,7 +8117,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[515][/UPPERCASE][/B]</label>
@@ -8130,7 +8130,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
@@ -8144,7 +8144,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -8158,7 +8158,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -8173,7 +8173,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[16101][/B][/UPPERCASE]</label>
@@ -8186,7 +8186,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
@@ -8200,7 +8200,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[16102][/B][/UPPERCASE]</label>
@@ -8213,7 +8213,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Property(WatchedEpisodes)][/B]</label>
@@ -8227,7 +8227,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -8240,7 +8240,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -8409,7 +8409,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label] ($INFO[ListItem.Year]) </label>
@@ -8423,7 +8423,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[515][/UPPERCASE][/B]</label>
@@ -8436,7 +8436,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
@@ -8450,7 +8450,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -8464,7 +8464,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<height>20</height>
@@ -8479,7 +8479,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[16101][/B][/UPPERCASE]</label>
@@ -8492,7 +8492,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Property(UnWatchedEpisodes)][/B]</label>
@@ -8506,7 +8506,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[16102][/B][/UPPERCASE]</label>
@@ -8519,7 +8519,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Property(WatchedEpisodes)][/B]</label>
@@ -8533,7 +8533,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -8546,7 +8546,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -8729,7 +8729,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>aadcdcdc</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
@@ -8742,7 +8742,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[20416][/UPPERCASE][/B]</label>
@@ -8754,7 +8754,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Premiered][/B]</label>
@@ -8767,7 +8767,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -8779,7 +8779,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -8921,7 +8921,7 @@
 								<posx>575</posx><!--w.i.l.l.-->
 								<align>right</align>
 								<height>20</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<scroll>false</scroll>
 								<label>$INFO[ListItem.Label]</label>
@@ -8934,7 +8934,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B][UPPERCASE]$LOCALIZE[20416][/UPPERCASE][/B]</label>
@@ -8946,7 +8946,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.Premiered][/B]</label>
@@ -8959,7 +8959,7 @@
 								<align>left</align>
 								<width>150</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[UPPERCASE][B]$LOCALIZE[563][/B][/UPPERCASE]</label>
@@ -8971,7 +8971,7 @@
 								<align>right</align>
 								<width>300</width>
 								<height>20</height>
-								<font>WideIconDetailFont</font>
+								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
 								<label>[B]$INFO[ListItem.RatingAndVotes][/B]</label>
@@ -9049,7 +9049,7 @@
 								<posx>35</posx>
 								<posy>2</posy>
 								<width>278</width>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -9063,7 +9063,7 @@
 								<posy>3</posy>
 								<width>100</width>
 								<!--ListLabel2-->
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -9120,7 +9120,7 @@
 								<posx>35</posx>
 								<posy>2</posy>
 								<width>278</width>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -9134,7 +9134,7 @@
 								<posy>3</posy>
 								<width>100</width>
 								<!--ListLabel2-->
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -9259,7 +9259,7 @@
 							<description>Plot</description>
 							<width>400</width>
 							<height>163</height>
-							<font>MediaInfoFont</font>
+							<font>font_20</font>
 							<textcolor>MediaInfoDetailsColor</textcolor>
 							<align>justify</align>
 							<wrapmultiline>true</wrapmultiline>
@@ -9359,7 +9359,7 @@
 								<posx>35</posx>
 								<posy>4.5</posy>
 								<width>380</width>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>left</align>
@@ -9374,7 +9374,7 @@
 								<posx>489</posx>
 								<posy>4.5</posy>
 								<width>100</width>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -9512,7 +9512,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9533,7 +9533,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9579,7 +9579,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9593,7 +9593,7 @@
 								<posy>30</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9607,7 +9607,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9621,7 +9621,7 @@
 								<posy>90</posy>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9647,7 +9647,7 @@
 								<posy>538</posy>
 								<width>475</width>
 								<height>168</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -9722,7 +9722,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>30</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9743,7 +9743,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>30</height>
-									<font>WideListAiredFont</font>
+									<font>font_17</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9790,7 +9790,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9804,7 +9804,7 @@
 								<posy>25</posy>
 								<width>310</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9818,7 +9818,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9832,7 +9832,7 @@
 								<posy>75</posy>
 								<width>200</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -9856,7 +9856,7 @@
 								<posy>9</posy>
 								<width>685</width>
 								<height>67</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -9930,7 +9930,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9951,7 +9951,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>34</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -9989,7 +9989,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10003,7 +10003,7 @@
 								<posy>30</posy>
 								<width>310</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10017,7 +10017,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>34</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10044,7 +10044,7 @@
 								<posy>538</posy>
 								<width>475</width>
 								<height>188</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -10119,7 +10119,7 @@
 									<posy>0</posy>
 									<width>200</width>
 									<height>30</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -10140,7 +10140,7 @@
 									<posy></posy>
 									<width>200</width>
 									<height>30</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -10185,7 +10185,7 @@
 								<posy>0</posy>
 								<width>310</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10199,7 +10199,7 @@
 								<posy>25</posy>
 								<width>310</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10213,7 +10213,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10227,7 +10227,7 @@
 								<posx>495</posx>
 								<width>200</width>
 								<height>30</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>aadcdcdc</textcolor><!--lic-->
 								<align>right</align>
 								<aligny>top</aligny>
@@ -10254,7 +10254,7 @@
 								<posy>470</posy>
 								<width>380</width>
 								<height>188</height>
-								<font>font15</font>
+								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -10348,9 +10348,9 @@
 								<description>TV Show Title</description>
 								<posy>-4</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20364]:[/COLOR][/B] $INFO[VideoPlayer.TvShowTitle]</label>
@@ -10360,9 +10360,9 @@
 								<description>Movie Title</description>
 								<posy>-4</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20338]:[/COLOR][/B] $INFO[VideoPlayer.Title]</label>
@@ -10372,9 +10372,9 @@
 								<description>Year</description>
 								<posy>10</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[562]:[/COLOR][/B] $INFO[VideoPlayer.Year]</label>
@@ -10383,9 +10383,9 @@
 								<description>Season / Episode</description>
 								<posy>24</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20373]:[/COLOR][/B] $INFO[VideoPlayer.Season] [B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20359]:[/COLOR][/B] $INFO[VideoPlayer.Episode]</label>
@@ -10395,9 +10395,9 @@
 								<description>Director</description>
 								<posy>24</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]$LOCALIZE[20339]:[/COLOR][/B] $INFO[VideoPlayer.Director]</label>
@@ -10416,8 +10416,8 @@
 								<posy>48</posy>
 								<width>316</width>
 								<height>74</height>
-								<font>font12</font>
-								<font>MediaInfoFont</font>
+								<font>font_17</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -10439,9 +10439,9 @@
 								<description>Time / Player</description>
 								<posy>129</posy>
 								<posx>290</posx>
-								<font>font12</font>
+								<font>font_17</font>
 								<width>285</width>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<scroll>false</scroll>
 								<label>[B][COLOR=MediaInfoHeaderColor]Time:[/COLOR][/B] $INFO[Player.Time] [B][COLOR=MediaInfoHeaderColor]Duration:[/COLOR][/B] $INFO[Player.Duration]</label>
@@ -10578,7 +10578,7 @@
 								<posx>10</posx>
 								<posy>18</posy>
 								<width>540</width>
-								<font>MediaInfoAltHeadFont2</font>
+								<font>font_19_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>Black</shadowcolor>
 								<aligny>center</aligny>	
@@ -10591,7 +10591,7 @@
 									<posx>5</posx>
 									<posy>334</posy>
 									<width>380</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -10603,7 +10603,7 @@
 									<posx>555</posx>
 									<posy>334</posy>
 									<width>160</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -10631,7 +10631,7 @@
 									<posy>394</posy>
 									<width>550</width>
 									<height>160</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<wrapmultiline>true</wrapmultiline>
@@ -10899,7 +10899,7 @@
 								<posx>10</posx>
 								<posy>18</posy>
 								<width>540</width>
-								<font>MediaInfoAltHeadFont2</font>
+								<font>font_19_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>Black</shadowcolor>
 								<aligny>center</aligny>	
@@ -10912,7 +10912,7 @@
 									<posx>5</posx>
 									<posy>334</posy>
 									<width>380</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -10924,7 +10924,7 @@
 									<posx>555</posx>
 									<posy>334</posy>
 									<width>160</width>
-									<font>MediaInfoAltHeadFont2</font>
+									<font>font_19_B</font>
 									<textcolor>DefaultColor</textcolor>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<aligny>center</aligny>	
@@ -10952,7 +10952,7 @@
 									<posy>394</posy>
 									<width>550</width>
 									<height>160</height>
-									<font>MediaInfoFont</font>
+									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<wrapmultiline>true</wrapmultiline>
@@ -11029,7 +11029,7 @@
 								<posx>125</posx>
 								<posy>60</posy>
 								<width>480</width>
-								<font>MediaInfoCatFont</font>
+								<font>font_21_U</font>
 								<textcolor>MediaInfoHeadColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>				
@@ -11120,7 +11120,7 @@
 								<posx>125</posx>
 								<posy>60</posy>
 								<width>480</width>
-								<font>MediaInfoCatFont</font>
+								<font>font_21_U</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<aligny>center</aligny>	
@@ -11208,7 +11208,7 @@
 								<posy>-5</posy>
 								<width>50</width>
 								<height>200</height>
-								<font>WideListEpisodeFont</font>
+								<font>font_28_B</font>
 								<textcolor>ListLabelFocusedColor</textcolor>
 								<align>right</align>
 								<aligny>top</aligny>	
@@ -11232,7 +11232,7 @@
 								<posy>20</posy>
 								<width>965</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -11246,7 +11246,7 @@
 								<posy>47</posy>
 								<width>965</width>
 								<height>36</height>
-								<font>WideListAiredFont</font>
+								<font>font_17</font>
 								<height>20</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -11259,7 +11259,7 @@
 								<posy>23</posy>
 								<width>100</width>
 								<!--ListLabel2-->
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -11285,7 +11285,7 @@
 								<posy>75</posy>
 								<width>850</width>
 								<height>89</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
 								<textcolor>ListLabelUnfocusedColor</textcolor>
@@ -11323,7 +11323,7 @@
 								<posy>-5</posy>
 								<width>50</width>
 								<height>200</height>
-								<font>WideListEpisodeFont</font>
+								<font>font_28_B</font>
 								<textcolor>ListLabelFocusedColor</textcolor>
 								<align>right</align>
 								<aligny>top</aligny>	
@@ -11362,7 +11362,7 @@
 								<posy>20</posy>
 								<width>965</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -11376,7 +11376,7 @@
 								<posy>47</posy>
 								<width>965</width>
 								<height>36</height>
-								<font>WideListAiredFont</font>
+								<font>font_17</font>
 								<height>20</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -11388,7 +11388,7 @@
 								<posx>1214</posx>
 								<posy>21</posy>
 								<width>100</width>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -11414,7 +11414,7 @@
 								<posy>75</posy>
 								<width>850</width>
 								<height>89</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
 								<textcolor>ListLabelFocusedColor</textcolor>
@@ -11535,7 +11535,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -11560,7 +11560,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -11587,7 +11587,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -11614,7 +11614,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -11639,7 +11639,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>center</align>
@@ -11664,7 +11664,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>center</align>
@@ -11721,7 +11721,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -11751,7 +11751,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -11779,7 +11779,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -11809,7 +11809,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -11837,7 +11837,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>
+									<font>font_19_UB</font>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -11921,7 +11921,7 @@
 						<posy>4</posy>
 						<width>240</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -11955,7 +11955,7 @@
 						<posy>4</posy>
 						<width>320</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -11985,7 +11985,7 @@
 						<posy>4</posy>
 						<width>240</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -12009,7 +12009,7 @@
 						<posy>4</posy>
 						<width>320</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -12098,7 +12098,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -12109,7 +12109,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -12168,7 +12168,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -12185,7 +12185,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -12204,7 +12204,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -12217,7 +12217,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -12253,7 +12253,7 @@
 					<posy>11</posy>
 					<width>60</width>
 					<height>60</height>
-					<font>SortLetterFont</font>
+					<font>font_24</font>
 					<textcolor>MediaInfoHeadColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>center</align>
@@ -12366,7 +12366,7 @@
 							<posy>6</posy>
 							<width>1190</width> <!---->
 							<textcolor>InfoPaneHeaderColor</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>	
 						</control>	
 						<control type="label"> <!--InfoPaneDetailLabel-->
@@ -12374,7 +12374,7 @@
 							<posy>37</posy>
 							<width>800</width>
 							<textcolor>InfoPaneDetailsColor</textcolor>
-							<font>InfoPaneDetailFont</font>
+							<font>font_20</font>
 							<label>$INFO[ListItem.Label2,,   ]$INFO[Container.NumItems,[, $LOCALIZE[127]]]</label>
 							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 						</control>
@@ -12428,7 +12428,7 @@
 							<posy>6</posy>
 							<width>800</width>
 							<textcolor>InfoPaneHeaderColor</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>
 							<visible>![Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)]</visible>
 						</control>
@@ -12439,7 +12439,7 @@
 							<posy>37</posy>
 							<width>800</width>
 							<textcolor>InfoPaneDetailsColor</textcolor>
-							<font>InfoPaneDetailFont</font>
+							<font>font_20</font>
 							<label>$INFO[ListItem.Label2]</label>
 							<visible>![Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)]</visible>
 							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
@@ -12451,7 +12451,7 @@
 							<posx>86</posx>
 							<posy>8</posy>
 							<textcolor>Grey</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>
 							<scroll>true</scroll>
 							<visible>Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)</visible>
@@ -12464,7 +12464,7 @@
 							<width>200</width>
 							<align>right</align>
 							<textcolor>Grey</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Year,(,) - ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 							<visible>Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)</visible>
 						</control>		
@@ -12485,7 +12485,7 @@
 							<posy>37</posy>
 							<width>800</width>
 							<textcolor>InfoPaneDetailsColor</textcolor>
-							<font>InfoPaneDetailFont</font>
+							<font>font_20</font>
 							<label>$INFO[ListItem.Label2,, ]$INFO[ListItem.Property(WatchedEpisodes),($LOCALIZE[16102] ]$INFO[ListItem.Property(UnWatchedEpisodes), - $LOCALIZE[16101] ,)   ]</label>
 							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 							<visible>Container.Content(TVShows)</visible>

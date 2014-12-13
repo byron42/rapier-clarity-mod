@@ -49,7 +49,7 @@
 						<height>100</height>
 						<align>center</align>
 						<textwidth>160</textwidth>
-						<font>MenuBarButtonFont</font>
+						<font>font_20_CB</font>
 						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>$VAR[PlayerControlActionLabel]</label>
@@ -65,7 +65,7 @@
 						<aligny>-</aligny>
 						<textoffsety>103</textoffsety>
 						<textwidth>120</textwidth>
-						<font>MenuBarButtonFont2</font>
+						<font>font_22_CB</font>
 						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<texture>$VAR[PlayerControlActionImage]</texture>
@@ -104,7 +104,7 @@
 								<posy></posy>
 								<width>950</width>
 								<height>30</height>
-								<font>Font_OSDMusicArtist</font>
+								<font>font_28_NRBC</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor></shadowcolor>
 								<label>$VAR[PlayerControlArtist]</label>

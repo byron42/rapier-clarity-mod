@@ -321,7 +321,7 @@
 							<posy>4</posy>
 							<width>240</width>
 							<height>35</height>
-							<font>BreadCrumbFont</font>
+							<font>font_22_WCBI</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<textoffsetx>-</textoffsetx>
 							<align>center</align>
@@ -411,7 +411,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>right</align>
 							<aligny>center</aligny>
@@ -423,7 +423,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>TopBarStatusColor2</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -483,7 +483,7 @@
 								<width>220</width>
 								<height>15</height>
 								<scrollout>false</scrollout>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -500,7 +500,7 @@
 								<posy>13</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -519,7 +519,7 @@
 								<posy>0</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -532,7 +532,7 @@
 								<posy>15</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>TopBarStatusColor</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -566,13 +566,13 @@
 						<description>CUSTOM SUBMENU LABEL</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>137</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>400</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -618,7 +618,7 @@
 					<description>Category</description>
 					<posx>1250</posx>
 					<posy>91</posy>
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
@@ -686,7 +686,7 @@
 									<posx>100</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -702,7 +702,7 @@
 									<posx>150</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -718,7 +718,7 @@
 									<posx>200</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -734,7 +734,7 @@
 									<posx>250</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -750,7 +750,7 @@
 									<posx>300</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -766,7 +766,7 @@
 									<posx>350</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -782,7 +782,7 @@
 									<posx>400</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -798,7 +798,7 @@
 									<posx>450</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -814,7 +814,7 @@
 									<posx>500</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -830,7 +830,7 @@
 									<posx>550</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -872,7 +872,7 @@
 									<posx>100</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -888,7 +888,7 @@
 									<posx>150</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -904,7 +904,7 @@
 									<posx>200</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -920,7 +920,7 @@
 									<posx>250</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -936,7 +936,7 @@
 									<posx>300</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -952,7 +952,7 @@
 									<posx>350</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -968,7 +968,7 @@
 									<posx>400</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -984,7 +984,7 @@
 									<posx>450</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1000,7 +1000,7 @@
 									<posx>500</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1016,7 +1016,7 @@
 									<posx>550</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1058,7 +1058,7 @@
 									<posx>100</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1074,7 +1074,7 @@
 									<posx>150</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1090,7 +1090,7 @@
 									<posx>200</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1106,7 +1106,7 @@
 									<posx>250</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1122,7 +1122,7 @@
 									<posx>300</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1138,7 +1138,7 @@
 									<posx>350</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1154,7 +1154,7 @@
 									<posx>400</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1170,7 +1170,7 @@
 									<posx>450</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1186,7 +1186,7 @@
 									<posx>500</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1202,7 +1202,7 @@
 									<posx>550</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1227,7 +1227,7 @@
 									<width>200</width><!---->
 									<textwidth>180</textwidth>
 									<height>70</height><!---->	
-									<font>MenuItemFont</font>
+									<font>font_19_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<alttexturefocus border="10,10,10,10">Glass/keyfocus2.png</alttexturefocus>
@@ -1246,7 +1246,7 @@
 									<posx>100</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1262,7 +1262,7 @@
 									<posx>150</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1278,7 +1278,7 @@
 									<posx>200</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1294,7 +1294,7 @@
 									<posx>250</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1310,7 +1310,7 @@
 									<posx>300</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>
@@ -1326,7 +1326,7 @@
 									<posx>350</posx>
 									<width>80</width><!---->
 									<height>70</height><!---->
-									<font>WideListEpisodeFont</font>
+									<font>font_28_B</font>
 									<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 									<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 									<colordiffuse></colordiffuse>

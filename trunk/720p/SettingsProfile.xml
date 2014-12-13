@@ -178,7 +178,7 @@
 							<posx>150</posx>
 							<posy>229</posy>
 							<width>250</width>
-							<font>Font_LibBold20</font>
+							<font>font_24_B</font>
 							<textcolor>Grey</textcolor>
 							<selectedcolor>SelectedColor2</selectedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -219,7 +219,7 @@
 							<posx>150</posx>
 							<posy>228</posy>
 							<width>250</width>
-							<font>Font_OSDCodecInfo</font>
+							<font>font_26_C</font>
 							<textcolor>ThemeColor</textcolor>
 							<selectedcolor>SelectedColor2</selectedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -279,7 +279,7 @@
 						<height>36</height>
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textcolor>ButtonColor</textcolor>
 						<disabledcolor>DisabledColor</disabledcolor>
@@ -414,7 +414,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -426,7 +426,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -485,7 +485,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -502,7 +502,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -521,7 +521,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -534,7 +534,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -607,7 +607,7 @@
 					<posy>6</posy>
 					<width>1190</width> <!---->
 					<textcolor>InfoPaneHeaderColor</textcolor>
-					<font>InfoPaneHeaderFont</font>
+					<font>font_27_CB</font>
 					<label>$INFO[Control.GetLabel(2)]</label>
 				</control>
 				<control type="label">
@@ -616,7 +616,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<label>$LOCALIZE[13204] $INFO[System.ProfileName]</label>
 				</control>	

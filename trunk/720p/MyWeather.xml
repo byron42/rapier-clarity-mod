@@ -236,7 +236,7 @@
 						<height>36</height>	
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<textcolor>ButtonColor</textcolor>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<align>center</align>
@@ -260,7 +260,7 @@
 						<height>36</height>	
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<textcolor>ButtonColor</textcolor>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<align>center</align>
@@ -291,7 +291,7 @@
 					<label>$INFO[Weather.Location]</label>
 					<aligny>top</aligny>
 					<textoffsety>4</textoffsety>
-					<font>SubMenuFont2</font>
+					<font>font_19_UB</font>
 					<textcolor>ButtonColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<align>left</align>
@@ -307,7 +307,7 @@
 					<label>$INFO[Weather.Location]</label>
 					<aligny>top</aligny>
 					<textoffsety>4</textoffsety>
-					<font>SubMenuFont2</font>
+					<font>font_19_UB</font>
 					<textcolor>ButtonFocusColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<align>left</align>
@@ -443,7 +443,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -460,7 +460,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -479,7 +479,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -492,7 +492,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>

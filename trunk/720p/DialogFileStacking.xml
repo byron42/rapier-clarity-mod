@@ -75,7 +75,7 @@
 				<posx>182</posx>
 				<posy>52</posy>
 				<width>280</width>
-				<font>HeadFont2</font>
+				<font>font_23_U</font>
 				<textcolor>DefaultColor</textcolor>
 				<align>left</align>
 				<label>$INFO[Container(450).ListItem.Label]</label>

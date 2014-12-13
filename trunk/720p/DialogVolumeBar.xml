@@ -34,7 +34,7 @@
 				<posy>-1</posy>
 				<width>300</width>
 				<height>44</height>
-				<font>HeadFont</font>
+				<font>font_24_U</font>
 				<textcolor>White</textcolor>
 				<shadowcolor>ThemeColor</shadowcolor>
 				<align>right</align>
@@ -76,7 +76,7 @@
 				<posy>-1</posy>
 				<width>300</width>
 				<height>44</height>
-				<font>HeadFont</font>
+				<font>font_24_U</font>
 				<textcolor>White</textcolor>
 				<shadowcolor>ThemeColor</shadowcolor>
 				<align>right</align>
@@ -115,7 +115,7 @@
 					<posx>117</posx>
 					<width>80</width>
 					<height>35</height>
-					<font>VolumeFont</font>
+					<font>font_20</font>
 					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 					<align>right</align>
 					<aligny>center</aligny>

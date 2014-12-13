@@ -43,13 +43,13 @@
 						<posx></posx>
 						<posy>8</posy>
 						<label>$LOCALIZE[SCRIPT0]</label>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<!-- <label>$INFO[Listitem.Label]</label> -->
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -59,14 +59,14 @@
 						<description>SCRAPER</description>
 						<posx>1220</posx>
 						<posy>9</posy>
-						<font>PluginSettingsHead2</font>
+						<font>font_28_B</font>
 						<label></label>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 					</control>
@@ -132,7 +132,7 @@
 						<height>24</height>
 						<align>left</align>
 						<aligny></aligny>
-						<font>Font_OSDMusicArtist</font>
+						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
 						<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
@@ -145,7 +145,7 @@
 						<height>24</height>
 						<align>left</align>
 						<aligny></aligny>
-						<font>Font_OSDMusicArtist</font>
+						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
 						<scroll>true</scroll>
@@ -159,7 +159,7 @@
 						<height>24</height>
 						<align>left</align>
 						<aligny></aligny>
-						<font>Font_OSDMusicArtist</font>
+						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
 						<scroll>true</scroll>
@@ -182,7 +182,7 @@
 						<posy>252</posy>
 						<width>150</width>
 						<height>30</height>
-						<font>Font_OSDMusicArtist</font>
+						<font>font_28_NRBC</font>
 						<textcolor>BBF3E5AB</textcolor>
 						<shadowcolor></shadowcolor>
 						<align>left</align>
@@ -204,7 +204,7 @@
 						<height>30</height>
 						<label>$INFO[Player.Duration]</label>
 						<align>right</align>
-						<font>Font_OSDMusicArtist</font>
+						<font>font_28_NRBC</font>
 						<textcolor>BBF3E5AB</textcolor>
 						<shadowcolor></shadowcolor>
 					</control>
@@ -376,7 +376,7 @@
 						<onleft>101</onleft>
 						<onright>101</onright>
 						<pagecontrol>101</pagecontrol>
-						<font>font13</font>
+						<font>font_23</font>
 						<textcolor>DDFFFFFF</textcolor>
 					</control>
 					<control type="spincontrol" id="101">
@@ -385,7 +385,7 @@
 						<posy>300</posy>
 						<width>27</width>
 						<height>27</height>
-						<font>font13</font>
+						<font>font_23</font>
 						<align>right</align>
 						<subtype>page</subtype>
 						<textcolor>BBF3E5AB</textcolor>
@@ -426,7 +426,7 @@
 								<posy>5</posy>
 								<width>1160</width>
 								<height>30</height>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<textcolor>gray</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -458,7 +458,7 @@
 								<posy>3</posy>
 								<width>1150</width>
 								<height>30</height>
-								<font>MediaTitleFont</font>
+								<font>font_24_B</font>
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
@@ -474,7 +474,7 @@
 						<posy>300</posy>
 						<width>27</width>
 						<height>27</height>
-						<font>font13</font>
+						<font>font_23</font>
 						<align>right</align>
 						<subtype>page</subtype>
 						<textcolor>FFFFFFFF</textcolor>
@@ -515,7 +515,7 @@
 								<posy>5</posy>
 								<width>1160</width>
 								<height>30</height>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<textcolor>gray</textcolor>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -547,7 +547,7 @@
 								<posy>3</posy>
 								<width>1150</width>
 								<height>30</height>
-								<font>MediaTitleFont</font>
+								<font>font_24_B</font>
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
@@ -563,7 +563,7 @@
 						<posy>300</posy>
 						<width>27</width>
 						<height>27</height>
-						<font>font13</font>
+						<font>font_23</font>
 						<align>right</align>
 						<subtype>page</subtype>
 						<textcolor>FFFFFFFF</textcolor>
@@ -587,7 +587,7 @@
 						<posy>300</posy>
 						<width>200</width>
 						<label>$INFO[MusicPlayer.Playlistposition,$LOCALIZE[435] ]$INFO[MusicPlayer.Playlistlength,/]</label>
-						<font>font13</font>
+						<font>font_23</font>
 						<align>right</align>
 						<textcolor>BBF3E5AB</textcolor>
 						<visible>!MusicPartyMode.Enabled</visible>
@@ -598,7 +598,7 @@
 						<posy>300</posy>
 						<width>200</width>
 						<label>589</label>
-						<font>font13</font>
+						<font>font_23</font>
 						<align>center</align>
 						<textcolor>BBF3E5AB</textcolor>
 						<visible>MusicPartyMode.Enabled</visible>

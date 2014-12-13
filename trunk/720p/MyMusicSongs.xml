@@ -226,7 +226,7 @@
 								<posy>174</posy>
 								<width>165</width>
 								<textwidth>169</textwidth>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>black</shadowcolor>
@@ -279,7 +279,7 @@
 								<posx>124</posx>
 								<posy>184</posy>
 								<width>158</width>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>black</shadowcolor>
@@ -364,7 +364,7 @@
 								<posx>150</posx>
 								<posy>237</posy>
 								<width>250</width>
-								<font>LargeListLabelFont</font>
+								<font>font_22_B</font>
 								<textcolor>DefaultColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -423,7 +423,7 @@
 								<posx>150</posx>
 								<posy>237</posy>
 								<width>250</width>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -546,7 +546,7 @@
 								<posy>3</posy>
 								<width>620</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -563,7 +563,7 @@
 								<posy>3</posy>
 								<width>458</width>
 								<height>36</height>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -581,7 +581,7 @@
 								<posy>5</posy>
 								<width>150</width>
 								<height>36</height>
-								<font>MenuFont</font>
+								<font>font_20_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
@@ -680,7 +680,7 @@
 								<posy>3</posy>
 								<width>620</width>
 								<height>36</height>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>-</shadowcolor>
 								<align>left</align>
@@ -694,7 +694,7 @@
 								<posy>3</posy>
 								<width>453</width>
 								<height>36</height>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor>-</shadowcolor>
 								<align>left</align>
@@ -709,7 +709,7 @@
 								<posy>5</posy>
 								<width>150</width>
 								<!--ListLabel2-->
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
 								<width>150</width>
@@ -828,7 +828,7 @@
 								<posy>11</posy>
 								<width>460</width>
 								<height>138</height>
-								<font>MediaInfoFont</font>
+								<font>font_20</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
 								<wrapmultiline>true</wrapmultiline>
@@ -932,7 +932,7 @@
 								<posx>120</posx>
 								<posy>241</posy>
 								<width>226</width>
-								<font>DefaultFont</font>
+								<font>font_21</font>
 								<textcolor>DefaultColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -977,7 +977,7 @@
 								<posx>120</posx>
 								<posy>241</posy>
 								<width>226</width>
-								<font>ListLabelFont</font>
+								<font>font_23_B</font>
 								<textcolor>ThemeColor</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1775,7 +1775,7 @@
 								<posy>37</posy>
 								<width>1200</width>
 								<height>40</height>
-								<font>PluginSettingsHead</font>
+								<font>font_32_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ff000000</shadowcolor>
 								<align>center</align>
@@ -1788,7 +1788,7 @@
 								<posy>20</posy>
 								<width>1200</width>
 								<height>40</height>
-								<font>PluginSettingsHead</font>
+								<font>font_32_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ff000000</shadowcolor>
 								<align>center</align>
@@ -1800,7 +1800,7 @@
 								<posy>58</posy>
 								<width>1200</width>
 								<height>35</height>
-								<font>DialogTitleFont</font>
+								<font>font_25_B</font>
 								<textcolor>BBDCDCDC</textcolor>
 								<shadowcolor>ff000000</shadowcolor>
 								<align>center</align>
@@ -1925,7 +1925,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>	
+									<font>font_19_UB</font>	
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -1950,7 +1950,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>	
+									<font>font_19_UB</font>	
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>left</align>
@@ -1977,7 +1977,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>	
+									<font>font_19_UB</font>	
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>center</align>
@@ -2002,7 +2002,7 @@
 									<height>36</height>	
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>	
+									<font>font_19_UB</font>	
 									<textcolor>ButtonColor</textcolor>
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<align>center</align>
@@ -2059,7 +2059,7 @@
 									<height>36</height>
 									<aligny>top</aligny>
 									<textoffsety>4</textoffsety>
-									<font>SubMenuFont2</font>	
+									<font>font_19_UB</font>	
 									<focusedcolor>ButtonFocusColor</focusedcolor>
 									<textcolor>ButtonColor</textcolor>
 									<disabledcolor>DisabledColor</disabledcolor>
@@ -2205,7 +2205,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -2216,7 +2216,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -2275,7 +2275,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -2292,7 +2292,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -2311,7 +2311,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -2324,7 +2324,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -2352,7 +2352,7 @@
 					<posy>11</posy>
 					<width>60</width>
 					<height>60</height>
-					<font>SortLetterFont</font>
+					<font>font_24</font>
 					<textcolor>MediaInfoHeadColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>center</align>
@@ -2432,7 +2432,7 @@
 							<posy>6</posy>
 							<width>1190</width>
 							<textcolor>InfoPaneHeaderColor</textcolor>
-							<font>InfoPaneHeaderFont</font>
+							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>	
 						</control>
 						<control type="label">
@@ -2441,7 +2441,7 @@
 							<posy>37</posy>
 							<width>800</width>
 							<textcolor>InfoPaneDetailsColor</textcolor>
-							<font>InfoPaneDetailFont</font>
+							<font>font_20</font>
 							<label>$INFO[ListItem.Label2,,   ]$INFO[Container.NumItems,[, $LOCALIZE[127]]]</label>
 							<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 						</control>

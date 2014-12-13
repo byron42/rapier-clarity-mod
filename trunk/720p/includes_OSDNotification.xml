@@ -24,7 +24,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>31302</label>
 				<visible>Player.Playing + !Player.Seeking</visible>
@@ -36,7 +36,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>31303</label>
 				<visible>[Player.Paused + !Player.Caching] + !Player.Seeking</visible>
@@ -48,7 +48,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
 				<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
@@ -60,7 +60,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
 				<visible>Player.Seeking</visible>
@@ -72,7 +72,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31305] x2</label>
 				<visible>Player.Rewinding2x + !Player.Seeking</visible>
@@ -84,7 +84,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31305] x4</label>
 				<visible>Player.Rewinding4x + !Player.Seeking</visible>
@@ -96,7 +96,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31305] x8</label>
 				<visible>Player.Rewinding8x + !Player.Seeking</visible>
@@ -108,7 +108,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31305] x16</label>
 				<visible>Player.Rewinding16x + !Player.Seeking</visible>
@@ -120,7 +120,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31305] x32</label>
 				<visible>Player.Rewinding32x + !Player.Seeking</visible>
@@ -132,7 +132,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31304] x2</label>
 				<visible>Player.Forwarding2x + !Player.Seeking</visible>
@@ -144,7 +144,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31304] x4</label>
 				<visible>Player.Forwarding4x + !Player.Seeking</visible>
@@ -156,7 +156,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31304] x8</label>
 				<visible>Player.Forwarding8x + !Player.Seeking</visible>
@@ -168,7 +168,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31304] x16</label>
 				<visible>Player.Forwarding16x + !Player.Seeking</visible>
@@ -180,7 +180,7 @@
 				<height>20</height>
 				<align>center</align>
 				<aligny>top</aligny>
-				<font>font15</font>
+				<font>font_19</font>
 				<textcolor>Grey</textcolor>
 				<label>$LOCALIZE[31304] x32</label>
 				<visible>Player.Forwarding32x + !Player.Seeking</visible>
@@ -192,7 +192,7 @@
 				<posy>4</posy>
 				<width>110</width>
 				<height>20</height>
-				<font>font12</font>
+				<font>font_17</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>top</aligny>
@@ -205,7 +205,7 @@
 				<posy>4</posy>
 				<width>110</width>
 				<height>20</height>
-				<font>font12</font>
+				<font>font_17</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>top</aligny>
@@ -219,7 +219,7 @@
 				<width>130</width>
 				<height>20</height>
 				<label>$INFO[Player.Duration]</label>
-				<font>font12</font>
+				<font>font_17</font>
 				<textcolor>white</textcolor>
 				<aligny>top</aligny>
 				<align>right</align>

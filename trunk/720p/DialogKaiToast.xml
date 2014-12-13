@@ -45,7 +45,7 @@
 					<posx>60</posx>
 					<posy>9</posy>
 					<width>330</width>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<shadowcolor>-</shadowcolor>
 					<textcolor>gray</textcolor>
 					<scroll>yes</scroll>
@@ -55,7 +55,7 @@
 					<posx>60</posx>
 					<posy>31</posy>
 					<width>330</width>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor>-</shadowcolor>
 					<scroll>yes</scroll>

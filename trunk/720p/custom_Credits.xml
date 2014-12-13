@@ -175,7 +175,7 @@
 					<description>Skin Name</description>
 					<posx>30</posx>
 					<posy>95</posy>
-					<font>PluginSettingsHead</font>
+					<font>font_32_B</font>
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
 					<textcolor>DefaultColor3</textcolor>
@@ -187,19 +187,19 @@
 					<posx>1245</posx>
 					<posy>100</posy>
 					<width>300</width>
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<label> [I]Version: 3.5.43[/I] </label>
+					<label> [I]Version: 3.5.44[/I] </label>
 				</control>
 				
 				<control type="label">
 					<description>Developer Email</description>
 					<posx>30</posx>
 					<posy>144</posy>
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<aligny>center</aligny>
 					<textcolor>AA8A795D</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
@@ -217,55 +217,55 @@
 				<height>320</height>
 				<itemgap>35</itemgap>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31320]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31321]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31322]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31323]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31324]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31325]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31326]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31327]</label>
 				</control>
 				<control type="label">
-					<font>LibraryCatFontBig</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[31328]</label>
@@ -291,7 +291,7 @@
 					<posx>70</posx>
 					<posy>496</posy>
 					<width>1158</width>
-					<font>LibraryCatFontSmall</font>
+					<font>font_21_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>justify</align>
@@ -318,7 +318,7 @@
 					<posx>70</posx>
 					<posy>577</posy>
 					<width>1158</width>
-					<font>LibraryCatFontSmall</font>
+					<font>font_21_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>justify</align>
@@ -440,7 +440,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -452,7 +452,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -511,7 +511,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -528,7 +528,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -547,7 +547,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -560,7 +560,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>

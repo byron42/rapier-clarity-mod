@@ -57,7 +57,7 @@
 				<posy>-4</posy>
 				<width>190</width>
 				<height>40</height>
-				<font>ListLabel2Font</font>
+				<font>font_22_B</font>
 				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 				<align>left</align>
 				<aligny>center</aligny>
@@ -70,7 +70,7 @@
 				<posy>-2</posy>
 				<width>1070</width>
 				<height>40</height>
-				<font>ScanContentFont</font>
+				<font>font_17_B</font>
 				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 				<align>left</align>
 				<aligny>center</aligny>
@@ -84,7 +84,7 @@
 				<posy>-2</posy>
 				<width>1070</width>
 				<height>40</height>
-				<font>ScanContentFont</font>
+				<font>font_17_B</font>
 				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 				<align>left</align>
 				<aligny>center</aligny>

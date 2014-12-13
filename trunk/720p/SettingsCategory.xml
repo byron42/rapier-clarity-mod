@@ -218,7 +218,7 @@
 				<description>Default Category Button</description>
 				<width>800</width>
 				<height>50</height>
-				<font>SETTINGS_CATEGORY</font>
+				<font>font_26_CB</font>
 				<shadowcolor>-</shadowcolor>
 				<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 				<textcolor>Grey</textcolor> <!--GREY-->
@@ -234,7 +234,7 @@
 				<description>Default Button</description>
 				<width>800</width>
 				<height>48</height>
-				<font>CustomSkinHead</font>
+				<font>font_22_U</font>
 				<aligny>top</aligny>
 				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
@@ -253,7 +253,7 @@
 				<description>Default RadioButton</description>
 				<width>800</width>
 				<height>48</height>
-				<font>CustomSkinHead</font>
+				<font>font_22_U</font>
 				<aligny>top</aligny>
 				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
@@ -270,7 +270,7 @@
 				<description>Default SpinControlex</description>
 				<width>800</width>
 				<height>48</height>
-				<font>CustomSkinHead</font>
+				<font>font_22_U</font>
 				<aligny>top</aligny>
 				<textoffsety>9</textoffsety>
 				<textcolor>ThemeColor2</textcolor>
@@ -375,7 +375,7 @@
 						<description>Appearance</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>
+						<font>font_21_UB</font>
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -398,7 +398,7 @@
 						<description>Programs</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>font_21_UB</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -421,7 +421,7 @@
 						<description>Videos</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>font_21_UB</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -444,7 +444,7 @@
 						<description>Pictures</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>
+						<font>font_21_UB</font>
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -467,7 +467,7 @@
 						<description>Weather</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>
+						<font>font_21_UB</font>
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -490,7 +490,7 @@
 						<description>Network</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>font_21_UB</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -513,7 +513,7 @@
 						<description>Music</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>font_21_UB</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -536,7 +536,7 @@
 						<description>System</description>
 						<width>175</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>
+						<font>font_21_UB</font>
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -559,7 +559,7 @@
 						<description>Skin Settings</description>
 						<width>180</width>
 						<height>36</height>	
-						<font>SubMenuFont</font>	
+						<font>font_21_UB</font>	
 						<aligny>top</aligny>
 						<textoffsety>3</textoffsety>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
@@ -687,7 +687,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -699,7 +699,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -767,7 +767,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -785,7 +785,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -806,7 +806,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -820,7 +820,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -891,7 +891,7 @@
 					<posy>6</posy>
 					<width>1190</width> <!---->
 					<textcolor>InfoPaneHeaderColor</textcolor>
-					<font>InfoPaneHeaderFont</font>
+					<font>font_27_CB</font>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
@@ -900,7 +900,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31202]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(AppearanceSettings)</visible>
@@ -911,7 +911,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31203]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(ProgramsSettings)</visible>
@@ -922,7 +922,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31204]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(PicturesSettings)</visible>
@@ -933,7 +933,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31205]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(MusicSettings)</visible>
@@ -944,7 +944,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31206]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(VideosSettings)</visible>
@@ -955,7 +955,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31207]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(WeatherSettings)</visible>
@@ -966,7 +966,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31208]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(NetworkSettings)</visible>
@@ -977,7 +977,7 @@
 					<posy>37</posy>
 					<width>800</width>
 					<textcolor>InfoPaneDetailsColor</textcolor>
-					<font>InfoPaneDetailFont</font>
+					<font>font_20</font>
 					<label>$LOCALIZE[31209]</label>
 					<animation effect="fade" start="100" end="0" condition="Window.IsActive(112) | Window.IsActive(133)">Conditional</animation>
 					<visible>Window.IsActive(SystemSettings)</visible>

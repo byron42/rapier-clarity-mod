@@ -257,7 +257,7 @@
 					<posy>23</posy>
 					<width>505</width>
 					<height>45</height>	
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<aligny>center</aligny>
@@ -270,7 +270,7 @@
 					<posy>23</posy>
 					<width>505</width>
 					<height>45</height>	
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<align>right</align>
@@ -290,7 +290,7 @@
 					<posx>15</posx>
 					<width>210</width>
 					<height>34</height>	
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<textcolor>$VAR[NumObjectsLeftColorPL]</textcolor>
 					<selectedcolor></selectedcolor>
 					<shadowcolor>black</shadowcolor>
@@ -304,7 +304,7 @@
 					<posy>641</posy>
 					<width>210</width>
 					<height>34</height>	
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<textcolor>$VAR[NumObjectsRightColorPL]</textcolor>
 					<selectedcolor></selectedcolor>
 					<shadowcolor>black</shadowcolor>
@@ -417,7 +417,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -428,7 +428,7 @@
 						<posx>92</posx>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -487,7 +487,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -504,7 +504,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -523,7 +523,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -536,7 +536,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -586,7 +586,7 @@
 							<posx>35</posx>
 							<posy>3</posy>
 							<width>340</width>
-							<font>ListLabel2Font</font>
+							<font>font_22_B</font>
 							<textcolor>Grey</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>Shadowcolor</shadowcolor>
@@ -598,7 +598,7 @@
 							<posx>465</posx>
 							<posy>5</posy>
 							<width>90</width>
-							<font>font15</font>
+							<font>font_19</font>
 							<textcolor>gray</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -637,7 +637,7 @@
 							<posx>35</posx>
 							<posy>1</posy>
 							<width>330</width>
-							<font>DialogTitleFont</font>
+							<font>font_25_B</font>
 							<textcolor>ThemeColor</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -649,7 +649,7 @@
 							<posx>465</posx>
 							<posy>2</posy>
 							<width>90</width>
-							<font>font18</font>
+							<font>font_21</font>
 							<textcolor>ThemeColor2</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -691,7 +691,7 @@
 							<posx>35</posx>
 							<posy>3</posy>
 							<width>340</width>
-							<font>ListLabel2Font</font>
+							<font>font_22_B</font>
 							<textcolor>Grey</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>Shadowcolor</shadowcolor>
@@ -703,7 +703,7 @@
 							<posx>465</posx>
 							<posy>5</posy>
 							<width>90</width>
-							<font>font15</font>
+							<font>font_19</font>
 							<textcolor>gray</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -741,7 +741,7 @@
 							<posx>35</posx>
 							<posy>0</posy>
 							<width>330</width>
-							<font>DialogTitleFont</font>
+							<font>font_25_B</font>
 							<textcolor>ThemeColor</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -753,7 +753,7 @@
 							<posx>465</posx>
 							<posy>1</posy>
 							<width>90</width>
-							<font>font18</font>
+							<font>font_21</font>
 							<textcolor>ThemeColor2</textcolor>
 							<selectedcolor>ThemeColor2</selectedcolor>
 							<shadowcolor>black</shadowcolor>
@@ -856,7 +856,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -867,7 +867,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -879,7 +879,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -890,7 +890,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -902,7 +902,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -913,7 +913,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -925,7 +925,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -936,7 +936,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>40</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -948,7 +948,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -959,7 +959,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>40</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -993,7 +993,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1004,7 +1004,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1016,7 +1016,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1027,7 +1027,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1039,7 +1039,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1050,7 +1050,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1062,7 +1062,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1073,7 +1073,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1085,7 +1085,7 @@
 								<posy>7</posy>
 								<width>200</width>
 								<height>17</height>
-								<font>ListLabel2Font</font>
+								<font>font_22_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -1096,7 +1096,7 @@
 								<posx>100</posx>
 								<width>200</width>
 								<height>45</height>
-								<font>VolumeFont</font>
+								<font>font_20</font>
 								<textcolor>ff8A795D</textcolor> <!--VANILLA-->
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>

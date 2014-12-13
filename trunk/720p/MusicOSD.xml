@@ -366,7 +366,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<aspectratio></aspectratio>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>'
@@ -381,7 +381,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<label>$VAR[PlayerControlActionLabel]</label>
@@ -397,7 +397,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 				</control>

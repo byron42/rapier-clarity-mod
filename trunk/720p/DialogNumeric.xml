@@ -75,7 +75,7 @@
 					<posy>-10</posy>
 					<width>202</width>	
 					<height>35</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>White</textcolor>
 					<disabledcolor>Grey</disabledcolor>
 					<aligny>top</aligny>
@@ -93,7 +93,7 @@
 							<description>'1' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12311]</label>
@@ -109,7 +109,7 @@
 							<description>'2' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12312]</label>
@@ -125,7 +125,7 @@
 							<description>'3' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12313]</label>
@@ -141,10 +141,10 @@
 							<description>Clear Key</description>
 							<height>104</height>
 							<width>48</width>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<font>ButtonFont</font>
+							<font>font_20_B</font>
 							<label>C</label>
 							<onup>-</onup>
 							<ondown>21</ondown>
@@ -166,7 +166,7 @@
 							<description>'4' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12314]</label>
@@ -182,7 +182,7 @@
 							<description>'5' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12315]</label>
@@ -198,7 +198,7 @@
 							<description>'6' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12316]</label>
@@ -220,7 +220,7 @@
 							<description>'7' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12317]</label>
@@ -236,7 +236,7 @@
 							<description>'8' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12318]</label>
@@ -252,7 +252,7 @@
 							<description>'9' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12319]</label>
@@ -270,10 +270,10 @@
 							<posy>103</posy>
 							<height>105</height>
 							<width>48</width>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
-							<font>ButtonFont</font>
+							<font>font_20_B</font>
 							<label>E</label>
 							<onup>23</onup>
 							<ondown>-</ondown>
@@ -295,7 +295,7 @@
 							<description>Previous Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>&lt;&lt;</label>
@@ -311,7 +311,7 @@
 							<description>'0' Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>$LOCALIZE[12310]</label>
@@ -327,7 +327,7 @@
 							<description>Next Key</description>
 							<width>48</width>
 							<height>48</height>
-							<font>font13</font>
+							<font>font_23</font>
 							<texturefocus border="10,10,10,10">Glass/keyfocus2.png</texturefocus>
 							<texturenofocus border="10,10,10,10">Glass/keynofocus.png</texturenofocus>
 							<label>&gt;&gt;</label>

@@ -20,7 +20,7 @@
 				<height>20</height>
 				<textcolor>AADCDCDC</textcolor><!--<textcolor>ListLabel2UnfocusedColor</textcolor>-->
 				<shadowcolor>ShadowColor</shadowcolor>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<align>left</align>
 				<label>[UPPERCASE][B]$INFO[Window(Weather).Property(Location)][/B][/UPPERCASE]</label>
 			</control>
@@ -57,7 +57,7 @@
 					<posy>-3</posy>
 					<width>225</width>
 					<height>35</height>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label>[B]$LOCALIZE[143][/B]</label>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -69,7 +69,7 @@
 					<posy>-3</posy>
 					<width>240</width>
 					<height>35</height>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Updated)</info>
@@ -99,7 +99,7 @@
 					<height>30</height>
 					<info>Window.Property(Current.Condition)</info>
 					<wrapmultiline>true</wrapmultiline>
-					<font>Font_Lib22</font>
+					<font>font_26</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>White</textcolor>
@@ -140,7 +140,7 @@
 					<posy>339</posy>
 					<height>35</height>
 					<width>155</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[402] :</label>
@@ -152,7 +152,7 @@
 					<posy>369</posy>
 					<height>35</height>
 					<width>155</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[405] :</label>
@@ -164,7 +164,7 @@
 					<posy>399</posy>
 					<height>35</height>
 					<width>155</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[406] :</label>
@@ -176,7 +176,7 @@
 					<posy>429</posy>
 					<height>35</height>
 					<width>155</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[403] :</label>
@@ -188,7 +188,7 @@
 					<posy>459</posy>
 					<height>35</height>
 					<width>155</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[404] :</label>
@@ -201,7 +201,7 @@
 					<posy>339</posy>
 					<height>35</height>
 					<width>273</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
@@ -213,7 +213,7 @@
 					<posy>369</posy>
 					<height>35</height>
 					<width>273</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
@@ -225,7 +225,7 @@
 					<posy>399</posy>
 					<height>35</height>
 					<width>273</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.Humidity)</info>
@@ -237,7 +237,7 @@
 					<posy>429</posy>
 					<height>35</height>
 					<width>273</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.UVIndex)</info>
@@ -249,7 +249,7 @@
 					<posy>459</posy>
 					<height>35</height>
 					<width>273</width>
-					<font>Font_Lib20</font>
+					<font>font_24</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.Wind)</info>
@@ -277,7 +277,7 @@
 						<posy>-3</posy>
 						<width>420</width>
 						<height>35</height>
-						<font>Font_LibBold20</font>
+						<font>font_24_B</font>
 						<label>[B]$INFO[Window.Property(Day0.Title)][/B]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -290,7 +290,7 @@
 						<posx>40</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -303,7 +303,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -313,7 +313,7 @@
 						<posx>220</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -326,7 +326,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -338,7 +338,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day0.Outlook)</info>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -362,7 +362,7 @@
 						<posy>-3</posy>
 						<width>420</width>
 						<height>35</height>
-						<font>Font_LibBold20</font>
+						<font>font_24_B</font>
 						<label>[B]$INFO[Window.Property(Day1.Title)][/B]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -375,7 +375,7 @@
 						<posx>40</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -388,7 +388,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -398,7 +398,7 @@
 						<posx>220</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -411,7 +411,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -423,7 +423,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day1.Outlook)</info>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -447,7 +447,7 @@
 						<posy>-3</posy>
 						<width>420</width>
 						<height>35</height>
-						<font>Font_LibBold20</font>
+						<font>font_24_B</font>
 						<label>[B]$INFO[Window.Property(Day2.Title)][/B]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -460,7 +460,7 @@
 						<posx>40</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -473,7 +473,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -483,7 +483,7 @@
 						<posx>220</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -496,7 +496,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -508,7 +508,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day2.Outlook)</info>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -532,7 +532,7 @@
 						<posy>-3</posy>
 						<width>420</width>
 						<height>35</height>
-						<font>Font_LibBold20</font>
+						<font>font_24_B</font>
 						<label>[B]$INFO[Window.Property(Day3.Title)][/B]</label>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -545,7 +545,7 @@
 						<posx>40</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[393] :</label>
@@ -558,7 +558,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -568,7 +568,7 @@
 						<posx>220</posx>
 						<posy>49</posy>
 						<height>20</height>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$LOCALIZE[391] :</label>
@@ -581,7 +581,7 @@
 						<posy>49</posy>
 						<height>20</height>
 						<label>$INFO[Window.Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</label>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -593,7 +593,7 @@
 						<width>320</width>
 						<height>20</height>
 						<info>Window.Property(Day3.Outlook)</info>
-						<font>Font_Lib20</font>
+						<font>font_24</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>White</textcolor>
@@ -764,7 +764,7 @@
 				<height>20</height>
 				<textcolor>ThemeColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<label>[UPPERCASE][B]$INFO[Window(Weather).Property(Location)][/B][/UPPERCASE]</label>
 			</control>	
 			<control type="label">
@@ -774,7 +774,7 @@
 				<height>20</height>
 				<align>right</align>
 				<textcolor>ThemeColor2</textcolor>
-				<font>Font_Lib20</font>
+				<font>font_24</font>
 				<label>$INFO[Window(Weather).Property(Updated)]</label>
 			</control>
 			<include condition="!Skin.HasSetting(StaticWeatherIcons)">WeatherPlus_Animated_Current_Icon</include>
@@ -794,7 +794,7 @@
 				<posy>150</posy>
 				<width>220</width>
 				<height>20</height>
-				<font>Font_Lib30</font>
+				<font>font_30</font>
 				<align>center</align>
 				<textcolor>ThemeColor2</textcolor>
 				<wrapmultiline>true</wrapmultiline>
@@ -807,7 +807,7 @@
 				<height>20</height>
 				<align>right</align>
 				<textcolor>ThemeColor2</textcolor>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<label>$LOCALIZE[402][CR]$LOCALIZE[406][CR]$LOCALIZE[403][CR]$LOCALIZE[405][CR]$LOCALIZE[404]</label>
 			</control>
 			<control type="label">
@@ -815,7 +815,7 @@
 				<posy>227</posy>
 				<width>250</width>
 				<height>20</height>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<textcolor>White</textcolor>
 				<label>$INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][CR]$INFO[Window(Weather).Property(Current.Humidity)][CR]$INFO[Window(Weather).Property(Current.UVIndex)][CR]$INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits][CR]$INFO[Window(Weather).Property(Current.Wind)]</label>
 			</control>
@@ -864,7 +864,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.1.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -874,7 +874,7 @@
 					<height>20</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.1.Date)]</label>
 				</control>
 				<control type="label">
@@ -883,7 +883,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.1.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -893,7 +893,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.1.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -908,7 +908,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.1.Outlook)]</label>
 				</control>
 			</control>
@@ -930,7 +930,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.2.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -940,7 +940,7 @@
 					<height>20</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.2.Date)]</label>
 				</control>
 				<control type="label">
@@ -949,7 +949,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.2.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -959,7 +959,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.2.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -974,7 +974,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.2.Outlook)]</label>
 				</control>
 			</control>
@@ -996,7 +996,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.3.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -1006,7 +1006,7 @@
 					<height>20</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.3.Date)]</label>
 				</control>
 				<control type="label">
@@ -1015,7 +1015,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.3.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1025,7 +1025,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.3.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1040,7 +1040,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.3.Outlook)]</label>
 				</control>
 			</control>
@@ -1062,7 +1062,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.4.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -1072,7 +1072,7 @@
 					<height>40</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.4.Date)]</label>
 				</control>
 				<control type="label">
@@ -1081,7 +1081,7 @@
 					<width>130</width>
 					<height>60</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.4.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1091,7 +1091,7 @@
 					<width>130</width>
 					<height>80</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.4.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1106,7 +1106,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.4.Outlook)]</label>
 				</control>
 			</control>
@@ -1128,7 +1128,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.5.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -1138,7 +1138,7 @@
 					<height>40</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.5.Date)]</label>
 				</control>
 				<control type="label">
@@ -1147,7 +1147,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.5.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1157,7 +1157,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.5.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1172,7 +1172,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.5.Outlook)]</label>
 				</control>
 			</control>
@@ -1194,7 +1194,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.6.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -1204,7 +1204,7 @@
 					<height>20</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.6.Date)]</label>
 				</control>
 				<control type="label">
@@ -1213,7 +1213,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.6.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1223,7 +1223,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.6.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1238,7 +1238,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.6.Outlook)]</label>
 				</control>
 			</control>
@@ -1260,7 +1260,7 @@
 					<align>center</align>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Font_LibBold20</font>
+					<font>font_24_B</font>
 					<label fallback="-">[UPPERCASE][B]$INFO[Window(Weather).Property(Daily.7.ShortDay)][/B][/UPPERCASE]</label>
 				</control>
 				<control type="label">
@@ -1270,7 +1270,7 @@
 					<height>20</height>
 					<align>center</align>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.7.Date)]</label>
 				</control>
 				<control type="label">
@@ -1279,7 +1279,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[393]: $INFO[Window(Weather).Property(Daily.7.HighTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1289,7 +1289,7 @@
 					<width>130</width>
 					<height>20</height>
 					<align>center</align>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<textcolor>White</textcolor>
 					<label fallback="-">$LOCALIZE[391]: $INFO[Window(Weather).Property(Daily.7.LowTemperature)]$INFO[System.TemperatureUnits]</label>
 				</control>
@@ -1304,7 +1304,7 @@
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>ThemeColor2</textcolor>
-					<font>Font_Lib18</font>
+					<font>font_22</font>
 					<label fallback="-">$INFO[Window(Weather).Property(Daily.7.Outlook)]</label>
 				</control>
 			</control>

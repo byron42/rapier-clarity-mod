@@ -1,243 +1,109 @@
 <fonts>
 	<fontset id="Default" unicode="true">
+	 	<font>
+			<!--required for debugging -->
+			<name>font13</name>
+			<filename>XBMC.ttf</filename>
+			<size>23</size>
+		</font>
+	<!--16 -->
+		<font>
+			<name>font_16</name>
+			<filename>XBMC.ttf</filename>
+			<size>16</size>
+		</font>
+	<!--17 -->	
+		<font>
+			<name>font_17</name>
+			<filename>XBMC.ttf</filename>
+			<size>17</size>
+		</font>
+		<font>
+			<name>font_17_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>17</size>
+		</font>
 		<font>
 			<name>N.P.M.TimeFont</name>
 			<filename>Futured.ttf</filename>
 			<size>17</size>
 		</font>
-	 	<font>
-			<name>font12</name>
-			<filename>XBMC.ttf</filename>
-			<size>17</size>
-		</font>
-	 	<font>
-			<name>font13</name>
-			<filename>XBMC.ttf</filename>
-			<size>23</size>
-		</font>
+	<!--18 -->
 		<font>
-			<name>font15</name>
-			<filename>XBMC.ttf</filename>
-			<size>19</size>
-		</font>
-		<font>
-			<name>font16</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>19</size>
-		</font>
-	 	<font>
-			<name>font18</name>
-			<filename>XBMC.ttf</filename>
-			<size>21</size>
-		</font>
-		<font>
-			<name>HeadFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>24</size>
-		</font>
-		<font>
-			<name>HeadFont2</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>23</size>
-		</font>
-		<font>
-			<name>DefaultFont</name>
-			<filename>XBMC.ttf</filename>
-			<size>21</size>
-		</font>		
-		<font>
-			<name>DefaultFont2</name>
-			<filename>XBMC.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-		<!--NOT USED SO FAR-->
-			<name>DefaultFont3</name>
+			<name>font_18</name>
 			<filename>XBMC.ttf</filename>
 			<size>18</size>
-		</font>	
+		</font>
+	<!--19 -->
 		<font>
-			<name>MediaInfoTitleFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
+			<name>font_19</name>
 			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>31</size>
-		</font>		
-		<font>
-			<name>MediaInfoTitleFont2</name>
-			<filename>XBMC-wide-caps.ttf</filename>
-			<size>22</size>
-		</font>	
-		<font>
-			<name>MediaInfoCatFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>21</size>
+			<size>19</size>
 		</font>
 		<font>
-			<name>ProfileNameFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>31</size>
-		</font>
-		<font>
-			<name>OpenSubtitlesSearchFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>22</size>
-		</font>	
-		<font>
-			<name>NewDialogHeader</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>20</size>
-		</font>	
-		<!--Organized - (not from byron...and not any more lmao)-->
-		<font>
-			<name>ButtonFont</name>
+			<name>font_19_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
-			<size>20</size>
+			<size>19</size>
 		</font>
 		<font>
-			<name>DialogTitleFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>25</size>
-		</font>
-		<font> <!--WEATHER LOCATION FONT-->
-			<name>MenuBarButtonFont</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>20</size>
-		</font>	
-		<font>
-			<name>MenuBarButtonFont2</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>22</size>
-		</font>
-		<!--dialog box headers-->
-		<font>
-			<name>MenuBarButtonFont3</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>25</size>
-		</font>
-		<font>
-			<name>MenuBarButtonFont4</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<!--for dialog headers-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>24</size>
-		</font>
-		<font>
-			<name>CancelYesNoFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
-			<filename>XBMC.ttf</filename>
-			<style>uppercase</style>
-			<size>20</size>
-		</font>
-		<font>
-			<name>MenuFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>20</size>
-		</font>
-		<font>
-			<name>SubMenuFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>uppercase bold</style>
-			<size>21</size>
-		</font>
-		<font>
-			<name>SubMenuFont2</name>
+			<name>font_19_UB</name>
 			<filename>XBMC.ttf</filename>
 			<style>uppercase bold</style>
 			<size>19</size>
 		</font>
 		<font>
-			<name>WideIconDetailFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>16</size>
+			<name>font_19_C</name>
+			<filename>XBMC-caps.ttf</filename>
+			<size>19</size>
 		</font>
+	<!--20 -->
 		<font>
-			<name>WideListEpisodeFont</name>
+			<name>font_20</name>
 			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>28</size>
-		</font>
-		<font>
-			<name>WideListAiredFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>18</size>
-		</font>
-		<font>
-			<name>ListLabelFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>23</size>
-		</font>
-		<font>
-			<name>ListLabel2Font</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>22</size>
-		</font>
-		<font>
-			<name>MediaTitleFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>24</size>
-		</font>
-		<font>
-			<name>MediaInfoFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
 			<size>20</size>
 		</font>
 		<font>
-			<name>InfoPaneHeaderFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>27</size>
-		</font>
-		<font>
-			<name>InfoPaneDetailFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>20</size>
-		</font>
-		<font>
-			<name>BreadCrumbFont</name>
-			<!--<filename>NewRapierCaps1.ttf</filename>-->
-			<filename>XBMC-wide-caps-BOLD.ttf</filename>
-			<style>uppercase bold italics</style>
-			<!--<size>26</size> NRC1-->
-			<size>22</size>
-		</font>
-		<font>
-			<name>OSDItemFont</name>
+			<name>font_20_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
 			<size>20</size>
 		</font>
 		<font>
-			<name>SortLetterFont</name>
+			<name>font_20_CB</name>
+			<filename>XBMC-caps.ttf</filename>
+			<style>bold</style>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font_20_C</name>
+			<filename>XBMC-caps.ttf</filename>
+			<size>20</size>
+		</font>
+	<!--21 -->
+		<font>
+			<name>font_21</name>
 			<filename>XBMC.ttf</filename>
-			<size>24</size>
+			<size>21</size>
+		</font>
+		<font>
+			<name>font_21_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>21</size>
+		</font>
+		<font>
+			<name>font_21_U</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase</style>
+			<size>21</size>
+		</font>
+		<font>
+			<name>font_21_UB</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase bold</style>
+			<size>21</size>
 		</font>
 		<font>
 			<name>TimeFont</name>
@@ -245,178 +111,59 @@
 			<style>bold</style>
 			<size>21</size>
 		</font>
+	<!--22	-->
 		<font>
-			<name>TimeFont2</name>
-			<filename>Good Times.ttf</filename>
-			<style>bold</style>
-			<size>25</size>
-		</font>	
-		<font>
-			<name>VolumeFont</name>
-			<filename>XBMC.ttf</filename>
-			<size>20</size>
-		</font>	
-		<font>
-			<name>ScanContentFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>17</size>
-		</font>	
-		<font>
-			<name>ScanContentFont2</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>17</size>
-		</font>
-		<font>
-			<name>ScreenCalibrationFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>normal</style>
-			<size>24</size>
-		</font>	
-		<font>
-			<name>WeatherCurrentConditionFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>26</size>
-		</font>	
-	<!--3D Wraplist View Fonts START (3d list was omitted by me but some fonts might still be in use...need to be checked) +++++++++++-->
-		<font>
-			<name>Font_NewRapierBoldCaps_26</name>
-			<filename>NewRapierBoldCaps.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>Font_NewRapierNarrowCaps_20</name>
-			<filename>NewRapierNarrowCaps.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>Font_NewRapierNarrowCaps_22</name>
-			<filename>NewRapierNarrowCaps.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>Font_NewRapierCaps_22</name>
-			<filename>XBMC-caps.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>Font_NewRapier_20</name>
-			<filename>NewRapier.ttf</filename>
-			<style>normal</style>
-			<size>24</size>
-		</font>
-		<font>
-			<name>MediaInfoAltHeadFont2</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>19</size>
-		</font>	
-		<font>
-			<name>MenuItemFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>19</size>
-		</font>		
-	<!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<font>
-			<name>LargeListLabelFont</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>22</size>
-		</font>
-	<!--OSD Fonts-->
-		<font>
-			<name>Font_OSDMusicArtist</name>
-			<filename>NewRapierBoldCaps.ttf</filename>
-			<size>28</size>
-		</font>
-		<font>
-			<name>Font_OSDMusicTitle</name>
-			<filename>NewRapierBoldCaps.ttf</filename>
-			<size>38</size>
-		</font>	
-		<font>
-		  <name>Font_bigtime</name>
-		  <filename>NewRapierNarrowCaps.ttf</filename>
-		  <size>85</size>
-  		</font>	
-		<font>
-			<name>Font_OSDCodecInfo</name>
-			<filename>XBMC-caps.ttf</filename>
-			<size>26</size>	
-		</font>
-		<font>
-		<!--for weather addons days properties-->
-			<name>Font_Lib18</name>
+			<name>font_22</name>
 			<filename>XBMC.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
-			<name>Font_LibBold20</name>
+			<name>font_22_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
-			<size>24</size>
+			<size>22</size>
 		</font>
 		<font>
-		<!--home screen system info/weather addons/weather condition "cloudy, etc..."-->
-			<name>Font_Lib22</name>
+			<name>font_22_U</name>
 			<filename>XBMC.ttf</filename>
-			<size>26</size>
+			<style>uppercase</style>
+			<size>22</size>
 		</font>
 		<font>
-			<name>Font_LibBold24</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>28</size>
-		</font>
-		<font>
-			<name>Font_Lib20</name>
-			<filename>XBMC.ttf</filename>
-			<size>24</size>
-		</font>
-		<font>
-			<name>Font_Lib21</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>24</size>
-		</font>
-		<font>
-			<name>Font_Lib80</name>
-			<filename>XBMC.ttf</filename>
-			<size>80</size>
-		</font>
-		<font>
-		<!--for weather addons-->
-			<name>Font_Lib30</name>
-			<filename>XBMC.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>CustomButtonLabelFont</name>
+			<name>font_22_CB</name>
 			<filename>XBMC-caps.ttf</filename>
 			<style>bold</style>
-			<size>29</size>
-		</font>
-<!--(((SYSTEM SETTINGS AND CUSTOM SKIN SETTINGS)))====================================================-->
-		<font>
-			<name>CustomSkin</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style></style>
-			<size>21</size>
+			<size>22</size>
 		</font>
 		<font>
-			<name>CustomSkinSeparator</name>
-			<filename>XBMC-caps.ttf</filename>
+			<name>font_22_WCB</name>
+			<filename>XBMC-wide-caps.ttf</filename>
 			<style>bold</style>
-			<size>21</size>
+			<size>22</size>
 		</font>
 		<font>
-			<name>CustomSkinHead</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style></style>
-			<size>22</size>	
+			<name>font_22_WCBI</name>
+			<filename>XBMC-wide-caps-BOLD.ttf</filename>
+			<style>uppercase bold italics</style>
+			<size>22</size>
+		</font>
+	<!--23 -->
+		<font>
+			<name>font_23</name>
+			<filename>XBMC.ttf</filename>
+			<size>23</size>
+		</font>
+		<font>
+			<name>font_23_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>23</size>
+		</font>
+		<font>
+			<name>font_23_U</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase</style>
+			<size>23</size>
 		</font>
 		<!--
 		<font>
@@ -426,126 +173,172 @@
 			<size>23</size>
 		</font>	
 		-->
+	<!--24 -->
 		<font>
-			<name>CustomSkinCat_2</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>-</style>
-			<size>28</size>	
-		</font>
-		<font>
-			<name>DialogSelectFont</name>
-			<!--<filename>Good Times.ttf</filename>-->
+			<name>font_24</name>
 			<filename>XBMC.ttf</filename>
-			<style>uppercase bold</style>
-			<size>33</size>
+			<size>24</size>
 		</font>
 		<font>
-			<name>SystemInfoHead</name>
-			<!--<filename>Good Times.ttf</filename>-->
+			<name>font_24_B</name>
 			<filename>XBMC.ttf</filename>
-			<style>uppercase bold</style>
-			<size>35</size>
+			<style>bold</style>
+			<size>24</size>
 		</font>
 		<font>
-			<name>LibraryCat</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style></style>
-			<size>19</size>
+			<name>font_24_U</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase</style>
+			<size>24</size>
 		</font>
 		<font>
-			<name>PluginSettingsFont</name>
+			<name>font_24_CB</name>
 			<filename>XBMC-caps.ttf</filename>
-			<style>normal</style>
-			<size>20</size>
-		</font>	
+			<style>bold</style>
+			<size>24</size>
+		</font>
 		<font>
-			<name>PluginSettingsHead</name>
+			<name>font_24_WCB</name>
+			<filename>XBMC-wide-caps.ttf</filename>
+			<style>bold</style>
+			<size>24</size>
+		</font>
+	<!--25-->
+		<font>
+			<name>font_25_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>25</size>
+		</font>
+	<!--26 -->
+		<font>
+			<name>font_26</name>
+			<filename>XBMC.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>font_26_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>26</size>
+		</font>
+		<font>
+			<name>font_26_C</name>
+			<filename>XBMC-caps.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>font_26_CB</name>
+			<filename>XBMC-caps.ttf</filename>
+			<style>bold</style>
+			<size>26</size>
+		</font>
+	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+	<!--27 -->
+		<font>
+			<name>font_27_CB</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>27</size>
+		</font>
+	<!--28 -->
+		<font>
+			<name>font_28</name>
+			<filename>XBMC.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>font_28_B</name>
+			<filename>XBMC.ttf</filename>
+			<style>bold</style>
+			<size>28</size>
+		</font>
+		<font>
+			<!--Font_OSDMusicArtist -->
+			<name>font_28_NRBC</name>
+			<filename>NewRapierBoldCaps.ttf</filename>
+			<size>28</size>
+		</font>
+	<!--29-->
+		<font>
+			<name>font_29_CB</name>
+			<filename>XBMC-caps.ttf</filename>
+			<style>bold</style>
+			<size>29</size>
+		</font>
+	<!--30-->
+		<font>
+			<name>font_30</name>
+			<filename>XBMC.ttf</filename>
+			<size>30</size>
+		</font>
+	<!--31-->
+		<font>
+			<name>font_31_U</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase</style>
+			<size>31</size>
+		</font>		
+	<!--32-->
+		<font>
+			<name>font_32_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
 			<size>32</size>
 		</font>
+	<!--35-->
 		<font>
-			<name>PluginSettingsFoot</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>-</style>
-			<size>28</size>
-		</font>
-		<font>
-			<name>PluginSettingsHead2</name>
+			<name>font_35_UB</name>
 			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>28</size>
-		</font>
-		<font>
-			<name>Parentheses</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>38</size>
+			<style>uppercase bold</style>
+			<size>35</size>
 		</font>	
-
-<!--(((LIBRARY VIDEO/AUDIO INFO)))=================================================================-->
-		<font>
-			<name>LibraryCatFontSmall</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>21</size>
-		</font>
-		<font>
-			<name>LibraryCatFontBig</name>
-			<filename>XBMC.ttf</filename>
-			<style>bold</style>
-			<size>23</size>
-		</font>
-		<font>
-			<name>SETTINGS_CATEGORY_2</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>24</size>	
-		</font>
-		<font>
-			<name>SETTINGS_CATEGORY</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style>bold</style>
-			<size>26</size>	
-		</font>
-		<font>
-			<name>ButtonMenuFont2</name>
-			<filename>XBMC-wide-caps.ttf</filename>
-			<style>bold</style>
-			<size>22</size>
-		</font>	
-		<font>
-			<name>ButtonMenuFont</name>
-			<filename>XBMC-wide-caps.ttf</filename>
-			<style>bold</style>
-			<size>24</size>
-		</font>	
+		
+<!--===================================================(((LEAVING THESE ALONE)))==============-->
+	<!--37-->
 		<font>
 			<name>HomeMenuFontNoFocus</name>
 			<filename>XBMC-caps.ttf</filename>
 			<style>bold</style>
 			<size>37</size>	
 		</font>
+	<!--38 -->
 		<font>
-			<name>HomeMenuFontFocus</name>
+			<name>Font_OSDMusicTitle</name>
+			<filename>NewRapierBoldCaps.ttf</filename>
+			<size>38</size>
+		</font>	
+		<font>
+			<name>Parentheses</name>
 			<filename>XBMC-caps.ttf</filename>
 			<style>bold</style>
-			<size>56</size>	
-		</font>
-		<font>
-			<name>VizSelect</name>
-			<filename>XBMC-caps.ttf</filename>
-			<style></style>
-			<size>55</size>	
-		</font>
+			<size>38</size>
+		</font>	
+	<!--40-->
 		<font>
 			<name>SearchFontBig</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
 			<size>40</size>
 		</font>
-		
-<!--((( RCB )))============================================================-->
-		
+	<!--55-->
+		<font>
+			<name>VizSelect</name>
+			<filename>XBMC-caps.ttf</filename>
+			<size>55</size>	
+		</font>
+	<!--56-->
+		<font>
+			<name>HomeMenuFontFocus</name>
+			<filename>XBMC-caps.ttf</filename>
+			<style>bold</style>
+			<size>56</size>	
+		</font>
+	<!--80-->
+		<font>
+			<name>Font_Lib80</name>
+			<filename>XBMC.ttf</filename>
+			<size>80</size>
+		</font>
 	</fontset>
 </fonts>
