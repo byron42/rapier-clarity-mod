@@ -23,7 +23,7 @@
 					<description>Title</description>
 					<posy>-2</posy>
 					<width>940</width>
-					<font>MediaInfoTitleFont</font>
+					<font>font_31_U</font>
 					<textcolor>MediaInfoHeadColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Year,(,)]</label>
@@ -48,7 +48,7 @@
 					<description>Artist</description>
 					<posy>35</posy>
 					<width>900</width>
-					<font>MediaInfoFont</font>
+					<font>font_20</font>
 					<textcolor>MediaInfoHeadColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
@@ -57,7 +57,7 @@
 					<description>Party Mode</description>
 					<posx>1090</posx>
 					<posy>36</posy>
-					<font>HeadFont2</font>
+					<font>font_23_U</font>
 					<textcolor>MediaInfoItemColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>right</align>
@@ -68,7 +68,7 @@
 					<description>Album</description>
 					<posy>63</posy>
 					<width>535</width>
-					<font>HeadFont2</font>
+					<font>font_23_U</font>
 					<textcolor>MediaInfoItemColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[MusicPlayer.Album,$LOCALIZE[558] : ,]</label>
@@ -79,7 +79,7 @@
 					<posx>1090</posx>
 					<posy>63</posy>
 					<width>535</width>
-					<font>HeadFont2</font>
+					<font>font_23_U</font>
 					<textcolor>MediaInfoItemColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>right</align>
@@ -88,7 +88,7 @@
 				<control type="label">
 					<description>Elapsed/Duration Time</description>
 					<posy>93</posy>
-					<font>HeadFont2</font>
+					<font>font_23_U</font>
 					<textcolor>MediaInfoItemColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
@@ -97,7 +97,7 @@
 					<description>Playlist Pos No</description>
 					<posx>1090</posx>
 					<posy>93</posy>
-					<font>HeadFont2</font>
+					<font>font_23_U</font>
 					<textcolor>MediaInfoItemColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>right</align>

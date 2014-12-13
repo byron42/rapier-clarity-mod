@@ -261,7 +261,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>right</align>
 							<aligny>center</aligny>
@@ -273,7 +273,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>TopBarStatusColor2</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -332,7 +332,7 @@
 								<width>220</width>
 								<height>15</height>
 								<scrollout>false</scrollout>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -349,7 +349,7 @@
 								<posy>13</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -368,7 +368,7 @@
 								<posy>0</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -381,7 +381,7 @@
 								<posy>15</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>TopBarStatusColor</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -407,13 +407,13 @@
 						<description>CUSTOM SUBMENU LABEL</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>31913</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -462,14 +462,14 @@
 						<description>Category</description>
 						<posx>1250</posx>
 						<posy>89</posy>
-						<font>PluginSettingsHead2</font>
+						<font>font_28_B</font>
 						<label>([B]$LOCALIZE[20342][/B])</label>
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 					</control>
@@ -490,7 +490,7 @@
 							<description>Edit Button 1</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -520,7 +520,7 @@
 							<description>Edit Button 2</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -551,7 +551,7 @@
 							<description>Edit Button 3</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -581,7 +581,7 @@
 							<description>Edit Button 4</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -611,7 +611,7 @@
 							<description>Edit Button 5</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -641,7 +641,7 @@
 							<description>Edit Button 6</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -671,7 +671,7 @@
 							<description>Edit Button 7</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -714,7 +714,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -736,7 +736,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -768,7 +768,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -804,7 +804,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -839,7 +839,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -875,7 +875,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx></textoffsetx>
@@ -895,7 +895,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -947,7 +947,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -969,7 +969,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -991,7 +991,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1014,7 +1014,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -1039,7 +1039,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -1065,7 +1065,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1106,7 +1106,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--150-->
@@ -1126,7 +1126,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -1158,7 +1158,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1192,7 +1192,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -1227,7 +1227,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -1263,7 +1263,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--80-->
@@ -1283,7 +1283,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx><!--120-->
@@ -1335,7 +1335,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -1357,7 +1357,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -1379,7 +1379,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1402,7 +1402,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -1427,7 +1427,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -1453,7 +1453,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1494,7 +1494,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -1514,7 +1514,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -1546,7 +1546,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1582,7 +1582,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -1617,7 +1617,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -1653,7 +1653,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -1673,7 +1673,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -1725,7 +1725,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -1747,7 +1747,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -1769,7 +1769,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1792,7 +1792,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -1817,7 +1817,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -1843,7 +1843,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1884,7 +1884,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -1904,7 +1904,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -1936,7 +1936,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1972,7 +1972,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -2007,7 +2007,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -2043,7 +2043,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2063,7 +2063,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2115,7 +2115,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2137,7 +2137,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -2159,7 +2159,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -2182,7 +2182,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2207,7 +2207,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -2233,7 +2233,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -2274,7 +2274,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2294,7 +2294,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -2326,7 +2326,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -2362,7 +2362,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -2397,7 +2397,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -2433,7 +2433,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2453,7 +2453,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2505,7 +2505,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2527,7 +2527,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -2549,7 +2549,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -2572,7 +2572,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2597,7 +2597,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -2623,7 +2623,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -2664,7 +2664,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2684,7 +2684,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -2716,7 +2716,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -2752,7 +2752,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -2787,7 +2787,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -2823,7 +2823,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2843,7 +2843,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -2895,7 +2895,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2917,7 +2917,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -2939,7 +2939,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -2962,7 +2962,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -2987,7 +2987,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -3013,7 +3013,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -3054,7 +3054,7 @@
 							<posy>48</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -3074,7 +3074,7 @@
 							<posy>43</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>-</textcolor>
 							<focusedcolor>-</focusedcolor>
 							<textoffsetx>47</textoffsetx>
@@ -3106,7 +3106,7 @@
 								<description>Script Type</description>
 								<width>234</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff7C4849</textcolor>
 								<disabledcolor>Grey</disabledcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -3142,7 +3142,7 @@
 								<description>Plugin Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>cc497F49</textcolor>
 								<focusedcolor>ThemeColor</focusedcolor>
 								<disabledcolor>Grey</disabledcolor>
@@ -3177,7 +3177,7 @@
 								<description>Favourite Type</description>
 								<width>230</width>
 								<height>50</height>
-								<font>Font_LibBold24</font>
+								<font>font_28_B</font>
 								<textcolor>ff4B4C7F</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>left</align>
@@ -3214,7 +3214,7 @@
 							<posy>195</posy>
 							<width>760</width>
 							<height>65</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -3234,7 +3234,7 @@
 							<posy>415</posy>
 							<width>760</width>
 							<height>90</height>
-							<font>SystemInfoHead</font>
+							<font>font_35_UB</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>Grey</focusedcolor>
 							<textoffsetx>-</textoffsetx>
@@ -3286,7 +3286,7 @@
 								<description>SCRIPT Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -3308,7 +3308,7 @@
 								<description>PLUGIN Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -3330,7 +3330,7 @@
 								<description>FAV Label</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -3353,7 +3353,7 @@
 								<description>Script Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff7C4849</textcolor>
@@ -3378,7 +3378,7 @@
 								<description>Plugin Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>cc497F49</textcolor>
@@ -3404,7 +3404,7 @@
 								<description>Favourite Path</description>
 								<width>720</width>
 								<height>50</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>6</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -3443,7 +3443,7 @@
 						<description>Exit Window</description>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>AAFFFFFF</textcolor>
@@ -3461,7 +3461,7 @@
 						<description>Cancel</description>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>AAFFFFFF</textcolor>

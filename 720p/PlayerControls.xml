@@ -95,7 +95,7 @@
 								<height>100</height>
 								<align>center</align>
 								<textwidth>160</textwidth>
-								<font>MenuBarButtonFont2</font>
+								<font>font_22_CB</font>
 								<textcolor>gray</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<label>$VAR[PlayerControlActionLabel]</label>
@@ -111,7 +111,7 @@
 								<aligny>-</aligny>
 								<textoffsety>103</textoffsety>
 								<textwidth>120</textwidth>
-								<font>MenuBarButtonFont2</font>
+								<font>font_22_CB</font>
 								<textcolor>gray</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<texture>$VAR[PlayerControlActionImage]</texture>
@@ -156,7 +156,7 @@
 										<posy></posy>
 										<width>950</width>
 										<height>30</height>
-										<font>Font_OSDMusicArtist</font>
+										<font>font_28_NRBC</font>
 										<textcolor>ThemeColor2</textcolor>
 										<shadowcolor></shadowcolor>
 										<label>$VAR[PlayerControlArtist]</label>
@@ -169,7 +169,7 @@
 										<posy>20</posy>
 										<width>640</width>
 										<height>30</height>
-										<font>Font_OSDMusicArtist</font>
+										<font>font_28_NRBC</font>
 										<textcolor>ThemeColor2</textcolor>
 										<shadowcolor></shadowcolor>
 										<label> $LOCALIZE[209]:  [COLOR=gray]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
@@ -780,7 +780,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<aspectratio></aspectratio>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
@@ -795,7 +795,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<label>$VAR[PlayerControlActionLabel]</label>
@@ -811,7 +811,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor></shadowcolor>
 					<label>$LOCALIZE[21821]</label>
@@ -827,7 +827,7 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 				</control>
@@ -853,7 +853,7 @@
 				<posy>485</posy>
 				<width>1250</width>
 				<height>100</height>
-				<font>Font_Lib18</font>
+				<font>font_22</font>
 				<textcolor>ThemeColor2</textcolor>
 				<align>justify</align>
 				<label fallback="195">$VAR[PlayerControlInfo]</label>

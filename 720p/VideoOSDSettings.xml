@@ -39,13 +39,13 @@
 					<description>PLUGIN/ADDON NAME</description>
 					<posx></posx>
 					<posy>8</posy>
-					<font>PluginSettingsHead</font>
+					<font>font_32_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<!-- <label>$INFO[Listitem.Label]</label> -->
 					<posy>DialogHeadingOffsetY</posy>
 					<width>600</width>
-					<font>MediaInfoTitleFont2</font>
+					<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 					<textcolor>DialogTitleColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>left</align>
@@ -117,7 +117,7 @@
 					<posy>0</posy>
 					<width>800</width>
 					<height>48</height>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<aligny>top</aligny>
 					<textoffsety>9</textoffsety>
 					<align>left</align>
@@ -137,7 +137,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<height>48</height>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<aligny>top</aligny>
 					<textoffsety>9</textoffsety>
 					<textcolor>ThemeColor2</textcolor>
@@ -165,7 +165,7 @@
 					<spinheight>48</spinheight>
 					<animation effect="zoom" end="103" center="395,0" time="100">focus</animation>
 					<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<aligny>top</aligny>
 					<textoffsety>9</textoffsety>
 					<textcolor>ThemeColor2</textcolor>
@@ -185,7 +185,7 @@
 					<texturesliderbar>slider-background.png</texturesliderbar>
 					<textureslidernib>slider-nib-nofocus.png</textureslidernib>
 					<textureslidernibfocus>slider-nib-nofocus.png</textureslidernibfocus>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<aligny>top</aligny>
 					<textoffsety>9</textoffsety>
 					<textcolor>ThemeColor2</textcolor>

@@ -28,7 +28,7 @@
 			<posx>DialogMarginOffsetX</posx>
 			<posy>26</posy>
 			<width>630</width>
-			<font>DialogTitleFont</font>
+			<font>font_25_B</font>
 			<textcolor>DialogTitleColor</textcolor>
 			<shadowcolor>ShadowColor</shadowcolor>
 			<align>center</align>
@@ -81,7 +81,7 @@
 				<posy>477</posy>
 				<width>178</width>
 				<height>46</height>
-				<font>ButtonFont</font>
+				<font>font_20_B</font>
 				<textcolor>ButtonColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<align>right</align>
@@ -93,7 +93,7 @@
 				<posy>477</posy>
 				<width>178</width>
 				<height>46</height>
-				<font>ButtonFont</font>
+				<font>font_20_B</font>
 				<textcolor>ButtonColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>
@@ -113,7 +113,7 @@
 				<posy>65</posy>
 				<width>370</width>
 				<height>50</height>
-				<font>OpenSubtitlesSearchFont</font>
+				<font>font_22_U</font>
 				<textcolor>DefaultColor4</textcolor>
 				<aligny>top</aligny>
 				<wrapmultiline>true</wrapmultiline>
@@ -149,7 +149,7 @@
 						<posy>-5</posy>
 						<width>90</width>
 						<height>35</height>
-						<font>DefaultFont</font>
+						<font>font_21</font>
 						<aligny>top</aligny>
 						<textcolor>DefaultColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
@@ -169,7 +169,7 @@
 						<posy>-5</posy>
 						<width>345</width>
 						<height>35</height>
-						<font>DefaultFont</font>
+						<font>font_21</font>
 						<aligny>top</aligny>
 						<textcolor>DefaultColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
@@ -209,7 +209,7 @@
 						<posy>-5</posy>
 						<width>90</width>
 						<height>35</height>
-						<font>DefaultFont</font>
+						<font>font_21</font>
 						<aligny>top</aligny>
 						<textcolor>DefaultColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>
@@ -230,7 +230,7 @@
 						<posy>-5</posy>
 						<width>345</width>
 						<height>35</height>
-						<font>DefaultFont</font>
+						<font>font_21</font>
 						<aligny>top</aligny>
 						<textcolor>DefaultColor</textcolor>
 						<selectedcolor>SelectedColor</selectedcolor>

@@ -212,7 +212,7 @@
 						<width>190</width>
 						<height>36</height>	
 						<textwidth>190</textwidth>
-						<font>MenuBarButtonFont</font>	
+						<font>font_20_CB</font>	
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10">scrollbar-background.png</texturefocus>
@@ -236,7 +236,7 @@
 						<height>36</height>	
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
@@ -258,7 +258,7 @@
 						<height>36</height>	
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
@@ -280,7 +280,7 @@
 						<height>36</height>	
 						<aligny>top</aligny>
 						<textoffsety>4</textoffsety>
-						<font>SubMenuFont2</font>
+						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
@@ -413,7 +413,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -425,7 +425,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -484,7 +484,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -501,7 +501,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -520,7 +520,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -533,7 +533,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -653,7 +653,7 @@
 							<posy>-7</posy>
 							<description>Title</description>
 							<width>900</width>
-							<font>WideListEpisodeFont</font>
+							<font>font_28_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[ListItem.Album] $INFO[ListItem.Year,(,)]</label>	
@@ -671,7 +671,7 @@
 								<posy>292</posy>
 								<width>500</width>
 								<height>35</height>
-								<font>WideListEpisodeFont</font> <!--REVIEW LABEL-->
+								<font>font_28_B</font> <!--REVIEW LABEL-->
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
@@ -708,7 +708,7 @@
 								<posy>292</posy>
 								<width>500</width>
 								<height>35</height>
-								<font>WideListEpisodeFont</font> <!--TRACKS LABEL-->
+								<font>font_28_B</font> <!--TRACKS LABEL-->
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
@@ -782,7 +782,7 @@
 							<posx>1215</posx>
 							<posy>1</posy>
 							<width>600</width>
-							<font>LibraryCatFontBig</font>
+							<font>font_23_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
@@ -811,7 +811,7 @@
 								<posx>5</posx>
 								<width>170</width>
 								<height>35</height>
-								<font>LibraryCatFontSmall</font> <!--CAT. LABEL-->
+								<font>font_21_B</font> <!--CAT. LABEL-->
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -822,7 +822,7 @@
 								<posy>-1</posy>
 								<width>520</width>
 								<height>35</height>
-								<font>LibraryCatFontSmall</font> <!--INFO LABEL-->
+								<font>font_21_B</font> <!--INFO LABEL-->
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -854,7 +854,7 @@
 								<posy>-1</posy>
 								<width>190</width>
 								<height>35</height>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<aligny>center</aligny>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -865,7 +865,7 @@
 								<posy>-1</posy>
 								<width>520</width>
 								<height>35</height>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<aligny>center</aligny>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -923,7 +923,7 @@
 							<posy>-7</posy>
 							<description>Title</description>
 							<width>900</width>
-							<font>WideListEpisodeFont</font>
+							<font>font_28_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[ListItem.Artist]</label>	
@@ -941,7 +941,7 @@
 								<posy>292</posy>
 								<width>500</width>
 								<height>35</height>
-								<font>WideListEpisodeFont</font> <!--BIO LABEL-->
+								<font>font_28_B</font> <!--BIO LABEL-->
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
@@ -978,7 +978,7 @@
 								<posy>292</posy>
 								<width>500</width>
 								<height>35</height>
-								<font>WideListEpisodeFont</font> <!--DISCO LABEL-->
+								<font>font_28_B</font> <!--DISCO LABEL-->
 								<align>right</align>
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
@@ -1052,7 +1052,7 @@
 							<posx>1215</posx>
 							<posy>1</posy>
 							<width>600</width>
-							<font>LibraryCatFontBig</font>
+							<font>font_23_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>right</align>
@@ -1080,7 +1080,7 @@
 								<posx>5</posx>
 								<width>280</width>
 								<height>35</height>
-								<font>LibraryCatFontSmall</font> <!--CAT. LABEL-->
+								<font>font_21_B</font> <!--CAT. LABEL-->
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1091,7 +1091,7 @@
 								<posy>-1</posy>
 								<width>450</width>
 								<height>35</height>
-								<font>LibraryCatFontSmall</font> <!--INFO LABEL-->
+								<font>font_21_B</font> <!--INFO LABEL-->
 								<aligny>center</aligny>
 								<textcolor>Grey</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1124,7 +1124,7 @@
 								<width>280</width>
 								<height>35</height>
 								<textwidth>265</textwidth>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<aligny>center</aligny>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1135,7 +1135,7 @@
 								<posy>-1</posy>
 								<width>450</width>
 								<height>35</height>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<aligny>center</aligny>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1237,7 +1237,7 @@
 						<posy>224</posy>
 						<width>720</width>
 						<height>166</height>
-						<font>LibraryCatFontBig</font>
+						<font>font_23_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>justify</align>
@@ -1283,7 +1283,7 @@
 								<posy>-1</posy>
 								<width>660</width>
 								<height>33</height>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<textcolor>Grey</textcolor>
 								<selectedcolor>ThemeColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1322,7 +1322,7 @@
 								<posy>-1</posy>
 								<width>710</width>
 								<height>33</height>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1349,7 +1349,7 @@
 								<posy>-1</posy>
 								<width>660</width>
 								<height>33</height>
-								<font>LibraryCatFontSmall</font>
+								<font>font_21_B</font>
 								<textcolor>Grey</textcolor>
 								<selectedcolor>ThemeColor2</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -1386,7 +1386,7 @@
 								<posy>-1</posy>
 								<width>710</width>
 								<height>33</height>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<textcolor>ThemeColor2</textcolor>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<shadowcolor>ShadowColor</shadowcolor>

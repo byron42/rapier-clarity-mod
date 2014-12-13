@@ -256,7 +256,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>right</align>
 							<aligny>center</aligny>
@@ -268,7 +268,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>TopBarStatusColor2</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -327,7 +327,7 @@
 								<width>220</width>
 								<height>15</height>
 								<scrollout>false</scrollout>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -344,7 +344,7 @@
 								<posy>13</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -363,7 +363,7 @@
 								<posy>0</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -376,7 +376,7 @@
 								<posy>15</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>TopBarStatusColor</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -417,13 +417,13 @@
 							<description>PROFILE SETTING LABEL</description>
 							<posx></posx>
 							<posy>8</posy>
-							<font>PluginSettingsHead</font>
+							<font>font_32_B</font>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$LOCALIZE[20067]</label>
 							<posy>DialogHeadingOffsetY</posy>
 							<width>600</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
@@ -503,7 +503,7 @@
 							<posx>140</posx>
 							<posy>18</posy>
 							<width>460</width>
-							<font>ProfileNameFont</font>
+							<font>font_31_U</font>
 							<textcolor>DefaultColor4</textcolor>
 							<scroll>yes</scroll>
 						</control>
@@ -512,7 +512,7 @@
 							<posx>140</posx>
 							<posy>47</posy>
 							<width>460</width>
-							<font>HeadFont2</font>
+							<font>font_23_U</font>
 							<textcolor>DefaultColor2</textcolor>
 							<scroll>yes</scroll>
 							<onleft>9001</onleft>
@@ -533,7 +533,7 @@
 							<description>Default Button</description>
 							<width>800</width>
 							<height>48</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -550,7 +550,7 @@
 							<description>Default RadioButton</description>
 							<width>800</width>
 							<height>48</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -567,7 +567,7 @@
 							<description>Default SpinControlex</description>
 							<width>800</width>
 							<height>48</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textureup>spinnerex arrows/spinner_ArrowUp_nf.png</textureup>
@@ -588,7 +588,7 @@
 						<control type="sliderex" id="10">
 							<width>800</width>
 							<height>48</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -615,7 +615,7 @@
 							<description>OK</description>
 							<width>215</width>
 							<height>50</height>
-							<font>PluginSettingsFoot</font>
+							<font>font_28</font>
 							<aligny>top</aligny>
 							<textoffsety>5</textoffsety>
 							<textcolor>FFFFFFFF</textcolor>
@@ -633,7 +633,7 @@
 							<posx>325</posx>
 							<width>215</width>
 							<height>50</height>
-							<font>PluginSettingsFoot</font>
+							<font>font_28</font>
 							<aligny>top</aligny>
 							<textoffsety>5</textoffsety>
 							<textcolor>FFFFFFFF</textcolor>

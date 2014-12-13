@@ -56,13 +56,13 @@
 						<description>Instructions</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[21432]</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -111,7 +111,7 @@
 							<description>Content Picker</description>
 							<width>1180</width>
 							<height>48</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textureup>spinnerex arrows/spinner_ArrowUp_nf.png</textureup>
@@ -155,7 +155,7 @@
 								<control type="label" id="2">  <!--playlist name instructions-->
 									<description>NAME</description>
 									<width min="1" max="800">auto</width>
-									<font>OSDItemFont</font>
+									<font>font_20_B</font>
 									<textcolor>ThemeColor2</textcolor> <!--chalk-->
 									<aligny>top</aligny>
 									<align>left</align>
@@ -197,7 +197,7 @@
 								<posy>74</posy>
 								<width>1050</width>	
 								<height>70</height>
-								<font>PluginSettingsHead2</font>
+								<font>font_28_B</font>
 								<textcolor>BreadCrumbColor</textcolor>
 								<align>center</align>
 								<selectedcolor>cc71A6D2</selectedcolor>
@@ -240,10 +240,10 @@
 								<control type="label">  <!--label F-->
 									<description>DIRECTIONS</description>
 									<width min="1" max="800">auto</width>
-									<font>OSDItemFont</font>
+									<font>font_20_B</font>
 									<aligny>top</aligny>
 									<align>left</align>
-									<font>OSDItemFont</font>
+									<font>font_20_B</font>
 									<textcolor>ThemeColor2</textcolor>
 									<label>[UPPERCASE]$LOCALIZE[21422][/UPPERCASE]</label>
 									<animation effect="fade" start="100" end="60" time="100" condition="!ControlGroup(247).HasFocus">Conditional</animation>
@@ -280,7 +280,7 @@
 									<description>Add path</description>
 									<width>250</width>
 									<height>40</height>
-									<font>SETTINGS_CATEGORY_2</font>
+									<font>font_24_CB</font>
 									<textcolor>Grey</textcolor> <!--GREY-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -297,7 +297,7 @@
 									<description>Edit Path</description>
 									<width>250</width>
 									<height>40</height>
-									<font>SETTINGS_CATEGORY_2</font>
+									<font>font_24_CB</font>
 									<textcolor>Grey</textcolor> <!--GREY-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -314,7 +314,7 @@
 									<description>Remove Path</description>
 									<width>250</width>
 									<height>40</height>
-									<font>SETTINGS_CATEGORY_2</font>
+									<font>font_24_CB</font>
 									<textcolor>Grey</textcolor> <!--GREY-->
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
@@ -356,7 +356,7 @@
 										<posy>-2</posy>
 										<width>500</width>
 										<height>30</height>
-										<font>OSDItemFont</font>
+										<font>font_20_B</font>
 										<textcolor>gray</textcolor>	
 										<shadowcolor></shadowcolor>
 										<scroll>false</scroll>
@@ -389,7 +389,7 @@
 										<posy>-3</posy>
 										<width>500</width>
 										<height>30</height>
-										<font>ListLabelFont</font>
+										<font>font_23_B</font>
 										<textcolor>ThemeColor</textcolor>
 										<scroll>false</scroll>
 										<align>left</align>
@@ -403,7 +403,7 @@
 										<posy>-2</posy>
 										<width>500</width>
 										<height>30</height>
-										<font>OSDItemFont</font>
+										<font>font_20_B</font>
 										<textcolor>Grey</textcolor>
 										<scroll>false</scroll>
 										<align>left</align>
@@ -445,10 +445,10 @@
 								<control type="label">  <!--label F-->
 									<description>PATH DIRECTIONS</description>
 									<width min="1" max="800">auto</width>
-									<font>OSDItemFont</font>
+									<font>font_20_B</font>
 									<aligny>top</aligny>
 									<align>left</align>
-									<font>OSDItemFont</font>
+									<font>font_20_B</font>
 									<textcolor>ThemeColor2</textcolor>
 									<label>[UPPERCASE]$LOCALIZE[33059] $LOCALIZE[33065] $LOCALIZE[33063][/UPPERCASE]</label>
 									<animation effect="fade" start="100" end="60" time="100" condition="!ControlGroup(245).HasFocus">Conditional</animation>
@@ -467,7 +467,7 @@
 								<description>Items Must Match Value</description>
 								<width>1035</width>
 								<height>40</height>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<aligny>top</aligny>
 								<textoffsety>-12</textoffsety>
 								<textcolor>Grey</textcolor>
@@ -491,7 +491,7 @@
 								<posx>-2</posx>
 								<posy>28</posy>
 								<width>297</width>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>Grey</textcolor>
 								<shadowcolor></shadowcolor>	
 								<aligny>center</aligny>
@@ -503,7 +503,7 @@
 								<posx>-2</posx>
 								<posy>28</posy>
 								<width>297</width>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>ff343434</textcolor>
 								<shadowcolor></shadowcolor>	
 								<aligny>center</aligny>
@@ -517,7 +517,7 @@
 								<posy>58</posy>
 								<width>1035</width>
 								<height>40</height>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<aligny>top</aligny>
 								<textoffsety>-13</textoffsety>
 								<textcolor>Grey</textcolor>
@@ -542,7 +542,7 @@
 								<posy>76</posy>
 								<height></height>
 								<width>297</width>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>Grey</textcolor>
 								<shadowcolor></shadowcolor>
 								<aligny>center</aligny>
@@ -555,7 +555,7 @@
 								<posy>106</posy>
 								<width>600</width>
 								<height>40</height>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<aligny>top</aligny>
 								<textoffsety>-13</textoffsety>
 								<textcolor>Grey</textcolor>
@@ -579,7 +579,7 @@
 								<posx>-2</posx>
 								<posy>124</posy>
 								<width>425</width>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>Grey</textcolor>
 								<shadowcolor></shadowcolor>
 								<aligny>center</aligny>
@@ -595,7 +595,7 @@
 								<textwidth>415</textwidth>
 								<label>21431</label>	
 								<altlabel>21430</altlabel>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>Grey</textcolor>
 								<shadowcolor></shadowcolor>
 								<aligny>top</aligny>

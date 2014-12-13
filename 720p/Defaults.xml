@@ -1,6 +1,6 @@
 <includes>
 	<default type="label">
- 		<font>VolumeFont</font>
+ 		<font>font_20</font>
  		<textcolor>ffffffff</textcolor>
  		<selectedcolor>ffffffff</selectedcolor>
 		<aligny>top</aligny>
@@ -10,7 +10,7 @@
 	<default type="button">
 		<width>200</width>
 		<height>35</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>ListLabelFocusedColor</focusedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
@@ -28,7 +28,7 @@
 	<default type="radiobutton">
 		<width>200</width>
 		<height>35</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>ListLabelFocusedColor</focusedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
@@ -48,7 +48,7 @@
 	<default type="togglebutton">
 		<width>200</width>
 		<height>35</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>ListLabelFocusedColor</focusedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
@@ -65,7 +65,7 @@
 	<default type="selectbutton">
 		<width>300</width>
 		<height>100</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<selectedcolor>SelectedColor</selectedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
@@ -83,7 +83,7 @@
 	<default type="spincontrol">	
 		<width>28</width>
 		<height>28</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
 		<align>right</align>
@@ -106,7 +106,7 @@
 		<height>35</height>
 		<spinwidth>18</spinwidth>
 		<spinheight>10</spinheight>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>SelectedColor</focusedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>
@@ -126,7 +126,7 @@
 	<default type="edit">
 		<width>400</width>
 		<height>35</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>SelectedColor</focusedcolor>
 		<aligny>center</aligny>
@@ -139,7 +139,7 @@
 	
 	<default type="sliderex">
 		<height>35</height>
-		<font>ButtonFont</font>
+		<font>font_20_B</font>
 		<textcolor>ButtonColor</textcolor>
 		<focusedcolor>SelectedColor</focusedcolor>
 		<disabledcolor>DisabledColor</disabledcolor>

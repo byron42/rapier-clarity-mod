@@ -177,7 +177,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[13005]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -199,7 +199,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>490</textwidth> <!--SDM-->
-						<font>ButtonMenuFont2</font>
+						<font>font_22_WCB</font><!---->
 						<label>$LOCALIZE[20147]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -220,7 +220,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth> <!--SDM-->
-						<font>ButtonMenuFont2</font>
+						<font>font_22_WCB</font><!---->
 						<label>$LOCALIZE[20148]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -241,7 +241,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>474</textwidth>
-						<font>ButtonMenuFont2</font>
+						<font>font_22_WCB</font><!---->
 						<label>$LOCALIZE[20149]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -262,7 +262,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont2</font>
+						<font>font_22_WCB</font><!---->
 						<label>$LOCALIZE[20150]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -311,7 +311,7 @@
 						<height>50</height>
 						<textwidth>480</textwidth>
 						<!--deleted ContextMenuBtnFocus-->
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[13013]</label> <!--REBOOT-->
 						<align>center</align>
 						<aligny>top</aligny>
@@ -331,7 +331,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[13009] XBMC</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -349,7 +349,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[13313] XBMC</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -367,7 +367,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[20183]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -388,7 +388,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[341]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -408,7 +408,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[1036]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -428,7 +428,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[130]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -449,7 +449,7 @@
 						<width>500</width>
 						<height>50</height>
 						<textwidth>480</textwidth>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[20126]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -471,7 +471,7 @@
 						<height>50</height>
 						<textwidth>480</textwidth>
 						<usealttexture>System.IsMaster</usealttexture>
-						<font>ButtonMenuFont</font>
+						<font>font_24_WCB</font>
 						<label>$LOCALIZE[20045]</label>
 						<align>center</align>
 						<aligny>top</aligny>
@@ -685,7 +685,7 @@
 						<posy>4</posy>
 						<width>320</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -712,7 +712,7 @@
 						<posy>4</posy>
 						<width>240</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -802,7 +802,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -814,7 +814,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -874,7 +874,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -891,7 +891,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -910,7 +910,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -923,7 +923,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -940,7 +940,7 @@
 			<posy>45</posy>
 			<width>500</width>
 			<height>35</height>
-			<font>Font_Lib21</font>
+			<font>font_24_B</font>
 			<textcolor>aa626262</textcolor> <!--GREY-->
 			<align>left</align>
 			<aligny>center</aligny>

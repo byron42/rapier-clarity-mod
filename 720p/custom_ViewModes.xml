@@ -49,7 +49,7 @@
 					<description>Icon</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -72,7 +72,7 @@
 					<description>Big Icon</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -94,7 +94,7 @@
 					<description>Wide Icon (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -118,7 +118,7 @@
 					<description>Wide Icon (TVShows)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -144,7 +144,7 @@
 					<description>Wide Icon (Episodes)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -169,7 +169,7 @@
 					<description>Wide Icon (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -193,7 +193,7 @@
 					<description>Wide Icon (Programs-Games,apps,emulators)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -217,7 +217,7 @@
 					<description>Thumbnail (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -239,7 +239,7 @@
 					<description>Thumbnail (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -262,7 +262,7 @@
 					<description>List</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -284,7 +284,7 @@
 					<description>List Media Info (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -308,7 +308,7 @@
 					<description>ListInfo2 View (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -336,7 +336,7 @@
 					<description>ListInfo (TVShows)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -361,7 +361,7 @@
 					<description>ListInfo (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -384,7 +384,7 @@
 					<description>Wrap List Media Info</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -408,7 +408,7 @@
 					<description>Fanart (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -434,7 +434,7 @@
 					<description>Episode List</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -460,7 +460,7 @@
 					<description>Episode List</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -485,7 +485,7 @@
 					<description>Banner List</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -507,7 +507,7 @@
 					<description>Episode Showcase</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -531,7 +531,7 @@
 					<description>Large Poster (Movies)(Seasons)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -554,7 +554,7 @@
 					<description>Large Poster (programs)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -580,7 +580,7 @@
 					<description>Wall View (Movies)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -605,7 +605,7 @@
 					<description>Movies 3D Wrap View</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -627,7 +627,7 @@
 					<description>Slim Wide List</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -650,7 +650,7 @@
 					<description>Showcase Split View</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -672,7 +672,7 @@
 					<description>WrapInfo (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -695,7 +695,7 @@
 					<description>ListInfo 2 (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -719,7 +719,7 @@
 					<description>CoverFlow (Music)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -743,7 +743,7 @@
 					<description>CoverFlow (Videos)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -767,7 +767,7 @@
 					<description>CoverFlow (Scripts,Programs,Pics)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -793,7 +793,7 @@
 					<description>ListInfo 2 (TVShows)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -820,7 +820,7 @@
 					<description>ListInfo 2 (Episodes)</description>
 					<width>400</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>

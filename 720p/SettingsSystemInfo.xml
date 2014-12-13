@@ -180,7 +180,7 @@
 						<Description>Button Basic Values</Description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -196,7 +196,7 @@
 						<description>Button Storage</description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -212,7 +212,7 @@
 						<description>Button HDD</description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -229,7 +229,7 @@
 						<description>Button DVD</description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -246,7 +246,7 @@
 						<description>Button Network</description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -263,7 +263,7 @@
 					
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -279,7 +279,7 @@
 						<description>Button Hardware</description>
 						<width>800</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -301,13 +301,13 @@
 						<description>SYSTEM INFO LABEL</description>
 						<posx>30</posx>
 						<posy>95</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$INFO[Control.GetLabel(40)]</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -411,7 +411,7 @@
 						<posy>-5</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="3">
@@ -420,7 +420,7 @@
 						<posy>38</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="4">
@@ -429,7 +429,7 @@
 						<posy>78</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="5">
@@ -438,7 +438,7 @@
 						<posy>120</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="6">
@@ -447,7 +447,7 @@
 						<posy>163</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="7">
@@ -456,7 +456,7 @@
 						<posy>205</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="8">
@@ -465,7 +465,7 @@
 						<posy>247</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="9">
@@ -474,7 +474,7 @@
 						<posy>289</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="10">
@@ -483,7 +483,7 @@
 						<posy>330</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<control type="label" id="11">
@@ -492,7 +492,7 @@
 						<posy>373</posy>
 						<width>780</width>
 						<label>-</label>
-						<font>CustomSkinHead</font>
+						<font>font_22_U</font>
 						<textcolor>ThemeColor2</textcolor>
 					</control>
 					<!--****************** Separators **********************-->
@@ -533,7 +533,7 @@
 							<posy>424</posy>
 							<width>800</width>
 							<height>25</height>
-							<font>LibraryCatFontSmall</font>
+							<font>font_21_B</font>
 							<aligny>center</aligny>
 							<align>left</align>
 							<textcolor>AA8A795D</textcolor>
@@ -561,7 +561,7 @@
 							<posy>449</posy>
 							<width>800</width>
 							<height>25</height>
-							<font>LibraryCatFontSmall</font>
+							<font>font_21_B</font>
 							<aligny>center</aligny>
 							<align>left</align>
 							<textcolor>AA8A795D</textcolor>
@@ -625,7 +625,7 @@
 						<posy>4</posy>
 						<width>320</width>
 						<height>35</height>
-						<font>BreadCrumbFont</font>
+						<font>font_22_WCBI</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<textoffsetx>-</textoffsetx>
 						<align>center</align>
@@ -717,7 +717,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -729,7 +729,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>

@@ -88,16 +88,16 @@
 					</control>
 				</control>
 				<control type="label">
-					<posx>493</posx>
+					<posx>460</posx>
 					<posy>30</posy>
-					<width>360</width>
+					<width>380</width>
 					<height>25</height>
 					<label>[UPPERCASE]Audio  Information[/UPPERCASE]</label>
-					<align>left</align>
+					<align>center</align>
 					<aligny>center</aligny>
-					<font>MediaInfoTitleFont2</font>
+					<font>font_22</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor></shadowcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<posx>470</posx>
@@ -107,7 +107,7 @@
 					<label>[UPPERCASE]$INFO[musicplayer.Codec,* Codec: ,]$INFO[musicplayer.Bitrate,[CR]* Bitrate: ,kbps]$INFO[musicplayer.bitspersample,[CR]* Bits:,bit]$INFO[musicplayer.Samplerate][/UPPERCASE]</label>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 				</control>
@@ -119,7 +119,7 @@
 					<label>[UPPERCASE]$INFO[musicplayer.Samplerate,* Freq: ,kHz]$INFO[musicplayer.Channels,[CR]* Channels: ]$INFO[,[CR]* XBMC ROCKS ][/UPPERCASE]</label>
 					<align>left</align>
 					<aligny>top</aligny>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 				</control>
@@ -131,9 +131,9 @@
 					<label>[UPPERCASE]$LOCALIZE[250][/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>MediaInfoTitleFont2</font>
+					<font>font_22</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor></shadowcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -143,7 +143,7 @@
 					<label>[UPPERCASE]$INFO[Visualisation.Name]  [I]($LOCALIZE[20166])[/I] [CR]fps: $INFO[System.FPS]  [/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 					<visible>Visualisation.Locked</visible>
@@ -156,32 +156,32 @@
 					<label>[UPPERCASE]$INFO[Visualisation.Name]  [CR]fps: $INFO[System.FPS]  [/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>DefaultFont</font>
+					<font>font_21</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 					<visible>!Visualisation.Locked</visible>
 				</control>
 				<control type="label">
-					<posx>1182</posx>
+					<posx>880</posx>
 					<posy>30</posy>
-					<width>360</width>
+					<width>380</width>
 					<height>25</height>
 					<label>[UPPERCASE]Visible  Preset[/UPPERCASE]</label>
-					<align>right</align>
+					<align>center</align>
 					<aligny>center</aligny>
-					<font>MediaInfoTitleFont2</font>
+					<font>font_22</font>
 					<textcolor>ThemeColor</textcolor>
-					<shadowcolor></shadowcolor>
+					<shadowcolor>black</shadowcolor>
 				</control>
 				<control type="label">
-					<posx>890</posx>
+					<posx>880</posx>
 					<posy>55</posy>
-					<width>360</width>
+					<width>380</width>
 					<height>100</height>
 					<label fallback="[UPPERCASE]  (UnAvailable)[/UPPERCASE]">[UPPERCASE]$INFO[Visualisation.Preset,,  ][/UPPERCASE]</label>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>font12</font>
+					<font>font_17</font>
 					<scroll>true</scroll>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
@@ -241,7 +241,7 @@
 								<height>100</height>
 								<align>center</align>
 								<textwidth>160</textwidth>
-								<font>MenuBarButtonFont</font>
+								<font>font_20_CB</font>
 								<textcolor>gray</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<label>$VAR[PlayerControlActionLabel]</label>
@@ -256,7 +256,7 @@
 								<aligny>-</aligny>
 								<textoffsety>103</textoffsety>
 								<textwidth>120</textwidth>
-								<font>MenuBarButtonFont2</font>
+								<font>font_22_CB</font>
 								<textcolor>gray</textcolor>
 								<shadowcolor>black</shadowcolor>
 								<texture>$VAR[PlayerControlActionImage]</texture>
@@ -304,7 +304,7 @@
 										<posy></posy>
 										<width>950</width>
 										<height>30</height>
-										<font>Font_OSDMusicArtist</font>
+										<font>font_28_NRBC</font>
 										<textcolor>ThemeColor2</textcolor>
 										<shadowcolor></shadowcolor>
 										<label>$VAR[PlayerControlArtist]</label>
@@ -318,7 +318,7 @@
 										<posy>20</posy>
 										<width>640</width>
 										<height>30</height>
-										<font>Font_OSDMusicArtist</font>
+										<font>font_28_NRBC</font>
 										<textcolor>ThemeColor2</textcolor>
 										<shadowcolor></shadowcolor>
 										<label> $LOCALIZE[209]:  [COLOR=gray]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>

@@ -22,13 +22,13 @@
 						<description>CUSTOM SUBMENU LABEL</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[20190] $LOCALIZE[10000] $LOCALIZE[21866]</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>700</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -101,7 +101,7 @@
 							<description>Custom Category 1</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -134,7 +134,7 @@
 							<description>Custom Category 2</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -167,7 +167,7 @@
 							<description>Custom Category 3</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -200,7 +200,7 @@
 							<description>Custom Category 4</description>
 							<width>345</width>
 							<height>55</height>
-							<font>Font_LibBold24</font>
+							<font>font_28_B</font>
 							<textcolor>Grey</textcolor>
 							<focusedcolor>ThemeColor</focusedcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
@@ -248,14 +248,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $INFO[Skin.String(Custom1Btn-NAME)] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
@@ -264,14 +264,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $LOCALIZE[504] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
@@ -293,7 +293,7 @@
 								<description>Button Properties Label (HEADER)</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -314,7 +314,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -339,7 +339,7 @@
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -360,7 +360,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -381,7 +381,7 @@
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -402,7 +402,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -424,7 +424,7 @@
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -445,7 +445,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -481,7 +481,7 @@
 							<description>ImagePreview LABEL</description>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>CustomButtonLabelFont</font>
+							<font>font_29_CB</font>
 							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
@@ -512,14 +512,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $INFO[Skin.String(Custom2Btn-NAME)] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
@@ -528,14 +528,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $LOCALIZE[504] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
@@ -557,7 +557,7 @@
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -578,7 +578,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -603,7 +603,7 @@
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -624,7 +624,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -645,7 +645,7 @@
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -666,7 +666,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -688,7 +688,7 @@
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -709,7 +709,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -743,7 +743,7 @@
 							<posy>404</posy>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>CustomButtonLabelFont</font>
+							<font>font_29_CB</font>
 							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
@@ -774,14 +774,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $INFO[Skin.String(Custom3Btn-NAME)] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
@@ -790,14 +790,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $LOCALIZE[504] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
@@ -819,7 +819,7 @@
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -840,7 +840,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -865,7 +865,7 @@
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -886,7 +886,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -907,7 +907,7 @@
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -928,7 +928,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -950,7 +950,7 @@
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -971,7 +971,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1005,7 +1005,7 @@
 							<posy>404</posy>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>CustomButtonLabelFont</font>
+							<font>font_29_CB</font>
 							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
@@ -1036,14 +1036,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $INFO[Skin.String(Custom4Btn-NAME)] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
@@ -1052,14 +1052,14 @@
 							<description>Category</description>
 							<posx>1250</posx>
 							<posy>89</posy>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<label>[B]( $LOCALIZE[504] )[/B]</label>
 							<align>right</align>
 							<aligny>center</aligny>
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<font>MediaInfoTitleFont2</font>
+							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 							<textcolor>DialogTitleColor</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
@@ -1081,7 +1081,7 @@
 								<description>Button Properties Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -1102,7 +1102,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1127,7 +1127,7 @@
 								<description>Custom Icon Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -1148,7 +1148,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1169,7 +1169,7 @@
 								<description>Custom Category Images Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -1190,7 +1190,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1212,7 +1212,7 @@
 								<description>Custom Background Path Label</description>
 								<width>760</width>
 								<height>48</height>
-								<font>SystemInfoHead</font>
+								<font>font_35_UB</font>
 								<textcolor>Grey</textcolor>
 								<focusedcolor>Grey</focusedcolor>
 								<textoffsetx>-</textoffsetx>
@@ -1233,7 +1233,7 @@
 								<posx>20</posx>
 								<width>720</width>
 								<height>40</height>
-								<font>WeatherCurrentConditionFont</font>
+								<font>font_26_B</font>
 								<aligny>top</aligny>
 								<textoffsety>1</textoffsety>
 								<textcolor>ff4B4C7F</textcolor>
@@ -1268,7 +1268,7 @@
 							<posy>404</posy>
 							<align>center</align>
 							<aligny>center</aligny>
-							<font>CustomButtonLabelFont</font>
+							<font>font_29_CB</font>
 							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
@@ -1303,7 +1303,7 @@
 						<description>Exit Window</description>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>AAFFFFFF</textcolor>
@@ -1321,7 +1321,7 @@
 						<description>Clear list</description>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>AAFFFFFF</textcolor>

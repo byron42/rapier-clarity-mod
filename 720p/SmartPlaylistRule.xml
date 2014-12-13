@@ -24,13 +24,13 @@
 						<description>Instructions</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[21421]</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>1100</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -83,7 +83,7 @@
 						<posy>190</posy>
 						<width>850</width>
 						<height>70</height>
-						<font>SystemInfoHead</font>
+						<font>font_35_UB</font>
 						<textcolor>Grey</textcolor>
 						<focusedcolor>Grey</focusedcolor>
 						<textoffsetx>-</textoffsetx>
@@ -163,7 +163,7 @@
 							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(15)]</label>
-							<font>SETTINGS_CATEGORY_2</font>
+							<font>font_24_CB</font>
 							<aligny>top</aligny>
 							<textoffsety>6</textoffsety>
 							<textcolor>Grey</textcolor>
@@ -178,7 +178,7 @@
 							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(15)]</label>
-							<font>SETTINGS_CATEGORY_2</font>
+							<font>font_24_CB</font>
 							<aligny>top</aligny>
 							<textoffsety>6</textoffsety>
 							<textcolor>ThemeColor</textcolor>
@@ -193,7 +193,7 @@
 							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(16)]</label>
-							<font>SETTINGS_CATEGORY_2</font>
+							<font>font_24_CB</font>
 							<aligny>top</aligny>
 							<textoffsety>6</textoffsety>
 							<textcolor>Grey</textcolor>
@@ -208,7 +208,7 @@
 							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(16)]</label>
-							<font>SETTINGS_CATEGORY_2</font>
+							<font>font_24_CB</font>
 							<aligny>top</aligny>
 							<textoffsety>6</textoffsety>
 							<textcolor>ThemeColor</textcolor>
@@ -226,7 +226,7 @@
 								<description>Rule Description</description>
 								<width>550</width>	
 								<height>50</height>
-								<font>PluginSettingsHead2</font>
+								<font>font_28_B</font>
 								<textcolor>BreadCrumbColor</textcolor>
 								<align>center</align>
 								<selectedcolor>cc71A6D2</selectedcolor>
@@ -250,7 +250,7 @@
 								<width>250</width>
 								<textwidth>240</textwidth>
 								<height>50</height>
-								<font>SETTINGS_CATEGORY_2</font>
+								<font>font_24_CB</font>
 								<textcolor>Grey</textcolor> <!--GREY-->
 								<aligny>top</aligny>
 								<textoffsety>7</textoffsety>

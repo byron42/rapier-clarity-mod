@@ -34,11 +34,11 @@
 			<control type="button" id="1000">
 				<description>Button Template</description>
 				<posx>6</posx>
-				<description>Reboot</description>
 				<width>450</width>
 				<height>40</height>
 				<textwidth>420</textwidth>
-				<font>CustomSkin</font>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
 				<aligny>top</aligny>
 				<textoffsety>5</textoffsety> <!--SDM-->
 				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>

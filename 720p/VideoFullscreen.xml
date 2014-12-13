@@ -39,7 +39,7 @@
 					<control type="label" id="10">
 						<description>Row 1</description>
 						<width>1260</width>
-						<font>MediaInfoFont</font>
+						<font>font_20</font>
 						<textcolor>DefaultColor</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
@@ -47,14 +47,14 @@
 						<description>Row 2</description>
 						<width>1260</width>
 						<wrapmultiline>true</wrapmultiline>
-						<font>MediaInfoFont</font>
+						<font>font_20</font>
 						<textcolor>DefaultColor</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 					<control type="label" id="12">
 						<description>Row 3</description>
 						<width>1260</width>
-						<font>MediaInfoFont</font>
+						<font>font_20</font>
 						<textcolor>DefaultColor</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>

@@ -32,7 +32,7 @@
 				<posy>0</posy>
 				<width>0</width>
 				<height>0</height>
-				<font>MenuBarButtonFont4</font>
+				<font>font_24_U</font>
 				<visible>false</visible>
 			</control>
 			<control type="image">
@@ -50,7 +50,7 @@
 				<posy>10</posy>
 				<width>560</width>
 				<height>30</height>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -80,7 +80,7 @@
 					<aligny>top</aligny>
 					<label>-</label>
 					<haspath>true</haspath>
-					<font>font12</font>
+					<font>font_17</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -94,7 +94,7 @@
 					<aligny>top</aligny>
 					<label>-</label>
 					<haspath>true</haspath>
-					<font>font12</font>
+					<font>font_17</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -108,7 +108,7 @@
 					<aligny>center</aligny>
 					<label>-</label>
 					<haspath>true</haspath>
-					<font>VolumeFont</font>
+					<font>font_20</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -129,7 +129,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>222</label>
-				<font>HeadFont</font>
+				<font>font_24_U</font>
 				<textcolor>ff626262</textcolor>
 				<focusedcolor>ThemeColor</focusedcolor>
 				<align>center</align>

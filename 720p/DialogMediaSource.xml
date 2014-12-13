@@ -254,7 +254,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -266,7 +266,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -325,7 +325,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -342,7 +342,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -361,7 +361,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -374,7 +374,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -405,13 +405,13 @@
 						<description>MEDIA SOURCE NAME</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$INFO[Listitem.Label]</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -466,7 +466,7 @@
 						<description>Browse</description>
 						<width>325</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -486,7 +486,7 @@
 						<description>Add Path</description>
 						<width>325</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -506,7 +506,7 @@
 						<description>Remove Path</description>
 						<width>325</width>
 						<height>50</height>
-						<font>SETTINGS_CATEGORY</font>
+						<font>font_26_CB</font>
 						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
@@ -591,7 +591,7 @@
 									<posx>5</posx>
 									<width>775</width>
 									<height>35</height>
-									<font>ListLabelFont</font>
+									<font>font_23_B</font>
 									<textcolor>ListLabelUnfocusedColor</textcolor>	
 									<shadowcolor>ShadowColor</shadowcolor>
 									<height>36</height>
@@ -623,7 +623,7 @@
 									<posy>-1</posy>
 									<width>775</width>
 									<height>35</height>
-									<font>DialogTitleFont</font>
+									<font>font_25_B</font>
 									<textcolor>ThemeColor</textcolor>
 									<height>36</height>
 									<scroll>false</scroll>
@@ -638,7 +638,7 @@
 									<posy>-1</posy>
 									<width>775</width>
 									<height>35</height>
-									<font>DialogTitleFont</font>
+									<font>font_25_B</font>
 									<textcolor>BreadCrumbColor</textcolor>
 									<height>36</height>
 									<scroll>false</scroll>
@@ -663,7 +663,7 @@
 								<posx>70</posx>
 								<posy>7</posy>
 								<width>700</width>
-								<font>OSDItemFont</font>
+								<font>font_20_B</font>
 								<textcolor>ff343434</textcolor> <!--JET-->
 								<aligny>top</aligny>
 								<label>[UPPERCASE]($LOCALIZE[1021])[/UPPERCASE]</label>
@@ -673,7 +673,7 @@
 								<posx>70</posx>
 								<posy>7</posy>
 								<width>700</width>
-								<font>OSDItemFont</font>
+								<font>font_20_B</font>
 								<textcolor>BreadCrumbColor</textcolor> <!--FOCUS-->
 								<aligny>top</aligny>
 								<label>[UPPERCASE]($LOCALIZE[1021])[/UPPERCASE]</label>
@@ -684,7 +684,7 @@
 								<posx>173</posx>
 								<posy>398</posy>
 								<width>600</width>
-								<font>OSDItemFont</font>
+								<font>font_20_B</font>
 								<textcolor>ff343434</textcolor> <!--JET-->
 								<aligny>top</aligny>
 								<label>[UPPERCASE]($LOCALIZE[1022])[/UPPERCASE]</label>
@@ -694,7 +694,7 @@
 								<posx>173</posx>
 								<posy>398</posy>
 								<width>600</width>
-								<font>OSDItemFont</font>
+								<font>font_20_B</font>
 								<textcolor>BreadCrumbColor</textcolor> <!--FOCUS-->
 								<aligny>top</aligny>
 								<label>[UPPERCASE]($LOCALIZE[1022])[/UPPERCASE]</label>
@@ -707,7 +707,7 @@
 							<posy>192</posy>
 							<width>735</width>	
 							<height>40</height>
-							<font>PluginSettingsHead2</font>
+							<font>font_28_B</font>
 							<textcolor>BreadCrumbColor</textcolor>
 							<align>center</align>
 							<selectedcolor>cc71A6D2</selectedcolor>
@@ -735,7 +735,7 @@
 						<description>OK</description>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>
@@ -753,7 +753,7 @@
 						<posx>325</posx>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>
@@ -770,7 +770,7 @@
 						<posx>40</posx>
 						<width>215</width>
 						<height>50</height>
-						<font>PluginSettingsFoot</font>
+						<font>font_28</font>
 						<aligny>top</aligny>
 						<textoffsety>5</textoffsety>
 						<textcolor>FFFFFFFF</textcolor>

@@ -255,7 +255,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 						<align>right</align>
 						<aligny>center</aligny>
@@ -267,7 +267,7 @@
 						<posy>-2</posy>
 						<width>55</width>
 						<height>35</height>
-						<font>VolumeFont</font>
+						<font>font_20</font>
 						<textcolor>TopBarStatusColor2</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -326,7 +326,7 @@
 							<width>220</width>
 							<height>15</height>
 							<scrollout>false</scrollout>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -343,7 +343,7 @@
 							<posy>13</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -362,7 +362,7 @@
 							<posy>0</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont</font>
+							<font>font_17_B</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>left</align>
 							<aligny>center</aligny>
@@ -375,7 +375,7 @@
 							<posy>15</posy>
 							<width>224</width>
 							<height>15</height>
-							<font>ScanContentFont2</font>
+							<font>font_17</font>
 							<textcolor>TopBarStatusColor</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -406,12 +406,12 @@
 						<description>Settings Label</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -421,13 +421,13 @@
 						<description>No Settings Label</description>
 						<posx></posx>
 						<posy>8</posy>
-						<font>PluginSettingsHead</font>
+						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>12016</label>
 						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<font>MediaInfoTitleFont2</font>
+						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 						<textcolor>DialogTitleColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
@@ -502,7 +502,7 @@
 						<control type="button" id="7">
 							<width>800</width>
 							<height>46</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -520,7 +520,7 @@
 						<control type="radiobutton" id="8">
 							<width>800</width>
 							<height>46</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffsety>7</textoffsety>
 							<textcolor>ThemeColor2</textcolor>
@@ -537,7 +537,7 @@
 							<description>Default SpinControlex</description>
 							<width>800</width>
 							<height>46</height>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<aligny>top</aligny>
 							<textoffset>100</textoffset>
 							<textoffsety>7</textoffsety>
@@ -560,7 +560,7 @@
 							<description>Default Slider</description>
 							<height>46</height>
 							<width>800</width>
-							<font>CustomSkinHead</font>
+							<font>font_22_U</font>
 							<textcolor>ThemeColor2</textcolor>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>

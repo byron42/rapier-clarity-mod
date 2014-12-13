@@ -78,7 +78,7 @@
 				<posx>40</posx>
 				<posy>56</posy>
 				<width>420</width>
-				<font>MediaInfoTitleFont2</font>
+				<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 				<textcolor>ThemeColor2</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<align>center</align>
@@ -95,7 +95,7 @@
 					<posx>7</posx>
 					<posy>54</posy>
 					<width>450</width>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<textcolor>Grey</textcolor>
 					<align>-</align>
 					<scroll>yes</scroll>
@@ -105,7 +105,7 @@
 					<posx>35</posx>
 					<posy>85</posy>
 					<width>420</width>
-					<font>CustomSkinHead</font>
+					<font>font_22_U</font>
 					<textcolor>Grey</textcolor>
 					<align>-</align>
 					<scroll>yes</scroll>
@@ -115,7 +115,7 @@
 					<posx>14</posx>
 					<posy>129</posy>
 					<width>420</width>
-					<font>PluginSettingsHead</font>
+					<font>font_32_B</font>
 					<textcolor>Grey</textcolor>
 					<align>center</align>
 					<scroll>yes</scroll>

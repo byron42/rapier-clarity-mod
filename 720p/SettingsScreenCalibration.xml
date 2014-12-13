@@ -57,7 +57,7 @@
 			<control type="label" id="2">
 				<description>Coordinates</description>
 				<width>ScreenWidth</width>
-				<font>ScreenCalibrationFont</font>
+				<font>font_24</font>
 				<textcolor>DefaultColor</textcolor>
 				<align>center</align>	
 			</control>
@@ -65,7 +65,7 @@
 				<description>Help Information</description>
 				<posy>40</posy>
 				<width>ScreenWidth</width>
-				<font>ScreenCalibrationFont</font>
+				<font>font_24</font>
 				<textcolor>DefaultColor</textcolor>
 				<align>center</align>		
 			</control>	

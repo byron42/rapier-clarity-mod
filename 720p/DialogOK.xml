@@ -42,7 +42,7 @@
 				<posy>10</posy>
 				<width>560</width>
 				<height>30</height>
-				<font>Font_Lib22</font>
+				<font>font_26</font>
 				<label>13406</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -71,7 +71,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>-</label>
-					<font>VolumeFont</font>
+					<font>font_20</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -84,7 +84,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>-</label>
-					<font>VolumeFont</font>
+					<font>font_20</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -97,7 +97,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>-</label>
-					<font>VolumeFont</font>
+					<font>font_20</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
@@ -109,7 +109,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>186</label>
-				<font>HeadFont</font>
+				<font>font_24_U</font>
 				<textcolor>ThemeColor</textcolor>
 				<focusedcolor>ThemeColor</focusedcolor>
 				<align>center</align>

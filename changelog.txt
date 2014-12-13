@@ -1,6 +1,20 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+12.12.14 Version 3.5.44
+
+	12.12.14
+------------------------------------------------------------------------------
+		= Cleaned up Font.xml - it only affected 90% of the files :| 
+		  In doing this (cutting the size of the file in half) it freed
+		  up .6 MB of RAM...I was actually a little surprised because
+		  I honestly was thinking it would be significantly more.  It's
+		  enough of a difference to commit it though, I'll take what I 
+		  can get out of this thing...
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 11.29.14 Version 3.5.43
 
 	12.11.14

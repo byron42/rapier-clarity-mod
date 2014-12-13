@@ -39,13 +39,13 @@
 					<description>PLUGIN/ADDON NAME</description>
 					<posx></posx>
 					<posy>8</posy>
-					<font>PluginSettingsHead</font>
+					<font>font_32_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<!-- <label>$INFO[Listitem.Label]</label> -->
 					<posy>DialogHeadingOffsetY</posy>
 					<width>600</width>
-					<font>MediaInfoTitleFont2</font>
+					<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
 					<textcolor>DialogTitleColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<align>left</align>
@@ -104,7 +104,7 @@
 					<height>40</height>
 					<label>13389</label>
 					<align>center</align>
-					<font>Font_Lib30</font>
+					<font>font_30</font>
 					<textcolor>FF757575</textcolor>
 				</control>
 				<control type="list" id="2">
@@ -128,7 +128,7 @@
 							<posy>7</posy>
 							<width>850</width>
 							<height>35</height>
-							<font>ListLabel2Font</font>
+							<font>font_22_B</font>
 							<textcolor>gray</textcolor>
 							<align>center</align>
 							<aligny>top</aligny>
@@ -159,7 +159,7 @@
 							<posy>4</posy>
 							<width>850</width>
 							<height>35</height>
-							<font>DialogTitleFont</font>
+							<font>font_25_B</font>
 							<align>center</align>
 							<aligny>top</aligny>
 							<selectedcolor>ThemeColor</selectedcolor>

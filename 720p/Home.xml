@@ -562,7 +562,7 @@
 						<posx>-10</posx>
 						<posy>-1</posy>
 						<width>465</width>
-						<font>LargeListLabelFont</font>
+						<font>font_22_B</font>
 						<textcolor>ThemeColor</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$VAR[RecentItemHeader]</label>
@@ -594,7 +594,7 @@
 									<posy>-7</posy>
 									<width>335</width>
 									<height>25</height>
-									<font>VolumeFont</font>
+									<font>font_20</font>
 									<aligny>top</aligny>
 									<textcolor>white</textcolor>
 									<selectedcolor>Grey</selectedcolor>
@@ -609,7 +609,7 @@
 									<width>335</width>
 									<textwidth>330</textwidth>
 									<height>30</height>
-									<font>Font_LibBold20</font>
+									<font>font_24_B</font>
 									<textcolor>White</textcolor>
 									<shadowcolor>ThemeColor</shadowcolor>
 									<aligny>top</aligny>
@@ -683,7 +683,7 @@
 									<posy>-7</posy>
 									<width>275</width>
 									<height>25</height>
-									<font>VolumeFont</font>
+									<font>font_20</font>
 									<aligny>top</aligny>
 									<textcolor>White</textcolor>
 									<selectedcolor>Grey</selectedcolor>
@@ -698,7 +698,7 @@
 									<width>275</width>
 									<textwidth>270</textwidth>
 									<height>30</height>
-									<font>Font_LibBold20</font>
+									<font>font_24_B</font>
 									<textcolor>White</textcolor>
 									<shadowcolor>ThemeColor</shadowcolor>
 									<aligny>top</aligny>
@@ -772,7 +772,7 @@
 									<posy>-7</posy>
 									<width>290</width>
 									<height>25</height>
-									<font>VolumeFont</font>
+									<font>font_20</font>
 									<aligny>top</aligny>
 									<textcolor>white</textcolor>
 									<selectedcolor>Grey</selectedcolor>
@@ -787,7 +787,7 @@
 									<width>290</width>
 									<textwidth>285</textwidth>
 									<height>30</height>
-									<font>Font_LibBold20</font>
+									<font>font_24_B</font>
 									<textcolor>White</textcolor>
 									<shadowcolor>ThemeColor</shadowcolor>
 									<aligny>top</aligny>
@@ -866,7 +866,7 @@
 									<posy>-7</posy>
 									<width>335</width>
 									<height>25</height>
-									<font>VolumeFont</font>
+									<font>font_20</font>
 									<aligny>top</aligny>
 									<textcolor>white</textcolor>
 									<selectedcolor>Grey</selectedcolor>
@@ -881,7 +881,7 @@
 									<width>335</width>
 									<textwidth>330</textwidth>
 									<height>30</height>
-									<font>Font_LibBold20</font>
+									<font>font_24_B</font>
 									<textcolor>White</textcolor>
 									<shadowcolor>ThemeColor</shadowcolor>
 									<aligny>top</aligny>
@@ -1036,7 +1036,7 @@
 					<label>[B]$LOCALIZE[10511][/B]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>MenuBarButtonFont2</font>
+					<font>font_22_CB</font>
 					<textcolor>ThemeColor</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
@@ -1049,7 +1049,7 @@
 					<label>$INFO[Network.IPAddress]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>Font_Lib22</font>
+					<font>font_26</font>
 					<textcolor>White</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
@@ -1062,7 +1062,7 @@
 					<label>$INFO[System.cpufrequency]</label>
 					<align>right</align>
 					<aligny>top</aligny>
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<textcolor>Grey</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
@@ -1077,7 +1077,7 @@
 					<aligny>center</aligny>
 					<textcolor>White</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>Volumefont</font>
+					<font>font_20</font>
 				</control>
 			</control>
 	
@@ -1598,7 +1598,7 @@
 					<itemgap></itemgap>
 					<preloaditems>2</preloaditems>
 					<onup>900</onup>
-					<ondown>-</ondown>
+					<ondown></ondown>
 					<!--HomeMenuOpenCloseAnim-->
 					<animation effect="fade" end="100" time="650">WindowOpen</animation> 
 					<animation effect="fade" end="0" time="650">WindowClose</animation>
@@ -1983,7 +1983,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -1996,7 +1996,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2007,7 +2007,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -2300,7 +2300,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2313,7 +2313,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2324,7 +2324,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -2611,7 +2611,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2624,7 +2624,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2635,7 +2635,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -2716,7 +2716,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2729,7 +2729,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2740,7 +2740,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -2809,7 +2809,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2822,7 +2822,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -2833,7 +2833,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -3130,7 +3130,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3143,7 +3143,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3154,7 +3154,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -3447,7 +3447,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3460,7 +3460,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3471,7 +3471,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -3764,7 +3764,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3777,7 +3777,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -3788,7 +3788,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -4101,7 +4101,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>ButtonColor</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -4114,7 +4114,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<align>center</align>
 								<aligny>center</aligny>
@@ -4125,7 +4125,7 @@
 								<posy>-2</posy>
 								<width>232</width>
 								<height>34</height>
-								<font>SubMenuFont</font>
+								<font>font_21_UB</font>
 								<textcolor>$VAR[ConstantSubsFocusColor]</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<align>center</align>
@@ -4432,7 +4432,7 @@
 							<posy>2</posy>
 							<posx>15</posx>
 							<width>316</width>
-							<font>MenuBarButtonFont2</font>
+							<font>font_22_CB</font>
 							<textcolor>ThemeColor</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
@@ -4443,7 +4443,7 @@
 							<posy>34</posy>
 							<posx>15</posx>
 							<width>316</width>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>
 							<label>$INFO[VideoPlayer.Genre]</label>
@@ -4453,7 +4453,7 @@
 							<posy>70</posy>
 							<posx>40</posx>
 							<width>302</width>
-							<font>MediaInfoTitleFont2</font>
+							<font>MediaInfoTitleFont2</font> (Removing - unused)
 							<textcolor>MediaInfoItemColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
@@ -4507,9 +4507,9 @@
 							<posy>115</posy>
 							<width>316</width>
 							<height>78</height>
-							<font>font12</font>
+							<font>font_17</font>
 							<!--DefaultPlot-->
-							<font>MediaInfoFont</font>
+							<font>font_20</font>
 							<textcolor>MediaInfoDetailsColor</textcolor>
 							<align>justify</align>
 							<!--DefaultPlot-->
@@ -4588,7 +4588,7 @@
 							<posy>2</posy>
 							<posx>20</posx>
 							<width>302</width>
-							<font>MenuBarButtonFont2</font>
+							<font>font_22_CB</font>
 							<textcolor>ThemeColor</textcolor>
 							<shadowcolor>-</shadowcolor>
 							<label>$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Year,(,)]</label>
@@ -4599,7 +4599,7 @@
 							<posy>29</posy>
 							<posx>40</posx>
 							<width>302</width>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>
 							<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album,| ,]</label>
@@ -4610,7 +4610,7 @@
 							<posy>70</posy>
 							<posx>40</posx>
 							<width>302</width>
-							<font>MediaInfoTitleFont2</font>
+							<font>MediaInfoTitleFont2</font> (Removing - unused)
 							<textcolor>MediaInfoItemColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
@@ -4663,7 +4663,7 @@
 							<posy>109</posy>
 							<posx>20</posx>
 							<width>302</width>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ThemeColor</shadowcolor>
 							<aligny>top</aligny>
@@ -4698,7 +4698,7 @@
 					<description>RSS Feeds</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<font>ListLabel2Font</font>
+					<font>font_22_B</font>
 					<shadowcolor>black</shadowcolor>
 					<urlset>1</urlset>
 					<textcolor>Grey</textcolor>
@@ -4776,7 +4776,7 @@
 								<colordiffuse>FFFFFFFF</colordiffuse>
 								<onclick>ActivateWindow(ShutdownMenu)</onclick>
 								<pulseonselect>true</pulseonselect>
-								<onup>-</onup>
+								<onup></onup>
 								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 								<ondown>850</ondown>
 								<onleft>346</onleft>
@@ -4806,7 +4806,7 @@
 								<colordiffuse>FFFFFFFF</colordiffuse>
 								<onclick>XBMC.PlayDVD </onclick>
 								<pulseonselect>true</pulseonselect>
-								<onup>-</onup>
+								<onup></onup>
 								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 								<ondown>850</ondown>
 								<onleft>458</onleft>
@@ -4852,7 +4852,7 @@
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<onclick>XBMC.RunScript(special://skin/scripts/content.search.py)</onclick>
 							<pulseonselect>true</pulseonselect>
-							<onup>-</onup>
+							<onup></onup>
 							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
 							<ondown>850</ondown>
 							<onleft>345</onleft>
@@ -4995,7 +4995,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 							<align>right</align>
 							<aligny>center</aligny>
@@ -5007,7 +5007,7 @@
 							<posy>-2</posy>
 							<width>55</width>
 							<height>35</height>
-							<font>VolumeFont</font>
+							<font>font_20</font>
 							<textcolor>TopBarStatusColor2</textcolor>
 							<align>right</align>
 							<aligny>center</aligny>
@@ -5071,7 +5071,7 @@
 								<width>220</width>
 								<height>15</height>
 								<scrollout>false</scrollout>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5088,7 +5088,7 @@
 								<posy>13</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5107,7 +5107,7 @@
 								<posy>0</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont</font>
+								<font>font_17_B</font>
 								<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
 								<align>left</align>
 								<aligny>center</aligny>
@@ -5120,7 +5120,7 @@
 								<posy>15</posy>
 								<width>224</width>
 								<height>15</height>
-								<font>ScanContentFont2</font>
+								<font>font_17</font>
 								<textcolor>TopBarStatusColor</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>

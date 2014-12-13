@@ -53,7 +53,7 @@
 					<description>Library</description>
 					<width>350</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -71,7 +71,7 @@
 					<description>IMDB</description>
 					<width>350</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -122,7 +122,7 @@
 					<description>Library</description>
 					<width>350</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
@@ -140,7 +140,7 @@
 					<description>CDDB</description>
 					<width>350</width>
 					<height>38</height>
-					<font>MediaTitleFont</font>
+					<font>font_24_B</font>
 					<textcolor>MenuItemColor</textcolor>
 					<focusedcolor>MenuItemFocusColor</focusedcolor>
 					<textoffsetx>18</textoffsetx>
