@@ -3,6 +3,26 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 12.12.14 Version 3.5.44
 
+	12.16.14
+------------------------------------------------------------------------------
+		= UPDATED Home NowPlaying...got rid of the old slide out box with
+		  limited space and changed to what I've done with (PlayerControls).
+		  There is an option to align this on the top or the bottom in skin
+		  settings (default is bottom)
+
+		= Straightened out System Info panel on Home Window
+
+		= Added a Weather Info Panel on Home Window (same thing as System
+		  Info except weather data is displayed)
+
+		= Dropped recently added menu down to the same spot as System/Weather
+		  widgets...should add a tad bit more uniformity.  
+			
+
+
+		    *** NONE OF THE WIDGETS ARE VISIBLE WHEN MEDIA IS PLAYINBG ***
+
+
 	12.12.14
 ------------------------------------------------------------------------------
 		= Cleaned up Font.xml - it only affected 90% of the files :| 
@@ -11,6 +31,12 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		  I honestly was thinking it would be significantly more.  It's
 		  enough of a difference to commit it though, I'll take what I 
 		  can get out of this thing...
+
+		= Fixed Profiles BreadCrumb label (from "favourites")
+
+		= Quick fix for home system info...gave me some good ideas for
+		  the entire home menu theme and other things (not commited)
+
 
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
