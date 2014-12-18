@@ -522,19 +522,21 @@
 					<include>VariableBackgroundHeight</include>		
 					<texture>background-dim.png</texture>
 					<!--CustomBackgroundPreviewFadeInAnim-->
-					<animation effect="fade" start="0" end="50" time="400" delay="500" condition="true">Conditional</animation>
+					<animation effect="fade" end="50" time="200">Visible</animation>
+					<animation effect="fade" start="50" end="0" time="200">Hidden</animation>
 				</control>
 			</control>
 			<control type="group" id="304">	 <!--Recently Added Controls-->
-				<posy>105</posy>
+				<posy>372</posy>
 				<posx>805</posx>
 				<onup>600</onup>
 				<width>500</width>
 				<visible>[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]</visible>
+				<visible>!Player.HasMedia</visible>
 				<!--animations to slide the control on visible or window close-->
-				<animation effect="slide" end="500" time="300">WindowClose</animation>
-				<animation effect="slide" start="500,0" end="0,0" time="300" delay="800">WindowOpen</animation>
-				<animation effect="slide" start="500,0" end="0,0" time="300">VisibleChange</animation>
+				<animation effect="slide" end="500" time="300" tween="circle" easing="out" delay="200">WindowClose</animation>
+				<animation effect="slide" start="500,0" end="0,0" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="500,0" end="0,0" time="250">VisibleChange</animation>
 				<!--if we don't have focus, fade out (after a second)-->
 				<animation effect="fade" start="100" end="75" time="200" delay="1000" condition="!Control.HasFocus(304)">Conditional</animation>
 				<!--fade in when focused, out when unfocused-->
@@ -542,14 +544,14 @@
 				<control type="image">
 					<width>480</width>
 					<height>200</height>
-					<texture border="10,10,10,10">media-background2.jpg</texture>
-					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texture border="10,10,10,10">Glass/ShutDownButton.png</texture>
+					<colordiffuse></colordiffuse>
 				</control>
 				<control type="image" id="1020">
 					<width>480</width>
 					<height>200</height>
-					<texture border="10,10,10,10">media-background2.jpg</texture>
-					<colordiffuse>BB0067A5</colordiffuse>
+					<texture border="10,10,10,10">Glass/ShutDownButtonF.png</texture>
+					<!-- <colordiffuse>BB0067A5</colordiffuse> -->
 					<visible>ControlGroup(304).HasFocus</visible>
 				</control>
 			<!--LISTS ================================-->				
@@ -621,6 +623,7 @@
 								<item id="1">
 									<label>$VAR[RecentItem.1.Label]</label>
 									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
 									<visible>substring(Window.Property(LatestMovie.1.Path),.)</visible>
@@ -628,6 +631,7 @@
 								<item id="2">
 									<label>$VAR[RecentItem.2.Label]</label>
 									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
 									<visible>substring(Window.Property(LatestMovie.2.Path),.)</visible>
@@ -635,6 +639,7 @@
 								<item id="3">
 									<label>$VAR[RecentItem.3.Label]</label>
 									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
 									<visible>substring(Window.Property(LatestMovie.3.Path),.)</visible>
@@ -642,6 +647,7 @@
 								<item id="4">
 									<label>$VAR[RecentItem.4.Label]</label>
 									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
 									<visible>substring(Window.Property(LatestMovie.4.Path),.)</visible>
@@ -649,6 +655,7 @@
 								<item id="5">
 									<label>$VAR[RecentItem.5.Label]</label>
 									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
 									<visible>substring(Window.Property(LatestMovie.5.Path),.)</visible>
@@ -710,6 +717,7 @@
 								<item id="1">
 									<label>$VAR[RecentItem.1.Label]</label>
 									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
 									<visible>substring(Window.Property(LatestEpisode.1.Path),.)</visible>
@@ -717,6 +725,7 @@
 								<item id="2">
 									<label>$VAR[RecentItem.2.Label]</label>
 									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
 									<visible>substring(Window.Property(LatestEpisode.2.Path),.)</visible>
@@ -724,6 +733,7 @@
 								<item id="3">
 									<label>$VAR[RecentItem.3.Label]</label>
 									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
 									<visible>substring(Window.Property(LatestEpisode.3.Path),.)</visible>
@@ -731,6 +741,7 @@
 								<item id="4">
 									<label>$VAR[RecentItem.4.Label]</label>
 									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
 									<visible>substring(Window.Property(LatestEpisode.4.Path),.)</visible>
@@ -738,6 +749,7 @@
 								<item id="5">
 									<label>$VAR[RecentItem.5.Label]</label>
 									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
 									<visible>substring(Window.Property(LatestEpisode.5.Path),.)</visible>
@@ -800,6 +812,7 @@
 									<label>$VAR[RecentItem.1.Label]</label>
 									<onclick>PlayList.Clear</onclick>
 									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
 									<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
@@ -808,6 +821,7 @@
 									<label>$VAR[RecentItem.2.Label]</label>
 									<onclick>PlayList.Clear</onclick>
 									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
 									<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
@@ -816,6 +830,7 @@
 									<label>$VAR[RecentItem.3.Label]</label>
 									<onclick>PlayList.Clear</onclick>
 									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
 									<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
@@ -824,6 +839,7 @@
 									<label>$VAR[RecentItem.4.Label]</label>
 									<onclick>PlayList.Clear</onclick>
 									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
 									<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
@@ -832,6 +848,7 @@
 									<label>$VAR[RecentItem.5.Label]</label>
 									<onclick>PlayList.Clear</onclick>
 									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
 									<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
@@ -893,6 +910,7 @@
 								<item id="1">
 									<label>$VAR[RecentItem.1.Label]</label>
 									<onclick>$VAR[RecentItem.1.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.1.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.1.Thumb]</property>
 									<visible>substring(Window.Property(LatestMusicVideo.1.Path),.)</visible>
@@ -900,6 +918,7 @@
 								<item id="2">
 									<label>$VAR[RecentItem.2.Label]</label>
 									<onclick>$VAR[RecentItem.2.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.2.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.2.Thumb]</property>
 									<visible>substring(Window.Property(LatestMusicVideo.2.Path),.)</visible>
@@ -907,6 +926,7 @@
 								<item id="3">
 									<label>$VAR[RecentItem.3.Label]</label>
 									<onclick>$VAR[RecentItem.3.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.3.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.3.Thumb]</property>
 									<visible>substring(Window.Property(LatestMusicVideo.3.Path),.)</visible>
@@ -914,6 +934,7 @@
 								<item id="4">
 									<label>$VAR[RecentItem.4.Label]</label>
 									<onclick>$VAR[RecentItem.4.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.4.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.4.Thumb]</property>
 									<visible>substring(Window.Property(LatestMusicVideo.4.Path),.)</visible>
@@ -921,6 +942,7 @@
 								<item id="5">
 									<label>$VAR[RecentItem.5.Label]</label>
 									<onclick>$VAR[RecentItem.5.Path]</onclick>
+									<onclick>SetFocus(850)</onclick>
 									<property name="ItemThumb">$VAR[RecentItem.5.Thumbs]</property>
 									<property name="FanartImage">$VAR[RecentItem.5.Thumb]</property>
 									<visible>substring(Window.Property(LatestMusicVideo.5.Path),.)</visible>
@@ -1006,22 +1028,22 @@
 	<!--(((System Info)))====================================================================================================================-->
 			<control type="group">
 				<visible>Container(850).HasFocus(8) + Skin.HasSetting(HideHomeSysInfo)</visible>
-				<posx>810</posx>
-				<posy>400</posy>
-				<!--fade in when focused, out when unfocused-->
-				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+				<posx>820</posx>
+				<posy>422</posy>
+				<animation effect="slide" start="500,0" end="0,0" time="250">VisibleChange</animation>
+				<animation effect="slide" start="500,0" end="0,0" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="500,0" time="250" delay="200" tween="circle" easing="out">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="Player.HasMedia">Conditional</animation>
 				<control type="image">
 					<description>gradient</description>
 					<width>470</width>
 					<height>150</height>
-					<texture border="10,10,10,10">media-background2.jpg</texture>
+					<texture border="10,10,10,10">Glass/ShutDownButton.png</texture>
 					<colordiffuse>BBBBBBBB</colordiffuse>
 				</control>
 				<control type="image">
 					<description>settings image</description>
-					<posx>120r</posx>
+					<posx>110r</posx>
 					<posy>25</posy>
 					<width>100</width>
 					<height>100</height>
@@ -1029,11 +1051,11 @@
 				</control>
 				<control type="label">
 					<description>Settings label</description>
-					<posx>125r</posx>
+					<posx>120r</posx>
 					<posy>15</posy>
 					<height>30</height>
-					<width>500</width>
-					<label>[B]$LOCALIZE[10511][/B]</label>
+					<width>335</width>
+					<label>10511</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>font_22_CB</font>
@@ -1042,44 +1064,142 @@
 				</control>
 				<control type="label">
 					<description>IP Address label</description>
-					<posx>125r</posx>
+					<posx>120r</posx>
 					<posy>47</posy>
 					<height>30</height>
-					<width>500</width>
+					<width>335</width>
 					<label>$INFO[Network.IPAddress]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font_26</font>
-					<textcolor>White</textcolor>
+					<font>font_26_B</font>
+					<textcolor>BBDCDCDC</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
 				<control type="label">
 					<description>CPU Speed Label</description>
-					<posx>125r</posx>
-					<posy>105</posy>
+					<posx>120r</posx>
+					<posy>77</posy>
 					<height>30</height>
-					<width>500</width>
+					<width>335</width>
 					<label>$INFO[System.cpufrequency]</label>
 					<align>right</align>
 					<aligny>top</aligny>
 					<font>font_22_B</font>
-					<textcolor>Grey</textcolor>
+					<textcolor>BBDCDCDC</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
 				<control type="label" id="52">
 					<description>Memory Text</description>
-					<posx>125r</posx>
-					<posy>77</posy>
-					<width>350</width>
+					<posx>120r</posx>
+					<posy>105</posy>
+					<width>335</width>
 					<height>25</height>
 					<label>Free Memory: $INFO[System.FreeMemory]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>White</textcolor>
+					<textcolor>BBDCDCDC</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<font>font_20</font>
+					<font>font_20_B</font>
 				</control>
 			</control>
+	
+	<!--(((Weather Info)))===================================================================================================================-->
+			<control type="group">
+				<visible>Container(850).HasFocus(9) + Skin.HasSetting(HideHomeWeatherInfo)</visible><!--  + Skin.HasSetting(HideHomeWeather) -->
+				<posx>820</posx>
+				<posy>422</posy>
+				<animation effect="slide" start="500,0" end="0,0" time="250">VisibleChange</animation>
+				<animation effect="slide" start="500,0" end="0,0" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="500,0" time="250" delay="200" tween="circle" easing="out">WindowClose</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="Player.HasMedia">Conditional</animation>
+				<control type="image">
+					<description>gradient</description>
+					<width>470</width>
+					<height>150</height>
+					<texture border="10,10,10,10">Glass/ShutDownButton.png</texture>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				<!--***************************** weather icons ************************************-->
+				<control type="image">
+					<description>static image</description>
+					<posx>146r</posx>
+					<posy>7</posy>
+					<width>136</width>
+					<height>136</height>
+					<texture>$INFO[Window(Weather).Property(Current.ConditionIcon)]</texture>
+					<visible>Skin.HasSetting(StaticWeatherIcons)</visible>
+				</control>
+				<control type="multiimage">
+					<description>animated image</description>
+					<posx>146r</posx>
+					<posy>7</posy>
+					<width>136</width>
+					<height>136</height>
+					<imagepath>special://skin/images/foldericons/weather/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+					<timeperimage>100</timeperimage>
+					<randomize>false</randomize>
+					<fadetime>0</fadetime>
+					<visible>!Skin.HasSetting(StaticWeatherIcons)</visible>
+				</control>
+				<!--********************************************************************************-->
+				<control type="label">
+					<description>weather label</description>
+					<posx>156r</posx>
+					<posy>15</posy>
+					<height>30</height>
+					<width>300</width>
+					<label>20088</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font_22_CB</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<description>location</description>
+					<posx>156r</posx>
+					<posy>47</posy>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Window(Weather).Property(Location)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font_22_B</font>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<description>conditions</description>
+					<posx>156r</posx>
+					<posy>77</posy>
+					<height>30</height>
+					<width>300</width>
+					<label>$INFO[Window(Weather).Property(Current.Condition)]</label>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>font_22_B</font>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="">
+					<description>current temp</description>
+					<posx>156r</posx>
+					<posy>105</posy>
+					<width>300</width>
+					<height>25</height>
+					<label>$INFO[Weather.Temperature]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<font>font_22_B</font>
+					<scroll>true</scroll>
+				</control>
+			</control>
+	
 	
 	<!--(((Main Category Icons)))============================================================================================================-->	
 			<control type="group">	
@@ -1644,7 +1764,7 @@
 							<textwidth>534</textwidth>
 							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>BBDCDCDC</textcolor>
+							<textcolor>BBDCDCDC</textcolor> <!--bone-->
 							<shadowcolor>-</shadowcolor>
 							<font>HomeMenuFontFocus</font>
 							<align>center</align>
@@ -4390,297 +4510,248 @@
 	
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
-				<visible>Player.HasMedia</visible>
-			<!--VIDEO-->
-				<control type="group" id="1243">	
-					<posy>105</posy>
-					<visible>Player.HasVideo + !Skin.HasSetting(HideNowPlayingVideos)</visible>
-					<control type="image">
-						<posx>-10</posx>
-						<width>520</width>
-						<height>215</height>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
-						<colordiffuse>BBBBBBBB</colordiffuse>
-					</control>
-					<control type="group">
-						<posy>5</posy>
-						<posx>155</posx>
-						<!--Movie Case with Cover-->
-						<control type="image">
-							<posy>7</posy>
-							<posx>-140</posx>
-							<description>Cover image</description>
-							<width>140</width>
-							<height>190</height>
-							<bordertexture border="10">item-shadow-border.png</bordertexture>
-							<bordersize>5</bordersize>
-							<texture>$INFO[VideoPlayer.Cover]</texture>
-							<aspectratio align="center">keep</aspectratio>
-						</control>
-						<control type="image">
-							<posy>7</posy>
-							<posx>-140</posx>
-							<description>Cover image overlay</description>
-							<width>140</width>
-							<height>190</height>
-							<texture>home/nowplaying_overlay.png</texture>
-							<aspectratio align="center">keep</aspectratio>
-						</control>
-						<!--Movie Case with Cover-->
-						<control type="label">
-							<description>Title/Year</description>
-							<posy>2</posy>
-							<posx>15</posx>
-							<width>316</width>
-							<font>font_22_CB</font>
-							<textcolor>ThemeColor</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<label>$INFO[VideoPlayer.Title] $INFO[VideoPlayer.Year,(,)]</label>
-							<scroll>yes</scroll>
-						</control>
-						<control type="label">
-							<description>Artist/Album</description>
-							<posy>34</posy>
-							<posx>15</posx>
-							<width>316</width>
-							<font>font_20</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<label>$INFO[VideoPlayer.Genre]</label>
-						</control>
-						<!--control type="label">
-							<description>Elapsed/Duration Time</description>
-							<posy>70</posy>
-							<posx>40</posx>
-							<width>302</width>
-							<font>MediaInfoTitleFont2</font> (Removing - unused)
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
-						</control-->
-						<control type="label" id="212">
-							<description>Elapsed Time Label</description>
-							<posx>15</posx>
-							<posy>95</posy>
-							<width>1280</width>
-							<height>30</height>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align></align>
-							<label>$INFO[Player.Time]</label>
-							<visible>!Player.Seeking</visible>
-						</control>
-						<control type="progress">
-							<description>Progressbar</description>
-							<posx>15</posx>
-							<posy>70</posy>
-							<width>316</width>
-							<height>10</height>
-							<info>Player.Progress</info>
-						</control>
-						<!--<control type="label" id="212">
-							<posx>91</posx>
-							<posy>88</posy>
-							<width>1280</width>
-							<height>30</height>
-							<label>/</label>
-							<align>right</align>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-						</control>-->
-						<control type="label" id="212">
-							<posx>325</posx>
-							<posy>95</posy>
-							<width>1280</width>
-							<height>30</height>
-							<label>$INFO[Player.Duration]</label>
-							<align>right</align>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-						</control>
-						<control type="textbox">
-							<description>Plot</description>
-							<posx>15</posx>
-							<posy>115</posy>
-							<width>316</width>
-							<height>78</height>
-							<font>font_17</font>
-							<!--DefaultPlot-->
-							<font>font_20</font>
-							<textcolor>MediaInfoDetailsColor</textcolor>
-							<align>justify</align>
-							<!--DefaultPlot-->
-							<label>$INFO[VideoPlayer.Plot]</label>
-							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
-							<!--ControlsOpenCloseAnim-->
-							<animation effect="fade" start="0" end="100" time="400">Visible</animation>
-							<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-							<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-						</control>
-					</control>
-				</control>
-			<!--AUDIO-->		
+				<visible>Player.HasMedia + !Skin.HasSetting(HideNowPlayingMedia)</visible>
+				<!-- <animation effect="slide" start="0,-35" end="0,0" time="250" easing="out" condition="!ControlGroup(900).HasFocus">Conditional</animation> -->
+				<animation effect="slide" end="0,160" time="250" easing="out" condition="true">Conditional</animation>
 				<control type="group">
-					<posy>105</posy>
-					<visible>Player.HasAudio + !Skin.HasSetting(HideNowPlayingMusic)</visible>
-					<control type="image">
-						<posx>-10</posx>
-						<width>520</width>
-						<height>150</height>
-						<texture border="10,10,10,10">media-background2.jpg</texture>
-						<colordiffuse>BBBBBBBB</colordiffuse>
-					</control>
-					<control type="group">
-						<posy>5</posy>
-						<posx>155</posx>
-						<!--Mod Rotating CD with Cover-->
-						<control type="group">
-							<posy>0</posy>
-							<posx>-8</posx>
-							<!--Rotating CD Code-->
-							<control type="image">
-								<description>Cd overlay</description>
-								<animation type="WindowOpen">
-									<effect type="slide" start="-50" end="0" tween="cubic" easing="out" delay="400" time="900" />
-								</animation>
-								<animation type="WindowClose">
-									<effect type="slide" start="0" end="-114" time="700" tween="cubic" easing="in" delay="0"/>
-									<effect type="fade" start="100" end="0" time="900"/>
-									<condition type="!Player.Playing"/>
-								</animation>
-								<animation effect="rotate" end="-360" center="auto" time="100" loop="true" reversible="false" condition="true">Conditional</animation>
-								<animation effect="rotate" end="360" center="auto" time="500" loop="true" reversible="false" condition="Player.Paused">Conditional</animation>
-								<animation effect="rotate" end="-28" center="auto" time="500" reversible="false" condition="Player.Paused">Conditional</animation>
-								<animation effect="rotate" end="-15" center="auto" time="500" delay="500" reversible="false" condition="Player.Paused">Conditional</animation>
-								<animation effect="rotate" end="-3" center="auto" time="250" delay="1000" reversible="false" condition="Player.Paused">Conditional</animation>
-								<width>120</width>
-								<height>120</height>
-								<posx>-85</posx><!--112-->
-								<posy>10</posy><!--143-->
-								<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
-								<aspectratio align="bottom">keep</aspectratio>
-							</control>
+					<animation effect="slide" end="0,34" condition="System.GetBool(LookAndFeel.EnableRSSFeeds) + Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
+					<animation effect="slide" end="0,335" condition="!Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
+					<posx></posx>
+					<posy>-115</posy>
+					<visible>Player.HasAudio | Player.HasVideo</visible>
+					<control type="group">	
+						<posx></posx>
+						<posy></posy>
+						<control type="image">
+							<description>media info background image</description>
+							<posx>-10</posx>
+							<posy>-38</posy>
+							<width>1300</width>
+							<height>200</height>
+							<!-- <texture border="10">$VAR[OSD_BackgroundColor]</texture> -->
+							<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+						</control>
+						<control type="group" id="402">
+							<animation effect="slide" end="-15,0" condition="Player.HasAudio + Skin.HasSetting(HidecdArt)">Conditional</animation>
+				
+	<!--(((TOP AREA CONTROLS)))=============================================================================================================-->		
 							<control type="group">
-								<posx>-145</posx>
-								<posy>0</posy>
-								<control type="image">
-									<description>Cover image</description>
-									<width>130</width>
-									<height>140</height>
-									<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
-									<aspectratio align="bottom">keep</aspectratio>
+								<animation effect="slide" end="0,-15" condition="!Skin.HasSetting(NowPlayingAlignTop) + Player.HasVideo">Conditional</animation>
+								<posx>241</posx>
+								<posy>720r</posy>
+								<control type="grouplist">
+									<posx>0</posx>
+									<posy>20</posy>
+									<usecontrolcoords>true</usecontrolcoords>
+									<orientation>vertical</orientation>
+									<control type="label">
+										<posx></posx>
+										<posy></posy>
+										<width>950</width>
+										<height>30</height>
+										<label>$VAR[PlayerControlTitle]</label>
+										<scroll>true</scroll>
+										<align>left</align>
+										<aligny>center</aligny>
+										<font>font_28_NRBC</font>
+										<textcolor>white</textcolor>
+										<shadowcolor>ThemeColor</shadowcolor>
+							<!-- -20 --><animation effect="slide" end="-10,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+									</control>
+									<control type="label">
+										<posx></posx>
+										<posy>-2</posy>
+										<width>950</width>
+										<height>30</height>
+										<font>font_23_NRBC</font>
+										<textcolor>ThemeColor2</textcolor>
+										<shadowcolor></shadowcolor>
+										<label>$VAR[PlayerControlArtist]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<animation effect="slide" end="5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+									</control>
+									<control type="image">
+										<posx>-5</posx>
+										<posy>-5</posy>
+										<width>165</width>
+										<height>29</height>
+										<texture>$INFO[Player.StarRating]</texture>
+										<aspectratio>stretch</aspectratio>
+										<colordiffuse>ThemeColor2</colordiffuse>
+										<shadowcolor>Black</shadowcolor>
+										<animation effect="slide" end="5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+									</control>
+									<control type="label">
+										<posx></posx>
+										<posy>-5</posy>
+										<width>640</width>
+										<height>30</height>
+										<font>font_23_NRBC</font>
+										<textcolor>ThemeColor2</textcolor>
+										<shadowcolor>Black</shadowcolor>
+										<label>$LOCALIZE[209]:  [COLOR=gray]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
+										<align>left</align>
+										<aligny>center</aligny>
+										<animation effect="slide" end="7,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<visible>Player.HasAudio</visible>
+									</control>
 								</control>
-								<control type="image">
-									<description>Cover image overlay</description>
-									<width>130</width>
-									<height>140</height>
-									<texture>home/nowplaying_overlay.png</texture>
-									<aspectratio align="bottom">keep</aspectratio>
+							<!--progress bars-->
+								<control type="group">
+									<animation effect="slide" end="0,-30" condition="Player.HasVideo">Conditional</animation>
+									<control type="group">
+										<posx>0</posx>
+										<posy>175</posy>
+										<visible>Player.Seeking</visible>
+										<animation effect="fade" start="0" end="100" time="100" >VisibleChange</animation>
+										<animation effect="slide" end="-5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<control type="progress">
+											<description>Progressbar</description>
+											<width>350</width>
+											<height>11</height>
+											<info>Player.Progress</info>
+											<visible>!Player.Caching</visible>
+										</control>
+										<control type="progress">
+											<description>Player Caching Progress Bar</description>
+											<width>350</width>
+											<height>11</height>
+											<reveal>true</reveal>
+											<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
+											<info>Player.CacheLevel</info>
+											<visible>Player.Caching</visible>
+										</control>
+									</control>
+								<!--progress labels-->
+									<control type="group">
+										<animation effect="slide" end="-5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<posy>35</posy>
+										<control type="label">
+											<description>Buffer %</description>
+											<posx>0</posx>
+											<posy>111</posy>
+											<width>375</width>
+											<height>20</height>
+											<font>font_20_B</font>
+											<textcolor>ThemeColor</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
+											<visible>Player.Caching + Player.HasVideo </visible>
+										</control>
+										<control type="label">
+											<description>Elapsed Time Label</description>
+											<posx>0</posx>
+											<posy>111</posy>
+											<width>375</width>
+											<height>20</height>
+											<font>font_20_B</font>
+											<textcolor>BBDCDCDC</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+											<visible>!Player.Seeking + !Player.Caching</visible>
+										</control>
+										<control type="label">
+											<description>Seek Time Label</description>
+											<posx>0</posx>
+											<posy>111</posy>
+											<width>375</width>
+											<height>20</height>
+											<font>font_20_B</font>
+											<textcolor>BBDCDCDC</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<label>[COLOR=ThemeColor]$INFO[Player.SeekTime][/COLOR]$INFO[Player.Duration, / ]</label>
+											<visible>Player.Seeking + !Player.Caching</visible>
+										</control>
+									</control>
 								</control>
 							</control>
 						</control>
-						<!--End Mod Rotating CD with cover-->
-						<control type="label">
-							<description>Title/Year</description>
-							<posy>2</posy>
-							<posx>20</posx>
-							<width>302</width>
-							<font>font_22_CB</font>
-							<textcolor>ThemeColor</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<label>$INFO[MusicPlayer.Title] $INFO[MusicPlayer.Year,(,)]</label>
-							<scroll>yes</scroll>
-						</control>
-						<control type="label">
-							<description>Artist/Album</description>
-							<posy>29</posy>
-							<posx>40</posx>
-							<width>302</width>
-							<font>font_20</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<label>$INFO[MusicPlayer.Artist] $INFO[MusicPlayer.Album,| ,]</label>
-							<scroll>yes</scroll>
-						</control>
-						<!--control type="label">
-							<description>Elapsed/Duration Time</description>
-							<posy>70</posy>
-							<posx>40</posx>
-							<width>302</width>
-							<font>MediaInfoTitleFont2</font> (Removing - unused)
-							<textcolor>MediaInfoItemColor2</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
-							<label>$INFO[MusicPlayer.Time] / $INFO[Player.Duration]</label>
-						</control-->
-						<control type="label" id="212">
-							<description>Elapsed Time Label</description>
-							<posx>30</posx>
-							<posy>88</posy>
-							<width>1280</width>
-							<height>30</height>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-							<align></align>
-							<label>$INFO[Player.Time]</label>
-							<visible>!Player.Seeking</visible>
-						</control>
-						<control type="progress">
-							<description>Progressbar</description>
-							<posx>40</posx>
-							<posy>65</posy>
-							<width>275</width>
-							<height>10</height>
-							<info>Player.Progress</info>
-						</control>
-						<control type="label" id="212">
-							<posx>91</posx>
-							<posy>88</posy>
-							<width>1280</width>
-							<height>30</height>
-							<label>/</label>
-							<align>right</align>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-						</control>
-						<control type="label" id="212">
-							<posx>142</posx>
-							<posy>88</posy>
-							<width>1280</width>
-							<height>30</height>
-							<label>$INFO[Player.Duration]</label>
-							<align>right</align>
-							<font>N.P.M.TimeFont</font>
-							<textcolor>gray</textcolor>
-							<shadowcolor>-</shadowcolor>
-						</control>
-						<control type="label">
-							<description>Next Track</description>
-							<posy>109</posy>
-							<posx>20</posx>
-							<width>302</width>
-							<font>font_20</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>ThemeColor</shadowcolor>
-							<aligny>top</aligny>
-							<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title]</label>
-							<scroll>yes</scroll>
+							
+	<!--(((ICONS)))======================================================================================================================================-->		
+						<control type="group">
+							<animation effect="zoom" end="75,75" condition="true">Conditional</animation>
+						<!--Video-->
+							<control type="group">
+								<posx>8</posx>
+								<posy>8</posy>
+								<visible>Player.HasVideo</visible>
+								<control type="image">
+									<description>cover image</description>
+									<posx>7</posx>
+									<posy>700r</posy>
+									<width>280</width>
+									<height>320</height>
+									<texture>$INFO[VideoPlayer.cover]</texture>
+									<include>Now_Playing_Icon_Align_Keep</include>
+									<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+									<bordersize>14</bordersize>
+									<animation effect="slide" end="0,-91" condition="!Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
+								</control>
+							</control>
+						<!--Audio-->
+							<control type="group">
+								<posx>8</posx>
+								<posy>13</posy>
+								<visible>Player.HasAudio</visible>
+							<!--cd sleeve and disc	-->
+								<control type="group">	
+									<visible>!Skin.HasSetting(HidecdArt)</visible>
+									<control type="image">
+										<description>Cd overlay</description>
+										<animation effect="rotate" end="-360" center="auto" time="100" loop="true" reversible="false" delay="0" condition="!Player.Paused">Conditional</animation>
+										<width>210</width>
+										<height>210</height>
+										<posx>101</posx>
+										<posy>704r</posy>
+										<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+										<aspectratio align="top">keep</aspectratio>
+									</control>
+									<control type="image">
+										<description>cover image</description>
+										<posx>6</posx>
+										<posy>714r</posy>
+										<width>230</width>
+										<height>234</height>
+										<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
+										<aspectratio aligny="top">stretch</aspectratio>
+										<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+										<bordersize>12</bordersize>
+									</control>
+								</control>
+								<control type="image">
+									<description>cover image</description>
+									<posx>25</posx>
+									<posy>700r</posy>
+									<width>235</width>
+									<height>235</height>
+									<texture>$INFO[MusicPlayer.Cover]</texture>
+									<aspectratio aligny="top">stretch</aspectratio>
+									<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+									<bordersize>8</bordersize>
+									<visible>Skin.HasSetting(HidecdArt)</visible>
+								</control>
+							</control>
 						</control>
 					</control>
 				</control>
 				<!--NowPlayingOpenCloseAnim-->
-				<animation effect="slide" start="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowOpen</animation>
-				<animation effect="slide" end="-700,0" time="300" tween="cubic" easing="out" condition="Player.HasMedia">WindowClose</animation>
-				<animation effect="slide" end="-700,0" time="150" tween="cubic" easing="out" condition="Player.HasMedia + [Window.IsActive(ShutdownMenu)
+				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(PlayerControls)">Conditional</animation>
+				<animation effect="fade" end="100" time="300"  delay="1000" condition="Player.HasMedia">Visible</animation>
+				<animation effect="fade" end="100" time="300"  condition="Player.HasMedia">WindowOpen</animation>
+				<animation effect="fade" end="0" time="300" condition="Player.HasMedia">Hidden</animation>
+				<animation effect="fade" end="0" time="300" condition="Player.HasMedia">WindowClose</animation>
+				<!---->
+				<animation effect="fade" start="100" end="0" time="300" condition="Player.HasMedia + [Window.IsActive(ShutdownMenu)
 				| Window.IsActive(Favourites) | Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073) | Window.IsActive(3074) | Window.IsActive(3075)
 				| Window.IsActive(3076) | Window.IsActive(3078)]">Conditional</animation>
 			</control>
 	
 			<control type="group" id="505">	<!--RSS FEEDS-->
+				<animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia">Conditional</animation>
 				<description>Menu Bar Area</description>			
 				<posy>MenuBarOffsetY</posy>	
 				<height>34</height>
@@ -4698,12 +4769,12 @@
 					<description>RSS Feeds</description>
 					<width>ScreenWidth</width>
 					<height>34</height>
-					<font>font_22_B</font>
+					<font>font_21_B</font>
 					<shadowcolor>black</shadowcolor>
 					<urlset>1</urlset>
 					<textcolor>Grey</textcolor>
 					<titlecolor>ThemeColor</titlecolor>
-					<headlinecolor>ff8A795D</headlinecolor>
+					<headlinecolor>FF8A795D</headlinecolor>
 					<!--MenuBarRSSFeedsOpenCloseAnim-->
 					<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" delay="250" condition="!Skin.HasSetting(TransparentMenuBacks)">WindowOpen</animation>
 				</control>
@@ -4777,7 +4848,7 @@
 								<onclick>ActivateWindow(ShutdownMenu)</onclick>
 								<pulseonselect>true</pulseonselect>
 								<onup></onup>
-								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
+								<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 								<ondown>850</ondown>
 								<onleft>346</onleft>
 								<onright>350</onright>
@@ -4807,7 +4878,7 @@
 								<onclick>XBMC.PlayDVD </onclick>
 								<pulseonselect>true</pulseonselect>
 								<onup></onup>
-								<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
+								<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 								<ondown>850</ondown>
 								<onleft>458</onleft>
 								<onright>345</onright>
@@ -4853,7 +4924,7 @@
 							<onclick>XBMC.RunScript(special://skin/scripts/content.search.py)</onclick>
 							<pulseonselect>true</pulseonselect>
 							<onup></onup>
-							<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]">304</ondown>
+							<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 							<ondown>850</ondown>
 							<onleft>345</onleft>
 							<onright>837</onright>
@@ -4895,7 +4966,7 @@
 						<colordiffuse>FFFFFFFF</colordiffuse>
 						<onclick>ActivateWindow(Home)</onclick>
 						<pulseonselect>true</pulseonselect>
-						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>350</onleft>
@@ -4937,7 +5008,7 @@
 						<colordiffuse></colordiffuse> <!--DEFAULT-->
 						<onclick>ActivateWindow(Home)</onclick>
 						<pulseonselect time="400">true</pulseonselect>
-						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown condition="[[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)] | [Container(850).HasFocus(21) + Skin.HasSetting(HideRecentMusicVideos)]] + Control.IsVisible(304)">304</ondown>
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>350</onleft>

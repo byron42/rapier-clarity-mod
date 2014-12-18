@@ -111,6 +111,7 @@
 			<style>bold</style>
 			<size>21</size>
 		</font>
+		
 	<!--22	-->
 		<font>
 			<name>font_22</name>
@@ -173,6 +174,13 @@
 			<size>23</size>
 		</font>	
 		-->
+		<font>
+			<!--Font_OSDMusicArtist home-->
+			<name>font_23_NRBC</name>
+			<filename>NewRapierBoldCaps.ttf</filename>
+			<style>bold</style>
+			<size>23</size>
+		</font>
 	<!--24 -->
 		<font>
 			<name>font_24</name>

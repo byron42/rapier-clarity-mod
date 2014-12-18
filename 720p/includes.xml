@@ -596,5 +596,16 @@
 	<include name="MusicPlayerItemGap">
 		<itemgap>29</itemgap>
 	</include>
+<!--NOW PLAYING alignment variable-->
+	<include name="Now_Playing_Icon_Align_Keep">
+		<include condition="Skin.HasSetting(NowPlayingAlignTop)">NowPlayingTopAlignKeep</include>
+		<include condition="!Skin.HasSetting(NowPlayingAlignTop)">NowPlayingBottomAlignKeep</include>
+	</include>
+	<include name="NowPlayingTopAlignKeep">
+		<aspectratio aligny="top">keep</aspectratio>
+	</include>
+	<include name="NowPlayingBottomAlignKeep">
+		<aspectratio aligny="center">keep</aspectratio>
+	</include>
 	
 </includes>
