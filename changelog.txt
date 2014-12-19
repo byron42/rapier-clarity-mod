@@ -3,12 +3,22 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 12.12.14 Version 3.5.44
 
-	12.16.14
+
+	12.19.14
+------------------------------------------------------------------------------
+		= Scaled back busy animation...amazing what removing 10kb of a .png 
+		  will do for not crashing this program during a crutial process... 
+
+
+	12.18.14
 ------------------------------------------------------------------------------
 		= UPDATED Home NowPlaying...got rid of the old slide out box with
 		  limited space and changed to what I've done with (PlayerControls).
 		  There is an option to align this on the top or the bottom in skin
-		  settings (default is bottom)
+		  settings (default is bottom) under SKIN SETTINGS/HOME/NOW PLAYING...
+
+
+		 ***************** NOT VISIBLE WHEN MEDIA IS PLAYING ***************
 
 		= Straightened out System Info panel on Home Window
 
@@ -18,9 +28,13 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		= Dropped recently added menu down to the same spot as System/Weather
 		  widgets...should add a tad bit more uniformity.  
 			
+		 *******************************************************************
 
 
-		    *** NONE OF THE WIDGETS ARE VISIBLE WHEN MEDIA IS PLAYINBG ***
+		= Fixed DialogVolumeBar.xml to show the big bar when (PlayerControls) is
+		  on the screen
+
+		= Deleted includes_OSDNotifications.xml - zero reasons to keep it
 
 
 	12.12.14
