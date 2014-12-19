@@ -60,8 +60,8 @@
 					<align>center</align>
 					<font>font_20</font>
 					<textcolor>ThemeColor</textcolor>
-					<label>31302</label>
-					<visible>Player.Playing + !Player.Seeking</visible>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible></visible>
 				</control>
 				<control type="label">
 					<description>Paused Label</description>
@@ -76,152 +76,7 @@
 					<label>31303</label>
 					<visible>Player.Paused + ![Player.Seeking | Player.Caching]</visible>
 				</control>
-				<control type="label">
-					<description>Seeking Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<shadowcolor>ThemeColor</shadowcolor>
-					<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
-					<visible>Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>Cache Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<shadowcolor>ThemeColor</shadowcolor>
-					<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
-					<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>RW x2 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31305] x2</label>
-					<visible>Player.Rewinding2x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>RW x4 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31305] x4</label>
-					<visible>Player.Rewinding4x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>RW x8 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31305] x8</label>
-					<visible>Player.Rewinding8x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>RW x16 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31305] x16</label>
-					<visible>Player.Rewinding16x</visible>
-				</control>
-				<control type="label">
-					<description>RW x32 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31305] x32</label>
-					<visible>Player.Rewinding32x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>FF x2 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31304] x2</label>
-					<visible>Player.Forwarding2x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>FF x4 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31304] x4</label>
-					<visible>Player.Forwarding4x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>FF x8 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31304] x8</label>
-					<visible>Player.Forwarding8x</visible>
-				</control>
-				<control type="label">
-					<description>FF x16 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31304] x16</label>
-					<visible>Player.Forwarding16x + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>FF x32 Label</description>
-					<posx>239</posx>
-					<posy>-4</posy>
-					<width>245</width>
-					<height>25</height>
-					<align>center</align>
-					<font>font_20</font>
-					<textcolor>ThemeColor</textcolor>
-					<label>$LOCALIZE[31304] x32</label>
-					<visible>Player.Forwarding32x + !Player.Seeking</visible>
-				</control>
+				
 				<!--progressbar dialog-->
 				<control type="label" id="22">
 					<description>Elapsed Time Label</description>
