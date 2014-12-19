@@ -6,14 +6,14 @@
 		<posx>278</posx>
 		<posy>650</posy>
 		<!--<origin x="278" y="650">Window.IsActive(133) | Window.IsActive(112)</origin>-->
-		<origin x="925" y="4">[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</origin>
-		<origin x="278" y="650">[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</origin>
+		<origin x="925" y="4">[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</origin>
+		<origin x="278" y="650">[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(PlayerControls)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</origin>
 	</coordinates>
 	<controls>
 		
 	<!--(((FS volume)))================================================================================================================================-->	
 		<control type="group">
-			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(PlayerControls)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
 			<animation effect="zoom" end="70" center="362,0" time="0" condition="Skin.HasSetting(SmallFSVolume)">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
@@ -90,7 +90,7 @@
 			<!--SearchIconSlideAnim-->
 			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
 			<control type="group">
-				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</visible>
+				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</visible>
 				<!--NotificationOpenCloseAnim-->
 				<animation effect="fade" end="100" time="200">Visible</animation>
 				<animation effect="fade" end="0" time="200">Hidden</animation> 
