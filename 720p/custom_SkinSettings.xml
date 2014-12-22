@@ -3648,34 +3648,7 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-						<control type="radiobutton" id="97">
-							<description>Hide Rotating cdArt in Visualizer</description>
-							<posx>10</posx>
-							<width>800</width>
-							<height>50</height>
-							<font>font_22_U</font>
-							<textwidth>755</textwidth><!--HBTW-->
-							<aligny>top</aligny>
-							<textoffsety>9</textoffsety>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor></shadowcolor>
-							<align>left</align>
-							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
-							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
-							<label>$LOCALIZE[31403]</label>
-							<selected>Skin.HasSetting(HidecdArt)</selected>
-							<onclick>Skin.ToggleSetting(HidecdArt)</onclick>
-							<!--SettingsItemOpenCloseAnim-->
-							<animation effect="fade" end="0" time="300">Hidden</animation>
-							<animation type="Visible">
-								<effect type="fade" start="0" end="100" time="400"/>
-								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
-							</animation>
-						</control>	
+							
 						<control type="radiobutton" id="99">
 							<description>Hide Media Type Icons</description>
 							<posx>10</posx>
@@ -3759,6 +3732,144 @@
 								<effect type="fade" start="0" end="100" time="400"/>
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
+						</control>
+						
+						
+						
+						
+	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+						<control type="button" id="119122">
+							<posx>-3</posx><!---->
+							<height>27</height><!---->
+							<width>840</width><!---->
+							<label>[UPPERCASE]$LOCALIZE[31570] $LOCALIZE[427] $LOCALIZE[31569][/UPPERCASE] - CdART</label> <!--ROTATING DISC IMAGE-->
+							<font>font_21_B</font><!---->
+							<disabledcolor>aa555555</disabledcolor><!---->
+							<align></align><!---->
+							<aligny>top</aligny><!---->
+							<textoffsety>-2</textoffsety><!---->
+							<textoffsetx>3</textoffsetx><!---->
+							<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+							<colordiffuse>BFFFFFFF</colordiffuse><!---->
+							<enable>false</enable>
+						</control>
+	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+						<control type="radiobutton" id="970002">
+							<description>Hide Rotating cdArt</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31563] $LOCALIZE[40059] $LOCALIZE[427] ($LOCALIZE[24021])</label>
+							<selected>Skin.HasSetting(HidecdArt)</selected>
+							<onclick>Skin.ToggleSetting(HidecdArt)</onclick>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
+						<control type="radiobutton" id="970000">
+							<description>Slow down spin rate (2 second rotation)</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31571] $LOCALIZE[31572] $LOCALIZE[31568] $LOCALIZE[427]</label>
+							<selected>Skin.HasSetting(SlowCdRotation)</selected>
+							<onclick condition="Skin.HasSetting(NoCdRotation)">Skin.ToggleSetting(NoCdRotation)</onclick>
+							<onclick condition="!Skin.HasSetting(NoCdRotation) | Skin.HasSetting(NoCdRotation)">Skin.ToggleSetting(SlowCdRotation)</onclick>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HidecdArt)</enable>
+						</control>
+						<control type="radiobutton" id="970001">
+							<description>Dont spin disc</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth>
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[31563] $LOCALIZE[31567] $LOCALIZE[427]</label>
+							<selected>Skin.HasSetting(NoCdRotation)</selected>
+							<onclick condition="Skin.HasSetting(SlowCdRotation)">Skin.ToggleSetting(SlowCdRotation)</onclick>
+							<onclick condition="!Skin.HasSetting(SlowCdRotation) | Skin.HasSetting(SlowCdRotation)">Skin.ToggleSetting(NoCdRotation)</onclick>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HidecdArt)</enable>
+						</control>
+						<control type="radiobutton" id="970003">
+							<description>Show front side of disc</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth>
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
+							<alttexturenofocus border="5"></alttexturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>$LOCALIZE[40059] $LOCALIZE[31564] $LOCALIZE[31565] $LOCALIZE[31566] $LOCALIZE[427]</label>
+							<selected>Skin.HasSetting(UseGoldCD)</selected>
+							<onclick>Skin.ToggleSetting(UseGoldCD)</onclick>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>!Skin.HasSetting(HidecdArt)</enable>
 						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11913">

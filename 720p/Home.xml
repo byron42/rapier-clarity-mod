@@ -4513,7 +4513,9 @@
 				<visible>Player.HasMedia + !Skin.HasSetting(HideNowPlayingMedia)</visible>
 				<!-- <animation effect="slide" start="0,-35" end="0,0" time="250" easing="out" condition="!ControlGroup(900).HasFocus">Conditional</animation> -->
 				<animation effect="slide" end="0,160" time="250" easing="out" condition="true">Conditional</animation>
+				
 				<control type="group">
+					<animation effect="slide" end="15,0" condition="Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 					<animation effect="slide" end="0,34" condition="System.GetBool(LookAndFeel.EnableRSSFeeds) + Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
 					<animation effect="slide" end="0,335" condition="!Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
 					<posx></posx>
@@ -4556,7 +4558,7 @@
 										<font>font_28_NRBC</font>
 										<textcolor>white</textcolor>
 										<shadowcolor>ThemeColor</shadowcolor>
-							<!-- -20 --><animation effect="slide" end="-10,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+							<!-- -20 --><animation effect="slide" end="-8,5" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 									</control>
 									<control type="label">
 										<posx></posx>
@@ -4569,7 +4571,7 @@
 										<label>$VAR[PlayerControlArtist]</label>
 										<align>left</align>
 										<aligny>center</aligny>
-										<animation effect="slide" end="5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<animation effect="slide" end="7,4" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 									</control>
 									<control type="image">
 										<posx>-5</posx>
@@ -4580,7 +4582,7 @@
 										<aspectratio>stretch</aspectratio>
 										<colordiffuse>ThemeColor2</colordiffuse>
 										<shadowcolor>Black</shadowcolor>
-										<animation effect="slide" end="5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<animation effect="slide" end="7,3" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 									</control>
 									<control type="label">
 										<posx></posx>
@@ -4593,7 +4595,7 @@
 										<label>$LOCALIZE[209]:  [COLOR=gray]$INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</label>
 										<align>left</align>
 										<aligny>center</aligny>
-										<animation effect="slide" end="7,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<animation effect="slide" end="9,2" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 										<visible>Player.HasAudio</visible>
 									</control>
 								</control>
@@ -4625,7 +4627,7 @@
 									</control>
 								<!--progress labels-->
 									<control type="group">
-										<animation effect="slide" end="-5,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
+										<animation effect="slide" end="-3,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 										<posy>35</posy>
 										<control type="label">
 											<description>Buffer %</description>
@@ -4700,26 +4702,45 @@
 							<!--cd sleeve and disc	-->
 								<control type="group">	
 									<visible>!Skin.HasSetting(HidecdArt)</visible>
+									<!--*********************** cd color *****************************-->
 									<control type="image">
+										<visible>!Skin.HasSetting(UseGoldCD)</visible>
 										<description>Cd overlay</description>
-										<animation effect="rotate" end="-360" center="auto" time="100" loop="true" reversible="false" delay="0" condition="!Player.Paused">Conditional</animation>
-										<width>210</width>
-										<height>210</height>
-										<posx>101</posx>
-										<posy>704r</posy>
-										<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+										<animation effect="rotate" end="-360" center="auto" time="200" loop="true" reversible="false" delay="0" condition="!Player.Paused + !Skin.HasSetting(SlowCdRotation) + !Skin.HasSetting(NoCdRotation)">Conditional</animation>
+										<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" delay="0" condition="!Player.Paused + Skin.HasSetting(SlowCdRotation)">Conditional</animation>
+										<animation effect="fade" start="100" end="100" delay="0" condition="Skin.HasSetting(NoCdRotation)">Conditional</animation>
+										<width>224</width>
+										<height>224</height>
+										<posx>95</posx>
+										<posy>705r</posy>
+										<texture fallback="CD/disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+										<!-- <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture> -->
 										<aspectratio align="top">keep</aspectratio>
 									</control>
 									<control type="image">
+										<visible>Skin.HasSetting(UseGoldCD)</visible>
+										<description>Cd overlay</description>
+										<animation effect="rotate" end="-360" center="auto" time="200" loop="true" reversible="false" delay="0" condition="!Player.Paused + !Skin.HasSetting(SlowCdRotation) + !Skin.HasSetting(NoCdRotation)">Conditional</animation>
+										<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" delay="0" condition="!Player.Paused + Skin.HasSetting(SlowCdRotation)">Conditional</animation>
+										<animation effect="fade" start="100" end="100" delay="0" condition="Skin.HasSetting(NoCdRotation)">Conditional</animation>
+										<width>224</width>
+										<height>224</height>
+										<posx>95</posx>
+										<posy>705r</posy>
+										<texture fallback="CD/original_disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+										<aspectratio align="top">keep</aspectratio>
+									</control>
+									<!--**************************************************************-->
+									<control type="image">
 										<description>cover image</description>
-										<posx>6</posx>
-										<posy>714r</posy>
-										<width>230</width>
-										<height>234</height>
-										<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
+										<posx>3</posx>
+										<posy>706r</posy>
+										<width>222</width>
+										<height>226</height>
+										<texture diffuse="CD/cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
 										<aspectratio aligny="top">stretch</aspectratio>
-										<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-										<bordersize>12</bordersize>
+										<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+										<bordersize>8</bordersize>
 									</control>
 								</control>
 								<control type="image">
@@ -4738,6 +4759,8 @@
 						</control>
 					</control>
 				</control>
+				
+				
 				<!--NowPlayingOpenCloseAnim-->
 				<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(PlayerControls)">Conditional</animation>
 				<animation effect="fade" end="100" time="300"  delay="1000" condition="Player.HasMedia">Visible</animation>

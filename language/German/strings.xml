@@ -112,15 +112,15 @@
 
 	<string id="31200">schneller Vorlauf</string>
 	<string id="31201">Rücklauf</string>
-	<string id="31202">Look &amp; Feel, Region, Bildschirm, Anzeigeoptionen, Screensaver</string><!---darstellungseinstellungen-->
-	<string id="31203">Dateien</string><!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">Allgemein, Diashow</string><!---bilder einstellungen--->
-	<string id="31205">General, Bibliothek, Player, Dateien, Scrobbler, CD-Ripping, Karaoke</string><!---musik-einstellungen--->
-	<string id="31206">General, Bibliothek, Player, Untertitel, Schaber</string><!---Videos einstellungen--->
-	<string id="31207">Allgemeine</string><!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">Netzwerk, Server, SMB-Client, UPnP-Einstellungen, Event-Server</string><!---netzwerkeinstellungen--->
-	<string id="31209">Autoplay, Audio-Hardware, Hardware, LCD, Video-Hardware, Master Lock</string><!--Systemeinstellungen--->
-	<string id="31210">Allgemein, Startseite, Medien, Hintergrund, Skripte</string><!---haut einstellungen--->
+	<string id="31202">Look &amp; Feel, Region, Bildschirm, Anzeigeoptionen, Screensaver</string><!--*** darstellungseinstellungen -->
+	<string id="31203">Dateien</string><!--************************************************************* programs settings ********-->
+	<string id="31204">Allgemein, Diashow</string><!--************************************************** bilder einstellungen *****-->
+	<string id="31205">General, Bibliothek, Player, Dateien, Scrobbler, CD-Ripping, Karaoke</string><!-- musik-einstellungen ******-->
+	<string id="31206">General, Bibliothek, Player, Untertitel, Schaber</string><!--******************** Videos einstellungen *****-->
+	<string id="31207">Allgemeine</string><!--********************************************************** weather settings *********-->
+	<string id="31208">Netzwerk, Server, SMB-Client, UPnP-Einstellungen, Event-Server</string><!--****** netzwerkeinstellungen ****-->
+	<string id="31209">Autoplay, Audio-Hardware, Hardware, LCD, Video-Hardware, Master Lock</string><!-- Systemeinstellungen ******-->
+	<string id="31210">Allgemein, Startseite, Medien, Hintergrund, Skripte</string><!--***************** haut einstellungen *******-->
 
 <!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31300 durch 31399 Ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -243,13 +243,18 @@
 	<string id="31560">grün</string>
 	<string id="31561">Ausrichten</string>
 	<string id="31562">Nach oben</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--DREHENDE CD-->
+	<string id="31563">nicht</string>
+	<string id="31564">vorne</string>
+	<string id="31565">Seite</string>
+	<string id="31566">von</string>
+	<string id="31567">Spin</string>
+	<string id="31568">Spinnerei</string>
+	<string id="31569">Bild</string>
+	<string id="31570">rotierende</string>
+	<string id="31571">langsam</string>
+	<string id="31572">nach unten</string>
+	
 
 	<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31600 durch 31699 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 

@@ -112,15 +112,15 @@
 
 	<string id="31200">avance rapide</string>
 	<string id="31201">Rewind</string>
-	<string id="31202">look &amp; Feel, région, écran, Options d'affichage, écran de veille</string><!---paramètres d'apparence-->
-	<string id="31203">fichiers</string><!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">général, diaporama</string><!---réglages photos--->
-	<string id="31205">général, bibliothèque, lecteur, fichiers, Scrobbler, ripper un CD, karaoké</string><!---réglages musique--->
-	<string id="31206">général, bibliothèque, lecteur, sous-titres, grattoirs</string><!---paramètres vidéos--->
-	<string id="31207">générales</string><!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">réseau, serveurs, le Client SMB, UPnP paramètres, d'événements serveur</string><!---paramètres réseau--->
-	<string id="31209">matériel, LCD, Autoplay, matériel Audio, matériel vidéo, Master Lock</string><!--panneau de configuration--->
-	<string id="31210">général, accueil, médias, milieux, Scripts</string><!---paramètres de peau--->
+	<string id="31202">look &amp; Feel, région, écran, Options d'affichage, écran de veille</string><!--****** paramètres d'apparence -->
+	<string id="31203">fichiers</string><!--****************************************************************** programs settings *****-->
+	<string id="31204">général, diaporama</string><!--******************************************************** réglages photos *******-->
+	<string id="31205">général, bibliothèque, lecteur, fichiers, Scrobbler, ripper un CD, karaoké</string><!-- réglages musique ******-->
+	<string id="31206">général, bibliothèque, lecteur, sous-titres, grattoirs</string><!--******************** paramètres vidéos *****-->
+	<string id="31207">générales</string><!--***************************************************************** weather settings ******-->
+	<string id="31208">réseau, serveurs, le Client SMB, UPnP paramètres, d'événements serveur</string><!--**** paramètres réseau *****-->
+	<string id="31209">matériel, LCD, Autoplay, matériel Audio, matériel vidéo, Master Lock</string><!--****** panneau de config *****-->
+	<string id="31210">général, accueil, médias, milieux, Scripts</string><!--******************************** paramètres de peau ****-->
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31300 thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -243,13 +243,17 @@
 	<string id="31560">vert</string>
 	<string id="31561">Aligner</string>
 	<string id="31562">Retour au début</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--FILATURE CD-->
+	<string id="31563">ne sont pas</string>
+	<string id="31564">avant</string>
+	<string id="31565">côté</string>
+	<string id="31566">de</string>
+	<string id="31567">spin</string>
+	<string id="31568">filature</string>
+	<string id="31569">image</string>
+	<string id="31570">rotation</string>
+	<string id="31571">lente</string>
+	<string id="31572">vers le bas</string>
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31600 thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -349,13 +353,9 @@
 	<string id="31934">une extraction préalable</string>
 	<string id="31935">Choisissez personnalisé favorite</string>
 
-
 	<string id="31936">Universal fond classique (à l'exception de ram)</string>
 	<string id="31937">Universal arrière-plan personnalisé (toujours sur le dessus)</string>
 	<string id="31938">activez les milieux conditionnelle de temps (écran d'accueil)</string>
-
-
-
 
 	<string id="31999">Réinitialiser les paramètres Skin par défaut (appuyez sur pour confirmer)</string>
 
