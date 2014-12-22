@@ -112,15 +112,15 @@
 
 	<string id="31200">avanço rápido</string>
 	<string id="31201">Rewind</string>
-	<string id="31202">olhar &amp; sentir, região, tela, opções de visualização, Screensaver</string><!---configurações de aparência-->
-	<string id="31203">arquivos</string><!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">geral, Slideshow</string><!---configurações de fotos--->
-	<string id="31205">geral, biblioteca, Player, arquivos, Scrobbler, CD Ripping, karaokê</string><!---configurações de música--->
-	<string id="31206">geral, biblioteca, jogador, legendas, raspadores</string><!---configurações de vídeos--->
-	<string id="31207">geral</string><!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">rede, servidores, cliente SMB, configurações UPnP, servidor de evento</string><!---configurações de rede--->
-	<string id="31209">hardware, LCD, Autoplay, Hardware de áudio, Hardware de vídeo, Master Lock</string><!--configurações do sistema--->
-	<string id="31210">geral, Home, Media, Backgrounds, Scripts</string><!---configurações de pele--->
+	<string id="31202">olhar &amp; sentir, região, tela, opções de visualização, Screensaver</string><!-- configurações de aparência -->
+	<string id="31203">arquivos</string><!-- programs settings -->
+	<string id="31204">geral, Slideshow</string><!-- configurações de fotos -->
+	<string id="31205">geral, biblioteca, Player, arquivos, Scrobbler, CD Ripping, karaokê</string><!-- configurações de música -->
+	<string id="31206">geral, biblioteca, jogador, legendas, raspadores</string><!-- configurações de vídeos -->
+	<string id="31207">geral</string><!-- weather settings -->
+	<string id="31208">rede, servidores, cliente SMB, configurações UPnP, servidor de evento</string><!-- configurações de rede -->
+	<string id="31209">hardware, LCD, Autoplay, Hardware de áudio, Hardware de vídeo, Master Lock</string><!-- configurações do sistema -->
+	<string id="31210">geral, Home, Media, Backgrounds, Scripts</string><!-- configurações de pele -->
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31300 thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -243,13 +243,17 @@
 	<string id="31560">verde</string>
 	<string id="31561">Alinhar</string>
 	<string id="31562">Início</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--GIRANDO CD-->
+	<string id="31563">não</string>
+	<string id="31564">frontal</string>
+	<string id="31565">lado</string>
+	<string id="31566">de</string>
+	<string id="31567">girar</string>
+	<string id="31568">girando</string>
+	<string id="31569">imagem</string>
+	<string id="31570">de giro</string>
+	<string id="31571">lento</string>
+	<string id="31572">para baixo</string>
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31600 thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 

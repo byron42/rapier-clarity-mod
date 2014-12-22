@@ -112,15 +112,15 @@
 
 	<string id="31200">avance rápido</string>
 	<string id="31201">Rewind</string>
-	<string id="31202">look &amp; Feel, región, pantalla, opciones de visualización, Screensaver</string><!---ajustes de aspecto-->
-	<string id="31203">archivos</string><!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">General, presentación de diapositivas</string><!---ajustes cuadros--->
-	<string id="31205">General, biblioteca, reproductor, archivos, Last.FM, CD Ripping, Karaoke</string><!---ajustes de música--->
-	<string id="31206">General, biblioteca, reproductor, subtítulos, raspadores</string><!---ajustes videos--->
-	<string id="31207">General</string><!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">servidores, red, configuración de UPnP, evento de servidor, cliente SMB</string><!---configuración de red--->
-	<string id="31209">hardware, LCD, Autoplay, Hardware de Audio, Hardware de vídeo, Master Lock</string><!--ajustes del sistema--->
-	<string id="31210">General, hogar, medios de comunicación, fondos, Scripts</string><!---piel ajustes--->
+	<string id="31202">look &amp; Feel, región, pantalla, opciones de visualización, Screensaver</string><!-- ajustes de aspecto -->
+	<string id="31203">archivos</string><!-- programs settings -->
+	<string id="31204">General, presentación de diapositivas</string><!-- ajustes cuadros -->
+	<string id="31205">General, biblioteca, reproductor, archivos, Last.FM, CD Ripping, Karaoke</string><!-- ajustes de música -->
+	<string id="31206">General, biblioteca, reproductor, subtítulos, raspadores</string><!-- ajustes videos -->
+	<string id="31207">General</string><!-- weather settings -->
+	<string id="31208">servidores, red, configuración de UPnP, evento de servidor, cliente SMB</string><!-- configuración de red -->
+	<string id="31209">hardware, LCD, Autoplay, Hardware de Audio, Hardware de vídeo, Master Lock</string><!-- ajustes del sistema -->
+	<string id="31210">General, hogar, medios de comunicación, fondos, Scripts</string><!-- piel ajustes -->
 
 <!--ooooooooooooooooooooooooooooooooooooooooo cadena 31300 de id thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -242,13 +242,17 @@
 	<string id="31560">verde</string>
 	<string id="31561">Alinear</string>
 	<string id="31562">Arriba</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--GIRO CD-->
+	<string id="31563">no</string>
+	<string id="31564">delantero</string>
+	<string id="31565">lado</string>
+	<string id="31566">de</string>
+	<string id="31567">Spin</string>
+	<string id="31568">Spinning</string>
+	<string id="31569">imagen</string>
+	<string id="31570">giratorio</string>
+	<string id="31571">lento</string>
+	<string id="31572">abajo</string>
 
 <!--ooooooooooooooooooooooooooooooooooooooooo cadena 31600 de id thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -348,13 +352,9 @@
 	<string id="31934">buscados</string>
 	<string id="31935">Elija personalizado favorito</string>
 
-
 	<string id="31936">Fondo clásico universal (excepto ram)</string>
 	<string id="31937">fondo personalizado universal (siempre en la parte superior)</string>
 	<string id="31938">activar el tiempo condicional fondos (pantalla de inicio)</string>
-
-
-
 
 	<string id="31999">restablecer la configuración de la piel por defecto (Pulse para confirmar)</string>
 

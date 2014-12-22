@@ -513,37 +513,47 @@
 							<posy></posy>
 							<visible>Player.HasAudio</visible>
 						<!--cd sleeve and disc	-->
-							<control type="group">	
+							<control type="group">
 								<visible>!Skin.HasSetting(HidecdArt)</visible>
+								<!--*********************** cd color *****************************-->
 								<control type="image">
+									<visible>!Skin.HasSetting(UseGoldCD)</visible>
 									<description>Cd overlay</description>
-									<!-- <animation type="WindowOpen">
-										<effect type="slide" start="85,0" end="85,0" tween="cubic" easing="out" delay="400" time="900" />
-										<effect type="fade" start="0" end="100" time="100" delay="300"/>
-									</animation>
-									<animation type="WindowClose">
-										<effect type="slide" start="85,0" end="85,0" time="700" tween="cubic" easing="in" delay="0"/>
-										<effect type="fade" start="100" end="0" time="1" delay="1000" />
-										<condition type="!Player.Playing"/>
-									</animation> -->
-									<animation effect="rotate" end="-360" center="auto" time="100" loop="true" reversible="false" delay="0" condition="!Player.Paused">Conditional</animation>
-									<width>210</width>
-									<height>210</height>
-									<posx>101</posx>
-									<posy>704r</posy>
-									<texture fallback="backdrops/artist_fanart/default/default.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+									<animation effect="rotate" end="-360" center="auto" time="200" loop="true" reversible="false" delay="0" condition="!Player.Paused + !Skin.HasSetting(SlowCdRotation) + !Skin.HasSetting(NoCdRotation)">Conditional</animation>
+									<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" delay="0" condition="!Player.Paused + Skin.HasSetting(SlowCdRotation)">Conditional</animation>
+									<animation effect="fade" start="100" end="100" delay="0" condition="Skin.HasSetting(NoCdRotation)">Conditional</animation>
+									<width>204</width>
+									<height>204</height>
+									<posx>109</posx>
+									<posy>702r</posy>
+									<texture fallback="CD/disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+									<!-- <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture> -->
 									<aspectratio align="top">keep</aspectratio>
 								</control>
 								<control type="image">
+									<visible>Skin.HasSetting(UseGoldCD)</visible>
+									<description>Cd overlay</description>
+									<animation effect="rotate" end="-360" center="auto" time="200" loop="true" reversible="false" delay="0" condition="!Player.Paused + !Skin.HasSetting(SlowCdRotation) + !Skin.HasSetting(NoCdRotation)">Conditional</animation>
+									<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" delay="0" condition="!Player.Paused + Skin.HasSetting(SlowCdRotation)">Conditional</animation>
+									<animation effect="fade" start="100" end="100" delay="0" condition="Skin.HasSetting(NoCdRotation)">Conditional</animation>
+									<width>204</width>
+									<height>204</height>
+									<posx>109</posx>
+									<posy>702r</posy>
+									<texture fallback="CD/original_disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
+									<aspectratio align="top">keep</aspectratio>
+								</control>
+								<!--**************************************************************-->
+								<control type="image">
 									<description>cover image</description>
-									<posx>6</posx>
-									<posy>714r</posy>
-									<width>230</width>
-									<height>234</height>
-									<texture diffuse="cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
+									<posx>13</posx>
+									<posy>701r</posy>
+									<width>204</width>
+									<height>204</height>
+									<texture diffuse="CD/cdcover_mask.png">$INFO[MusicPlayer.Cover]</texture>
 									<aspectratio aligny="top">stretch</aspectratio>
-									<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-									<bordersize>12</bordersize>
+									<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+									<bordersize>5</bordersize>
 								</control>
 							</control>
 							<control type="image">

@@ -4,6 +4,17 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 12.12.14 Version 3.5.44
 
 
+	12.21.14
+------------------------------------------------------------------------------
+		= Added a new disc image for the spinning CD/CdArt...also added a couple
+		  options (made a specific category for this) - to slow it down, or to
+		  stop it...gearing this towards a user that has CdArt and wants to be
+		  able to see the disc cover moving at a reasonable rate...looks nice.
+		  Also for those that like the look of the old "lightscribe" disc there
+		  is also an option to switch to that disc as well under :Show front of
+		  disc:
+
+
 	12.19.14
 ------------------------------------------------------------------------------
 		= Scaled back busy animation...amazing what removing 10kb of a .png 

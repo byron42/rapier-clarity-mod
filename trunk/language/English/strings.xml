@@ -112,15 +112,15 @@
 	
 	<string id="31200">Fast Forward</string>
 	<string id="31201">Rewind</string>
-	<string id="31202">Look &amp; Feel, Region, Screen, View Options, Screensaver</string> <!------------ appearance settings -->
-	<string id="31203">Files</string> <!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">General, Slideshow</string> <!---------------------------------------------------- pictures settings ---->
-	<string id="31205">General, Library, Player, Files, Scrobbler, CD Ripping, Karaoke</string> <!------- music settings ------->
-	<string id="31206">General, Library, Player, Subtitles, Scrapers</string> <!------------------------- videos settings ------>
-	<string id="31207">General</string> <!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">Network, Servers, SMB Client, UPnP Settings, Event Server</string> <!------------- network settings ----->
-	<string id="31209">Hardware, LCD, Autoplay, Audio Hardware, Video Hardware, Master Lock</string> <!-- system settings ------>
-	<string id="31210">General, Home, Media, Backgrounds, Scripts</string> <!---------------------------- skin settings -------->
+	<string id="31202">Look &amp; Feel, Region, Screen, View Options, Screensaver</string> <!--********** appearance settings -->
+	<string id="31203">Files</string> <!--*************************************************************** programs settings **-->
+	<string id="31204">General, Slideshow</string> <!--************************************************** pictures settings **-->
+	<string id="31205">General, Library, Player, Files, Scrobbler, CD Ripping, Karaoke</string> <!--***** music settings *****-->
+	<string id="31206">General, Library, Player, Subtitles, Scrapers</string> <!--*********************** videos settings ****-->
+	<string id="31207">General</string> <!--************************************************************* weather settings ***-->
+	<string id="31208">Network, Servers, SMB Client, UPnP Settings, Event Server</string> <!--*********** network settings ***-->
+	<string id="31209">Hardware, LCD, Autoplay, Audio Hardware, Video Hardware, Master Lock</string> <!-- system settings ****-->
+	<string id="31210">General, Home, Media, Backgrounds, Scripts</string> <!--************************** skin settings ******-->
 	
 <!--ooooooooooooooooooooooooooooooooooooooooo string id's 31300 thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->	
 	
@@ -242,13 +242,17 @@
 	<string id="31560">GREEN</string>
 	<string id="31561">Align</string>
 	<string id="31562">Top</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--SPINNING CD-->
+	<string id="31563">Do not</string>
+	<string id="31564">Front</string>
+	<string id="31565">Side</string>
+	<string id="31566">Of</string>
+	<string id="31567">Spin</string>
+	<string id="31568">Spinning</string>
+	<string id="31569">Image</string>
+	<string id="31570">Rotating</string>
+	<string id="31571">Slow</string>
+	<string id="31572">Down</string>
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id's 31600 thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->	
 	
@@ -348,15 +352,11 @@
 	<string id="31934">prefetched</string>
 	<string id="31935">Choose Custom Favourite</string>
 	
-	
 	<string id="31936">Universal Classic Background (save ram)</string>
 	<string id="31937">Universal Custom Background (Always On Top)</string>
 	<string id="31938">Enable Weather Conditional Backgrounds (Homescreen)</string>
 	<string id="31939">Recently Played</string>
 
-
-
-	
 	<string id="31999">Reset Skin Settings To Default (Press To Confirm)</string>
 
 <!--((( RCB )))===============================================================================-->

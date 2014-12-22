@@ -194,6 +194,8 @@
 				<!--bottom home now playing specific-->
 				<animation effect="slide" end="-120,459" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(NowPlayingAlignTop) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasAudio">Conditional</animation>
 				<animation effect="slide" end="-100,413" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(NowPlayingAlignTop) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasVideo">Conditional</animation>
+				<!--spinning cd home specific-->
+				<animation effect="slide" end="37,-1" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 			</control>
 		</control>
 <!--*******************************************-->

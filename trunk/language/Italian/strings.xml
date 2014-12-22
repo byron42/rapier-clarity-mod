@@ -6,7 +6,7 @@
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id's 31000 thru 31099 ooooooooooooooooooooooooooooooooooooooooooooooooo-->	
 	
-<string id="31000">n/a</string>
+	<string id="31000">n/a</string>
 
 	<!--impostazioni di pelle-->
 	<string id="31001">pulsante</string>
@@ -112,15 +112,15 @@
 
 	<string id="31200">Fast Forward</string>
 	<string id="31201">Rewind</string>
-	<string id="31202">look &amp; Feel, regione, schermo, opzioni di visualizzazione, Screensaver</string><!---impostazioni di aspetto-->
-	<string id="31203">file</string><!----------------------------------------------------------------- programs settings ---->
-	<string id="31204">generale, presentazione</string><!---impostazioni di immagini--->
-	<string id="31205">generale, biblioteca, Player, file, Scrobbler, CD Ripping, Karaoke</string><!---impostazioni musica--->
-	<string id="31206">generale, biblioteca, giocatore, sottotitoli, raschietti</string><!---impostazioni video--->
-	<string id="31207">generale</string><!--------------------------------------------------------------- weather settings ----->
-	<string id="31208">rete, server, Client SMB, impostazioni UPnP, evento Server</string><!---impostazioni di rete--->
-	<string id="31209">hardware, LCD, Autoplay, Hardware Audio, Video Hardware, Master Lock</string><!-impostazioni di sistema--->
-	<string id="31210">generale, Home, Media, sfondi, script</string><!---impostazioni di pelle--->
+	<string id="31202">look &amp; Feel, regione, schermo, opzioni di visualizzazione, Screensaver</string><!-- impostazioni di aspetto -->
+	<string id="31203">file</string><!-- programs settings -->
+	<string id="31204">generale, presentazione</string><!-- impostazioni di immagini -->
+	<string id="31205">generale, biblioteca, Player, file, Scrobbler, CD Ripping, Karaoke</string><!-- impostazioni musica -->
+	<string id="31206">generale, biblioteca, giocatore, sottotitoli, raschietti</string><!-- impostazioni video -->
+	<string id="31207">generale</string><!-- weather settings -->
+	<string id="31208">rete, server, Client SMB, impostazioni UPnP, evento Server</string><!-- impostazioni di rete -->
+	<string id="31209">hardware, LCD, Autoplay, Hardware Audio, Video Hardware, Master Lock</string><!-- impostazioni di sistema -->
+	<string id="31210">generale, Home, Media, sfondi, script</string><!-- impostazioni di pelle -->
 
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31300 thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -243,13 +243,17 @@
 	<string id="31560">verde</string>
 	<string id="31561">Allineare</string>
 	<string id="31562">In alto</string>
-	<string id="31563"></string>
-	<string id="31564"></string>
-	<string id="31565"></string>
-	<string id="31566"></string>
-	<string id="31567"></string>
-	<string id="31568"></string>
-	<string id="31569"></string>
+	<!--FILATURA CD-->
+	<string id="31563">non lo fanno</string>
+	<string id="31564">anteriore</string>
+	<string id="31565">lato</string>
+	<string id="31566">di</string>
+	<string id="31567">Spin</string>
+	<string id="31568">filatura</string>
+	<string id="31569">immagine</string>
+	<string id="31570">rotante</string>
+	<string id="31571">lento</string>
+	<string id="31572">giù</string>
 	
 <!--ooooooooooooooooooooooooooooooooooooooooo string id 31600 thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
@@ -349,13 +353,9 @@
 	<string id="31934">precaricati</string>
 	<string id="31935">scegliere preferiti personalizzati</string>
 
-
 	<string id="31936">Universal Background classico (save ram)</string>
 	<string id="31937">sfondo personalizzato universale (sempre in primo piano)</string>
 	<string id="31938">abilitare il tempo condizionale sfondi (Homescreen)</string>
-
-
-
 
 	<string id="31999">ripristinare le impostazioni di Skin di Default (premere per confermare)</string>
 
