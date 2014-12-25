@@ -1,4 +1,6 @@
 <window type="dialog" id="134">
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<defaultcontrol always="true">450</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>

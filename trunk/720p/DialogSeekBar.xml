@@ -3,18 +3,18 @@
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 	<!--DialogOpenCloseAnim-->
-	<animation condition="![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="WindowOpen">
+	<animation condition="![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Control.IsVisible(6002)]" type="WindowOpen">
 		<effect type="fade" end="100" time="150"/>
 		<!-- <effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/> -->
 	</animation>	
-	<animation condition="![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="WindowClose">
+	<animation condition="![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Control.IsVisible(6002)]" type="WindowClose">
 		<effect type="fade" end="0" time="150" />
 		<!-- <effect type="slide" end="0,45" time="200" tween="circle" easing="out"/> -->
 	</animation>
 
 <!--*************** for FullScreenInfo's (and player controls!) update ********************************-->
-	<animation effect="fade" end="100" time="0"  condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowOpen</animation>
-	<animation effect="fade"  end="0"  easing="out" condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowClose</animation>
+	<animation effect="fade" end="100" time="0"  condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Control.IsVisible(6002)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowOpen</animation>
+	<animation effect="fade"  end="0"  easing="out" condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Control.IsVisible(6002)] + Player.Seeking + [!Player.Paused | Player.Paused]">WindowClose</animation>
 <!--***************************************************************************************************-->
 	
 	<coordinates>
@@ -25,13 +25,13 @@
 	
 	<controls>
 		<control type="group" id="1111">
-			<visible>Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]</visible>
+			<visible>Control.IsVisible(6002) | Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]</visible>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
-			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114)]">Conditional</animation>
+			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
@@ -152,7 +152,7 @@
 				<ondown>1</ondown>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<visible>![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114)]</visible>
+				<visible>![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]</visible>
 			</control>
 		</control>
 <!--******** HACKED!!! ************************-->
@@ -168,7 +168,6 @@
 			<animation effect="zoom" start="0,0,1280,720" end="0,0,1510,720" time="150" condition="[Window.IsActive(2006) + Player.ShowInfo + Window.IsActive(120)] | Window.IsActive(2901)">Conditional</animation>
 			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="Window.IsActive(120)">Conditional</animation>
 			<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
-			
 			<!--home now playing-->
 			<animation effect="zoom" start="0,0,1280,720" end="0,0,560,720" time="0" condition="[Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(HideNowPlayingMedia)]">Conditional</animation>
 			<animation effect="slide" end="-115,123" time="0" condition="[Window.IsActive(Home) + Player.HasAudio + !Window.IsActive(PlayerControls) + !System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
@@ -195,9 +194,128 @@
 				<animation effect="slide" end="-120,459" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(NowPlayingAlignTop) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasAudio">Conditional</animation>
 				<animation effect="slide" end="-100,413" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(NowPlayingAlignTop) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasVideo">Conditional</animation>
 				<!--spinning cd home specific-->
-				<animation effect="slide" end="37,-1" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
+				<animation effect="slide" end="37,0" condition="Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(HideNowPlayingMedia) + Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 			</control>
 		</control>
 <!--*******************************************-->
+
+		<!--ALL OTHER WINDOWS-->
+		<control type="group" id="6002">
+			<posx>-278</posx>
+			<posy>-65</posy>
+			<animation effect="fade" start="0" end="100" time="200" >Visible</animation>
+			<animation effect="fade" start="100" end="0" time="200" >Hidden</animation>
+			<visible>!Player.Paused + ![Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]]</visible>
+			<control type="progress">
+				<description>Progressbar</description>
+				<width>1280</width>
+				<height>40</height>
+				<info>Player.Progress</info>
+				<visible>!Player.Caching</visible>
+			</control>
+			<control type="progress">
+				<description>Player Caching Progress Bar</description>
+				<width>1280</width>
+				<height>40</height>
+				<aspectratio>stretch</aspectratio>
+				<reveal>true</reveal>
+				<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
+				<info>Player.CacheLevel</info>
+				<visible>Player.Caching</visible>
+			</control>
+			<control type="slider" id="401">
+				<description>Seek Slider</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>37</height>
+				<texturesliderbar>seekslider.png</texturesliderbar>
+				<textureslidernib>slider_nibFO.png</textureslidernib>
+				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+			</control>
+			<control type="image">
+				<description>dimmer</description>
+				<posx>-10</posx>
+				<posy></posy>
+				<width>1300</width>
+				<height>40</height>
+				<colordiffuse></colordiffuse>
+				<texture border="10,10,10,10">background-dim.png</texture>
+				<animation effect="fade" end="30" condition="true">Conditional</animation>
+				<bordersize></bordersize>
+			</control>
+			<control type="image">
+				<description>Media Overlay Image</description>
+				<posx>-10</posx>
+				<posy></posy>
+				<width>1300</width>
+				<height>40</height>
+				<colordiffuse>BBBBBBBB</colordiffuse>
+				<texture border="10,10,10,10">Glass/ShutDownButtonAlt.png</texture>
+				<bordersize></bordersize>
+			</control>
+			<control type="group">
+				<posy>3</posy>
+				<!--playstate images-->
+				<control type="label">
+					<description>Playing Label</description>
+					<posx>440</posx>
+					<posy>1</posy>
+					<width>400</width>
+					<height>25</height>
+					<align>center</align>
+					<font>font_22_B</font>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible></visible>
+				</control>
+				<!--progressbar dialog-->
+				<control type="label" id="22">
+					<description>Elapsed Time Label</description>
+					<posx>15</posx>
+					<posy>1</posy>
+					<font>font_22_B</font>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<info>Player.Time</info>
+					<width>200</width>
+					<height>20</height>
+					<visible>!Player.Seeking</visible>
+				</control>
+				<control type="label" id="22">
+					<description>Seek Time Label</description>
+					<posx>15</posx>
+					<posy>1</posy>
+					<font>font_22_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>left</align>
+					<info>Player.SeekTime</info>
+					<width>200</width>
+					<height>20</height>
+					<visible>Player.Seeking</visible>
+				</control>
+				<control type="label" id="0">
+					<description>Duration Label</description>
+					<posx>1265</posx>
+					<posy>1</posy>
+					<label>$INFO[Player.Duration]</label>
+					<font>font_22_B</font>
+					<textcolor>BBDCDCDC</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<width>200</width>
+					<height>20</height>
+				</control>
+			</control>
+		</control>
+		
 	</controls>
 </window>
