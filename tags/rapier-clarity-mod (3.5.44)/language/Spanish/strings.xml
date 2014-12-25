@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!-- string id's 31000 thru 31999 are reserved for skins -->
+
+<strings>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31000 de id thru 31099 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31000">N/A</string>
+
+	<!--configuración de piel-->
+	<string id="31001">botón</string>
+	<string id="31010">General</string>
+	<string id="31011">Inicio</string>
+	<string id="31012">fondos</string>
+	<string id="31013">los medios de comunicación</string>
+	<string id="31014">restablecer la configuración</string>
+	<string id="31015">ocultar</string>
+	<string id="31016">habilitar</string>
+	<string id="31017">Dim</string>
+	<string id="31018">cambio</string>
+	<string id="31019">información</string>
+
+	<!--configuración general de la piel-->
+	<string id="31020">ocultar la barra de desplazamiento para estos modos de vista</string>
+	<string id="31021">ocultar panel de información del fondo</string>
+	<string id="31022">no Mostrar la visualización de la música en el fondo</string>
+	<string id="31023">no mostrar el Video de fondo</string>
+	<string id="31024">ocultar panel de fondo blanco resalte</string>
+	<string id="31025">ocultar barra de desplazamiento</string>
+	<string id="31026">Mostrar el clima en la barra superior</string>
+	<string id="31027">no oscurece la pantalla cuando un diálogo es Visible</string>
+	<string id="31028">color de la barra superior de cambio</string>
+	<string id="31029">gris</string>
+	<string id="31030">negro</string>
+	<string id="31031">azul</string>
+	<string id="31032">blanco</string>
+	<string id="31034">Lisa</string>
+	<string id="31035">raya</string>
+	<string id="31036">activar el modo Kiosk</string>
+
+	<string id="31041">Ocultar descripción</string>
+	<string id="31042">ocultar etiquetas</string>
+	<string id="31043">ocultar Fanart</string>
+	<string id="31044">ocultar la trama</string>
+	<string id="31045">ocultar cubierta</string>
+	<string id="31046">ocultar superposición visto</string>
+	<string id="31047">no se atenúan Fanart</string>
+	<string id="31048">ocultar las banderas de los medios de comunicación</string>
+	<string id="31049">ocultar estudio banderas</string>
+	<string id="31050">cambio de posición de enfoque</string>
+
+	<!--piel ajustes fondos-->
+	<string id="31051">se aplican a la ventana de inicio sólo</string>
+	<string id="31052">se aplican a todos</string>
+
+	<string id="31053">fondos personalizados</string>
+	<string id="31054">ruta de la imagen</string>
+	<string id="31055">ruta multi imagen</string>
+	<string id="31056">imagen de uso para el fondo</string>
+	<string id="31057">Uso Multi imagen para el fondo</string>
+	<string id="31060">Dim fondo (no se aplica a la ventana de la casa)</string>
+	<string id="31061">Windows</string>
+	<string id="31063">animar Fanart</string>
+	<string id="31064">animar a fondo</string>
+
+	<!--configuración de casa de la piel-->
+	<string id="31070">ocultar estas categorías</string>
+	<string id="31071">ocultar ahora jugando para música</string>
+	<string id="31072">ocultar ahora jugando para Videos</string>
+	<string id="31074">siempre ocultar los iconos de categoría</string>
+	<string id="31075">Mostrar botones de navegación (para los usuarios del ratón)</string>
+	<string id="31076">ocultar los iconos de categoría cuando Video jugando</string>
+	<string id="31077">ocultar películas recientes</string>
+	<string id="31078">ocultar programas recientes de televisión</string>
+	<string id="31079">ocultar recientes álbumes</string>
+	<string id="31080">ocultar información en pantalla de inicio del sistema</string>
+	<string id="31081"></string>
+	<string id="31082">icono personalizado</string>
+	<string id="31083">fondo</string>
+	<string id="31084">etiqueta de la categoría</string>
+	<string id="31085">ningún foco</string>
+	<string id="31086">foco</string>
+	<string id="31095">tipo de botón</string>
+	<string id="31097">etiqueta</string>
+	<string id="31098">botón Propiedades</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo cadena 31100 de id thru 31199 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--ver tipos-->
+	<string id="31101">vista</string>
+	<string id="31102">todas las vistas</string>
+	<string id="31103">icono</string>
+	<string id="31104">icono grande</string>
+	<string id="31105">lista</string>
+	<string id="31106">envuelva la lista</string>
+	<string id="31107">miniatura</string>
+	<string id="31108">icono</string>
+	<string id="31110">Fanart</string>
+	<string id="31111">información</string>
+	<string id="31112">lista de episodios</string>
+	<string id="31113">amplia lista</string>
+	<string id="31114">lista de Banner</string>
+	<string id="31115">escaparate</string>
+	<string id="31116">gran cartel</string>
+	<string id="31117">vista de la pared</string>
+	<string id="31118">WideSlimList</string>
+	<string id="31119">3D envolver vista</string>
+	<string id="31120">información 2</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31200 de id thru 31299 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31200">avance rápido</string>
+	<string id="31201">Rewind</string>
+	<string id="31202">look &amp; Feel, región, pantalla, opciones de visualización, Screensaver</string><!-- ajustes de aspecto -->
+	<string id="31203">archivos</string><!-- programs settings -->
+	<string id="31204">General, presentación de diapositivas</string><!-- ajustes cuadros -->
+	<string id="31205">General, biblioteca, reproductor, archivos, Last.FM, CD Ripping, Karaoke</string><!-- ajustes de música -->
+	<string id="31206">General, biblioteca, reproductor, subtítulos, raspadores</string><!-- ajustes videos -->
+	<string id="31207">General</string><!-- weather settings -->
+	<string id="31208">servidores, red, configuración de UPnP, evento de servidor, cliente SMB</string><!-- configuración de red -->
+	<string id="31209">hardware, LCD, Autoplay, Hardware de Audio, Hardware de vídeo, Master Lock</string><!-- ajustes del sistema -->
+	<string id="31210">General, hogar, medios de comunicación, fondos, Scripts</string><!-- piel ajustes -->
+
+<!--ooooooooooooooooooooooooooooooooooooooooo cadena 31300 de id thru 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31300">Last Updated</string>
+	<string id="31301">OpenSubtitles_OSD</string>
+	<string id="31302">jugando</string>
+	<string id="31303">en pausa</string>
+	<string id="31304">avance rápido</string>
+	<string id="31305">REWIND</string>
+	<string id="31309">memoria usada</string>
+	<string id="31315">básico</string>
+
+<!--CRÉDITOS PERSONALIZADOS-->
+	<string id="31320"> - marco creado por Qualar</string>
+	<string id="31321"> - el tiempo condicional y giratoria CD Mod creado por Qualar</string>
+	<string id="31322"> - presenta los fondos dispuestos por Byron</string>
+	<string id="31323"> - nuevos controles de medios de comunicación, conceptos de diálogo de pantalla completa y Zoom listas crearon por Byron</string>
+	<string id="31324"> - Inicio del tiempo de adición por Byron</string>
+	<string id="31325"> - iconos creados por Evan Brooks</string>
+	<string id="31326"> - iconos de la ventana Página crearon por Arcanthur</string>
+	<string id="31327"> - estudio iconos proporcionan por la comunidad XBMC</string>
+	<string id="31328"> - vistas adicionales proporcionados por Wannabegt4 y Sranshaft</string>
+	<string id="31329">gracias especialmente a BUZZ para la continuación de XBMC4XBOX y cualquiera que ha contribuido a mantener este viejo caballo corriendo y REAL. Lo más importante, gracias a SCARFA para hacer este impresionante piel a -</string>
+	<string id="31330">gracias al equipo XBMC para crear y mantener un programa tan maravilloso que me ha dado mucha alegría para un número de años. Gracias también a los desolladores ante mí que abrió el camino con sus pieles impresionantes -</string>
+	<string id="31331">(piel original por Scarfa, Mod por Byron)</string>
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31400 de id thru 31499 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--piel ajustes medios-->
+	<string id="31400">Top ocultar opciones de barra de menú (Mostrar sólo cuando se selecciona)</string>
+	<string id="31401">no se desplazan parcela</string>
+	<string id="31402">ocultar caso de DVD</string>
+	<string id="31403">cdArt ocultar rotando en el visualizador</string>
+	<string id="31404">cubiertas de carteles de uso</string>
+	<string id="31405">reproducción de música</string>
+	<string id="31406">jugar video</string>
+	<string id="31407">visualización de uso para el fondo</string>
+	<string id="31408">Fanart de artista de uso para el fondo</string>
+	<string id="31409">activar la visualización de la música / Fanart del artista en el fondo</string>
+	<string id="31410">habilitar Video jugando en el fondo</string>
+	<string id="31411">envoltura plana</string>
+	<string id="31412">envoltura plana pequeño</string>
+	<string id="31413">envuelva 3D</string>
+	<string id="31414">ocultar diálogo de información de los medios de comunicación</string>
+	<string id="31415">ocultar caso de álbum</string>
+	<string id="31416">no se desplazan Descripción</string>
+	<string id="31417">lista de Banner</string>
+	<string id="31418">lista clásica</string>
+	<string id="31419">icono Panel</string>
+	<string id="31420">Mostrar completo parcela</string>
+	<string id="31421">ocultar lista de envoltura de sombra</string>
+	<string id="31422">todos</string>
+	<string id="31423">estilo</string>
+	<string id="31424">ocultar pequeño superposición de vídeo</string>
+
+	<string id="31442">Elija una carpeta</string>
+	<string id="31443">Elija un Plugin</string><!--HomePlugins.py-->
+	<string id="31444">Elija un Script</string><!--HomeScripts.py-->
+	<string id="31445">(Seleccione '' camino '' para navegar)</string>
+	<string id="31446">Elija el tipo de botón</string>
+	<string id="31447">Elija el botón parámetros</string>
+	<string id="31448">Usar pantalla de volumen más pequeño (medios de pantalla completa)</string>
+	<string id="31449"></string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31500 de id thru 31599 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--scripts de configuración de piel-->
+	<string id="31500">Mostrar botón OpenSubtitles_OSD (secuencia de comandos debe instalarse)</string>
+
+	<!--Configuración Tiempo de la piel-->
+	<string id="31510">desactivar el tiempo condicional fondos</string>
+	<string id="31511">desactivar iconos animados del tiempo</string>
+
+	<!--falta piel ajustes cuerdas (ESPACIO en BLANCO ES INTENCIONAL!!!)-->
+	<string id="31520">barra superior</string>
+	<string id="31521">restablecer la piel</string>
+	<string id="31522">migas de pan</string>
+	<string id="31523">Color de la barra superior de cambio</string>
+	<string id="31524">vainilla</string>
+	<string id="31525">negro</string>
+	<string id="31526">gris</string>
+	<string id="31527">Cambiar icono colores</string>
+	<string id="31528">vainilla</string>
+	<string id="31529">blanco</string>
+
+	<string id="31530">cambiar pestaña colores</string>
+	<string id="31531">vainilla</string>
+	<string id="31532">Gray</string>
+	<string id="31533">cambiar colores de fuente de migas de pan</string>
+	<string id="31534">vainilla</string>
+	<string id="31535">azul</string>
+	<string id="31536">blanco</string>
+	<string id="31537">ocultar panel de información del fondo</string>
+	<string id="31538">ocultar el icono de inicio XBMC4XBOX</string>
+	<string id="31539">casa ocultar icono de búsqueda</string>
+
+	<string id="31540">ocultar las flechas de navegación de submenú</string>
+	<string id="31541">ADD ONS</string>
+	<string id="31542">Personalizar Sub Menus</string>
+	<string id="31543">PANEL información</string>
+	<string id="31544">siempre ocultar los iconos de categoría</string>
+	<string id="31545">Ocultar iconos de categoría cuando Video jugando</string>
+	<string id="31546">Ocultar iconos de tipo de medios en biblioteca Views</string>
+	<string id="31547">ocultar el icono de tipo de medios Un-Selected</string>
+	<string id="31548">ocultar el icono de tipo de medios seleccionado</string>
+	<string id="31549">los medios de comunicación al marcar</string>
+
+	<string id="31550">uso [COLOR = MediaInfoItemColor] MPAA banderas [/ color] para calificaciones</string>
+	<string id="31551">uso [COLOR = MediaInfoItemColor] OFLC banderas [/ color] para calificaciones</string>
+	<string id="31552"> -a ctualización necesaria</string>
+	<string id="31553">ver animaciones</string>
+
+	<string id="31554">por defecto (azul)</string>
+	<string id="31555">por defecto (gris)</string>
+	<string id="31556">ocultar barra de submenú superior (Mostrar sólo cuando seleccionado)</string>
+	<string id="31557">ocultar las flechas de navegación de submenú</string>
+	<string id="31558">activar las opciones de fondo</string>
+	<string id="31559">rojo</string>
+
+	<string id="31560">verde</string>
+	<string id="31561">Alinear</string>
+	<string id="31562">Arriba</string>
+	<!--GIRO CD-->
+	<string id="31563">no</string>
+	<string id="31564">delantero</string>
+	<string id="31565">lado</string>
+	<string id="31566">de</string>
+	<string id="31567">Spin</string>
+	<string id="31568">Spinning</string>
+	<string id="31569">imagen</string>
+	<string id="31570">giratorio</string>
+	<string id="31571">lento</string>
+	<string id="31572">abajo</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo cadena 31600 de id thru 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31601">script</string>
+	<string id="31602">plugin</string>
+	<string id="31603">Favoritos</string>
+	<string id="31604">encontrados</string>
+	<string id="31605">artículos</string>
+	<string id="31606">encontrar más artículos</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31700 de id thru 31799 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--OSD-->
+	<string id="31700">CODEC</string>
+	<string id="31701">BITRATE</string>
+	<string id="31702">SAMPLERATE</string>
+	<string id="31703">canales</string>
+	<string id="31704">siguiente</string>
+	<string id="31705">REWIND</string>
+	<string id="31706">adelante</string>
+	<string id="31707">volumen</string>
+	<string id="31708">posición</string>
+	<string id="31709">tiempo de funcionamiento</string>
+	<string id="31710">tiempo de final</string>
+	<string id="31711">marcadores disponibles</string>
+	<string id="31712">arriba/abajo: izquierda/derecha del menú/marcadores [CR]: opciones de menú</string>
+	<string id="31713">artículos en la lista de reproducción</string>
+	<string id="31714">posición actual</string>
+	<string id="31715">anterior</string>
+	<string id="31716">título de la canción</string>
+	<string id="31717">título del álbum</string>
+	<string id="31718">nombre del artista</string>
+	<string id="31719">tiempo transcurrido / duración</string>
+	<string id="31720">hora actual</string>
+
+	<string id="31721">buscando</string>
+	<string id="31722">en pausa</string>
+	<string id="31723">FF - X 2</string>
+	<string id="31724">FF - X 4</string>
+	<string id="31725">FF - X 8</string>
+	<string id="31726">FF - X 16</string>
+	<string id="31727">FF - X 32</string>
+	<string id="31728">RW - X 2</string>
+	<string id="31729">RW - X 4</string>
+	<string id="31730">RW - X 8</string>
+	<string id="31731">RW - X 16</string>
+	<string id="31732">RW - X 32</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo cadena 31800 de id thru 31899 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Casa Sub Menus-->
+	<string id="31800">Video Feeds</string>
+	<string id="31801">Plugins de video</string>
+	<string id="31802">videoteca</string>
+	<string id="31803">SACABOTAS</string>
+	<string id="31804">añadido recientemente</string>
+
+<!--ooooooooooooooooooooooooooooooooooooooooo string 31900 de id thru 31999 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Contenido script de búsqueda-->
+	<string id="31900">seleccionar el contenido a buscar para...</string>
+	<string id="31901">cadena de búsqueda de contenido de Enter...</string>
+	<string id="31902">búsqueda de contenido cancelada!</string>
+	<string id="31903">no hay cadena de búsqueda proporcionada!</string>
+	<string id="31904">contenido seleccionado no!</string>
+	<string id="31905">solicitud de usuario...</string>
+	<string id="31906">nueva búsqueda</string>
+	<string id="31907">página</string>
+
+	<!--Faltan etiquetas pan Rallado-->
+	<string id="31910">los medios de comunicación</string>
+	<string id="31911">foto</string>
+	<string id="31912">perfil</string>
+
+	<!--Falta de etiquetas-->
+	<string id="31913">Personalizar submenús</string>
+	<string id="31914">uso de números para calificaciones</string>
+	<string id="31915">vuelta</string>
+	<string id="31916">CAPS</string>
+	<string id="31917">IP</string>
+	<string id="31918">los medios de comunicación</string>
+	<string id="31919">Add-ons</string>
+	<string id="31920">ajustes</string>
+	<string id="31921">aplicaciones</string>
+	<string id="31922">emuladores</string>
+	<string id="31923">ajustes preestablecidos</string>
+	<string id="31924">Seleccione VIZ</string>
+	<string id="31925">búsqueda de YOUTUBE video musical</string>
+	<string id="31926">LYRICS</string>
+	<string id="31927">Skip</string>
+	<string id="31928">inversa</string>
+	<string id="31929">parar</string>
+	<string id="31930">pausa</string>
+	<string id="31931">adelante</string>
+	<string id="31932">juegos</string>
+	<string id="31933">pantalla completa de salida</string>
+	<string id="31934">buscados</string>
+	<string id="31935">Elija personalizado favorito</string>
+
+	<string id="31936">Fondo clásico universal (excepto ram)</string>
+	<string id="31937">fondo personalizado universal (siempre en la parte superior)</string>
+	<string id="31938">activar el tiempo condicional fondos (pantalla de inicio)</string>
+
+	<string id="31999">restablecer la configuración de la piel por defecto (Pulse para confirmar)</string>
+
+</strings>

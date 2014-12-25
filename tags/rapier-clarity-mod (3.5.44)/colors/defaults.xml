@@ -1,0 +1,64 @@
+<colors>
+
+	<!-- Organized -->
+
+	<color name="InfoPaneHeaderColor">fff7941d</color>
+	<color name="InfoPaneDetailsColor">ffffffff</color>
+	
+	<color name="MediaInfoHeaderColor">fff7941d</color>
+	<color name="MediaInfoDetailsColor">ffffffff</color>
+	
+	<color name="InfoDialogHeaderColor">fff7941d</color>
+	<color name="InfoDialogDetailsColor">ff626262</color>
+	
+	<color name="ListLabelUnfocusedColor">ff626262</color>
+	<color name="ListLabelFocusedColor">fff7941d</color>
+	<color name="ListLabel2UnfocusedColor">ffffffff</color>
+	<color name="ListLabel2FocusedColor">fff7941d</color>
+	
+	<color name="ButtonColor">ff626262</color>
+	<color name="ButtonFocusColor">fff7941d</color>
+	
+	<color name="MenuBarLabelUnfocusedColor">ff626262</color>
+	<color name="MenuBarLabelFocusColor">fff7941d</color>
+	
+	<color name="MenuItemColor">ff626262</color>
+	<color name="MenuItemFocusColor">fff7941d</color>
+	
+	<color name="SelectedColor">fff7941d</color>
+	<color name="DisabledColor">ff5f5f5f</color>
+
+	<color name="Gray">ff626262</color>
+	<color name="BreadCrumbColor">CC626262</color> <!-- BLUE -->
+	<color name="BreadCrumbColor2">ff6F6F6F</color>
+	<color name="ScreenCalibrationColor">ffffffff</color>
+	<color name="DialogTitleColor">fff7941d</color>
+	<color name="TopBarStatusColor">ff626262</color>
+	<color name="TopBarStatusColor2">fff7941d</color>
+	<color name="TopBarBackgroundColor1">ff454A4F</color> <!--BLUE-->
+	<color name="LoginScreenInfoSeparatorColor">ff6F6F6F</color>
+	<color name="PartyModeLabelColor">ffed6464</color>
+	<color name="ProgressLabelColor">ffffffff</color>
+	
+	<!-- Original Mess -->
+	
+	
+	<color name="SelectedColor2">fff77a1d</color>
+	<color name="DisabledColor">ff5f5f5f</color>
+	<color name="MediaInfoHeadColor">fff7941d</color>
+	<color name="MediaInfoHeadColor2">fff7941d</color>
+	<color name="MediaInfoItemColor">fff7941d</color>
+	<color name="MediaInfoItemColor2">ffdbdbdb</color>
+	<color name="MediaInfoContentColor">ffffffff</color>
+	
+	<!-- Named Colors -->
+	
+	<color name="White">ffffffff</color>
+	<color name="Grey">ff626262</color>
+	<color name="ThemeColor">fff7941d</color>  <!--This is the main theme color, orange -->
+	<color name="DefaultColor">ffffffff</color>
+	<color name="ShadowColor">ff000000</color>
+	<color name="ThemeColor2">ff71A6D2</color>  <!--Slightly lighter colour than theme color default light blue -->
+	<color name="ThemeColor3">FFCC6E6E</color>  <!--ThemeColor2 from other theme for diffusing skin settings buttons (RED) -->
+	
+</colors>

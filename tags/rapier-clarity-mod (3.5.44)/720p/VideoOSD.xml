@@ -1,0 +1,346 @@
+<window id="2901">
+	<defaultcontrol always="true">404</defaultcontrol>
+	
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>	
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
+				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
+				
+	<!--(((SIDE BUTTONS)))============================================================================================================-->
+				
+				<control type="image">
+					<description>Media Underlay Image</description>
+					<posx>-5</posx>
+					<posy>-5</posy>
+					<width>1290</width>
+					<height>130</height>
+					<!-- <texture>FSVid_icons_top.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>FFFFFFFF</colordiffuse> -->
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+				</control>
+				
+				<control type="grouplist" id="900">	
+					<orientation>horizontal</orientation>
+					<posx>150</posx>
+					<posy>25</posy>
+					<itemgap>82</itemgap>
+					<ondown>9000</ondown>
+					<control type="button" id="60111">
+						<description>VIDEO SUBTITLES</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[291] $LOCALIZE[287] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-subtitles-focus.png</texturefocus>
+						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">PlayerControl(Play)</onclick>
+						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
+						<!-- INSTALLED -->
+						<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
+						<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + !IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [TV]$INFO[VideoPlayer.Season] $INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVshowtitle][/TV])</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<!-- <visible>System.HasAddon(script.xbmc.subtitles)</visible> -->
+					</control>	
+					
+					<!-- <control type="button" id="601">
+						<description>VIDEO SUBTITLES</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[291] $LOCALIZE[287] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-subtitles-focus.png</texturefocus>
+						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org,Return)</onclick>
+						<visible>!System.HasAddon(script.xbmc.subtitles)</visible>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control> -->
+					
+					<control type="button" id="602">
+						<description>AUDIO SETTINGS BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[292] $LOCALIZE[5] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-audio-settings-focus.png</texturefocus>
+						<texturenofocus>osd-audio-settings-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="603">
+						<description>VIDEO SETTINGS BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[291] $LOCALIZE[5] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-video-settings-focus.png</texturefocus>
+						<texturenofocus>osd-video-settings-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="604">
+						<description>BOOKMARKS</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[298] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-bookmarks-focus.png</texturefocus>
+						<texturenofocus>osd-bookmarks-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>ActivateWindow(VideoBookmarks)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="605">
+						<description>dvd menu</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[543] $LOCALIZE[33061] </label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-dvd-focus.png</texturefocus>
+						<texturenofocus>osd-dvd-nofocus.png</texturenofocus>
+						<usealttexture></usealttexture>
+						<alttexturefocus></alttexturefocus>
+						<alttexturenofocus></alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>PlayerControl(ShowVideoMenu)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="407">
+						<description>EXIT FULLSCREEN BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[31933] </label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<align></align>
+						<texturefocus>osd-exit-fullscreen-focus.png</texturefocus>
+						<texturenofocus>osd-exit-fullscreen-nofocus.png</texturenofocus>
+						<onclick>Dialog.Close(VideoOSD,true)</onclick>
+						<onclick>FullScreen</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="400">
+						<description>EJECT/LOAD</description>
+						<width>70</width>
+						<height>70</height>
+						<label> $LOCALIZE[162] </label>
+						<font></font>
+						<texturefocus>osd-eject-load-drive-focus.png</texturefocus>
+						<texturenofocus>osd-eject-load-drive-nofocus.png</texturenofocus>
+						<onclick>EjectTray()</onclick>
+						<pulseonselect>false</pulseonselect>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(123) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
+				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
+				
+				<control type="image">
+					<description>Media Underlay Image</description>
+					<posx>-5</posx>
+					<posy>-5</posy>
+					<width>1290</width>
+					<height>130</height>
+					<!-- <texture>FSVid_icons_bottom.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>FFFFFFFF</colordiffuse> -->
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+				</control>
+				
+	<!--(((MAIN BUTTONS)))============================================================================================================-->	
+				<control type="grouplist" id="9000">
+					<posx>291</posx>
+					<posy>19</posy>
+					<orientation>horizontal</orientation>
+					<itemgap>52</itemgap>
+					<onup>900</onup>
+					<description>Player Controls</description>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="button" id="401">
+						<description>SKIP PREVIOUS BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31927] </label>
+						<font></font>
+						<texturefocus>osd-skip-prev-focus.png</texturefocus>
+						<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Previous)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="402">
+						<description>REWIND BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31928] </label>
+						<font></font>
+						<texturefocus>osd-rewind-focus.png</texturefocus>
+						<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="403">
+						<description>STOP BUTTON</description>
+						<width>85</width>
+						<height>85</height>
+						<label> $LOCALIZE[31929] </label>
+						<font></font>
+						<texturefocus>osd-stop-focus.png</texturefocus>
+						<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Stop)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible></visible>
+					</control>
+					<control type="togglebutton" id="404">
+						<description>PAUSE PLAY ETC BUTTON</description>
+						<width>85</width>
+						<height>85</height>
+						<label> $LOCALIZE[31930] </label>
+						<altlabel></altlabel>
+						<font></font>
+						<texturefocus>osd-pause-focus.png</texturefocus>
+						<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>osd-play-focus.png</alttexturefocus>
+						<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+						<onclick>PlayerControl(Play)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="405">
+						<description>FAST FORWARD BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31931] </label>
+						<font></font>
+						<texturefocus>osd-forward-focus.png</texturefocus>
+						<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Forward)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="406">
+						<description>SKIP NEXT BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31927] </label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<align></align>
+						<texturefocus>osd-skip-next-focus.png</texturefocus>
+						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Next)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+				</control>	
+			<!--labels/time-->
+				<control type="label" id="2222">
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label> [UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE] </label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<aspectratio></aspectratio>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>'
+					<visible>Window.IsTopmost(VideoOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
+				</control>
+				<control type="label">
+					<posx>1005</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label>$INFO[System.Time]</label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

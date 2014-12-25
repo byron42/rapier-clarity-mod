@@ -1,0 +1,1023 @@
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+12.12.14 Version 3.5.44
+
+
+	12.25.14
+------------------------------------------------------------------------------
+		= Added seekbar to topbar area when non media windows are visible...
+		  not much of an upgrade, but necessary since the option to do so
+	          is available in any window when media is playing.
+
+		= TAGGING 3.5.44
+
+
+	12.21.14
+------------------------------------------------------------------------------
+		= Added a new disc image for the spinning CD/CdArt...also added a couple
+		  options (made a specific category for this) - to slow it down, or to
+		  stop it...gearing this towards a user that has CdArt and wants to be
+		  able to see the disc cover moving at a reasonable rate...looks nice.
+		  Also for those that like the look of the old "lightscribe" disc there
+		  is also an option to switch to that disc as well under :Show front of
+		  disc:
+
+
+	12.19.14
+------------------------------------------------------------------------------
+		= Scaled back busy animation...amazing what removing 10kb of a .png 
+		  will do for not crashing this program during a crutial process... 
+
+
+	12.18.14
+------------------------------------------------------------------------------
+		= UPDATED Home NowPlaying...got rid of the old slide out box with
+		  limited space and changed to what I've done with (PlayerControls).
+		  There is an option to align this on the top or the bottom in skin
+		  settings (default is bottom) under SKIN SETTINGS/HOME/NOW PLAYING...
+
+
+		 ***************** NOT VISIBLE WHEN MEDIA IS PLAYING ***************
+
+		= Straightened out System Info panel on Home Window
+
+		= Added a Weather Info Panel on Home Window (same thing as System
+		  Info except weather data is displayed)
+
+		= Dropped recently added menu down to the same spot as System/Weather
+		  widgets...should add a tad bit more uniformity.  
+			
+		 *******************************************************************
+
+
+		= Fixed DialogVolumeBar.xml to show the big bar when (PlayerControls) is
+		  on the screen
+
+		= Deleted includes_OSDNotifications.xml - zero reasons to keep it
+
+
+	12.12.14
+------------------------------------------------------------------------------
+		= Cleaned up Font.xml - it only affected 90% of the files :| 
+		  In doing this (cutting the size of the file in half) it freed
+		  up .6 MB of RAM...I was actually a little surprised because
+		  I honestly was thinking it would be significantly more.  It's
+		  enough of a difference to commit it though, I'll take what I 
+		  can get out of this thing...
+
+		= Fixed Profiles BreadCrumb label (from "favourites")
+
+		= Quick fix for home system info...gave me some good ideas for
+		  the entire home menu theme and other things (not commited)
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+11.29.14 Version 3.5.43
+
+	12.11.14
+------------------------------------------------------------------------------
+		= REVAMPED (PlayerControls)...looks good and works properly
+
+		= Changed FullScreenInfo and Viz ShowInfo to match what I did with
+		  (PLayerControls)
+
+		= Made Changes to Video/MusicOSD to follow suit with what I 
+		  changed from (PlayerControls)...It looks really nice now
+		  that there's congruency between all of these media windows.
+
+		= Added the ability to change the OSD backing color (gray,theme,
+		  theme 2) from skin settings
+
+		= Fixed a bug with coverflow images being visible when entering 
+		  containers while the view isn't visible (mostly when progress 
+		  dialog is visible)
+
+
+	12.5.14
+------------------------------------------------------------------------------
+		= Removing all RCB fonts originally added to font.xml - it was
+		  ultimately not needed (rcb works with out this) and it was
+		  snatching 1.5mb of RAM at startup...glad I caught this, and
+		  this also opens my eyes to cleaning up font.xml because there
+		  are many fonts of the same style and type with different names.
+		  Perhaps by unifying these I'll be able to gain a decent amout
+		  of RAM back that otherwise would be wasted due to sloppy 
+		  coding.
+
+
+	11.30.14
+------------------------------------------------------------------------------
+		= Added an option to change the volume display size for 
+		  fullscreen media (for Oldxboxusa)
+
+		= Added G Drive to the center column in (FileManger)
+
+
+	11.29.14
+------------------------------------------------------------------------------	
+		= Wasn't my intention to start with this...but I finally think
+		  I figured a way to make all of the fluff from programs views
+		  disappear when window loads with progress dialog visible. 
+  		  Not very exciting to most I'm sure...but I've been trying to 
+		  figure this out for a REALLY long time (stringcompare the 
+		  veiw's label!)
+
+		= Added RCB into skin/scripts...figured out how to hack the labels
+		  to show up finally by adding the strings (original string id's
+	   	  in tact) into my skin's strings.xml's - also added the fonts
+		  (.ttf) + the font code into my skin's Font.xml
+
+		= Added R.C.B. onto PROGRAMS submenu...runs the script right from
+		  home.  Also made Apps and Emus not visible on program's 
+		  submenu (default)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+11.19.14 Version 3.5.42
+
+	11.29.14
+------------------------------------------------------------------------------	
+		= Changed Label fading time (CoverFlow) when InfoPane isn't 
+		  visible...no reason to have a delay when switching items 
+		  imo...thought originally that it would help smoothness, not
+		  the case.  I'm not sure anything can help smoothness with
+		  64mb RAM and a lame processor with that much going on 
+		
+		= Made a hack with the seekbar...been trying to figure this
+		  out for a looooooong time, slider now works in FullScreen-
+		  videoInfo without the whole seekbar entourage being visible.
+		  I gotta pat myself on the back for this one, next step is 
+		  to transfer this into HomeNowPlaying and PlayerControls
+	
+
+	11.27.14
+------------------------------------------------------------------------------	
+		= CoverFlow should be wrapped up at this point unless I missed 
+		  something
+
+		= Added an experimental wide icon view to games
+
+		= fixed a bug with the list view jumping when upper menu is 
+		  accessed (problem with the scrollbar id)
+	
+		= made a quick fix for Now Playing Music when spinning cd isn't
+		  visible
+
+	11.27.14
+------------------------------------------------------------------------------	
+		= added a Poster style icon option for CoverFlow in pictures, 
+		  videos, scripts and programs
+
+	11.25.14
+------------------------------------------------------------------------------
+		= Added CoverFlow view to VideoLibrary (Movies,TvShows,Seasons,
+		  Sets)
+
+		= Added CoverFlow view to Programs, Scripts, Pictures, Videos...
+		  I'm still uncertain of a couple of things (label visible while
+		  infopane is?), and before I push another release I would like
+		  to possibly add a "tall" option for programs (games).  This 
+		  view is pretty well wrapped up for now
+
+
+	11.20.14
+------------------------------------------------------------------------------
+		= Added a skin settings option for switching to a higher 
+		  background resolution...most of the code was added into
+		  includes and surprisingly it didn't really impact RAM
+		  usage all that much.  In fact it appears at first glance
+		  that when backing out to the home screen RAM usage is 
+		  less than before I implemented this.  Same backgrounds,
+		  except at 960x540 resolution...
+		
+		= Fixed a bug with pictures backgrounds not un-dimming 
+		  when told to do so
+	
+		= Found and fixed the overly dark background dimming for 
+		  list view in (videolibrary)
+
+		= Added a skin setting for dimming or un-dimming home
+		  window backgrounds (default's to dim)
+
+
+	11.19.14
+------------------------------------------------------------------------------
+		= Added CoverFlow view into all music containers...Now that I've
+	   	  got a template that works, it shouldn't take long for the rest
+		  of the containers that I want to add this view into.  Started 
+		  with what I backported form Transparency (x4x) and fine tuned
+		  it from there making it pretty much my own (thx to ronie for
+		  the original view, the cdcase, and the reflection diffuse)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+10.21.14 Version 3.5.41
+
+	11.11.14
+------------------------------------------------------------------------------
+		= Made many changes in (Programs), fixed Icon view (I'll be
+		  implementing this in all of the other Icon views skinwide),
+		  fixed LargePoster Resolution to be exact to 5x7.
+
+		= Changed the gloss overlay animation in LargePoster so it 
+		  disappears immediately. 
+
+		= Reproduced Icon veiw from what I did in programs through all
+		  of the other 9 times this view is active in main windows...
+		  got rid of about 900 lines of garbage code in the process.
+		  
+
+	11.5.14
+------------------------------------------------------------------------------
+		= Fixed a bug with a Large Poster texture showing up every time
+		  a4x installer opened from home menu
+
+		= Completely remade TextViewer.xml to a fullscreen dialog...
+		  it looks pretty now
+
+	11.1.14
+------------------------------------------------------------------------------
+		= Changed Large Poster (Programs) to work in all programs 
+		  windows (not just games anymore).  Suggestion would be to
+  		  use this view only in containers where thumbs are readily
+		  available...otherwise it becomes difficult to use if the 
+                  folder icons are the only thing that's visible (list view
+		  would be better for these containers)
+
+
+	10.25.14
+------------------------------------------------------------------------------
+		= (MusicFiles) and (Programs) are now set up to work with List
+		  View extra media...however I can't figure out anything that 
+		  works to put in the box at this point.  At least it's set up
+		  to work at this point from Custom View Options and will be 
+		  easily implimented when ready.
+
+		= Added fanart to DialogVideoInfo
+
+		= Fixed a bug with (FileBrowser) and (ContextMenu) being visible
+		  at the same time.
+
+		= Added DialogReopInfo.xml to the skin...looks like all of the 
+		  other media info windows for the most part, not sure what to 
+		  do with it at this point since I'm not sure how much of it 
+		  works as far as the "List of Built in Controls" is concerned.
+		  This will need to be revisited eventually, but it works with 
+		  the skin better than the default one that's packaged with a4x
+		  installer.
+	
+
+	10.21.14
+------------------------------------------------------------------------------
+		= started making changes to the standard list view...some media
+		  info now automatically pops up when available (videofiles). 
+		  The goal is to spread this trough all of the list views that 
+		  have some sort of media info available so this will be a work 
+		  in progress. 	
+	
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+10.14.14 Version 3.5.4
+
+	10.14.14
+------------------------------------------------------------------------------
+		= Overhauled both Video/Music OSD icons and control structure.
+		  This is much cleaner looking and way easier for someone
+		  that's never used xbmc to understand.  Also updated all
+		  corresponding windows that extend from these menus to match
+		  the other fullscreen dialogs that I've been implementing for 
+		  some time now...
+
+		= Added a debug sub-menu item to systems sub-menu.  This makes
+		  the process of entering debug logging much less of a headache,
+		  especially for the noob
+
+		= Added much support for games...apparently there was none before
+		  I started updating this section (TrainerSettings.xml and
+		  GameSaves.xml have been added)
+
+		= Added programs to the system settings menus and sub-menus
+
+		= Added full support for lyrics...when the lyrics/subtitles button
+		  is clicked (and the scripts are not installed), the skin will 
+		  install automatically for you.  As for lyrics, I made the	
+		  script-XBMC_Lyrics-main.xml from scratch so that when using 
+		  lyrics it's a much cleaner looking and easy to read experience
+
+		= Fixed the "BROWSE" button for (NetworkSetup).  Still needs to
+		  be revisited at some point but is working well enough for now.
+
+		= Fixed numerous breadcrumb labels that were either cut off or
+		  not working for their specified containers...it'll take time
+		  to get them all ironed out, but I'll keep plugging along
+
+		= Changed (PluginSettings) spincontrolex button to match the
+	          the rest of the other buttons.  Don't know why I never noticed
+		  that it was different.
+
+		= Fixed missing xbmc4xbox colored NoFocus icons on homescreen
+
+		= Fixed the messed up menu in DialogAlbumInfo.xml - also changed
+		  the way that the window closes and also made the top bar's in
+		  all of these media info windows un-navigable (added too much
+		  confusion).  Also added fanart into all of these windows...
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+5.16.14 Version 3.5.31
+
+	5.29.14
+------------------------------------------------------------------------------
+		=  Hid a couple of residual images that are showing in PROGRAMS
+		   from what should only be visible in games container.  When
+		   a4x installer is hanging they were showing up but not any
+		   more
+
+	5.25.14
+------------------------------------------------------------------------------
+		=  Added a button to SYSTEM sub-menu that can enable/disable
+		   Debug logging straight from the home menu instead of 
+		   navigating to home/system settings/debug...I was getting 
+		   sick of doing it :/
+
+	5.24.14
+------------------------------------------------------------------------------
+		=  Once again tweaked addon fanart...should be good for real 
+		   now?
+
+		=  Attempted a fix for Home Submenus, changed them from List
+		   to fixedlist...now when items are removed from the subemus
+		   the remaining items will all be centered instead of all
+		   over to the left side of the menu.
+
+
+	5.16.14
+------------------------------------------------------------------------------
+		=  Refixed addon fanart...something wasn't quite right, but
+		   but now it's straightened out.
+
+		=  Fixed a typo "Conditonal" in (pluginsettings)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+4.24.14 Version 3.5.3
+
+	4.24.14
+------------------------------------------------------------------------------
+		= Added fanart for when browsing an addon that has background
+		  art (I've meant to do that for awhile now)
+
+		=  Fixed paths to submenu addon buttons...everything used to 
+		   be linked to xbmc4xbox repo but our repo is now empty.  For
+		   now these buttons will link directly into the respective 
+		   xbmc.org repo categories. 
+
+		=  Added a poster wrap view for GAMES
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+2.17.14 Version 3.5.2
+
+	3.30.14
+------------------------------------------------------------------------------
+		= Added a "submenu filter" meaning that one can further
+		  customize the submenu from skin settings by adding or 
+		  subtracting individual items (or the whole submenu
+		  for that matter) to their liking.  Skin settings/home/
+	          submenus...only items that already exist
+
+		= Fixed all lag in custom skin settings...I'm getting good
+		  at workarounds.  This is something that's been bugging me 
+		  since I started changing things with this skin.  It's now 
+		  lightning fast!
+
+		= MAJOR work has gone into SkinVariables...It has added more
+		  speed, and taken away great amounts of code.
+
+		= Added almost all breadcrumbs and system tray into includes
+		  and the labels are now in skin variables...this means that
+                  if for any reason someone wants to add different labels
+		  button sizes etc. it will be loads easier and this also 
+		  cut a ton of code out of the skin, not to mention added
+		  CPU speed and increased ram
+
+		= PICTURES and GENERAL backgrounds have been changed/updated
+
+		= ListInfo2 views for all containers have been diminished to 
+		  "Banner Style" only.  This got rid of 4 pretty useless files
+		  not to mention getting rid of files that were automatically
+		  included into ram every time any library container was
+		  entered which = more ram saved
+
+		= Cleaned up the Recently Added code...Didn't really change
+		  the apperance of it yet but am considering it.  Also made
+		  Recently Added Albums actually show ALBUMS!  For whatever
+		  reason I never realized that prior to this change it was
+		  actually scanning songs not albums (never really use this
+		  feature so I never noticed)
+
+		= Added MUSIC VIDEOS to the home menu, when music vids are 
+		  scanned into the library this category will now show up 
+		  on the home menu (also added Music Videos to the recently
+		  added items on the home screen)
+
+		= Made OSD bookmarks into a full screen dialog just as I have
+		  with all the rest
+
+		= Skin now defaults to transparent settings
+
+		= Crushed down textures which suprisingly added more than 
+		  1mb ram skinwide (home menu boots up to 40mb free and stays
+		  pretty close to that skinwide with the use of ToDDs)
+
+
+	3.2.14
+------------------------------------------------------------------------------
+		= Fully integrated transparent top bar, sub-menus, home menu
+		  (the option is in skin settings/general)
+
+		= Reduced sub-menu font size slightly (adds a cleaner look,
+		  still easy to read), also took away sub-menu zoom effect
+
+		= Reduced skin settings/settings font slightly...too big and
+		  now has a distinguishable size difference from the category
+		  labels
+
+		= Changed "SYSTEM" home button (settings now have categories
+		  first before entering appearance settings).  Submenu
+		  "settings" renamed to "appearance" which is a direct link
+		  to appearance settings also submenu has been made hidden
+      		  unless accesed like all other sub-menus
+
+		= Changed "MUSIC" home button (if Library.HasContent(Music) 
+		  it will now open MusicLibrary)
+
+	2.22.14
+------------------------------------------------------------------------------
+		= Added "Constant Submenus" option for home menu (skin settings/
+		  home)
+
+		= Added Transparent Home Menu option (been a long time coming)
+
+		= SelectDialog, Favourites, and Shutdown all have search icon when 
+		  home window is active (superficial mostly)
+
+	2.17.14
+------------------------------------------------------------------------------
+		= Reverted custom home sub-menus (took too much ram for now...still gonna
+		  figure it out hopefully)
+
+		= Added Skin Variables -- doing this allowed me to add a bit of ram back by 
+		  getting rid of a couple includes files
+			
+			--> Includes_BreadcrumbSettings.xml
+			--> Includes_RamSavingBackgrounds.xml
+			
+		= Cleaned up custom submenu strings...
+		
+		= Fixed backgrounds for Keyboard and Select dialogs for particular situations 
+		  (sometimes these windows backgrounds would be mostly transparent when they
+		  weren't supposed to be)
+		 
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.29.14 Version 3.5.1
+
+
+	2.2.14
+------------------------------------------------------------------------------
+		= ADDED CUSTOM HOME MENU ITEM SUBMENUS
+
+
+	1.29.14
+------------------------------------------------------------------------------
+		= entering skin into SVN (should be easer to update now)
+
+		= cleaned up all comments that were unecessary (800kb to be exact)
+
+		= ADDED Scripts home menu item...turned off by default for now, if you
+		  would like it on the home screen go into skin settings and turn it on
+		  under skin settings/home
+
+		= FIXED custom home category favorites selection (favourites weren't 
+		  showing up but now they are)
+
+		= made FileBrowser icons view (when searching for pics) match the rest
+		  of the icon view changes that I've made
+
+		= FIXED ShutDownMenu "shutdown" button.  It wasn't working properly,
+		  wasn't showing all of the shutdown times (30,60,120,custom) and now
+		  has arrows when focused and also a reminder when the system will turn
+		  off when this window is open
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.19.14 Version 3.5.0
+
+
+	1.19.14
+------------------------------------------------------------------------------
+		= Updated Theme Textures (Lime VideoOSD)
+		
+		= Fixed a background issue in the video library where video playing in 
+		  the background was causing the screen to be blank.
+
+		= Fixed animation issues in video/music playlists where the background
+  		  from the active window wasn't fading out completely
+
+		= Added "selected" color highlighting for ViewModes/SortMethods
+
+		= Fixed the "YEAR" sort method...actually all working properly now 
+
+		= Fixed custom favourites - screen was blank while adding favourites to
+	          custom submenus (thanks fxmech)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+11.18.13 Version 3.3.33
+
+
+	11.18.13
+------------------------------------------------------------------------------
+		= UPDATED ALL COMMON VIEWS!  All LIST, ICON, and BIG-ICON views have 
+		  been updated skin-wide.  Pretty much a vanity revamp for Icon and Big
+		  Icon, but for all non-library LIST views I added some features that 
+		  should be appealing to most.  Hide the mini list icons, added button 
+		  selector color (reversable by user), and the star rating is now able to 
+		  be hidden.  One note for the list views, all non-library list views
+		  are linked...if you change settings in music it will carry over to 
+		  programs or video etc...
+
+		= got around to adding a highlight to the top breadcrumb bar when the 
+		  system tray or home icons have focus...even I was having some troubles
+		  knowing when the focus was up there and I've been modding this thing.
+		  Long time coming I think ---
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+11.7.13 Version 3.3.32
+
+
+	11.13.13 (3.3.322)
+------------------------------------------------------------------------------
+		= REINSTATED and REVAMPED Showcase Split View for Movies (originally
+		  in the skin but barely worked and was sluggish to the point of 
+		  rediculousness).  Went through and made the animations smooth,
+		  put my spin on it, and tried my best to make the trailers work better	
+
+
+	11.11.13 (3.3.321)
+------------------------------------------------------------------------------
+		= UPDATED ALL WIDE ICON VIEWS! (Movies,Tvshows,Episodes,Albums,Songs)
+		
+		= Fixed an issue with sorting...not sure what was going on (it was a
+		  problem that must have existed before I even started this project).
+		  I think I figured it out, maybe...maybe not
+
+	11.7.13
+------------------------------------------------------------------------------
+		= I finally got sick of looking at the way the view options
+		  and other library options on the top submenu were acting so I just 
+		  redid all of them.  Animations are better, dialogs are better, and
+      		  all in all the whole experience of using any of those options up 
+		  up there are better overall  :)  Only problem I can't figure out
+		  right now is how to make the labels not scroll and make sense in the
+		  layout... 
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+10.29.13 Version 3.3.3
+	
+
+	11.6.13  (3.3.311)
+------------------------------------------------------------------------------
+		= UPDATED: Large Poster View (Movies/Seasons...only two areas it's used).
+		  Plenty of options for this view too, should be able to be customized 
+		  very well to a user's liking from all info to quite bare and simple 
+
+		= Tweaked my busy anim a little bit more...still not sure about position
+		  and speed/pulse/fade of animation).  Not to worry, I'll get it figured
+		  out...and it's pretty neat IMO
+
+		= Fixed a small bug with Dialog_Plugin_Settings being faded out when
+        	  Progress_Dialog is visible...whoops
+
+	11.4.13  (3.3.31)
+------------------------------------------------------------------------------
+		= fixed red "global" bg...accidentally deleted the </texture> when I was
+		  updating previously
+
+		= UPDATED: ALL LIST INFO VIEWS ARE DONE (MUSIC/VIDEO LIBRARY MODE)...
+
+		= UPDATED: MUSIC THUMBNAIL VIEW (looks super cool)
+
+		= fixed buffer bar for DialogSeekbar...one more thing that's been 
+		  buggin me for awhile now
+
+		= fixed buffer bar for Fullscreen Movies...same as above
+
+		= cleaned up much code base from 720p folder (I will continue doing this
+		  in the hopes of adding more avail. RAM and speed skin wide)
+
+	10.29.13
+------------------------------------------------------------------------------
+		= went through all "fullscreen dialogs" and made the animations and 
+		  visibility correct...should be seemless at this point :)
+		
+		= updated themes
+
+		= found and corrected almost every problem that's been bugging me about 
+		  my work up to this point (edited 75/102 windows if that says anything)
+
+		= revamped ShutdownMenu, DialogKeyboard, DialogSelect, NumericInput,
+		  SmartPlaylistEditor/Rule, ContextMenu noticibly...many others as well
+
+		= added navigational arrows to several windows for list's that extend 
+		  their "<height>" (sorry must have never noticed those missing)		  
+ 		= changed many other things that I wont go into detail about, but the 
+		  overall change is a major improvement toward fluency and appeal to say
+		  the least...
+		
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+8.13.13 Version 3.3.1
+	
+	8.27.13
+------------------------------------------------------------------------------
+		= Went through and put the final touches on the Movies Fanart view,
+		  also fixed several things that I missed when I first added it to my
+		  zip.
+
+		= Completely redid all of the video aspect ratio media flags (the
+		  original ones just looked...well, not good to be polite)
+
+
+	8.24.13
+------------------------------------------------------------------------------
+		= Updated Movies Fanart View, made it possible to remove the wraplist
+		  and info so that only minimal "screen garbage" is visible for better
+		  viewing of the fanart (that is the point right???) Click on 
+		  the "View options" button, then click "hide wraplist" and enjoy!
+
+		= Updated Video OSD so that when you click on the subtitle button when
+		  video is playing it will open XBMC Subtitles (script must be installed
+		  in order to work) In case anyone was wondering, the script does work...
+
+
+	8.13.13
+------------------------------------------------------------------------------
+		= Italian and Russian strings added
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+7.29.13 Version 3.3.0
+
+	8.3.13
+------------------------------------------------------------------------------
+		= revamped "WEATHER" layout...location is now visible 
+
+	
+	8.1.13
+------------------------------------------------------------------------------
+		= fixed universal/classic/conditional weather BG (My Weather and HOME)
+		    [Thanks 5l1p]
+
+		= fixed "Hide Category Icons When Media Is Playing"
+		    [Thanks 5l1p]
+
+		= Programs HomeMenu icon now "jiggles"
+		    [Thanks 5l1p]
+
+	7.31.13
+------------------------------------------------------------------------------
+		= Fixed :label2: y positioning for list views
+
+		= Fixed issues with "non library" InfoPane ListView textwidths
+
+		= Fixed issues with FS Viz osd Artist, Title, and Year labels textwidth
+
+		= Revamped ListView :label2: width params (shouldn't scroll anymore?).
+		  Also changed BigIcon for Listview so that it is centered when the 
+		  InfoPane is visible
+
+	7.29.13 
+------------------------------------------------------------------------------
+		= Added "Ram-Saving" background option (1-2mb RAM gain through entire
+		  skin) - very plain though, accessable through "SKIN SETTINGS"
+
+		= Added "Universal" background option (1 BG for whole skin [user define])
+		
+		= Completely changed HomeMenu "workings" (multilingual now :)
+
+		= Added Dutch, French, German, Portugese, and Spanish languages!!!
+
+		= Too many other things to go into...most other things That were changed
+		  had to do with multilingual support, however I made more RAM available
+		  throughout the whole skin (comparable to confluence lite for sure)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+6.17.13 Version 3.2.91
+
+	6.20.13 
+------------------------------------------------------------------------------
+		= fixed missing icons in list views
+
+		= dimmed the home screen backgrounds just a touch
+
+
+	6.17.13 
+------------------------------------------------------------------------------
+		= fixed Video Osd "current item label"
+
+		= fixed an animation problem that I missed while repositioning
+		  Video/Audio Scan (wasn't showing up due to incorrect coordinants)
+		
+		= added a new font in font.xml for Dialog Select (file will need to be
+		  replaced or label will be blank)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+6.15.13 Version 3.2.9
+
+	6.15.13 
+------------------------------------------------------------------------------
+		= changed fonts to multilingal fonts (fuck doing that ever again :)
+		
+		= re-arranged VideoScan/MusicScan dialogs to the lower part of the screen
+		  (depreciated for frodo)
+
+		= corrected all "skin" strings labels so now all labels are correcly
+		  "numbered"
+
+		= wasted $100 on font editing software that did NOTHING
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+5.24.13 Version 3.2.83
+
+	5.24.13 
+------------------------------------------------------------------------------
+		= added Global Search...sorry for the delay, took some figuring out
+		  (thanks to Dom for the script, and xbs for the framework)
+
+		= fixed some label bugs on the weather info page
+
+		= fixed a bug in skin settings for custom BG file exploring (sorry, but
+		  if people don't point out these things it's left up to me to discover
+		  when I stumble upon it.  If you use the skin and notice something's 
+		  wierd, don't be bashful...post on the forum and I will quickly address
+		  the issue)
+
+		= still majorly working on language...this is the reason for the delay in
+		  development of other parts of this skin (what a pain in the ass)
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+4.16.13 Version 3.2.82
+
+	4.16.13 
+------------------------------------------------------------------------------
+		= added Custom Home Categories - only 8 available for now, but there
+		  is now the option of adding anything from your favourites to the 
+		  "home menu" simply by browsing from skin settings/cutom home cat's/...
+		  and setting the buttons up the way that you want them. (Might be a few
+		  bugs, but it works well...especially on dev. builds) 
+
+		= fixed a bug in File Manger where the number of items were overlaying
+		  eachother
+
+		= Added path info for File Browser (not sure why I never added it...)  
+
+		= started to integrate Dom's content.search.py (at jan's request) and
+		  that will be the next addition coming very soon
+		
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+3.25.13 Version 3.2.8
+
+	3.28.13 
+------------------------------------------------------------------------------
+		= fixed Home.xml (custom breadcrumb was not updated right from a while
+		  back)
+
+		= fixed custom backgrounds (hopefully I don't have to roll back because
+		  I just uploaded 35 new files for 720p!)
+
+
+
+	3.25.13
+------------------------------------------------------------------------------
+		= added custom sub-menus
+		
+		= revamped a TON of major windows
+	
+		= soon to come...Custom search, Custom Home Menu items....
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+3.2.13 Version 3.2.7
+
+
+	3.6.13------------------------------------------------------------------------------
+		= added "update library" to Movies, TvShows, and Music sub menus (thanks
+		  for the idea Whufclee)
+
+
+	3.5.13------------------------------------------------------------------------------
+		= changed Home.xml...added scroll indicators to sub menus.  Getting ready
+		  to start adding customization to home sub menus, and home menu also.  
+		  Going to start with subs first (Music already has too many items for 
+		  the space allowed, so that's an improvement right off the bat)
+
+
+	3.3.13------------------------------------------------------------------------------
+		= **FIXED** issue with black screen on skin change has been resolved
+
+		= took care of the submenubar being visible at the bottom of the screen
+		  occasionally (been bugging me since I started working on this skin)
+
+
+	3.2.13------------------------------------------------------------------------------
+		= revamped numericimput (that STUPID annoying script alert is next!!!)		
+
+		= PROFILES dialogs are all "windows" now...nice little feature (between
+		  adding a source, and being able to log in to xbmc this way...I gotta
+		  pat myself on the back for this one...)
+
+		= xbmc4xbox logo is cusomizable with the rest of the icons
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+2.23.13 Version 3.2.68
+
+
+	2.26.13------------------------------------------------------------------------------
+		= improved the "xbmc4xbox" logo, it actually looks somewhat respectable
+		  now (will make it change with the rest of the custom top bar soon!)
+
+
+                = started working on turning PROFILE dialogs into "windows" to follow up
+		  what I have already done with several other dialogs (similar to what I
+		  did with adding a source...several dialogs that make the process of 
+		  logging into xbmc4xbox turned into one "profile settings" area).  After
+		  these are wrapped up I think I'll be content with that aspect of this
+		  skin ---
+
+	2.24.13------------------------------------------------------------------------------
+		= **FIXED** Shutdown Menu was not extending properly with the Log on/off
+		  and Master Profile buttons visible on the menu (the entire login
+		  process soon to be revamped!)
+
+		= added conditional weather option to the homescreen weather menu (enable 
+		  in skin settings, and conditional weather images will appear on the 
+		  homescreen)
+
+
+	2.23.13------------------------------------------------------------------------------
+		= CUSTOMIZABLE TOP BAR (better than a rough draft, still a few bugs)!!!
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+2.16.13 Version 3.2.65
+
+
+
+	2.22.13------------------------------------------------------------------------------
+		= customizable tab color (even closer to full BreadCrumb cusomization!)	
+                  
+		  --> the colors arent the greatest, but...they can be changed!!!
+
+
+	2.21.13------------------------------------------------------------------------------
+		= customizable Top Bar color (closer to full BreadCrumb cusomization!)	
+
+
+	2.19.13------------------------------------------------------------------------------
+		= **FIXED** tbn's now show up next to labels in list views  :P
+
+
+	2.18.13------------------------------------------------------------------------------
+		= **FIXED** missing labels in info dialogs (ie song info, vid info etc.)
+
+
+	2.16.13------------------------------------------------------------------------------
+		= recreated Breadcrumb icons and made them customizable!
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+2.4.13 Version 3.2.62
+
+	2.12.13------------------------------------------------------------------------------
+		= added PROGRAMS sub-menu bar
+		
+
+	2.11.13------------------------------------------------------------------------------
+		= cleaned up more includes (hardly any left)
+		= got rid of Dimming option in skin settings (+ more)
+
+		  --> deleted several platform "dependencies" that were not necessary
+		  --> closer to a SOLID 42mb RAM avail on startup (still a bit shy)
+		  --> started messing around with a "play" button on the TopBar
+		  --> still need to add submenus to other home windows...stay tuned
+
+
+	2.10.13------------------------------------------------------------------------------
+		= updated FileBrowser (fixed "ICON" image selection for "Media Settings")
+		= updated Custom_LibraryOptions (screen dims like all library dialogs)
+		= updated Custom_ViewOptions (screen dims like all library dialogs)
+
+
+	2.4.13------------------------------------------------------------------------------
+		= completely revamped adding a media source
+
+    		  -->(made 4 dialogs into "windows")
+
+			- MediaSource
+			- FileBrowser
+			- NetworkSetup
+			- ContentSettings
+		
+		= made Rss text more visible (would like to add custom colors eventually)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.25.13 Version 3.2.61
+
+	1.29.13------------------------------------------------------------------------------
+		= fixed a bug in music library 	"BottomInfoPane" Thumbnail View
+		= fixed a bug in PluginSettings.xml...BGVIZ/BGVIDEO fix 
+
+		  -->("DialogMediaSource" is next)
+		
+
+	1.28.13------------------------------------------------------------------------------
+		= Finished music library ListInfo2 views (all done with that view)
+		= Fixed a bug with spinning cd not disappearing on window replace in 
+		  music viz
+
+	1.25.13------------------------------------------------------------------------------
+		= *FIXED* "SortLetterNotification" (it was really starting to annoy me)
+		= *FIXED* "BottomInfoPane" Lag/Stutter issue (RAM adding enjoyment)
+		= Finished video library ListInfo2 views 
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+1.19.13 Version 3.2.6 
+--- addressed several issues:
+
+	1.22.13------------------------------------------------------------------------------
+		= updated "movies ListInfo2 views"  			
+		= updated "icon view"
+		= added YouTube music video search to music OSD (thanks jan)
+
+	1.19.13------------------------------------------------------------------------------
+		= fixed file manager "selected item" issue
+		= fixed programs missing label2
+		= fixed buffer bar
+		= corrected video osd info
+		= made top bar navigation icons more visible
+		= added more full screen dialogs (a few more to come)
+		= added an xbmc4xbox logo
+		= made adjustments to integrate towards a smooth interface with a4x (thanks jan)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+12.24.12 Version 3.2.5 (initial release by byron)
+--- initial release

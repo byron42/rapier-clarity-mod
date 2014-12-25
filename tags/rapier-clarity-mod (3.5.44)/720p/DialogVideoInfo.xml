@@ -1,0 +1,3338 @@
+<window id="2003">
+	<defaultcontrol always="true">987</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>	
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(FileBrowser)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+		
+	<!--(((BACKGROUNDS)))===========================================================================================================================-->		
+			<control type="group">	
+				<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->
+						<visible>Skin.HasSetting(EnableClassicUniversalBG) + !Skin.String(UniversalCustomBG) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+						<control type="image">
+							<posx>0</posx>
+							<description>Universal Classic Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture background="true">$VAR[RamSavingBackgrounds]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>BackgroundCrossfadeTime</fadetime>
+							<animation effect="fade" start="45" end="45" condition="true">Conditional</animation> <!--ClassicUniversalBG_Fade-->
+						</control>
+					</control>
+				<control type="group"> <!--UNIVERSAL CUSTOM BG-->
+					<visible>!IsEmpty(Skin.String(UniversalCustomBG)) + [![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible>
+					<control type="image">
+						<posx>0</posx>
+						<description>Universal Classic Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture background="true">$INFO[Skin.String(UniversalCustomBG)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimUniversalCustomBG)">Conditional</animation><!--Dialogs!-->
+					</control>
+				</control>
+			
+				<!--********************************** BackgroundVideoInfo ********************************************-->
+				<control type="group">
+					<description>General Custom Background</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<description>Custom Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos.jpg">$INFO[Skin.String(MoviesCustomBG)]</imagepath>
+						<visible>Skin.HasSetting(ApplyAllMoviesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<!--BackgroundGeneralDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMoviesCustomBG)">Conditional</animation>
+					</control>
+					<control type="image">
+						<description>Default Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<include>VideosBackground_And_Res</include>
+						<colordiffuse>-</colordiffuse>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<visible>!Skin.HasSetting(ApplyAllMoviesCustomBG) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+						<!--BackgroundGeneralDimAnim-->
+						<animation effect="fade" start="100" end="30" condition="!Skin.HasSetting(DimMoviesCustomBG)">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSVideo *********************************************-->
+				<control type="group">
+					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
+					<control type="videowindow">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--*********************************** BackgroundFSViz ***********************************************-->
+				<control type="group">
+					<visible>Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)</visible>
+					<control type="visualisation">
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+					</control>	
+					<control type="image">
+						<description>Dim Background</description>
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<texture>background-dim.png</texture>
+						<!--BackgroundVizDimAnim-->
+						<animation effect="fade" end="70" condition="true">Conditional</animation>
+					</control>	
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--********************************** BackgroundFanart ***********************************************-->
+				<control type="group">
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="group">
+						<control type="largeimage">
+							<description>Fanart Background</description>
+							<include>BackgroundOffset</include>
+							<width>1280</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>$INFO[Listitem.Property(Fanart_Image)]</texture>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<!--KenBurnsAnim-->
+							<animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation> 
+							<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="[Container.Content(Movies) + Skin.HasSetting(AnimateMoviesFanart)] | [[Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)] + Skin.HasSetting(AnimateTVShowsFanart)] | [[Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)] + Skin.HasSetting(AnimateMusicFanart)]">Conditional</animation>
+						</control>
+						<control type="image">
+							<description>Dim Background</description>
+							<include>BackgroundOffset</include>
+							<width>ScreenWidth</width>
+							<include>VariableBackgroundHeight</include>
+							<texture>background-dim.png</texture>
+							<fadetime>FanartCrossfadeTime</fadetime>
+							<visible>!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(DoNotDimMusicFanart)</visible>
+							<!--BackgroundFanartDimAnim-->
+							<animation effect="fade" end="50" condition="true">Conditional</animation>
+						</control>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--******************************* FullControlAreaBackground *****************************************-->
+				<control type="group">	
+					<visible>!Skin.HasSetting(EnableClassicUniversalBG)</visible> <!--skinwide equal viz bg-->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!--MediaViewOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<control type="group">	
+					<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
+					<control type="image">
+						<include>BackgroundOffset</include>
+						<width>ScreenWidth</width>
+						<include>VariableBackgroundHeight</include>		
+						<texture>control-area-background2.png</texture>
+						<!--MediaViewOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400" condition="">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				</control>
+				<!--***************************************************************************************************-->
+				
+				<!--BackgroundDimAnim-->
+				<animation effect="fade" end="100" condition="[!Window.IsActive(MovieInformation) + !Window.IsActive(MusicInformation) + !Window.IsActive(135)]">Conditional</animation>
+				<!--BackgroundOpenCloseAnim-->
+				<animation effect="fade" start="0" end="100" delay="100" time="500">WindowOpen</animation> 
+				<animation effect="fade" start="100" end="0" delay="0" time="500">WindowClose</animation>
+			</control>
+			
+	<!--(((MENU BAR)))==============================================================================================================================-->			
+			<control type="group" id="850">	
+				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<description>Menu Bar Area</description>		
+				<height>34</height>
+				<posy>44</posy>
+				<control type="image">
+					<width>ScreenWidth</width>
+					<height>34</height>
+					<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+				</control>
+				
+				<!--********************************************* VideoInfoMenuBar **********************************************************-->
+				<control type="grouplist" id="987">
+					<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(987).HasFocus">Conditional</animation>
+					<description>Video Info Menu Bar</description>
+					<posy>-3</posy>
+					<width>ScreenWidth</width>
+					<height>34</height>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<onup>850</onup>
+					<ondown>961</ondown>
+					<control type="button" id="5">
+						<description>Cast/Plot</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+					</control>	
+					<control type="image" id="116">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="8">
+						<description>Play</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
+					</control>
+					<control type="image" id="117">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="6">
+						<description>Refresh</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
+					</control>
+					<control type="image" id="118">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="10">
+						<description>Get Thumb</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
+					</control>
+					<control type="image" id="119">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="12">
+						<description>Get Fanart</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
+					</control>
+					<control type="image" id="120">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+					<control type="button" id="11">
+						<description>Play Trailer</description>
+						<width>190</width>
+						<height>36</height>	
+						<textwidth>190</textwidth>
+						<aligny>top</aligny>
+						<textoffsety>4</textoffsety>
+						<font>font_19_UB</font>
+						<focusedcolor>ButtonFocusColor</focusedcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10"></texturefocus>
+						<pulseonselect>true</pulseonselect>
+						<colordiffuse>ThemeColor</colordiffuse>
+						<texturenofocus>-</texturenofocus>	
+						<texturenofocus>-</texturenofocus>
+						<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
+					</control>
+					<control type="image" id="121">
+						<description>MenuBarSeparator</description>
+						<width>4</width>
+						<height>34</height>
+						<texture>menu-bar-separator.png</texture><!---->
+					</control>
+				</control>
+				<!--*************************************************************************************************************************-->
+				
+				<!--MenuBarOpenCloseAnim-->
+				<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
+				<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
+				<animation type="WindowClose" condition="[ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+					<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
+					<effect type="fade" start="100" end="0" time="1" delay="200"/>
+				</animation>
+			
+			</control>
+			
+	<!--(((TOP BAR)))============================================================================================================================-->		
+			<control type="group">
+				<animation effect="fade" start="100" end="0" time="100" delay="500">WindowClose</animation>
+				<description>Top Bar Area</description>
+				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
+				<control type="group">	
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<height>53</height>
+						<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+						<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+					</control>
+					
+					<control type="image" id="1110">
+						<width>ScreenWidth</width>
+						<posy>1</posy>
+						<height>41</height>
+						<texture border="10">Glass/SquareThemeBorder.png</texture>
+						<colordiffuse>BBFFFFFF</colordiffuse>
+						<visible>ControlGroup(600).HasFocus | Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--************************************* (SystemTray) **********************************************-->
+				<include>SystemTray</include>
+				<!--*************************************************************************************************-->
+				
+				<!--******************************<< (BreadCrumb_VIDEO_Info) >>**************************************-->
+				<include>BreadCrumbButtonRight</include>
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>	
+				 <!--home icon-->
+					<control type="button" id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>Dialog.Close(2001)</onclick>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** WeatherNotification *****************************************-->
+				<control type="group" id="456">
+					<posx>950</posx>
+					<posy>4</posy>
+					<visible>[[Skin.HasSetting(ShowWeatherNotification) + Window.IsActive(Home)] | [Skin.HasSetting(ShowWeatherNotification) + !Window.IsActive(Home) + Skin.HasSetting(ApplyAllWeatherNotification)]]
+					+ !Window.IsActive(133) + !Window.IsActive(112) + !Window.IsActive(VolumeBar) + !Window.IsActive(MuteBug) + !Player.HasMedia</visible>
+					<!--WeatherNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation> 
+					<animation effect="fade" end="100" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowOpen</animation>
+					<animation effect="fade" end="0" time="200" condition="!Skin.HasSetting(ApplyAllWeatherNotification)">WindowClose</animation>
+					<control type="button" id="458">
+						<width>100</width>
+						<height>35</height>
+						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
+						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+						<onclick>ActivateWindow(MyWeather)</onclick>
+						<ondown>505</ondown>
+						<onright>346</onright>
+						<onleft>837</onleft>
+					</control>
+					<control type="image" id="457">
+						<posx>8</posx>
+						<posy>4</posy>
+						<width>27</width>
+						<height>27</height>
+						<texture>$INFO[Weather.Conditions]</texture>
+					</control>
+					<control type="label">
+						<posx>92</posx>
+						<posy>-2</posy>
+						<width>55</width>
+						<height>35</height>
+						<font>font_20</font>
+						<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>!Control.HasFocus(458)</visible>
+					</control>
+					<control type="label">
+						<posx>92</posx>
+						<posy>-2</posy>
+						<width>55</width>
+						<height>35</height>
+						<font>font_20</font>
+						<textcolor>TopBarStatusColor2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$INFO[Weather.Temperature]</label>
+						<visible>Control.HasFocus(458)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+				<!--*********************************** MediaPlayingNotification ************************************-->
+				<control type="group">
+					<posx>780</posx>
+					<posy>4</posy>
+					<visible>Player.HasMedia</visible>
+					<!--MediaPlayingNotificationOpenCloseAnim-->
+					<animation effect="fade" end="100" time="200">Visible</animation>
+					<animation effect="fade" end="0" time="200">Hidden</animation>
+					<!--MediaPlayingNotificationShiftAnim3-->
+					<animation effect="slide" end="-130,0" condition="Window.IsActive(VolumeBar) | Window.IsActive(MuteBug)">Conditional</animation>
+					<control type="image">
+						<width>270</width>
+						<height>35</height>
+						<texture border="8">SystemTray/top-bar-status-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultaudio.png</texture>
+						<visible>Player.HasAudio</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>5</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>defaultvideo.png</texture>
+						<visible>Player.HasVideo</visible>
+						<!--MediaPlayingPulseAnim-->
+						<animation effect="fade" start="30" end="70" time="600" pulse="true" condition="true">Conditional</animation>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>224</width>
+						<height>36</height>
+						<visible>Player.HasAudio</visible>
+						<control type="fadelabel">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>-2</posy>
+							<width>220</width>
+							<height>15</height>
+							<scrollout>false</scrollout>
+							<font>font_17_B</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<pauseatend>4000</pauseatend>
+							<info>MusicPlayer.Title</info>
+							<info>MusicPlayer.Artist</info>
+							<info>MusicPlayer.Album</info>
+							<info>MusicPlayer.Year</info>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>13</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+					<control type="group">
+						<posx>40</posx>
+						<posy>3</posy>
+						<width>220</width>
+						<height>36</height>
+						<visible>Player.HasVideo</visible>
+						<control type="label">
+							<description>Caption</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17_B</font>
+							<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[VideoPlayer.Title] ($INFO[VideoPlayer.Year])</label>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<description>Current Directory</description>
+							<posx>0</posx>
+							<posy>15</posy>
+							<width>224</width>
+							<height>15</height>
+							<font>font_17</font>
+							<textcolor>TopBarStatusColor</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
+						</control>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+			</control>
+		
+	<!--(((CONTROLS)))============================================================================================================================-->		
+			<control type="group" id="961">		
+				<posx>110</posx>
+				<posy>100</posy>
+				<!--ControlsOpenCloseAnim-->
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<!--Icons/Thumbs-->	
+				<control type="grouplist">
+					<posx>-80</posx>
+					<posy>58</posy>
+					<usecontrolcoords>true</usecontrolcoords>
+				<!--MOVIES / TV POSTER ==========================-->
+					<control type="image">
+						<posx>25</posx>
+						<posy>16</posy>
+						<description>Movies / TV Shows Poster Cover Image</description>
+						<width>345</width>
+						<height>468</height>
+						<info>ListItem.Thumb</info>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+						<visible>[Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]] + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Movie Cover Image</description>
+						<posx>25</posx>
+						<posy>16</posy>
+						<width>345</width>
+						<height>468</height>
+						<colordiffuse>ccE3DAC9</colordiffuse>
+						<texture>defaultvideobigposter4.png</texture>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="top">Stretch</aspectratio>
+						<visible>[Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(Seasons)
+						| [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]] + IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				<!--MUSIC VIDEO ==========================-->	
+					<control type="image">
+						<description>Music Videos</description>
+						<posx>25</posx>
+						<posy>16</posy>
+						<width>345</width>
+						<height>468</height>
+						<info>ListItem.Thumb</info>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+						<visible>Container.Content(MusicVideos)</visible>
+					</control>
+				<!--EPISODES =======================================================-->	
+					<control type="image">
+						<description>Episodes Cover Image</description>
+						<posx>0</posx>
+						<posy>16</posy>
+						<width>450</width>
+						<height>285</height>
+						<info>ListItem.Thumb</info>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>10</bordersize>
+						<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Episodes Cover Image Reflection</description>
+						<posx>0</posx>
+						<posy>9</posy>
+						<width>450</width>
+						<height>285</height>
+						<info>ListItem.Thumb</info>
+						<texture flipy="true" diffuse="reflection.png"/>
+						<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+						<bordersize>10</bordersize>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+						<visible>Container.Content(Episodes) + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Episodes Cover Image</description>
+						<posx>0</posx>
+						<posy>16</posy>
+						<width>450</width>
+						<height>285</height>
+						<colordiffuse>ccE3DAC9</colordiffuse>
+						<texture>defaultvideobigposterH.png</texture>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>10</bordersize>
+						<aspectratio align="left" aligny="bottom">keep</aspectratio>
+						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>Default Episodes Cover Image Reflection</description>
+						<posx>0</posx>
+						<posy>9</posy>
+						<width>450</width>
+						<height>285</height>
+						<texture background="true" flipy="true" diffuse="reflection.png">defaultvideobigposterH.png</texture>
+						<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+						<bordersize>10</bordersize>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+						<visible>Container.Content(Episodes) + IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				<!--TV SHOWS (banner)===============================================-->	
+					<control type="image">
+						<posx></posx>
+						<posy>5</posy>
+						<description>TV Shows Cover Image</description>
+						<width>1005</width>
+						<height>190</height>
+						<info>ListItem.Thumb</info>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+						<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover) + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<description>TVShows Cover Image Reflection</description>
+						<posx></posx>
+						<posy>12</posy>
+						<width>1005</width>
+						<height>190</height>
+						<info>ListItem.Thumb</info>
+						<texture flipy="true" diffuse="reflection.png"/>
+						<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+						<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover) + !IsEmpty(ListItem.Thumb)</visible>
+						<animation effect="fade" end="50" condition="true">Conditional</animation>
+					</control>	
+					<control type="image">
+						<description>TV Shows Default Cover Image</description>
+						<posx>403</posx>
+						<width>174</width>
+						<height>174</height>
+						<texture>DefaultVideoCover.png</texture>
+						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+						<bordersize>14</bordersize>
+						<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+						<aspectratio align="left" aligny="top">stretch</aspectratio>
+						<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover) + IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</control>
+				
+	<!--(((MOVIES)))===========================================================================================================================-->
+				<control type="group">
+					<visible>Container.Content(Movies)</visible>
+					<control type="group">	
+						<posx>-80</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>	
+							<scroll>yes</scroll>
+						</control>
+					<!--plot-->	
+						<control type="group" id="1009">
+							<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+							<visible>!Control.IsVisible(1010)</visible>
+							<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>		
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>PLOT LABEL</description>
+								<posx>1076</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--PLOT LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left PLOT</description>
+								<posx>430</posx>
+								<posy>312</posy>
+								<width>550</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right PLOT</description>
+								<posx>1100</posx>
+								<posy>312</posy>
+								<width>110</width>
+								<height>1</height>
+								<texture border="2">separator.png</texture>
+							</control>
+						</control>
+					<!--cast-->
+						<control type="group" id="1010">
+							<!--oooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" oooooooooooooooooooooooooooooo-->
+							<visible>Control.IsVisible(50) + Container.Content(Movies)</visible>
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>CAST LABEL</description>
+								<posx>1076</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--CAST LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]CAST[/UPPERCASE]</label>
+								<visible>Control.IsVisible(50) + Container.Content(Movies)</visible>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left CAST</description>
+								<posx>430</posx>
+								<posy>312</posy>
+								<width>550</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right CAST</description>
+								<posx>1100</posx>
+								<posy>312</posy>
+								<width>110</width>
+								<height>1</height>
+								<texture border="2">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>410</posx>
+							<posy>55</posy>
+							<width>790</width>
+							<height>240</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> <!--lotta work for one box-->
+							<control type="image">
+								<description>PLOT/CAST BACKGROUND</description>
+								<posx>410</posx>
+								<posy>330</posy>
+								<width>790</width>
+								<height>210</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+						
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						
+						<control type="label">
+							<description>Genre</description>
+							<posx>1220</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.Genre</info>		
+						</control>
+					</control>
+				<!--content-->
+					<control type="list" id="901">
+						<posx>355</posx>
+						<posy>82</posy>
+						<width>755</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>50</ondown>
+						<onleft>987</onleft>
+						<onright>61</onright>
+						<itemgap></itemgap>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>740</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>170</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+						<!--==============-->
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+						<!--==============-->
+							<control type="label">
+								<posx>2</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Director</description>
+								<label>$LOCALIZE[20339]</label>
+								<label2>$INFO[ListItem.Director]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>Writer</description>
+								<label>$LOCALIZE[20417]</label>
+								<label2>$INFO[ListItem.Writer]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Studio</description>
+								<label>$LOCALIZE[572]</label>
+								<label2>$INFO[ListItem.Studio]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Runtime</description>
+								<label>$LOCALIZE[2050]</label>
+								<label2>$INFO[ListItem.Duration]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="5">
+								<description>Rating</description>
+								<label>$LOCALIZE[563]</label>
+								<label2>$INFO[ListItem.RatingAndVotes]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="6">
+								<description>File Path</description>
+								<label>$LOCALIZE[21801]</label>
+								<label2>$INFO[ListItem.FileNameAndPath]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+					<control type="image">
+						<description>VideoInfoStudioMediaFlag</description>
+						<posx>-100</posx>
+						<posy>545</posy>
+						<width>141</width>
+						<height>80</height>
+						<aspectratio>stretch</aspectratio>
+						<alignx>left</alignx>
+						<aligny>top</aligny>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+					</control>
+				</control>
+
+	<!--(((MUSIC VIDS)))=======================================================================================================================-->
+				<control type="group">
+					<visible>Container.Content(MusicVideos)</visible>
+					<control type="group">	
+						<posx>-80</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>	
+							<scroll>yes</scroll>
+						</control>
+						<control type="group">
+							<posy>-65</posy>
+						<!--plot-->
+							<control type="group" id="1009">
+								<!--oooooooooooooooooooOOooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "ARTISTS" oooooooooooooooooooooooo-->
+								<visible>!Control.IsVisible(1010)</visible>
+								<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>		
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>PLOT LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>500</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--PLOT LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left PLOT</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>580</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right PLOT</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+								</control>
+							</control>
+						<!--artists-->	
+							<control type="group" id="1010">
+								<!--ooooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "ARTISTS" oooooooooooooooooooooooooo-->
+								<visible>Control.IsVisible(50) + Container.Content(MusicVideos)</visible>
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>ARTISTS LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>450</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--ARTISTS LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]ARTISTS[/UPPERCASE]</label>
+									<visible>Control.IsVisible(50) + Container.Content(MusicVideos)</visible>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left ARTISTS</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>530</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right ARTISTS</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>410</posx>
+							<posy>55</posy>
+							<width>790</width>
+							<height>175</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> <!--lotta work for one box-->
+							<posy>-65</posy>
+							<control type="image">
+								<description>PLOT/ARTISTS BACKGROUND</description>
+								<posx>410</posx>
+								<posy>330</posy>
+								<width>790</width>
+								<height>280</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						<control type="label">
+							<description>Genre</description>
+							<posx>1220</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.Genre</info>		
+						</control>
+					</control>
+				<!--content-->	
+					<control type="list" id="901">
+						<posx>350</posx>
+						<posy>82</posy>
+						<width>755</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>50</ondown>
+						<onleft>987</onleft>
+						<onright>61</onright>
+						<itemgap></itemgap>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>740</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>170</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+							<control type="label">
+								<posx>2</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Artist</description>
+								<label>$LOCALIZE[557]</label>
+								<label2>$INFO[ListItem.Artist]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>Album</description>
+								<label>$LOCALIZE[558]</label>
+								<label2>$INFO[ListItem.Album]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Studio</description>
+								<label>$LOCALIZE[572]</label>
+								<label2>$INFO[ListItem.Studio]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>File Path</description>
+								<label>$LOCALIZE[21801]</label>
+								<label2>$INFO[ListItem.FileNameAndPath]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				<!--VideoInfoStudioMediaFlag-->
+					<control type="image">
+						<posx>-100</posx>
+						<posy>545</posy>
+						<width>141</width>
+						<height>80</height>
+						<aspectratio>stretch</aspectratio>
+						<alignx>left</alignx>
+						<aligny>top</aligny>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+					</control>
+				</control>
+	
+	<!--(((EPISODES)))=======================================================================================================================-->
+				<control type="group">
+					<visible>Container.Content(Episodes)</visible>
+					<control type="group">	
+						<posx>-80</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>	
+							<scroll>yes</scroll>
+						</control>
+					<!--plot-->	
+						<control type="group" id="1009">
+							<posx>20</posx>
+							<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+							<visible>!Control.IsVisible(1010)</visible>
+							<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>		
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>PLOT LABEL</description>
+								<posx>1076</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--PLOT LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left PLOT</description>
+								<posx>445</posx>
+								<posy>312</posy>
+								<width>535</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right PLOT</description>
+								<posx>1100</posx>
+								<posy>312</posy>
+								<width>110</width>
+								<height>1</height>
+								<texture border="2">separator.png</texture>
+							</control>
+						</control>
+					<!--cast-->	
+						<control type="group" id="1010">
+							<posx>20</posx>
+							<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+							<visible>Control.IsVisible(50) + Container.Content(Episodes)</visible>
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>CAST LABEL</description>
+								<posx>1076</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--CAST LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]CAST[/UPPERCASE]</label>
+								<visible>Control.IsVisible(50) + Container.Content(Episodes)</visible>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left CAST</description>
+								<posx>445</posx>
+								<posy>312</posy>
+								<width>535</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right CAST</description>
+								<posx>1100</posx>
+								<posy>312</posy>
+								<width>110</width>
+								<height>1</height>
+								<texture border="2">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>460</posx>
+							<posy>55</posy>
+							<width>760</width>
+							<height>240</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> <!--lotta work for one box-->
+							<posx>20</posx>
+							<control type="image">
+								<description>PLOT/CAST BACKGROUND</description>
+								<posx>440</posx>
+								<posy>330</posy>
+								<width>760</width>
+								<height>210</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+						
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						
+						<control type="label">
+							<description>TV Show Title</description>
+							<posx>1215</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.TVShowTitle</info>
+						</control>
+					</control>
+				<!--content-->	
+					<control type="list" id="901">
+						<posx>400</posx>
+						<posy>82</posy>
+						<width>730</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>50</ondown>
+						<onleft>987</onleft>
+						<onright>61</onright>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>715</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>170</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>520</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+							<control type="image">
+								<posx>-5</posx>
+								<width>730</width>
+								<height>35</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>730</width>
+								<height>35</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+							<control type="label">
+								<posx>2</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>520</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Season</description>
+								<label>$LOCALIZE[20373]</label>
+								<label2>$INFO[ListItem.Season]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>Episode</description>
+								<label>$LOCALIZE[20359]</label>
+								<label2>$INFO[ListItem.Episode]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>First Aired</description>
+								<label>$LOCALIZE[20416]</label>
+								<label2>$INFO[ListItem.Premiered]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Director</description>
+								<label>$LOCALIZE[20339]</label>
+								<label2>$INFO[ListItem.Director]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="5">
+								<description>Writer</description>
+								<label>$LOCALIZE[20417]</label>
+								<label2>$INFO[ListItem.Writer]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="6">
+								<description>Rating</description>
+								<label>$LOCALIZE[563]</label>
+								<label2>$INFO[ListItem.Rating]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="7">
+								<description>File Path</description>
+								<label>$LOCALIZE[21801]</label>
+								<label2>$INFO[ListItem.FileNameAndPath]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				<!--STUDIO LOGO-->	
+					<control type="group">
+						<posy>-90</posy>
+						<width>500</width>
+						<height>500</height>
+						<control type="image">
+							<posx>40</posx>
+							<posy>505</posy>
+							<width>201</width>
+							<height>139</height>
+							<aspectratio>keep</aspectratio>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+							<colordiffuse>gray</colordiffuse>
+							<bordersize>3</bordersize>
+						</control>
+					</control>
+				</control>
+
+	<!--(((SEASONS)))=======================================================================================================================-->
+				<control type="group">
+					<visible>Container.Content(Seasons)</visible>
+					<control type="group">	
+						<posx>-80</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>	
+							<scroll>yes</scroll>
+						</control>
+					<!--plot-->
+						<control type="group">
+							<posy>-65</posy>
+							<control type="group" id="1009">
+								<!--oooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" oooooooooooooooooooooooooooooo-->
+								<visible>!Control.IsVisible(1010)</visible>
+								<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>		
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>PLOT LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>500</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--PLOT LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left PLOT</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>580</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right PLOT</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+								</control>
+							</control>
+						<!--cast-->	
+							<control type="group" id="1010">
+								<!--ooooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooo-->
+								<visible>Control.IsVisible(50) + Container.Content(Seasons)</visible>
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>CAST LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>500</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--CAST LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]CAST[/UPPERCASE]</label>
+									<visible>Control.IsVisible(50) + Container.Content(Seasons)</visible>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left CAST</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>580</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right CAST</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>410</posx>
+							<posy>55</posy>
+							<width>790</width>
+							<height>175</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> <!--lotta work for one box-->
+							<posy>-65</posy>
+							<control type="image">
+								<description>PLOT/CAST BACKGROUND</description>
+								<posx>410</posx>
+								<posy>330</posy>
+								<width>790</width>
+								<height>280</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+						
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						
+						<control type="label">
+							<description>Genre</description>
+							<posx>1220</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.Genre</info>		
+						</control>
+					</control>
+				<!--content-->
+					<control type="list" id="901">
+						<posx>350</posx>
+						<posy>82</posy>
+						<width>755</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>50</ondown>
+						<onleft>987</onleft>
+						<onright>61</onright>
+						<itemgap></itemgap>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>740</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>170</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+							<control type="label">
+								<posx>2</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Episodes</description>
+								<label>$LOCALIZE[20360]</label>
+								<label2>$INFO[ListItem.Episode] [COLOR=DisabledColor] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] -$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>First Aired</description>
+								<label>$LOCALIZE[20416]</label>
+								<label2>$INFO[ListItem.Premiered]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Rating</description>
+								<label>$LOCALIZE[563]</label>
+								<label2>$INFO[ListItem.Rating]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Studio</description>
+								<label>$LOCALIZE[572]</label>
+								<label2>$INFO[ListItem.Studio]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				<!--VideoInfoStudioMediaFlag-->
+					<control type="image">
+						<posx>-100</posx>
+						<posy>545</posy>
+						<width>141</width>
+						<height>80</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+					</control>
+				</control>
+
+	<!--(((TV_BANNERS)))=======================================================================================================================-->			
+				<control type="group">
+					<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+					<control type="group">	
+						<posx>-90</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>		
+							<scroll>yes</scroll>
+						</control>
+					<!--plot-->	
+						<control type="group" id="1009">
+							<posy>-20</posy>
+							<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+							<visible>!Control.IsVisible(1010)</visible>
+							<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>	
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>PLOT LABEL</description>
+								<posx>1130</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--PLOT LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left PLOT</description>
+								<posx>-8</posx>
+								<posy>312</posy>
+								<width>1040</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right PLOT</description>
+								<posx>1150</posx>
+								<posy>312</posy>
+								<width>95</width>
+								<height>1</height>
+								<texture border="2">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+						</control>
+					<!--cast-->	
+						<control type="group" id="1010">
+							<posy>-20</posy>
+							<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+							<visible>Control.IsVisible(50) + [Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+							<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+							<control type="label">
+								<description>CAST LABEL</description>
+								<posx>1130</posx>
+								<posy>292</posy>
+								<width>500</width>
+								<height>35</height>
+								<font>font_28_B</font> <!--CAST LABEL-->
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]CAST[/UPPERCASE]</label>
+								<visible>Control.IsVisible(50) + [Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+							</control>
+							<control type="image">
+								<description>SEPARATOR left CAST</description>
+								<posx>-8</posx>
+								<posy>312</posy>
+								<width>1040</width>
+								<height>1</height>
+								<texture border="2" flipx="true">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+							<control type="image">
+								<description>SEPARATOR right CAST</description>
+								<posx>1150</posx>
+								<posy>312</posy>
+								<width>95</width>
+								<texture border="2">separator.png</texture>
+								<colordiffuse>-</colordiffuse>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>0</posx>
+							<posy>318</posy>
+							<width>634</width>
+							<height>230</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> 
+							<control type="image">
+								<description>PLOT/CAST BACKGROUND</description>
+								<posx>640</posx>
+								<posy>318</posy>
+								<width>600</width>
+								<height>230</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						
+						<control type="label">
+							<description>Genre</description>
+							<posx>1240</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.Genre</info>		
+						</control>
+					</control>
+				<!--content-->	
+					<control type="list" id="901">
+						<posx>-68</posx>
+						<posy>350</posy>
+						<width>590</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>901</ondown>
+						<onleft>987</onleft>
+						<onright>50</onright>
+						<itemgap>-</itemgap>
+						<itemlayout width="490" height="45">
+							<control type="image">
+								<width>580</width>
+								<height>45</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>180</width>
+								<height>45</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>520</width>
+								<height>45</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="45">
+							<control type="image">
+								<posx>-5</posx>
+								<width>595</width>
+								<height>45</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>595</width>
+								<height>45</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>45</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>185</posx>
+								<posy>-1</posy>
+								<width>530</width>
+								<height>45</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Episodes</description>
+								<label>$LOCALIZE[20360]</label>
+								<label2>$INFO[ListItem.Episode] [COLOR=DisabledColor] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] -$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>First Aired</description>
+								<label>$LOCALIZE[20416]</label>
+								<label2>$INFO[ListItem.Premiered]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Rating</description>
+								<label>$LOCALIZE[563]</label>
+								<label2>$INFO[ListItem.Rating]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Studio</description>
+								<label>$LOCALIZE[572]</label>
+								<label2>$INFO[ListItem.Studio]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				<!--VideoInfoStudioMediaFlag-->
+					<control type="group">
+						<width>500</width>
+						<height>500</height>
+						<control type="image">
+							<posx>952</posx>
+							<posy>80</posy>
+							<width>201</width>
+							<height>139</height>
+							<aspectratio>keep</aspectratio>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<colordiffuse>gray</colordiffuse>
+							<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+							<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+							<bordersize>3</bordersize>
+						</control>
+						<control type="image">
+							<posx>952</posx>
+							<posy>208</posy>
+							<width>201</width>
+							<height>139</height>
+							<aspectratio>keep</aspectratio>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<colordiffuse>-</colordiffuse>
+							<info>ListItem.Studio,flagging/Studios/,.png</info>
+							<texture flipy="true" diffuse="reflection.png"/>
+							<bordertexture flipy="true" border="15" diffuse="reflection.png">Glass/keyfocus.png</bordertexture>
+							<bordersize>14</bordersize>
+						</control>
+					</control>
+				</control>
+	
+	<!--(((TV_POSTERS)))=======================================================================================================================-->
+				<control type="group">
+					<visible>Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+					<control type="group">	
+						<posx>-80</posx>
+						<posy>10</posy>
+						<control type="label">
+							<posy>-7</posy>
+							<description>Title</description>
+							<width>900</width>
+							<font>font_28_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Title] $INFO[ListItem.Year,(,)][/UPPERCASE]</label>	
+							<scroll>yes</scroll>
+						</control>
+					<!--plot-->	
+						<control type="group">
+							<posy>-65</posy>
+							<control type="group" id="1009">
+								<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+								<visible>!Control.IsVisible(1010)</visible>
+								<animation effect="fade" start="0" end="0" time="0" condition="Control.IsVisible(1010)">Hidden</animation>		
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>PLOT LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>500</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--PLOT LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]PLOT[/UPPERCASE]</label>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left PLOT</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>580</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right PLOT</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+								</control>
+							</control>
+						<!--cast-->	
+							<control type="group" id="1010">
+								<!--ooooooooooooooooooooooooo THIS IS TO SWITCH BETWEEN "PLOT" AND "CAST" ooooooooooooooooooooooooooooooo-->
+								<visible>Control.IsVisible(50) + [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+								<!--ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+								<control type="label">
+									<description>CAST LABEL</description>
+									<posx>1076</posx>
+									<posy>292</posy>
+									<width>500</width>
+									<height>35</height>
+									<font>font_28_B</font> <!--CAST LABEL-->
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>Grey</textcolor>
+									<shadowcolor>ShadowColor</shadowcolor>
+									<label>[UPPERCASE]CAST[/UPPERCASE]</label>
+									<visible>Control.IsVisible(50) + [Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)]</visible>
+								</control>
+								<control type="image">
+									<description>SEPARATOR left CAST</description>
+									<posx>400</posx>
+									<posy>312</posy>
+									<width>580</width>
+									<height>1</height>
+									<texture border="2" flipx="true">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+								<control type="image">
+									<description>SEPARATOR right CAST</description>
+									<posx>1100</posx>
+									<posy>312</posy>
+									<width>110</width>
+									<height>1</height>
+									<texture border="2">separator.png</texture>
+									<colordiffuse>-</colordiffuse>
+								</control>
+							</control>
+						</control>
+						<control type="image">
+							<description>INFO BACKGROUND</description>
+							<posx>410</posx>
+							<posy>55</posy>
+							<width>790</width>
+							<height>175</height>
+							<reveal>-</reveal>
+							<info>-</info>
+							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+							<bordersize>9</bordersize>
+						</control>
+						<control type="group"> <!--lotta work for one box-->
+							<posy>-65</posy>
+							<control type="image">
+								<description>PLOT/CAST BACKGROUND</description>
+								<posx>410</posx>
+								<posy>330</posy>
+								<width>790</width>
+								<height>280</height>
+								<reveal>-</reveal>
+								<info>-</info>
+								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+								<bordersize>9</bordersize>
+							</control>
+						</control>
+						
+						<!--********************************* separators *****************************-->
+						<control type="image"> <!--TOP-->
+							<description>top bar</description>
+							<posy>34</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<control type="image"> <!--BOTTOM-->
+							<description>BOTTOM bar</description>
+							<posy>565</posy>
+							<width>1220</width>
+							<height>3</height>
+							<texture>separatio_FS.png</texture>
+						</control>
+						<!--**************************************************************************-->
+						
+						<control type="label">
+							<description>Genre</description>
+							<posx>1220</posx>
+							<posy>1</posy>
+							<width>600</width>
+							<font>font_23_B</font>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>ShadowColor</shadowcolor>
+							<align>right</align>
+							<info>ListItem.Genre</info>		
+						</control>
+					</control>
+				<!--content-->		
+					<control type="list" id="901">
+						<posx>350</posx>
+						<posy>82</posy>
+						<width>755</width>
+						<height>210</height>
+						<onup>987</onup>
+						<ondown>50</ondown>
+						<onleft>987</onleft>
+						<onright>61</onright>
+						<itemgap></itemgap>
+						<itemlayout width="660" height="35">
+							<control type="image">
+								<width>740</width>
+								<height>38</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>	
+							<control type="label">
+								<posx>5</posx>
+								<width>170</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--CAT. LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_21_B</font> <!--INFO LABEL-->
+								<aligny>center</aligny>
+								<textcolor>Grey</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>	
+						<focusedlayout width="660" height="35">
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>
+								<colordiffuse>-</colordiffuse>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<visible>Control.HasFocus(901)</visible>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>755</width>
+								<height>35</height>	
+								<colordiffuse>-</colordiffuse>
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(901)</visible>
+							</control>
+							<control type="label">
+								<posx>2</posx>
+								<posy>-1</posy>
+								<width>190</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label>[UPPERCASE]- $INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<posx>190</posx>
+								<posy>-1</posy>
+								<width>545</width>
+								<height>35</height>
+								<font>font_23_B</font>
+								<aligny>center</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<label fallback="31000">$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<description>Episodes</description>
+								<label>$LOCALIZE[20360]</label>
+								<label2>$INFO[ListItem.Episode] [COLOR=DisabledColor] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] -$INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<description>First Aired</description>
+								<label>$LOCALIZE[20416]</label>
+								<label2>$INFO[ListItem.Premiered]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<description>Rating</description>
+								<label>$LOCALIZE[563]</label>
+								<label2>$INFO[ListItem.Rating]</label2>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<description>Studio</description>
+								<label>$LOCALIZE[572]</label>
+								<label2>$INFO[ListItem.Studio]</label2>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				<!--VideoInfoStudioMediaFlag-->
+					<control type="image">
+						<posx>-100</posx>
+						<posy>545</posy>
+						<width>141</width>
+						<height>80</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+					</control>
+				</control>
+	
+	<!--(((PLOTS/CASTS)))==================================================================================================================-->			
+				<control type="group">	<!--(4)/(50)-->
+					<posx>361</posx>
+					<posy>138</posy>
+				<!--MOVIES ==========================================-->
+					<control type="textbox" id="4">
+						<description>Movies Plot Value</description>
+						<posx>0</posx>
+						<posy>224</posy>
+						<width>735</width>
+						<height>166</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(Movies)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				<!--MUSIC VIDEOS ==========================================-->
+					<control type="textbox" id="4">
+						<description>Music Videos Plot Value</description>
+						<posx>0</posx>
+						<posy>159</posy>
+						<width>730</width>
+						<height>231</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(MusicVideos)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				<!--EPISODES ==========================================-->
+					<control type="textbox" id="4">
+						<description>Episode Plot Value</description>
+						<posx>45</posx>
+						<posy>224</posy>
+						<width>710</width>
+						<height>166</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(Episodes)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				<!--TV SHOWS (banner) ==========================================-->
+					<control type="textbox" id="4">
+						<description>TV Shows Plot Value</description>
+						<posx>215</posx>
+						<posy>210</posy>
+						<width>550</width>
+						<height>190</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				<!--TV SHOWS(poster) ==========================================-->
+					<control type="textbox" id="4">
+						<description>TV Shows Poster Plot Value</description>
+						<posx>0</posx>
+						<posy>159</posy>
+						<width>730</width>
+						<height>231</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				<!--SEASONS ==========================================-->
+					<control type="textbox" id="4">
+						<description>TV Shows Poster Plot Value</description>
+						<posx>0</posx>
+						<posy>159</posy>
+						<width>730</width>
+						<height>231</height>
+						<font>font_23_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<align>justify</align>
+						<label>$INFO[ListItem.Plot]</label>
+						<pagecontrol>61</pagecontrol>
+						<visible>!Control.IsVisible(50) + Container.Content(Seasons)</visible>
+						<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+					</control>
+				
+				<!--MOVIES (CAST) ==========================================-->
+					<control type="list" id="50">
+						<description>Cast</description>
+						<posx>-5</posx>
+						<posy>220</posy>
+						<width>755</width>
+						<height>180</height>
+						<onup>901</onup>
+						<onleft>505</onleft>
+						<onright>61</onright>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<visible>Container.Content(Movies)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="35" width="330">		
+							<control type="image">
+								<width>735</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>685</width>
+								<height>33</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="330">	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>735</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+				
+				<!--MUSIC VIDEO (ARTISTS) ==========================================-->
+					<control type="list" id="50">
+						<description>ARTISTS</description>
+						<posx>-5</posx>
+						<posy>155</posy>
+						<width>755</width>
+						<height>180</height>
+						<onup>901</onup>
+						<onleft>505</onleft>
+						<onright>61</onright>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<visible>Container.Content(MusicVideos)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="35" width="330">		
+							<control type="image">
+								<width>735</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>685</width>
+								<height>33</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="330">	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>735</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+				
+				<!--EPISODES (CAST) ==========================================-->				
+					<control type="list" id="50">
+						<posx>40</posx>
+						<posy>220</posy>
+						<width>725</width>
+						<height>180</height>
+						<onup>901</onup>
+						<onleft>505</onleft>
+						<onright>61</onright>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<visible>Container.Content(Episodes)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="35" width="330">		
+							<control type="image">
+								<width>710</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>660</width>
+								<height>38</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="330">	
+							<control type="image">
+								<posx>-5</posx>
+								<width>725</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>725</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>670</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>			
+				
+				<!--TV/BANNER (CAST) ==========================================-->		
+					<control type="list" id="50">
+						<description>Cast</description>
+						<posx>210</posx>
+						<posy>210</posy>
+						<width>560</width>
+						<height>200</height>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<onup>987</onup>
+						<ondown>50</ondown>	
+						<onleft>901</onleft>
+						<onright>61</onright>
+						<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="40" width="500">		
+							<control type="image">
+								<width>550</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>505</width>
+								<height>38</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="500">				
+							<control type="image">
+								<posx>-5</posx>
+								<width>725</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>
+							<control type="image">
+								<posx>-5</posx>
+								<width>725</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>505</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<scroll>true</scroll>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+				
+				<!--TV/POSTER (CAST) ==========================================-->
+					<control type="list" id="50">
+						<description>Cast</description>
+						<posx>-5</posx>
+						<posy>155</posy>
+						<width>755</width>
+						<height>245</height>
+						<onup>901</onup>
+						<onleft>505</onleft>
+						<onright>61</onright>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<visible>Container.Content(TVShows) + Skin.HasSetting(UseTVShowsPosterCover)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="35" width="330">		
+							<control type="image">
+								<width>735</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>685</width>
+								<height>33</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="330">	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>710</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+					
+				<!--TV/SEASONS (CAST) ==========================================-->
+					<control type="list" id="50">
+						<description>Cast</description>
+						<posx>-5</posx>
+						<posy>155</posy>
+						<width>755</width>
+						<height>245</height>
+						<onup>901</onup>
+						<onleft>505</onleft>
+						<onright>61</onright>
+						<viewtype label="">list</viewtype>
+						<pagecontrol>61</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<visible>Container.Content(Seasons)</visible>
+						<!--ControlsOpenCloseAnim-->
+						<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+						<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+						<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+						<itemlayout height="35" width="330">		
+							<control type="image">
+								<width>735</width>
+								<height>38</height>
+								<texture border="10">ListViewItemBack.png</texture>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>35</posx>
+								<posy>-1</posy>
+								<width>685</width>
+								<height>33</height>
+								<font>font_21_B</font>
+								<textcolor>Grey</textcolor>
+								<selectedcolor>ThemeColor2</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>				
+						</itemlayout>				
+						<focusedlayout height="35" width="330">	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<visible>Control.HasFocus(50)</visible>
+								<height>35</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+							</control>	
+							<control type="image">
+								<posx>-5</posx>
+								<width>750</width>
+								<height>35</height>	
+								<!--AltTexture-->
+								<texture border="10">scrollbar-background.png</texture>
+								<!--AltTexture-->
+								<visible>!Control.HasFocus(50)</visible>
+							</control>
+							<control type="image">
+								<posx></posx>
+								<posy>5</posy>
+								<width>23</width>
+								<height>23</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>30</posx>
+								<posy>-1</posy>
+								<width>710</width>
+								<height>33</height>
+								<font>font_23_B</font>
+								<textcolor>ThemeColor2</textcolor>
+								<selectedcolor>SelectedColor</selectedcolor>
+								<shadowcolor>ShadowColor</shadowcolor>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+							</control>
+						</focusedlayout>
+					</control>
+					
+					<control type="spincontrol" id="61">
+						<posx>720</posx>
+						<posy>445</posy>
+						<width>30</width>
+						<height>30</height>
+						<spinwidth>30</spinwidth>
+						<spinheight>30</spinheight>	
+						<onup>50</onup>		
+					</control>		
+				</control>	
+			</control>
+
+	<!--(((MEDIA FLAGS)))=======================================================================================================================-->
+			<control type="group">
+				<posx>110</posx>
+				<posy>100</posy>
+				<!--ControlsOpenCloseAnim-->
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+				<!--EpisodesHiddenSlide-->
+				<animation effect="slide" end="-455,0" time="0" condition="Container.Content(Episodes)">Conditional</animation>
+				<visible>Container.Content(Movies) | Container.Content(MusicVideos) | Container.Content(Episodes)</visible>
+				<control type="grouplist">
+					<description>Media Flags Area</description>
+					<posx>375</posx>
+					<posy>568</posy>
+					<width>580</width>
+					<height>50</height>
+					<itemgap>2</itemgap>
+					<align>left</align>
+					<orientation>horizontal</orientation>
+				<!--VIDEO-->	
+					<control type="image">
+						<description>Blu-ray Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/bluray.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,.bluray) | substring(ListItem.filename,.blu-ray) | substring(ListItem.filename,.brrip)</visible>
+					</control>
+					<control type="image">
+						<description>HDDVD Image</description>
+						<width>120</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/hddvd.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,hddvd) | substring(ListItem.filename,hd-dvd)</visible>
+					</control>
+						<control type="image">
+						<description>DVD Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/dvd.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,.ifo,Right) | substring(listitem.filename,.img,Right) | substring(listitem.filename,.iso,Right) | substring(listitem.filename,.vob,Right)</visible>
+					</control>
+					<control type="image">
+						<description>HDTV Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/hdtv.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,hdtv)</visible>
+					</control>
+					<control type="image">
+						<description>DVDRIP Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/dvdrip.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,dvdrip)</visible>
+					</control>
+					<control type="image">
+						<description>DVDR5 Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/dvdr5.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,dvdr5) | substring(ListItem.filename,.r5)</visible>
+					</control>
+					<control type="image">
+						<description>DVD SCREENER Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/dvdscreener.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,dvdscreener) | substring(ListItem.filename,dvdscr) | substring(ListItem.filename,.screener)</visible>
+					</control>
+					<control type="image">
+						<description>TELESYNC Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/telesync.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,telesync) | substring(ListItem.filename,.ts.)</visible>
+					</control>
+					<control type="image">
+						<description>CAM Image</description>
+						<width>90</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/video/cam.png</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>substring(ListItem.filename,.CAM)</visible>
+					</control>
+					<control type="image">
+						<description>Video Res Image</description>
+						<width>70</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<texture>$INFO[ListItem.VideoResolution,flagging/VideoResolution/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+					</control>
+					<control type="image">
+						<description>Codec Image</description>
+						<width>80</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.VideoCodec,flagging/VideoCodec/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+					</control>
+				<!--AUDIO-->
+					<control type="image">
+						<description>MP3 Codec Image</description>
+						<width>80</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.AudioCodec,flagging/AudioCodec/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+					</control>
+					<control type="image">
+						<description>Audio Channels Image</description>
+						<width>70</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.AudioChannels,flagging/AudioChannels/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+					</control>
+				<!--ASPECT-->
+					<control type="image">
+						<description>Aspectratio Image</description>
+						<width>60</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.VideoAspect,flagging/AspectRatio/,.png]</texture>
+						<colordiffuse>gray</colordiffuse>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+					</control>
+				<!--RATING (MRAA)-->
+					<control type="group">
+						<visible>Skin.HasSetting(UseMPAARatingFlags) + Container.Content(Movies)</visible>
+						<width>70</width>
+						<height>60</height>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-G.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Rated G)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-PG.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,Rated PG-13)</visible> 
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-13.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Rated PG-13)</visible> 
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-17.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Rated NC-17)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-R.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Rated R)</visible> 
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/MPAA-U.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>IsEmpty(ListItem.MPAA) | substring(ListItem.MPAA,USA:Unrated)</visible>
+						</control>
+					</control>
+				<!--RATING (OFLC)-->
+					<control type="group">
+						<visible>Skin.HasSetting(UseOFLCRatingFlags) + Container.Content(Movies)</visible>
+						<width>70</width>
+						<height>60</height>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/OFLC-G.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Australia:G)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/OFLC-PG.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Australia:PG)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/OFLC-M.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Australia:M) + !substring(ListItem.MPAA,Australia:MA)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/OFLC-MA.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Australia:MA)</visible>
+						</control>
+						<control type="image">
+							<description>TV Rating</description>
+							<width>70</width>
+							<height>60</height>
+							<aspectratio>keep</aspectratio>
+							<texture>flagging/Rating/OFLC-R.png</texture>
+							<fadetime>MediaFlagsCrossfadeTime</fadetime>
+							<visible>substring(ListItem.MPAA,Australia:R)</visible>
+						</control>
+					</control>	
+				<!--RATING (TV)-->
+					<control type="image">
+						<description>TV Rating</description>
+						<width>70</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.MPAA,flagging/Rating/,.png]</texture>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>!IsEmpty(ListItem.MPAA) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+					</control>
+					<control type="image">
+						<description>TV Rating</description>
+						<width>70</width><width>80</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>flagging/Rating/TV-NA.png</texture>
+						<fadetime>MediaFlagsCrossfadeTime</fadetime>
+						<visible>IsEmpty(ListItem.MPAA) + [Container.Content(TVShows) | Container.Content(Episodes)]</visible>
+					</control>
+				</control>
+			</control>
+		</control>		
+	</controls>	
+</window>
