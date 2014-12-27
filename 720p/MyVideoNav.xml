@@ -11851,8 +11851,8 @@
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>-</colordiffuse>
 									<texturenofocus>-</texturenofocus>
-									<textureradiofocus>-</textureradiofocus>
-									<textureradionofocus>-</textureradionofocus>
+									<textureradioon>-</textureradioon>
+									<textureradiooff>-</textureradiooff>
 									<label>[UPPERCASE]$LOCALIZE[587][/UPPERCASE]</label>
 								</control>
 								<control type="image" id="101">
