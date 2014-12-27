@@ -18,47 +18,6 @@
 	<constant name="MediaFlagsCrossfadeTime">400</constant>
 	<constant name="SortLetterOffsetY">280</constant>
 	
-	<include name="DialogTitle">
-		<posx>DialogMarginOffsetX</posx>
-		<posy>DialogHeadingOffsetY</posy>
-		<width>600</width>
-		<font>font_24_U</font>
-		<textcolor>DialogTitleColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-	</include>
-	
-	<include name="DialogTitle2">
-		<posx>DialogMarginOffsetX</posx>
-		<posy>26</posy>
-		<width>420</width>
-		<font>font_25_B</font>
-		<textcolor>DialogTitleColor</textcolor>
-		<shadowcolor>ShadowColor</shadowcolor>
-		<align>center</align>
-		<aligny>top</aligny>
-	</include>
-	
-	<include name="ContextMenuBtn">
-		<width>280</width>
-		<textwidth>230</textwidth>
-		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
-		<font>font_20_CB</font>
-		<textcolor>ff626262</textcolor>
-		<focusedcolor>ThemeColor</focusedcolor>
-		<scroll>yes</scroll>
-	</include>
-	
-	<include name="ShutdownContextMenuBtn">
-		<width>280</width>
-		<textwidth>230</textwidth>
-		<!--ADDED THIS FOR DIALOGBUTTONMENU.XML-->
-		<font>font_20_CB</font>
-		<textcolor>ff626262</textcolor>
-		<focusedcolor>ThemeColor</focusedcolor>
-		<scroll>yes</scroll>
-	</include>
 	
 	<include name="VariableBackgroundHeight">
 		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>

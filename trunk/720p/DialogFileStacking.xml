@@ -30,7 +30,15 @@
 			<!--*****************************************************************************************************-->
 			
 			<control type="label" id="1">
-				<include file="includes.xml">DialogTitle2</include>
+			<!--DialogTitle2</include-->
+				<posx>DialogMarginOffsetX</posx>
+				<posy>26</posy>
+				<width>420</width>
+				<font>font_25_B</font>
+				<textcolor>DialogTitleColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+				<aligny>top</aligny>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 			<control type="image">

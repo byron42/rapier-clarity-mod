@@ -24,7 +24,15 @@
 			<!--***************************************************************************************************-->
 			
 			<control type="label">
-				<include file="includes.xml">DialogTitle</include>
+			<!--DialogTitle-->
+				<posx>DialogMarginOffsetX</posx>
+				<posy>DialogHeadingOffsetY</posy>
+				<width>600</width>
+				<font>font_24_U</font>
+				<textcolor>DialogTitleColor</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
 				<width>1120</width>
 				<label>$LOCALIZE[262]</label>
 			</control>
