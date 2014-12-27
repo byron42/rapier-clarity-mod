@@ -752,8 +752,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -896,8 +896,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -1010,8 +1010,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -1124,8 +1124,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -1374,8 +1374,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -1623,8 +1623,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -1848,8 +1848,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -2255,8 +2255,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -2296,8 +2296,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[20190] $LOCALIZE[21866]  ( 1 - 4 )</label>
 							<selected>Skin.HasSetting(ExpandCustom1HomeMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandCustom1HomeMenuSettings)</onclick>
@@ -2334,8 +2334,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[20190] $LOCALIZE[21866]  ( 5 - 8 )</label>
 							<selected>Skin.HasSetting(ExpandCustom2HomeMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandCustom2HomeMenuSettings)</onclick>
@@ -2356,8 +2356,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -2820,8 +2820,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -2868,8 +2868,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[350]</label>
 							<selected>Skin.HasSetting(ExpandProgramsSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandProgramsSubMenuSettings)</onclick>
@@ -2906,8 +2906,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[1213]</label>
 							<selected>Skin.HasSetting(ExpandPicturesSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandPicturesSubMenuSettings)</onclick>
@@ -2945,8 +2945,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[2]</label>
 							<selected>Skin.HasSetting(ExpandMusicSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandMusicSubMenuSettings)</onclick>
@@ -2983,8 +2983,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[10006]</label>
 							<selected>Skin.HasSetting(ExpandVideosSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandVideosSubMenuSettings)</onclick>
@@ -3021,8 +3021,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[20342]</label>
 							<selected>Skin.HasSetting(ExpandMoviesSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandMoviesSubMenuSettings)</onclick>
@@ -3060,8 +3060,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[20343]</label>
 							<selected>Skin.HasSetting(ExpandTVShowsSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandTVShowsSubMenuSettings)</onclick>
@@ -3099,8 +3099,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[128]</label>
 							<selected>Skin.HasSetting(ExpandGeneralSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandGeneralSubMenuSettings)</onclick>
@@ -3138,8 +3138,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[8]</label>
 							<selected>Skin.HasSetting(ExpandWeatherSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandWeatherSubMenuSettings)</onclick>
@@ -3177,8 +3177,8 @@
 							</animation>
 							<radioposx></radioposx>
 							<radioposy></radioposy>
-							<textureradiofocus>arrow-scroll-right-nofocus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-right-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-right-nofocus.png</textureradioon>
+							<textureradiooff>arrow-scroll-right-nofocus.png</textureradiooff>
 							<label>$LOCALIZE[24000]S</label>
 							<selected>Skin.HasSetting(ExpandAdd_onsSubMenuSettings)</selected>
 							<onclick>Skin.SetBool(ExpandAdd_onsSubMenuSettings)</onclick>
@@ -3661,8 +3661,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -4208,8 +4208,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -4234,7 +4234,7 @@
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
 							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
-							<textureradiofocus>radio-button-focus2.png</textureradiofocus>
+							<textureradioon>radio-button-focus2.png</textureradioon>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4454,8 +4454,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -4672,8 +4672,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -4887,8 +4887,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -5103,8 +5103,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -5318,8 +5318,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -5533,8 +5533,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -5748,8 +5748,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -5963,8 +5963,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -6178,8 +6178,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -6394,8 +6394,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
@@ -6610,8 +6610,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<textureradiofocus>arrow-scroll-down-focus.png</textureradiofocus>
-							<textureradionofocus>arrow-scroll-up-nofocus.png</textureradionofocus>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
