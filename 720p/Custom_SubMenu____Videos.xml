@@ -12,7 +12,7 @@
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">
 				<!--FOR HOME-->
-				<animation type="WindowOpen" condition="Window.IsActive(Home) "reversible="false">
+				<animation type="WindowOpen" condition="Window.IsActive(Home)" reversible="false">
 					<effect type="fade" end="100" delay="0" time="0" />
 				</animation>
 				<!--FOR SKIN SETTINGS-->
@@ -741,7 +741,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1131,7 +1131,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1519,7 +1519,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -1909,7 +1909,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2299,7 +2299,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -2689,7 +2689,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
@@ -3079,7 +3079,7 @@
 							<textoffsetx>47</textoffsetx>
 							<shadowcolor>-</shadowcolor>
 							<disabledcolor>aa343434</disabledcolor> <!--JET-->
-							<!--<disabledcolor>CC555555</disabledcolor> <!--Davy's Grey-->
+							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
 							<colordiffuse>-</colordiffuse>
