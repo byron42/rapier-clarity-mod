@@ -15,7 +15,7 @@
 				<!---->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(3080) | Window.IsActive(126)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="![Window.IsActive(3080) | Window.IsActive(126)]">Conditional</animation>
-				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS (-)-->
+				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS ()-->
 					<posx>30</posx>
 					<posy>80</posy>
 					<control type="label" id="-">
@@ -26,11 +26,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[20190] $LOCALIZE[10000] $LOCALIZE[21866]</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>700</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -114,8 +110,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -147,8 +143,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -180,8 +176,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -213,8 +209,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -255,9 +251,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
 						</control>
 						<control type="label" > <!--BUTTON LABEL(empty)-->
@@ -271,9 +264,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom1Btn-NAME))</visible>
 						</control>
 					<!--PROPERTIES-->
@@ -301,7 +291,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -326,7 +315,6 @@
 								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
 								<texturenofocus border="10">button-nofocus.png</texturenofocus>
 								<pulseonselect>false</pulseonselect>
-								<scroll>true</scroll>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1BtnParam)]</label>
@@ -347,7 +335,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -389,7 +376,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -432,7 +418,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -482,12 +467,9 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_29_CB</font>
-							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
 							<height>218</height>
-							<bordersize>10</bordersize>
-							<aspectratio>keep</aspectratio>
 							<label>[UPPERCASE]$INFO[Skin.String(Custom1Btn-NAME)][/UPPERCASE]</label>
 							<visible>ControlGroup(921).HasFocus(2336)</visible>
 						</control>
@@ -519,9 +501,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
 						</control>
 						<control type="label" > <!--BUTTON LABEL(empty)-->
@@ -535,9 +514,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom2Btn-NAME))</visible>
 						</control>
 				<!--PROPERTIES-->	
@@ -565,7 +541,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -590,7 +565,6 @@
 								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
 								<texturenofocus border="10">button-nofocus.png</texturenofocus>
 								<pulseonselect>false</pulseonselect>
-								<scroll>true</scroll>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2BtnParam)]</label>
@@ -611,7 +585,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -653,7 +626,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -696,7 +668,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -744,12 +715,9 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_29_CB</font>
-							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
 							<height>218</height>
-							<bordersize>10</bordersize>
-							<aspectratio>keep</aspectratio>
 							<label>[UPPERCASE]$INFO[Skin.String(Custom2Btn-NAME)][/UPPERCASE]</label>
 							<visible>ControlGroup(921).HasFocus(2336)</visible>
 						</control>
@@ -781,9 +749,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
 						</control>
 						<control type="label" > <!--BUTTON LABEL(empty)-->
@@ -797,9 +762,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom3Btn-NAME))</visible>
 						</control>
 					<!--PROPERTIES-->	
@@ -827,7 +789,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -852,7 +813,6 @@
 								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
 								<texturenofocus border="10">button-nofocus.png</texturenofocus>
 								<pulseonselect>false</pulseonselect>
-								<scroll>true</scroll>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3BtnParam)]</label>
@@ -873,7 +833,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -915,7 +874,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -958,7 +916,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -1006,12 +963,9 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_29_CB</font>
-							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
 							<height>218</height>
-							<bordersize>10</bordersize>
-							<aspectratio>keep</aspectratio>
 							<label>[UPPERCASE]$INFO[Skin.String(Custom3Btn-NAME)][/UPPERCASE]</label>
 							<visible>ControlGroup(921).HasFocus(2336)</visible>
 						</control>
@@ -1043,9 +997,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>500</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>!IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
 						</control>
 						<control type="label" > <!--BUTTON LABEL(empty)-->
@@ -1059,9 +1010,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<width>700</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<visible>IsEmpty(Skin.String(Custom4Btn-NAME))</visible>
 						</control>
 					<!--PROPERTIES-->	
@@ -1089,7 +1037,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -1114,7 +1061,6 @@
 								<texturefocus border="10,10,10,10">search-focus.png</texturefocus>
 								<texturenofocus border="10">button-nofocus.png</texturenofocus>
 								<pulseonselect>false</pulseonselect>
-								<scroll>true</scroll>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4BtnParam)]</label>
@@ -1135,7 +1081,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -1177,7 +1122,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -1220,7 +1164,6 @@
 								<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 								<colordiffuse>FFC1EBFF</colordiffuse>
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-								<colordiffuse>-</colordiffuse>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
 								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
@@ -1269,12 +1212,9 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>font_29_CB</font>
-							<textwidth>288</textwidth> <!---->
 							<textcolor>BBF3E5AB</textcolor>
 							<width>291</width>
 							<height>218</height>
-							<bordersize>10</bordersize>
-							<aspectratio>keep</aspectratio>
 							<label>[UPPERCASE]$INFO[Skin.String(Custom4Btn-NAME)][/UPPERCASE]</label>
 							<visible>ControlGroup(921).HasFocus(2336)</visible>
 						</control>
@@ -1332,7 +1272,6 @@
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 						<label>$LOCALIZE[192] $LOCALIZE[535] </label>
-						<description>Back</description>	
 						<onclick>Skin.Reset(Custom1Btn-NAME)</onclick>
 						<onclick>Skin.Reset(Custom2Btn-NAME)</onclick>
 						<onclick>Skin.Reset(Custom3Btn-NAME)</onclick>

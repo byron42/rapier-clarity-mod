@@ -24,11 +24,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>31935</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -132,7 +128,6 @@
 							<width>620</width>
 							<height>36</height>
 							<font>font_23_B</font>
-							<height>36</height>
 							<scroll>false</scroll>
 							<align>left</align>
 							<aligny>top</aligny>

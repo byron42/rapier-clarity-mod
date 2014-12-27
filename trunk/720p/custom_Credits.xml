@@ -178,7 +178,6 @@
 					<font>font_32_B</font>
 					<aligny>center</aligny>
 					<textcolor>ThemeColor2</textcolor>
-					<textcolor>DefaultColor3</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>rapier - clarity - mod</label>
 				</control>
@@ -280,8 +279,7 @@
 					<posy>483</posy>
 					<width>1200</width>
 					<height>100</height>
-					<reveal>-</reveal>
-					<info>-</info>
+					<info></info>
 					<colordiffuse>BFFFFFFF</colordiffuse>
 					<texture border="10,10,10,10">Glass/keyfocus.png</texture>
 					<bordersize>9</bordersize>
@@ -307,8 +305,7 @@
 					<posy>565</posy>
 					<width>1200</width>
 					<height>100</height>
-					<reveal>-</reveal>
-					<info>-</info>
+					<info></info>
 					<colordiffuse>BFFFFFFF</colordiffuse>
 					<texture border="10,10,10,10">Glass/keyfocus.png</texture>
 					<bordersize>9</bordersize>
@@ -391,7 +388,7 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
+						<!-- <aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio> -->
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
