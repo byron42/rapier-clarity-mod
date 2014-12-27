@@ -533,8 +533,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -563,8 +563,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -594,8 +594,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -624,8 +624,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -654,8 +654,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -684,8 +684,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -714,8 +714,8 @@
 							<radioposy>-8</radioposy>
 							<radiowidth>90</radiowidth>
 							<radioheight>68</radioheight>
-							<textureradiofocus>PowerButtonOn.png</textureradiofocus>
-							<textureradionofocus>PowerButtonOff.png</textureradionofocus>
+							<textureradioon>PowerButtonOn.png</textureradioon>
+							<textureradiooff>PowerButtonOff.png</textureradiooff>
 							<texturefocus border="10,10,10,10" flipx="true">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="50">focus</animation>
@@ -811,8 +811,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -848,8 +848,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -881,8 +881,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -1201,8 +1201,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -1236,8 +1236,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -1269,8 +1269,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -1589,8 +1589,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -1626,8 +1626,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -1659,8 +1659,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -1979,8 +1979,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -2016,8 +2016,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -2049,8 +2049,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -2368,8 +2368,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -2405,8 +2405,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -2438,8 +2438,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -2759,8 +2759,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -2796,8 +2796,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -2829,8 +2829,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>
@@ -3149,8 +3149,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="10">search-focus.png</alttexturefocus>
@@ -3186,8 +3186,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<colordiffuse>-</colordiffuse>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -3219,8 +3219,8 @@
 								<radioposy>-</radioposy>
 								<radiowidth>22</radiowidth>
 								<radioheight>22</radioheight>
-								<textureradiofocus>radio-button-focus.png</textureradiofocus>
-								<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+								<textureradioon>radio-button-focus.png</textureradioon>
+								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<alttexturefocus border="5">search-focus.png</alttexturefocus>

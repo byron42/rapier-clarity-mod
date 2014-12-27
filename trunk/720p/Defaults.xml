@@ -38,8 +38,8 @@
 		<radioposy>-</radioposy>
 		<radiowidth>18</radiowidth>
 		<radioheight>18</radioheight>
-		<textureradiofocus>radio-button-focus.png</textureradiofocus>
-		<textureradionofocus>radio-button-nofocus.png</textureradionofocus>
+		<textureradioon>radio-button-focus.png</textureradioon>
+		<textureradiooff>radio-button-nofocus.png</textureradiooff>
 		<texturefocus border="5">button-focus.png</texturefocus>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
