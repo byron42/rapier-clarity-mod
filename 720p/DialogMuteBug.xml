@@ -10,7 +10,7 @@
 	<controls>
 		<control type="group">	
 			<animation effect="slide" end="0,0" time="300" condition="Window.Previous(Home) + !Skin.HasSetting(HideGlobalSearchIcon)">Conditional</animation>
-			<animation effect="slide" end="0,0" time="300" delay="1000"condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.Next(Home)">Conditional</animation>
+			<animation effect="slide" end="0,0" time="300" delay="1000" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.Next(Home)">Conditional</animation>
 			<!---->
 			<animation effect="fade" end="0" time="0">WindowClose</animation>
 			<control type="image">

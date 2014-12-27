@@ -1,5 +1,5 @@
 <window id="138">
-	<animation effect="fade" time="200">WindowOpen</animation> <!--condition="System.IdleTime(2)" --(???)-->
+	<animation effect="fade" time="200">WindowOpen</animation> <!--condition="System.IdleTime(2)" ***(???)-->
 	<animation effect="fade" time="200">WindowClose</animation>
 	<zorder>100</zorder>
 	<coordinates>

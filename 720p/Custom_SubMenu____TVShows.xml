@@ -13,7 +13,7 @@
 	<!--(((BACKGROUNDS)))=====================================================================================================================-->		
 			<control type="group">
 				<!--FOR HOME-->
-				<animation type="WindowOpen" condition="Window.IsActive(Home)"reversible="false">
+				<animation type="WindowOpen" condition="Window.IsActive(Home) "reversible="false">
 					<effect type="fade" end="100" delay="0" time="0" />
 				</animation>
 				<!--FOR SKIN SETTINGS-->
