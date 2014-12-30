@@ -205,7 +205,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -409,11 +408,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$INFO[Listitem.Label]</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -471,11 +466,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="10">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>$LOCALIZE[1024] $LOCALIZE[31918]</label>	
 						<onup>9001</onup>
 						<ondown>13</ondown>
@@ -491,11 +484,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="10">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>$LOCALIZE[15019] $LOCALIZE[21870]</label>
 						<onup>11</onup>
 						<ondown>14</ondown>
@@ -511,12 +502,10 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<disabledcolor>ff343434</disabledcolor> <!--JET-->
 						<texturenofocus border="10">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>$LOCALIZE[1210] $LOCALIZE[21870]</label>
 						<onup>13</onup>
 						<ondown>9001</ondown>
@@ -594,7 +583,6 @@
 									<font>font_23_B</font>
 									<textcolor>ListLabelUnfocusedColor</textcolor>	
 									<shadowcolor>ShadowColor</shadowcolor>
-									<height>36</height>
 									<scroll>false</scroll>
 									<align>left</align>
 									<aligny>top</aligny>
@@ -625,7 +613,6 @@
 									<height>35</height>
 									<font>font_25_B</font>
 									<textcolor>ThemeColor</textcolor>
-									<height>36</height>
 									<scroll>false</scroll>
 									<align>left</align>
 									<aligny>top</aligny>
@@ -640,7 +627,6 @@
 									<height>35</height>
 									<font>font_25_B</font>
 									<textcolor>BreadCrumbColor</textcolor>
-									<height>36</height>
 									<scroll>false</scroll>
 									<align>left</align>
 									<aligny>top</aligny>

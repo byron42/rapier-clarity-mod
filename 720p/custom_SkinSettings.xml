@@ -160,7 +160,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(ProgramsCustomBG)</info>		
 					<visible>Control.HasFocus(102) | Control.HasFocus(103)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -176,7 +176,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(PicturesCustomBG)</info>		
 					<visible>Control.HasFocus(108) | Control.HasFocus(109)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -192,7 +192,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(MusicCustomBG)</info>		
 					<visible>Control.HasFocus(114) | Control.HasFocus(115)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -208,7 +208,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(VideosCustomBG)</info>		
 					<visible>Control.HasFocus(120) | Control.HasFocus(121)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -224,7 +224,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(MoviesCustomBG)</info>		
 					<visible>Control.HasFocus(144) | Control.HasFocus(145)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -240,7 +240,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(TVShowsCustomBG)</info>		
 					<visible>Control.HasFocus(138) | Control.HasFocus(139)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -256,7 +256,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(GeneralCustomBG)</info>		
 					<visible>Control.HasFocus(126) | Control.HasFocus(127)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -272,7 +272,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(SystemCustomBG)</info>		
 					<visible>Control.HasFocus(132) | Control.HasFocus(133)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -289,7 +289,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(WeatherCustomBG)</info>		
 					<visible>Control.HasFocus(162) | Control.HasFocus(163)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -307,7 +307,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(UniversalCustomBG)</info>		
 					<visible>Control.HasFocus(1502)</visible>
 					<!--CustomBackgroundPreviewFadeInAnim-->
@@ -322,7 +322,7 @@
 					<posy>0</posy>
 					<width>1280</width>
 					<include>VariableBackgroundHeight</include>
-					<aspectratio aligny="middle">stretch</aspectratio>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<info>Skin.String(AddonsCustomBG)</info>		
 					<visible>Control.HasFocus(168)</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="500">Visible</animation>
@@ -448,7 +448,6 @@
 							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 							<colordiffuse></colordiffuse>
 							<texturenofocus border="10"></texturenofocus>
-							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
 							<label>31520</label>
 							<textoffsety>13</textoffsety>
@@ -730,7 +729,7 @@
 							<label>31522</label> <!--BREADCRUMB-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -776,8 +775,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -806,8 +803,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31524</label>
@@ -837,8 +832,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31525</label>
@@ -867,8 +860,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31526</label>
@@ -920,8 +911,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -951,8 +940,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31528</label>
@@ -981,8 +968,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31529</label>
@@ -1034,8 +1019,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1065,8 +1048,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31531</label>
@@ -1095,8 +1076,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31532</label>
@@ -1148,8 +1127,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1179,8 +1156,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31534</label>
@@ -1209,8 +1184,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31535</label>
@@ -1239,8 +1212,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31536</label>
@@ -1280,7 +1251,7 @@
 							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1303,8 +1274,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31556</label>
@@ -1331,8 +1300,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31537</label>
@@ -1353,8 +1320,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31024]</label>
@@ -1398,8 +1363,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1428,8 +1391,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1458,8 +1419,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1489,8 +1448,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31027]</label>
@@ -1520,8 +1477,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31036]</label>
@@ -1548,8 +1503,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31520] $LOCALIZE[1397] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[13324]</label>
@@ -1577,8 +1530,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31448</label>
@@ -1602,7 +1553,7 @@
 							<label>$LOCALIZE[8]</label> <!--WEATHER-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1645,11 +1596,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1676,7 +1624,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -1721,7 +1668,7 @@
 							<label>$LOCALIZE[10000]</label> <!--HOME-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1744,8 +1691,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31538</label>
@@ -1766,8 +1711,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31539</label>
@@ -1788,8 +1731,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[352] $LOCALIZE[513] $LOCALIZE[33069]</label>
@@ -1810,8 +1751,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[352] $LOCALIZE[12005] $LOCALIZE[1397] $LOCALIZE[250]</label>
@@ -1826,7 +1765,7 @@
 							<label>$LOCALIZE[21866] $LOCALIZE[33061]</label> <!--CATEGORY MENU-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -1877,11 +1816,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1908,11 +1844,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1939,11 +1872,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -1970,11 +1900,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2001,11 +1928,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2033,11 +1957,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2065,11 +1986,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2097,11 +2015,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2128,11 +2043,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2159,11 +2071,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2190,11 +2099,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2222,11 +2128,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2278,16 +2181,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -2316,16 +2215,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -2382,8 +2277,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2414,8 +2307,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>10002</label>
@@ -2447,8 +2338,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>10005</label>
@@ -2479,8 +2368,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>10006</label>
@@ -2511,8 +2398,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -2543,8 +2428,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>342</label>
@@ -2576,8 +2459,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>20343</label>
@@ -2608,8 +2489,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>128</label>
@@ -2640,8 +2519,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>247</label>
@@ -2672,8 +2549,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>8</label>
@@ -2704,8 +2579,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<label>31919</label>
@@ -2730,7 +2603,7 @@
 							<label>$LOCALIZE[21866] $LOCALIZE[1034]</label> <!--CATEGORY SUB-MENU-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -2753,8 +2626,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[513] $LOCALIZE[1034] $LOCALIZE[13108]</label>
@@ -2775,8 +2646,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31557</label>
@@ -2797,8 +2666,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015]  " $LOCALIZE[15019] $LOCALIZE[15311] " $LOCALIZE[31001] ( $LOCALIZE[593] $LOCALIZE[459] )</label>
@@ -2850,16 +2717,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -2888,16 +2751,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -2927,16 +2786,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -2965,16 +2820,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3003,16 +2854,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3042,16 +2889,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3081,16 +2924,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3120,16 +2959,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3159,16 +2994,12 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<pulseonselect>false</pulseonselect>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<!--SettingsItemOpenCloseAnim-->
 							<animation effect="fade" end="0" time="300">Hidden</animation>
 							<animation type="Visible">
@@ -3204,8 +3035,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[24022] / $LOCALIZE[24021]  $LOCALIZE[1034]  $LOCALIZE[31605]</label>
@@ -3219,7 +3048,7 @@
 							<label>31804</label> <!--RECENTLY ADDED-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3242,8 +3071,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20386]</label>
@@ -3265,8 +3092,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20387]</label>
@@ -3288,8 +3113,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[359]</label>
@@ -3311,8 +3134,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[20390]</label>
@@ -3328,7 +3149,7 @@
 							<label>31543</label> <!--INFO PANEL-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3351,8 +3172,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31544</label>
@@ -3373,8 +3192,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31545</label>
@@ -3395,8 +3212,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31075]</label>
@@ -3417,8 +3232,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[513]  $LOCALIZE[10511]</label>
@@ -3439,8 +3252,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[513]  $LOCALIZE[20088]</label>
@@ -3455,7 +3266,7 @@
 							<label>13350</label> <!--INFO PANEL-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3478,8 +3289,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31561] - $LOCALIZE[31562]</label>
@@ -3500,8 +3309,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31015] $LOCALIZE[13350] $LOCALIZE[544]</label>
@@ -3533,7 +3340,7 @@
 							<label>$LOCALIZE[10005]</label> <!--MUSIC-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3556,8 +3363,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31022]</label>
@@ -3572,7 +3377,7 @@
 							<label>$LOCALIZE[10006]</label> <!--VIDEO-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3595,8 +3400,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31023]</label>
@@ -3611,7 +3414,7 @@
 							<label>$LOCALIZE[128]</label> <!--GENERAL-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3634,8 +3437,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31424]</label>
@@ -3683,11 +3484,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -3714,11 +3512,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -3742,7 +3537,7 @@
 							<label>[UPPERCASE]$LOCALIZE[31570] $LOCALIZE[427] $LOCALIZE[31569][/UPPERCASE] - CdART</label> <!--ROTATING DISC IMAGE-->
 							<font>font_21_B</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3765,8 +3560,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31563] $LOCALIZE[40059] $LOCALIZE[427] ($LOCALIZE[24021])</label>
@@ -3793,8 +3586,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31571] $LOCALIZE[31572] $LOCALIZE[31568] $LOCALIZE[427]</label>
@@ -3823,8 +3614,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31563] $LOCALIZE[31567] $LOCALIZE[427]</label>
@@ -3853,8 +3642,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[40059] $LOCALIZE[31564] $LOCALIZE[31565] $LOCALIZE[31566] $LOCALIZE[427]</label>
@@ -3876,7 +3663,7 @@
 							<label>31549</label> <!--MEDIA FLAGGING-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -3899,8 +3686,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31048]</label>
@@ -3929,8 +3714,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20342])[/COLOR]</label>
@@ -3957,8 +3740,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31049] [COLOR=MediaInfoItemColor]($LOCALIZE[20343])[/COLOR]</label>
@@ -3986,8 +3767,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31027]</label>
@@ -4017,8 +3796,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31550</label>
@@ -4045,8 +3822,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31551</label>
@@ -4067,7 +3842,7 @@
 							<label>$LOCALIZE[20364]S</label> <!--TV SHOWS-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -4090,8 +3865,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31552</label>
@@ -4105,7 +3878,7 @@
 							<label>31553</label> <!--VIEW ANIMATIONS-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>AA555555</disabledcolor><!--DISABLED-->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -4128,8 +3901,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31552</label>
@@ -4161,7 +3932,7 @@
 							<label>$LOCALIZE[33069]</label> <!--BACKGROUNDS-->
 							<font>font_21_UB</font><!---->
 							<disabledcolor>aa555555</disabledcolor><!---->
-							<align></align><!---->
+							<align>left</align><!---->
 							<aligny>top</aligny><!---->
 							<textoffsety>-2</textoffsety><!---->
 							<textoffsetx>3</textoffsetx><!---->
@@ -4185,8 +3956,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[24022] $LOCALIZE[13508] $LOCALIZE[169] $LOCALIZE[33069]</label>
@@ -4232,8 +4001,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<textureradioon>radio-button-focus2.png</textureradioon>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
@@ -4263,8 +4030,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4295,8 +4060,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4327,8 +4090,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4359,8 +4120,6 @@
 							<align>left</align>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="53,2,0,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4388,11 +4147,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4420,16 +4176,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetUniversalOPtions)</selected>
 							<onclick>Skin.Reset(Universal_CLASSIC_BG_Color)</onclick>
 							<onclick>Skin.Reset(DimUniversal_CLASSIC_BG)</onclick>
 							<visible>Skin.HasSetting(ExpandUniversal_CLASSIC_BG_Settings)</visible>
@@ -4476,7 +4228,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -4510,11 +4261,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4541,11 +4289,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4573,7 +4318,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -4606,11 +4350,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4637,16 +4378,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetUniversalOPtions)</selected>
 							<onclick>Skin.Reset(UniversalCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageUniversalBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllUniversalCustomBG)</onclick>
@@ -4694,7 +4431,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -4727,11 +4463,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4758,11 +4491,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4789,7 +4519,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -4821,11 +4550,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4852,16 +4578,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetProgramsOPtions)</selected>
 							<onclick>Skin.Reset(ProgramsCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageProgramsBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllProgramsCustomBG)</onclick>
@@ -4909,7 +4631,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -4942,11 +4663,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -4973,11 +4691,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5004,7 +4719,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5036,11 +4750,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5068,16 +4779,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetPicturesOPtions)</selected>
 							<onclick>Skin.Reset(PicturesCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImagePicturesBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllPicturesCustomBG)</onclick>
@@ -5125,7 +4832,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5158,11 +4864,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5189,11 +4892,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5220,7 +4920,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5252,12 +4951,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
-							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
 							<label>$LOCALIZE[31060]</label>
@@ -5283,16 +4978,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetMusicOPtions)</selected>
 							<onclick>Skin.Reset(MusicCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageMusicBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllMusicCustomBG)</onclick>
@@ -5340,7 +5031,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5373,11 +5063,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5404,11 +5091,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5435,7 +5119,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5467,11 +5150,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5498,16 +5178,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetVideosOPtions)</selected>
 							<onclick>Skin.Reset(VideosCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageVideosBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllVideosCustomBG)</onclick>
@@ -5555,7 +5231,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5588,11 +5263,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5619,11 +5291,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5650,7 +5319,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5682,11 +5350,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5713,16 +5378,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetMoviesOPtions)</selected>
 							<onclick>Skin.Reset(MoviesCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageMoviesBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllMoviesCustomBG)</onclick>
@@ -5770,7 +5431,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5803,11 +5463,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5834,11 +5491,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5865,7 +5519,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -5897,11 +5550,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -5928,16 +5578,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetTVShowsOPtions)</selected>
 							<onclick>Skin.Reset(TVShowsCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageTVShowsBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllTVShowsCustomBG)</onclick>
@@ -5985,7 +5631,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6018,11 +5663,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6049,11 +5691,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6080,7 +5719,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6112,11 +5750,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6143,16 +5778,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetGeneralOPtions)</selected>
 							<onclick>Skin.Reset(GeneralCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageGeneralBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllGeneralCustomBG)</onclick>
@@ -6201,7 +5832,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6234,11 +5864,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6265,11 +5892,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6296,7 +5920,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6328,11 +5951,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6359,16 +5979,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetScriptsOPtions)</selected>
 							<onclick>Skin.Reset(ScriptsCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageScriptsBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllScriptsCustomBG)</onclick>
@@ -6416,7 +6032,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6449,11 +6064,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6480,11 +6092,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6511,7 +6120,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6543,11 +6151,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6575,16 +6180,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetSystemOPtions)</selected>
 							<onclick>Skin.Reset(SystemCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageSystemBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllSystemCustomBG)</onclick>
@@ -6633,7 +6234,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6666,11 +6266,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6697,11 +6294,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6728,7 +6322,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
 							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
@@ -6760,11 +6353,8 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse></colordiffuse>
@@ -6791,16 +6381,12 @@
 							<textcolor>ff555555</textcolor>
 							<shadowcolor></shadowcolor>
 							<align>left</align>
-							<aligny>center</aligny>
 							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus><!--default-->
 							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
-							<alttexturefocus border="58,2,10,0">button-subitem-focus.png</alttexturefocus>
-							<alttexturenofocus border="58,2,10,0">button-subitem-focus.png</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
 							<colordiffuse background="true"></colordiffuse>
 							<label>$LOCALIZE[13278]s</label>
-							<selected>Skin.HasSetting(ResetWeatherOPtions)</selected>
 							<onclick>Skin.Reset(WeatherCustomBG)</onclick>
 							<onclick>Skin.Reset(UseMultiImageWeatherBGSettings)</onclick>
 							<onclick>Skin.Reset(ApplyAllWeatherCustomBG)</onclick>
@@ -6843,8 +6429,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31500]</label>
@@ -6879,8 +6463,6 @@
 							<texturefocus border="5,2,10,0">search-focus2.png</texturefocus>
 							<texturenofocus border="0">search-focus2.png</texturenofocus>
 							<colordiffuse>BBBBBBBB</colordiffuse>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31999]</label>
@@ -6913,8 +6495,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31510]</label>
@@ -6934,8 +6514,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>31938</label>
@@ -6956,8 +6534,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 							<label>$LOCALIZE[31511]</label>
@@ -7066,7 +6642,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>

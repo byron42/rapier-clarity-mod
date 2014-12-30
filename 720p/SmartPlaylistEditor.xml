@@ -60,11 +60,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[21432]</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -200,11 +196,9 @@
 								<font>font_28_B</font>
 								<textcolor>BreadCrumbColor</textcolor>
 								<align>center</align>
-								<selectedcolor>cc71A6D2</selectedcolor>
 								<textoffsetx>0</textoffsetx>
 								<textwidth>1050</textwidth>
 								<texturefocus border="10"></texturefocus>
-								<bordersize>2</bordersize>
 								<texturenofocus border="10,10,10,10"></texturenofocus>
 								<colordiffuse>BFFFFFFF</colordiffuse>
 								<aligny>top</aligny>
@@ -288,8 +282,6 @@
 									<texturefocus border="10,10,10,10">Glass/keyaltfocus.png</texturefocus>
 									<pulseonselect>false</pulseonselect>
 									<texturenofocus border="10">Glass/SPE_Button.png</texturenofocus>
-									<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-									<alttexturenofocus border="5">-</alttexturenofocus>
 									<colordiffuse></colordiffuse>
 									<label>$LOCALIZE[15019]</label>		    
 								</control>			
@@ -305,8 +297,6 @@
 									<texturefocus border="10,10,10,10">Glass/keyaltfocus.png</texturefocus>
 									<pulseonselect>false</pulseonselect>
 									<texturenofocus border="10">Glass/SPE_Button.png</texturenofocus>
-									<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-									<alttexturenofocus border="5">-</alttexturenofocus>
 									<colordiffuse></colordiffuse>
 									<label>$LOCALIZE[1210]</label>	
 								</control>				
@@ -322,12 +312,8 @@
 									<texturefocus border="10,10,10,10">Glass/keyaltfocus.png</texturefocus>
 									<pulseonselect>false</pulseonselect>
 									<texturenofocus border="10">Glass/SPE_Button.png</texturenofocus>
-									<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-									<alttexturenofocus border="5">-</alttexturenofocus>
 									<colordiffuse></colordiffuse>
 									<disabledcolor>ff343434</disabledcolor> <!--JET-->
-									<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-									<alttexturenofocus border="5">-</alttexturenofocus>
 									<label>$LOCALIZE[21435]</label>
 								</control>				
 							</control>

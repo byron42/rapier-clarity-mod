@@ -42,7 +42,8 @@
 						<width>200</width>
 						<height>200</height>
 						<info>ListItem.Icon</info>
-						<aspectratio align="middle" aligny="middle">keep</aspectratio>
+						<!-- <aspectratio align="middle" aligny="middle">keep</aspectratio> -->
+						<aspectratio>keep</aspectratio>
 						<animation effect="fade" end="40" condition="true">Conditional</animation>
 					</control>	
 				</itemlayout>
@@ -58,7 +59,8 @@
 						<width>200</width>
 						<height>200</height>
 						<info>ListItem.Icon</info>
-						<aspectratio align="middle" aligny="middle">keep</aspectratio>
+						<!-- <aspectratio align="middle" aligny="middle">keep</aspectratio> -->
+						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>

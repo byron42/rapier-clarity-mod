@@ -42,12 +42,7 @@
 					<font>font_32_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<!-- <label>$INFO[Listitem.Label]</label> -->
-					<posy>DialogHeadingOffsetY</posy>
 					<width>600</width>
-					<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-					<textcolor>DialogTitleColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
@@ -133,7 +128,6 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<selectedcolor>ThemeColor</selectedcolor>
-							<align>left</align>
 							<info>ListItem.Label</info>
 						</control>
 					</itemlayout>
@@ -163,7 +157,6 @@
 							<align>center</align>
 							<aligny>top</aligny>
 							<selectedcolor>ThemeColor</selectedcolor>
-							<align>left</align>
 							<textcolor>ButtonFocusColor</textcolor>
 							<info>ListItem.Label</info>
 						</control>

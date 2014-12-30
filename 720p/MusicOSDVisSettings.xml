@@ -55,12 +55,7 @@
 					<font>font_32_B</font>
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
-					<!-- <label>$INFO[Listitem.Label]</label> -->
-					<posy>DialogHeadingOffsetY</posy>
 					<width>600</width>
-					<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-					<textcolor>DialogTitleColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
@@ -138,12 +133,8 @@
 					<shadowcolor>black</shadowcolor>
 					<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 					<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-					<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-					<alttexturenofocus border="5">-</alttexturenofocus>
 					<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 					<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-					<texturefocus border="10,0,10,0">scrollbar-background.png</texturefocus>
-					<texturenofocus>menu-bar-separator.png</texturenofocus>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Default RadioButton</description>
@@ -157,8 +148,6 @@
 					<shadowcolor>black</shadowcolor>
 					<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 					<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-					<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-					<alttexturenofocus border="5">-</alttexturenofocus>
 					<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 					<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 				</control>

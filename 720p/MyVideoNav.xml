@@ -355,7 +355,6 @@
 								<posx>116</posx>
 								<posy>174</posy>
 								<width>165</width>
-								<textwidth>169</textwidth>
 								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
@@ -387,7 +386,8 @@
 								<width>175</width>
 								<height>144</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="6">item-shadow-border.png</bordertexture>
 								<bordersize>6</bordersize>
 								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
@@ -477,7 +477,8 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 								<bordersize>9</bordersize>
 								<colordiffuse>ffAFAFAF</colordiffuse> <!--slight dimming-->
@@ -517,14 +518,14 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
 								<bordersize>10</bordersize>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 								<!--AlbumThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover Background</description>
@@ -538,7 +539,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover</description>
@@ -551,7 +551,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="label">
 								<posx>150</posx>
@@ -682,7 +681,6 @@
 								<width>620</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -699,7 +697,6 @@
 								<width>458</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -717,7 +714,6 @@
 								<width>150</width>
 								<height>36</height>
 								<font>font_20_B</font>
-								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
 								<aligny>top</aligny>
@@ -848,7 +844,6 @@
 								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
-								<width>150</width>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<!--ListLabel2-->
 								<textcolor>ListLabel2FocusedColor</textcolor>
@@ -1321,7 +1316,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[20417][/B][/UPPERCASE]</label>
 							</control>
 							<control type="label">
@@ -1334,7 +1328,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Writer][/B]</label>
 							</control>
 						<!--Runtime-->	
@@ -1567,7 +1560,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[20417][/B][/UPPERCASE]</label>
 							</control>
 							<control type="label">
@@ -1580,7 +1572,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor><!--.-->
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Writer][/B]</label>
 							</control>
 						<!--Runtime-->	
@@ -1927,7 +1918,6 @@
 									<height>34</height>
 									<font>font_20</font>
 									<textcolor>aadcdcdc</textcolor><!--lic-->
-									<colordiffuse>BBBBBBBB</colordiffuse>
 									<aligny>top</aligny>
 									<textoffsety>2</textoffsety>
 									<scroll>false</scroll>
@@ -2077,7 +2067,6 @@
 							<font>font_19</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
-							<wrapmultiline>true</wrapmultiline>
 							<label>[B]$INFO[ListItem.PlotOutline][/B]</label>
 							<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>
 							<visible>!IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesListInfoPlot)</visible>
@@ -2583,7 +2572,6 @@
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<label>$INFO[ListItem.Plot]</label>
-									<wrapmultiline>true</wrapmultiline>
 									<autoscroll time="5000" delay="10000" repeat="10000"></autoscroll>
 									<visible>!Skin.HasSetting(HideMoviesFanartPlot)</visible>
 								</control>
@@ -2705,7 +2693,6 @@
 								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>$INFO[VideoPlayer.Plot]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
 								<!--ControlsOpenCloseAnim-->
@@ -3163,7 +3150,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[ListItem.PlotOutline][/B]</label>
 								<visible>!Skin.HasSetting(UseMoviesLargePosterFullPlot) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesLargePosterPlot)</visible>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>							
@@ -3177,7 +3163,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[ListItem.Plot][/B]</label>
 								<visible>Container.Content(Movies) + Skin.HasSetting(UseMoviesLargePosterFullPlot) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideMoviesLargePosterPlot)</visible>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>						
@@ -3368,7 +3353,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[Container.ShowPlot][/B]</label>
 								<visible>!IsEmpty(Container.ShowPlot) + !Skin.HasSetting(HideTVShowsLargePosterPlot)</visible>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsLargePosterPlot)</autoscroll>
@@ -3395,7 +3379,6 @@
 							<width>300</width>
 							<posx>1265</posx>
 							<posy>8</posy>
-							<width>200</width>
 							<align>right</align>
 							<textcolor>Grey</textcolor>
 							<font>font_27_CB</font>
@@ -4180,12 +4163,12 @@
 								<width>142</width>
 								<height>418</height>
 								<animation type="WindowOpen">
-									<effect type="slide" start="-494" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" reversible="false" />
-									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" reversible="false" />
+									<effect type="slide" start="-494" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" />
+									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" />
 								</animation>
 								<animation type="WindowClose">
-									<effect type="slide" start="0" end="-494" center="auto" time="150" tween="back" easing="in" reversible="false" />
-									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" reversible="false" />
+									<effect type="slide" start="0" end="-494" center="auto" time="150" tween="back" easing="in" />
+									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" />
 								</animation>
 								<visible>!IsEmpty(Container(75).ListItemNoWrap(3).Label)</visible>
 							<!--ICON-->
@@ -4253,12 +4236,12 @@
 								<width>175</width>
 								<height>514</height>
 								<animation type="WindowOpen">
-									<effect type="slide" start="-357" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" reversible="false" />
-									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" reversible="false" />
+									<effect type="slide" start="-357" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" />
+									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" />
 								</animation>
 								<animation type="WindowClose">
-									<effect type="slide" start="0" end="-357" center="auto" time="150" tween="back" easing="in" reversible="false" />
-									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" reversible="false" />
+									<effect type="slide" start="0" end="-357" center="auto" time="150" tween="back" easing="in" />
+									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" />
 								</animation>
 								<visible>!IsEmpty(Container(75).ListItemNoWrap(2).Label)</visible>
 							<!--ICON-->
@@ -4326,12 +4309,12 @@
 								<width>216</width>
 								<height>632</height>
 								<animation type="WindowOpen">
-									<effect type="slide" start="-192" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" reversible="false" />
-									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" reversible="false" />
+									<effect type="slide" start="-192" end="0" center="auto" time="150" delay="150" tween="elastic" easing="out" />
+									<effect type="fade" start="0" end="100" time="150" delay="150" tween="sine" easing="out" />
 								</animation>
 								<animation type="WindowClose">
-									<effect type="slide" start="0" end="-192" center="auto" time="150" tween="back" easing="in" reversible="false" />
-									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" reversible="false" />
+									<effect type="slide" start="0" end="-192" center="auto" time="150" tween="back" easing="in" />
+									<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" />
 								</animation>
 								<visible>!IsEmpty(Container(75).ListItemNoWrap(1).Label)</visible>
 							<!--ICON-->
@@ -4400,12 +4383,12 @@
 								<height>780</height>
 								<camera x="0" y="0" />
 								<animation type="WindowOpen">
-									<effect type="fade" start="0" end="100" time="150" tween="sine" easing="out" reversible="false" />
-									<effect type="rotatey" start="90" end="0" center="0,0" time="150" tween="sine" easing="out" reversible="false" />
+									<effect type="fade" start="0" end="100" time="150" tween="sine" easing="out" />
+									<effect type="rotatey" start="90" end="0" center="0,0" time="150" tween="sine" easing="out" />
 								</animation>
 								<animation type="WindowClose">
-									<effect type="fade" start="100" end="0" time="150" delay="150" tween="sine" easing="in" reversible="false" />
-									<effect type="rotatey" start="0" end="-90" center="0,0" time="150" delay="150" tween="sine" easing="out" reversible="false" />
+									<effect type="fade" start="100" end="0" time="150" delay="150" tween="sine" easing="in" />
+									<effect type="rotatey" start="0" end="-90" center="0,0" time="150" delay="150" tween="sine" easing="out" />
 								</animation>
 							<!--ICON-->
 								<control type="image">
@@ -4564,7 +4547,6 @@
 										<height>34</height>
 										<font>font_20</font>
 										<textcolor>Grey</textcolor><!--lic-->
-										<colordiffuse>BBBBBBBB</colordiffuse>
 										<aligny>top</aligny>
 										<textoffsety>2</textoffsety>
 										<scroll>false</scroll>
@@ -4695,7 +4677,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
 							<label>$INFO[ListItem.Plot]</label>
-							<wrapmultiline>true</wrapmultiline>
 							<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesShowcaseSplitViewPlot)</autoscroll>
 							<visible>Skin.HasSetting(UseMoviesShowcaseSplitViewFullPlot) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideMoviesShowcaseSplitViewPlot)</visible>
 						</control>
@@ -4709,7 +4690,6 @@
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
 							<label>$INFO[ListItem.PlotOutline]</label>
-							<wrapmultiline>true</wrapmultiline>
 							<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesShowcaseSplitViewPlot)</autoscroll>
 							<visible>!Skin.HasSetting(UseMoviesShowcaseSplitViewFullPlot) + !IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(HideMoviesShowcaseSplitViewPlot)</visible>
 						</control>
@@ -4839,7 +4819,8 @@
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
 								<texture>background-dim.png</texture>
-								<colordiffuse>66FFFFFF</colordiffuse>
+								<colordiffuse></colordiffuse>
+								<animation effect="fade" end="100" condition="true">Conditional</animation>
 							</control>
 							<control type="image">
 								<description>Cover</description>
@@ -4904,12 +4885,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(8) </visible>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -4920,12 +4901,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) +Container.Row(1) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1) </visible>
 								<!--LeftEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,0" time="200" />
 								</animation>
@@ -4937,12 +4918,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(1) </visible>
 								<!--RightEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,0" time="200" />
 								</animation>
@@ -4954,12 +4935,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) +!Container.Column(8) + Container.Row(0) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(8) + Container.Row(0) </visible>
 								<!--TopEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="0,39" time="200" />
 								</animation>
@@ -4971,12 +4952,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) +!Container.Column(8) + Container.Row(2) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(8) + Container.Row(2) </visible>
 								<!--BottomEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="0,-39" time="200" />
 								</animation>
@@ -4988,12 +4969,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0) </visible>
 								<!--TopLeftCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,39" time="200" />
 								</animation>
@@ -5005,12 +4986,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(0) </visible>
 								<!--TopRightCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,39" time="200" />
 								</animation>
@@ -5022,12 +5003,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2) </visible>
 								<!--BottomLeftCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,-39" time="200" />
 								</animation>
@@ -5039,12 +5020,12 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(2)</visible>
 								<!--BottomRightCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,-39" time="200" />
 								</animation>
@@ -5056,11 +5037,11 @@
 								<width>143</width>
 								<height>214</height>
 								<aspectratio align="center" aligny="top">scale</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -5071,9 +5052,11 @@
 								<width>143</width>
 								<height>214</height>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
+								<bordersize>6</bordersize>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -5087,12 +5070,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + !Container.Row(0) + !Container.Row(2) + !Container.Column(0) + !Container.Column(8) </visible>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -5103,12 +5086,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) +Container.Row(1) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(1) </visible>
 								<!--LeftEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,0" time="200" />
 								</animation>
@@ -5120,12 +5103,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(1) </visible>
 								<!--RightEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,0" time="200" />
 								</animation>
@@ -5137,12 +5120,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) +!Container.Column(8) + Container.Row(0) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(8) + Container.Row(0) </visible>
 								<!--TopEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="0,39" time="200" />
 								</animation>
@@ -5154,12 +5137,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) +!Container.Column(8) + Container.Row(2) </visible>
+								<visible>!IsEmpty(ListItem.Thumb) + !Container.Column(0) + !Container.Column(8) + Container.Row(2) </visible>
 								<!--BottomEdgeWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="0,-39" time="200" />
 								</animation>
@@ -5171,12 +5154,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(0) </visible>
 								<!--TopLeftCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,39" time="200" />
 								</animation>
@@ -5188,12 +5171,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(0) </visible>
 								<!--TopRightCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,39" time="200" />
 								</animation>
@@ -5205,12 +5188,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(0) + Container.Row(2) </visible>
 								<!--BottomLeftCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="25,-39" time="200" />
 								</animation>
@@ -5222,12 +5205,12 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio>stretch</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<visible>!IsEmpty(ListItem.Thumb) + Container.Column(8) + Container.Row(2)</visible>
 								<!--BottomRightCornerWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 									<effect type="slide" start="0,0" end="-25,-39" time="200" />
 								</animation>
@@ -5239,11 +5222,11 @@
 								<width>143</width>
 								<height>226</height>
 								<aspectratio align="center" aligny="top">scale</aspectratio>
-								<bordertexture border="6">item-shadow-border.png</bordertexture>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
 								<bordersize>6</bordersize>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -5255,8 +5238,10 @@
 								<height>226</height>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<visible>IsEmpty(ListItem.Thumb)</visible>
+								<bordertexture border="6">Glass/ShutDownButtonF.png</bordertexture>
+								<bordersize>6</bordersize>
 								<!--MidRowWallViewFocusAnim-->
-								<animation type="Focus" description="edge">
+								<animation type="Focus">
 									<effect type="zoom" start="105" end="175" center="auto" time="200"/>
 								</animation>
 							</control>
@@ -5460,7 +5445,6 @@
 								<posy>422</posy>
 								<width>587</width>
 								<height>155</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -5477,7 +5461,6 @@
 									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
-									<wrapmultiline>true</wrapmultiline>
 									<label>$INFO[ListItem.Plot]</label>
 									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfo2Plot)</autoscroll>
 									<!--ControlsOpenCloseAnim-->
@@ -5497,7 +5480,6 @@
 									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
-									<wrapmultiline>true</wrapmultiline>
 									<label>$INFO[ListItem.Plot]</label>
 									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfo2Plot)</autoscroll>
 									<!--ControlsOpenCloseAnim-->
@@ -5650,7 +5632,6 @@
 								<posx>115</posx>
 								<posy>9</posy>
 								<width>405</width>
-								<textwidth>405</textwidth>
 								<font>MediaInfoHeadFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -8147,7 +8128,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[20416][/B][/UPPERCASE]</label>
 								<visible>Skin.HasSetting(UseTVShowsPosterCover)</visible>
 							</control>
@@ -8161,7 +8141,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Premiered][/B]</label>
 								<visible>Skin.HasSetting(UseTVShowsPosterCover)</visible>
 							</control>
@@ -8453,7 +8432,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[20416][/B][/UPPERCASE]</label>
 								<visible>Skin.HasSetting(UseTVShowsPosterCover)</visible>
 							</control>
@@ -8467,7 +8445,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Premiered][/B]</label>
 								<visible>Skin.HasSetting(UseTVShowsPosterCover)</visible>
 							</control>
@@ -9232,7 +9209,6 @@
 								<height>225</height>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 								<aspectratio align="center" aligny="center">keep</aspectratio>
-								<texture border="5">item-noshadow-background.png</texture>
 								<bordertexture border="5">item-border.png</bordertexture>
 								<bordersize>10</bordersize>
 								<fadetime>IconCrossfadeTime</fadetime>
@@ -9262,7 +9238,6 @@
 							<font>font_20</font>
 							<textcolor>MediaInfoDetailsColor</textcolor>
 							<align>justify</align>
-							<wrapmultiline>true</wrapmultiline>
 							<label>$INFO[ListItem.Plot]</label>
 							<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsEpisodeViewPlot)</autoscroll>
 							<visible> !IsEmpty(ListItem.Plot) + !Skin.HasSetting(HideTVShowsEpisodeViewPlot)</visible>
@@ -9650,7 +9625,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[ListItem.Plot][/B]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
 								<visible>!Skin.HasSetting(HideTVShowsListInfoPlot)</visible>
@@ -9859,7 +9833,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[ListItem.Plot][/B]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>								
 							</control>	
@@ -10047,7 +10020,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[Container.ShowPlot][/B]</label>
 								<visible>!IsEmpty(Container.ShowPlot)</visible>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMoviesListInfoPlot)</autoscroll>
@@ -10257,7 +10229,6 @@
 								<font>font_19</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>[B]$INFO[ListItem.Plot][/B]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
 								<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(VideoLibrary) + Container.Content(Episodes) + !Skin.HasSetting(HideEpisodesListInfoPlot)</visible>
@@ -10420,7 +10391,6 @@
 								<font>font_20</font>
 								<textcolor>MediaInfoDetailsColor</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label>$INFO[VideoPlayer.Plot]</label>
 								<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfoPlot)</autoscroll>
 								<!--ControlsOpenCloseAnim-->
@@ -10618,7 +10588,6 @@
 								<posy>379</posy>
 								<width>587</width>
 								<height>198</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -10634,7 +10603,6 @@
 									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
-									<wrapmultiline>true</wrapmultiline>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<label>$INFO[ListItem.Plot]</label>
 									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollTVShowsListInfo2Plot)</autoscroll>
@@ -10758,7 +10726,6 @@
 								<bordersize>12</bordersize>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
 								<bordertexture border="10,10,10,10">Glass/keyfocus.png</bordertexture> <!--replace-->
-								<bordersize>9</bordersize>
 								<animation effect="zoom" end="105" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="105" center="auto" time="100">unfocus</animation>
 								<aspectratio>stretch</aspectratio>
@@ -10939,7 +10906,6 @@
 								<posy>379</posy>
 								<width>587</width>
 								<height>198</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -10955,7 +10921,6 @@
 									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
-									<wrapmultiline>true</wrapmultiline>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<label>$INFO[ListItem.Plot]</label>
 									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfo2Plot)</autoscroll>
@@ -11108,7 +11073,6 @@
 								<posx>125</posx>
 								<posy>9</posy>
 								<width>395</width>
-								<textwidth>395</textwidth>
 								<font>MediaInfoHeadFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -11227,13 +11191,12 @@
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 							</control>
 							<control type="label">
-								<Description>Title</Description>
+								<description>Title</description>
 								<posx>365</posx>
 								<posy>20</posy>
 								<width>965</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -11247,7 +11210,6 @@
 								<width>965</width>
 								<height>36</height>
 								<font>font_17</font>
-								<height>20</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>	
@@ -11287,7 +11249,6 @@
 								<height>89</height>
 								<font>font_20</font>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<textcolor>ListLabelUnfocusedColor</textcolor>
 								<label>$INFO[ListItem.Plot]</label>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfoPlot)</autoscroll>
@@ -11363,7 +11324,6 @@
 								<width>965</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -11377,7 +11337,6 @@
 								<width>965</width>
 								<height>36</height>
 								<font>font_17</font>
-								<height>20</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>	
@@ -11416,7 +11375,6 @@
 								<height>89</height>
 								<font>font_20</font>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<textcolor>ListLabelFocusedColor</textcolor>
 								<label>$INFO[ListItem.Plot]</label>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollEpisodesListInfoPlot)</autoscroll>
@@ -11929,10 +11887,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>230</textwidth> <!--BrCr-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 						<label>$VAR[VideoLibraryBreadCrumbLabel_1]</label>
@@ -11963,10 +11919,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>310</textwidth> <!--BrCr_Big-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn_Big]'''''''''''''-->
 						<label>[UPPERCASE]$LOCALIZE[31804][/UPPERCASE] </label>
@@ -11993,10 +11947,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>230</textwidth> <!--BrCr-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 						<label>$VAR[VideoLibraryBreadCrumbLabel_2]</label>
@@ -12017,10 +11969,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>310</textwidth> <!--BrCr_Big-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--********************** BreadCrumbBtn_Big ***********************************************************************-->
 						<label>[UPPERCASE]$LOCALIZE[20389][/UPPERCASE] </label>
@@ -12050,7 +12000,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -12426,7 +12375,6 @@
 							<animation effect="slide" start="0,0" end="0,-6" time="230" delay="270" condition="!Control.IsVisible(59) + [Window.IsActive(133) | Window.IsActive(112)]">Conditional</animation>
 							<posx>76</posx>
 							<posy>6</posy>
-							<width>800</width>
 							<textcolor>InfoPaneHeaderColor</textcolor>
 							<font>font_27_CB</font>
 							<label>$INFO[ListItem.Label]</label>
@@ -12437,7 +12385,6 @@
 							<width>680</width>
 							<posx>76</posx>
 							<posy>37</posy>
-							<width>800</width>
 							<textcolor>InfoPaneDetailsColor</textcolor>
 							<font>font_20</font>
 							<label>$INFO[ListItem.Label2]</label>
@@ -12461,7 +12408,6 @@
 							<width>320</width>
 							<posx>1265</posx>
 							<posy>8</posy>
-							<width>200</width>
 							<align>right</align>
 							<textcolor>Grey</textcolor>
 							<font>font_27_CB</font>
@@ -12786,7 +12732,7 @@
 							</control>
 							<control type="image">
 								<description>TV Rating</description>
-								<width>70</width><width>80</width>
+								<width>70</width>
 								<height>60</height>
 								<aspectratio>keep</aspectratio>
 								<texture>flagging/Rating/TV-NA.png</texture>

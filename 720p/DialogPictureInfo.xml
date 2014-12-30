@@ -206,7 +206,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -465,7 +464,6 @@
 						<posy>25</posy>
 						<width>674</width>
 						<height>520</height>
-						<reveal>-</reveal>
 						<info>-</info>
 						<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 						<bordersize>9</bordersize>

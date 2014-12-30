@@ -28,11 +28,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$LOCALIZE[21421]</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>1100</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -91,9 +87,7 @@
 						<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 						<colordiffuse>FFC1EBFF</colordiffuse> 
 						<texturenofocus border="10">dialog-box3.png</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<align>center</align>
-						<textoffsetx>0</textoffsetx>
 						<textwidth>830</textwidth>
 						<enable>false</enable>
 						<label>21422</label>
@@ -160,7 +154,6 @@
 							<description>Rule Field label</description>
 							<posx>10</posx>
 							<width>400</width>
-							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(15)]</label>
 							<font>font_24_CB</font>
@@ -175,7 +168,6 @@
 							<description>Rule Field label</description>
 							<posx>10</posx>
 							<width>400</width>
-							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(15)]</label>
 							<font>font_24_CB</font>
@@ -190,7 +182,6 @@
 							<description>Rule Field label</description>
 							<posx>425</posx>
 							<width>400</width>
-							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(16)]</label>
 							<font>font_24_CB</font>
@@ -205,7 +196,6 @@
 							<description>Rule Field label</description>
 							<posx>425</posx>
 							<width>400</width>
-							<textwidth>350</textwidth>
 							<height>50</height>
 							<label>$INFO[Control.GetLabel(16)]</label>
 							<font>font_24_CB</font>
@@ -257,8 +247,6 @@
 								<texturefocus border="10,10,10,10">Glass/keyaltfocus.png</texturefocus>
 								<pulseonselect>false</pulseonselect>
 								<texturenofocus border="10">Glass/SPE_Button.png</texturenofocus>
-								<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">-</alttexturenofocus>
 								<colordiffuse></colordiffuse>
 								<label>$LOCALIZE[1024]</label>
 								<onup>289</onup>

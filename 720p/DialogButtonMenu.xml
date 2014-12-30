@@ -319,7 +319,6 @@
 						<textoffsety>8</textoffsety> <!--SDM-->
 						<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
 						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
-						<alttexturenofocus border="10,10,10,10">Glass/ShutDownButtonAlt.png</alttexturenofocus> <!--search-focus2.png-->
 						<colordiffuse>FFFFFFFF</colordiffuse>	
 						<onclick>Reset()</onclick>
 						<visible>System.CanReboot</visible>
@@ -457,8 +456,6 @@
 						<textoffsety>8</textoffsety> <!--SDM-->
 						<texturefocus border="10,10,10,10">Glass/ShutDownButtonAlt.png</texturefocus>            <!--search-focus.png-->
 						<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>        <!--search-focus.png-->
-						<alttexturenofocus border="10,10,10,10">Glass/ShutDownButtonAlt.png</alttexturenofocus>  <!--search-focus.png-->
-						<alttexturefocus border="10,10,10,10">Glass/ShutDownButton.png</alttexturefocus>      <!--search-focus.png-->
 						<colordiffuse>FFFFFFFF</colordiffuse>
 						<onclick>System.LogOff</onclick>
 						<visible>System.HasLoginScreen</visible>
@@ -487,7 +484,6 @@
 						<visible>System.HasLocks</visible>
 						<animation effect="zoom" end="105" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="50">unfocus</animation>
-						<scroll>true</scroll>
 					</control>
 					<!--
 					<control type="button" id="112">
@@ -693,10 +689,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>310</textwidth> <!--BrCr_Big-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--********************** BreadCrumbBtn_Big ***********************************************************************-->
 						<label>[UPPERCASE] $LOCALIZE[13005] [/UPPERCASE] </label>
@@ -720,10 +714,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>230</textwidth> <!--BrCr-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 						<label>[UPPERCASE] $LOCALIZE[13000] [/UPPERCASE] </label>
@@ -752,7 +744,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>

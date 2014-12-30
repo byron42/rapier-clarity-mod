@@ -216,11 +216,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
 					</control>	
@@ -239,11 +237,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
 					</control>
@@ -262,11 +258,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
 					</control>
@@ -285,11 +279,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
 					</control>
@@ -308,11 +300,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
 					</control>
@@ -331,11 +321,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
 					</control>
@@ -414,7 +402,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -734,7 +721,6 @@
 						<bordertexture border="15">Glass/keyfocus.png</bordertexture>
 						<bordersize>14</bordersize>
 						<aspectratio align="left" aligny="bottom">stretch</aspectratio>
-						<aspectratio align="left" aligny="top">stretch</aspectratio>
 						<visible>Container.Content(TVShows) + !Skin.HasSetting(UseTVShowsPosterCover) + IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</control>
@@ -835,7 +821,6 @@
 							<posy>55</posy>
 							<width>790</width>
 							<height>240</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -847,7 +832,6 @@
 								<posy>330</posy>
 								<width>790</width>
 								<height>210</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -1012,7 +996,7 @@
 						<width>141</width>
 						<height>80</height>
 						<aspectratio>stretch</aspectratio>
-						<alignx>left</alignx>
+						
 						<aligny>top</aligny>
 						<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
@@ -1119,7 +1103,6 @@
 							<posy>55</posy>
 							<width>790</width>
 							<height>175</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -1132,7 +1115,6 @@
 								<posy>330</posy>
 								<width>790</width>
 								<height>280</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -1282,7 +1264,7 @@
 						<width>141</width>
 						<height>80</height>
 						<aspectratio>stretch</aspectratio>
-						<alignx>left</alignx>
+						
 						<aligny>top</aligny>
 						<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
@@ -1388,7 +1370,6 @@
 							<posy>55</posy>
 							<width>760</width>
 							<height>240</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -1401,7 +1382,6 @@
 								<posy>330</posy>
 								<width>760</width>
 								<height>210</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -1683,7 +1663,6 @@
 							<posy>55</posy>
 							<width>790</width>
 							<height>175</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -1696,7 +1675,6 @@
 								<posy>330</posy>
 								<width>790</width>
 								<height>280</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -1953,7 +1931,6 @@
 							<posy>318</posy>
 							<width>634</width>
 							<height>230</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -1965,7 +1942,6 @@
 								<posy>318</posy>
 								<width>600</width>
 								<height>230</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -2241,7 +2217,6 @@
 							<posy>55</posy>
 							<width>790</width>
 							<height>175</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -2254,7 +2229,6 @@
 								<posy>330</posy>
 								<width>790</width>
 								<height>280</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -2409,7 +2383,6 @@
 						<colordiffuse>gray</colordiffuse>
 						<fadetime>MediaFlagsCrossfadeTime</fadetime>
 						<texture>$INFO[ListItem.Studio,flagging/Studios/,.png]</texture>
-						<colordiffuse>gray</colordiffuse>
 					</control>
 				</control>
 	
@@ -3324,7 +3297,7 @@
 					</control>
 					<control type="image">
 						<description>TV Rating</description>
-						<width>70</width><width>80</width>
+						<width>70</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
 						<texture>flagging/Rating/TV-NA.png</texture>

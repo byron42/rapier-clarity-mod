@@ -206,7 +206,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -409,11 +408,7 @@
 						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -425,11 +420,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>12016</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<visible>!Control.IsVisible(2)</visible>
@@ -510,12 +501,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-							<texturefocus border="10,0,10,0">scrollbar-background.png</texturefocus>
-							<texturenofocus>menu-bar-separator.png</texturenofocus>
 						</control>
 						<control type="radiobutton" id="8">
 							<width>800</width>
@@ -528,8 +515,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-							<alttexturenofocus border="5">-</alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 						</control>			

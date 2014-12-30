@@ -38,7 +38,6 @@
 				<font>font_19_B</font>
 				<textcolor>DefaultColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
-				<textoffset>-</textoffset>
 			</control>
 			<control type="slider" id="11">
 				<description>Slider</description>

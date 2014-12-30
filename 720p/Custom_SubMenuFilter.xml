@@ -19,11 +19,7 @@
 					<textcolor>ThemeColor2</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$LOCALIZE[24020] $LOCALIZE[10000] $LOCALIZE[1034] $LOCALIZE[31605]</label>
-					<posy>DialogHeadingOffsetY</posy>
 					<width>600</width>
-					<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-					<textcolor>DialogTitleColor</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>
@@ -67,7 +63,6 @@
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="10">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<pulseonselect>false</pulseonselect>
 						<label>3</label>
 						<textoffsety>13</textoffsety>
@@ -379,7 +374,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[3] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -402,7 +397,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 						<enable>false</enable>
@@ -613,7 +607,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[16000] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -636,7 +630,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 						<enable>false</enable>
@@ -824,7 +817,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[13000] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -847,7 +840,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 						<enable>false</enable>
@@ -1036,7 +1028,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[0] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -1059,7 +1051,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="400">unfocus</animation>
 						<enable>false</enable>
@@ -1270,7 +1261,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20342] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -1293,7 +1284,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="500">unfocus</animation>
 						<enable>false</enable>
@@ -1503,7 +1493,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20343] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -1526,7 +1516,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="600">unfocus</animation>
 						<enable>false</enable>
@@ -1736,7 +1725,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[2] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -1759,7 +1748,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="700">unfocus</animation>
 						<enable>false</enable>
@@ -2014,7 +2002,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[31919] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -2037,7 +2025,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="800">unfocus</animation>
 						<enable>false</enable>
@@ -2203,7 +2190,7 @@
 						<label>$LOCALIZE[33051] $LOCALIZE[10000] $LOCALIZE[20389] $LOCALIZE[1034]...</label> <!--BREADCRUMB-->
 						<font>font_21_UB</font><!---->
 						<disabledcolor>aa555555</disabledcolor><!---->
-						<align>-</align><!---->
+						<align>left</align><!---->
 						<aligny>top</aligny><!---->
 						<textoffsety>-2</textoffsety><!---->
 						<textoffsetx>3</textoffsetx><!---->
@@ -2226,7 +2213,6 @@
 						<texturefocus border="5">-</texturefocus>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<colordiffuse>-</colordiffuse>
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
 						<enable>false</enable>

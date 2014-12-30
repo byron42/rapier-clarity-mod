@@ -212,7 +212,6 @@
 							<ondown>850</ondown>
 							<onright>458</onright>
 							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>Home Icon No Focus</description>
@@ -411,11 +410,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>31913</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -469,9 +464,6 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 					</control>
 				<!--RADIO BUTTONS ========================================================================-->	
 					<control type="grouplist" id="931"> 
@@ -543,7 +535,6 @@
 							<colordiffuse>BFFFFFFF</colordiffuse>
 							<selected>Skin.HasSetting(EditVideosSubMenuBtn2)</selected>
 							<onclick>Skin.ToggleSetting(EditVideosSubMenuBtn2)</onclick>
-							<!--<onclick>Skin.SetString(SelectedExpandedBtn,2)</onclick>-->
 							<onfocus>Skin.SetString(SelectedExpandedBtn,2)</onfocus>
 						</control>
 						<control type="radiobutton" id="2303">
@@ -721,11 +712,8 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
-							<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-							<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 							<enable>false</enable>
 							<label>$LOCALIZE[31446]</label>
 						</control>
@@ -744,7 +732,6 @@
 							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -784,8 +771,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -796,8 +781,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn1-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn1-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn1-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn1-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn1-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn1-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -854,8 +837,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -882,7 +863,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -902,9 +882,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -924,7 +902,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -1027,10 +1004,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn1-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn1)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn1Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn1Param,RunScript($INFO[Skin.String(VideosSubMenuBtn1Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn1-Script,SCRIPT)</visible>
 							</control>
@@ -1052,12 +1027,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn1-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn1-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn1Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn1)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn1Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn1Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn1Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn1-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -1078,9 +1049,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn1Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn1Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn1Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn1-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn1)</onclick>
@@ -1113,7 +1082,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -1134,7 +1102,6 @@
 							<!--<disabledcolor>AA555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -1174,8 +1141,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -1242,8 +1207,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -1270,7 +1233,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -1290,9 +1252,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -1312,7 +1272,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -1415,10 +1374,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn2-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn2)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn2Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn2Param,RunScript($INFO[Skin.String(VideosSubMenuBtn2Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn2-Script,SCRIPT)</visible>
 							</control>
@@ -1440,12 +1397,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn2-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn2-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn2Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn2)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn2Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn2Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn2Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn2-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -1466,9 +1419,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn2Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn2Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn2Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn2-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn2)</onclick>
@@ -1501,7 +1452,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -1522,7 +1472,6 @@
 							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -1562,8 +1511,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -1574,8 +1521,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn3-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn3-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn3-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn3-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn3-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn3-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -1632,8 +1577,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -1660,7 +1603,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -1680,9 +1622,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -1702,7 +1642,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -1805,10 +1744,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn3-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn3)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn3Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn3Param,RunScript($INFO[Skin.String(VideosSubMenuBtn3Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn3-Script,SCRIPT)</visible>
 							</control>
@@ -1830,12 +1767,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn3-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn3-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn3Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn3)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn3Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn3Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn3Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn3-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -1856,9 +1789,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn3Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn3Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn3Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn3-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn3)</onclick>
@@ -1891,7 +1822,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -1912,7 +1842,6 @@
 							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -1952,8 +1881,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -1964,8 +1891,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn4-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn4-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn4-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn4-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn4-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn4-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -2022,8 +1947,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -2050,7 +1973,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -2070,9 +1992,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -2092,7 +2012,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -2195,10 +2114,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn4-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn4)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn4Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn4Param,RunScript($INFO[Skin.String(VideosSubMenuBtn4Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn4-Script,SCRIPT)</visible>
 							</control>
@@ -2220,12 +2137,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn4-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn4-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn4Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn4)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn4Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn4Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn4Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn4-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -2246,9 +2159,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn4Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn4Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn4Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn4-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn4)</onclick>
@@ -2281,7 +2192,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -2302,7 +2212,6 @@
 							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -2342,8 +2251,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -2354,8 +2261,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn5-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn5-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn5-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn5-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn5-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn5-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -2412,8 +2317,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -2440,7 +2343,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -2460,9 +2362,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -2482,7 +2382,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -2585,10 +2484,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn5-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn5)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn5Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn5Param,RunScript($INFO[Skin.String(VideosSubMenuBtn5Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn5-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn5-Script,SCRIPT)</visible>
 							</control>
@@ -2610,12 +2507,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn5-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn5-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn5Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn5)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn5Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn5Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn5Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn5-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn5-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -2636,9 +2529,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn5Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn5Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn5Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn5-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn5)</onclick>
@@ -2671,7 +2562,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -2692,7 +2582,6 @@
 							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -2732,8 +2621,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -2744,8 +2631,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn6-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn6-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn6-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn6-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn6-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn6-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -2802,8 +2687,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -2830,7 +2713,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -2850,9 +2732,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -2872,7 +2752,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -2975,10 +2854,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn6-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn6)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn6Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn6Param,RunScript($INFO[Skin.String(VideosSubMenuBtn6Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn6-Script,SCRIPT)</visible>
 							</control>
@@ -3000,12 +2877,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn6-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn6-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn6Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn6)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn6Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn6Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn6Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn6-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -3026,9 +2899,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn6Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn6Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn6Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn6-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn6)</onclick>
@@ -3061,7 +2932,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse>
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>540</textwidth>
 							<enable>false</enable>
@@ -3082,7 +2952,6 @@
 							<!--<disabledcolor>CC555555</disabledcolor>--> <!--Davy's Grey-->
 							<colordiffuse>-</colordiffuse>
 							<texturenofocus border="10">-</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>left</align>
 							<textwidth>200</textwidth>
 							<enable>false</enable>
@@ -3122,8 +2991,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="10">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="10">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -3134,8 +3001,6 @@
 								<onclick>Skin.Reset(VideosSubMenuBtn7-scriptloc)</onclick>
 								<onclick>Skin.Reset(VideosSubMenuBtn7-scriptlabel)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn7-Script,SCRIPT)</onclick>
-								<!--<onclick>Skin.Togglesetting(VideosSubMenuBtn7-Script,SCRIPT)</onclick>-->
-								<!--<enable>!Skin.HasSetting(VideosSubMenuBtn7-Plugin,PLUGIN) + !Skin.HasSetting(VideosSubMenuBtn7-Favourite,FAVOURITE)</enable>-->
 							</control>
 							<control type="radiobutton" id="2321">
 								<description>Plugin Type</description>
@@ -3192,8 +3057,6 @@
 								<textureradiooff>radio-button-nofocus.png</textureradiooff>
 								<texturefocus border="5">search-focus.png</texturefocus>
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
-								<alttexturefocus border="5">search-focus.png</alttexturefocus>
-								<alttexturenofocus border="5">search-focus.png</alttexturenofocus>
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
@@ -3220,7 +3083,6 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
@@ -3240,9 +3102,7 @@
 							<disabledcolor>AA555555</disabledcolor> <!--Davy's Grey-->
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">scrollbar-background.png</texturenofocus>
-							<colordiffuse>-</colordiffuse>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>650</textwidth>
 							<enable>false</enable>
 							<label>$LOCALIZE[31445]</label>
@@ -3262,7 +3122,6 @@
 							<colordiffuse>FFC1EBFF</colordiffuse> 
 							<texturenofocus border="10">-</texturenofocus>
 							<align>center</align>
-							<textoffsetx>0</textoffsetx>
 							<textwidth>700</textwidth>
 							<enable>false</enable>
 							<!--<label>(                                                                )</label>-->
@@ -3365,10 +3224,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn7-Scriptloc)]</label>
 								<onclick>XBMC.RunScript(special://skin/scripts/HomeScripts.py,VideosSubMenuBtn7)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn7Path,xbmc.python.script)</onclick>
 								<onclick>Skin.SetString(VideosSubMenuBtn7Param,RunScript($INFO[Skin.String(VideosSubMenuBtn7Path)]))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + !Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn7-Script,SCRIPT)</visible>
 							</control>
@@ -3390,12 +3247,8 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn7-Pluginfolder),,/]$INFO[Skin.String(VideosSubMenuBtn7-Pluginname)]</label>
-								<!--<label>$LOCALIZE[573] - [COLOR=DefaultColor2]$INFO[Skin.String(VideosSubMenuBtn7Path)][/COLOR]</label>-->
 								<onclick>XBMC.RunScript(special://skin/scripts/HomePlugins.py,VideosSubMenuBtn7)</onclick>
-								<!--<onclick>Skin.SetAddon(VideosSubMenuBtn7Path,xbmc.python.pluginsource)</onclick>-->
-								<!--<onclick>Skin.SetString(VideosSubMenuBtn7Param,ActivateWindow(VideosLibrary,plugin://$INFO[Skin.String(VideosSubMenuBtn7Path)],Return))</onclick>-->
 								<visible>!Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + !Skin.String(VideosSubMenuBtn7-Script,SCRIPT)</visible>
 							</control>
 							<control type="button" id="2333">
@@ -3416,9 +3269,7 @@
 								<pulseonselect>false</pulseonselect>
 								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
-								<scroll>true</scroll>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[573] -[/COLOR][/UPPERCASE] $INFO[Skin.String(VideosSubMenuBtn7Param)]</label>
-								<!--<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn7Name)</onclick>-->
 								<onclick>Skin.SetString(CustomBtnFavouritesParam,VideosSubMenuBtn7Param)</onclick>
 								<onclick>Skin.SetString(CustomBtnFavouritesName,VideosSubMenuBtn7-NAME)</onclick>
 								<onclick>XBMC.RunScript(special://skin/scripts/favourites.py,VideosSubMenuBtn7)</onclick>
@@ -3470,7 +3321,6 @@
 						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
 						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
 						<label>$LOCALIZE[192] $LOCALIZE[535] </label>
-						<description>Back</description>
 						<onclick>Skin.Reset(VideosSubMenuBtn1-Script,SCRIPT)</onclick>
 						<onclick>Skin.Reset(VideosSubMenuBtn2-Script,SCRIPT)</onclick>
 						<onclick>Skin.Reset(VideosSubMenuBtn3-Script,SCRIPT)</onclick>
@@ -3501,16 +3351,6 @@
 						<onclick>Skin.Reset(EditVideosSubMenuBtn7)</onclick>
 						<onclick>Dialog.Close(3072)</onclick>
 					</control>	
-				<!--
-					<control type ="label">
-						<width>215</width>
-						<height>50</height>
-						<font>font_28</font>
-						<textcolor>AAFFFFFF</textcolor>
-						<label>$LOCALIZE[503]</label>
-						<visible>Window.IsActive(138)</visible>
-					</control>
-				-->	
 				</control>
 			</control>
 		</control>

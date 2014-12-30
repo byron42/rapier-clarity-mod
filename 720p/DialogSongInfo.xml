@@ -216,11 +216,9 @@
 						<textoffsety>4</textoffsety>
 						<font>font_19_UB</font>
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[10523][/UPPERCASE]</label>
 					</control>	
@@ -243,7 +241,6 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
 					</control>
 					<control type="image" id="119">
@@ -264,7 +261,6 @@
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE] -</label>
 						<onclick>DecreaseRating</onclick>	
@@ -288,7 +284,6 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[563][/UPPERCASE] +</label>
 						<onclick>IncreaseRating</onclick>
 					</control>
@@ -311,7 +306,6 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
 					</control>
 					<control type="image" id="122">
@@ -332,7 +326,6 @@
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[222][/UPPERCASE]</label>
 					</control>
@@ -411,7 +404,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -728,7 +720,6 @@
 							<posy>55</posy>
 							<width>760</width>
 							<height>240</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 							<bordersize>9</bordersize>
@@ -740,7 +731,6 @@
 								<posy>330</posy>
 								<width>760</width>
 								<height>210</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>

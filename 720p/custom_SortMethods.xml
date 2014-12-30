@@ -462,8 +462,6 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[21429] $LOCALIZE[21430]</label>
 					<altlabel>$LOCALIZE[21429] $LOCALIZE[21431]</altlabel>
-					<alttexturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</alttexturefocus>
-					<alttexturenofocus border="4,0,9,0">menu-bar-item-nofocus.png</alttexturenofocus>
 					<onclick>Container.SortDirection</onclick>
 					<visible>!Container.SortDirection(None)</visible>
 				</control>

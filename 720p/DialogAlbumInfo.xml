@@ -214,14 +214,12 @@
 						<textwidth>190</textwidth>
 						<font>font_20_CB</font>	
 						<focusedcolor>ButtonFocusColor</focusedcolor>
-						<textwidth>160</textwidth>
 						<texturefocus border="10">scrollbar-background.png</texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
 						<animation effect="zoom" end="105" center="auto" time="0">focus</animation>
 						<animation effect="zoom" start="105" center="auto" time="0">unfocus</animation>	
-						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
 					</control>	
 					<control type="image" id="116">
@@ -242,7 +240,6 @@
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
 					</control>
@@ -265,7 +262,6 @@
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
 						<texturenofocus>-</texturenofocus>	
-						<texturenofocus>-</texturenofocus>
 						<label>[UPPERCASE]$LOCALIZE[13405][/UPPERCASE]</label>	
 					</control>
 					<control type="image" id="119">
@@ -286,7 +282,6 @@
 						<texturefocus border="10"></texturefocus>
 						<pulseonselect>true</pulseonselect>
 						<colordiffuse>ThemeColor</colordiffuse>
-						<texturenofocus>-</texturenofocus>	
 						<texturenofocus>-</texturenofocus>	
 						<label>[UPPERCASE]$LOCALIZE[20413][/UPPERCASE]</label>
 					</control>
@@ -365,7 +360,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						<enable></enable>
 					</control>
 					<control type="image">
@@ -741,7 +735,6 @@
 							<posy>55</posy>
 							<width>760</width>
 							<height>240</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<colordiffuse></colordiffuse>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
@@ -754,7 +747,6 @@
 								<posy>330</posy>
 								<width>760</width>
 								<height>210</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<colordiffuse></colordiffuse>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
@@ -1011,7 +1003,6 @@
 							<posy>55</posy>
 							<width>770</width>
 							<height>240</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<colordiffuse></colordiffuse>
 							<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
@@ -1024,7 +1015,6 @@
 								<posy>330</posy>
 								<width>770</width>
 								<height>210</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<colordiffuse></colordiffuse>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
@@ -1123,7 +1113,6 @@
 								<posy>-1</posy>
 								<width>280</width>
 								<height>35</height>
-								<textwidth>265</textwidth>
 								<font>font_23_B</font>
 								<aligny>center</aligny>
 								<textcolor>ThemeColor2</textcolor>

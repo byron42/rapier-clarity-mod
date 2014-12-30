@@ -33,7 +33,6 @@
 				<shadowcolor>ShadowColor</shadowcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<width>1120</width>
 				<label>$LOCALIZE[262]</label>
 			</control>
 			<control type="textbox" id="5">

@@ -150,10 +150,8 @@
 				<aligny>top</aligny>
 				<shadowcolor></shadowcolor> <!--BrCr-->
 				<textoffsety>2</textoffsety> <!--BrCr-->
-				<scroll>true</scroll> <!--BrCr-->
 				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 				<label>$VAR[BreadCrumbLabel_Left]</label>
@@ -186,10 +184,8 @@
 				<aligny>top</aligny>
 				<shadowcolor></shadowcolor> <!--BrCr-->
 				<textoffsety>2</textoffsety> <!--BrCr-->
-				<scroll>true</scroll> <!--BrCr-->
 				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-				<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 				<label>$VAR[BreadCrumbLabel_Right]</label>

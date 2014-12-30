@@ -43,7 +43,6 @@
 				<textoffsety>5</textoffsety> <!--SDM-->
 				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
 				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
-				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
 				<colordiffuse>FFFFFFFF</colordiffuse>
 				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
 				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
@@ -55,7 +54,6 @@
 				<width></width>
 				<height>10</height>
 				<texture></texture>
-				<aspectratio></aspectratio>
 				<fadetime></fadetime>
 			</control>
 		</control>		

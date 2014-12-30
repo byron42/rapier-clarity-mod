@@ -132,7 +132,6 @@
 				<posy>27</posy>
 				<width>275</width>
 				<height>8</height>
-				<aspectratio>stretch</aspectratio>
 				<reveal>true</reveal>
 				<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
 				<info>Player.CacheLevel</info>
@@ -217,7 +216,6 @@
 				<description>Player Caching Progress Bar</description>
 				<width>1280</width>
 				<height>40</height>
-				<aspectratio>stretch</aspectratio>
 				<reveal>true</reveal>
 				<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
 				<info>Player.CacheLevel</info>

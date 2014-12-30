@@ -46,12 +46,7 @@
 						<font>font_32_B</font>
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<!-- <label>$INFO[Listitem.Label]</label> -->
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -66,9 +61,6 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 					</control>
 					<!--**************************************** SEPARATORS ****************************************-->
 					<control type="image"> <!--TOP-->
@@ -109,7 +101,7 @@
 						<height>275</height>
 						<texture background="true">$INFO[MusicPlayer.Cover]</texture>
 						<bordertexture border="10">Glass/keyfocus.png</bordertexture>
-						<aspectratio align="bottom">keep</aspectratio>
+						<aspectratio>keep</aspectratio>
 						<posy>25</posy>
 					</control>
 					<control type="label">
@@ -118,7 +110,7 @@
 						<width>810</width>
 						<height>30</height>
 						<align>left</align>
-						<aligny></aligny>
+						<!-- <aligny></aligny> -->
 						<font>Font_OSDMusicTitle</font>
 						<textcolor>ThemeColor</textcolor>
 						<shadowcolor>white</shadowcolor>
@@ -131,7 +123,7 @@
 						<width>790</width>
 						<height>24</height>
 						<align>left</align>
-						<aligny></aligny>
+						<!-- <aligny></aligny> -->
 						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
@@ -144,7 +136,7 @@
 						<width>780</width>
 						<height>24</height>
 						<align>left</align>
-						<aligny></aligny>
+						<!-- <aligny></aligny> -->
 						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
@@ -158,7 +150,7 @@
 						<width>780</width>
 						<height>24</height>
 						<align>left</align>
-						<aligny></aligny>
+						<!-- <aligny></aligny> -->
 						<font>font_28_NRBC</font>
 						<textcolor>ThemeColor2</textcolor>
 						<!-- <shadowcolor>ThemeColor</shadowcolor> -->
@@ -350,8 +342,6 @@
 							<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
 							<pulseonselect>false</pulseonselect>
 							<onclick>XBMC.PlayerControl(Random)</onclick>
-							<selected>Playlist.IsRandom</selected>
-							<pulseonselect>false</pulseonselect>
 							<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 						</control>
@@ -371,10 +361,6 @@
 						<description>textarea</description>
 						<width>1075</width>
 						<height>280</height>
-						<onup>101</onup>
-						<ondown>101</ondown>
-						<onleft>101</onleft>
-						<onright>101</onright>
 						<pagecontrol>101</pagecontrol>
 						<font>font_23</font>
 						<textcolor>DDFFFFFF</textcolor>
@@ -431,7 +417,6 @@
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
-								<align>left</align>
 								<info>ListItem.Label</info>
 							</control>
 						</itemlayout>
@@ -462,7 +447,6 @@
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
-								<align>left</align>
 								<textcolor>ButtonFocusColor</textcolor>
 								<info>ListItem.Label</info>
 							</control>
@@ -520,7 +504,6 @@
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
-								<align>left</align>
 								<info>ListItem.Label</info>
 							</control>
 						</itemlayout>
@@ -551,7 +534,6 @@
 								<align>left</align>
 								<aligny>top</aligny>
 								<selectedcolor>ThemeColor</selectedcolor>
-								<align>left</align>
 								<textcolor>ButtonFocusColor</textcolor>
 								<info>ListItem.Label</info>
 							</control>

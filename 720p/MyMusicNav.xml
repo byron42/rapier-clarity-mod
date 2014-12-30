@@ -241,7 +241,6 @@
 								<posx>116</posx>
 								<posy>174</posy>
 								<width>165</width>
-								<textwidth>169</textwidth>
 								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
@@ -273,7 +272,8 @@
 								<width>175</width>
 								<height>144</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="6">item-shadow-border.png</bordertexture>
 								<bordersize>6</bordersize>
 								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
@@ -362,7 +362,8 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 								<bordersize>9</bordersize>
 								<colordiffuse>ffAFAFAF</colordiffuse> <!--slight dimming-->
@@ -402,14 +403,14 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
 								<bordersize>10</bordersize>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 								<!--AlbumThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover Background</description>
@@ -423,7 +424,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover</description>
@@ -436,7 +436,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="label">
 								<posx>150</posx>
@@ -566,7 +565,6 @@
 								<width>620</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -583,7 +581,6 @@
 								<width>458</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -601,7 +598,6 @@
 								<width>150</width>
 								<height>36</height>
 								<font>font_20_B</font>
-								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
 								<aligny>top</aligny>
@@ -732,7 +728,6 @@
 								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
-								<width>150</width>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<!--ListLabel2-->
 								<textcolor>ListLabel2FocusedColor</textcolor>
@@ -1037,7 +1032,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
 							</control>
 							<control type="label">
@@ -1050,7 +1044,6 @@
 								<font>font_16</font>
 								<textcolor>Grey</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
 							</control>
 						<!--Year-->	
@@ -1318,7 +1311,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[UPPERCASE][B]$LOCALIZE[515][/B][/UPPERCASE]</label>
 							</control>
 							<control type="label">
@@ -1331,7 +1323,6 @@
 								<font>font_16</font>
 								<textcolor>ThemeColor2</textcolor>
 								<scroll>false</scroll>
-								<height>20</height>
 								<label>[B]$INFO[ListItem.Genre][/B]</label>
 							</control>
 						<!--Year-->	
@@ -1690,7 +1681,6 @@
 							</control>
 							<control type="label">
 								<posx>510</posx>
-								<posx>35</posx>
 								<posy>4</posy>
 								<width>140</width>
 								<font>font_21</font>
@@ -1706,7 +1696,6 @@
 							</control>
 							<control type="label">
 								<posx>510</posx>
-								<posx>35</posx>
 								<posy>4</posy>
 								<width>140</width>
 								<font>font_21</font>
@@ -1764,7 +1753,6 @@
 							</control>
 							<control type="label">
 								<posx>515</posx>
-								<posx>35</posx>
 								<posy>4</posy>
 								<width>140</width>
 								<font>font_21_B</font>
@@ -1780,7 +1768,6 @@
 							</control>
 							<control type="label">
 								<posx>515</posx>
-								<posx>35</posx>
 								<posy>4</posy>
 								<width>140</width>
 								<font>font_21_B</font>
@@ -1880,7 +1867,6 @@
 							<font>font_19</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
-							<wrapmultiline>true</wrapmultiline>
 							<label>[B]$INFO[ListItem.Property(Artist_Description)][/B]</label>
 							<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
 							<visible>Container.Content(artists)</visible>
@@ -1894,7 +1880,6 @@
 							<font>font_19</font>
 							<textcolor>ThemeColor2</textcolor>
 							<align>justify</align>
-							<wrapmultiline>true</wrapmultiline>
 							<label>[B]$INFO[ListItem.Property(Album_Description)][/B]</label>
 							<autoscroll time="2000" delay="3000" repeat="10000">true</autoscroll>
 							<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
@@ -2013,7 +1998,6 @@
 								<width>900</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -2027,7 +2011,6 @@
 								<width>100</width>
 								<height>36</height>
 								<font>font_22_B</font>
-								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2042,7 +2025,6 @@
 								<width>100</width>
 								<height>36</height>
 								<font>font_22_B</font>
-								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
 								<aligny>top</aligny>
@@ -2115,7 +2097,6 @@
 										<width>965</width>
 										<height>36</height>
 										<font>font_23_B</font>
-										<height>36</height>
 										<scroll>false</scroll>
 										<align>left</align>
 										<aligny>top</aligny>
@@ -2133,7 +2114,6 @@
 										<!--WideListPlot-->
 										<font>font_20</font>
 										<align>justify</align>
-										<wrapmultiline>true</wrapmultiline>
 										<!--WideListPlot-->
 										<textcolor>ListLabelFocusedColor</textcolor>
 										<label>$INFO[ListItem.Property(Artist_Description)]</label>
@@ -2161,7 +2141,6 @@
 										<width>965</width>
 										<height>36</height>
 										<font>font_17</font>
-										<height>20</height>
 										<scroll>false</scroll>
 										<align>left</align>
 										<aligny>top</aligny>	
@@ -2177,7 +2156,6 @@
 										<height>94</height>
 										<font>font_20</font>
 										<align>justify</align>
-										<wrapmultiline>true</wrapmultiline>
 										<textcolor>ListLabelFocusedColor</textcolor>
 										<label>$INFO[ListItem.Property(Album_Description)]</label>
 										<autoscroll time="2000" delay="10000" repeat="10000" condition="true">Conditional</autoscroll>
@@ -2190,7 +2168,6 @@
 										<width>965</width>
 										<height>36</height>
 										<font>font_17</font>
-										<height>20</height>
 										<scroll>false</scroll>
 										<align>left</align>
 										<aligny>top</aligny>	
@@ -2391,7 +2368,6 @@
 								<posy>379</posy>
 								<width>587</width>
 								<height>198</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -2408,7 +2384,6 @@
 									<font>font_20</font>
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
-									<wrapmultiline>true</wrapmultiline>
 									<shadowcolor>ShadowColor</shadowcolor>
 									<label>$INFO[ListItem.Property(Album_Description)]</label>
 									<autoscroll time="2000" delay="5000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollAlbumsListInfo2Description)</autoscroll>
@@ -2552,7 +2527,6 @@
 								<posx>120</posx>
 								<posy>9</posy>
 								<width>405</width>
-								<textwidth>405</textwidth>
 								<font>MediaInfoHeadFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
@@ -2720,7 +2694,6 @@
 									<height>142</height>
 									<bordersize>12</bordersize>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
-									<aspectratio>keep</aspectratio>
 									<aspectratio>keep</aspectratio>
 									<visible>IsEmpty(ListItem.Thumb)</visible>
 									<!--3DViewFocusAnim-->
@@ -3095,7 +3068,6 @@
 									<textcolor>ThemeColor2</textcolor>
 									<align>justify</align>
 									<label fallback="31000">$INFO[ListItem.Property(Album_Description)]</label>
-									<wrapmultiline>true</wrapmultiline>
 									<autoscroll time="2000" delay="3000" repeat="10000">!Skin.HasSetting(DoNotAutoScrollMusicWrapListInfoDescription)</autoscroll>
 									<visible>!IsEmpty(ListItem.Property(Album_Description)) + !Skin.HasSetting(HideMusicWrapListInfoDescription)</visible>
 								</control>
@@ -5004,7 +4976,6 @@
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>ThemeColor</colordiffuse>
 									<texturenofocus>-</texturenofocus>
-									<align>center</align>
 									<label>[UPPERCASE]$LOCALIZE[10004][/UPPERCASE]</label>
 									<onclick>ActivateWindow(MusicSettings)</onclick>
 								</control>
@@ -5066,7 +5037,6 @@
 									<texturefocus border="10"></texturefocus>
 									<pulseonselect>true</pulseonselect>
 									<colordiffuse>-</colordiffuse>
-									<texturenofocus>-</texturenofocus>
 									<label>[UPPERCASE]$LOCALIZE[14022][/UPPERCASE]</label>
 									<onclick>ReplaceWindow(MusicFiles)</onclick>
 									<selected>Window.IsVisible(MusicLibrary)</selected>
@@ -5205,10 +5175,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>230</textwidth> <!--BrCr-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 						<label>$VAR[MusicLibraryBreadCrumbLabel_1]</label>
@@ -5234,10 +5202,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>310</textwidth> <!--BrCr_Mid-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn_Big]'''''''''''''-->
 						<label>$VAR[MusicLibraryBreadCrumbLabel_Big]</label>
@@ -5272,7 +5238,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>

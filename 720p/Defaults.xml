@@ -21,7 +21,6 @@
 		<texturefocus border="5">scrollbar-background.png</texturefocus>
 		<colordiffuse>FFFFFFFF</colordiffuse>
 		<texturenofocus border="5">button-nofocus.png</texturenofocus>
-		<colordiffuse>BBBBBBBB</colordiffuse>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	
