@@ -502,7 +502,6 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<textwidth>340</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -722,7 +721,7 @@
 											<height>87</height>
 											<texture background="true">$INFO[ListItem.Icon]</texture>
 											<colordiffuse></colordiffuse>
-											<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+											<!-- <texture border="10,10,10,10">Glass/keyfocus.png</texture>--> <!--replace-->
 											<bordersize>9</bordersize>
 											<aspectratio>stretch</aspectratio>
 											<animation effect="zoom" end="105" center="auto" time="100">focus</animation>
@@ -755,7 +754,6 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<textwidth>340</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -899,7 +897,6 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<textwidth>320</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -1091,7 +1088,6 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>295</width>
-											<textwidth>295</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -1299,7 +1295,6 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>295</width>
-											<textwidth>295</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -1467,7 +1462,6 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<textwidth>320</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -1645,7 +1639,6 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<textwidth>320</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -1844,7 +1837,6 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<textwidth>320</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
@@ -2014,7 +2006,6 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<textwidth>340</textwidth>
 											<font>MediaInfoHeadFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>

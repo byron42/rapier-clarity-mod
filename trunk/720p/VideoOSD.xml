@@ -47,9 +47,6 @@
 						<align>center</align>
 						<texturefocus>osd-subtitles-focus.png</texturefocus>
 						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">PlayerControl(Play)</onclick>
 						<onclick condition="!System.HasAddon(script.xbmc.subtitles)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
@@ -70,9 +67,6 @@
 						<align>center</align>
 						<texturefocus>osd-subtitles-focus.png</texturefocus>
 						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org,Return)</onclick>
 						<visible>!System.HasAddon(script.xbmc.subtitles)</visible>
@@ -89,9 +83,6 @@
 						<align>center</align>
 						<texturefocus>osd-audio-settings-focus.png</texturefocus>
 						<texturenofocus>osd-audio-settings-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
@@ -106,9 +97,6 @@
 						<align>center</align>
 						<texturefocus>osd-video-settings-focus.png</texturefocus>
 						<texturenofocus>osd-video-settings-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
@@ -123,9 +111,6 @@
 						<align>center</align>
 						<texturefocus>osd-bookmarks-focus.png</texturefocus>
 						<texturenofocus>osd-bookmarks-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>ActivateWindow(VideoBookmarks)</onclick>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
@@ -140,9 +125,6 @@
 						<align>center</align>
 						<texturefocus>osd-dvd-focus.png</texturefocus>
 						<texturenofocus>osd-dvd-nofocus.png</texturenofocus>
-						<usealttexture></usealttexture>
-						<alttexturefocus></alttexturefocus>
-						<alttexturenofocus></alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
@@ -155,7 +137,7 @@
 						<label> $LOCALIZE[31933] </label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<texturefocus>osd-exit-fullscreen-focus.png</texturefocus>
 						<texturenofocus>osd-exit-fullscreen-nofocus.png</texturenofocus>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -286,7 +268,7 @@
 						<label> $LOCALIZE[31927] </label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<texturefocus>osd-skip-next-focus.png</texturefocus>
 						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
@@ -306,9 +288,8 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<font>font_23_B</font>
-					<aspectratio></aspectratio>
 					<textcolor>gray</textcolor>
-					<shadowcolor></shadowcolor>'
+					<shadowcolor></shadowcolor>
 					<visible>Window.IsTopmost(VideoOSD)</visible>
 				</control>
 				<control type="label">

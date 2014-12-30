@@ -97,7 +97,7 @@
 					<width>450</width>
 					<font>font_22_U</font>
 					<textcolor>Grey</textcolor>
-					<align>-</align>
+					<align>left</align>
 					<scroll>yes</scroll>
 				</control>		
 				<control type="label" id="3">
@@ -107,7 +107,7 @@
 					<width>420</width>
 					<font>font_22_U</font>
 					<textcolor>Grey</textcolor>
-					<align>-</align>
+					<align>left</align>
 					<scroll>yes</scroll>
 				</control>			
 				<control type="label" id="4">

@@ -207,7 +207,6 @@
 							<ondown>850</ondown>
 							<onright>458</onright>
 							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>Home Icon No Focus</description>
@@ -420,11 +419,7 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$LOCALIZE[1007]</label>
-							<posy>DialogHeadingOffsetY</posy>
 							<width>600</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
@@ -505,8 +500,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0"></alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<onup>10</onup>
@@ -543,8 +536,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0"></alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<onup>11</onup>
@@ -565,8 +556,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0"></alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[792]</label>
@@ -588,8 +577,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0"></alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[1014]</label>
@@ -611,8 +598,6 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="5,2,10,0"></alttexturefocus>
-							<alttexturenofocus border="5"></alttexturenofocus>
 							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 							<label>$LOCALIZE[15052]</label>

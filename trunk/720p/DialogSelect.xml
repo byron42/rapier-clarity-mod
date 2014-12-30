@@ -79,7 +79,7 @@
 					<align>right</align>
 					<label></label>
 					<font>font_23_B</font>
-					<aligny></aligny>
+					<!-- <aligny>top</aligny> -->
 					<textcolor>ff343434</textcolor>	
 				</control>
 			<!--content-->
@@ -503,10 +503,8 @@
 							<shadowcolor></shadowcolor> <!--BrCr-->
 							<textoffsety>2</textoffsety> <!--BrCr-->
 							<textwidth>230</textwidth> <!--BrCr-->
-							<scroll>true</scroll> <!--BrCr-->
 							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 							<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 							<label>[UPPERCASE]$LOCALIZE[33061][/UPPERCASE] </label>
@@ -530,10 +528,8 @@
 							<shadowcolor></shadowcolor> <!--BrCr-->
 							<textoffsety>2</textoffsety> <!--BrCr-->
 							<textwidth>230</textwidth> <!--BrCr-->
-							<scroll>true</scroll> <!--BrCr-->
 							<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 							<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-							<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 							<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 							<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
 							<label>[UPPERCASE]$LOCALIZE[424][/UPPERCASE] </label>
@@ -562,7 +558,6 @@
 							<ondown>850</ondown>
 							<onright>458</onright>
 							<onleft>350</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>Home Icon No Focus</description>
@@ -767,11 +762,7 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$INFO[Control.GetLabel(1)]</label>
-							<posy>DialogHeadingOffsetY</posy>
 							<width>800</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
@@ -899,7 +890,6 @@
 						<textoffsety>5</textoffsety>
 						<textcolor>ff343434</textcolor>
 						<shadowcolor>-</shadowcolor>
-						<textwidth>160</textwidth>
 						<label>$LOCALIZE[186]</label>
 					</control>
 					<control type="button" id="5">

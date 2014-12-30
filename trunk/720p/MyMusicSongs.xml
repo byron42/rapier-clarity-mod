@@ -225,7 +225,6 @@
 								<posx>116</posx>
 								<posy>174</posy>
 								<width>165</width>
-								<textwidth>169</textwidth>
 								<font>font_22_B</font>
 								<textcolor>gray</textcolor>
 								<selectedcolor>SelectedColor2</selectedcolor>
@@ -254,7 +253,8 @@
 								<width>175</width>
 								<height>144</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="6">item-shadow-border.png</bordertexture>
 								<bordersize>6</bordersize>
 								<animation effect="zoom" end="115" center="auto" time="0">focus</animation>
@@ -343,7 +343,8 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/ShutDownButton.png</bordertexture>
 								<bordersize>9</bordersize>
 								<colordiffuse>ffAFAFAF</colordiffuse> <!--slight dimming-->
@@ -383,14 +384,14 @@
 								<width>250</width>
 								<height>200</height>
 								<texture background="true">$INFO[ListItem.Thumb]</texture>
-								<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+								<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+								<aspectratio aligny="bottom">keep</aspectratio>
 								<bordertexture border="10">Glass/keyfocus.png</bordertexture>
 								<bordersize>10</bordersize>
 								<visible>!IsEmpty(ListItem.Thumb)</visible>
 								<!--AlbumThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover Background</description>
@@ -404,7 +405,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="image">
 								<description>Default Cover</description>
@@ -417,7 +417,6 @@
 								<!--MoviesThumbViewItemFocusAnim-->
 								<animation effect="zoom" end="107" center="auto" time="100">Focus</animation>
 								<animation effect="zoom" start="107" end="100" center="auto" time="0">UnFocus</animation>
-								<pulseonselect>true</pulseonselect>
 							</control>
 							<control type="label">
 								<posx>150</posx>
@@ -547,7 +546,6 @@
 								<width>620</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -564,7 +562,6 @@
 								<width>458</width>
 								<height>36</height>
 								<font>font_23_B</font>
-								<height>36</height>
 								<scroll>false</scroll>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -582,7 +579,6 @@
 								<width>150</width>
 								<height>36</height>
 								<font>font_20_B</font>
-								<height>36</height>
 								<scroll>false</scroll>	
 								<align>right</align>
 								<aligny>top</aligny>
@@ -712,7 +708,6 @@
 								<font>font_22_B</font>
 								<height>36</height>
 								<scroll>false</scroll>	
-								<width>150</width>
 								<selectedcolor>SelectedColor</selectedcolor>
 								<!--ListLabel2-->
 								<textcolor>ListLabel2FocusedColor</textcolor>
@@ -817,7 +812,6 @@
 								<posy></posy>
 								<width>495</width>
 								<height>168</height>
-								<reveal>-</reveal>
 								<info>-</info>
 								<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
 								<bordersize>9</bordersize>
@@ -831,7 +825,6 @@
 								<font>font_20</font>
 								<textcolor>ThemeColor2</textcolor>
 								<align>justify</align>
-								<wrapmultiline>true</wrapmultiline>
 								<label fallback="161">$INFO[ListItem.Property(Album_Description)]</label>
 								<autoscroll time="2000" delay="5000" repeat="10000">true</autoscroll>
 								<!--ControlsOpenCloseAnim-->
@@ -2157,7 +2150,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>

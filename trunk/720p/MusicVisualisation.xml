@@ -244,7 +244,6 @@
 								<width>160</width>
 								<height>100</height>
 								<align>center</align>
-								<textwidth>160</textwidth>
 								<font>font_20_CB</font>
 								<textcolor>gray</textcolor>
 								<shadowcolor>black</shadowcolor>
@@ -257,12 +256,6 @@
 								<width>100</width>
 								<height>100</height>
 								<align>center</align>
-								<aligny>-</aligny>
-								<textoffsety>103</textoffsety>
-								<textwidth>120</textwidth>
-								<font>font_22_CB</font>
-								<textcolor>gray</textcolor>
-								<shadowcolor>black</shadowcolor>
 								<texture>$VAR[PlayerControlActionImage]</texture>
 								<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
 							</control>
@@ -483,7 +476,7 @@
 									<posy>702r</posy>
 									<texture fallback="CD/disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 									<!-- <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture> -->
-									<aspectratio align="top">keep</aspectratio>
+									<aspectratio>keep</aspectratio>
 								</control>
 								<control type="image">
 									<visible>Skin.HasSetting(UseGoldCD)</visible>
@@ -496,7 +489,7 @@
 									<posx>109</posx>
 									<posy>702r</posy>
 									<texture fallback="CD/original_disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
-									<aspectratio align="top">keep</aspectratio>
+									<aspectratio>keep</aspectratio>
 								</control>
 								<!--**************************************************************-->
 								<control type="image">

@@ -609,7 +609,6 @@
 									<posx>0</posx>
 									<posy>-11</posy>
 									<width>335</width>
-									<textwidth>330</textwidth>
 									<height>30</height>
 									<font>font_24_B</font>
 									<textcolor>White</textcolor>
@@ -703,7 +702,6 @@
 									<posx>0</posx>
 									<posy>-11</posy>
 									<width>275</width>
-									<textwidth>270</textwidth>
 									<height>30</height>
 									<font>font_24_B</font>
 									<textcolor>White</textcolor>
@@ -797,7 +795,6 @@
 									<posx>0</posx>
 									<posy>-11</posy>
 									<width>290</width>
-									<textwidth>285</textwidth>
 									<height>30</height>
 									<font>font_24_B</font>
 									<textcolor>White</textcolor>
@@ -896,7 +893,6 @@
 									<posx>0</posx>
 									<posy>-11</posy>
 									<width>335</width>
-									<textwidth>330</textwidth>
 									<height>30</height>
 									<font>font_24_B</font>
 									<textcolor>White</textcolor>
@@ -1730,7 +1726,6 @@
 							<posx>175</posx>
 							<posy>0</posy>
 							<width>350</width>
-							<textwidth>350</textwidth>
 							<textcolor>FF757575</textcolor>
 							<shadowcolor>Grey</shadowcolor>
 							<height>64</height>
@@ -1743,7 +1738,6 @@
 							<posx>175</posx>
 							<posy>0</posy>
 							<width>350</width>
-							<textwidth>350</textwidth>
 							<textcolor>FF757575</textcolor>
 							<shadowcolor>Grey</shadowcolor>
 							<height>64</height>
@@ -1757,11 +1751,10 @@
 					</itemlayout>	
 					<focusedlayout width="500">
 						<control type="label">
-							<Description>Home Menu Bar Focus</Description>
+							<description>Home Menu Bar Focus</description>
 							<posx>226</posx>
 							<posy>0</posy>
 							<width>534</width>
-							<textwidth>534</textwidth>
 							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>BBDCDCDC</textcolor> <!--bone-->
@@ -1774,11 +1767,10 @@
 							<animation effect="zoom" start="100" end="75" center="250,32" time="90">Unfocus</animation>
 						</control>
 						<control type="label">
-							<Description>Home Menu Bar Focus</Description>
+							<description>Home Menu Bar Focus</description>
 							<posx>226</posx>
 							<posy>0</posy>
 							<width>534</width>
-							<textwidth>534</textwidth>
 							<height>64</height>
 							<label>$INFO[ListItem.Label2]</label>
 							<textcolor>BBF3E5AB</textcolor>
@@ -2133,7 +2125,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2450,7 +2441,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2761,7 +2751,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2866,7 +2855,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2959,7 +2947,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -3280,7 +3267,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -3597,7 +3583,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -3914,7 +3899,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -4251,7 +4235,6 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<info>ListItem.Label2</info>
-								<pulseonselect>true</pulseonselect>
 							</control>
 						</focusedlayout>
 						<content>
@@ -4581,7 +4564,6 @@
 										<texture>$INFO[Player.StarRating]</texture>
 										<aspectratio>stretch</aspectratio>
 										<colordiffuse>ThemeColor2</colordiffuse>
-										<shadowcolor>Black</shadowcolor>
 										<animation effect="slide" end="7,3" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 									</control>
 									<control type="label">
@@ -4715,7 +4697,7 @@
 										<posy>705r</posy>
 										<texture fallback="CD/disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 										<!-- <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture> -->
-										<aspectratio align="top">keep</aspectratio>
+										<aspectratio>keep</aspectratio>
 									</control>
 									<control type="image">
 										<visible>Skin.HasSetting(UseGoldCD)</visible>
@@ -4728,7 +4710,7 @@
 										<posx>95</posx>
 										<posy>705r</posy>
 										<texture fallback="CD/original_disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
-										<aspectratio align="top">keep</aspectratio>
+										<aspectratio>keep</aspectratio>
 									</control>
 									<!--**************************************************************-->
 									<control type="image">
@@ -4993,7 +4975,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>350</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
@@ -5035,8 +5016,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>350</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
-						<!--<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>-->
 					</control>
 					<control type="image">
 						<description>xbmc4xbox Icon No Focus</description>

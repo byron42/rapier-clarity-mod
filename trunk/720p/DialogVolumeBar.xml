@@ -26,7 +26,6 @@
 				<height>50</height>
 				<colordiffuse>BBBBBBBB</colordiffuse>
 				<texture border="10">Glass/ShutDownButton.png</texture>
-				<aspectratio>-</aspectratio>
 			</control>
 			<control type="label">
 				<description>volume label</description>
@@ -47,7 +46,6 @@
 				<posy>-3</posy>
 				<width>962</width>
 				<height>38</height>
-				<reveal>-</reveal>
 				<info>-</info>
 				<texture border="0,0,0,0">scrollbar-background.png</texture>
 				<bordertexture border="15">Glass/keyfocus.png</bordertexture>
@@ -67,8 +65,6 @@
 				<midtexture>volume_middleBV.png</midtexture>
 				<righttexture>-</righttexture>
 				<overlaytexture>volume_overlay1BV.png</overlaytexture>
-				<bordertexture border="15">search-focus.png</bordertexture>
-				<bordersize>14</bordersize>
 			</control>
 			<control type="label">
 				<description>volume label</description>

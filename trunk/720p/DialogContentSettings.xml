@@ -208,7 +208,6 @@
 							<ondown>850</ondown>
 							<onright>458</onright>
 							<onleft>345</onleft>
-							<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>Home Icon No Focus</description>
@@ -418,11 +417,7 @@
 							<textcolor>ThemeColor2</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$LOCALIZE[20333]</label>	
-							<posy>DialogHeadingOffsetY</posy>
 							<width>600</width>
-							<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-							<textcolor>DialogTitleColor</textcolor>
-							<shadowcolor>ShadowColor</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
@@ -523,7 +518,6 @@
 							<height>36</height>
 							<scroll>false</scroll>
 							<aligny>center</aligny>
-							<textcolor>ListLabelFocusedColor</textcolor>
 							<selectedcolor>SelectedColor</selectedcolor>
 							<label>$LOCALIZE[20344]</label>
 							<visible>!Control.HasFocus(3)</visible>
@@ -540,7 +534,6 @@
 							<height>36</height>
 							<scroll>false</scroll>
 							<aligny>center</aligny>
-							<textcolor>ListLabelFocusedColor</textcolor>
 							<selectedcolor>SelectedColor</selectedcolor>
 							<label>[UPPERCASE]$LOCALIZE[20344][/UPPERCASE]</label>
 							<visible>Control.HasFocus(3)</visible>
@@ -590,7 +583,6 @@
 										<font>font_23_B</font>
 										<textcolor>ListLabelUnfocusedColor</textcolor>	
 										<shadowcolor>ShadowColor</shadowcolor>
-										<height>37</height>
 										<scroll>false</scroll>
 										<align>left</align>
 										<aligny>top</aligny>
@@ -627,7 +619,6 @@
 										<height>37</height>
 										<font>font_25_B</font>
 										<textcolor>ThemeColor</textcolor>
-										<height>37</height>
 										<scroll>false</scroll>
 										<align>left</align>
 										<aligny>top</aligny>
@@ -664,11 +655,8 @@
 							<align>left</align>
 							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
 							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
-							<alttexturefocus border="10,10,10,10">search-focus2.png</alttexturefocus>
-							<alttexturenofocus border="10,10,10,10">search-focus2.png</alttexturenofocus>
 							<animation effect="zoom" end="101" center="auto" time="100">focus</animation>
 							<animation effect="zoom" start="101" center="auto" time="200">unfocus</animation>
-							<width>600</width>
 						</control>			
 					</control>
 				<!--OK,Cancel,etc...-->	

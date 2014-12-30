@@ -107,13 +107,6 @@
 								<posy>25</posy>
 								<width>100</width>
 								<height>100</height>
-								<align>center</align>
-								<aligny>-</aligny>
-								<textoffsety>103</textoffsety>
-								<textwidth>120</textwidth>
-								<font>font_22_CB</font>
-								<textcolor>gray</textcolor>
-								<shadowcolor>black</shadowcolor>
 								<texture>$VAR[PlayerControlActionImage]</texture>
 								<visible>Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding</visible>
 							</control>
@@ -528,7 +521,7 @@
 									<posy>702r</posy>
 									<texture fallback="CD/disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
 									<!-- <texture fallback="disc.png" diffuse="disc_mask.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture> -->
-									<aspectratio align="top">keep</aspectratio>
+									<aspectratio>keep</aspectratio>
 								</control>
 								<control type="image">
 									<visible>Skin.HasSetting(UseGoldCD)</visible>
@@ -541,7 +534,7 @@
 									<posx>109</posx>
 									<posy>702r</posy>
 									<texture fallback="CD/original_disc.png" diffuse="CD/CD_Mask.png">backdrops/artist_fanart/cd/$INFO[MusicPlayer.Artist]-$INFO[MusicPlayer.Album].png</texture>
-									<aspectratio align="top">keep</aspectratio>
+									<aspectratio>keep</aspectratio>
 								</control>
 								<!--**************************************************************-->
 								<control type="image">
@@ -746,7 +739,7 @@
 						<label> $LOCALIZE[31927] </label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<texturefocus>osd-skip-next-focus.png</texturefocus>
 						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
 						<onclick condition="Player.HasVideo">XBMC.PlayerControl(BigSkipForward)</onclick>
@@ -756,7 +749,7 @@
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 					</control>
-					<control type="button" id="408">
+					<control type="togglebutton" id="408">
 					<!--MUSIC ONLY-->
 						<description>RECORD BUTTON</description>
 						<width>40</width>
@@ -767,7 +760,7 @@
 						<alttexturefocus>osd-record-2.png</alttexturefocus>
 						<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<usealttexture>Player.Recording</usealttexture>
 						<texturefocus>osd-record-focus.png</texturefocus>
 						<texturenofocus>osd-record-nofocus.png</texturenofocus>
@@ -791,7 +784,6 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<font>font_23_B</font>
-					<aspectratio></aspectratio>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 					<visible>Window.IsTopmost(114)</visible>

@@ -48,7 +48,6 @@
 						<width>160</width>
 						<height>100</height>
 						<align>center</align>
-						<textwidth>160</textwidth>
 						<font>font_20_CB</font>
 						<textcolor>gray</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -58,16 +57,9 @@
 						<description>PlayerControlImage</description>
 						<posx>847</posx>
 						<posy>12</posy>
-						<!-- <posy>25</posy> -->
 						<width>100</width>
 						<height>100</height>
 						<align>center</align>
-						<aligny>-</aligny>
-						<textoffsety>103</textoffsety>
-						<textwidth>120</textwidth>
-						<font>font_22_CB</font>
-						<textcolor>gray</textcolor>
-						<shadowcolor>black</shadowcolor>
 						<texture>$VAR[PlayerControlActionImage]</texture>
 						<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
 					</control>

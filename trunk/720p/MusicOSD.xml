@@ -141,8 +141,6 @@
 						<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>XBMC.PlayerControl(Random)</onclick>
-						<selected>Playlist.IsRandom</selected>
-						<pulseonselect>false</pulseonselect>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 					</control>
@@ -153,7 +151,6 @@
 						<label>559</label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-playlist-focus.png</texturefocus>
 						<texturenofocus>osd-playlist-nofocus.png</texturenofocus>
 						<onclick>XBMC.ActivateWindow(MyMusicPlaylist)</onclick>
@@ -207,7 +204,6 @@
 						<label>$LOCALIZE[137]  YOUTUBE</label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-search-focus.png</texturefocus>
 						<texturenofocus>osd-search-nofocus.png</texturenofocus>
 						<onclick>ActivateWindow(videos,plugin://video/YouTube/?path=/root/search&amp;feed=search&amp;search=$INFO[MusicPlayer.Artist],return)</onclick>
@@ -215,7 +211,7 @@
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 						<enable></enable>
 					</control>
-					<control type="button" id="408">
+					<control type="togglebutton" id="408">
 						<description>RECORD BUTTON</description>
 						<width>70</width>
 						<height>70</height>
@@ -224,7 +220,7 @@
 						<alttexturefocus>osd-record-2.png</alttexturefocus>
 						<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<usealttexture>Player.Recording</usealttexture>
 						<texturefocus>osd-record-focus.png</texturefocus>
 						<texturenofocus>osd-record-nofocus.png</texturenofocus>
@@ -347,7 +343,6 @@
 						<label> $LOCALIZE[31927] </label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-skip-next-focus.png</texturefocus>
 						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
@@ -367,9 +362,8 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<font>font_23_B</font>
-					<aspectratio></aspectratio>
 					<textcolor>gray</textcolor>
-					<shadowcolor></shadowcolor>'
+					<shadowcolor></shadowcolor>
 					<visible>Window.IsTopmost(MusicOSD)</visible>
 				</control>
 				<control type="label">

@@ -177,7 +177,7 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<control type="button" id="95">
-						<Description>Button Basic Values</Description>
+						<description>Button Basic Values</description>
 						<width>800</width>
 						<height>50</height>
 						<font>font_26_CB</font>
@@ -185,11 +185,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>31315</label>	
 					</control>
 					<control type="button" id="94">
@@ -201,11 +199,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13277</label>
 					</control>
 					<control type="button" id="92">
@@ -217,11 +213,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13275</label>
 						<!--<visible>System.Platform.Xbox</visible>-->
 					</control>
@@ -234,11 +228,9 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13276</label>
 						<!--<visible>System.Platform.Xbox</visible>-->
 					</control>
@@ -251,28 +243,22 @@
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13279</label>
 					</control>
 					<control type="button" id="97">
 						<description>Button Video</description>
-					
 						<width>800</width>
 						<height>50</height>
 						<font>font_26_CB</font>
-						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13280</label>
 					</control>
 					<control type="button" id="98">
@@ -280,15 +266,12 @@
 						<width>800</width>
 						<height>50</height>
 						<font>font_26_CB</font>
-						<!--<include condition="skin.String(BreadCrumbFontColor)" file="includes_BreadCrumbSettings.xml">BreadCrumbFontSettings</include>-->
 						<textcolor>Grey</textcolor> <!--GREY-->
 						<align>left</align>
 						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
-						<pulseonselect>-</pulseonselect>
+						<pulseonselect>false</pulseonselect>
 						<colordiffuse>-</colordiffuse>
 						<texturenofocus border="5">-</texturenofocus>
-						<alttexturefocus border="5,2,10,0">button-list-focus.png</alttexturefocus>
-						<alttexturenofocus border="5">-</alttexturenofocus>
 						<label>13281</label>
 					</control>
 				</control>
@@ -305,11 +288,7 @@
 						<textcolor>ThemeColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label>$INFO[Control.GetLabel(40)]</label>
-						<posy>DialogHeadingOffsetY</posy>
 						<width>600</width>
-						<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
-						<textcolor>DialogTitleColor</textcolor>
-						<shadowcolor>ShadowColor</shadowcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
@@ -321,7 +300,6 @@
 					
 					<control type="group">	
 						<posy>-20</posy>
-					
 						<control type="image">
 							<posx>30</posx>
 							<posy>140</posy>
@@ -522,7 +500,6 @@
 							<posy>420</posy>
 							<width>1210</width>
 							<height>60</height>
-							<reveal>-</reveal>
 							<info>-</info>
 							<colordiffuse>-</colordiffuse>
 							<texture border="10,10,10,10">-</texture>
@@ -539,10 +516,6 @@
 							<textcolor>AA8A795D</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
-							<align>right</align>
-							<aligny>center</aligny>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="progress">
 							<description>CPU BAR</description>
@@ -567,10 +540,6 @@
 							<textcolor>AA8A795D</textcolor>
 							<shadowcolor>ShadowColor</shadowcolor>
 							<label>$LOCALIZE[31309]: $INFO[system.memory(used.percent)]</label>						
-							<align>right</align>
-							<aligny>center</aligny>
-							<textcolor>ThemeColor2</textcolor>
-							<shadowcolor>black</shadowcolor>
 						</control>
 						<control type="progress">
 							<description>Memory BAR</description>
@@ -633,10 +602,8 @@
 						<shadowcolor></shadowcolor> <!--BrCr-->
 						<textoffsety>2</textoffsety> <!--BrCr-->
 						<textwidth>310</textwidth> <!--BrCr_Big-->
-						<scroll>true</scroll> <!--BrCr-->
 						<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
 						<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
-						<aspectratio scalediffuse="true" align="center" aligny="center">keep</aspectratio>
 						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
 						<!--********************** BreadCrumbBtn_Big ***********************************************************************-->
 						<label>[UPPERCASE]$LOCALIZE[31019][/UPPERCASE] </label>
@@ -668,7 +635,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>

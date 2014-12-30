@@ -97,7 +97,6 @@
 				<textcolor>ButtonColor</textcolor>
 				<shadowcolor>ShadowColor</shadowcolor>
 				<aligny>center</aligny>
-				<focusedcolor>SelectedColor</focusedcolor>
 			</control>   
 			<control type="image">
 				<posx>318</posx>

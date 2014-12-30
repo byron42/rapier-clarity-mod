@@ -76,9 +76,6 @@
 						<animation type="WindowOpen" condition= "Window.IsActive(3001)" reversible="false">
 							<effect type="slide" start="-270" end="0" delay="200" time="0" />
 							<effect type="fade" start="0" end="100" delay="350" time="1000" />
-							<!--<effect type="zoom" start="0" end="100" delay="175" center="auto" easing="out" tween="sine" time="650" />-->
-							<!--<effect type="zoom" start="0" end="100" delay="250" center="auto" easing="inout" tween="back" time="650" />-->
-							<!--<effect type="zoom" start="0" end="100" delay="305" center="auto" easing="inout" tween="sine" time="560" />-->
 						</animation>
 						<!--***************************************************************************************-->
 						<description>Add More Categories Area</description>
@@ -293,8 +290,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
@@ -337,8 +332,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
@@ -378,8 +371,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[21899]</label>
 							</control>
@@ -404,7 +395,6 @@
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom1Btn-NAME)]</label>
 								<onclick>Skin.SetString(Custom1Btn-NAME)</onclick>
-								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
 							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
 								<description>Custom Background Path Label</description>
@@ -420,8 +410,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
@@ -543,8 +531,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
@@ -587,8 +573,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
@@ -628,8 +612,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
@@ -654,7 +636,6 @@
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom2Btn-NAME)]</label>
 								<onclick>Skin.SetString(Custom2Btn-NAME)</onclick>
-								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
 							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
 								<description>Custom Background Path Label</description>
@@ -670,8 +651,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
@@ -791,8 +770,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
@@ -835,8 +812,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
@@ -876,8 +851,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
@@ -902,7 +875,6 @@
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom3Btn-NAME)]</label>
 								<onclick>Skin.SetString(Custom3Btn-NAME)</onclick>
-								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
 							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
 								<description>Custom Background Path Label</description>
@@ -918,8 +890,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>
@@ -1039,8 +1009,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31098]</label>
 							</control>
@@ -1083,8 +1051,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31082]</label>
 							</control>
@@ -1124,8 +1090,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[31084]</label>
 							</control>
@@ -1150,7 +1114,6 @@
 								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
 								<label>[UPPERCASE][COLOR=Grey]$LOCALIZE[21899] -[/COLOR][/UPPERCASE] $INFO[Skin.String(Custom4Btn-NAME)]</label>
 								<onclick>Skin.SetString(Custom4Btn-NAME)</onclick>
-								<!--<onclick>Skin.SetImage(Custom1FocusImagePath)</onclick>-->
 							</control>
 							<control type="button" id="2337"> <!--BACKGROUND HEADER-->
 								<description>Custom Background Path Label</description>
@@ -1166,8 +1129,6 @@
 								<texturenofocus border="10">scrollbar-background.png</texturenofocus>
 								<align>center</align>
 								<textwidth>700</textwidth><!--PROPERTIES-->
-								<!--<texturefocus border="0,0,10,2">views/list-separator.png</texturefocus>
-								<texturenofocus border="0,0,10,2">views/list-separator.png</texturenofocus>-->
 								<enable>false</enable>
 								<label>$LOCALIZE[33070]</label>
 							</control>

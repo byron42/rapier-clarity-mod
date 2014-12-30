@@ -172,7 +172,8 @@
 							<width>250</width>
 							<height>200</height>
 							<texture fallback="unknown-user.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+							<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+							<aspectratio aligny="bottom">keep</aspectratio>
 						</control>
 						<control type="label">
 							<posx>150</posx>
@@ -193,7 +194,8 @@
 							<width>289</width>
 							<height>280</height>
 							<texture border="15">Glass/keyfocus.png</texture>
-							<aspectratio align="middle">keep</aspectratio>
+							<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+							<aspectratio>keep</aspectratio>
 						</control>						
 						<control type="image">
 							<posx>25</posx>
@@ -201,7 +203,8 @@
 							<width>250</width>
 							<height>200</height>
 							<texture fallback="unknown-user.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="middle" aligny="bottom">keep</aspectratio>
+							<!-- <aspectratio align="middle" aligny="bottom">keep</aspectratio> -->
+							<aspectratio aligny="bottom">keep</aspectratio>
 							<animation effect="zoom" end="107" center="auto" time="50">focus</animation>
 							<animation effect="zoom" start="107" center="auto" time="50">unfocus</animation>
 						</control>
@@ -212,7 +215,8 @@
 							<height>200</height>
 							<info>ListItem.Icon</info>
 							<texture flipy="true" diffuse="reflection.png"/>
-							<aspectratio align="middle" aligny="top">keep</aspectratio>
+							<!-- <aspectratio align="middle" aligny="top">keep</aspectratio> -->
+							<aspectratio aligny="top">keep</aspectratio>
 							<visible>!IsEmpty(ListItem.Icon)</visible>
 						</control>		
 						<control type="label">
@@ -283,7 +287,6 @@
 						<focusedcolor>ButtonFocusColor</focusedcolor>
 						<textcolor>ButtonColor</textcolor>
 						<disabledcolor>DisabledColor</disabledcolor>
-						<textwidth>135</textwidth>
 						<textoffsetx>13</textoffsetx>
 						<radioposx>200</radioposx>
 						<radioposy>-</radioposy>
@@ -365,7 +368,6 @@
 						<ondown>850</ondown>
 						<onright>458</onright>
 						<onleft>345</onleft>
-						<aspectratio scalediffuse="false" align="left" aligny="top">keep</aspectratio>
 					</control>
 					<control type="image">
 						<description>Home Icon No Focus</description>
