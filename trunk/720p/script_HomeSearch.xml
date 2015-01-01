@@ -310,7 +310,7 @@
 							<width>10</width>
 							<height>10</height>
 							<label>-</label>
-							<font>font10</font>
+							<font>DefaultFont</font>
 							<textcolor>FFFFFFFF</textcolor>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -394,7 +394,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -405,7 +405,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -418,7 +418,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -502,7 +502,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -515,7 +515,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -528,7 +528,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -594,7 +594,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -669,7 +669,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -754,7 +754,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -795,7 +795,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -857,7 +857,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -897,7 +897,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -940,7 +940,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1018,7 +1018,7 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>355</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1029,7 +1029,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(TvShowTitle)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1088,7 +1088,7 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>295</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1101,7 +1101,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(TvShowTitle)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1142,7 +1142,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1223,7 +1223,7 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>355</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1236,7 +1236,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1295,7 +1295,7 @@
 											<posx>160</posx>
 											<posy>8</posy> <!---->
 											<width>295</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1309,7 +1309,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1350,7 +1350,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1412,7 +1412,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1423,7 +1423,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1462,7 +1462,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1475,7 +1475,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1516,7 +1516,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1578,7 +1578,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1589,7 +1589,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1639,7 +1639,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1652,7 +1652,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1704,7 +1704,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1767,7 +1767,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>390</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1778,7 +1778,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1837,7 +1837,7 @@
 											<posx>125</posx>
 											<posy>8</posy> <!---->
 											<width>320</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -1850,7 +1850,7 @@
 											<width>275</width>
 											<height>15</height>
 											<label>$INFO[ListItem.Property(Artist)]</label>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>gray</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<align>right</align>
@@ -1912,7 +1912,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>
@@ -1975,7 +1975,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>400</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>DefaultColor</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -2006,7 +2006,7 @@
 											<posx>115</posx>
 											<posy>8</posy> <!---->
 											<width>340</width>
-											<font>MediaInfoHeadFont</font>
+											<font>DefaultFont</font>
 											<textcolor>ThemeColor2</textcolor>
 											<shadowcolor>ShadowColor</shadowcolor>
 											<label>$INFO[ListItem.Label]</label>
@@ -2037,7 +2037,7 @@
 									<posy>560</posy>
 									<width>750</width>
 									<height>35</height>
-									<font>Fon13</font>
+									<font>DefaultFont</font>
 									<align>right</align>
 									<aligny>center</aligny>
 									<scroll>true</scroll>

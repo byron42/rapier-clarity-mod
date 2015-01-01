@@ -42,7 +42,7 @@
 				<posy>30</posy>
 				<width>550</width>
 				<height>30</height>
-				<font>font30_title</font>
+				<font>DefaultFont</font>
 				<label>$INFO[Window(Visualisation).Property(Addon.Name)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -55,7 +55,7 @@
 				<posy>60</posy>
 				<width>550</width>
 				<height>30</height>
-				<font>font13_title</font>
+				<font>DefaultFont</font>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -68,7 +68,7 @@
 				<posy>85</posy>
 				<width>550</width>
 				<height>30</height>
-				<font>font13_title</font>
+				<font>DefaultFont</font>
 				<label>$INFO[MusicPlayer.Title]</label>
 				<align>right</align>
 				<aligny>center</aligny>

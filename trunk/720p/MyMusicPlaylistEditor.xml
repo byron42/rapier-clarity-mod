@@ -775,7 +775,7 @@
 							<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
 							<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 							<colordiffuse>ff454A4F</colordiffuse> <!--BLUE-->
-							<font>BreadCrumbFont5</font>
+							<font>DefaultFont</font>
 							<label>$LOCALIZE[502]</label>	
 							<textcolor>BreadCrumbColor</textcolor>
 							<focusedcolor>ThemeColor2</focusedcolor>
@@ -794,7 +794,7 @@
 							<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
 							<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 							<colordiffuse>ff454A4F</colordiffuse> <!--BLUE-->
-							<font>BreadCrumbFont5</font>
+							<font>DefaultFont</font>
 							<focusedcolor>ThemeColor2</focusedcolor>
 							<textcolor>BreadCrumbColor</textcolor>
 							<label>$LOCALIZE[190]</label>
@@ -811,7 +811,7 @@
 						<posy>94</posy>
 						<width>200</width>
 						<height>45</height>
-						<font>BreadCrumbFont5</font>
+						<font>DefaultFont</font>
 						<texturenofocus border="8">SystemTray/top-bar-status-background.png</texturenofocus>
 						<texturefocus border="8">SystemTray/top-bar-status-background.png</texturefocus>
 						<colordiffuse>ff454A4F</colordiffuse> <!--BLUE-->
