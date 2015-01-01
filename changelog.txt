@@ -4,6 +4,14 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 12.27.14 Version 3.5.45
 
 
+	12.31.14
+------------------------------------------------------------------------------
+		= Updated Font.xml and added DefaultFont for all fonts that were
+		  missing in all xml files...now there are no <font> names that
+		  are not in Font.xml - This pretty much wraps up the clean up that
+		  I was doing.
+
+
 	12.27.14
 ------------------------------------------------------------------------------
 		= Used the Skin XML Converter by phil65 and found several attributes

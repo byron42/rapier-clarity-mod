@@ -1819,7 +1819,7 @@
 								<posx>35</posx>
 								<posy>3</posy>
 								<width>380</width>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>left</align>
@@ -1834,7 +1834,7 @@
 								<posx>490</posx>
 								<posy>2</posy>
 								<width>100</width>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>right</align>
@@ -5544,7 +5544,7 @@
 								<posx>115</posx>
 								<posy>9</posy>
 								<width>490</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>DefaultColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
@@ -5632,7 +5632,7 @@
 								<posx>115</posx>
 								<posy>9</posy>
 								<width>405</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
@@ -7786,7 +7786,7 @@
 									<posy>130</posy>
 									<width>1200</width>
 									<height>110</height>
-									<font>font-20</font>
+									<font>DefaultFont</font>
 									<textcolor>ThemeColor2</textcolor>
 									<shadowcolor>black</shadowcolor>
 									<align>justify</align>
@@ -7817,7 +7817,7 @@
 									<posy>130</posy>
 									<width>1200</width>
 									<height>110</height>
-									<font>font-20</font>
+									<font>DefaultFont</font>
 									<textcolor>ThemeColor2</textcolor>
 									<shadowcolor>black</shadowcolor>
 									<align>justify</align>
@@ -7950,7 +7950,7 @@
 								<posx>12</posx>
 								<posy>136</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor></shadowcolor>
 								<label>$INFO[ListItem.Label]</label>	
@@ -8268,7 +8268,7 @@
 								<posx>12</posx>
 								<posy>137</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor></shadowcolor>
 								<label>$INFO[ListItem.Label]</label>	
@@ -9410,7 +9410,7 @@
 								<posx>35</posx>
 								<posy>3</posy>
 								<width>380</width>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>left</align>
@@ -9425,7 +9425,7 @@
 								<posx>490</posx>
 								<posy>2</posy>
 								<width>100</width>
-								<font>LibraryCatFontBig</font>
+								<font>font_23_B</font>
 								<height>34</height>	
 								<scroll>false</scroll>
 								<align>right</align>
@@ -10649,7 +10649,7 @@
 								<posx>12</posx>
 								<posy>9</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>DefaultColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
@@ -10713,7 +10713,7 @@
 								<posx>12</posx>
 								<posy>9</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>SelectedColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>	
@@ -10985,7 +10985,7 @@
 								<posx>125</posx>
 								<posy>9</posy>
 								<width>480</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>DefaultColor</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>
@@ -11073,7 +11073,7 @@
 								<posx>125</posx>
 								<posy>9</posy>
 								<width>395</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor>ShadowColor</shadowcolor>
 								<label>$INFO[ListItem.Label]</label>

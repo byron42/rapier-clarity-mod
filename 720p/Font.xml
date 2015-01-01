@@ -24,11 +24,6 @@
 			<style>bold</style>
 			<size>17</size>
 		</font>
-		<font>
-			<name>N.P.M.TimeFont</name>
-			<filename>Futured.ttf</filename>
-			<size>17</size>
-		</font>
 	<!--18 -->
 		<font>
 			<name>font_18</name>
@@ -82,6 +77,11 @@
 			<size>20</size>
 		</font>
 	<!--21 -->
+		<font>
+			<name>DefaultFont</name>
+			<filename>XBMC.ttf</filename>
+			<size>21</size>
+		</font>	
 		<font>
 			<name>font_21</name>
 			<filename>XBMC.ttf</filename>
@@ -259,6 +259,11 @@
 			<name>font_28_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
+			<size>28</size>
+		</font>
+		<font>
+			<name>font_28_C</name>
+			<filename>XBMC-caps.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>

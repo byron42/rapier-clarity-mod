@@ -2758,7 +2758,7 @@
 								<posx>12</posx>
 								<posy>136</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor2</textcolor>
 								<shadowcolor></shadowcolor>
 								<label>$INFO[ListItem.Label]</label>	
@@ -2807,7 +2807,7 @@
 								<posx>12</posx>
 								<posy>137</posy>
 								<width>560</width>
-								<font>MediaInfoHeadFont</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor</textcolor>
 								<shadowcolor></shadowcolor>
 								<label>$INFO[ListItem.Label]</label>	

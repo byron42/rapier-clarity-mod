@@ -142,7 +142,7 @@
 								<posy>111</posy>
 								<width>375</width>
 								<height>20</height>
-								<font>font13_title</font>
+								<font>DefaultFont</font>
 								<textcolor>ThemeColor</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -155,7 +155,7 @@
 								<posy>111</posy>
 								<width>375</width>
 								<height>20</height>
-								<font>font13_title</font>
+								<font>DefaultFont</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -168,7 +168,7 @@
 								<posy>111</posy>
 								<width>375</width>
 								<height>20</height>
-								<font>font13_title</font>
+								<font>DefaultFont</font>
 								<textcolor>white</textcolor>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -183,7 +183,7 @@
 								<label>$INFO[Player.Duration]</label>
 								<align>right</align>
 								<aligny>center</aligny>
-								<font>font13_title</font>
+								<font>DefaultFont</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>black</shadowcolor>
 							</control>
