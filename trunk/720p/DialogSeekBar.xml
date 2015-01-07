@@ -61,7 +61,7 @@
 					<font>font_20</font>
 					<textcolor>ThemeColor</textcolor>
 					<label>$VAR[PlayerControlActionLabel]</label>
-					<visible></visible>
+					<visible>![Player.Paused + ![Player.Seeking | Player.Caching]]</visible>
 				</control>
 				<control type="label">
 					<description>Paused Label</description>
@@ -73,7 +73,7 @@
 					<font>font_20</font>
 					<textcolor>White</textcolor>
 					<shadowcolor>ThemeColor</shadowcolor>
-					<label>31303</label>
+					<label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
 					<visible>Player.Paused + ![Player.Seeking | Player.Caching]</visible>
 				</control>
 				
