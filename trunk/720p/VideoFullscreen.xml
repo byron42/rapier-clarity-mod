@@ -1,5 +1,7 @@
 <window id="2005">
 	<defaultcontrol></defaultcontrol>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
@@ -32,7 +34,8 @@
 					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				<control type="grouplist">
-					<visible>Player.HasVideo + !Window.IsActive(142)</visible><animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
+					<visible>Player.HasVideo + !Window.IsActive(142)</visible>
+					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
 					<posx>10</posx>
 					<posy>0</posy>
 					<itemgap>40</itemgap>
