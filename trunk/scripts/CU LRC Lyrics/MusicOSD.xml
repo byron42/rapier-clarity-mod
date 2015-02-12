@@ -21,7 +21,7 @@
 		
 	   	<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
@@ -29,7 +29,8 @@
 				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,-10" end="0,-120" time="250" delay="200">WindowClose</animation>
+				<!-- <animation effect="slide" start="0,-10" end="0,-120" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
 				<!--HomeMenuPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
 				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
@@ -45,8 +46,8 @@
 					<!-- <texture>FSVid_icons_top.png</texture>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>FFFFFFFF</colordiffuse> -->
-					<texture border="10,10,10,10">media-background2.png</texture>
-					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				
 	<!--(((SIDE BUTTONS)))============================================================================================================-->
@@ -142,8 +143,6 @@
 						<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
 						<pulseonselect>false</pulseonselect>
 						<onclick>XBMC.PlayerControl(Random)</onclick>
-						<selected>Playlist.IsRandom</selected>
-						<pulseonselect>false</pulseonselect>
 						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 					</control>
@@ -154,7 +153,6 @@
 						<label>559</label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-playlist-focus.png</texturefocus>
 						<texturenofocus>osd-playlist-nofocus.png</texturenofocus>
 						<onclick>XBMC.ActivateWindow(MyMusicPlaylist)</onclick>
@@ -208,7 +206,6 @@
 						<label>$LOCALIZE[137]  YOUTUBE</label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-search-focus.png</texturefocus>
 						<texturenofocus>osd-search-nofocus.png</texturenofocus>
 						<onclick>ActivateWindow(videos,plugin://video/YouTube/?path=/root/search&amp;feed=search&amp;search=$INFO[MusicPlayer.Artist],return)</onclick>
@@ -216,7 +213,7 @@
 						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 						<enable></enable>
 					</control>
-					<control type="button" id="408">
+					<control type="togglebutton" id="408">
 						<description>RECORD BUTTON</description>
 						<width>70</width>
 						<height>70</height>
@@ -225,7 +222,7 @@
 						<alttexturefocus>osd-record-2.png</alttexturefocus>
 						<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
 						<font></font>
-						<align></align>
+						<align>center</align>
 						<usealttexture>Player.Recording</usealttexture>
 						<texturefocus>osd-record-focus.png</texturefocus>
 						<texturenofocus>osd-record-nofocus.png</texturenofocus>
@@ -243,7 +240,8 @@
 				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
-				<animation effect="slide" start="0,602" end="0,730" time="250" delay="200">WindowClose</animation>
+				<!-- <animation effect="slide" start="0,602" end="0,730" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
 				<!--HomeMenuPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,130" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
 				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
@@ -259,8 +257,8 @@
 					<!-- <texture>FSVid_icons_bottom.png</texture>
 					<aspectratio>keep</aspectratio>
 					<colordiffuse>FFFFFFFF</colordiffuse> -->
-					<texture border="10,10,10,10">media-background2.png</texture>
-					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				
 				<control type="grouplist" id="9000">
@@ -347,7 +345,6 @@
 						<label> $LOCALIZE[31927] </label>
 						<focusedcolor></focusedcolor>
 						<font></font>
-						<align></align>
 						<texturefocus>osd-skip-next-focus.png</texturefocus>
 						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
@@ -356,7 +353,7 @@
 					</control>
 				</control>
 			<!--labels/time-->
-				<control type="label">
+				<control type="label" id="2222">
 					<posx>25</posx>
 					<posy>47</posy>
 					<width>260</width>
@@ -366,11 +363,25 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
-					<aspectratio></aspectratio>
+					<font>font_23_B</font>
 					<textcolor>gray</textcolor>
-					<shadowcolor></shadowcolor>'
+					<shadowcolor></shadowcolor>
 					<visible>Window.IsTopmost(MusicOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
 				</control>
 				<control type="label">
 					<posx>1005</posx>
@@ -382,11 +393,11 @@
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>top</aligny>
-					<font>ListLabelFont</font>
+					<font>font_23_B</font>
 					<textcolor>gray</textcolor>
 					<shadowcolor></shadowcolor>
 				</control>
-			</control>'
+			</control>
 			
 		<!--viz select menu-->
 			<control type="grouplist">
