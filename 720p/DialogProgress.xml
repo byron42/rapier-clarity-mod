@@ -1,23 +1,25 @@
 <window id="101">
 	<defaultcontrol always="true">10</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<posx>340</posx>
-		<posy>235</posy>
-	</coordinates>
-	<!--DialogOpenCloseAnim-->
-	<animation type="WindowOpen" reversible="false">
-		<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="350" />
+	<!-- <animation effect="fade" time="200" condition="Window.Previous(2005)">WindowOpen</animation> -->
+	<animation effect="fade" time="200" condition="Window.Next(2005)">WindowClose</animation>
+	<animation type="WindowOpen" condition="!Window.Next(2005)" reversible="false">
+		<effect type="zoom" start="50" condition="!Window.Next(2005)" end="100" center="640,360" easing="out" tween="back" time="350" />
 		<effect type="fade" start="0" end="100" time="300" />
 	</animation>
 	<animation type="WindowClose" reversible="false">
 		<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
 		<effect type="fade" start="100" end="0" time="250" />
 	</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>340</posx>
+		<posy>235</posy>
+	</coordinates>
+	<!--DialogOpenCloseAnim-->
 	<controls>
 	    <control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(10140) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(selectdialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(10140) | Window.IsActive(129) | Window.IsActive(126)">Conditional</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
