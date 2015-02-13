@@ -874,6 +874,7 @@
 			
 				<!--************************************************************************** ProgramsLargePoster ********** (100) ********-->
 				<control type="group" id="500">	
+					<animation effect="fade" start="100" end="0" time="0" condition="![Control.IsVisible(100) + StringCompare(Container.ViewMode,$LOCALIZE[31116])]">Conditional</animation>
 					<defaultcontrol always="true">100</defaultcontrol>
 					<visible>Control.IsVisible(100) + StringCompare(Container.ViewMode,$LOCALIZE[31116])</visible>
 					<!--MediaViewOpenCloseAnim-->
@@ -1161,6 +1162,7 @@
 				
 				<!--*******************************************************************+********* CoverFlow ****************** (572) *******-->
 				<control type="group" id="500">	
+					<animation effect="fade" start="100" end="0" time="0" condition="![Control.IsVisible(572) + StringCompare(Container.ViewMode,$LOCALIZE[33031])]">Conditional</animation>
 					<defaultcontrol always="true">572</defaultcontrol>
 					<visible>Control.IsVisible(572) + StringCompare(Container.ViewMode,$LOCALIZE[33031])</visible>	
 					<!--MediaViewOpenCloseAnim-->
@@ -3427,7 +3429,7 @@
 				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
 				<!--InfoPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
-				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(100) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(572) + Skin.HasSetting(HideInfoPane)</visible>
+				<visible>[Control.IsVisible(50) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(51) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(100) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(572) + Skin.HasSetting(HideInfoPane)]</visible>
 				<!--****************************************************************************************************************-->
 				
 				<!--************************************* InfoPaneMediaDetails *****************************************************-->
