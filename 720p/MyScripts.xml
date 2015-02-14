@@ -2821,7 +2821,7 @@
 			<!--************************************ SortLetterNotification ******************************************-->
 			<control type="group"> <!--<views>50,51,52</views>-->
 				<posy>SortLetterOffsetY</posy>
-				<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling | Control.IsVisible(572) + Container.Scrolling</visible>
+				<visible>[Control.IsVisible(50) + Container.Scrolling] | [Control.IsVisible(51) + Container.Scrolling] | [Control.IsVisible(52) + Container.Scrolling] | [Control.IsVisible(572) + Container.Scrolling]</visible>
 				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 				<control type="image">
