@@ -3065,7 +3065,7 @@
 			<!--************************************ SortLetterNotification ******************************************-->
 			<control type="group"> <!--<views>50,51,52,54</views>-->
 				<posy>SortLetterOffsetY</posy>
-				<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling | Control.IsVisible(54) + Container.Scrolling | Control.IsVisible(571) + Container.Scrolling</visible>
+				<visible>[Control.IsVisible(50) + Container.Scrolling] | [Control.IsVisible(51) + Container.Scrolling] | [Control.IsVisible(52) + Container.Scrolling] | [Control.IsVisible(54) + Container.Scrolling] | [Control.IsVisible(571) + Container.Scrolling]</visible>
 				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 			
@@ -3133,7 +3133,7 @@
 				<animation effect="slide" end="0,74" time="200" tween="circle" easing="out">WindowClose</animation>
 				<!--InfoPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
-				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(54) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(571) + Skin.HasSetting(HideInfoPane)</visible>
+				<visible>[Control.IsVisible(50) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(51) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(54) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(571) + Skin.HasSetting(HideInfoPane)]</visible>
 				
 				<!--************************************** InfoPaneMediaDetails **************************************************-->
 				<control type="group">	
