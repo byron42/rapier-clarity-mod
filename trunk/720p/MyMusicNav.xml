@@ -5418,10 +5418,10 @@
 			<!--************************************ SortLetterNotification *****************************************-->
 			<control type="group">		<!--<views>50,51,52,60,62,63,78,67,64</views>-->
 				<posy>SortLetterOffsetY</posy>
-				<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling 
-				| Control.IsVisible(60) + Container.Scrolling | Control.IsVisible(62) + Container.Scrolling | Control.IsVisible(63) + Container.Scrolling 
-				| Control.IsVisible(78) + Container.Scrolling | Control.IsVisible(67) + Container.Scrolling | Control.IsVisible(64) + Container.Scrolling
-				| Control.IsVisible(68) + Container.Scrolling | [Control.IsVisible(570) + Skin.HasSetting(HideInfoPane)]</visible>
+				<visible>[Control.IsVisible(50) + Container.Scrolling] | [Control.IsVisible(51) + Container.Scrolling] | [Control.IsVisible(52) + Container.Scrolling] 
+				| [Control.IsVisible(60) + Container.Scrolling] | [Control.IsVisible(62) + Container.Scrolling] | [Control.IsVisible(63) + Container.Scrolling] 
+				| [Control.IsVisible(78) + Container.Scrolling] | [Control.IsVisible(67) + Container.Scrolling] | [Control.IsVisible(64) + Container.Scrolling]
+				| [Control.IsVisible(68) + Container.Scrolling] | [Control.IsVisible(570) + Skin.HasSetting(HideInfoPane)]</visible>
 				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 				<control type="image">

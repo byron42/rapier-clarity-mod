@@ -12182,13 +12182,13 @@
 			<!--************************************ SortLetterNotification ******************************************-->
 			<control type="group"> <!--<views>50,51,52,56,57,58,59,60,61,76,79,80,62,66,77</views>-->
 				<posy>SortLetterOffsetY</posy>
-				<visible>Control.IsVisible(50) + Container.Scrolling | Control.IsVisible(51) + Container.Scrolling | Control.IsVisible(52) + Container.Scrolling
-				| Control.IsVisible(56) + Container.Scrolling | Control.IsVisible(57) + Container.Scrolling | Control.IsVisible(59) + Container.Scrolling
-				| Control.IsVisible(60) + Container.Scrolling | Control.IsVisible(61) + Container.Scrolling | Control.IsVisible(76) + Container.Scrolling 
-				| Control.IsVisible(79) + Container.Scrolling | Control.IsVisible(80) + Container.Scrolling | Control.IsVisible(62) + Container.Scrolling
-				| Control.IsVisible(66) + Container.Scrolling | Control.IsVisible(77) + Container.Scrolling | Control.IsVisible(58) + Container.Scrolling
-				| Control.IsVisible(55) + Container.Scrolling | Control.IsVisible(54) + Container.Scrolling | Control.IsVisible(75) + Container.Scrolling
-				| Control.IsVisible(571) + Container.Scrolling</visible>
+				<visible>[Control.IsVisible(50) + Container.Scrolling] | [Control.IsVisible(51) + Container.Scrolling] | [Control.IsVisible(52) + Container.Scrolling]
+				| [Control.IsVisible(56) + Container.Scrolling] | [Control.IsVisible(57) + Container.Scrolling] | [Control.IsVisible(59) + Container.Scrolling]
+				| [Control.IsVisible(60) + Container.Scrolling] | [Control.IsVisible(61) + Container.Scrolling] | [Control.IsVisible(76) + Container.Scrolling] 
+				| [Control.IsVisible(79) + Container.Scrolling] | [Control.IsVisible(80) + Container.Scrolling] | [Control.IsVisible(62) + Container.Scrolling]
+				| [Control.IsVisible(66) + Container.Scrolling] | [Control.IsVisible(77) + Container.Scrolling] | [Control.IsVisible(58) + Container.Scrolling]
+				| [Control.IsVisible(55) + Container.Scrolling] | [Control.IsVisible(54) + Container.Scrolling] | [Control.IsVisible(75) + Container.Scrolling]
+				| [Control.IsVisible(571) + Container.Scrolling]</visible>
 				<animation effect="slide" start="-60,0" time="150" tween="cubic" easing="out">Visible</animation>
 				<animation effect="slide" end="-60,0" time="150" delay="1000" tween="cubic" easing="out">Hidden</animation>
 				<control type="image">
