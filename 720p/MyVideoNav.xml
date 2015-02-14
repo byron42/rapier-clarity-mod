@@ -12282,13 +12282,13 @@
 				<animation effect="slide" end="0,74" time="300" condition="Window.IsActive(PlayerControls)">Conditional</animation>
 				<animation effect="slide" end="0,74" time="100" condition="Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)">Conditional</animation>
 				<animation effect="slide" end="0,100" time="300" condition="[Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)] + [Window.IsActive(PlayerControls) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(135)]">Conditional</animation>
-				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(56) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(57) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(59) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(60) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(61) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(76) + Skin.HasSetting(HideInfoPane) 
-				| Control.IsVisible(79) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(80) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(62) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(66) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist) | Control.IsVisible(55) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(58) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(54) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(75) + Skin.HasSetting(HideInfoPane)
-				| Control.IsVisible(77) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(571) + Skin.HasSetting(HideInfoPane)</visible>
+				<visible>[Control.IsVisible(50) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(51) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)]
+				| [Control.IsVisible(56) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(57) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(59) + Skin.HasSetting(HideInfoPane)]
+				| [Control.IsVisible(60) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(61) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(76) + Skin.HasSetting(HideInfoPane)] 
+				| [Control.IsVisible(79) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(80) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(62) + Skin.HasSetting(HideInfoPane)]
+				| [Control.IsVisible(66) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(59) + Skin.HasSetting(HideMoviesFanartViewWraplist)] | [Control.IsVisible(55) + Skin.HasSetting(HideInfoPane)]
+				| [Control.IsVisible(58) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(54) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(75) + Skin.HasSetting(HideInfoPane)]
+				| [Control.IsVisible(77) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(571) + Skin.HasSetting(HideInfoPane)]</visible>
 				
 				<!--***************************************** InfoPaneMediaDetails ******************************************************-->
 				<control type="group">	

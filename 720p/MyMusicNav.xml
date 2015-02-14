@@ -5491,11 +5491,11 @@
 								
 									<!--<views>50,51,52,60,62,63,78,67,64</views>-->
 				
-				<visible>Control.IsVisible(50) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(51) + Skin.HasSetting(HideInfoPane) 
-				| Control.IsVisible(52) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(60) + Skin.HasSetting(HideInfoPane) 
-				| Control.IsVisible(62) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(63) + Skin.HasSetting(HideInfoPane) 
-				| Control.IsVisible(78) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(67) + Skin.HasSetting(HideInfoPane) 
-				| Control.IsVisible(64) + Skin.HasSetting(HideInfoPane) | Control.IsVisible(68) + Skin.HasSetting(HideInfoPane)
+				<visible>[Control.IsVisible(50) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(51) + Skin.HasSetting(HideInfoPane)] 
+				| [Control.IsVisible(52) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(60) + Skin.HasSetting(HideInfoPane)] 
+				| [Control.IsVisible(62) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(63) + Skin.HasSetting(HideInfoPane)] 
+				| [Control.IsVisible(78) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(67) + Skin.HasSetting(HideInfoPane)] 
+				| [Control.IsVisible(64) + Skin.HasSetting(HideInfoPane)] | [Control.IsVisible(68) + Skin.HasSetting(HideInfoPane)]
 				| [Control.IsVisible(570) + Skin.HasSetting(HideInfoPane)]</visible>
 				
 				<!--************************************** InfoPaneMediaDetails **************************************************-->
