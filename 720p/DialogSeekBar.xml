@@ -51,7 +51,7 @@
 			<control type="group" id="6000">
 				<posy>3</posy>
 				<!--playstate images-->
-				<control type="label">
+				<control type="label" id="1121">
 					<description>Playing Label</description>
 					<posx>239</posx>
 					<posy>-4</posy>
@@ -63,7 +63,7 @@
 					<label>$VAR[PlayerControlActionLabel]</label>
 					<visible>![Player.Paused + ![Player.Seeking | Player.Caching]]</visible>
 				</control>
-				<control type="label">
+				<control type="label" id="1122">
 					<description>Paused Label</description>
 					<posx>239</posx>
 					<posy>-4</posy>
