@@ -346,6 +346,7 @@
 		<value condition="Player.Rewinding8x">[UPPERCASE]$LOCALIZE[31730][/UPPERCASE]</value> <!-- RWx8 -->
 		<value condition="Player.Rewinding16x">[UPPERCASE]$LOCALIZE[31731][/UPPERCASE]</value> <!-- RWx16 -->
 		<value condition="Player.Rewinding32x">[UPPERCASE]$LOCALIZE[31732][/UPPERCASE]</value> <!-- RWx32 -->
+		<value condition="Player.Playing">[UPPERCASE]$LOCALIZE[31302][/UPPERCASE]</value> <!-- PLAYING -->
 		<value condition="Window.IsActive(114) + Player.DisplayAfterSeek">[UPPERCASE]$LOCALIZE[31927][/UPPERCASE]</value> <!-- skip -->
 	</variable>
 	<variable name="PlayerControlActionImage">
