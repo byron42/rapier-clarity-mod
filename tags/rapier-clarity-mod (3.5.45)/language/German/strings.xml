@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!-- string id's 31000 thru 31999 are reserved for skins -->
+
+<strings>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31000 durch 31099 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31000">n/a</string>
+
+	<!--haut einstellungen-->
+	<string id="31001">Schaltfläche</string>
+	<string id="31010">Allgemeine</string>
+	<string id="31011">Startseite</string>
+	<string id="31012">Hintergründe</string>
+	<string id="31013">Medien</string>
+	<string id="31014">Zurücksetzen der Einstellungen</string>
+	<string id="31015">Ausblenden</string>
+	<string id="31016">Aktivieren</string>
+	<string id="31017">Dim</string>
+	<string id="31018">Änderung</string>
+	<string id="31019">Informationen</string>
+
+	<!--einstellungen allgemeine der Haut-->
+	<string id="31020">die Scrollbar für diese Ansichtsmodi ausblenden</string>
+	<string id="31021">unteren Infobereich ausblenden</string>
+	<string id="31022">Visualisierung von Musik im Hintergrund nicht anzeigen</string>
+	<string id="31023">Video im Hintergrund nicht anzeigen</string>
+	<string id="31024">unteren Bereich zu verbergen weiß Highlight</string>
+	<string id="31025">Scrollbar ausblenden</string>
+	<string id="31026">Wetter in Top-Leiste anzeigen</string>
+	<string id="31027">den Bildschirm, wenn ein Dialogfeld angezeigt wird nicht abblenden</string>
+	<string id="31028">ändern Top Bar Farbe</string>
+	<string id="31029">grau</string>
+	<string id="31030">schwarz</string>
+	<string id="31031">blau</string>
+	<string id="31032">weiß</string>
+	<string id="31034">glatt</string>
+	<string id="31035">Stripe</string>
+	<string id="31036">Kioskmodus aktivieren</string>
+
+	<string id="31041">Ausblenden der Beschreibung</string>
+	<string id="31042">Beschriftungen ausblenden</string>
+	<string id="31043">Ausblenden Fanart</string>
+	<string id="31044">Grundstück ausblenden</string>
+	<string id="31045">Cover ausblenden</string>
+	<string id="31046">überwachten Überlagerung ausblenden</string>
+	<string id="31047">nicht abblenden Fanart</string>
+	<string id="31048">Medien-Flags zu verstecken</string>
+	<string id="31049">Studio-Flags zu verstecken</string>
+	<string id="31050">Fokus-Position ändern</string>
+
+	<!--haut einstellungen hintergrund-->
+	<string id="31051">Startseite Fenster nur zuweisen</string>
+	<string id="31052">gelten für alle</string>
+
+	<string id="31053">Custom Hintergründe</string>
+	<string id="31054">Image-Pfad</string>
+	<string id="31055">Multi-Image-Pfad</string>
+	<string id="31056">Verwendung Einzelbild für Hintergrund</string>
+	<string id="31057">Multi-Bild für den Hintergrund verwenden</string>
+	<string id="31060">Dim Hintergrund (gilt nicht für nach Hause Fenster)</string>
+	<string id="31061">Windows</string>
+	<string id="31063">Fanart zu animieren</string>
+	<string id="31064">Hintergrund zu animieren</string>
+
+	<!--haut einstellungen startseite-->
+	<string id="31070">diese Kategorien ausblenden</string>
+	<string id="31071">jetzt für Musik spielen verstecken</string>
+	<string id="31072">jetzt für Videos spielen verstecken</string>
+	<string id="31074">immer ausblenden Kategorie-Icons</string>
+	<string id="31075">Navigationsschaltflächen (für Mausbenutzer) anzeigen</string>
+	<string id="31076">Kategorie-Icons ausblenden wenn Video Spielen</string>
+	<string id="31077">Ausblenden aktuelle Filme</string>
+	<string id="31078">Ausblenden aktuelle TV-Shows</string>
+	<string id="31079">Ausblenden von Alben</string>
+	<string id="31080">Systeminfo auf Home-Bildschirm ausblenden</string>
+	<string id="31081"></string>
+	<string id="31082">benutzerdefiniertes Symbol</string>
+	<string id="31083">Hintergrund</string>
+	<string id="31084">Rubrikenbeschriftung</string>
+	<string id="31085">ohne Fokus</string>
+	<string id="31086">Fokus</string>
+	<string id="31095">Button-Typ</string>
+	<string id="31097">Etikett</string>
+	<string id="31098">Schaltflächeneigenschaften</string>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31100-31199 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--ansichtstypen-->
+	<string id="31101">Ansicht</string>
+	<string id="31102">alle Ansichten</string>
+	<string id="31103">Symbol</string>
+	<string id="31104">großes Symbol</string>
+	<string id="31105">Liste</string>
+	<string id="31106">Wrap Liste</string>
+	<string id="31107">Miniaturansicht</string>
+	<string id="31108">Breite-Symbol</string>
+	<string id="31110">Fanart</string>
+	<string id="31111">ListInfo</string>
+	<string id="31112">Episodenliste</string>
+	<string id="31113">große Liste</string>
+	<string id="31114">Banner Liste</string>
+	<string id="31115">Showcase</string>
+	<string id="31116">großes Poster</string>
+	<string id="31117">Wand-Ansicht</string>
+	<string id="31118">WideSlimList</string>
+	<string id="31119">3D Wrap anzeigen</string>
+	<string id="31120">ListInfo 2</string>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31200 durch 31299 Ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31200">schneller Vorlauf</string>
+	<string id="31201">Rücklauf</string>
+	<string id="31202">Look &amp; Feel, Region, Bildschirm, Anzeigeoptionen, Screensaver</string><!--*** darstellungseinstellungen -->
+	<string id="31203">Dateien</string><!--************************************************************* programs settings ********-->
+	<string id="31204">Allgemein, Diashow</string><!--************************************************** bilder einstellungen *****-->
+	<string id="31205">General, Bibliothek, Player, Dateien, Scrobbler, CD-Ripping, Karaoke</string><!-- musik-einstellungen ******-->
+	<string id="31206">General, Bibliothek, Player, Untertitel, Schaber</string><!--******************** Videos einstellungen *****-->
+	<string id="31207">Allgemeine</string><!--********************************************************** weather settings *********-->
+	<string id="31208">Netzwerk, Server, SMB-Client, UPnP-Einstellungen, Event-Server</string><!--****** netzwerkeinstellungen ****-->
+	<string id="31209">Autoplay, Audio-Hardware, Hardware, LCD, Video-Hardware, Master Lock</string><!-- Systemeinstellungen ******-->
+	<string id="31210">Allgemein, Startseite, Medien, Hintergrund, Skripte</string><!--***************** haut einstellungen *******-->
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31300 durch 31399 Ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31300">Datenstand</string>
+	<string id="31301">OpenSubtitles_OSD</string>
+	<string id="31302">spielen</string>
+	<string id="31303">angehalten</string>
+	<string id="31304">schneller Vorlauf</string>
+	<string id="31305">Rücklauf</string>
+	<string id="31309">Speicher verwendet</string>
+	<string id="31315">grundlegende</string>
+
+	<!--BENUTZERDEFINIERTE CREDITS-->
+	<string id="31320"> - Framework erstellt von Qualar</string>
+	<string id="31321"> - bedingte Wetter und rotierende CD Mod erstellt von Qualar</string>
+	<string id="31322"> - Hintergründe, arrangiert von Byron präsentiert</string>
+	<string id="31323"> - neue Medien-Steuerelemente, Fullscreen-Dialog-Konzepte und Zoom-Listen erstellt von Byron</string>
+	<string id="31324"> - home Wetter Addition von Byron</string>
+	<string id="31325"> - Icons erstellt von Evan Brooks</string>
+	<string id="31326"> - Startseite Fenster Icons erstellt von Arcanthur</string>
+	<string id="31327"> - Studio Symbole bereitgestellt durch die XBMC-Gemeinschaft</string>
+	<string id="31328"> - zusätzliche Ansichten bereitgestellt durch Wannabegt4 und Sranshaft</string>
+	<string id="31329">Dank vor allem an Begeisterung für die Fortsetzung der XBMC4XBOX und alle anderen, die dazu BEIGETRAGEN hat, diese alte ARBEITSPFERD Lauf- und REAL zu halten. VOR allem dank SCARFA für die Herstellung dieses AWESOME Haut von Anfang an -</string>
+	<string id="31330">Dank der XBMC-Team zum Erstellen und verwalten ein wunderbares Programm, das mir so viel Freude für eine Reihe von Jahren gegeben hat. Danke auch an das Kürschnern vor mir, die den Weg mit ihren fantastisch Skins -</string>
+	<string id="31331">(original Skin von Scarfa, Mod von Byron)</string>
+	
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31400 durch 31499 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--haut einstellungen medien-->
+	<string id="31400">Ausblenden Top Optionen Menüleiste (nur zeigen wenn ausgewählt)</string>
+	<string id="31401">Blättern Sie die Handlung nicht</string>
+	<string id="31402">DVD-Hülle zu verbergen</string>
+	<string id="31403">rotierende ausblenden CdArt Visualizer</string>
+	<string id="31404">Verwendung-Poster-Abdeckungen</string>
+	<string id="31405">Musik spielt</string>
+	<string id="31406">Videowiedergabe</string>
+	<string id="31407">Verwendung-Visualisierung für Hintergrund</string>
+	<string id="31408">Verwendung Künstler Fanart für Hintergrund</string>
+	<string id="31409">Aktivieren der Musikvisualisierung / Künstler Fanart im Hintergrund</string>
+	<string id="31410">Video im Hintergrund aktivieren</string>
+	<string id="31411">flache Wrap</string>
+	<string id="31412">kleine flache Wrap</string>
+	<string id="31413">3D Wrap</string>
+	<string id="31414">Medien-Info-Dialog ausblenden</string>
+	<string id="31415">Album Fall ausblenden</string>
+	<string id="31416">Blättern Sie die Beschreibung nicht</string>
+	<string id="31417">Banner Liste</string>
+	<string id="31418">klassische Liste</string>
+	<string id="31419">Icon-Leiste</string>
+	<string id="31420">zeigen vollständige Handlung</string>
+	<string id="31421">Wrap Liste Schatten verbergen</string>
+	<string id="31422">alle</string>
+	<string id="31423">Stil</string>
+	<string id="31424">kleine Video-Overlay ausblenden</string>
+
+	<string id="31442">Wählen Sie einen Ordner</string>
+	<string id="31443">Wählen Sie eine Plugin</string><!--HomePlugins.py-->
+	<string id="31444">Wählen Sie ein Skript</string><!--HomeScripts.py-->
+	<string id="31445">(Wählen Sie '' Weg '' zu durchsuchen)</string>
+	<string id="31446">Wählen Sie Schaltfläche</string>
+	<string id="31447">Wählen Sie Schaltfläche Parameter</string>
+	<string id="31448">Verwenden Sie kleinere Volume Display (Fullscreen-Media)</string>
+	<string id="31449"></string>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31500 durch 31599 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Haut-Einstellung-Skripts--> 
+	<string id="31500">OpenSubtitles_OSD Schaltfläche anzeigen (Skript muss installiert sein)</string>
+
+	<!--Skin einstellungen Wetter-->
+	<string id="31510">Wetter bedingten Hintergrund deaktivieren</string>
+	<string id="31511">Deaktivieren von animierten Wettersymbole</string>
+
+	<!--fehlende haut einstellungen zeichenfolgen (LEERRAUM IST VORSÄTZLICHE!!!)-->
+	<string id="31520">obere Leiste</string>
+	<string id="31521">Zurücksetzen Skin</string>
+	<string id="31522">breadCrumb</string>
+	<string id="31523">ändern Top Farbe</string>
+	<string id="31524">Vanille</string>
+	<string id="31525">schwarz</string>
+	<string id="31526">grau</string>
+	<string id="31527">Symbol-Farben ändern</string>
+	<string id="31528">Vanille</string>
+	<string id="31032">weiß</string>
+
+	<string id="31530">Registerkarte Farben ändern</string>
+	<string id="31531">Vanille</string>
+	<string id="31526">grau</string>
+	<string id="31533">Breadcrumb-Font-Farben ändern</string>
+	<string id="31534">Vanille</string>
+	<string id="31535">blau</string>
+	<string id="31032">weiß</string>
+	<string id="31537">unteren Infobereich ausblenden</string>
+	<string id="31538">XBMC4XBOX-HOME-ICON ausblenden</string>
+	<string id="31539">Ausblenden-HOME-Suche-Symbol</string>
+
+	<string id="31540">Untermenü NAVIGATIONSPFEILE ausblenden</string>
+	<string id="31541">ADD-ONS</string>
+	<string id="31542">Sub-Menüs anpassen</string>
+	<string id="31543">Bedienfeld "INFO"</string>
+	<string id="31544">immer ausblenden Kategorie-Icons</string>
+	<string id="31545">Kategorie-Symbole ausblenden wenn Video Spielen</string>
+	<string id="31546">Ausblenden von Media Type Symbolen in der Bibliothek</string>
+	<string id="31547">Gedimmte Media Type Symbol ausblenden</string>
+	<string id="31548">ausgewählten Medien Typsymbol ausblenden</string>
+	<string id="31549">Kennzeichnung von Medien</string>
+
+	<string id="31550">Verwendung [COLOR = MediaInfoItemColor] MPAA Flags [/ color] für Ratings</string>
+	<string id="31551">Verwendung [COLOR = MediaInfoItemColor] OFLC Flags [/ color] für Ratings</string>
+	<string id="31552"> - UPDATE erforderlich</string>
+	<string id="31553">Ansicht-Animationen</string>
+
+	<string id="31554">Standard (blau)</string>
+	<string id="31555">Standard (grau)</string>
+	<string id="31556">obere Untermenü (zeige nur wenn aktiviert) ausblenden</string>
+	<string id="31557">Untermenü NAVIGATIONSPFEILE ausblenden</string>
+	<string id="31558">HINTERGRUNDOPTIONEN aktivieren</string>
+	<string id="31559">rot</string>
+
+	<string id="31560">grün</string>
+	<string id="31561">Ausrichten</string>
+	<string id="31562">Nach oben</string>
+	<!--DREHENDE CD-->
+	<string id="31563">nicht</string>
+	<string id="31564">vorne</string>
+	<string id="31565">Seite</string>
+	<string id="31566">von</string>
+	<string id="31567">Spin</string>
+	<string id="31568">Spinnerei</string>
+	<string id="31569">Bild</string>
+	<string id="31570">rotierende</string>
+	<string id="31571">langsam</string>
+	<string id="31572">nach unten</string>
+	
+
+	<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31600 durch 31699 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31601">Skript</string>
+	<string id="31602">Plugin</string>
+	<string id="31603">Lieblings</string>
+	<string id="31604">gefunden</string>
+	<string id="31605">Elemente</string>
+	<string id="31606">finden Sie weitere Artikel</string>
+
+	<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31700 durch 31799 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--OSD-->
+	<string id="31700">CODEC</string>
+	<string id="31701">BITRATE</string>
+	<string id="31702">SAMPLERATE</string>
+	<string id="31703">Kanäle</string>
+	<string id="31704">nächste</string>
+	<string id="31705">REWIND</string>
+	<string id="31706">nach vorn</string>
+	<string id="31707">VOLUME</string>
+	<string id="31708">POSITION</string>
+	<string id="31709">Laufzeit</string>
+	<string id="31710">ABSCHLUSSZEIT</string>
+	<string id="31711">Lesezeichen zur Verfügung</string>
+	<string id="31712">oben/unten: Menü/Lesezeichen [CR] links/rechts: Optionen im Menü</string>
+	<string id="31713">Elemente IN der WIEDERGABELISTE</string>
+	<string id="31714">aktuelle POSITION</string>
+	<string id="31715">vorherige</string>
+	<string id="31716">SONG-Titel</string>
+	<string id="31717">ALBUM-Titel</string>
+	<string id="31718">NAME des Interpreten</string>
+	<string id="31719">VERSTRICHENE Zeit / Dauer</string>
+	<string id="31720">aktuelle Uhrzeit</string>
+
+	<string id="31721">Suche nach</string>
+	<string id="31722">angehalten</string>
+	<string id="31723">FF - X 2</string>
+	<string id="31724">FF - X 4</string>
+	<string id="31725">FF - X 8</string>
+	<string id="31726">FF - X 16</string>
+	<string id="31727">FF - X 32</string>
+	<string id="31728">RW - X 2</string>
+	<string id="31729">RW - X 4</string>
+	<string id="31730">RW - X 8</string>
+	<string id="31731">RW - X 16</string>
+	<string id="31732">RW - X 32</string>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31800 durch 31899 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Startseite Untermenüs-->
+	<string id="31800">Video-Feeds</string>
+	<string id="31801">Video Plugins</string>
+	<string id="31802">Videothek</string>
+	<string id="31803">verschiedene</string>
+	<string id="31804">vor kurzem hinzugefügt</string>
+
+<!--Ooooooooooooooooooooooooooooooooooooooooo string-Id 31900 durch 31999 Ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Inhalt suche schrift-->
+	<string id="31900">Wählen Sie Inhalt für... suchen</string>
+	<string id="31901">Geben Sie Inhalte Suchzeichenfolge...</string>
+	<string id="31902">Inhaltssuche abgesagt!</string>
+	<string id="31903">kein Suchbegriff angegeben!</string>
+	<string id="31904">Inhalt nicht aktiviert!</string>
+	<string id="31905">Benutzeranforderung...</string>
+	<string id="31906">neue Suche</string>
+	<string id="31907">Seite</string>
+
+	<!--Fehlende etiketten Breadcrumbs-->
+	<string id="31910">Medien</string>
+	<string id="31911">Bild</string>
+	<string id="31912">Profil</string>
+
+	<!--Fehlende etiketten-->
+	<string id="31913">Anpassen der Untermenüs</string>
+	<string id="31914">Verwendung Zahlen für Ratings</string>
+	<string id="31915">zurück</string>
+	<string id="31916">CAPS</string>
+	<string id="31917">IP</string>
+	<string id="31918">Medien</string>
+	<string id="31919">Add-ons</string>
+	<string id="31920">Einstellungen</string>
+	<string id="31921">APPS</string>
+	<string id="31922">EMULATOREN</string>
+	<string id="31923">PRESETS</string>
+	<string id="31924">VIZ auswählen</string>
+	<string id="31925">Suche YOUTUBE Musikvideo</string>
+	<string id="31926">Songtext</string>
+	<string id="31927">überspringen</string>
+	<string id="31928">umkehren</string>
+	<string id="31929">stoppen</string>
+	<string id="31930">PAUSE</string>
+	<string id="31931">nach vorn</string>
+	<string id="31932">Spiele</string>
+	<string id="31933">Ausfahrt FULLSCREEN</string>
+	<string id="31934">Prefetch</string>
+	<string id="31935">Wählen Sie benutzerdefinierte Favoriten</string>
+	<string id="31936">Universal Classic Hintergrund (außer Ram)</string>
+	<string id="31937">Universal benutzerdefinierten Hintergrund (immer im Vordergrund)</string>
+	<string id="31938">Wetter bedingte Hintergründe (Homescreen) aktivieren</string>
+
+	<string id="31999">Haut-Einstellungen (drücken Sie zur Bestätigung) auf die Standardeinstellung zurücksetzen</string>
+	
+<!-- ((( RCB ))) ======================================================================-->
+	<string id="30000">Rom Collection Browser</string>
+    <!-- Error messages -->
+	<string id="35000">Fehler: Datenbank kann nicht geöffnet werden.</string>
+	<string id="35001">Fehler beim Update von config.xml.</string>
+	<string id="35002">Fehler beim Lesen von config.xml.</string>
+	<string id="35003">Fehler: Datei config.xml existiert nicht.</string>
+	<string id="35004">Fehler: Datei config.xml konnte nicht gelesen werden.</string>
+	<string id="35005">Konfigurationsfehler. Siehe xbmc.log für Details.</string>
+	<string id="35006">Rom Collection ids sind nicht eindeutig.</string>
+	<string id="35007">Fehler: Konnte config.xml nicht sichern.</string>
+	<string id="35008">Fehler: Konnte config.xml nicht schreiben.</string>
+	<string id="35009">%s %s konnte in config.xml nicht gefunden werden.</string>
+	<string id="35010">Fehler: Artwork Verzeichnis konnte nicht erstellt werden.</string>
+	<string id="35011">Siehe xbmc.log für Details.</string>
+	<string id="35012">Fehler: Konnte Artwork Datei nicht erstellen.</string>
+	<string id="35013">Fehler beim Rescrape des Spiels</string>
+	<string id="35014">Das ausgewählte Spiel kann nicht geladen werden</string>
+	<string id="35015">Fehler beim Spiel-Kommando bearbeiten</string>
+	<string id="35016">Fehler beim Hinzufügen zu den Favoriten</string>
+	<string id="35017">Fehler beim Löschen des Spiels</string>
+	<string id="35018">Das ausgewählte Spiel kann nicht gelöscht werden</string>
+	<string id="35019">Fehler</string>
+	<string id="35020">Fehler beim Löschen der Rom Collection</string>
+	<string id="35021">Konfigurationsfehler</string>
+	<string id="35022">Site-Eintrag %s existiert nicht in config.xml</string>
+	<string id="35023">Rom Collection mit Id %s kann nicht gelesen werden</string>
+	<string id="35024">Das ausgewählte Spiel kann nicht gelesen werden.</string>
+	<string id="35025">Control mit id: %s konnte nicht gefunden werden. WindowXML Datei überprüfen.</string>
+	<!--<string id="35026">Site-Eintrag %s existiert nicht in config.xml</string>-->
+	<string id="35027">%s Spiele können nicht mit mit %s Scraper[CR]verarbeitet werden.</string>
+	<!--<string id="35028"></string>-->
+	<!--<string id="35029"></string>-->
+	<string id="35030">Fehler: MyGames.db kann nicht gesichert werden:[CR]Backup existiert bereits.</string>
+	<string id="35031">Fehler: MyGames.db kann nicht gesichert werden</string>
+	<string id="35032">Fehler: Update von Version %s auf %s nicht möglich.</string>
+	<!--<string id="35033">Control with id: %s could not be found. Check WindowXML file.</string>-->
+	<string id="35034">Fehler beim Starten des Spiels</string>
+	<string id="35035">Fehler beim Starten des Emulators</string>
+	<string id="35036">Fehler beim Löschen der temporären Dateien</string>
+	<string id="35037">Fehler beim Starten des Emulators:[CR]Datei %s existiert nicht</string>
+	<string id="35038">Fehler beim Erzeugen der .cut Datei.[CR]Siehe xbmc.log für Details.</string>
+	<string id="35039">Fehler beim Laden der .7z Datei.</string>
+	<string id="35040">Fehler: Datei config_template.xml existiert nicht</string>
+	<string id="35041">RCB kann nicht auf den Rom Pfad zugreifen.[CR]Stelle sicher, dass im Pfadnamen keine Sonderzeichen enthalten sind.</string>
+	<string id="35042">RCB kann nicht auf den Artwork Pfad zugreifen.[CR]Stelle sicher, dass im Pfadnamen keine Sonderzeichen enthalten sind.</string>
+	<!-- Hints / questions -->
+	<string id="40000">Datei config.xml ist nicht vorhanden.</string>
+	<string id="40001">Jetzt neu erstellen?</string>
+	<string id="40002">Datenbank und config.xml wurden aktualisiert.</string>
+	<string id="40003">Weitere Infos zu den Änderungen[CR]stehen im Wiki und im Changelog.</string>
+	<string id="40004">Lösche Spiel</string>
+	<string id="40005">Lösche Spiele...</string>
+	<string id="40006">Spiele löschen abgeschlossen</string>
+	<string id="40007">Überprüfe Datei</string>
+	<string id="40008">Datenbank aufräumen...</string>
+	<string id="40009">Datenbank komprimieren...</string>
+	<string id="40010">Aufräumen der Datenbank abgeschlossen</string>
+	<string id="40011">Importiere Spiele...</string>
+	<string id="40012">Import wird ausgeführt</string>
+	<string id="40013">Import abbrechen?</string>
+	<string id="40014">Import wird abgebrochen</string>
+	<string id="40015">Abbruch ist noch nicht abgeschlossen.</string>
+	<string id="40016">Suchbegriff eingeben</string>
+	<string id="40017">Suche</string>
+	<string id="40018">Spiele jetzt importieren?</string>
+	<string id="40019">Liste wird geladen...</string>
+	<string id="40020">Alle</string>
+	<string id="40021">Lade Spiele...</string>
+	<string id="40022">Importiere Rom Collection</string>
+	<string id="40023">Importiere Spiel</string>
+	<string id="40024">Fortfahren</string>
+	<string id="40025">Fortfahren und Fehler ignorieren</string>
+	<string id="40026">Abbrechen</string>
+	<string id="40027">Die ersten 10 Spiele konnten nicht[CR]importiert werden.</string>
+	<string id="40028">Import abgebrochen.</string>
+	<string id="40029">Siehe xbmc.log für Details.</string>
+	<string id="40030">Dateiliste wird erstellt...</string>
+	<string id="40031">Info runterladen</string>
+	<string id="40032">%s eingeben</string>
+	<string id="40033">Spiel aus Favoriten entfernen</string>
+	<string id="40034">Auswahl aus Favoriten entfernen</string>
+	<string id="40035">Spiel-Kommando eingeben</string>
+	<string id="40036">Dieses Spiel wirklich löschen?</string>
+	<string id="40037">Spiele und Konfiguration löschen</string>
+	<string id="40038">Nur Spiele löschen</string>
+	<string id="40039">Emulator</string>
+	<string id="40040">Rom Datei Maske eingeben</string>
+	<string id="40041">Pfad</string>
+	<string id="40042">Media-Pfad hinzufügen</string>
+	<string id="40043">Media-Pfad entfernen</string>
+	<string id="40044">Es sind bereits für alle Rom Collections[CR]Scraper vorhanden</string>	
+	<string id="40045">Scraper entfernen oder bearbeiten</string>
+	<string id="40046">Scraper Name auswählen</string>
+	<string id="40047">Zu löschenden Scraper auswählen</string>
+	<string id="40048">Scraper %s wird bereits verwendet und kann[CR]nicht gelöscht werden.</string>
+	<!--<string id="40049">Bitte wähle einen anderen Scraper.</string>-->
+	<string id="40050">Automatisch: Exakt</string>
+	<string id="40051">Automatisch: Treffer raten</string>
+	<string id="40052">Automatisch: Treffer bestimmen</string>
+	<string id="40053">local artwork</string>
+	<string id="40054">local nfo</string>
+	<string id="40055">Artwork auswählen</string>
+	<string id="40056">Eigenschaft auswählen</string>
+	<string id="40057">ignorieren</string>
+	<string id="40058">Filter ignorieren</string>
+	<string id="40059">anzeigen</string>
+	<string id="40060">Nur Spiele mit fehlenden Einträgen</string>
+	<string id="40061">ausblenden</string>
+	<string id="40062">Keine Spiele mit fehlenden Einträgen</string>
+	<string id="40063">Spiel starten</string>
+	<string id="40064">Disk auswählen</string>
+	<string id="40065">Spiel von Beginn starten</string>
+	<string id="40066">Gespeicherten Spielstand starten?</string>
+	<string id="40067">Speicher-Slot auswählen</string>
+	<string id="40068">Befehlstext eingeben</string>
+	<string id="40069">Datenbank exportieren...</string>
+	<string id="40070">Exportiere Rom Collection</string>
+	<string id="40071">Exportiere Spiel</string>
+	<string id="40072">Aktion abgebrochen. Config.xml wird nicht geschrieben.</string>
+	<string id="40073">Wähle ein Szenario</string>
+	<string id="40074">Spiel-Infos und Artwork online scrapen</string>
+	<string id="40075">Spiel-Infos und Artwork sind lokal verfügbar</string>
+	<string id="40076">Plattform auswählen</string>
+	<string id="40077">Namen der Plattform eingeben</string>
+	<string id="40078">Pfad zum %s Emulator</string>
+	<string id="40079">Emulator Parameter ("%ROM%" für die Rom-Dateien)</string>
+	<string id="40080">Pfad zu den %s Roms</string>
+	<string id="40081">Dateimaske (Komma-separiert): z.B. *.zip, *.smc</string>
+	<string id="40082">%s Artwork (%s)</string>
+	<string id="40083">Wähle Artwork Typ aus</string>
+	<string id="40084">Einen weiteren Artwork-Pfad anlegen?</string>
+	<string id="40085">Aufbau der Spiel-Infos</string>
+	<string id="40086">Eine Info-Datei pro Spiel</string>
+	<string id="40087">Eine Info-Datei für alle Spiele</string>
+	<string id="40088">Spiele online scrapen (oder local nfo verwenden)</string>
+	<string id="40089">%s Info</string>
+	<string id="40090">Info-Datei Maske eingeben</string>
+	<string id="40091">%s Parse-Anweisung</string>
+	<string id="40092">Eine weitere Rom Collection anlegen?</string>
+	<string id="40093">%s Artwork</string>
+	<string id="40094">Verzögerung davor (ms)</string>
+	<string id="40095">Verzögerung danach (ms)</string>
+	<string id="40096">Start-Verzögerung im Solo Modus (ms)</string>
+	<string id="40097">VB script im Solo Modus (nur Windows)</string>
+	<!-- Settings -->
+	<string id="45000">Allgemein</string>
+	<string id="45001">RCB skin</string>
+	<string id="45002">Log level</string>
+	<string id="45003">Caching Option</string>
+	<string id="45004">Viewstate beim Beenden speichern</string>
+	<string id="45005">Viewstate beim Starten des Spiels speichern</string>
+	<string id="45006">Spiele importieren</string>
+	<string id="45007">Spiele beim Start von XBMC importieren</string>
+	<string id="45008">Optionen-Dialog beim Import anzeigen</string>
+	<string id="45009">Scraping Modus</string>
+	<string id="45010">Fuzzy Faktor um Treffer zu ermitteln</string>
+	<string id="45011">local nfo Datei beim Import erzeugen</string>
+	<string id="45012">Spiele ohne Beschreibung nicht importieren</string>
+	<string id="45013">Spiele ohne Artwork nicht importieren</string>
+	<string id="45014">Importierte Spiele erneut scannen</string>
+	<string id="45015">Überschreiben mit Null-Werten erlauben</string>
+	<string id="45016">local nfo Dateien in separatem Ordner speichern</string>
+	<string id="45017">Pfad zu local nfo Dateien</string>
+	<string id="45018">Spiele durchsuchen</string>
+	<string id="45019">Sterne bei Favoriten anzeigen</string>
+	<string id="45020">Option "Alle" in Konsolen Filter anzeigen</string>
+	<string id="45021">Option "Alle" in Genre Filter anzeigen</string>
+	<string id="45022">Option "Alle" in Jahr Filter anzeigen</string>
+	<string id="45023">Option "Alle" in Herausgeber Filter anzeigen</string>
+	<string id="45024">Option "Alle" in Buchstaben Filter anzeigen</string>
+	<string id="45025">Ungefilterte Suche verhindern</string>
+	<string id="45026">Spiele starten</string>
+	<string id="45027">Emulator Kommando maskieren</string>
+	<!-- GUI controls -->
+	<!-- main window-->
+	<string id="50000">Jahr</string>
+	<string id="50001">Genre</string>
+	<string id="50002">Herausgeber</string>
+	<string id="50003">Entwickler</string>
+	<string id="50004">Favoriten</string>
+	<string id="50005">Suche</string>
+	<string id="50006">Konsole</string>
+	<string id="50007">A-Z</string>
+	<string id="50008">Ansicht</string>
+	<string id="50009">Fehlende Infos filtern</string>
+	<string id="50010">Einträge</string>
+	<string id="50011">Seite</string>
+	<!-- context menu-->
+	<string id="51000">Spiele importieren</string>
+	<string id="51001">Spiel erneut einlesen</string>
+	<string id="51002">Auswahl erneut einlesen</string>
+	<string id="51003">Rom Collection hinzufügen</string>
+	<string id="51004">Rom Collection bearbeiten</string>
+	<string id="51005">Offline Scraper bearbeiten</string>
+	<string id="51006">Spiel-Kommando bearbeiten</string>
+	<string id="51007">Spiel zu Favoriten hinzufügen</string>
+	<string id="51008">Auswahl zu Favoriten hinzufügen</string>
+	<string id="51009">Datenbank exportieren (nfo Dateien)</string>
+	<string id="51010">Spiel löschen</string>
+	<string id="51011">Rom Collection löschen</string>
+	<string id="51012">Datenbank aufräumen</string>
+	<string id="51013">Addon Settings öffnen</string>
+	<!-- editromcollection -->
+	<string id="52000">Konfiguration</string>
+	<string id="52001">Rom Collection</string>	
+	<string id="52002">Spiele importieren</string>
+	<string id="52003">Daten importieren</string>
+	<string id="52004">Spiele durchsuchen</string>
+	<string id="52005">Spiele starten</string>
+	<string id="52006">Rom Pfad</string>
+	<string id="52007">Rom Dateimaske</string>
+	<string id="52008">Beim Import ignorieren</string>
+	<string id="52009">Updates erlauben</string>
+	<string id="52010">Anzahl Unterordner</string>
+	<string id="52011">Disk Indikator</string>
+	<string id="52012">Ordnername als Spielename</string>
+	<string id="52013">Scraper 1</string>
+	<string id="52014">Scraper 2</string>
+	<string id="52015">Scraper 3</string>
+	<string id="52016">Media Typ</string>
+	<string id="52017">Media Pfad</string>
+	<string id="52018">Media Dateimaske</string>
+	<string id="52019">Media Pfad entfernen</string>
+	<string id="52020">Media Pfad hinzufügen</string>
+	<string id="52021">Bilder (Hauptfenster)</string>
+	<string id="52022">Bilder (Infofenster)</string>
+	<string id="52023">Videos automatisch (Hauptfenster)</string>
+	<string id="52024">Emulator</string>
+	<string id="52025">Emulator Parameter</string>
+	<string id="52026">Emulator im Solo Modus starten</string>
+	<string id="52027">Verwende Popen zum Starten des Spiels</string>
+	<string id="52028">Zip Dateien nicht extrahieren</string>
+	<string id="52029">Savestate Pfad</string>
+	<string id="52030">Savestate Maske</string>
+	<string id="52031">Savestate Parameter</string>
+	<string id="52032">Kommando davor</string>
+	<string id="52033">Kommando danach</string>
+	<string id="52036">Videos automatisch (Infofenster)</string>
+	<string id="52034">Speichern</string>
+	<string id="52035">Abbrechen</string>
+	<!-- editscraper -->
+	<string id="53000">Offline Scraper</string>
+	<string id="53001">Scraper</string>	
+	<string id="53002">Eine Info-Datei pro Spiel</string>
+	<string id="53003">Pfad zur Info-Datei</string>
+	<string id="53004">Info-Datei Dateimaske</string>
+	<string id="53005">Parse-Anweisung</string>
+	<string id="53006">Finde Spiele per crc</string>
+	<string id="53007">Verwende Ordnernamen als crc</string>
+	<string id="53008">Verwende Dateinamen als crc</string>
+	<string id="53009">Scraper entfernen</string>
+	<string id="53010">Scraper hinzufügen</string>
+	<!-- info -->
+	<string id="54000">Region</string>
+	<string id="54001">Medium</string>
+	<string id="54002">Controller</string>
+	<string id="54003">Rating</string>
+	<string id="54004">Max. Spieler</string>
+	<string id="54005">Spiel-Starts</string>
+	<string id="54006">Spiel starten</string>
+	<!-- importdialog -->
+	<string id="55000">Spiele importieren</string>
+	<string id="55001">Scrape Modus</string>
+	<string id="55002">Scraper für diesen Lauf ändern</string>
+	<!-- Missing info filter -->
+	<string id="56000">RCB - Nach fehlenden Infos filtern</string>
+	<string id="56001">Filter Modus</string>
+	<string id="56002">Nach fehlendem Artwork filtern</string>
+	<string id="56003">EINER dieser Einträge fehlt</string>
+	<string id="56004">Keins</string>
+	<string id="56005">Eintrag hinzufügen</string>
+	<string id="56006">Eintrag entfernen</string>
+	<string id="56007">ALLE diese Einträge fehlen</string>
+	<string id="56008">Nach fehlenden Infos filtern</string>
+	<!-- Delete Rom Collection -->
+	<string id="57000">RCB - Rom Collection lsöchen</string>
+	<string id="57001">Lösch-Option</string>
+	<string id="57002">Löschen</string>
+</strings>

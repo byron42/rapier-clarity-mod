@@ -1,0 +1,124 @@
+<window id="104">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>278</posx>
+		<posy>650</posy>
+		<!--<origin x="278" y="650">Window.IsActive(133) | Window.IsActive(112)</origin>-->
+		<origin x="925" y="4">[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</origin>
+		<origin x="278" y="650">[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(PlayerControls)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</origin>
+	</coordinates>
+	<controls>
+		
+	<!--(((FS volume)))================================================================================================================================-->	
+		<control type="group">
+			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(PlayerControls)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
+			<animation effect="zoom" end="70" center="362,0" time="0" condition="Skin.HasSetting(SmallFSVolume)">Conditional</animation>
+			<!--OSDOpenCloseAnim-->
+			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
+			<control type="image" id="0">
+				<description>popup volume dialog background</description>
+				<posx>-268</posx>
+				<posy>-9</posy>
+				<width>1260</width>
+				<height>50</height>
+				<colordiffuse>BBBBBBBB</colordiffuse>
+				<texture border="10">Glass/ShutDownButton.png</texture>
+			</control>
+			<control type="label">
+				<description>volume label</description>
+				<posx>-138</posx>
+				<posy>-1</posy>
+				<width>300</width>
+				<height>44</height>
+				<font>font_24_U</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>ThemeColor</shadowcolor>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>31707</label>
+			</control>
+			<control type="image">
+				<description>VOLUME BORDER</description>
+				<posx>-118</posx>
+				<posy>-3</posy>
+				<width>962</width>
+				<height>38</height>
+				<info>-</info>
+				<texture border="0,0,0,0">scrollbar-background.png</texture>
+				<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+				<bordersize>14</bordersize>
+			</control>
+			<control type="progress" id="1">
+				<description>progress control</description>
+				<posx>-105</posx>
+				<posy>1</posy>
+				<width>936</width>
+				<height>30</height>
+				<reveal>true</reveal>
+				<info>Player.Volume</info>
+				<colordiffuse>BBBBBBBB</colordiffuse>
+				<texturebg>volume_backgroundBV1.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture>volume_middleBV.png</midtexture>
+				<righttexture>-</righttexture>
+				<overlaytexture>volume_overlay1BV.png</overlaytexture>
+			</control>
+			<control type="label">
+				<description>volume label</description>
+				<posx>960</posx>
+				<posy>-1</posy>
+				<width>300</width>
+				<height>44</height>
+				<font>font_24_U</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>ThemeColor</shadowcolor>
+				<align>right</align>
+				<aligny>top</aligny>
+				<info>Player.Volume</info>
+			</control>
+		</control>
+		
+	<!--(((TopBar volume)))============================================================================================================================-->	
+		<control type="group">
+			<!--SearchIconSlideAnim-->
+			<animation effect="slide" start="0,0" end="-30,0" time="0" condition="!Skin.HasSetting(HideGlobalSearchIcon) + Window.IsActive(Home)">Conditional</animation>
+			<control type="group">
+				<visible>[!Window.IsActive(FullScreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(PlayerControls)] | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)</visible>
+				<!--NotificationOpenCloseAnim-->
+				<animation effect="fade" end="100" time="200">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation> 
+				<animation effect="fade" end="100" time="200">WindowOpen</animation>
+				<animation effect="fade" end="0" time="200">WindowClose</animation>
+				<control type="image">
+					<width>125</width>
+					<height>35</height>
+					<texture border="8">SystemTray/top-bar-status-background.png</texture>
+					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>2</posy>
+					<width>31</width>
+					<height>31</height>
+					<texture>volume.png</texture>
+					<!--TopBarStatusIconFadeAnim-->
+					<animation effect="fade" end="50" condition="true">conditional</animation>
+				</control>
+				<control type="label">
+					<posx>117</posx>
+					<width>80</width>
+					<height>35</height>
+					<font>font_20</font>
+					<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Volume]</label>
+				</control>
+			</control>
+		</control>
+		
+	</controls>
+</window>

@@ -1,0 +1,450 @@
+<window id="120">
+	<defaultcontrol always="true">404</defaultcontrol>
+	<controls>
+	
+		<control type="group">	
+			<animation effect="fade" start="10" end="100" delay="0" time="450">VisibleChange</animation> 
+			<visible>Control.HasFocus(503)</visible> <!--skinwide equal viz bg-->
+			<!--************************* FullControlAreaBackground ******************************-->
+			<control type="image">
+				<width>ScreenWidth</width>
+				<height>720</height>
+				<texture>black.png</texture>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" start="0" end="85" time="400">Visible</animation>
+				<animation effect="fade" start="85" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="85" time="400">WindowOpen</animation>
+				<animation effect="fade" start="85" end="0" time="400">WindowClose</animation>
+			</control>
+			<!--***************************************************************************************************--> 
+		</control>
+		
+	   	<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<control type="group">	
+				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<!-- <animation effect="slide" start="0,-10" end="0,-120" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
+				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+				
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Control.HasFocus(503)">Conditional</animation>
+				
+				<control type="image">
+					<description>Media Underlay Image</description>
+					<posx>-5</posx>
+					<posy>-5</posy>
+					<width>1290</width>
+					<height>130</height>
+					<!-- <texture>FSVid_icons_top.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>FFFFFFFF</colordiffuse> -->
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+				</control>
+				
+	<!--(((SIDE BUTTONS)))============================================================================================================-->
+				
+				<control type="grouplist" id="900">
+					<orientation>horizontal</orientation>
+					<posx>45</posx>
+					<posy>25</posy>
+					<itemgap>70</itemgap>
+					<ondown>9000</ondown>
+					<usecontrolcoords>true</usecontrolcoords>
+					<!-- record icon not visible -->
+					<animation effect="slide" end="70,0" time="0" condition="!Player.CanRecord">Conditional</animation>
+					<!--********************************************* REPEAT ****************************************************-->
+					<control type="button" id="400">
+						<description>Repeat</description>
+						<width>70</width>
+						<height>70</height>
+						<label>RPT$INFO[Playlist.Repeat, : ]</label>
+						<font></font>
+						<texturefocus>osd-repeat-focus.png</texturefocus>
+						<texturenofocus>osd-repeat-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Repeat)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>'
+						<onleft>900</onleft>
+						<onright>900</onright>
+					</control>
+					<control type="button" id="498">
+						<description>Repeat</description>
+						<width>70</width>
+						<height>70</height>
+						<label>RPT$INFO[Playlist.Repeat, : ]</label>
+						<font></font>
+						<texturefocus>osd-repeat-one-focus.png</texturefocus>
+						<texturenofocus>osd-repeat-one-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Repeat)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible>Playlist.IsRepeatOne</visible>
+						<onleft>900</onleft>
+						<onright>900</onright>
+					</control>
+					<control type="button" id="499">
+						<description>Repeat</description>
+						<width>70</width>
+						<height>70</height>
+						<label>RPT$INFO[Playlist.Repeat, : ]</label>
+						<font></font>
+						<texturefocus>osd-repeat-all-focus.png</texturefocus>
+						<texturenofocus>osd-repeat-all-nofocus.png</texturenofocus>
+						<onclick>PlayerControl(Repeat)</onclick>
+						<pulseonselect>false</pulseonselect>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible>Playlist.IsRepeat</visible>
+						<onleft>900</onleft>
+						<onright>900</onright>
+					</control>
+					<!--********************************************************************************************************-->
+					<control type="button" id="399"> <!--Lyrics-->
+						<description>LYRICS BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label>31926</label>
+						<focusedcolor>red</focusedcolor>
+						<font></font>
+						<texturefocus>osd-subtitles-focus.png</texturefocus>
+						<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+						<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">PlayerControl(Play)</onclick>
+						<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
+						<onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://skin/scripts/CU LRC Lyrics/CU Replacer.py)</onclick>
+						<!-- <onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://home/scripts/CU LRC Lyrics/default.py)</onclick> -->
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="togglebutton" id="601">
+						<description>RANDOM BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label>$INFO[Playlist.Random]</label>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-random-off-focus.png</texturefocus>
+						<texturenofocus>osd-random-off-nofocus.png</texturenofocus>
+						<usealttexture>Playlist.IsRandom</usealttexture>
+						<alttexturefocus>osd-random-on-focus.png</alttexturefocus>
+						<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
+						<pulseonselect>false</pulseonselect>
+						<onclick>XBMC.PlayerControl(Random)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="602">
+						<description>PLAYLIST MENU</description>
+						<width>70</width>
+						<height>70</height>
+						<label>559</label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<texturefocus>osd-playlist-focus.png</texturefocus>
+						<texturenofocus>osd-playlist-nofocus.png</texturenofocus>
+						<onclick>XBMC.ActivateWindow(MyMusicPlaylist)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="603">
+						<description>VIZ OPTIONS MENU</description>
+						<width>70</width>
+						<height>70</height>
+						<label>5</label>
+						<focusedcolor>red</focusedcolor>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-viz-preset-settings-focus.png</texturefocus>
+						<texturenofocus>osd-viz-preset-settings-nofocus.png</texturenofocus>
+						<onclick>XBMC.ActivateWindow(121)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="604">
+						<description>VIZ PRESETS MENU</description>
+						<width>70</width>
+						<height>70</height>
+						<label>31923</label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<align>center</align>
+						<texturefocus>osd-viz-focus.png</texturefocus>
+						<texturenofocus>osd-viz-nofocus.png</texturenofocus>
+						<onclick>XBMC.ActivateWindow(122)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="500">
+						<description>VIZ SELECT</description>
+						<width>70</width>
+						<height>70</height>
+						<label>31924</label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<texturefocus>osd-viz-presets-focus.png</texturefocus>
+						<texturenofocus>osd-viz-presets-nofocus.png</texturenofocus>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="407">
+						<description>YouTube search</description>
+						<width>70</width>
+						<height>70</height>
+						<label>$LOCALIZE[137]  YOUTUBE</label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<texturefocus>osd-search-focus.png</texturefocus>
+						<texturenofocus>osd-search-nofocus.png</texturenofocus>
+						<onclick>ActivateWindow(videos,plugin://video/YouTube/?path=/root/search&amp;feed=search&amp;search=$INFO[MusicPlayer.Artist],return)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<enable></enable>
+					</control>
+					<control type="togglebutton" id="408">
+						<description>RECORD BUTTON</description>
+						<width>70</width>
+						<height>70</height>
+						<label>264</label>
+						<focusedcolor></focusedcolor>
+						<alttexturefocus>osd-record-2.png</alttexturefocus>
+						<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
+						<font></font>
+						<align>center</align>
+						<usealttexture>Player.Recording</usealttexture>
+						<texturefocus>osd-record-focus.png</texturefocus>
+						<texturenofocus>osd-record-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Record)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible>Player.CanRecord</visible>
+						<enable>Player.CanRecord</enable>
+					</control>
+				</control>	
+			</control>
+	
+	<!--(((MAIN BUTTONS)))============================================================================================================-->	
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<!-- <animation effect="slide" start="0,602" end="0,730" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,130" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
+				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+				<!--viz select fade-->
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Control.HasFocus(503)">Conditional</animation>
+				
+				<control type="image">
+					<description>Media Underlay Image</description>
+					<posx>-5</posx>
+					<posy>-5</posy>
+					<width>1290</width>
+					<height>130</height>
+					<!-- <texture>FSVid_icons_bottom.png</texture>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>FFFFFFFF</colordiffuse> -->
+					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+				</control>
+				
+				<control type="grouplist" id="9000">
+					<posx>291</posx>
+					<posy>19</posy>
+					<orientation>horizontal</orientation>
+					<itemgap>52</itemgap>
+					<onup>900</onup>
+					<description>Player Controls</description>
+					<usecontrolcoords>true</usecontrolcoords>
+					<control type="button" id="401">
+						<description>SKIP PREVIOUS BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31927] </label>
+						<font></font>
+						<texturefocus>osd-skip-prev-focus.png</texturefocus>
+						<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Previous)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="402">
+						<description>REWIND BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31928] </label>
+						<font></font>
+						<texturefocus>osd-rewind-focus.png</texturefocus>
+						<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Rewind)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="403">
+						<description>STOP BUTTON</description>
+						<width>85</width>
+						<height>85</height>
+						<label> $LOCALIZE[31929] </label>
+						<font></font>
+						<texturefocus>osd-stop-focus.png</texturefocus>
+						<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Stop)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+						<visible></visible>
+					</control>
+					<control type="togglebutton" id="404">
+						<description>PAUSE PLAY ETC BUTTON</description>
+						<width>85</width>
+						<height>85</height>
+						<label> $LOCALIZE[31930] </label>
+						<altlabel></altlabel>
+						<font></font>
+						<texturefocus>osd-pause-focus.png</texturefocus>
+						<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+						<alttexturefocus>osd-play-focus.png</alttexturefocus>
+						<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+						<onclick>PlayerControl(Play)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="405">
+						<description>FAST FORWARD BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31931] </label>
+						<font></font>
+						<texturefocus>osd-forward-focus.png</texturefocus>
+						<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Forward)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+					<control type="button" id="406">
+						<description>SKIP NEXT BUTTON</description>
+						<width>65</width>
+						<height>65</height>
+						<posy>10</posy>
+						<label> $LOCALIZE[31927] </label>
+						<focusedcolor></focusedcolor>
+						<font></font>
+						<texturefocus>osd-skip-next-focus.png</texturefocus>
+						<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+						<onclick>XBMC.PlayerControl(Next)</onclick>
+						<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+					</control>
+				</control>
+			<!--labels/time-->
+				<control type="label" id="2222">
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label> [UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE] </label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+					<visible>Window.IsTopmost(MusicOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
+				</control>
+				<control type="label">
+					<posx>1005</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label>$INFO[System.Time]</label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+				</control>
+			</control>
+			
+		<!--viz select menu-->
+			<control type="grouplist">
+				<posx>320</posx>
+				<posy>320</posy>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<posx></posx>
+					<posy>5</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture>arrow-scroll-left-nofocus2.png</texture>
+					<visible>Control.HasFocus(503)</visible>
+					<colordiffuse>ThemeColor</colordiffuse>
+				</control>
+				<control type="selectbutton" id="503">
+					<width>500</width>
+					<height>70</height>
+					<font>VizSelect</font>
+					<textcolor>Grey</textcolor>
+					<selectedcolor>Grey</selectedcolor>
+					<disabledcolor>Grey</disabledcolor>
+					<shadowcolor>ThemeColor</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textwidth>500</textwidth>
+					<colordiffuse></colordiffuse>
+					<textureleft></textureleft>
+					<textureleftfocus></textureleftfocus>
+					<textureright></textureright>
+					<texturerightfocus></texturerightfocus>
+					<pulseonselect>false</pulseonselect>
+					<onunfocus>SetFocus(502)</onunfocus>
+					<onup>SetFocus(900)</onup>
+					<ondown>SetFocus(9000)</ondown>
+				</control>
+				<control type="image">
+					<posx></posx>
+					<posy>5</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture flipx="true">arrow-scroll-left-nofocus2.png</texture>
+					<visible>Control.HasFocus(503)</visible>
+					<colordiffuse>ThemeColor</colordiffuse>
+				</control>
+			</control>
+			
+		</control>
+	</controls>
+</window>
