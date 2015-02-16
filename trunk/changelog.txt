@@ -3,6 +3,22 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 12.27.14 Version 3.5.45
 
+	2.11.15
+------------------------------------------------------------------------------
+		= FIXED	A MAJOR ISSUE (I think) - starting a video no longer crashes
+		  an xbmc4xbox session! Not sure if anyone else is experiencing this
+		  but something that I did over the holidays made the xbox crash when 
+		  a video started (almost every time).  Added window open/close 
+		  animations to all of the windows involved with videos starting and
+		  that seems to have fixed the problem as far as I can tell...
+
+		= FIXED missing brackets in <visible> tags for all windows that have
+		  infopane and sort-letter...this had to be throwing some sort of 
+		  error at some point durring any session while using this skin whether
+		  or it was major or not. 
+
+		= FIXED an issue with seebar not displaying labels properly.
+
 
 	12.31.14
 ------------------------------------------------------------------------------
