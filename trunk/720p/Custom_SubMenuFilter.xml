@@ -1751,7 +1751,7 @@
 						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
 						<animation effect="zoom" start="103" center="auto" time="700">unfocus</animation>
 						<enable>false</enable>
-					</control>	
+					</control>
 					<control type="radiobutton" id="7002">
 						<description>Hide artists</description>
 						<posx>10</posx>
@@ -1883,6 +1883,28 @@
 						<onclick>Skin.ToggleSetting(HideMusicFilesButton)</onclick>
 						<enable>!Skin.HasSetting(ShowMusicSubmenu)</enable>
 						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(70060)">Conditional</animation>
+					</control>
+					<control type="radiobutton" id="17002">
+						<description>Hide Plugins</description>
+						<posx>10</posx>
+						<width>800</width>
+						<height>50</height>
+						<font>font_22_U</font>
+						<textwidth>755</textwidth><!--HBTW-->
+						<aligny>top</aligny>
+						<textoffsety>9</textoffsety>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<align>left</align>
+						<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+						<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+						<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+						<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+						<label>$LOCALIZE[24001]</label>
+						<selected>!Skin.HasSetting(HideMusicPluginsButton)</selected>
+						<onclick>Skin.ToggleSetting(HideMusicPluginsButton)</onclick>
+						<enable>!Skin.HasSetting(ShowMusicSubmenu)</enable>
+						<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(17002)">Conditional</animation>
 					</control>
 					<control type="radiobutton" id="70061">
 						<description>Hide playlists</description>
