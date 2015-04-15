@@ -117,6 +117,17 @@
 						<control type="group">
 							<posy>5</posy>
 							<control type="progress">
+								<description>Cache Progress</description>
+								<posx>0</posx>
+								<posy>87</posy>
+								<width>950</width>
+								<height>11</height>
+								<info>Player.ProgressCache</info>
+								<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+								<colordiffuse>ThemeColor2</colordiffuse>
+								<visible>true</visible>
+							</control>
+							<control type="progress">
 								<description>Progressbar</description>
 								<posx>0</posx>
 								<posy>87</posy>
@@ -125,6 +136,7 @@
 								<info>Player.Progress</info>
 								<visible>!Player.Caching</visible>
 							</control>
+							
 							<control type="progress">
 								<description>Player Caching Progress Bar</description>
 								<posx>0</posx>

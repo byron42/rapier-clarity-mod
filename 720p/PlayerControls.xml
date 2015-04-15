@@ -188,6 +188,17 @@
 									<posy>5</posy>
 									<animation effect="slide" end="20,0" condition="[Player.HasAudio + !Skin.HasSetting(HidecdArt)]">Conditional</animation>
 									<control type="progress">
+										<description>Cache Progress</description>
+										<posx>0</posx>
+										<posy>87</posy>
+										<width>950</width>
+										<height>11</height>
+										<info>Player.ProgressCache</info>
+										<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+										<colordiffuse>ThemeColor2</colordiffuse>
+										<visible>true</visible>
+									</control>
+									<control type="progress">
 										<description>Progressbar</description>
 										<posx>0</posx>
 										<posy>87</posy>
