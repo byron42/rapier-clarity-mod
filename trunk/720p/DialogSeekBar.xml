@@ -118,6 +118,17 @@
 				</control>
 			</control>
 			<control type="progress">
+				<description>Cache Progress</description>
+				<posx>229</posx>
+				<posy>27</posy>
+				<width>275</width>
+				<height>8</height>
+				<info>Player.ProgressCache</info>
+				<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+				<colordiffuse>ThemeColor2</colordiffuse>
+				<visible>true</visible>
+			</control>
+			<control type="progress">
 				<description>Progressbar</description>
 				<posx>229</posx>
 				<posy>27</posy>
@@ -205,6 +216,16 @@
 			<animation effect="fade" start="0" end="100" time="200" >Visible</animation>
 			<animation effect="fade" start="100" end="0" time="200" >Hidden</animation>
 			<visible>!Player.Paused + ![Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]]</visible>
+			<control type="progress">
+				<description>Cache Progress</description>
+				<width>1280</width>
+				<height>40</height>
+				<height>8</height>
+				<info>Player.ProgressCache</info>
+				<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+				<colordiffuse>ThemeColor2</colordiffuse>
+				<visible>true</visible>
+			</control>
 			<control type="progress">
 				<description>Progressbar</description>
 				<width>1280</width>
