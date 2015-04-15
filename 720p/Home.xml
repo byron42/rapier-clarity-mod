@@ -3946,6 +3946,12 @@
 								<onclick>ActivateWindow(MusicFiles)</onclick>
 								<visible>!Skin.HasSetting(HideMusicFilesButton)</visible>
 							</item>
+							<item id="8">
+								<description>Plugins</description>
+								<label>24001</label>
+								<onclick>ActivateWindow(musicfiles,"Music plugins")</onclick>
+								<visible>!Skin.HasSetting(HideMusicPluginsButton)</visible>
+							</item>
 							<item id="5">
 								<description>Playlists</description>
 								<label>136</label>
