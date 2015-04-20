@@ -25,15 +25,17 @@
 				<!--*************************************************************************************************************-->
 				<visible>Player.HasVideo + !Window.IsActive(142)</visible>
 				<control type="image">
+					<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
 					<description>gradient</description>
 					<posx>-30</posx>
-					<posy>-10</posy>
+					<posy>-205</posy>
 					<width>1360</width>
-					<height>155</height>
+					<height>350</height>
 					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
 					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				<control type="grouplist">
+					<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
 					<visible>Player.HasVideo + !Window.IsActive(142)</visible>
 					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
 					<posx>10</posx>
@@ -64,5 +66,8 @@
 				</control>
 			</control>	
 		</control>	
+		<!--**************************PLAYER CONTROL ACTION *******************************-->
+		<include>MediaActionPackFSVideo</include>
+		<!--*******************************************************************************-->
 	</controls>
 </window>

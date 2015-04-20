@@ -1,6 +1,7 @@
 <window id="115">
 	<zorder>1000</zorder>
 	<defaultcontrol>1</defaultcontrol>
+	<animation effect="fade" start="100" end="0" time="1" condition="Control.IsVisible(10)">Conditional</animation>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 	<!--DialogOpenCloseAnim-->
 	<animation condition="![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Control.IsVisible(6002)]" type="WindowOpen">
@@ -24,6 +25,8 @@
 	</coordinates>
 	
 	<controls>
+		
+		<!-- <visible>!Window.IsActive(142)</visible> -->
 		<control type="group" id="1111">
 			<visible>Control.IsVisible(6002) | Window.IsActive(Home) | Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | [Window.IsVisible(114) + Player.Seeking + [!Player.Paused | Player.Paused]]</visible>
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
