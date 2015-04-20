@@ -604,7 +604,8 @@
 			<posy>-5</posy>
 			<width>1300</width>
 			<height>100</height>
-			<texture>search-focus.png</texture>
+			<colordiffuse>BBBBFFFF</colordiffuse>
+			<texture border="10">Glass/SquareThemeBorder.png</texture>
 			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901) + !Window.IsVisible(142)</visible>
 		</control>
 	</include>

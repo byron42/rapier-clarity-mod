@@ -35,7 +35,7 @@
 					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 				</control>
 				<control type="grouplist">
-					<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
+					<animation effect="slide" end="0,99" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
 					<visible>Player.HasVideo + !Window.IsActive(142)</visible>
 					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
 					<posx>10</posx>
