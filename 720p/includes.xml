@@ -563,4 +563,49 @@
 		<aspectratio aligny="center">keep</aspectratio>
 	</include>
 	
+	<include name="MediaActionPackFSVideo">
+		<control type="group">	
+			<visible>Window.IsVisible(2005) + !Window.IsVisible(142)</visible>
+			<!-- <animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="0" condition="Player.Paused">WindowOpen</animation> -->
+			<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" end="0,123" time="250" tween="quadratic" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="150" delay="100">VisibleChange</animation>
+			<visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+			<posx>300</posx>
+			<posy>725r</posy>
+			<control type="label">
+				<description>PlayerControlLabel</description>
+				<posx>815</posx>
+				<posy>115</posy>
+				<width>160</width>
+				<height>100</height>
+				<align>center</align>
+				<font>font_20_CB</font>
+				<textcolor>BBDCDCDC</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[PlayerControlActionLabel]</label>
+			</control>
+			<control type="image" id="1000">
+				<description>PlayerControlImage</description>
+				<posx>847</posx>
+				<posy>12</posy>
+				<width>100</width>
+				<height>100</height>
+				<align>center</align>
+				<texture>$VAR[PlayerControlActionImage]</texture>
+				<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+			</control>
+		</control>
+		<control type="image">
+			<animation effect="fade" end="100" time="0">VisibleChange</animation>
+			<description>debug separator</description>
+			<posx>-10</posx>
+			<posy>-5</posy>
+			<width>1300</width>
+			<height>100</height>
+			<texture>search-focus.png</texture>
+			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901) + !Window.IsVisible(142)</visible>
+		</control>
+	</include>
 </includes>
