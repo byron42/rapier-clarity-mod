@@ -1,6 +1,26 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+4.16.15 Version 3.5.46
+
+	4.19.15
+------------------------------------------------------------------------------
+		= Changed VideoFullscreenInfo.xml to have the action icon/labels instead
+		  of the normal seekbar...more in line with what I've implemented with 
+		  other windows to this point.  Kinda choppy, but slippery so might 
+		  just settle with what I've got here (r191)
+
+	4.15.15
+------------------------------------------------------------------------------
+		= Added Progress-Cache-Bar to all appropriate windows...must have
+		  accidentally deleted this?
+
+		= Added a "plugins" button to home MUSIC submenu
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 12.27.14 Version 3.5.45
 
 	2.11.15
