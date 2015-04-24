@@ -1757,6 +1757,180 @@
 							<selected>!Skin.HasSetting(HideFSBackgroundDim)</selected>
 							<onclick>Skin.ToggleSetting(HideFSBackgroundDim)</onclick>
 						</control>
+						<control type="radiobutton" id="101300">
+							<description>Home Startup Audio</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
+							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							<!-- <label>NO AUDIO</label> -->
+							<label>$LOCALIZE[512] $LOCALIZE[292]</label>
+							<selected>Skin.HasSetting(ExpandHomeStartupAudioSettings)</selected>
+							<onclick>Skin.ToggleSetting(ExpandHomeStartupAudioSettings)</onclick>
+						</control>
+						<control type="radiobutton" id="101301">
+							<description>Default</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<!-- <label>Default wav</label> -->
+							<label>$LOCALIZE[15109]</label>
+							<selected>!Skin.HasSetting(HomeStartupAudioDefault)</selected>
+							<onclick condition="Skin.HasSetting(HomeStartupAudioDefault)">Skin.ToggleSetting(HomeStartupAudioDefault)</onclick>
+							<onclick condition="Skin.HasSetting(HomeStartupAudioUD)">Skin.Reset(HomeStartupAudioUD)</onclick>
+							<onclick condition="Skin.HasSetting(NoHomeStartupAudio)">Skin.Reset(NoHomeStartupAudio)</onclick>
+							<onclick>RunScript(special://skin/scripts/Startup/StartUpDefaultWave.py)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupAudioSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
+						<!-- <control type="radiobutton" id="101301">
+							<description>custom startup wav</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth>
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>custom wav</label>
+							<selected>Skin.HasSetting(HomeStartupAudioCustom)</selected>
+							<onclick condition="!Skin.HasSetting(HomeStartupAudioCustom)">Skin.ToggleSetting(HomeStartupAudioCustom)</onclick>
+							<onclick>Skin.SetFile(Home_Startup_Audio_Custom,.wav)</onclick>
+							<onclick condition="Skin.HasSetting(HomeStartupAudioUD)">Skin.Reset(HomeStartupAudioUD)</onclick>
+							<onclick>ActivateWindow(3001)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupAudioSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control> -->
+						<control type="radiobutton" id="101302">
+							<description>User m3u choice</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<!-- <label>User defined startup sound</label> -->
+							<label>$LOCALIZE[21398]</label>
+							<selected>Skin.HasSetting(HomeStartupAudioUD)</selected>
+							<onclick condition="!Skin.HasSetting(HomeStartupAudioUD)">Skin.ToggleSetting(HomeStartupAudioUD)</onclick>
+							<onclick>Skin.SetFile(Home_Startup_Audio_UD,,special://MusicPlaylists/)</onclick>
+							<onclick condition="!Skin.HasSetting(HomeStartupAudioDefault)">Skin.ToggleSetting(HomeStartupAudioDefault)</onclick>
+							<onclick condition="Skin.HasSetting(NoHomeStartupAudio)">Skin.Reset(NoHomeStartupAudio)</onclick>
+							<onclick>RunScript(special://skin/scripts/Startup/Playlist/StartupPlaylist.py)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupAudioSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
+						
+						<control type="button" id="101304"> 
+							<description>PLAYLIST LABEL</description>
+							<posx>100</posx>
+							<width>700</width>
+							<height>50</height>
+							<font>font_19_U</font>
+							<textwidth>690</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<label>[COLOR=gray]$LOCALIZE[15311][/COLOR]  $INFO[Skin.String(Home_Startup_Audio_UD)]</label>
+							<visible>Skin.HasSetting(ExpandHomeStartupAudioSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<enable>false</enable>
+						</control> 
+						<control type="radiobutton" id="101303">
+							<description>NO AUDIO</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<!-- <label>No Startup Sounds</label> -->
+							<label>$LOCALIZE[12018] $LOCALIZE[292] $LOCALIZE[408] $LOCALIZE[335]</label>
+							<selected>Skin.HasSetting(NoHomeStartupAudio)</selected>
+							<onclick condition="!Skin.HasSetting(NoHomeStartupAudio)">Skin.ToggleSetting(NoHomeStartupAudio)</onclick>
+							<onclick condition="!Skin.HasSetting(HomeStartupAudioDefault)">Skin.ToggleSetting(HomeStartupAudioDefault)</onclick>
+							<onclick condition="Skin.HasSetting(HomeStartupAudioUD)">Skin.Reset(HomeStartupAudioUD)</onclick>
+							<onclick>RunScript(special://skin/scripts/Startup/NoStartupSound.py)</onclick>
+							<visible>Skin.HasSetting(ExpandHomeStartupAudioSettings)</visible>
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+						</control>
+						
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11905">
 							<posx>-3</posx><!---->
