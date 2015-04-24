@@ -3,6 +3,15 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 4.16.15 Version 3.5.46
 
+	4.24.15
+------------------------------------------------------------------------------
+		= Added the ability to change/disable the start up tone.  When choosing
+		  a new sound the selection starts in MusicPlaylists, however these 
+		  don't work on startup for some reason (not my fault).  Any music file
+		  can be selected from here though, and will be played at the start of
+		  an x4x session.
+
+
 	4.19.15
 ------------------------------------------------------------------------------
 		= Changed VideoFullscreenInfo.xml to have the action icon/labels instead
