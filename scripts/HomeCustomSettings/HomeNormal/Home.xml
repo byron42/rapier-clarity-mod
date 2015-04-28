@@ -255,9 +255,150 @@
 						<visible>Container(850).HasFocus(11) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
 					</control>
 				</control>
-			
-			<!-- CUSTOM BG'S REMOVED FOR NON CUSTOMIZED OPTIONS -->
-			
+			<!--CUSTOM1-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(12) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM2-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(13) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM3-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(14) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM4-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(15) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM5-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(16) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM6-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(17) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM7-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(18) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
+			<!--CUSTOM8-->
+				<control type="group">
+					<description>Home Backgrounds</description>
+					<visible>![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
+					<control type="multiimage">
+						<animation effect="fade" end="69" condition="!Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> <!--HomeScreenDim-->
+						<animation effect="fade" end="100" condition="Skin.HasSetting(DimHomeScreenBG)">Conditional</animation> 
+						<include>BackgroundOffset</include>
+						<width>1280</width>
+						<include>VariableBackgroundHeight</include>
+						<imagepath background="true" fallback="special://skin/backgrounds/default-background-blue.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+						<aspectratio>stretch</aspectratio>
+						<timeperimage>10000</timeperimage>
+						<fadetime>BackgroundCrossfadeTime</fadetime>
+						<randomize>true</randomize>
+						<visible>Container(850).HasFocus(19) + [!Skin.HasSetting(EnableClassicUniversalBG) + IsEmpty(Skin.String(UniversalCustomBG))]</visible>
+					</control>
+				</control>
 				<!--*********************************** BackgroundFSVideo ***********************************************-->
 				<control type="group">
 					<visible>Player.HasVideo + !Skin.HasSetting(DisableVideoBG)</visible>
@@ -1299,7 +1440,166 @@
 					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
 				</control>
 				<!--*********************************** CUSTOM ICONS **************************************-->
-				<!-- REMOVED FOR NON CUSTOMIZABLE OPTIONS -->
+				<control type="image"> <!--custom1-->
+					<description>Custom1 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom1IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(12)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom2-->
+					<description>Custom2 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom2IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(13)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom3-->
+					<description>Custom3 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom3IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(14)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom4-->
+					<description>Custom4 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom4IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(15)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom5-->
+					<description>Custom5 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom5IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(16)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom6-->
+					<description>Custom6 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom6IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(17)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation>
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom7-->
+					<description>Custom7 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom7IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(18)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
+				<control type="image"> <!--custom8-->
+					<description>Custom8 Icon</description>
+					<width>256</width>
+					<height>256</height>
+					<texture>$INFO[Skin.String(Custom8IconPath)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container(850).HasFocus(19)</visible>
+					<!--HomeMenuIconAnim-->
+					<animation type="Visible">
+						<effect type="fade" end="100" time="250"/>
+						<effect type="slide" start="0,50" time="100" tween="bounce" easing="out"/>
+					</animation> 
+					<!--SubMenuIconClickAnim-->
+					<animation effect="slide" end="10,0" time="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="50" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="100" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="150" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="10,0" time="50" delay="200" condition="ControlGroup(900).HasFocus">Conditional</animation>
+					<animation effect="slide" end="-10,0" time="50" delay="250" condition="ControlGroup(900).HasFocus">Conditional</animation> 
+				</control>
 				<!--*********************************************************************************-->
 			</control>
 	
@@ -1600,9 +1900,71 @@
 							<visible>Skin.HasSetting(HideSearchCategory)</visible>
 						</item>
 						-->
-						
-					<!-- CUSTOM REMOVED FOR NON CUSTOMIZABLE OPTIONS -->
-
+					<!--CUSTOM ITEMS-->	
+						<item id="12"> <!--CUSTOM_HOME_MENU_CAT_1-->
+							<description>Custom1 Category</description>
+							<label2>$INFO[Skin.String(Custom1Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom1BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom1BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom1BtnParam))</visible>
+						</item>
+						<item id="13"> <!--CUSTOM_HOME_MENU_CAT_2-->
+							<description>Custom2 Category</description>
+							<label2>$INFO[Skin.String(Custom2Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom2BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom2BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom2BtnParam))</visible>
+						</item>
+						<item id="14"> <!--CUSTOM_HOME_MENU_CAT_3-->
+							<description>Custom3 Category</description>
+							<label2>$INFO[Skin.String(Custom3Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom3BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom3BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom3BtnParam))</visible>
+						</item>
+						<item id="15"> <!--CUSTOM_HOME_MENU_CAT_4-->
+							<description>Custom4 Category</description>
+							<label2>$INFO[Skin.String(Custom4Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom4BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom4BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom4BtnParam))</visible>
+						</item>
+						<item id="16"> <!--CUSTOM_HOME_MENU_CAT_5-->
+							<description>Custom5 Category</description>
+							<label2>$INFO[Skin.String(Custom5Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom5BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom5BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom5BtnParam))</visible>
+						</item>
+						<item id="17"> <!--CUSTOM_HOME_MENU_CAT_6-->
+							<description>Custom6 Category</description>
+							<label2>$INFO[Skin.String(Custom6Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom6BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom6BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom6BtnParam))</visible>
+						</item>
+						<item id="18"> <!--CUSTOM_HOME_MENU_CAT_7-->
+							<description>Custom7 Category</description>
+							<label2>$INFO[Skin.String(Custom7Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom7BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom7BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom7BtnParam))</visible>
+						</item>
+						<item id="19"> <!--CUSTOM_HOME_MENU_CAT_8-->
+							<description>Custom8 Category</description>
+							<label2>$INFO[Skin.String(Custom8Btn-NAME)]</label2>
+							<icon>-</icon>
+							<thumb>$INFO[Skin.String(Custom8BackgroundImagePath)]</thumb>
+							<onclick>$INFO[Skin.String(Custom8BtnParam)]</onclick>
+							<visible>!IsEmpty(Skin.String(Custom8BtnParam))</visible>
+						</item>
 					</content>			
 				</control>
 			<!--MAIN MENU END **************************************************************-->			
@@ -1802,6 +2164,229 @@
 								<onclick>ActivateWindow(VideoLibrary,Playlists,Return)</onclick>
 								<visible>!Skin.HasSetting(HideVideoPlaylistButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandVideosSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandVideosSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3072,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideVideosAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--'''''''''''''''''''''''''''''''''''' CUSTOM VIDEOS SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn1-Script,SCRIPT) + Skin.String(VideosSubMenuBtn1-scriptlabel) + Skin.String(VideosSubMenuBtn1-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn1-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn1-label) + Skin.String(VideosSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn1-NAME) + Skin.String(VideosSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn2-Script,SCRIPT) + Skin.String(VideosSubMenuBtn2-scriptlabel) + Skin.String(VideosSubMenuBtn2-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn2-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn2-label) + Skin.String(VideosSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn2-NAME) + Skin.String(VideosSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn3-Script,SCRIPT) + Skin.String(VideosSubMenuBtn3-scriptlabel) + Skin.String(VideosSubMenuBtn3-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn3-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn3-label) + Skin.String(VideosSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn3-NAME) + Skin.String(VideosSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn4-Script,SCRIPT) + Skin.String(VideosSubMenuBtn4-scriptlabel) + Skin.String(VideosSubMenuBtn4-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn4-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn4-label) + Skin.String(VideosSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn4-NAME) + Skin.String(VideosSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn5-Script,SCRIPT) + Skin.String(VideosSubMenuBtn5-scriptlabel) + Skin.String(VideosSubMenuBtn5-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn5-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn5-label) + Skin.String(VideosSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn5-NAME) + Skin.String(VideosSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn6-Script,SCRIPT) + Skin.String(VideosSubMenuBtn6-scriptlabel) + Skin.String(VideosSubMenuBtn6-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn6-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn6-label) + Skin.String(VideosSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn6-NAME) + Skin.String(VideosSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(VideosSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(VideosSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn7-Script,SCRIPT) + Skin.String(VideosSubMenuBtn7-scriptlabel) + Skin.String(VideosSubMenuBtn7-scriptloc) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(VideosSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(VideosSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(VideosSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(VideosSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(VideosSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(VideosSubMenuBtn7-Plugin,PLUGIN) + Skin.String(VideosSubMenuBtn7-label) + Skin.String(VideosSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(VideosSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(VideosSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(VideosSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(VideosSubMenuBtn7-NAME) + Skin.String(VideosSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditVideosSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 			
@@ -1889,6 +2474,229 @@
 								<onclick>ActivateWindow(Weather)</onclick>
 								<visible>!Skin.HasSetting(HideGeneralWeatherButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandGeneralSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandGeneralSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3076,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideGeneralAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--'''''''''''''''''''''''''''''''''''' CUSTOM General SUB-MENUS '''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn1-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn1-scriptlabel) + Skin.String(GeneralSubMenuBtn1-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn1-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn1-label) + Skin.String(GeneralSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn1-NAME) + Skin.String(GeneralSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn2-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn2-scriptlabel) + Skin.String(GeneralSubMenuBtn2-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn2-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn2-label) + Skin.String(GeneralSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn2-NAME) + Skin.String(GeneralSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn3-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn3-scriptlabel) + Skin.String(GeneralSubMenuBtn3-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn3-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn3-label) + Skin.String(GeneralSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn3-NAME) + Skin.String(GeneralSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn4-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn4-scriptlabel) + Skin.String(GeneralSubMenuBtn4-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn4-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn4-label) + Skin.String(GeneralSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn4-NAME) + Skin.String(GeneralSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn5-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn5-scriptlabel) + Skin.String(GeneralSubMenuBtn5-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn5-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn5-label) + Skin.String(GeneralSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn5-NAME) + Skin.String(GeneralSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn6-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn6-scriptlabel) + Skin.String(GeneralSubMenuBtn6-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn6-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn6-label) + Skin.String(GeneralSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn6-NAME) + Skin.String(GeneralSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(GeneralSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(GeneralSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn7-Script,SCRIPT) + Skin.String(GeneralSubMenuBtn7-scriptlabel) + Skin.String(GeneralSubMenuBtn7-scriptloc) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(GeneralSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(GeneralSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(GeneralSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(GeneralSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(GeneralSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(GeneralSubMenuBtn7-Plugin,PLUGIN) + Skin.String(GeneralSubMenuBtn7-label) + Skin.String(GeneralSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(GeneralSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(GeneralSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(GeneralSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(GeneralSubMenuBtn7-NAME) + Skin.String(GeneralSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditGeneralSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>	
 					</control>			
 			
@@ -2178,6 +2986,229 @@
 								<onclick>ActivateWindow(Programs,Emulators,return)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsEmusButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandProgramsSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandProgramsSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3071,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideProgramsAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--'''''''''''''''''''''''''''''''''''' CUSTOM Programs SUB-MENUS ''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn1-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn1-scriptlabel) + Skin.String(ProgramsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn1-label) + Skin.String(ProgramsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn1-NAME) + Skin.String(ProgramsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn2-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn2-scriptlabel) + Skin.String(ProgramsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn2-label) + Skin.String(ProgramsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn2-NAME) + Skin.String(ProgramsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn3-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn3-scriptlabel) + Skin.String(ProgramsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn3-label) + Skin.String(ProgramsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn3-NAME) + Skin.String(ProgramsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn4-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn4-scriptlabel) + Skin.String(ProgramsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn4-label) + Skin.String(ProgramsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn4-NAME) + Skin.String(ProgramsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn5-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn5-scriptlabel) + Skin.String(ProgramsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn5-label) + Skin.String(ProgramsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn5-NAME) + Skin.String(ProgramsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn6-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn6-scriptlabel) + Skin.String(ProgramsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn6-label) + Skin.String(ProgramsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn6-NAME) + Skin.String(ProgramsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(ProgramsSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(ProgramsSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn7-Script,SCRIPT) + Skin.String(ProgramsSubMenuBtn7-scriptlabel) + Skin.String(ProgramsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(ProgramsSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(ProgramsSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(ProgramsSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(ProgramsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(ProgramsSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(ProgramsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(ProgramsSubMenuBtn7-label) + Skin.String(ProgramsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(ProgramsSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(ProgramsSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(ProgramsSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(ProgramsSubMenuBtn7-NAME) + Skin.String(ProgramsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditProgramsSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 					
@@ -2275,6 +3306,229 @@
 								<onclick>UpdateLibrary(video)</onclick>
 								<visible>!Skin.HasSetting(HideMoviesUpdateButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandMoviesSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandMoviesSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3073,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMoviesAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--'''''''''''''''''''''''''''''''''''' CUSTOM MOVIES SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn1-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn1-scriptlabel) + Skin.String(MoviesSubMenuBtn1-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn1-label) + Skin.String(MoviesSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn1-NAME) + Skin.String(MoviesSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn2-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn2-scriptlabel) + Skin.String(MoviesSubMenuBtn2-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn2-label) + Skin.String(MoviesSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn2-NAME) + Skin.String(MoviesSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn3-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn3-scriptlabel) + Skin.String(MoviesSubMenuBtn3-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn3-label) + Skin.String(MoviesSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn3-NAME) + Skin.String(MoviesSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn4-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn4-scriptlabel) + Skin.String(MoviesSubMenuBtn4-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn4-label) + Skin.String(MoviesSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn4-NAME) + Skin.String(MoviesSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn5-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn5-scriptlabel) + Skin.String(MoviesSubMenuBtn5-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn5-label) + Skin.String(MoviesSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn5-NAME) + Skin.String(MoviesSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn6-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn6-scriptlabel) + Skin.String(MoviesSubMenuBtn6-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn6-label) + Skin.String(MoviesSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn6-NAME) + Skin.String(MoviesSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MoviesSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MoviesSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn7-Script,SCRIPT) + Skin.String(MoviesSubMenuBtn7-scriptlabel) + Skin.String(MoviesSubMenuBtn7-scriptloc) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(MoviesSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MoviesSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MoviesSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MoviesSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(MoviesSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MoviesSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MoviesSubMenuBtn7-label) + Skin.String(MoviesSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MoviesSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MoviesSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MoviesSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(MoviesSubMenuBtn7-NAME) + Skin.String(MoviesSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMoviesSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>					
 				
@@ -2368,6 +3622,229 @@
 								<onclick>UpdateLibrary(video)</onclick>
 								<visible>!Skin.HasSetting(HideTvShowsUpdateButton)</visible>
 							</item>	
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandTVShowsSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandTVShowsSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3074,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideTvShowsAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--''''''''''''''''''''''''''''''''''' CUSTOM TVShows SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn1-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn1-scriptlabel) + Skin.String(TVShowsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn1-label) + Skin.String(TVShowsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn1-NAME) + Skin.String(TVShowsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn2-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn2-scriptlabel) + Skin.String(TVShowsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn2-label) + Skin.String(TVShowsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn2-NAME) + Skin.String(TVShowsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn3-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn3-scriptlabel) + Skin.String(TVShowsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn3-label) + Skin.String(TVShowsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn3-NAME) + Skin.String(TVShowsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn4-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn4-scriptlabel) + Skin.String(TVShowsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn4-label) + Skin.String(TVShowsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn4-NAME) + Skin.String(TVShowsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn5-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn5-scriptlabel) + Skin.String(TVShowsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn5-label) + Skin.String(TVShowsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn5-NAME) + Skin.String(TVShowsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn6-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn6-scriptlabel) + Skin.String(TVShowsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn6-label) + Skin.String(TVShowsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn6-NAME) + Skin.String(TVShowsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(TVShowsSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(TVShowsSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn7-Script,SCRIPT) + Skin.String(TVShowsSubMenuBtn7-scriptlabel) + Skin.String(TVShowsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(TVShowsSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(TVShowsSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(TVShowsSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(TVShowsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(TVShowsSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(TVShowsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(TVShowsSubMenuBtn7-label) + Skin.String(TVShowsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(TVShowsSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(TVShowsSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(TVShowsSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(TVShowsSubMenuBtn7-NAME) + Skin.String(TVShowsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditTVShowsSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>
 					</control>		
 				
@@ -2487,6 +3964,229 @@
 								<onclick>UpdateLibrary(music)</onclick>
 								<visible>Library.HasContent(Music) + !Skin.HasSetting(HideMusicUpdateButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandMusicSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandMusicSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3075,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideMusicAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--''''''''''''''''''''''''''''''''''''' CUSTOM MUSIC SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn1-Script,SCRIPT) + Skin.String(MusicSubMenuBtn1-scriptlabel) + Skin.String(MusicSubMenuBtn1-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn1-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn1-label) + Skin.String(MusicSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn1-NAME) + Skin.String(MusicSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn2-Script,SCRIPT) + Skin.String(MusicSubMenuBtn2-scriptlabel) + Skin.String(MusicSubMenuBtn2-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn2-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn2-label) + Skin.String(MusicSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn2-NAME) + Skin.String(MusicSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn3-Script,SCRIPT) + Skin.String(MusicSubMenuBtn3-scriptlabel) + Skin.String(MusicSubMenuBtn3-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn3-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn3-label) + Skin.String(MusicSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn3-NAME) + Skin.String(MusicSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn4-Script,SCRIPT) + Skin.String(MusicSubMenuBtn4-scriptlabel) + Skin.String(MusicSubMenuBtn4-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn4-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn4-label) + Skin.String(MusicSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn4-NAME) + Skin.String(MusicSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn5-Script,SCRIPT) + Skin.String(MusicSubMenuBtn5-scriptlabel) + Skin.String(MusicSubMenuBtn5-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn5-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn5-label) + Skin.String(MusicSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn5-NAME) + Skin.String(MusicSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn6-Script,SCRIPT) + Skin.String(MusicSubMenuBtn6-scriptlabel) + Skin.String(MusicSubMenuBtn6-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn6-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn6-label) + Skin.String(MusicSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn6-NAME) + Skin.String(MusicSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(MusicSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(MusicSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn7-Script,SCRIPT) + Skin.String(MusicSubMenuBtn7-scriptlabel) + Skin.String(MusicSubMenuBtn7-scriptloc) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(MusicSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(MusicSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(MusicSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(MusicSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(MusicSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(MusicSubMenuBtn7-Plugin,PLUGIN) + Skin.String(MusicSubMenuBtn7-label) + Skin.String(MusicSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(MusicSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(MusicSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(MusicSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(MusicSubMenuBtn7-NAME) + Skin.String(MusicSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditMusicSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>						
 					</control>	
 				
@@ -2569,6 +4269,229 @@
 								<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=.module&amp;repoid=repository.xbmc.org,Return)</onclick>			
 								<visible>!Skin.HasSetting(HideAddonsModulesButton)</visible>
 							</item>
+							<item id="15">
+								<description>Custom Items</description>
+								<label>[COLOR=AA8A795D]$LOCALIZE[15019] $LOCALIZE[15311][/COLOR]</label>
+								<label2>$LOCALIZE[15019] $LOCALIZE[15311]</label2>
+								<selected>Skin.HasSetting(ExpandAdd_onsSubMenuSettings)</selected>
+								<onclick>Skin.SetBool(ExpandAdd_onsSubMenuSettings)</onclick>
+								<onclick>Skin.SetBool(ExpandedSettings)</onclick>
+								<onclick>ActivateWindow(3078,return)</onclick>
+								<visible>!Skin.HasSetting(HideAddCustomButton) + !Skin.HasSetting(HideAddonsAddCustomButton)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--''''''''''''''''''''''''''''''''''' CUSTOM Add-Ons SUB-MENUS ''''''''''''''''''''''''''''''''''''''''''-->	
+						<!--Button1 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
+							<item id="1">
+								<description>Custom Script Button 1</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn1-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn1-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn1-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn1-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn1-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn1-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn1-scriptlabel) + Skin.String(Add_onsSubMenuBtn1-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Plugin Button 1</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn1-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn1-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn1-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn1-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn1-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn1-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn1-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn1-label) + Skin.String(Add_onsSubMenuBtn1-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							</item>
+							<item id="1">
+								<description>Custom Favourite Button 1</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn1-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn1-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn1Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn1-NAME) + Skin.String(Add_onsSubMenuBtn1-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn1)</visible>
+							</item>
+						<!--Button2-->
+							<item id="2">
+								<description>Custom Script Button 2</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn2-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn2-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn2-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn2-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn2-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn2-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn2-scriptlabel) + Skin.String(Add_onsSubMenuBtn2-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Plugin Button 2</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn2-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn2-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn2-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn2-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn2-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn2-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn2-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn2-label) + Skin.String(Add_onsSubMenuBtn2-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							</item>
+							<item id="2">
+								<description>Custom Favourite Button 2</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn2-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn2-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn2Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn2-NAME) + Skin.String(Add_onsSubMenuBtn2-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn2)</visible>
+							</item>
+						<!--Button3-->
+							<item id="3">
+								<description>Custom Script Button 3</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn3-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn3-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn3-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn3-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn3-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn3-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn3-scriptlabel) + Skin.String(Add_onsSubMenuBtn3-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Plugin Button 3</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn3-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn3-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn3-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn3-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn3-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn3-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn3-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn3-label) + Skin.String(Add_onsSubMenuBtn3-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							</item>
+							<item id="3">
+								<description>Custom Favourite Button 3</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn3-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn3-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn3Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn3-NAME) + Skin.String(Add_onsSubMenuBtn3-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn3)</visible>
+							</item>
+						<!--Button4-->
+							<item id="4">
+								<description>Custom Script Button 4</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn4-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn4-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn4-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn4-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn4-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn4-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn4-scriptlabel) + Skin.String(Add_onsSubMenuBtn4-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Plugin Button 4</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn4-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn4-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn4-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn4-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn4-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn4-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn4-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn4-label) + Skin.String(Add_onsSubMenuBtn4-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							</item>
+							<item id="4">
+								<description>Custom Favourite Button 4</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn4-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn4-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn4Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn4-NAME) + Skin.String(Add_onsSubMenuBtn4-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn4)</visible>
+							</item>
+						<!--Button5-->
+							<item id="5">
+								<description>Custom Script Button 5</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn5-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn5-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn5-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn5-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn5-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn5-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn5-scriptlabel) + Skin.String(Add_onsSubMenuBtn5-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Plugin Button 5</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn5-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn5-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn5-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn5-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn5-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn5-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn5-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn5-label) + Skin.String(Add_onsSubMenuBtn5-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							</item>
+							<item id="5">
+								<description>Custom Favourite Button 5</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn5-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn5-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn5Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn5-NAME) + Skin.String(Add_onsSubMenuBtn5-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn5)</visible>
+							</item>
+						<!--Button6-->
+							<item id="6">
+								<description>Custom Script Button 6</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn6-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn6-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn6-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn6-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn6-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn6-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn6-scriptlabel) + Skin.String(Add_onsSubMenuBtn6-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Plugin Button 6</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn6-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn6-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn6-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn6-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn6-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn6-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn6-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn6-label) + Skin.String(Add_onsSubMenuBtn6-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							</item>
+							<item id="6">
+								<description>Custom Favourite Button 6</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn6-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn6-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn6Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn6-NAME) + Skin.String(Add_onsSubMenuBtn6-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn6)</visible>
+							</item>
+						<!--Button7-->
+							<item id="7">
+								<description>Custom Script Button 7</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn7-scripticon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn7-scripticon)]</thumb>
+								<label>[COLOR=ff7C4849]$INFO[Skin.String(Add_onsSubMenuBtn7-scriptlabel)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn7-scriptlabel)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>XBMC.RunScript($INFO[Skin.String(Add_onsSubMenuBtn7-scriptloc)])</onclick>
+								<onclick>ActivateWindow(Scripts)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn7-Script,SCRIPT) + Skin.String(Add_onsSubMenuBtn7-scriptlabel) + Skin.String(Add_onsSubMenuBtn7-scriptloc) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Plugin Button 7</description>
+								<icon>$INFO[Skin.String(Add_onsSubMenuBtn7-pluginicon)]</icon>
+								<thumb>$INFO[Skin.String(Add_onsSubMenuBtn7-pluginicon)]</thumb>
+								<label>[COLOR=cc497F49]$INFO[Skin.String(Add_onsSubMenuBtn7-label)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn7-label)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>ActivateWindow($INFO[Skin.String(Add_onsSubMenuBtn7-pluginwindow)],plugin://$INFO[Skin.String(Add_onsSubMenuBtn7-pluginfolder)]/)</onclick>
+								<visible>Skin.String(Add_onsSubMenuBtn7-Plugin,PLUGIN) + Skin.String(Add_onsSubMenuBtn7-label) + Skin.String(Add_onsSubMenuBtn7-pluginfolder) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							</item>
+							<item id="7">
+								<description>Custom Favourite Button 7</description>
+								<label>[COLOR=ff4B4C7F]$INFO[Skin.String(Add_onsSubMenuBtn7-NAME)][/COLOR]</label>
+								<label2>$INFO[Skin.String(Add_onsSubMenuBtn7-NAME)]</label2>
+								<!--<onclick>Dialog.Close(3077)</onclick>-->
+								<onclick>$INFO[Skin.String(Add_onsSubMenuBtn7Param)]</onclick>
+								<visible>Skin.string(Add_onsSubMenuBtn7-NAME) + Skin.String(Add_onsSubMenuBtn7-Favourite,FAVOURITE) + Skin.HasSetting(EditAdd_onsSubMenuBtn7)</visible>
+							</item>
+						<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 						</content>
 					</control>	
 				</control>	
