@@ -1542,9 +1542,6 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
-						
-						
-	
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11903">
 							<posx>-3</posx><!---->
@@ -1931,6 +1928,156 @@
 							</animation>
 						</control>
 						
+						
+						
+						
+						<control type="radiobutton" id="16911">
+							<description>Disable Custom Options</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<textureradioon>arrow-scroll-down-focus.png</textureradioon>
+							<textureradiooff>arrow-scroll-up-nofocus.png</textureradiooff>
+							<texturefocus border="10,10,10,10">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							<label>$LOCALIZE[24021] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[636] $LOCALIZE[31605] ($LOCALIZE[190] RAM)</label>
+							<selected>Skin.HasSetting(ExpandDisableCustomSettings)</selected>
+							<onclick>Skin.ToggleSetting(ExpandDisableCustomSettings)</onclick>
+						</control>
+	<!---->
+						<control type="radiobutton" id="16915">
+							<description>Disable all custom home items</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>$LOCALIZE[24021] $LOCALIZE[31422] $LOCALIZE[10000] $LOCALIZE[33061] $LOCALIZE[636] $LOCALIZE[31605]</label>
+							<selected>!Skin.HasSetting(DisableAllHomeCustom)</selected>
+							<onclick>Skin.ToggleSetting(DisableAllHomeCustom)</onclick>
+							<visible>Skin.HasSetting(ExpandDisableCustomSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<onclick condition="!Skin.HasSetting(DisableAllHomeCustom)">RunScript(special://skin/scripts/HomeCustomSettings/HomeNoCustom/NoHomeCustomSettings.py)</onclick>
+							<onclick condition="Skin.HasSetting(DisableAllHomeCustom)">RunScript(special://skin/scripts/HomeCustomSettings/HomeNormal/RevertBack.py)</onclick>
+						</control>
+						<control type="radiobutton" id="16912">
+							<description>Disable Custom Icons</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>disable home custom icons</label>
+							<label>$LOCALIZE[24021] $LOCALIZE[10000] $LOCALIZE[636] $LOCALIZE[536]</label>
+							<selected>Skin.HasSetting(DisableCustomIcons)</selected>
+							<onclick>Skin.ToggleSetting(DisableCustomIcons)</onclick>
+							<visible>Skin.HasSetting(ExpandDisableCustomSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(16912)">Conditional</animation>
+							<!-- <enable>!Skin.HasSetting(DisableAllHomeCustom)</enable> -->
+							<enable>false</enable>
+						</control>
+						<control type="radiobutton" id="16913">
+							<description>Disable Custom Home Cats</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>$LOCALIZE[24021] $LOCALIZE[10000] $LOCALIZE[636] $LOCALIZE[33061] $LOCALIZE[31605]</label>
+							<selected>Skin.HasSetting(DisableCustomHomeCats)</selected>
+							<onclick>Skin.ToggleSetting(DisableCustomHomeCats)</onclick>
+							<visible>Skin.HasSetting(ExpandDisableCustomSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(16913)">Conditional</animation>
+							<!-- <enable>!Skin.HasSetting(DisableAllHomeCustom)</enable> -->
+							<enable>false</enable>
+						</control>
+						<control type="radiobutton" id="16914">
+							<description>Disable Custom Home subs</description>
+							<posx>10</posx>
+							<width>800</width>
+							<font>font_21_U</font>
+							<textwidth>675</textwidth><!--RBTW-->
+							<textoffsetx>85</textoffsetx>
+							<aligny>top</aligny>
+							<textoffsety>2</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+							<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+							<colordiffuse></colordiffuse>
+							<label>$LOCALIZE[24021] $LOCALIZE[10000] $LOCALIZE[636] $LOCALIZE[1034] $LOCALIZE[31605]</label>
+							<selected>Skin.HasSetting(DisableCustomHomeSubs)</selected>
+							<onclick>Skin.ToggleSetting(DisableCustomHomeSubs)</onclick>
+							<visible>Skin.HasSetting(ExpandDisableCustomSettings)</visible>
+							<!--SettingsItemOpenCloseAnim-->
+							<animation effect="fade" end="0" time="300">Hidden</animation>
+							<animation type="Visible">
+								<effect type="fade" start="0" end="100" time="400"/>
+								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
+							</animation>
+							<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(16914)">Conditional</animation>
+							<!-- <enable>!Skin.HasSetting(DisableAllHomeCustom)</enable> -->
+							<enable>false</enable>
+						</control>
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11905">
 							<posx>-3</posx><!---->
@@ -2343,6 +2490,8 @@
 							<onclick>Skin.ToggleSetting(ExpandCategoryHomeCustomMenuToggleSettings)</onclick>
 							<!--<onclick>Control.Message(20082,pageup)</onclick>-->
 							<onclick>Control.SetFocus(10032)</onclick>
+							<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(10032)">Conditional</animation>
+							<enable>Skin.HasSetting(DisableAllHomeCustom)</enable>
 						</control>
 						<control type="radiobutton" id="5001">
 							<description>Home Menu CUSTOM 1</description>
@@ -2412,7 +2561,10 @@
 							<onclick>ActivateWindow(3083)</onclick>
 							<visible>Skin.HasSetting(ExpandCategoryHomeCustomMenuToggleSettings)</visible>
 						</control>
-				<!--OPTIONAL STARTUP WINDOW-->			
+			
+				
+				<!--OPTIONAL STARTUP WINDOW-->
+				<!-- WILL NEED REVISITING - HIDING AND DISABLED FOR NOW ===================================================-->
 						<control type="radiobutton" id="19019">
 							<description>Custom Startup Window</description>
 							<posx>10</posx>
@@ -2435,8 +2587,12 @@
 							<selected>Skin.HasSetting(ExpandHomeStartupSettings)</selected>
 							<onclick>Skin.ToggleSetting(ExpandHomeStartupSettings)</onclick>
 							<enable>false</enable>
+							<visible>false</visible>
 							<!-- <animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(19019)">Conditional</animation> -->
+				<!-- WILL NEED REVISITING - HIDING FOR NOW ===================================================-->
 						</control>
+						
+						
 						<control type="radiobutton" id="19020">
 							<description>PROGRAMS</description>
 							<posx>10</posx>
@@ -2879,6 +3035,8 @@
 							<onclick>Action(Down)</onclick>
 							<!--<onclick>PageDown (20082)</onclick>-->
 							<onclick>Control.SetFocus(10031)</onclick>
+							<animation effect="fade" start="100" end="60" time="250" condition="!Control.IsEnabled(10031)">Conditional</animation>
+							<enable>Skin.HasSetting(DisableAllHomeCustom)</enable>
 						</control>
 						<control type="radiobutton" id="2001">
 							<description>Customize PROGRAMS Sub Menus</description>
