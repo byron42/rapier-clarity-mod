@@ -300,130 +300,19 @@
 									<height>60</height>
 									<itemgap>6</itemgap>
 									<align>center</align>
-									<visible>!Skin.HasSetting(HideMediaFlags)</visible>
+									<!-- <visible>!Skin.HasSetting(HideMediaFlags)</visible> -->
 									<orientation>horizontal</orientation>
 									<usecontrolcoords>true</usecontrolcoords>
-									<!--***************************** VideoMediaFlags *************************************-->
-									<control type="image">
-										<description>Blu-ray Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/bluray.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,.bluray) | substring(VideoPlayer.filename,.blu-ray) | substring(VideoPlayer.filename,.brrip)</visible>
-									</control>
-									<control type="image">
-										<description>HDDVD Image</description>
-										<width>120</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/hddvd.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,hddvd) | substring(VideoPlayer.filename,hd-dvd)</visible>
-									</control>
-									<control type="image">
-										<description>DVD Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/dvd.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,sddvd) | substring(VideoPlayer.filename,.ifo,Right) | substring(VideoPlayer.filename,.img,Right) | substring(VideoPlayer.filename,.iso,Right) | substring(VideoPlayer.filename,.vob,Right)</visible>
-									</control>
-									<control type="image">
-										<description>HDTV Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/hdtv.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,hdtv)</visible>
-									</control>
-									<control type="image">
-										<description>DVDRIP Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/dvdrip.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,dvdrip)</visible>
-									</control>
-									<control type="image">
-										<description>DVDR5 Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/dvdr5.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,dvdr5) | substring(VideoPlayer.filename,.r5)</visible>
-									</control>
-									<control type="image">
-										<description>DVD SCREENER Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/dvdscreener.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,dvdscreener) | substring(VideoPlayer.filename,dvdscr) | substring(VideoPlayer.filename,.screener)</visible>
-									</control>
-									<control type="image">
-										<description>TELESYNC Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/telesync.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,telesync) | substring(VideoPlayer.filename,.ts.)</visible>
-									</control>
-									<control type="image">
-										<description>CAM Image</description>
-										<width>90</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>flagging/video/cam.png</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<visible>substring(VideoPlayer.filename,.CAM)</visible>
-									</control>
-									<control type="image">
-										<description>Video Res Image</description>
-										<width>70</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-										<texture>$INFO[VideoPlayer.VideoResolution,flagging/VideoResolution/,.png]</texture>
-									</control>
-									<control type="image">
-										<description>Codec Image</description>
-										<width>80</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>$INFO[VideoPlayer.VideoCodec,flagging/VideoCodec/,.png]</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-									</control>
+									
+									<!--*************************** VideoMediaFlags *************************************-->
+									<include>DFSI_Video_MediaFlags</include>
 									<!--*********************************************************************************-->
 									
-									<!--********************************* AudioMediaFlags *******************************-->
-									<control type="image">
-										<description>MP3 Codec Image</description>
-										<posy>2</posy>
-										<width>80</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>$INFO[VideoPlayer.AudioCodec,flagging/AudioCodec/,.png]</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-									</control>
-									<control type="image">
-										<description>Audio Channels Image</description>
-										<width>70</width>
-										<height>60</height>
-										<aspectratio>keep</aspectratio>
-										<texture>$INFO[VideoPlayer.AudioChannels,flagging/AudioChannels/,.png]</texture>
-										<fadetime>MediaFlagsCrossfadeTime</fadetime>
-									</control>
+									<!--**************************** AudioMediaFlags ************************************-->
+									<include>DFSI_Audio_MediaFlags</include>
 									<!--*********************************************************************************-->
 									
-									<!--******************************** AspectMediaFlags *******************************-->
+									<!--**************************** AspectMediaFlags ***********************************-->
 									<control type="image">
 										<description>Aspectratio Image</description>
 										<posx>2</posx>
