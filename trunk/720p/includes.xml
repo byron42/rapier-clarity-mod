@@ -1,10 +1,8 @@
 <includes>
-
+	<!---->
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
-	<!--Views.xml-->
-	<!--(???) includes_OSDNotification (???)-->
-
+	<!---->
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
 	<constant name="DialogMarginOffsetX">40</constant>
@@ -17,7 +15,6 @@
 	<constant name="FanartCrossfadeTime">750</constant>	
 	<constant name="MediaFlagsCrossfadeTime">400</constant>
 	<constant name="SortLetterOffsetY">280</constant>
-	
 	
 	<include name="VariableBackgroundHeight">
 		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
@@ -129,7 +126,7 @@
 			</control>
 		</control>
 	</include>
-	
+<!--(((BREADCRUMBS)))=========================================================-->
 	<include name="BreadCrumbButtonLeft">
 		<control type="group">		
 			<posx>60</posx>
@@ -192,7 +189,6 @@
 			</control>		
 		</control>
 	</include>
-	
 <!--LEFT SIZE-->
 	<include name="BreadCrumbButtonSmall_Left">
 		<width>240</width>
@@ -202,7 +198,6 @@
 		<width>280</width>
 		<textwidth>270</textwidth>
 	</include>
-	
 <!--RIGHT SIZE-->
 	<include name="BreadCrumbButtonSmall_Right">
 		<width>240</width>
@@ -562,7 +557,8 @@
 	<include name="NowPlayingBottomAlignKeep">
 		<aspectratio aligny="center">keep</aspectratio>
 	</include>
-	
+
+<!-- ***************************************** MEDIA INFOS *********************-->
 	<include name="MediaActionPackFSVideo">
 		<control type="group">	
 			<visible>Window.IsVisible(2005) + !Window.IsVisible(142)</visible>
@@ -609,7 +605,6 @@
 			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901) + !Window.IsVisible(142)</visible>
 		</control>
 	</include>
-	
 	<include name="DFSI_Video_MediaFlags">
 		<control type="image">
 			<description>Blu-ray Image</description>
@@ -728,4 +723,89 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 		</control>
 	</include>
+	<include name="FS_ProgressBar">
+		<control type="progress">
+			<description>Cache Progress</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<info>Player.ProgressCache</info>
+			<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+			<colordiffuse>ThemeColor2</colordiffuse>
+			<visible>true</visible>
+		</control>
+		<control type="progress">
+			<description>Progressbar</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<info>Player.Progress</info>
+			<visible>!Player.Caching</visible>
+		</control>
+		<control type="progress">
+			<description>Player Caching Progress Bar</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<reveal>true</reveal>
+			<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
+			<info>Player.CacheLevel</info>
+			<visible>Player.Caching</visible>
+		</control>
+		<control type="label">
+			<description>Buffer %</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>ThemeColor</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
+			<visible>Player.Caching + Player.HasVideo </visible>
+		</control>
+		<control type="label">
+			<description>Elapsed Time Label</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.Time]</label>
+			<visible>!Player.Seeking + !Player.Caching</visible>
+		</control>
+		<control type="label">
+			<description>Seek Time Label</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.SeekTime]</label>
+			<visible>Player.Seeking + !Player.Caching</visible>
+		</control>
+		<control type="label">
+			<posx>950</posx>
+			<posy>111</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$INFO[Player.Duration]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+	</include>
+<!--****************************************************************************-->
 </includes>

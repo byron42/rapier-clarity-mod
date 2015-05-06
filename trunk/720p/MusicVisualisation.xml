@@ -228,7 +228,7 @@
 							<animation effect="slide" end="0,-10" time="250" tween="circle" easing="out" condition="Window.IsActive(120) + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 						</control>
 						
-						<!--**************************PLAYER CONTROL ACTION *******************************-->
+						<!--************************** PLAYER CONTROL ACTION *******************************-->
 						<control type="group">	
 							<visible>!Window.IsActive(120)</visible>
 							<posx>300</posx>
@@ -260,7 +260,7 @@
 								<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
 							</control>
 						</control>
-						<!--*******************************************************************************-->
+						<!--********************************************************************************-->
 						
 						<control type="group" id="402">
 							<!--MusicOsd Visible Slide-->
