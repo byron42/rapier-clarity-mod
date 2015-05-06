@@ -2,6 +2,12 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 4.16.15 Version 3.5.46
+	
+	5.5.15
+------------------------------------------------------------------------------
+		= Took more things from the windows launched when a video starts
+	   	  and placed them in includes in the hopes of making x4x not crash.
+		  Seems to be working...	
 
 	5.1.15
 ------------------------------------------------------------------------------
@@ -9,7 +15,6 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 		  includes.xml in hopes of having a smoother transition into a playing 
 		  video...gotta help since it's one less big chunk of stuff to be loaded
 		  when a video starts up
-
 
 
 	4.27.15
