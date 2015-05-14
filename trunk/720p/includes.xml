@@ -1170,7 +1170,7 @@
 			<posx>291</posx>
 			<posy>19</posy>
 			<orientation>horizontal</orientation>
-			<itemgap>52</itemgap>
+			<include>LowerOSD_ItemGap</include>
 			<onup>900</onup>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
@@ -1313,14 +1313,47 @@
 				<align>center</align>
 				<texturefocus>osd-skip-next-focus.png</texturefocus>
 				<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
-				<onclick>XBMC.PlayerControl(Next)</onclick>
+				<onclick condition="!Window.IsActive(PlayerControls)">XBMC.PlayerControl(Next)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasVideo">XBMC.PlayerControl(BigSkipForward)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Title)">XBMC.PlayerControl(Next)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + IsEmpty(MusicPlayer.offset(1).Title)">XBMC.PlayerControl(Stop)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + IsEmpty(MusicPlayer.offset(1).Title)">ReloadSkin()</onclick>
 				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 				<onright condition="!Window.IsActive(PlayerControls)">401</onright>
 			</control>
+			<control type="togglebutton" id="408">
+			<!--MUSIC ONLY-->
+				<description>RECORD BUTTON</description>
+				<width>40</width>
+				<height>40</height>
+				<posy>23</posy>
+				<label>264</label>
+				<focusedcolor></focusedcolor>
+				<alttexturefocus>osd-record-2.png</alttexturefocus>
+				<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
+				<font></font>
+				<align>center</align>
+				<usealttexture>Player.Recording</usealttexture>
+				<texturefocus>osd-record-focus.png</texturefocus>
+				<texturenofocus>osd-record-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Record)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Window.IsActive(PlayerControls) + Player.HasAudio</visible>
+				<enable>Player.CanRecord</enable>
+				<animation effect="fade" end="65" condition="!Player.CanRecord">Conditional</animation>
+				<onright>401</onright>
+			</control>
 		</control>	
 	</include>
-	
+	<include name="LowerOSD_ItemGap">
+		<include condition="!Window.IsActive(PlayerControls)">Not__PlayerControls__Gap</include>
+		<include condition="Window.IsActive(PlayerControls)">PlayerControlItemGap</include>
+	</include>
+	<include name="Not__PlayerControls__Gap">
+		<itemgap>52</itemgap>
+	</include>
 <!--**************************************************************************************-->
 	
 	<include name="BusyAnimationGroup">
