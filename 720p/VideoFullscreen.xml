@@ -1,7 +1,6 @@
 <window id="2005">
 	<defaultcontrol></defaultcontrol>
-	<animation effect="fade" time="250">WindowOpen</animation>
-	<animation effect="fade" time="250">WindowClose</animation>
+	<include>FS__OpenClose</include>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
