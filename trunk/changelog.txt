@@ -3,6 +3,21 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 4.16.15 Version 3.5.46
 	
+	
+	5.13.15
+------------------------------------------------------------------------------
+		= Placed controls for MusicOSD/VideoOSD/PlayerControls into includes.xml
+		  so that there is less to render at video startup...seems to have 
+		  improved ram during playback, but small drawback of less ram at 
+	          startup (.3mb altogether with recent changes from the version).  I can
+		  only find a couple of files that won't play over smb on this skin that
+		  will play on others so the problem isn't fixed but is mostly taken care 
+		  of
+
+		= Added window open/close animations for these media windows into 
+		  includes for the same reasons
+	
+
 	5.5.15
 ------------------------------------------------------------------------------
 		= Took more things from the windows launched when a video starts
