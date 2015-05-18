@@ -1,6 +1,7 @@
 <window id="104">
 	<defaultcontrol>-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<include>FS__OpenClose</include>
 	<coordinates>
 		<system>1</system>
 		<posx>278</posx>
@@ -16,8 +17,7 @@
 			<visible>[Window.IsActive(FullScreenVideo) | Window.IsActive(Visualisation) | Window.IsActive(PlayerControls)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites)]</visible>
 			<animation effect="zoom" end="70" center="362,0" time="0" condition="Skin.HasSetting(SmallFSVolume)">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
-			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
+			<include>FS__OpenClose</include>
 			<control type="image" id="0">
 				<description>popup volume dialog background</description>
 				<posx>-268</posx>
