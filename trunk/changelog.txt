@@ -2,7 +2,26 @@ oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 4.16.15 Version 3.5.46
+
+	5.20.15
+------------------------------------------------------------------------------	
+		= Clearly wrong with my previous assumption, however continuing to 
+		  hash out more errors I've made more progress in adding another
+		  open/close animation to DialogSeekbar.xml and this seems to have
+		  made the crash stop from a clean install of r149
 	
+
+	5.18.15
+------------------------------------------------------------------------------
+		= With almost 100% confidence I think I've got the crashes resolved - 
+		  I forgot to add an open/close animation to DialogVolumeBar.xml when I 
+		  started trying to fix this issue for whatever reason but adding the 
+		  animation seems to have fixed the issue (fingers crossed).  If that's 
+		  the case - that it was simply this missing animation - I feel the need
+		  to scale back some of the desperate changes made lately...not all, but 
+		  some because a pretty good hit is being taken at startup because of 
+		  the includes added for this mess.
+		  
 	
 	5.13.15
 ------------------------------------------------------------------------------
