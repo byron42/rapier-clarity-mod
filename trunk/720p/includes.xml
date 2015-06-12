@@ -1399,4 +1399,8 @@
 		<animation effect="fade" time="250">WindowOpen</animation>
 		<animation effect="fade" time="400">WindowClose</animation>
 	</include>
+	<include name="OSD_settings__OpenClose">
+		<animation effect="fade" time="400">WindowOpen</animation>
+		<animation effect="fade" time="400">WindowClose</animation>
+	</include>
 </includes>
