@@ -12,6 +12,7 @@
 			
 	<!--(((BACKGROUNDS)))=============================================================================================================================-->		
 			<control type="group"> <!--BG's-->
+				<visible>!IntegerGreaterThan(system.memory(used.percent),85)</visible>
 				<control type="group"> <!--If Fanart is Visible then fade...-->
 					<animation effect="fade" start="100" end="0" time="500" delay="0" condition="!IsEmpty(Listitem.Property(Fanart_Image)) + [Window.IsActive(VideoLibrary) + Container.Content(Movies) + [[Control.IsVisible(52) + !Skin.HasSetting(HideMoviesListFanart)] | Control.IsVisible(59) | [Control.IsVisible(66) + !Skin.HasSetting(HideMoviesLargePosterFanart)]] | [Control.IsVisible(50) + !Skin.HasSetting(HideMoviesIconViewFanart)] | [Control.IsVisible(51) + !Skin.HasSetting(HideMoviesBigIconViewFanart)]]">Conditional</animation>
 					<control type="group"> <!--UNIVERSAL RAM SAVING CLASSIC RAPIER BG-->

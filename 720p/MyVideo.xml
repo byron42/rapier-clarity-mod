@@ -12,7 +12,8 @@
 			<animation effect="fade" start="100" end="0" time="300" delay="300" condition="Window.IsActive(PluginSettings) | Window.IsActive(mediasource) | Window.IsActive(filebrowser) | Window.IsActive(132) | Window.IsActive(2003)">Conditional</animation> <!--FSD_ControlFade-->
 			
 	<!--(((BACKGROUNDS)))=============================================================================================================================-->		
-			<control type="group">	
+			<control type="group">
+				<visible>!IntegerGreaterThan(system.memory(used.percent),85)</visible>
 				<!--(AddonFanartFadeOut)-->
 				<animation effect="fade" start="20" end="200" time="200">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -128,6 +129,7 @@
 
 			<!--********************************** BackgroundFanart *********************************************-->
 			<control type="group" id="1121">
+				<visible>!IntegerGreaterThan(system.memory(used.percent),85)</visible>
 				<visible>!IsEmpty(Listitem.Property(Fanart_Image)) + ![Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] + ![Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]</visible>
 				<!--(VisibleFadeEffect)-->
 				<animation effect="fade" time="200">Visible</animation>

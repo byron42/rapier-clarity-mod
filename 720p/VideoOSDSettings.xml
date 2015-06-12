@@ -1,6 +1,5 @@
 <window id="123">
-	<animation effect="fade" time="400">WindowOpen</animation>
-	<animation effect="fade" time="400">WindowClose</animation>
+	<include>OSD_settings__OpenClose</include>
 	<defaultcontrol>2</defaultcontrol>
 	<controls>
 		<control type="group">
