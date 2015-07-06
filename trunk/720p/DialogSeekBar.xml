@@ -10,13 +10,13 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 	
 	<!--DialogOpenCloseAnim-->
-	<animation condition="![Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="VisibleChange">
+	<animation condition="![[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="VisibleChange">
 		<effect type="fade" end="100" time="150"/>
 		<!-- <effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/> -->
 	</animation>	
 	
 <!--*************** for FullScreenInfo's (and player controls!) update ********************************-->
-	<animation effect="fade" end="100" time="0"  condition="[Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">VisibleChange</animation>
+	<animation effect="fade" end="100" time="0"  condition="[[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)] + Player.Seeking + [!Player.Paused | Player.Paused]">VisibleChange</animation>
 <!--***************************************************************************************************-->
 	
 	<coordinates>
@@ -35,7 +35,7 @@
 			<!--little dialog fade out-->
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			<!---->
-			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="[Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]">Conditional</animation>
+			<animation effect="fade" start="0" end="0" time="0" easing="out" condition="[Window.IsVisible(Home) | [Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsVisible(2005) + Player.ShowCodec] | [Window.IsActive(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]">Conditional</animation>
 			<!--OSDOpenCloseAnim-->
 			<animation effect="fade" start="0" end="100" time="250" easing="out">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="250" easing="out">WindowClose</animation>
@@ -166,7 +166,7 @@
 				<ondown>1</ondown>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<visible>![Window.IsVisible(Home) | Window.IsVisible(142) | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]</visible>
+				<visible>![Window.IsVisible(Home) | [Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]</visible>
 			</control>
 		</control>
 <!--******** HACKED!!! ************************-->
@@ -197,7 +197,7 @@
 				<texturesliderbar>seekslider.png</texturesliderbar>
 				<textureslidernib>slider_nibFO.png</textureslidernib>
 				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
-				<visible>[Window.IsVisible(142) | [Window.IsVisible(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | [Window.IsActive(Home) + [!Skin.HasSetting(HideNowPlayingMedia) | Window.IsActive(PlayerControls)]]]] + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
+				<visible>[[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsVisible(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | [Window.IsActive(Home) + [!Skin.HasSetting(HideNowPlayingMedia) | Window.IsActive(PlayerControls)]]]] + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
 				<onup>1</onup>
 				<ondown>1</ondown>
 				<onleft>1</onleft>

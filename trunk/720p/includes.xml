@@ -561,7 +561,7 @@
 <!-- ***************************************** MEDIA WINDOW INCLUDES *********************-->
 	<include name="MediaActionPackFSVideo">
 		<control type="group">	
-			<visible>Window.IsVisible(2005) + !Window.IsVisible(142)</visible>
+			<visible>Window.IsVisible(2005) + !Player.ShowInfo + !Window.IsActive(VideoOSD)</visible>
 			<!-- <animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="0" condition="Player.Paused">WindowOpen</animation> -->
 			<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
@@ -603,11 +603,11 @@
 			<height>100</height>
 			<colordiffuse>BBBBFFFF</colordiffuse>
 			<texture border="10">Glass/SquareThemeBorder.png</texture>
-			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901) + !Window.IsVisible(142)</visible>
+			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901)</visible>
 		</control>
 	</include>
 	<include name="DFSI_Video_MediaFlags">
-		<control type="image">
+		<control type="image" id="1">
 			<description>Blu-ray Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -616,7 +616,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,.bluray) | substring(VideoPlayer.filename,.blu-ray) | substring(VideoPlayer.filename,.brrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>HDDVD Image</description>
 			<width>120</width>
 			<height>60</height>
@@ -625,7 +625,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,hddvd) | substring(VideoPlayer.filename,hd-dvd)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>DVD Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -634,7 +634,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,sddvd) | substring(VideoPlayer.filename,.ifo,Right) | substring(VideoPlayer.filename,.img,Right) | substring(VideoPlayer.filename,.iso,Right) | substring(VideoPlayer.filename,.vob,Right)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>HDTV Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -643,7 +643,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,hdtv)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>DVDRIP Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -652,7 +652,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,dvdrip)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>DVDR5 Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -661,7 +661,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,dvdr5) | substring(VideoPlayer.filename,.r5)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>DVD SCREENER Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -670,7 +670,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,dvdscreener) | substring(VideoPlayer.filename,dvdscr) | substring(VideoPlayer.filename,.screener)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>TELESYNC Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -679,7 +679,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,telesync) | substring(VideoPlayer.filename,.ts.)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>CAM Image</description>
 			<width>90</width>
 			<height>60</height>
@@ -688,7 +688,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<visible>substring(VideoPlayer.filename,.CAM)</visible>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>Video Res Image</description>
 			<width>70</width>
 			<height>60</height>
@@ -696,7 +696,7 @@
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 			<texture>$INFO[VideoPlayer.VideoResolution,flagging/VideoResolution/,.png]</texture>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>Codec Image</description>
 			<width>80</width>
 			<height>60</height>
@@ -706,7 +706,7 @@
 		</control>
 	</include>
 	<include name="DFSI_Audio_MediaFlags">
-		<control type="image">
+		<control type="image" id="1">
 			<description>MP3 Codec Image</description>
 			<posy>2</posy>
 			<width>80</width>
@@ -715,7 +715,7 @@
 			<texture>$INFO[VideoPlayer.AudioCodec,flagging/AudioCodec/,.png]</texture>
 			<fadetime>MediaFlagsCrossfadeTime</fadetime>
 		</control>
-		<control type="image">
+		<control type="image" id="1">
 			<description>Audio Channels Image</description>
 			<width>70</width>
 			<height>60</height>
@@ -725,7 +725,7 @@
 		</control>
 	</include>
 	<include name="FS_ProgressBar">
-		<control type="progress">
+		<control type="progress" id="1">
 			<description>Cache Progress</description>
 			<posx>0</posx>
 			<posy>87</posy>
@@ -736,7 +736,7 @@
 			<colordiffuse>ThemeColor2</colordiffuse>
 			<visible>true</visible>
 		</control>
-		<control type="progress">
+		<control type="progress" id="1">
 			<description>Progressbar</description>
 			<posx>0</posx>
 			<posy>87</posy>
@@ -745,7 +745,7 @@
 			<info>Player.Progress</info>
 			<visible>!Player.Caching</visible>
 		</control>
-		<control type="progress">
+		<control type="progress" id="1">
 			<description>Player Caching Progress Bar</description>
 			<posx>0</posx>
 			<posy>87</posy>
@@ -756,7 +756,7 @@
 			<info>Player.CacheLevel</info>
 			<visible>Player.Caching</visible>
 		</control>
-		<control type="label">
+		<control type="label" id="1">
 			<description>Buffer %</description>
 			<posx>0</posx>
 			<posy>111</posy>
@@ -769,7 +769,7 @@
 			<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
 			<visible>Player.Caching + Player.HasVideo </visible>
 		</control>
-		<control type="label">
+		<control type="label" id="1">
 			<description>Elapsed Time Label</description>
 			<posx>0</posx>
 			<posy>111</posy>
@@ -782,7 +782,7 @@
 			<label>$INFO[Player.Time]</label>
 			<visible>!Player.Seeking + !Player.Caching</visible>
 		</control>
-		<control type="label">
+		<control type="label" id="1">
 			<description>Seek Time Label</description>
 			<posx>0</posx>
 			<posy>111</posy>
@@ -795,7 +795,7 @@
 			<label>$INFO[Player.SeekTime]</label>
 			<visible>Player.Seeking + !Player.Caching</visible>
 		</control>
-		<control type="label">
+		<control type="label" id="1">
 			<posx>950</posx>
 			<posy>111</posy>
 			<width>370</width>

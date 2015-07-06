@@ -350,7 +350,7 @@
 		<value condition="Window.IsActive(114) + Player.DisplayAfterSeek">[UPPERCASE]$LOCALIZE[31927][/UPPERCASE]</value> <!-- skip -->
 	</variable>
 	<variable name="PlayerControlActionImage">
-		<value condition="[[Window.IsActive(142) | Window.IsActive(2005) | Window.IsActive(2006) | Window.IsActive(Home)] + Player.Seeking] | [[Window.IsActive(114)] + [Player.Seeking | Player.DisplayAfterSeek]]">osd-pause-focus.png</value> <!-- seeking -->
+		<value condition="[[Window.IsActive(2005) | Window.IsActive(2006) | Window.IsActive(Home)] + Player.Seeking] | [[Window.IsActive(114)] + [Player.Seeking | Player.DisplayAfterSeek]]">osd-pause-focus.png</value> <!-- seeking -->
 		<value condition="[[Player.Paused + !Player.Caching] + !Player.Seeking]">osd-pause-focus.png</value> <!-- paused -->
 		<value condition="[[Player.Paused + Player.Caching] + !Player.Seeking]">osd-pause-focus.png</value> <!-- cache -->
 		<value condition="Player.Forwarding2x">osd-forward-focus.png</value> <!-- FFx2 -->
