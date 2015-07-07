@@ -1,0 +1,161 @@
+<window id="120">
+	<defaultcontrol always="true">404</defaultcontrol>
+	<includes>OSD__OpenClose</includes>
+	<controls>
+	
+		<control type="group">	
+			<animation effect="fade" start="10" end="100" delay="0" time="450">VisibleChange</animation> 
+			<visible>Control.HasFocus(503)</visible> <!--skinwide equal viz bg-->
+			<!--************************* FullControlAreaBackground ******************************-->
+			<control type="image">
+				<width>ScreenWidth</width>
+				<height>720</height>
+				<texture>black.png</texture>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" start="0" end="85" time="400">Visible</animation>
+				<animation effect="fade" start="85" end="0" time="400">Hidden</animation>
+				<animation effect="fade" start="0" end="85" time="400">WindowOpen</animation>
+				<animation effect="fade" start="85" end="0" time="400">WindowClose</animation>
+			</control>
+			<!--***************************************************************************************************--> 
+		</control>
+		
+	   	<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<control type="group">	
+				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<!-- <animation effect="slide" start="0,-10" end="0,-120" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
+				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+				
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Control.HasFocus(503)">Conditional</animation>
+			
+				<!--************************************-->
+				<include>Upper_Music_OSD_Controls</include>
+				<!--************************************-->
+				
+			</control>
+	
+	<!--(((MAIN BUTTONS)))============================================================================================================-->	
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<!-- <animation effect="slide" start="0,602" end="0,730" time="250" delay="200">WindowClose</animation> -->
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,130" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(121) | Window.IsVisible(122) | Window.IsActive(111) | Window.IsActive(script-XBMC_Lyrics-main.xml)">Conditional</animation>
+				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+				<!--viz select fade-->
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Control.HasFocus(503)">Conditional</animation>
+				
+				<!--******************************-->
+				<include>Lower_OSD_Controls</include>
+				<!--******************************-->
+				
+			<!--labels/time-->
+				<control type="label" id="2222">
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label> [UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE] </label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+					<visible>Window.IsTopmost(MusicOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
+				</control>
+				<control type="label">
+					<posx>1005</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label>$INFO[System.Time]</label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+				</control>
+			</control>
+			
+		<!--viz select menu-->
+			<control type="grouplist">
+				<posx>320</posx>
+				<posy>320</posy>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<posx></posx>
+					<posy>5</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture>arrow-scroll-left-nofocus2.png</texture>
+					<visible>Control.HasFocus(503)</visible>
+					<colordiffuse>ThemeColor</colordiffuse>
+				</control>
+				<control type="selectbutton" id="503">
+					<width>500</width>
+					<height>70</height>
+					<font>VizSelect</font>
+					<textcolor>Grey</textcolor>
+					<selectedcolor>Grey</selectedcolor>
+					<disabledcolor>Grey</disabledcolor>
+					<shadowcolor>ThemeColor</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textwidth>500</textwidth>
+					<colordiffuse></colordiffuse>
+					<textureleft></textureleft>
+					<textureleftfocus></textureleftfocus>
+					<textureright></textureright>
+					<texturerightfocus></texturerightfocus>
+					<pulseonselect>false</pulseonselect>
+					<onunfocus>SetFocus(502)</onunfocus>
+					<onup>SetFocus(900)</onup>
+					<ondown>SetFocus(9000)</ondown>
+				</control>
+				<control type="image">
+					<posx></posx>
+					<posy>5</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture flipx="true">arrow-scroll-left-nofocus2.png</texture>
+					<visible>Control.HasFocus(503)</visible>
+					<colordiffuse>ThemeColor</colordiffuse>
+				</control>
+			</control>
+			
+		</control>
+	</controls>
+</window>

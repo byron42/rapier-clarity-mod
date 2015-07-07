@@ -1,0 +1,126 @@
+<window id="110">
+	<defaultcontrol>0</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<!--DialogOpenCloseAnim-->
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="350" />
+		<effect type="fade" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+		<effect type="fade" start="100" end="0" time="250" />
+	</animation>
+	<coordinates>
+		<system>1</system>
+		<origin x="390" y="220">true</origin>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>-390</posx>
+			<posy>-220</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background-dim.png</texture>
+			<animation effect="fade" end="60" delay="" time="200" condition="true">Conditional</animation>
+		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<!--************************************ GamepadDialogBox *******************************************-->
+			<control type="group">
+				<posx>-25</posx>
+				<control type="image">
+					<width>550</width>
+					<height>31</height>
+					<texture border="-">Context/context-menu-top2.png</texture>	
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				<control type="image">
+					<posy>32</posy>
+					<width>550</width>
+					<height>180</height>
+					<texture border="0,0,0,2">Context/context-menu-middle2.png</texture>	
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+				<control type="image">
+					<posy>212</posy>
+					<width>550</width>
+					<height>31</height>
+					<texture border="-">Context/context-menu-bottom2.png</texture>	
+					<colordiffuse>BBBBBBBB</colordiffuse>
+				</control>
+			</control>
+			<!--*************************************************************************************************-->
+			
+			<control type="image">
+				<posx>15</posx>
+				<posy>26</posy>
+				<description>LABEL Background</description>
+				<width>470</width>
+				<height>60</height>
+				<colordiffuse></colordiffuse>
+				<texture border="10,10,10,10">Glass/keyfocus.png</texture> <!--replace-->
+				<bordersize>7</bordersize>
+			</control>
+			<control type="image">
+				<description>INPUT BG</description>
+				<posx>32</posx>
+				<posy>168</posy>
+				<width>436</width>
+				<height>40</height>
+				<texture border="12">button-nofocus.png</texture>
+			</control>
+			<control type="label" id="1">
+				<posx>40</posx>
+				<posy>56</posy>
+				<width>420</width>
+				<!-- <font>MediaInfoTitleFont2</font> (Removing - unused)-->
+				<textcolor>ThemeColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[13406]</label>
+			</control>
+			<control type="group">
+				<posx>26</posx>
+				<posy>40</posy>
+				<width>450</width>
+				<itemgap>35</itemgap>
+				<control type="label" id="2">
+					<description>Line 1</description>
+					<posx>7</posx>
+					<posy>54</posy>
+					<width>450</width>
+					<font>font_22_U</font>
+					<textcolor>Grey</textcolor>
+					<align>left</align>
+					<scroll>yes</scroll>
+				</control>		
+				<control type="label" id="3">
+					<description>Line 2</description>
+					<posx>35</posx>
+					<posy>85</posy>
+					<width>420</width>
+					<font>font_22_U</font>
+					<textcolor>Grey</textcolor>
+					<align>left</align>
+					<scroll>yes</scroll>
+				</control>			
+				<control type="label" id="4">
+					<description>Line 3</description>
+					<posx>14</posx>
+					<posy>129</posy>
+					<width>420</width>
+					<font>font_32_B</font>
+					<textcolor>Grey</textcolor>
+					<align>center</align>
+					<scroll>yes</scroll>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

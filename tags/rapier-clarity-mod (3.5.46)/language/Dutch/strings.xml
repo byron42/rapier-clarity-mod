@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!--de tekenreeks-id 31000 thru b-l 31999 zijn gereserveerd voor skins-->
+
+<strings>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31000 thru b-l 31099 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31000">n/a</string>
+
+	<!--huid instellingen-->
+	<string id="31001">knop</string>
+	<string id="31010">algemene</string>
+	<string id="31011">Home</string>
+	<string id="31012">achtergronden</string>
+	<string id="31013">Media</string>
+	<string id="31014">instellingen opnieuw instellen</string>
+	<string id="31015">verbergen</string>
+	<string id="31016">inschakelen</string>
+	<string id="31017">Dim</string>
+	<string id="31018">wijzigen</string>
+	<string id="31019">informatie</string>
+
+	<!--huid instellingen algemene-->
+	<string id="31020">de schuifbalk voor deze weergavemodi verbergen</string>
+	<string id="31021">onderste Informatiedeelvenster verbergen</string>
+	<string id="31022">visualisatie van muziek op de achtergrond niet weergeven</string>
+	<string id="31023">vertonen geen Video op de achtergrond</string>
+	<string id="31024">onderste deelvenster verbergen hoogtepunt witte</string>
+	<string id="31025">Verberg schuifbalk</string>
+	<string id="31026">Toon weer op de hoogste Bar</string>
+	<string id="31027">doen niet dimmen van het scherm als er een dialoogvenster zichtbaar Is</string>
+	<string id="31028">kleur van de hoogste Bar van de verandering</string>
+	<string id="31029">Grey</string>
+	<string id="31030">Black</string>
+	<string id="31031">blauw</string>
+	<string id="31032">White</string>
+	<string id="31034">glad</string>
+	<string id="31035">streep</string>
+	<string id="31036">Kioskmodus inschakelen</string>
+
+	<string id="31041">Beschrijving verbergen</string>
+	<string id="31042">Labels verbergen</string>
+	<string id="31043">Fanart verbergen</string>
+	<string id="31044">Verberg Plot</string>
+	<string id="31045">Cover verbergen</string>
+	<string id="31046">Verberg bekeken Overlay</string>
+	<string id="31047">doen niet dimmen Fanart</string>
+	<string id="31048">Media vlaggen verbergen</string>
+	<string id="31049">Studio vlaggen verbergen</string>
+	<string id="31050">Change Focus positie</string>
+
+	<!--huid instellingen achtergronden-->
+	<string id="31051">van toepassing op binnenlandse venster alleen</string>
+	<string id="31052">van toepassing op alle</string>
+
+	<string id="31053">aangepaste achtergronden</string>
+	<string id="31054">afbeelding pad</string>
+	<string id="31055">Multi Image pad</string>
+	<string id="31056">gebruik enkel beeld voor achtergrond</string>
+	<string id="31057">Gebruik Multi beeld voor achtergrond</string>
+	<string id="31060">Dim achtergrond (niet van toepassing op binnenlandse venster)</string>
+	<string id="31061">Windows</string>
+	<string id="31063">Fanart van animatie voorzien</string>
+	<string id="31064">achtergrond van animatie voorzien</string>
+
+	<!--huid instellingen huis-->
+	<string id="31070">deze categorieën verbergen</string>
+	<string id="31071">verbergen nu afspelen voor muziek</string>
+	<string id="31072">verbergen nu afspelen voor video 's</string>
+	<string id="31074">altijd verbergen categorie Icons</string>
+	<string id="31075">navigatieknoppen (voor muis gebruikers) weergeven</string>
+	<string id="31076">categorie pictogrammen verbergen wanneer Video spelen</string>
+	<string id="31077">Verberg recente films</string>
+	<string id="31078">recente TV-programma's verbergen</string>
+	<string id="31079">recente Albums verbergen</string>
+	<string id="31080">Verberg Systeeminfo op het huisscherm</string>
+	<string id="31081"></string>
+	<string id="31082">aangepast pictogram</string>
+	<string id="31083">achtergrond</string>
+	<string id="31084">categorie afbeeldingen</string>
+	<string id="31085">geen Focus</string>
+	<string id="31086">focus</string>
+	<string id="31095">Knoptype</string>
+	<string id="31097">Label</string>
+	<string id="31098">Eigenschappen van knop</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31100 thru b-l 31199 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--weergavetypen-->
+	<string id="31101">weergave</string>
+	<string id="31102">alle weergaven</string>
+	<string id="31103">pictogram</string>
+	<string id="31104">groot pictogram</string>
+	<string id="31105">lijst</string>
+	<string id="31106">wikkel lijst</string>
+	<string id="31107">foto</string>
+	<string id="31108">groot pictogram</string>
+	<string id="31110">fanart</string>
+	<string id="31111">ListInfo</string>
+	<string id="31112">lijst van afleveringen</string>
+	<string id="31113">uitgebreide lijst</string>
+	<string id="31114">banner lijst</string>
+	<string id="31115">showcase</string>
+	<string id="31116">grote Poster</string>
+	<string id="31117">muur weergave</string>
+	<string id="31118">WideSlimList</string>
+	<string id="31119">3D Wrap View</string>
+	<string id="31120">ListInfo 2</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31200 thru b-l 31299 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31200">vooruitspoelen</string>
+	<string id="31201">terugspoelen</string>
+	<string id="31202">look &amp; Feel, regio, scherm, weergaveopties, Screensaver</string><!--************** instellingen voor vormgeving -->
+	<string id="31203">bestanden</string><!--**************************************************************** programs settings ***********-->
+	<string id="31204">Algemeen, Slideshow</string><!--****************************************************** foto's instellingen *********-->
+	<string id="31205">Algemeen, bibliotheek, Player, bestanden, Scrobbler, CD's rippen, Karaoke</string><!-- muziek instellingen *********-->
+	<string id="31206">Algemeen, bibliotheek, speler, ondertitels, schrapers</string><!--******************** video's instellingen ********-->
+	<string id="31207">algemene</string><!--***************************************************************** weather settings ************-->
+	<string id="31208">netwerk, Servers, SMB-Client, UPnP-instellingen, Event Server</string><!--************ netwerkinstellingen *********-->
+	<string id="31209">hardware, LCD, Autoplay, Audio-Hardware, Video Hardware, Master Lock</string><!-- **** systeeminstellingen *********-->
+	<string id="31210">Algemeen, Home, Media, achtergronden, Scripts</string><!--**************************** huid instellingen ***********-->
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31300 thru b-l 31399 ooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31300">Laatst bijgewerkt</string>
+	<string id="31301">OpenSubtitles_OSD</string>
+	<string id="31302">spelen</string>
+	<string id="31303">onderbroken</string>
+	<string id="31304">VOORUITSPOELEN</string>
+	<string id="31305">terugspoelen</string>
+	<string id="31309">geheugen gebruikt</string>
+	<string id="31315">fundamentele</string>
+
+	<!--AANGEPASTE CREDITS-->
+	<string id="31320"> - kader gemaakt door Qualar</string>
+	<string id="31321"> - voorwaardelijke weer en roterende CD Mod gemaakt door Qualar</string>
+	<string id="31322"> - achtergronden gearrangeerd door Byron gepresenteerd</string>
+	<string id="31323"> - Nieuwe Media controles, Fullscreen dialoogvenster concepten en Zoom lijsten gemaakt door Byron</string>
+	<string id="31324"> - startpagina weer toevoeging door Byron</string>
+	<string id="31325"> - pictogrammen gemaakt door Evan Brooks</string>
+	<string id="31326"> - home venster pictogrammen gemaakt door Arcanthur</string>
+	<string id="31327"> - studio pictogrammen geboden door de XBMC gemeenschap</string>
+	<string id="31328"> - extra weergaven geboden door Wannabegt4 en Sranshaft</string>
+	<string id="31329">dankzij met name BUZZ voor de voortzetting van XBMC4XBOX en iedereen die heeft bijgedragen om deze oude WERKPAARD RUNNING en REAL te houden. BELANGRIJKER nog, dankzij SCARFA voor het maken van deze geweldige huid om te beginnen met -</string>
+	<string id="31330">dankzij de XBMC team voor het maken en onderhouden van dergelijke een geweldig programma dat mij zoveel vreugde heeft gegeven voor een aantal jaren. Dank ook aan de skinners voor mij die de weg met hun geweldige skins -</string>
+	<string id="31331">(oorspronkelijke huid door Scarfa, Mod door Byron)</string>
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31400 thru b-l 31499 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--huid instellingen media-->
+	<string id="31400">Verbergen Top opties menubalk (alleen Show wanneer geselecteerd)</string>
+	<string id="31401">Plot niet schuiven</string>
+	<string id="31402">DVD Case verbergen</string>
+	<string id="31403">verbergen roterende cdArt in Visualizer</string>
+	<string id="31404">gebruik Poster Covers</string>
+	<string id="31405">muziek spelen</string>
+	<string id="31406">video spelen</string>
+	<string id="31407">gebruik visualisatie voor achtergrond</string>
+	<string id="31408">gebruik kunstenaar Fanart voor achtergrond</string>
+	<string id="31409">Music Visualization inschakelen / kunstenaar Fanart op de achtergrond</string>
+	<string id="31410">Video spelen op de achtergrond inschakelen</string>
+	<string id="31411">platte Wrap</string>
+	<string id="31412">kleine vlakke Wrap</string>
+	<string id="31413">3D Wrap</string>
+	<string id="31414">Verberg Media Info Dialog</string>
+	<string id="31415">Album geval verbergen</string>
+	<string id="31416">beschrijving niet schuiven</string>
+	<string id="31417">banner lijst</string>
+	<string id="31418">Classic lijst</string>
+	<string id="31419">pictogram paneel</string>
+	<string id="31420">Toon volledige Plot</string>
+	<string id="31421">Wrap lijst schaduw verbergen</string>
+	<string id="31422">alle</string>
+	<string id="31423">stijl</string>
+	<string id="31424">verbergen van de kleine Video-Overlay</string>
+
+	<string id="31442">Kies een map</string>
+	<string id="31443">Kies een Plugin</string><!--HomePlugins.py-->
+	<string id="31444">Kies een Script</string><!--HomeScripts.py-->
+	<string id="31445">(Selecteer '' pad '' om te bladeren)</string>
+	<string id="31446">Kies KNOPTYPE</string>
+	<string id="31447">Kies knop PARAMETERS</string>
+	<string id="31448">Gebruik maken van kleinere Volume Display (Fullscreen Media)</string>
+	<string id="31449"></string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31500 thru b-l 31599 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--huid instellingen scripts-->
+	<string id="31500">OpenSubtitles_OSD knop weergeven (Script moet worden geïnstalleerd)</string>
+
+	<!--Huid instellingen Weer-->
+	<string id="31510">voorwaardelijke achtergronden weer uitschakelen</string>
+	<string id="31511">uitschakelen van geanimeerde weer iconen</string>
+
+	<!--ontbrekende huid instellingen tekenreeksen (WITTE RUIMTE IS in OPZETTELIJKE!!!)-->
+	<string id="31520">Top Bar</string>
+	<string id="31521">Reset huid</string>
+	<string id="31522">breadCrumb</string>
+	<string id="31523">kleur van de hoogste Bar van de verandering</string>
+	<string id="31524">vanille</string>
+	<string id="31525">Black</string>
+	<string id="31526">Gray</string>
+	<string id="31527">kleuren wijzigen pictogram</string>
+	<string id="31528">vanille</string>
+	<string id="31529">White</string>
+
+	<string id="31530">tabblad kleuren wijzigen</string>
+	<string id="31531">vanille</string>
+	<string id="31532">Gray</string>
+	<string id="31533">Breadcrumb lettertypekleuren wijzigen</string>
+	<string id="31534">vanille</string>
+	<string id="31535">blauw</string>
+	<string id="31536">White</string>
+	<string id="31537">onderste Informatiedeelvenster verbergen</string>
+	<string id="31538">XBMC4XBOX HOME pictogram verbergen</string>
+	<string id="31539">Zoek pictogram verbergen HOME</string>
+
+	<string id="31540">submenu navigatiepijlen verbergen</string>
+	<string id="31541">ADD ONS</string>
+	<string id="31542">Sub menu's aanpassen</string>
+	<string id="31543">INFO, DEELVENSTER</string>
+	<string id="31544">altijd verbergen categorie Icons</string>
+	<string id="31545">categorie-pictogrammen verbergen wanneer Video spelen</string>
+	<string id="31546">Verberg Media Type pictogrammen in de bibliotheek</string>
+	<string id="31547">Un-Selected Media Type pictogram verbergen</string>
+	<string id="31548">geselecteerde Media Type pictogram verbergen</string>
+	<string id="31549">MEDIA markeren</string>
+
+	<string id="31550">gebruik [kleur = MediaInfoItemColor] MPAA Flags [kleuren] voor ratings</string>
+	<string id="31551">gebruik [kleur = MediaInfoItemColor] OFLC Flags [kleuren] voor ratings</string>
+	<string id="31552"> - UPDATE nodig</string>
+	<string id="31553">weergave animaties</string>
+
+	<string id="31554">standaard (blauw)</string>
+	<string id="31555">standaard (grijs)</string>
+	<string id="31556">verbergen van de bovenste balk van het SUBMENU (Toon alleen wanneer geselecteerd)</string>
+	<string id="31557">submenu navigatiepijlen verbergen</string>
+	<string id="31558">ACHTERGRONDOPTIES inschakelen</string>
+	<string id="31559">RED</string>
+
+	<string id="31560">GREEN</string>
+	<string id="31561">Uitlijnen</string>
+	<string id="31562">Boven</string>
+	<!--SPINNEN CD-->
+	<string id="31563">niet</string>
+	<string id="31564">front</string>
+	<string id="31565">kant</string>
+	<string id="31566">van</string>
+	<string id="31567">spin</string>
+	<string id="31568">spinnen</string>
+	<string id="31569">afbeelding</string>
+	<string id="31570">roterende</string>
+	<string id="31571">langzaam</string>
+	<string id="31572">naar beneden</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31600 thru b-l 31699 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<string id="31601">script</string>
+	<string id="31602">plugin</string>
+	<string id="31603">favoriete</string>
+	<string id="31604">gevonden</string>
+	<string id="31605">items</string>
+	<string id="31606">vind meer objecten</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31700 thru b-l 31799 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--OSD-->
+	<string id="31700">CODEC</string>
+	<string id="31701">BITRATE</string>
+	<string id="31702">SAMPLERATE</string>
+	<string id="31703">kanalen</string>
+	<string id="31704">volgende</string>
+	<string id="31705">terugspoelen</string>
+	<string id="31706">naar voren</string>
+	<string id="31707">VOLUME</string>
+	<string id="31708">positie</string>
+	<string id="31709">RUNNING tijd</string>
+	<string id="31710">Eindtijd</string>
+	<string id="31711">BOOKMARKS beschikbaar</string>
+	<string id="31712">omhoog/omlaag: MENU/BOOKMARKS [CR] links/rechts: MENU-opties</string>
+	<string id="31713">-ITEMS IN de AFSPEELLIJST</string>
+	<string id="31714">huidige positie</string>
+	<string id="31715">vorige</string>
+	<string id="31716">titel van het nummer</string>
+	<string id="31717">ALBUMTITEL</string>
+	<string id="31718">naam van de artiest</string>
+	<string id="31719">tijd verstreken / duur</string>
+	<string id="31720">huidige tijd</string>
+
+	<string id="31721">op zoek naar</string>
+	<string id="31722">onderbroken</string>
+	<string id="31723">FF - X 2</string>
+	<string id="31724">FF - X 4</string>
+	<string id="31725">FF - X 8</string>
+	<string id="31726">FF - X 16</string>
+	<string id="31727">FF - X 32</string>
+	<string id="31728">RW - X 2</string>
+	<string id="31729">RW - X 4</string>
+	<string id="31730">RW - X 8</string>
+	<string id="31731">RW - X 16</string>
+	<string id="31732">RW - X 32</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31800 thru b-l 31899 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Home Submenu's-->
+	<string id="31800">video-Feeds</string>
+	<string id="31801">video Plugins</string>
+	<string id="31802">Video Library</string>
+	<string id="31803">diverse</string>
+	<string id="31804">onlangs toegevoegd</string>
+
+	<!--ooooooooooooooooooooooooooooooooooooooooo string id's 31900 thru b-l 31999 ooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+	<!--Zoekopdracht script-->
+	<string id="31900">Selecteer inhoud te zoeken voor...</string>
+	<string id="31901">Enter inhoud zoekreeks...</string>
+	<string id="31902">inhoud zoeken geannuleerd!</string>
+	<string id="31903">geen zoekreeks geboden!</string>
+	<string id="31904">inhoud niet geselecteerd!</string>
+	<string id="31905">aanvraag van de gebruiker...</string>
+	<string id="31906">nieuwe zoekopdracht</string>
+	<string id="31907">pagina</string>
+
+	<!--Ontbrekende etiketten Breadcrumbs-->
+	<string id="31910">Media</string>
+	<string id="31911">foto</string>
+	<string id="31912">profiel</string>
+
+	<!--Ontbrekende etiketten-->
+	<string id="31913">sub-menu's aanpassen</string>
+	<string id="31914">gebruik nummers voor waarderingen</string>
+	<string id="31915">terug</string>
+	<string id="31916">CAPS</string>
+	<string id="31917">IP</string>
+	<string id="31918">MEDIA</string>
+	<string id="31919">ADD-ONS</string>
+	<string id="31920">instellingen</string>
+	<string id="31921">APPS</string>
+	<string id="31922">EMULATORS</string>
+	<string id="31923">VOORINSTELLINGEN</string>
+	<string id="31924">VIZ selecteren</string>
+	<string id="31925">Zoek YOUTUBE muziek video</string>
+	<string id="31926">SONGTEKST</string>
+	<string id="31927">overslaan</string>
+	<string id="31928">omkeren</string>
+	<string id="31929">stoppen</string>
+	<string id="31930">pauze</string>
+	<string id="31931">naar voren</string>
+	<string id="31932">games</string>
+	<string id="31933">EXIT FULLSCREEN</string>
+	<string id="31934">tabelruimte</string>
+	<string id="31935">Kies aangepaste favoriet</string>
+
+	<string id="31936">Universele klassieke achtergrond (opslaan ram)</string>
+	<string id="31937">universele aangepaste achtergrond (altijd op voorgrond)</string>
+	<string id="31938">weer voorwaardelijke achtergronden (Homescreen) inschakelen</string>
+
+	<string id="31999">huid herstellen naar standaard (druk op om te bevestigen)</string>
+
+</strings>

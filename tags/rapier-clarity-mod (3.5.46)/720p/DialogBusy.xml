@@ -1,0 +1,23 @@
+<window id="138">
+	<include>FS__OpenClose</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>background image</description>
+			<posx>-10</posx>
+			<posy>-50</posy>
+			<width>1300</width>
+			<height>800</height>
+			<texture>background-dim.png</texture>
+			<animation effect="fade" start="0" end="80" time="250" condition="true">WindowOpen</animation>
+			<animation effect="fade" start="80" end="0" time="250" condition="true">WindowClose</animation>
+		</control>
+		<!--*******************************-->
+		<include>BusyAnimationGroup</include>
+		<!--*******************************-->
+	</controls>
+</window>

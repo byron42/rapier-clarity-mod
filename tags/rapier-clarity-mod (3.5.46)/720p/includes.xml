@@ -1,0 +1,1406 @@
+<includes>
+	<!---->
+	<include file="Defaults.xml"/>
+	<include file="Includes_Variables.xml"/>
+	<!---->
+	<constant name="ScreenWidth">1280</constant>
+	<constant name="ScreenHeight">720</constant>
+	<constant name="DialogMarginOffsetX">40</constant>
+	<constant name="DialogHeadingOffsetY">27</constant>
+	<constant name="DialogMarginOffsetY">59</constant>
+	<constant name="MenuBarOffsetY">44</constant>
+	<constant name="BottomPaneOffsetY">646</constant>
+	<constant name="BackgroundCrossfadeTime">300</constant>
+	<constant name="IconCrossfadeTime">0</constant>
+	<constant name="FanartCrossfadeTime">750</constant>	
+	<constant name="MediaFlagsCrossfadeTime">400</constant>
+	<constant name="SortLetterOffsetY">280</constant>
+	
+	<include name="VariableBackgroundHeight">
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">TallBackground</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">NormalBackground</include>
+	</include>
+	<include name="TallBackground">
+		<height>720</height>
+	</include>
+	<include name="NormalBackground">
+		<height>676</height>
+	</include>
+	
+	<include name="BackgroundOffset">
+		<include condition="!Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetTransparency</include>
+		<include condition="Skin.HasSetting(TransparentMenuBacks)">BackgroundOffsetNoTransparency</include>
+	</include>
+	<include name="BackgroundOffsetTransparency">
+		<posy>0</posy>
+	</include>
+	<include name="BackgroundOffsetNoTransparency">
+		<posy>44</posy>
+	</include>
+	
+	<include name="SystemTray">
+		<control type="group" id="600">
+			<posx>1055</posx>
+			<posy>4</posy>
+			<defaultcontrol always="true">345</defaultcontrol>
+			<control type="image">			
+				<width>219</width>
+				<height>35</height>
+				<texture border="8">SystemTray/top-bar-status-background.png</texture>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+			</control>
+			<control type="label">
+				<description>Time</description>
+				<posx>9.5</posx>
+				<posy>1</posy>
+				<width>145</width>
+				<height>35</height>
+				<font>TimeFont</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<aligny>center</aligny>
+				<label>$INFO[System.Time]</label>
+			</control>
+		<!--shutdown/play icons-->
+			<control type="group">
+				<posx>2</posx>
+				<control type="button" id="345">
+					<description>Shutdown</description>
+					<posx>183</posx>
+					<posy>2.85</posy>
+					<width>29</width>
+					<height>29</height>
+					<texturefocus>SystemTray/PowerFocus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<pulseonselect>true</pulseonselect>
+					<onup>-</onup>
+					<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+					<ondown>850</ondown>
+					<onleft>346</onleft>
+					<onright>837</onright>
+					<!--SystemTrayButtonFocusAnim-->
+					<animation effect="zoom" end="110" center="203,17" time="100">Focus</animation>
+					<animation effect="zoom" start="110" end="100" center="203,17" time="100">Unfocus</animation>
+				</control>
+				<control type="image">
+					<description>Shutdown No Focus</description>
+					<posx>183</posx>
+					<posy>2.85</posy>
+					<width>29</width>
+					<height>29</height>
+					<texture>$VAR[SystemTrayShutdownIcon]</texture>
+					<colordiffuse></colordiffuse>
+					<visible>!Control.HasFocus(345)</visible>
+				</control>
+				<control type ="button" id="346">
+					<description>Play Icon</description>
+					<posx>148</posx>
+					<posy>2.85</posy>
+					<width>34</width>
+					<height>29</height>
+					<texturefocus>SystemTray/PlayFocus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<onclick>XBMC.PlayDVD </onclick>
+					<pulseonselect>true</pulseonselect>
+					<onup>-</onup>
+					<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+					<ondown>850</ondown>
+					<onleft>458</onleft>
+					<onright>345</onright>
+					<!--SystemTrayButtonFocusAnim-->
+					<animation effect="zoom" end="110" center="156,17" time="100">Focus</animation>
+					<animation effect="zoom" start="110" end="100" center="156,17" time="100">Unfocus</animation>
+				</control>
+				<control type="image">
+					<description>Play No Focus</description>
+					<posx>148</posx>
+					<posy>2.85</posy>
+					<width>34</width>
+					<height>29</height>
+					<texture>$VAR[SystemTrayPlayIcon]</texture>
+					<colordiffuse></colordiffuse>
+					<visible>!Control.HasFocus(346)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+<!--(((BREADCRUMBS)))=========================================================-->
+	<include name="BreadCrumbButtonLeft">
+		<control type="group">		
+			<posx>60</posx>
+			<!--BreadCrumbOpenCloseAnim-->
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out">Visible</animation>
+			<control type="button">
+				<description>Left Button</description>
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<posy>4</posy>
+				<include condition="![Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)]">BreadCrumbButtonSmall_Left</include>
+				<include condition="Window.IsActive(3) | Window.IsActive(1) | Window.IsActive(35)">BreadCrumbButtonMid_Left</include>
+				<height>35</height>
+				<font>font_22_WCBI</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textoffsetx>-</textoffsetx>
+				<align>center</align>
+				<aligny>top</aligny>
+				<shadowcolor></shadowcolor> <!--BrCr-->
+				<textoffsety>2</textoffsety> <!--BrCr-->
+				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<label>$VAR[BreadCrumbLabel_Left]</label>
+			</control>
+		</control>
+	</include>
+	
+	<include name="BreadCrumbButtonRight">
+		<control type="group">			
+			<posx>290</posx>
+			<!--BreadCrumbOpenCloseAnim-->
+			<animation effect="slide" start="-220,0" time="150" tween="cubic" easing="out" condition="![Window.IsActive(3) | Window.IsActive(1)]">WindowOpen</animation>
+			<animation effect="slide" start="-220,0" end="40,0" time="150" tween="cubic" easing="out" condition="Window.IsActive(3) | Window.IsActive(1)">WindowOpen</animation>
+			<control type="button">
+				<description>Right Button</description>
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<posy>4</posy>
+				<include condition="![Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(12) | Window.IsActive(13)
+				| Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17) | Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)
+				| Window.IsActive(503) | Window.IsActive(DialogRepoInfo.xml) | Window.IsActive(textviewer)]">BreadCrumbButtonSmall_Right</include>
+				<include condition="Window.IsActive(12) | Window.IsActive(13) | Window.IsActive(14) | Window.IsActive(15) | Window.IsActive(16) | Window.IsActive(17)
+				| Window.IsActive(18) | Window.IsActive(19) | Window.IsActive(500)">BreadCrumbButtonMid_Right</include>
+				<include condition="Window.IsActive(2001) | Window.IsActive(2003) | Window.IsActive(135) | Window.IsActive(139) | Window.IsActive(503)
+				| Window.IsActive(DialogRepoInfo.xml) | Window.IsActive(textviewer)">BreadCrumbButtonBig_Right</include>
+				<height>35</height>
+				<font>font_22_WCBI</font>
+				<textcolor>$VAR[BreadCrumbFontColor]</textcolor> <!--GREY-->
+				<textoffsetx>-</textoffsetx>
+				<align>center</align>
+				<aligny>top</aligny>
+				<shadowcolor></shadowcolor> <!--BrCr-->
+				<textoffsety>2</textoffsety> <!--BrCr-->
+				<texturefocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturefocus>
+				<texturenofocus border="0,100,100,0">special://skin/images/skin/breadcrumb-background.png</texturenofocus>
+				<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				<!--''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''[BreadCrumbBtn]'''''''''''''-->
+				<label>$VAR[BreadCrumbLabel_Right]</label>
+			</control>		
+		</control>
+	</include>
+<!--LEFT SIZE-->
+	<include name="BreadCrumbButtonSmall_Left">
+		<width>240</width>
+		<textwidth>230</textwidth>
+	</include>
+	<include name="BreadCrumbButtonMid_Left">
+		<width>280</width>
+		<textwidth>270</textwidth>
+	</include>
+<!--RIGHT SIZE-->
+	<include name="BreadCrumbButtonSmall_Right">
+		<width>240</width>
+		<textwidth>240</textwidth>
+	</include>
+	<include name="BreadCrumbButtonMid_Right">
+		<width>280</width>
+		<textwidth>270</textwidth>
+	</include>
+	<include name="BreadCrumbButtonBig_Right">
+		<width>320</width>
+		<textwidth>310</textwidth>
+	</include>
+	
+<!--((( HOME BACKGROUND RESOLUTIONS )))==============================================================-->
+<!-- HOME Programs -->
+	<include name="HomeProgramsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeProgramsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeProgramsHiRes</include>
+	</include>
+	<include name="HomeProgramsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeProgramsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-programs-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Pictures -->
+	<include name="HomePicturesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomePicturesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomePicturesHiRes</include>
+	</include>
+	<include name="HomePicturesNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomePicturesHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-pictures-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Music -->
+	<include name="HomeMusicBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeMusicNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeMusicHiRes</include>
+	</include>
+	<include name="HomeMusicNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeMusicHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-music-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Videos -->
+	<include name="HomeVideosBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeVideosNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeVideosHiRes</include>
+	</include>
+	<include name="HomeVideosNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeVideosHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-videos-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME General -->
+	<include name="HomeGeneralBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeGeneralNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeGeneralHiRes</include>
+	</include>
+	<include name="HomeGeneralNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeGeneralHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-general-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Scripts -->
+	<include name="HomeScriptsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeScriptsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeScriptsHiRes</include>
+	</include>
+	<include name="HomeScriptsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeScriptsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-scripts-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME System -->
+	<include name="HomeSystemBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeSystemNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeSystemHiRes</include>
+	</include>
+	<include name="HomeSystemNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeSystemHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-system-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Weather -->
+	<include name="HomeWeatherBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeWeatherNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeWeatherHiRes</include>
+	</include>
+	<include name="HomeWeatherNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-weather-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeWeatherHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-weather-home.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+<!-- HOME Addons -->
+	<include name="HomeAddonsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG)">HomeAddonsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG)">HomeAddonsHiRes</include>
+	</include>
+	<include name="HomeAddonsNormal">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+	<include name="HomeAddonsHiRes">
+		<imagepath background="true" fallback="special://skin/images/backgrounds/HI-RES/background-addons.jpg">$INFO[Container(850).ListItem.Thumb]</imagepath>
+	</include>
+
+<!--((( ALL OTHER BACKGROUND RESOLUTIONS )))=========================================================-->	
+	
+	<!--********************************************************** PROGRAMS *********************-->
+	<include name="ProgramsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimProgramsCustomBG)">ProgramsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimProgramsCustomBG)">ProgramsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimProgramsCustomBG)">ProgramsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimProgramsCustomBG)">ProgramsHiResNoDim</include>
+	</include>
+	<include name="ProgramsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-programs.jpg</texture>
+	</include>
+	<include name="ProgramsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-programs.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="ProgramsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-programs-home.jpg</texture>
+	</include>
+	<include name="ProgramsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-programs-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** PICTURES *********************-->
+	<include name="PicturesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimPicturesCustomBG)">PicturesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimPicturesCustomBG)">PicturesHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimPicturesCustomBG)">PicturesNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimPicturesCustomBG)">PicturesHiResNoDim</include>
+	</include>
+	<include name="PicturesNormal">
+		<texture background="true">special://skin/images/backgrounds/background-pictures.jpg</texture>
+	</include>
+	<include name="PicturesHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-pictures.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="PicturesNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-pictures-home.jpg</texture>
+	</include>
+	<include name="PicturesHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-pictures-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** MUSIC ***********************-->
+	<include name="MusicBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMusicCustomBG)">MusicNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMusicCustomBG)">MusicHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMusicCustomBG)">MusicNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMusicCustomBG)">MusicHiResNoDim</include>
+	</include>
+	<include name="MusicNormal">
+		<texture background="true">special://skin/images/backgrounds/background-music.jpg</texture>
+	</include>
+	<include name="MusicHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="MusicNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-music-home.jpg</texture>
+	</include>
+	<include name="MusicHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-music-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** VIDEO ***********************-->
+	<include name="VideosBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimVideosCustomBG)">VideosNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimVideosCustomBG)">VideosHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimVideosCustomBG)">VideosNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimVideosCustomBG)">VideosHiResNoDim</include>
+	</include>
+	<include name="VideosNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="VideosHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="VideosNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="VideosHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--*********************************************************** MOVIES **********************-->
+	<include name="MoviesBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMoviesCustomBG)">MoviesNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimMoviesCustomBG)">MoviesHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMoviesCustomBG)">MoviesNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimMoviesCustomBG)">MoviesHiResNoDim</include>
+	</include>
+	<include name="MoviesNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="MoviesHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="MoviesNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="MoviesHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** TV SHOWS **********************-->
+	<include name="TvShowsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimTvShowsCustomBG)">TvShowsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimTvShowsCustomBG)">TvShowsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimTvShowsCustomBG)">TvShowsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimTvShowsCustomBG)">TvShowsHiResNoDim</include>
+	</include>
+	<include name="TvShowsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-videos.jpg</texture>
+	</include>
+	<include name="TvShowsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="TvShowsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-videos-NoDim.jpg</texture>
+	</include>
+	<include name="TvShowsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-videos-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* GENERAL ***********************-->
+	<include name="GeneralBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimGeneralCustomBG)">GeneralNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimGeneralCustomBG)">GeneralHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimGeneralCustomBG)">GeneralNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimGeneralCustomBG)">GeneralHiResNoDim</include>
+	</include>
+	<include name="GeneralNormal">
+		<texture background="true">special://skin/images/backgrounds/background-general.jpg</texture>
+	</include>
+	<include name="GeneralHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="GeneralNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-general-home.jpg</texture>
+	</include>
+	<include name="GeneralHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-general-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* SCRIPTS ***********************-->
+	<include name="ScriptsBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimScriptsCustomBG)">ScriptsNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimScriptsCustomBG)">ScriptsHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimScriptsCustomBG)">ScriptsNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimScriptsCustomBG)">ScriptsHiResNoDim</include>
+	</include>
+	<include name="ScriptsNormal">
+		<texture background="true">special://skin/images/backgrounds/background-scripts.jpg</texture>
+	</include>
+	<include name="ScriptsHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="ScriptsNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-scripts-home.jpg</texture>
+	</include>
+	<include name="ScriptsHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-scripts-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************** SYSTEM ***********************-->
+	<include name="SystemBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimSystemCustomBG)">SystemNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimSystemCustomBG)">SystemHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimSystemCustomBG)">SystemNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimSystemCustomBG)">SystemHiResNoDim</include>
+	</include>
+	<include name="SystemNormal">
+		<texture background="true">special://skin/images/backgrounds/background-system.jpg</texture>
+	</include>
+	<include name="SystemHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="SystemNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-system-NoDim.jpg</texture>
+	</include>
+	<include name="SystemHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-system-NoDim.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+	<!--********************************************************* WEATHER ***********************-->
+	<include name="WeatherBackground_And_Res">
+		<include condition="!Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimWeatherCustomBG)">WeatherNormal</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + !Skin.HasSetting(DimWeatherCustomBG)">WeatherHiRes</include>
+		<include condition="!Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimWeatherCustomBG)">WeatherNoDim</include>
+		<include condition="Skin.HasSetting(UseHighResBG) + Skin.HasSetting(DimWeatherCustomBG)">WeatherHiResNoDim</include>
+	</include>
+	<include name="WeatherNormal">
+		<texture background="true">special://skin/images/backgrounds/background-weather.jpg</texture>
+	</include>
+	<include name="WeatherHiRes">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather.jpg</texture>
+	</include>
+																			<!--no dim-->
+	<include name="WeatherNoDim">
+		<texture background="true">special://skin/images/backgrounds/background-weather-home.jpg</texture>
+	</include>
+	<include name="WeatherHiResNoDim">
+		<texture background="true">special://skin/images/backgrounds/HI-RES/background-weather-home.jpg</texture>
+	</include>
+	<!--*****************************************************************************************-->
+	
+<!--player control item gap-->
+	<include name="PlayerControlItemGap">
+		<include condition="Player.HasVideo">VideoPlayerItemGap</include>
+		<include condition="Player.HasAudio">MusicPlayerItemGap</include>
+	</include>
+	<include name="VideoPlayerItemGap">
+		<itemgap>52</itemgap>
+	</include>
+	<include name="MusicPlayerItemGap">
+		<itemgap>29</itemgap>
+	</include>
+<!--NOW PLAYING alignment variable-->
+	<include name="Now_Playing_Icon_Align_Keep">
+		<include condition="Skin.HasSetting(NowPlayingAlignTop)">NowPlayingTopAlignKeep</include>
+		<include condition="!Skin.HasSetting(NowPlayingAlignTop)">NowPlayingBottomAlignKeep</include>
+	</include>
+	<include name="NowPlayingTopAlignKeep">
+		<aspectratio aligny="top">keep</aspectratio>
+	</include>
+	<include name="NowPlayingBottomAlignKeep">
+		<aspectratio aligny="center">keep</aspectratio>
+	</include>
+
+<!-- ***************************************** MEDIA WINDOW INCLUDES *********************-->
+	<include name="MediaActionPackFSVideo">
+		<control type="group">	
+			<visible>Window.IsVisible(2005) + !Player.ShowInfo + !Window.IsActive(VideoOSD)</visible>
+			<!-- <animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="0" condition="Player.Paused">WindowOpen</animation> -->
+			<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" end="0,123" time="250" tween="quadratic" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="150" delay="100">VisibleChange</animation>
+			<visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+			<posx>300</posx>
+			<posy>725r</posy>
+			<control type="label">
+				<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+				<description>PlayerControlLabel</description>
+				<posx>815</posx>
+				<posy>115</posy>
+				<width>160</width>
+				<height>100</height>
+				<align>center</align>
+				<font>font_20_CB</font>
+				<textcolor>BBDCDCDC</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$VAR[PlayerControlActionLabel]</label>
+			</control>
+			<control type="image" id="1000">
+				<description>PlayerControlImage</description>
+				<posx>847</posx>
+				<posy>12</posy>
+				<width>100</width>
+				<height>100</height>
+				<align>center</align>
+				<texture>$VAR[PlayerControlActionImage]</texture>
+				<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+			</control>
+		</control>
+		<control type="image">
+			<animation effect="fade" end="100" time="0">VisibleChange</animation>
+			<description>debug separator</description>
+			<posx>-10</posx>
+			<posy>-5</posy>
+			<width>1300</width>
+			<height>100</height>
+			<colordiffuse>BBBBFFFF</colordiffuse>
+			<texture border="10">Glass/SquareThemeBorder.png</texture>
+			<visible>Skin.HasSetting(EnableDebugLogging) + Window.IsVisible(2005) + !Window.IsVisible(2901)</visible>
+		</control>
+	</include>
+	<include name="DFSI_Video_MediaFlags">
+		<control type="image" id="1">
+			<description>Blu-ray Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/bluray.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,.bluray) | substring(VideoPlayer.filename,.blu-ray) | substring(VideoPlayer.filename,.brrip)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>HDDVD Image</description>
+			<width>120</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hddvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,hddvd) | substring(VideoPlayer.filename,hd-dvd)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>DVD Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvd.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,sddvd) | substring(VideoPlayer.filename,.ifo,Right) | substring(VideoPlayer.filename,.img,Right) | substring(VideoPlayer.filename,.iso,Right) | substring(VideoPlayer.filename,.vob,Right)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>HDTV Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hdtv.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,hdtv)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>DVDRIP Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdrip.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,dvdrip)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>DVDR5 Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdr5.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,dvdr5) | substring(VideoPlayer.filename,.r5)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>DVD SCREENER Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvdscreener.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,dvdscreener) | substring(VideoPlayer.filename,dvdscr) | substring(VideoPlayer.filename,.screener)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>TELESYNC Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/telesync.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,telesync) | substring(VideoPlayer.filename,.ts.)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>CAM Image</description>
+			<width>90</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/cam.png</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<visible>substring(VideoPlayer.filename,.CAM)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Video Res Image</description>
+			<width>70</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+			<texture>$INFO[VideoPlayer.VideoResolution,flagging/VideoResolution/,.png]</texture>
+		</control>
+		<control type="image" id="1">
+			<description>Codec Image</description>
+			<width>80</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.VideoCodec,flagging/VideoCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	<include name="DFSI_Audio_MediaFlags">
+		<control type="image" id="1">
+			<description>MP3 Codec Image</description>
+			<posy>2</posy>
+			<width>80</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioCodec,flagging/AudioCodec/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+		<control type="image" id="1">
+			<description>Audio Channels Image</description>
+			<width>70</width>
+			<height>60</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/AudioChannels/,.png]</texture>
+			<fadetime>MediaFlagsCrossfadeTime</fadetime>
+		</control>
+	</include>
+	<include name="FS_ProgressBar">
+		<control type="progress" id="1">
+			<description>Cache Progress</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<info>Player.ProgressCache</info>
+			<midtexture border="2">scrollbar-slider-horz-nofocus.png</midtexture>
+			<colordiffuse>ThemeColor2</colordiffuse>
+			<visible>true</visible>
+		</control>
+		<control type="progress" id="1">
+			<description>Progressbar</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<info>Player.Progress</info>
+			<visible>!Player.Caching</visible>
+		</control>
+		<control type="progress" id="1">
+			<description>Player Caching Progress Bar</description>
+			<posx>0</posx>
+			<posy>87</posy>
+			<width>950</width>
+			<height>11</height>
+			<reveal>true</reveal>
+			<midtexture border="2">scrollbar-slider-horz-focus.png</midtexture>
+			<info>Player.CacheLevel</info>
+			<visible>Player.Caching</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Buffer %</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>ThemeColor</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE] $INFO[Player.CacheLevel]%</label>
+			<visible>Player.Caching + Player.HasVideo </visible>
+		</control>
+		<control type="label" id="1">
+			<description>Elapsed Time Label</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.Time]</label>
+			<visible>!Player.Seeking + !Player.Caching</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Seek Time Label</description>
+			<posx>0</posx>
+			<posy>111</posy>
+			<width>375</width>
+			<height>20</height>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Player.SeekTime]</label>
+			<visible>Player.Seeking + !Player.Caching</visible>
+		</control>
+		<control type="label" id="1">
+			<posx>950</posx>
+			<posy>111</posy>
+			<width>370</width>
+			<height>25</height>
+			<label>$INFO[Player.Duration]</label>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>DefaultFont</font>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+		</control>
+	</include>
+	
+	<!-- <include name="FS_ICON_BACK">	
+		<control type="image">
+			<description>Media Underlay Image</description>
+			<posx>-15</posx>
+			<posy>-5</posy>
+			<width>1310</width>
+			<height>130</height>
+			<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+			<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+		</control>
+	</include> -->
+	
+	<include name="Upper_Music_OSD_Controls">
+		<control type="image">
+			<description>Media Underlay Image</description>
+			<posx>-15</posx>
+			<posy>-5</posy>
+			<width>1310</width>
+			<height>130</height>
+			<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+			<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+		</control>
+<!--(((SIDE BUTTONS)))============================================================================================================-->
+		<control type="grouplist" id="900">
+			<orientation>horizontal</orientation>
+			<posx>45</posx>
+			<posy>25</posy>
+			<itemgap>70</itemgap>
+			<ondown>9000</ondown>
+			<usecontrolcoords>true</usecontrolcoords>
+			<!-- record icon not visible -->
+			<animation effect="slide" end="70,0" time="0" condition="!Player.CanRecord">Conditional</animation>
+			<!--********************************************* REPEAT ****************************************************-->
+			<control type="button" id="400">
+				<description>Repeat</description>
+				<width>70</width>
+				<height>70</height>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>'
+				<onleft>900</onleft>
+				<onright>900</onright>
+			</control>
+			<control type="button" id="498">
+				<description>Repeat</description>
+				<width>70</width>
+				<height>70</height>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-one-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-one-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Playlist.IsRepeatOne</visible>
+				<onleft>900</onleft>
+				<onright>900</onright>
+			</control>
+			<control type="button" id="499">
+				<description>Repeat</description>
+				<width>70</width>
+				<height>70</height>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-all-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-all-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Playlist.IsRepeat</visible>
+				<onleft>900</onleft>
+				<onright>900</onright>
+			</control>
+			<!--********************************************************************************************************-->
+			<control type="button" id="399"> <!--Lyrics-->
+				<description>LYRICS BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label>31926</label>
+				<focusedcolor>red</focusedcolor>
+				<font></font>
+				<texturefocus>osd-subtitles-focus.png</texturefocus>
+				<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+				<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">PlayerControl(Play)</onclick>
+				<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
+				<onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://skin/scripts/CU LRC Lyrics/CU Replacer.py)</onclick>
+				<!-- <onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://home/scripts/CU LRC Lyrics/default.py)</onclick> -->
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="togglebutton" id="601">
+				<description>RANDOM BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label>$INFO[Playlist.Random]</label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-random-off-focus.png</texturefocus>
+				<texturenofocus>osd-random-off-nofocus.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus>osd-random-on-focus.png</alttexturefocus>
+				<alttexturenofocus>osd-random-on-nofocus.png</alttexturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>XBMC.PlayerControl(Random)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="602">
+				<description>PLAYLIST MENU</description>
+				<width>70</width>
+				<height>70</height>
+				<label>559</label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<texturefocus>osd-playlist-focus.png</texturefocus>
+				<texturenofocus>osd-playlist-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(MyMusicPlaylist)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="603">
+				<description>VIZ OPTIONS MENU</description>
+				<width>70</width>
+				<height>70</height>
+				<label>5</label>
+				<focusedcolor>red</focusedcolor>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-viz-preset-settings-focus.png</texturefocus>
+				<texturenofocus>osd-viz-preset-settings-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(121)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="604">
+				<description>VIZ PRESETS MENU</description>
+				<width>70</width>
+				<height>70</height>
+				<label>31923</label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-viz-focus.png</texturefocus>
+				<texturenofocus>osd-viz-nofocus.png</texturenofocus>
+				<onclick>XBMC.ActivateWindow(122)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="500">
+				<description>VIZ SELECT</description>
+				<width>70</width>
+				<height>70</height>
+				<label>31924</label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<texturefocus>osd-viz-presets-focus.png</texturefocus>
+				<texturenofocus>osd-viz-presets-nofocus.png</texturenofocus>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="407">
+				<description>YouTube search</description>
+				<width>70</width>
+				<height>70</height>
+				<label>$LOCALIZE[137]  YOUTUBE</label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<texturefocus>osd-search-focus.png</texturefocus>
+				<texturenofocus>osd-search-nofocus.png</texturenofocus>
+				<onclick>ActivateWindow(videos,plugin://video/YouTube/?path=/root/search&amp;feed=search&amp;search=$INFO[MusicPlayer.Artist],return)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<enable></enable>
+			</control>
+			<control type="togglebutton" id="408">
+				<description>RECORD BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label>264</label>
+				<focusedcolor></focusedcolor>
+				<alttexturefocus>osd-record-2.png</alttexturefocus>
+				<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
+				<font></font>
+				<align>center</align>
+				<usealttexture>Player.Recording</usealttexture>
+				<texturefocus>osd-record-focus.png</texturefocus>
+				<texturenofocus>osd-record-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Record)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Player.CanRecord</visible>
+				<enable>Player.CanRecord</enable>
+			</control>
+		</control>
+	</include>
+	
+	<include name="Upper_Video_OSD_Controls">
+		<control type="image">
+			<description>Media Underlay Image</description>
+			<posx>-15</posx>
+			<posy>-5</posy>
+			<width>1310</width>
+			<height>130</height>
+			<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+			<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+		</control>
+<!--(((SIDE BUTTONS)))============================================================================================================-->
+		<control type="grouplist" id="900">	
+			<orientation>horizontal</orientation>
+			<posx>150</posx>
+			<posy>25</posy>
+			<itemgap>82</itemgap>
+			<ondown>9000</ondown>
+			<control type="button" id="60111">
+				<description>VIDEO SUBTITLES</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[291] $LOCALIZE[287] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-subtitles-focus.png</texturefocus>
+				<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick condition="!System.HasAddon(script.xbmc.subtitles)">PlayerControl(Play)</onclick>
+				<onclick condition="!System.HasAddon(script.xbmc.subtitles)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
+				<!-- INSTALLED -->
+				<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [MOVIE]$INFO[VideoPlayer.Title][/MOVIE])</onclick>
+				<onclick condition="System.HasAddon(script.xbmc.subtitles) + !IsEmpty(VideoPlayer.Title ) + !IsEmpty(VideoPlayer.TVShowTitle)">RunScript(special://home/scripts/XBMC Subtitles/default.py, [TV]$INFO[VideoPlayer.Season] $INFO[VideoPlayer.Episode] $INFO[VideoPlayer.TVshowtitle][/TV])</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<!-- <visible>System.HasAddon(script.xbmc.subtitles)</visible> -->
+			</control>	
+			
+			<!-- <control type="button" id="601">
+				<description>VIDEO SUBTITLES</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[291] $LOCALIZE[287] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-subtitles-focus.png</texturefocus>
+				<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org,Return)</onclick>
+				<visible>!System.HasAddon(script.xbmc.subtitles)</visible>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control> -->
+			
+			<control type="button" id="602">
+				<description>AUDIO SETTINGS BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[292] $LOCALIZE[5] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-audio-settings-focus.png</texturefocus>
+				<texturenofocus>osd-audio-settings-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>ActivateWindow(OSDAudioSettings)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="603">
+				<description>VIDEO SETTINGS BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[291] $LOCALIZE[5] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-video-settings-focus.png</texturefocus>
+				<texturenofocus>osd-video-settings-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="604">
+				<description>BOOKMARKS</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[298] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-bookmarks-focus.png</texturefocus>
+				<texturenofocus>osd-bookmarks-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>ActivateWindow(VideoBookmarks)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="605">
+				<description>dvd menu</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[543] $LOCALIZE[33061] </label>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-dvd-focus.png</texturefocus>
+				<texturenofocus>osd-dvd-nofocus.png</texturenofocus>
+				<pulseonselect>false</pulseonselect>
+				<onclick>PlayerControl(ShowVideoMenu)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="407">
+				<description>EXIT FULLSCREEN BUTTON</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[31933] </label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-exit-fullscreen-focus.png</texturefocus>
+				<texturenofocus>osd-exit-fullscreen-nofocus.png</texturenofocus>
+				<onclick>Dialog.Close(VideoOSD,true)</onclick>
+				<onclick>FullScreen</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="400">
+				<description>EJECT/LOAD</description>
+				<width>70</width>
+				<height>70</height>
+				<label> $LOCALIZE[162] </label>
+				<font></font>
+				<texturefocus>osd-eject-load-drive-focus.png</texturefocus>
+				<texturenofocus>osd-eject-load-drive-nofocus.png</texturenofocus>
+				<onclick>EjectTray()</onclick>
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+		</control>
+	
+	</include>
+	
+	
+	<include name="Lower_OSD_Controls">
+		<control type="image">
+			<description>Media Underlay Image</description>
+			<posx>-15</posx>
+			<posy>-5</posy>
+			<width>1310</width>
+			<height>130</height>
+			<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+			<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+		</control>
+<!--(((MAIN BUTTONS)))============================================================================================================-->	
+		<control type="grouplist" id="9000">
+			<posx>291</posx>
+			<posy>19</posy>
+			<orientation>horizontal</orientation>
+			<include>LowerOSD_ItemGap</include>
+			<onup>900</onup>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<description>Player Controls</description>
+			<usecontrolcoords>true</usecontrolcoords>
+			<ondown condition="Player.HasVideo + Window.IsActive(PlayerControls)">5000</ondown>
+			<!--*********************************** REPEAT (MUSIC ONLY)*****************************************-->
+			<control type="button" id="400">
+				<description>Repeat</description>
+				<width>40</width>
+				<height>40</height>
+				<posy>23</posy>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<!-- <onclick>SetFocus(404)</onclick> -->
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Player.HasAudio + Window.IsActive(PlayerControls)</visible>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+			</control>
+			<control type="button" id="498">
+				<description>Repeat</description>
+				<width>40</width>
+				<height>40</height>
+				<posy>23</posy>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-one-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-one-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<!-- <onclick>SetFocus(404)</onclick> -->
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Playlist.IsRepeatOne + Player.HasAudio + Window.IsActive(PlayerControls)</visible>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+			</control>
+			<control type="button" id="499">
+				<description>Repeat</description>
+				<width>40</width>
+				<height>40</height>
+				<posy>23</posy>
+				<label>RPT$INFO[Playlist.Repeat, : ]</label>
+				<font></font>
+				<texturefocus>osd-repeat-all-focus.png</texturefocus>
+				<texturenofocus>osd-repeat-all-nofocus.png</texturenofocus>
+				<onclick>PlayerControl(Repeat)</onclick>
+				<!-- <onclick>SetFocus(404)</onclick> -->
+				<pulseonselect>false</pulseonselect>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Playlist.IsRepeat + Player.HasAudio + Window.IsActive(PlayerControls)</visible>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+			</control>
+			<!--************************************************************************************************-->
+			<control type="button" id="401">
+				<description>SKIP PREVIOUS BUTTON</description>
+				<width>65</width>
+				<height>65</height>
+				<posy>10</posy>
+				<label> $LOCALIZE[31927] </label>
+				<font></font>
+				<texturefocus>osd-skip-prev-focus.png</texturefocus>
+				<texturenofocus>osd-skip-prev-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Previous)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<onleft condition="!Window.IsActive(PlayerControls)">406</onleft>
+			</control>
+			<control type="button" id="402">
+				<description>REWIND BUTTON</description>
+				<width>65</width>
+				<height>65</height>
+				<posy>10</posy>
+				<label> $LOCALIZE[31928] </label>
+				<font></font>
+				<texturefocus>osd-rewind-focus.png</texturefocus>
+				<texturenofocus>osd-rewind-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Rewind)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="403">
+				<description>STOP BUTTON</description>
+				<width>85</width>
+				<height>85</height>
+				<label> $LOCALIZE[31929] </label>
+				<font></font>
+				<texturefocus>osd-stop-focus.png</texturefocus>
+				<texturenofocus>osd-stop-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Stop)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible></visible>
+			</control>
+			<control type="togglebutton" id="404">
+				<description>PAUSE PLAY ETC BUTTON</description>
+				<width>85</width>
+				<height>85</height>
+				<label> $LOCALIZE[31930] </label>
+				<altlabel></altlabel>
+				<font></font>
+				<texturefocus>osd-pause-focus.png</texturefocus>
+				<texturenofocus>osd-pause-nofocus.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus>osd-play-focus.png</alttexturefocus>
+				<alttexturenofocus>osd-play-nofocus.png</alttexturenofocus>
+				<onclick>PlayerControl(Play)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="405">
+				<description>FAST FORWARD BUTTON</description>
+				<width>65</width>
+				<height>65</height>
+				<posy>10</posy>
+				<label> $LOCALIZE[31931] </label>
+				<font></font>
+				<texturefocus>osd-forward-focus.png</texturefocus>
+				<texturenofocus>osd-forward-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Forward)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+			</control>
+			<control type="button" id="406">
+				<description>SKIP NEXT BUTTON</description>
+				<width>65</width>
+				<height>65</height>
+				<posy>10</posy>
+				<label> $LOCALIZE[31927] </label>
+				<focusedcolor></focusedcolor>
+				<font></font>
+				<align>center</align>
+				<texturefocus>osd-skip-next-focus.png</texturefocus>
+				<texturenofocus>osd-skip-next-nofocus.png</texturenofocus>
+				<onclick condition="!Window.IsActive(PlayerControls)">XBMC.PlayerControl(Next)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasVideo">XBMC.PlayerControl(BigSkipForward)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + !IsEmpty(MusicPlayer.offset(1).Title)">XBMC.PlayerControl(Next)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + IsEmpty(MusicPlayer.offset(1).Title)">XBMC.PlayerControl(Stop)</onclick>
+				<onclick condition="Window.IsActive(PlayerControls) + Player.HasAudio + IsEmpty(MusicPlayer.offset(1).Title)">ReloadSkin()</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<onright condition="!Window.IsActive(PlayerControls)">401</onright>
+			</control>
+			<control type="togglebutton" id="408">
+			<!--MUSIC ONLY-->
+				<description>RECORD BUTTON</description>
+				<width>40</width>
+				<height>40</height>
+				<posy>23</posy>
+				<label>264</label>
+				<focusedcolor></focusedcolor>
+				<alttexturefocus>osd-record-2.png</alttexturefocus>
+				<alttexturenofocus>osd-record-focus.png</alttexturenofocus>
+				<font></font>
+				<align>center</align>
+				<usealttexture>Player.Recording</usealttexture>
+				<texturefocus>osd-record-focus.png</texturefocus>
+				<texturenofocus>osd-record-nofocus.png</texturenofocus>
+				<onclick>XBMC.PlayerControl(Record)</onclick>
+				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
+				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
+				<visible>Window.IsActive(PlayerControls) + Player.HasAudio</visible>
+				<enable>Player.CanRecord</enable>
+				<animation effect="fade" end="65" condition="!Player.CanRecord">Conditional</animation>
+				<onright>401</onright>
+			</control>
+		</control>	
+	</include>
+	<include name="LowerOSD_ItemGap">
+		<include condition="!Window.IsActive(PlayerControls)">Not__PlayerControls__Gap</include>
+		<include condition="Window.IsActive(PlayerControls)">PlayerControlItemGap</include>
+	</include>
+	<include name="Not__PlayerControls__Gap">
+		<itemgap>52</itemgap>
+	</include>
+<!--**************************************************************************************-->
+	
+	<include name="BusyAnimationGroup">
+		<control type="group">
+			<animation effect="zoom" start="60" end="90" center="640,360" condition="true" pulse="true" time="1100">conditional</animation>
+			<posx>640</posx>
+			<posy>360</posy>
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>-80</posx>
+				<posy>-80</posy>
+				<width>160</width>
+				<height>160</height>
+				<texture border="">busy5.png</texture>
+				<colordiffuse>BFFFFFFF</colordiffuse>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1500" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation effect="fade" start="20" end="100" time="1100" pulse="true" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>-60</posx>
+				<posy>-60</posy>
+				<width>120</width>
+				<height>120</height>
+				<texture border="">busy5.png</texture>
+				<colordiffuse>BFFFFFFF</colordiffuse>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="-50" end="-410" center="auto" time="1500" loop="true" reversible="false" condition="true">Conditional</animation>
+				<animation effect="fade" start="20" end="100" time="1100" pulse="true" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
+	<include name="Video_Start_Animation">
+		<animation effect="fade" time="400" condition="Window.Next(2005)">WindowClose</animation>
+	</include>
+	<include name="FS__OpenClose">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+	</include>
+	<include name="OSD__OpenClose">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="400">WindowClose</animation>
+	</include>
+	<include name="OSD_settings__OpenClose">
+		<animation effect="fade" time="400">WindowOpen</animation>
+		<animation effect="fade" time="400">WindowClose</animation>
+	</include>
+</includes>

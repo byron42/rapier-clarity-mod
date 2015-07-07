@@ -1,0 +1,87 @@
+<window id="2901">
+	<defaultcontrol always="true">404</defaultcontrol>
+	<includes>OSD__OpenClose</includes>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>	
+			<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,-10" end="0,-120" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,-122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
+				<animation effect="slide" end="0,-130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
+				
+				<!--************************************-->
+				<include>Upper_Video_OSD_Controls</include>
+				<!--************************************-->
+				
+			</control>
+			
+			<control type="group">
+				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
+				<!--HomeMenuPaneOpenCloseAnim-->
+				<animation effect="slide" start="0,730" end="0,602" time="250" tween="circle" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0,602" end="0,730" time="250">WindowClose</animation>
+				<!--HomeMenuPaneSpecificCloseAnim-->
+				<animation effect="slide" end="0,122" time="150" condition="Window.IsVisible(Favourites) | Window.IsVisible(123) | Window.IsVisible(OSDAudioSettings)">Conditional</animation>
+				<animation effect="slide" end="0,130" time="100" condition="Window.IsActive(ShutdownMenu) | Window.IsActive(VideoBookmarks)">Conditional</animation>
+				
+				<!--******************************-->
+				<include>Lower_OSD_Controls</include>
+				<!--******************************-->
+				
+			<!--labels/time-->
+				<control type="label" id="2222">
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label> [UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE] </label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+					<visible>Window.IsTopmost(VideoOSD)</visible>
+				</control>
+				<control type="label">
+					<description>Actions (Seeking, Paused, Etc)</description>
+					<posx>25</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>ThemeColor</textcolor>
+					<shadowcolor></shadowcolor>
+					<label>$VAR[PlayerControlActionLabel]</label>
+					<visible>!Control.IsVisible(2222)</visible>
+				</control>
+				<control type="label">
+					<posx>1005</posx>
+					<posy>47</posy>
+					<width>260</width>
+					<height>15</height>
+					<label>$INFO[System.Time]</label>
+					<!-- <label>IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</label> -->
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>font_23_B</font>
+					<textcolor>gray</textcolor>
+					<shadowcolor></shadowcolor>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

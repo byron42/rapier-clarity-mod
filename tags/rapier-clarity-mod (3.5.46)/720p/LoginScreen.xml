@@ -1,0 +1,95 @@
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!--********************************* LoginScreenBackground ***********************************************-->
+		<control type="image">
+			<description>Default Background</description>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/images/backgrounds/default-background.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<fadetime>BackgroundCrossfadeTime</fadetime>
+			<!--BackgroundOpenCloseAnim-->
+			<animation effect="fade" start="40" end="100" time="600">WindowOpen</animation> 
+			<animation effect="fade" start="100" end="40" time="600">WindowClose</animation>
+			<!--BackgroundOpenCloseAnim-->
+		</control>
+		<!--*******************************************************************************************************-->			
+		<control type="group">
+			<posx>295</posx>
+			<posy>200</posy>
+			<control type="wraplist" id="52">
+				<description>Profiles Area</description>
+				<posx>-212</posx>
+				<posy>5</posy>
+				<width>1140</width>
+				<height>230</height>
+				<itemgap>-</itemgap>
+				<focusposition>2</focusposition>
+				<orientation>horizontal</orientation>
+				<ondown>213</ondown>
+				<itemlayout width="225" height="225">
+					<!--<control type="image">
+						<width>200</width>
+						<height>200</height>
+						<texture border="15">item-focus-background.png</texture>
+						<animation effect="fade" end="40" condition="true">Conditional</animation>
+					</control>-->
+					<control type="image">
+						<posx>12</posx>
+						<posy>12</posy>	
+						<width>200</width>
+						<height>200</height>
+						<info>ListItem.Icon</info>
+						<!-- <aspectratio align="middle" aligny="middle">keep</aspectratio> -->
+						<aspectratio>keep</aspectratio>
+						<animation effect="fade" end="40" condition="true">Conditional</animation>
+					</control>	
+				</itemlayout>
+				<focusedlayout width="225" height="225">
+					<control type="image">
+						<width>225</width>
+						<height>225</height>
+						<texture border="15">Glass/KeyFocus.png</texture>
+					</control>			
+					<control type="image">
+						<posx>12</posx>
+						<posy>12</posy>
+						<width>200</width>
+						<height>200</height>
+						<info>ListItem.Icon</info>
+						<!-- <aspectratio align="middle" aligny="middle">keep</aspectratio> -->
+						<aspectratio>keep</aspectratio>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">	
+				<posx>-405</posx>
+				<posy>-23</posy>
+				<control type="image">
+					<height>5</height>
+					<posy>0</posy>
+					<width>1500</width>
+					<texture>separator2.png</texture>
+				</control>
+				<control type="image">
+					<height>5</height>
+					<posy>280</posy>
+					<width>1500</width>
+					<texture>separator2.png</texture>
+				</control>
+			</control>	
+			<control type="label">
+				<posx>-275</posx>
+				<posy>350</posy>
+				<width>1260</width>
+				<font>Font_Lib80</font>
+				<textcolor>Grey</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>center</align>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			</control>
+		</control>
+	</controls>
+</window>
