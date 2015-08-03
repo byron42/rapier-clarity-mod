@@ -2,6 +2,8 @@
 	<!---->
 	<include file="Defaults.xml"/>
 	<include file="Includes_Variables.xml"/>
+	<include file="Includes_SystemStatistics.xml"/>
+	
 	<!---->
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
@@ -900,10 +902,8 @@
 				<font></font>
 				<texturefocus>osd-subtitles-focus.png</texturefocus>
 				<texturenofocus>osd-subtitles-nofocus.png</texturenofocus>
-				<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">PlayerControl(Play)</onclick>
-				<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">ActivateWindow(10001,plugin://programs/Addons4Xbox Installer/?listype=listaddons&amp;type=script&amp;repoid=repository.xbmc.org,Return)</onclick>
-				<onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://skin/scripts/CU LRC Lyrics/CU Replacer.py)</onclick>
-				<!-- <onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://home/scripts/CU LRC Lyrics/default.py)</onclick> -->
+				<onclick condition="!System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://skin/scripts/CU LRC Lyrics/Lyrics_Installer.py)</onclick>
+				<onclick condition="System.HasAddon(script.cu.lrc.lyrics)">RunScript(special://home/scripts/CU LRC Lyrics/default.py)</onclick>
 				<animation effect="zoom" end="120" center="auto" time="100">focus</animation>
 				<animation effect="zoom" start="120" center="auto" time="100">unfocus</animation>
 			</control>

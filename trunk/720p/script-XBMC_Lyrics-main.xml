@@ -183,6 +183,19 @@
 						<label>$INFO[Player.Time]</label>
 						<visible>!Player.Seeking</visible>
 					</control>
+					<control type="label" id="">
+						<description>Elapsed Time Label</description>
+						<posx>320</posx>
+						<posy>252</posy>
+						<width>150</width>
+						<height>30</height>
+						<font>font_28_NRBC</font>
+						<textcolor>BBF3E5AB</textcolor>
+						<shadowcolor></shadowcolor>
+						<align>left</align>
+						<label>$INFO[Player.SeekTime]</label>
+						<visible>Player.Seeking</visible>
+					</control>
 					<control type="progress">
 						<description>Progressbar</description>
 						<posx>320</posx>
@@ -369,8 +382,8 @@
 					</control>
 					<control type="spincontrol" id="101">
 						<description>Next page button</description>
-						<posx>1125</posx>
-						<posy>300</posy>
+						<posx>1160</posx>
+						<posy>305</posy>
 						<width>27</width>
 						<height>27</height>
 						<font>font_23</font>
@@ -380,7 +393,7 @@
 						<onleft>101</onleft>
 						<onright>101</onright>
 						<ondown>101</ondown>
-						<onup>101</onup>
+						<onup>100</onup>
 						<showonepage>false</showonepage>
 						<textureup>arrow-scroll-up-nofocus2.png</textureup>
 						<texturedown flipy="true">arrow-scroll-up-nofocus2.png</texturedown>
@@ -394,7 +407,7 @@
 						<!-- <width>1075</width> -->
 						<width>1190</width>
 						<height>280</height>
-						<onleft>111</onleft>
+						<onleft>999</onleft>
 						<onright>111</onright>
 						<onup>999</onup>
 						<ondown>110</ondown>
@@ -456,17 +469,17 @@
 					</control>
 					<control type="spincontrol" id="111">
 						<description>Next page button</description>
-						<posx>1125</posx>
-						<posy>300</posy>
+						<posx>1160</posx>
+						<posy>305</posy>
 						<width>27</width>
 						<height>27</height>
 						<font>font_23</font>
 						<align>right</align>
 						<subtype>page</subtype>
 						<textcolor>FFFFFFFF</textcolor>
-						<onleft>110</onleft>
-						<onright>110</onright>
-						<ondown>110</ondown>
+						<onleft>111</onleft>
+						<onright>111</onright>
+						<ondown>111</ondown>
 						<onup>110</onup>
 						<showonepage>false</showonepage>
 						<textureup>arrow-scroll-up-nofocus2.png</textureup>
@@ -481,7 +494,7 @@
 					<control type="list" id="120">
 						<width>1190</width>
 						<height>280</height>
-						<onleft>121</onleft>
+						<onleft>999</onleft>
 						<onright>121</onright>
 						<onup>999</onup>
 						<ondown>120</ondown>
@@ -543,17 +556,17 @@
 					</control>
 					<control type="spincontrol" id="121">
 						<description>Next page button</description>
-						<posx>1125</posx>
-						<posy>300</posy>
+						<posx>1160</posx>
+						<posy>305</posy>
 						<width>27</width>
 						<height>27</height>
 						<font>font_23</font>
 						<align>right</align>
 						<subtype>page</subtype>
 						<textcolor>FFFFFFFF</textcolor>
-						<onleft>120</onleft>
-						<onright>120</onright>
-						<ondown>120</ondown>
+						<onleft>121</onleft>
+						<onright>121</onright>
+						<ondown>121</ondown>
 						<onup>120</onup>
 						<showonepage>false</showonepage>
 						<textureup>arrow-scroll-up-nofocus2.png</textureup>
@@ -567,12 +580,12 @@
 					
 					<control type="label">
 						<description>Playlist Pos No</description>
-						<posx>45</posx>
+						<posx>-20</posx>
 						<posy>300</posy>
 						<width>200</width>
 						<label>$INFO[MusicPlayer.Playlistposition,$LOCALIZE[435] ]$INFO[MusicPlayer.Playlistlength,/]</label>
 						<font>font_23</font>
-						<align>right</align>
+						<align>left</align>
 						<textcolor>BBF3E5AB</textcolor>
 						<visible>!MusicPartyMode.Enabled</visible>
 					</control>

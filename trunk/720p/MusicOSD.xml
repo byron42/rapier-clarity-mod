@@ -1,6 +1,6 @@
 <window id="120">
 	<defaultcontrol always="true">404</defaultcontrol>
-	<includes>OSD__OpenClose</includes>
+	<include>OSD__OpenClose</include>
 	<controls>
 	
 		<control type="group">	
