@@ -10,7 +10,7 @@
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 	
 	<!--DialogOpenCloseAnim-->
-	<animation condition="![[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114)]" type="VisibleChange">
+	<animation condition="![[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo] | Window.IsVisible(114) | Window.IsVisible(script-XBMC_Lyrics-main.xml)]" type="VisibleChange">
 		<effect type="fade" end="100" time="150"/>
 		<!-- <effect type="slide" start="0,-45" time="200" tween="circle" easing="out"/> -->
 	</animation>	
@@ -166,7 +166,7 @@
 				<ondown>1</ondown>
 				<onleft>1</onleft>
 				<onright>1</onright>
-				<visible>![Window.IsVisible(Home) | [Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo +!Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002)]</visible>
+				<visible>![Window.IsVisible(Home) | [Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsActive(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | Control.IsVisible(6002) | Window.IsVisible(script-XBMC_Lyrics-main.xml)]</visible>
 			</control>
 		</control>
 <!--******** HACKED!!! ************************-->
@@ -174,20 +174,23 @@
 			<!--normal zoom for video/no music cd-->
 			<animation effect="zoom" start="300,715r,1280,720" end="300,715r,1080,720" time="150" condition="[Player.HasVideo + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]] | [[Player.HasAudio + !Skin.HasSetting(HidecdArt)] + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]">VisibleChange</animation>
 			<!--zoom for no music cd specific-->
-			<animation effect="zoom" start="285,715r,1280,720" end="285,715r,1095,720" time="150" condition="Player.HasAudio + [Skin.HasSetting(HidecdArt) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]">VisibleChange</animation>
+			<animation effect="zoom" start="285,715r,1280,720" end="285,715r,1095,720" time="150" condition="Player.HasAudio + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Skin.HasSetting(HidecdArt) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]]">VisibleChange</animation>
 			<!--empty thumb/no cd-->
-			<animation effect="slide" end="-10,0" condition="Player.HasAudio + Skin.HasSetting(HidecdArt)">Conditional</animation>
-			<animation effect="slide" end="20,0" condition="Player.HasAudio + !Skin.HasSetting(HidecdArt) + ![Window.IsActive(Home) + !Window.IsActive(PlayerControls)]">Conditional</animation>
+			<animation effect="slide" end="-10,0" condition="Player.HasAudio + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + Skin.HasSetting(HidecdArt)">Conditional</animation>
+			<animation effect="slide" end="20,0" condition="Player.HasAudio + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Skin.HasSetting(HidecdArt) + ![Window.IsActive(Home) + !Window.IsActive(PlayerControls)]">Conditional</animation>
 			<!-- visualization with musicOSD -->
-			<animation effect="zoom" start="0,0,1280,720" end="0,0,1510,720" time="150" condition="[Window.IsActive(2006) + Player.ShowInfo + Window.IsActive(120)] | Window.IsActive(2901)">Conditional</animation>
-			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="Window.IsActive(120)">Conditional</animation>
-			<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+			<animation effect="zoom" start="0,0,1280,720" end="0,0,1510,720" time="150" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Window.IsActive(2006) + Player.ShowInfo + Window.IsActive(120)] | Window.IsActive(2901)">Conditional</animation>
+			<animation effect="slide" end="0,255" time="250" tween="circle" easing="out" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + Window.IsActive(120)">Conditional</animation>
+			<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + Window.IsActive(2901)">Conditional</animation>
 			<!--home now playing-->
 			<animation effect="zoom" start="0,0,1280,720" end="0,0,560,720" time="0" condition="[Window.IsActive(Home) + !Window.IsActive(PlayerControls) + !Skin.HasSetting(HideNowPlayingMedia)]">Conditional</animation>
-			<animation effect="slide" end="-115,123" time="0" condition="[Window.IsActive(Home) + Player.HasAudio + !Window.IsActive(PlayerControls) + !System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
-			<animation effect="slide" end="-105,93" time="0" condition="[Window.IsActive(Home) + Player.HasVideo + !Window.IsActive(PlayerControls) + !System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
-			<animation effect="slide" end="-115,157" time="0" condition="[Window.IsActive(Home) + Player.HasAudio + !Window.IsActive(PlayerControls) + System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
-			<animation effect="slide" end="-105,127" time="0" condition="[Window.IsActive(Home) + Player.HasVideo + !Window.IsActive(PlayerControls) + System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
+			<animation effect="slide" end="-115,123" time="0" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Window.IsActive(Home) + Player.HasAudio + !Window.IsActive(PlayerControls) + !System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
+			<animation effect="slide" end="-105,93" time="0" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Window.IsActive(Home) + Player.HasVideo + !Window.IsActive(PlayerControls) + !System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
+			<animation effect="slide" end="-115,157" time="0" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Window.IsActive(Home) + Player.HasAudio + !Window.IsActive(PlayerControls) + System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
+			<animation effect="slide" end="-105,127" time="0" condition="!Window.IsVisible(script-XBMC_Lyrics-main.xml) + [Window.IsActive(Home) + Player.HasVideo + !Window.IsActive(PlayerControls) + System.GetBool(LookAndFeel.EnableRSSFeeds) + !Skin.HasSetting(HideNowPlayingMedia) + Skin.HasSetting(NowPlayingAlignTop)]">Conditional</animation>
+			<!--xbmc lyrics-->
+			<animation effect="zoom" end="0,0,1395,715" time="0" condition="Window.IsVisible(script-XBMC_Lyrics-main.xml)">Conditional</animation>
+			<animation effect="slide" end="58,188" time="0" condition="Window.IsVisible(script-XBMC_Lyrics-main.xml)">Conditional</animation>
 			<control type="slider" id="401">
 				<description>Seek Slider</description>
 				<posx>20</posx>
@@ -197,7 +200,7 @@
 				<texturesliderbar>seekslider.png</texturesliderbar>
 				<textureslidernib>slider_nibFO.png</textureslidernib>
 				<textureslidernibfocus>slider_nibFO.png</textureslidernibfocus>
-				<visible>[[Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsVisible(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | [Window.IsActive(Home) + [!Skin.HasSetting(HideNowPlayingMedia) | Window.IsActive(PlayerControls)]]]] + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
+				<visible>[Window.IsVisible(script-XBMC_Lyrics-main.xml) | [Window.IsVisible(2005) + Player.ShowInfo] | [Window.IsVisible(2006) + Player.ShowInfo + !Player.ShowCodec] | Window.IsVisible(114) | [Window.IsActive(Home) + [!Skin.HasSetting(HideNowPlayingMedia) | Window.IsActive(PlayerControls)]]]] + Player.Seeking + [!Player.Paused | Player.Paused]</visible>
 				<onup>1</onup>
 				<ondown>1</ondown>
 				<onleft>1</onleft>

@@ -1,9 +1,24 @@
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+8.2.15 Version 3.5.47
+
+	8.2.15
+------------------------------------------------------------------------------
+		= Fixed up script-XBMC_Lyrics-main, always worked but wasn't really up
+		  to my standards of things...looks/works fine now (seek bar too!)
+
+		= Reinvented how to install CuLrcLyrics into x4x...wrote a little script
+		  that installs zips from rcm/scripts/Cu LRC Lyrics instead of relying on
+		  the program to install it for me...works without a hitch
+
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 4.16.15 Version 3.5.46
 
-	6.5.15
+	7.5.15
 ------------------------------------------------------------------------------
 		= Removing DialogFullscreenInfo.xml from the skin and moving all
 		  releavant parts into VideoFullscreen.xml --- all other changes

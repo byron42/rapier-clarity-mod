@@ -13,7 +13,7 @@
 			<font></font>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
-			<onfocus condition="!System.HasAddon(script.xbmc.subtitles) + Window.Previous(2005)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org)</onfocus>
+			<!-- <onfocus condition="!System.HasAddon(script.xbmc.subtitles) + Window.Previous(2005)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=XBMC+Subtitles&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.xbmc.subtitles%2Fscript.xbmc.subtitles-3.9.18.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.xbmc.subtitles&amp;type=zip&amp;repoid=repository.xbmc.org)</onfocus> -->
 			<onfocus condition="!System.HasAddon(script.cu.lrc.lyrics) + Window.Previous(2006)">RunPlugin(plugin://programs/Addons4Xbox Installer/?installfromrepo=true&amp;addonname=CU+LRC+Lyrics&amp;url=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo%2Fscript.cu.lrclyrics%2Fscript.cu.lrclyrics-1.0.7.zip&amp;datadir=http%3A%2F%2Fmirrors.xbmc.org%2Faddons%2Ffrodo&amp;addonid=script.cu.lrclyrics&amp;type=zip&amp;repoid=repository.xbmc.org)</onfocus>
 			<onfocus>SetFocus(500)</onfocus>
 		</control>
