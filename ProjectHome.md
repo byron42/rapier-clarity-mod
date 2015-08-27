@@ -1,0 +1,1 @@
+Rapier Clarity Mod is a fast efficient skin for xbmc4xbox that offers much customization and light ram usage for a platform with very limited resources.
