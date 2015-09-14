@@ -164,7 +164,9 @@
 			
 			
 	<!--(((VIEWS)))===========================================================================================================================-->			
-			<control type="group">   
+			<control type="group"> 
+				<!--SkinSystemStatReopositonSmaller-->
+				<animation effect="zoom" start="0,0,1280,720" end="15,27,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!--**************************************************************************** IconView *********************(50)*********-->
 				<control type="group" id="500">	
 					<!-- BOTTOM PANE + PERMANANT TOP MENU(shrink it to size AND move it) -->
@@ -480,6 +482,8 @@
 						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<control type="image">
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
@@ -487,6 +491,8 @@
 						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="scrollbar" id="151">
@@ -874,6 +880,8 @@
 			
 				<!--************************************************************************** ProgramsLargePoster ********** (100) ********-->
 				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<animation effect="fade" start="100" end="0" time="0" condition="![Control.IsVisible(100) + StringCompare(Container.ViewMode,$LOCALIZE[31116])]">Conditional</animation>
 					<defaultcontrol always="true">100</defaultcontrol>
 					<visible>Control.IsVisible(100) + StringCompare(Container.ViewMode,$LOCALIZE[31116])</visible>
@@ -1160,8 +1168,11 @@
 					</control>
 				</control>	
 				
-				<!--*******************************************************************+********* CoverFlow ****************** (572) *******-->
+				<!--***************************************************************************** CoverFlow ****************** (572) *******-->
 				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+					<!---->
 					<animation effect="fade" start="100" end="0" time="0" condition="![Control.IsVisible(572) + StringCompare(Container.ViewMode,$LOCALIZE[33031])]">Conditional</animation>
 					<defaultcontrol always="true">572</defaultcontrol>
 					<visible>Control.IsVisible(572) + StringCompare(Container.ViewMode,$LOCALIZE[33031])</visible>	
@@ -2837,6 +2848,9 @@
 			
 	<!--(((MENU BAR)))===========================================================================================================================-->		
 			<control type="group" id="505">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>			
 				<height>34</height>
@@ -3487,6 +3501,11 @@
 				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
 			</control>
 			<!--***********************************************************************************************************************-->
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 		
 	</controls>		

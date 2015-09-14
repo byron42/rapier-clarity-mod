@@ -275,6 +275,8 @@
 
 	<!--(((VIEWS-MOVIES)))===========================================================================================================================-->		
 			<control type="group">
+				<!--SkinSystemStatReopositonSmaller-->
+				<animation effect="zoom" start="0,0,1280,720" end="15,27,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!--PlaylistEditorFade-->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
@@ -600,6 +602,8 @@
 						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<control type="image">
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
@@ -607,6 +611,8 @@
 						<include>BackgroundOffset</include>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="scrollbar" id="151">
@@ -1668,7 +1674,9 @@
 				</control>	
 		
 				<!--************************************************************************* MoviesListInfoView ************* (58) ********-->
-				<control type="group" id="500">			    
+				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">58</defaultcontrol>
 					<visible>Control.IsVisible(58)</visible>
 					<!--InfoPaneHiddenSlideAnim-->
@@ -2130,7 +2138,9 @@
 				</control>	
 				
 				<!--************************************************************************** MoviesFanartView ************** (59) ********-->
-				<control type="group" id="500">	
+				<control type="group" id="500">
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">59</defaultcontrol>
 					<visible>Control.IsVisible(59)</visible>
 					<!--InfoPaneHiddenSlideAnim-->
@@ -2285,6 +2295,9 @@
 					</control>
 				<!--Fanart_Info-->
 					<control type="group">
+						<!--SkinSystemStatReopositonSmaller-->
+						<animation effect="zoom" start="0,0,1280,720" end="15,17,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<!---->
 						<animation effect="zoom" end="98" center="auto" time="300" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 						<animation effect="slide" end="0,15" condition="Window.IsActive(133) | Window.IsActive(112)">Conditional</animation>
 						<!---->
@@ -2749,6 +2762,8 @@
 				
 				<!--************************************************************************** MoviesLargePoster ************* (66) ********-->
 				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">66</defaultcontrol>
 					<visible>Control.IsVisible(66)</visible>
 					<!--MediaViewOpenCloseAnim-->
@@ -2772,7 +2787,7 @@
 						 <width>1300</width>
 						 <height>502</height>
 						 <texture border="10">Glass/ShutDownButtonF.png</texture>
-						 <animation effect="fade" end="60" condition="true">Conditional</animation> 
+						 <animation effect="fade" end="60" condition="true">Conditional</animation>
 					</control>
 					<!--************************************************************************************-->
 					<!--InfoPaneHiddenSlideAnim(WithoutMediaInfo)-->
@@ -3415,6 +3430,8 @@
 				
 				<!--************************************************************************** ShowcaseSplitView ************* (75) ********-->
 				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">75</defaultcontrol>
 					<visible>Control.IsVisible(75)</visible>
 					<!--MediaViewOpenCloseAnim-->
@@ -4790,7 +4807,9 @@
 				</control>
 			
 				<!--******************************************************************************* WallView ***************** (77) ********-->
-				<control type="group" id="500">	
+				<control type="group" id="500">
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">77</defaultcontrol>
 					<pagecontrol>150</pagecontrol>
 					<!--MediaViewOpenCloseAnim-->
@@ -5695,11 +5714,15 @@
 		
 	<!--(((VIEWS-BOTH)))==========================================================================================================================-->
 			<control type="group">
+				<!--SkinSystemStatReopositonSmaller-->
+				<animation effect="zoom" start="0,0,1280,720" end="15,27,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!--PlaylistEditorFade-->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
 				<!--***************************************************************************** CoverFlow ****************** (571) ********-->
 				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">571</defaultcontrol>
 					<visible>Control.IsVisible(571) + StringCompare(Container.ViewMode,$LOCALIZE[33031])</visible>	
 					<!--MediaViewOpenCloseAnim-->
@@ -5753,7 +5776,7 @@
 							<animation effect="fade" time="400">WindowClose</animation>
 							<visible>Control.IsVisible(571) + !Skin.HasSetting(RemoveCoverFlowLighterBackgound)</visible>
 						</control>
-				<!--main group for positioning	-->
+				<!--main group for positioning-->
 						<control type="group">
 							<posx></posx>	
 							<animation effect="slide" end="0,30" time="200" condition="Skin.HasSetting(HideInfoPane) + [!Skin.HasSetting(HideCoverFlowPlot)]">Conditional</animation>
@@ -7859,6 +7882,8 @@
 			
 	<!--(((VIEWS-TVSHOWS)))==========================================================================================================================-->	
 			<control type="group">
+				<!--SkinSystemStatReopositonSmaller-->
+				<animation effect="zoom" start="0,0,1280,720" end="15,27,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!--PlaylistEditorFade-->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
@@ -8980,7 +9005,9 @@
 				</control>	
 				
 				<!--*************************************************************************** TVShowsEpisodeView *********** (60) ********-->
-				<control type="group" id="500">			    
+				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">60</defaultcontrol>
 					<visible>Control.IsVisible(60)</visible>
 					<!--MediaViewOpenCloseAnim-->
@@ -9260,7 +9287,9 @@
 				</control>		
 				
 				<!--*************************************************************************** TVShowsListInfoView ********** (61) ********-->
-				<control type="group" id="500">			    
+				<control type="group" id="500">	
+					<!--SkinSystemStatReopositonBigger-->
+					<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<defaultcontrol always="true">61</defaultcontrol>
 					<visible>Control.IsVisible(61)</visible>
 					<!--InfoPaneHiddenSlideAnim-->
@@ -11148,6 +11177,8 @@
 						<texture>view-fade-background.png</texture>
 						<visible>!Skin.HasSetting(HideTVShowsWideListFanart)</visible>
 						<animation effect="fade" end="60" condition="true">Conditional</animation>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<control type="list" id="62">	
 						<viewtype label="31113">Wide List</viewtype>
@@ -11405,7 +11436,9 @@
 			</control>
 		
 	<!--(((MENU BAR)))================================================================================================================================-->	
-			<control type="group" id="505">		
+			<control type="group" id="505">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!--PlaylistEditorFade-->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)]">Conditional</animation>
@@ -12808,6 +12841,10 @@
 				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
 			</control>
 			<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO ViewsDialogPopUpScreenDim OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
 			
 		</control>
 	</controls>		

@@ -4499,6 +4499,9 @@
 	
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals) + Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
+				<!---->
 				<visible>Player.HasMedia + !Skin.HasSetting(HideNowPlayingMedia)</visible>
 				<!-- <animation effect="slide" start="0,-35" end="0,0" time="250" easing="out" condition="!ControlGroup(900).HasFocus">Conditional</animation> -->
 				<animation effect="slide" end="0,160" time="250" easing="out" condition="true">Conditional</animation>
@@ -4762,6 +4765,9 @@
 			</control>
 	
 			<control type="group" id="505">	<!--RSS FEEDS-->
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,26" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia">Conditional</animation>
 				<description>Menu Bar Area</description>			
 				<posy>MenuBarOffsetY</posy>	
@@ -5210,6 +5216,11 @@
 				</control>
 				<!--*************************************************************************************************-->
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>
 </window>

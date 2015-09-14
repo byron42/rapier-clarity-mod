@@ -1,0 +1,111 @@
+<includes>
+	<include name="System_Vitals_Bar">
+		<control type="group">
+			<animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia">Conditional</animation>
+			<description>VITALS</description>			
+			<posy>MenuBarOffsetY</posy>	
+			<control type="image" id="1110">
+				<width>ScreenWidth</width>
+				<height>35</height>
+				<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<animation effect="fade" start="80" end="80"  condition="true">Conditional</animation>
+			</control>
+			<control type="grouplist">
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="button">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>RAM: $INFO[System.FreeMemory]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>CPU: $INFO[System.CPUTemperature]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>GPU: $INFO[System.GPUTemperature]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>FPS: $INFO[System.FPS]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+			</control>
+			<visible>Skin.HasSetting(ShowSystemVitals)</visible>
+		</control>
+	</include>
+</includes>

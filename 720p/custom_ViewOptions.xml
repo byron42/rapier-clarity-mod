@@ -3,6 +3,9 @@
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="group">
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!---->
 			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
 		<!--little dialog fade out-->

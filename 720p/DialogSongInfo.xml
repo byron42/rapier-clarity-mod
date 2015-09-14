@@ -183,7 +183,10 @@
 			</control>
 			
 	<!--(((MENU BAR)))==============================================================================================================================-->			
-			<control type="group" id="505">		
+			<control type="group" id="505">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(850).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation>
 				<description>Menu Bar Area</description>		
 				<height>34</height>
@@ -871,6 +874,11 @@
 					</control>
 				</control>		
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>		
 </window>

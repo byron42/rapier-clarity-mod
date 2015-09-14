@@ -249,6 +249,9 @@
 			
 	<!--(((MENU BAR)))============================================================================================================================-->		
 			<control type="group">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="0" end="100" time="250" delay="300" condition="!Window.IsActive(profilesettings)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(profilesettings)">Conditional</animation>
 				<!--fade out sub menu bar-->
@@ -624,6 +627,11 @@
 				</control>	
 				<!--**************************************************************************************************************-->
 			</control>
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
 		</control>
 	</controls>
 </window>

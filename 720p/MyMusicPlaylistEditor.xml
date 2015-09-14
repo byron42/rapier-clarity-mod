@@ -764,6 +764,8 @@
 				</control>
 			<!--center(options)-->
 				<control type="group" id="285">
+					<!--SkinSystemStatMenuSlide-->
+					<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					<description>Options Button Area</description>
 					<posx>540</posx>
 					<posy>50</posy>
@@ -1134,6 +1136,11 @@
 					<onleft>100</onleft>
 				</control>	
 			</control>
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
 		</control>
 	</controls>	
 </window>

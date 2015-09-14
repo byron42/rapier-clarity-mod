@@ -2581,6 +2581,9 @@
 				<animation effect="slide" end="0,160" time="250" easing="out" condition="true">Conditional</animation>
 				
 				<control type="group">
+					<!--SkinSystemStatMenuSlide-->
+					<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals) + Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
+					<!---->
 					<animation effect="slide" end="15,0" condition="Player.HasAudio + !Skin.HasSetting(HidecdArt)">Conditional</animation>
 					<animation effect="slide" end="0,34" condition="System.GetBool(LookAndFeel.EnableRSSFeeds) + Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
 					<animation effect="slide" end="0,335" condition="!Skin.HasSetting(NowPlayingAlignTop)">Conditional</animation>
@@ -2839,6 +2842,9 @@
 			</control>
 	
 			<control type="group" id="505">	<!--RSS FEEDS-->
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,26" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia">Conditional</animation>
 				<description>Menu Bar Area</description>			
 				<posy>MenuBarOffsetY</posy>	
@@ -2875,7 +2881,8 @@
 			</control>
 		
 	<!--(((TopBar)))=========================================================================================================================-->	
-			<control type="group">		
+			<control type="group">
+
 				<!--*********************************** (CUSTOM TOP BAR) ********************************************-->
 				<control type="group">	
 					<control type="image" id="1110">
@@ -3287,6 +3294,11 @@
 				</control>
 				<!--*************************************************************************************************-->
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>
 </window>

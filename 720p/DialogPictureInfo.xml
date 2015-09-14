@@ -580,6 +580,11 @@
 					<onup>5</onup>
 				</control>
 			</control>	
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
 		</control>	
 	</controls>
 </window>

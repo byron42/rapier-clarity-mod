@@ -1542,6 +1542,29 @@
 								<effect type="slide" start="-30,0" time="250" tween="cubic" easing="out"/>
 							</animation>
 						</control>
+	
+						<control type="radiobutton" id="16921">
+							<description>Show system statistics</description>
+							<posx>10</posx>
+							<width>800</width>
+							<height>50</height>
+							<font>font_22_U</font>
+							<textwidth>755</textwidth><!--HBTW-->
+							<aligny>top</aligny>
+							<textoffsety>9</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor></shadowcolor>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="300">unfocus</animation>
+							<!-- <label>$LOCALIZE[31024]</label> -->
+							<label>Show System Info</label>
+							<selected>Skin.HasSetting(ShowSystemVitals)</selected>
+							<onclick>Skin.ToggleSetting(ShowSystemVitals)</onclick>
+						</control>
+	
 	<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
 						<control type="button" id="11903">
 							<posx>-3</posx><!---->
@@ -7352,6 +7375,11 @@
 					<visible>Control.HasFocus(5) | ControlGroup(903).HasFocus | Control.HasFocus(20084)</visible>
 				</control>
 			</control>
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
 		</control>
 	</controls>
 </window>

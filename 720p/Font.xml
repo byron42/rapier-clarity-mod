@@ -12,6 +12,12 @@
 			<filename>XBMC.ttf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>font_16_UB</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase bold</style>
+			<size>16</size>
+		</font>
 	<!--17 -->	
 		<font>
 			<name>font_17</name>
@@ -22,6 +28,12 @@
 			<name>font_17_B</name>
 			<filename>XBMC.ttf</filename>
 			<style>bold</style>
+			<size>17</size>
+		</font>
+		<font>
+			<name>font_17_UB</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase bold</style>
 			<size>17</size>
 		</font>
 	<!--18 -->

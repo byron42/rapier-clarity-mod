@@ -123,11 +123,13 @@
 
 	<!--(((VIEWS)))===================================================================================================================================-->			
 			<control type="group">
+				<!--SkinSystemStatReopositonSmaller-->
+				<animation effect="zoom" start="0,0,1280,720" end="15,27,1250,690" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)]">Conditional</animation>
 				
 				<!--**************************************************************************** IconView *********************(50)*********-->
-				
 				<control type="group" id="500">	
 					<!-- BOTTOM PANE + PERMANANT TOP MENU(shrink it to size AND move it) -->
 					<animation effect="zoom" end="88" center="auto" time="0" condition="Skin.HasSetting(HideInfoPane) + Skin.HasSetting(HideMenuBar)">Conditional</animation>
@@ -441,12 +443,16 @@
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<control type="image">
 						<visible>Skin.HasSetting(EnableClassicUniversalBG) + [[Player.HasAudio + !Skin.HasSetting(DisableMusicVizBG)] | [Player.HasVideo + !Skin.HasSetting(DisableVideoBG)]]</visible> <!--skinwide equal viz bg-->
 						<width>1280</width>
 						<include>VariableBackgroundHeight</include>
 						<texture>listview-background-dim.png</texture>
+						<!--SkinSystemStatReopositonBigger-->
+						<animation effect="zoom" start="0,0,1280,720" end="-15,-27,1310,750" time="0" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 					</control>
 					<!--'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''-->
 					<control type="scrollbar" id="151">
@@ -789,6 +795,9 @@
 			
 	<!--(((MENU BAR)))================================================================================================================================-->				
 			<control type="group" id="505">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="fade" start="100" end="0" time="250" delay="0" condition="Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)">Conditional</animation>
 				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="![Window.IsActive(smartplaylistrule) | Window.IsActive(smartplaylisteditor)]">Conditional</animation>
 			<!--fade out for sub menu-->
@@ -1466,6 +1475,11 @@
 				<visible>Window.IsActive(ContextMenu) | Window.IsActive(MediaSource) | Window.IsActive(ContentSettings) | Window.IsActive(NumericInput) | Window.IsActive(PlayerControls)</visible>
 			</control>
 			<!--******************************************************************************************************-->
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>	
 </window>

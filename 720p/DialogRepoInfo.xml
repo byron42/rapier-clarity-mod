@@ -666,9 +666,12 @@
 					<label>[UPPERCASE]$LOCALIZE[186][/UPPERCASE]</label>
 					<onclick>Dialog.Close(DialogRepoInfo.xml)</onclick>
 				</control>			
-							
-				
 			</control>
+
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+
 		</control>
 	</controls>	
 </window>
