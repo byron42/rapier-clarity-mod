@@ -38,6 +38,8 @@
 			
 			<!--********************************************** CODEC BOX ***************************************************************-->
 			<control type="group" id="4501">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<posx></posx>
 				<posy>-10</posy>
 				<!--VisibleFadeEffect-->
@@ -51,6 +53,9 @@
 				<visible>Player.ShowCodec + ![Window.IsActive(120) | Window.IsVisible(121) | Window.IsVisible(122)]</visible>
 				<control type="group">
 					<control type="image">
+						<!--SkinSystemStatMenuSlide-->
+						<animation effect="slide" end="0,-27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<animation effect="zoom" start="-30,0,1360,155" end="-30,0,1360,182" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 						<description>gradient</description>
 						<posx>-30</posx>
 						<posy>0</posy>
@@ -192,6 +197,8 @@
 
 	<!--(((ShowInfo)))=====================================================================================================================-->		
 			<control type="group" id="4500">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!-- shutdown specific -->
 				<animation effect="fade" start="100" end="0" time="151" condition="Window.IsActive(Shutdownmenu)">Conditional</animation>
 				<!---->
@@ -200,7 +207,8 @@
 				<animation effect="fade" end="100" time="250" delay="50" condition="Window.IsActive(120)">VisibleChange</animation>
 				<animation effect="slide" start="0,0" end="0,-400" time="250" delay="0" tween="quadratic" easing="out">WindowClose</animation>
 				<!-- musicOSD visible slide -->
-				<animation effect="slide" end="0,285" time="250" tween="circle" easing="out" condition="Window.IsActive(120)">Conditional</animation>
+				<animation effect="slide" end="0,285" time="250" tween="circle" easing="out" condition="Window.IsActive(120) + !Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<animation effect="slide" end="0,273" time="250" tween="circle" easing="out" condition="Window.IsActive(120) + Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<!-- musicOSD visible/window.next vis settings/presets -->
 				<animation effect="fade" start="100" end="0" time="250" delay="100" condition="Window.IsActive(121) | Window.IsActive(122)">Conditional</animation>
 				<visible>Player.ShowInfo + !Window.IsVisible(script-XBMC_Lyrics-main.xml) + !Control.IsVisible(4501)</visible>
@@ -521,6 +529,11 @@
 					</control>
 				</control>
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>
 </window>

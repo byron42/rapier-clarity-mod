@@ -3,276 +3,392 @@
 	<include>FS__OpenClose</include>
 	<controls>
 		<control type="group" id="1">
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
-			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
-			<posx></posx>
-			
-			<!--************* for hiding at video start **************-->
-			<posy>-400</posy>
-			<animation effect="slide" start="0,0" end="0,400" >WindowOpen</animation>
-			<!--******************************************************-->
-			
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!---->
 			<control type="group" id="1">
-				<visible>Player.ShowInfo + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
-				<animation effect="fade" start="100" end="0"  time="250" condition="Window.IsActive(ShutdownMenu) + Window.IsActive(2901)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsVisible(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+				<!--little dialog fade out-->
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>	
+				<posx></posx>
 				
-				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out" condition="!Window.IsVisible(VideoOSD)">VisibleChange</animation>
-				<animation effect="fade" end="100" time="300" condition="Window.IsVisible(VideoOSD) + !Control.IsVisible(1)">Conditional</animation>
+				<!--************* for hiding at video start **************-->
+				<posy>-400</posy>
+				<animation effect="slide" start="0,0" end="0,400" >WindowOpen</animation>
+				<!--******************************************************-->
 				
-				<!-- videoOSD visible slide -->
-				<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
-				<control type="image" id="1">
-					<description>media info background image</description>
-					<posx>-10</posx>
-					<posy>-3</posy>
-					<width>1300</width>
-					<height>165</height>
-					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
-					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
-				</control>
-				
-				<!--**************************PLAYER CONTROL ACTION *******************************-->
-				<control type="group" id="1">	
-					<posx>300</posx>
-					<posy>715r</posy>
-					<animation effect="fade" start="0" end="100" time="250" delay="100">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="250" condition="!Window.IsActive(2901)">Hidden</animation>
-					<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(2901)">Conditional</animation>
-					<visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
-					<control type="label" id="1">
-						<visible>!Window.IsActive(2901)</visible>
-						<description>PlayerControlLabel</description>
-						<posx>815</posx>
-						<posy>115</posy>
-						<width>160</width>
-						<height>100</height>
-						<align>center</align>
-						<font>font_20_CB</font>
-						<textcolor>gray</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<label>$VAR[PlayerControlActionLabel]</label>
-					</control>
-					<control type="image" id="1">
-						<description>PlayerControlImage</description>
-						<posx>847</posx>
-						<posy>12</posy>
-						<width>100</width>
-						<height>100</height>
-						<align>center</align>
-						<texture>$VAR[PlayerControlActionImage]</texture>
-						<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
-					</control>
-				</control>
-				<!--*******************************************************************************-->
-				
-		<!--(((MAIN BAR WITH CONTROLS)))========================================================================================================-->		
 				<control type="group" id="1">
-					<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">WindowOpen</animation>
-					<animation effect="fade" end="100" time="250" delay="150" condition="">Visible</animation>
-					<animation effect="fade" end="100" time="250" condition="">Hidden</animation>
-					<animation effect="slide" start="0,0" end="0,-400" time="250" delay="0" tween="quadratic" easing="out">WindowClose</animation>
-					<!--zoom for Player Actions-->
-					<animation effect="zoom" start="300,715r,1280,720" end="300,715r,1080,720" time="150" condition="Player.HasVideo  + !Window.IsActive(2901) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
-					<control type="group" id="1">
+					<visible>Player.ShowInfo + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+					<animation effect="fade" start="100" end="0"  time="250" condition="Window.IsActive(ShutdownMenu) + Window.IsActive(2901)">Conditional</animation>
+					<!---->
+					<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out" condition="!Window.IsVisible(VideoOSD)">VisibleChange</animation>
+					<animation effect="fade" end="100" time="300" condition="Window.IsVisible(VideoOSD) + !Control.IsVisible(1)">Conditional</animation>
+					<!-- videoOSD visible slide -->
+					<animation effect="slide" end="0,115" time="250" tween="circle" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+					
+					<control type="image" id="1">
+						<description>media info background image</description>
+						<!-- ShowSystemVitals -->
+						<animation effect="zoom" end="-10,-30,1300,192" condition="Skin.HasSetting(ShowSystemVitals) + !Window.IsVisible(2901)">Conditional</animation>
+						<posx>-10</posx>
+						<posy>-3</posy>
+						<width>1300</width>
+						<height>165</height>
+						<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+						<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
+					</control>
+					
+					<!--**************************PLAYER CONTROL ACTION *******************************-->
+					<control type="group" id="1">	
 						<posx>300</posx>
 						<posy>715r</posy>
-						<control type="grouplist" id="1">
-							<posx>0</posx>
-							<posy>20</posy>
-							<usecontrolcoords>true</usecontrolcoords>
-							<orientation>vertical</orientation>
-							<control type="label" id="1">
-								<posx></posx>
-								<posy></posy>
-								<width>950</width>
-								<height>30</height>
-								<label>$VAR[PlayerControlTitle]</label>
-								<scroll>true</scroll>
-								<align>left</align>
-								<aligny>center</aligny>
-								<font>Font_OSDMusicTitle</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>ThemeColor</shadowcolor>
-							</control>
-							<control type="label" id="1">
-								<posx></posx>
-								<posy></posy>
-								<width>950</width>
-								<height>30</height>
-								<font>font_28_NRBC</font>
-								<textcolor>ThemeColor2</textcolor>
-								<shadowcolor></shadowcolor>
-								<label>$VAR[PlayerControlArtist]</label>
-								<align>left</align>
-								<aligny>center</aligny>
-							</control>
-							<control type="image" id="1">
-								<posx>-10</posx>
-								<posy>75</posy>
-								<width>220</width>
-								<height>38</height>
-								<texture>$INFO[Player.StarRating]</texture>
-								<aspectratio>stretch</aspectratio>
-								<colordiffuse>ThemeColor2</colordiffuse>
-							</control>
-						</control>
-					<!--progress-->
-						<control type="group" id="1">
-							<posy>5</posy>
-							<!--********************************-->
-							<include>FS_ProgressBar</include>
-							<!--********************************-->
-						</control>
-					
-					</control>
-					
-		<!--(((MEDIA FLAGS AREA)))==============================================================================================================-->		
-					<control type="group" id="1">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>580</width>
-						<height>60</height>
-						<visible>Player.HasVideo</visible>
-						<animation effect="fade" end="45" condition="true">Conditional</animation>
-						<!--**************************** VideoInfoStudioMediaFlag **********************************-->
-						<control type="image" id="1">
-							<posx>900</posx>
+						<animation effect="fade" start="0" end="100" time="250" delay="100">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="250" condition="!Window.IsActive(2901)">Hidden</animation>
+						<animation effect="fade" start="100" end="0" time="100" condition="Window.IsActive(2901)">Conditional</animation>
+						<visible>Player.Paused | Player.Seeking | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+						<control type="label" id="1">
+							<visible>!Window.IsActive(2901)</visible>
+							<description>PlayerControlLabel</description>
+							<posx>815</posx>
 							<posy>115</posy>
-							<width>161</width>
-							<height>109</height>
-							<aspectratio>keep</aspectratio>
-							<fadetime>MediaFlagsCrossfadeTime</fadetime>
-							<!-- <texture>$INFO[VideoPlayer.Studio,flagging/Studios/,.png]</texture> -->
+							<width>160</width>
+							<height>100</height>
+							<align>center</align>
+							<font>font_20_CB</font>
+							<textcolor>gray</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>$VAR[PlayerControlActionLabel]</label>
 						</control>
-						<!--****************************************************************************************-->
-						<control type="grouplist" id="1">
-							<description>Media Flags Area</description>
-							<posx>490</posx>
-							<posy>102</posy>
+						<control type="image" id="1">
+							<description>PlayerControlImage</description>
+							<posx>847</posx>
+							<posy>12</posy>
+							<width>100</width>
+							<height>100</height>
+							<align>center</align>
+							<texture>$VAR[PlayerControlActionImage]</texture>
+							<visible>Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.Caching</visible>
+						</control>
+					</control>
+					<!--*******************************************************************************-->
+					
+			<!--(((MAIN BAR WITH CONTROLS)))========================================================================================================-->		
+					<control type="group" id="1">
+						<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">WindowOpen</animation>
+						<animation effect="fade" end="100" time="250" delay="150" condition="">Visible</animation>
+						<animation effect="fade" end="100" time="250" condition="">Hidden</animation>
+						<animation effect="slide" start="0,0" end="0,-400" time="250" delay="0" tween="quadratic" easing="out">WindowClose</animation>
+						<!--zoom for Player Actions-->
+						<animation effect="zoom" start="300,715r,1280,720" end="300,715r,1080,720" time="150" condition="Player.HasVideo  + !Window.IsActive(2901) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+						<control type="group" id="1">
+							<posx>300</posx>
+							<posy>715r</posy>
+							<control type="grouplist" id="1">
+								<posx>0</posx>
+								<posy>20</posy>
+								<usecontrolcoords>true</usecontrolcoords>
+								<orientation>vertical</orientation>
+								<control type="label" id="1">
+									<posx></posx>
+									<posy></posy>
+									<width>950</width>
+									<height>30</height>
+									<label>$VAR[PlayerControlTitle]</label>
+									<scroll>true</scroll>
+									<align>left</align>
+									<aligny>center</aligny>
+									<font>Font_OSDMusicTitle</font>
+									<textcolor>white</textcolor>
+									<shadowcolor>ThemeColor</shadowcolor>
+								</control>
+								<control type="label" id="1">
+									<posx></posx>
+									<posy></posy>
+									<width>950</width>
+									<height>30</height>
+									<font>font_28_NRBC</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor></shadowcolor>
+									<label>$VAR[PlayerControlArtist]</label>
+									<align>left</align>
+									<aligny>center</aligny>
+								</control>
+								<control type="image" id="1">
+									<posx>-10</posx>
+									<posy>75</posy>
+									<width>220</width>
+									<height>38</height>
+									<texture>$INFO[Player.StarRating]</texture>
+									<aspectratio>stretch</aspectratio>
+									<colordiffuse>ThemeColor2</colordiffuse>
+								</control>
+							</control>
+						<!--progress-->
+							<control type="group" id="1">
+								<posy>5</posy>
+								<!--********************************-->
+								<include>FS_ProgressBar</include>
+								<!--********************************-->
+							</control>
+						</control>
+						
+			<!--(((MEDIA FLAGS AREA)))==============================================================================================================-->		
+						<control type="group" id="1">
+							<posx>0</posx>
+							<posy>0</posy>
 							<width>580</width>
 							<height>60</height>
-							<itemgap>6</itemgap>
-							<align>center</align>
-							<!-- <visible>!Skin.HasSetting(HideMediaFlags)</visible> -->
-							<orientation>horizontal</orientation>
-							<usecontrolcoords>true</usecontrolcoords>
-							
-							<!--***************************** VideoMediaFlags *************************************-->
-							<include>DFSI_Video_MediaFlags</include>
-							<!--*********************************************************************************-->
-							
-							<!--********************************* AudioMediaFlags *******************************-->
-							<include>DFSI_Audio_MediaFlags</include>
-							<!--*********************************************************************************-->
-							
-							<!--******************************** AspectMediaFlags *******************************-->
+							<visible>Player.HasVideo</visible>
+							<animation effect="fade" end="45" condition="true">Conditional</animation>
+							<!--**************************** VideoInfoStudioMediaFlag **********************************-->
 							<control type="image" id="1">
-								<description>Aspectratio Image</description>
-								<posx>2</posx>
-								<posy>1</posy>
-								<width>63</width>
-								<height>60</height>
+								<posx>900</posx>
+								<posy>115</posy>
+								<width>161</width>
+								<height>109</height>
 								<aspectratio>keep</aspectratio>
-								<texture>$INFO[VideoPlayer.VideoAspect,flagging/AspectRatio/,.png]</texture>
 								<fadetime>MediaFlagsCrossfadeTime</fadetime>
 							</control>
-							<!--*********************************************************************************-->
+							<!--****************************************************************************************-->
+							<control type="grouplist" id="1">
+								<description>Media Flags Area</description>
+								<posx>490</posx>
+								<posy>102</posy>
+								<width>580</width>
+								<height>60</height>
+								<itemgap>6</itemgap>
+								<align>center</align>
+								<orientation>horizontal</orientation>
+								<usecontrolcoords>true</usecontrolcoords>
+								
+								<!--***************************** VideoMediaFlags *************************************-->
+								<include>DFSI_Video_MediaFlags</include>
+								<!--*********************************************************************************-->
+								
+								<!--********************************* AudioMediaFlags *******************************-->
+								<include>DFSI_Audio_MediaFlags</include>
+								<!--*********************************************************************************-->
+								
+								<!--******************************** AspectMediaFlags *******************************-->
+								<control type="image" id="1">
+									<description>Aspectratio Image</description>
+									<posx>2</posx>
+									<posy>1</posy>
+									<width>63</width>
+									<height>60</height>
+									<aspectratio>keep</aspectratio>
+									<texture>$INFO[VideoPlayer.VideoAspect,flagging/AspectRatio/,.png]</texture>
+									<fadetime>MediaFlagsCrossfadeTime</fadetime>
+								</control>
+								<!--*********************************************************************************-->
+							</control>
 						</control>
 					</control>
-				</control>
 
-		<!--(((ICONS)))======================================================================================================================================-->		
-				<control type="group" id="1">
-					<posx></posx>
-					<posy></posy>
-					<visible>Player.HasVideo</visible>
-					<control type="image" id="1">
-						<description>cover image</description>
-						<posx>7</posx>
-						<posy>700r</posy>
-						<width>280</width>
-						<height>320</height>
-						<texture>$INFO[VideoPlayer.cover]</texture>
-						<aspectratio aligny="top">keep</aspectratio>
-						<bordertexture border="10">Glass/keyfocus.png</bordertexture>
-						<bordersize>14</bordersize>
+			<!--(((ICONS)))======================================================================================================================================-->		
+					<control type="group" id="1">
+						<posx></posx>
+						<posy></posy>
+						<visible>Player.HasVideo</visible>
+						<control type="image" id="1">
+							<description>cover image</description>
+							<posx>7</posx>
+							<posy>700r</posy>
+							<width>280</width>
+							<height>320</height>
+							<texture>$INFO[VideoPlayer.cover]</texture>
+							<aspectratio aligny="top">keep</aspectratio>
+							<bordertexture border="10">Glass/keyfocus.png</bordertexture>
+							<bordersize>14</bordersize>
+						</control>
 					</control>
 				</control>
 			</control>
-		</control>
-			
-		<control type="group" id="0">
-			<include>FS__OpenClose</include>
-			<visible>!Player.ShowInfo</visible>
-			<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out" condition="!Window.IsVisible(VideoOSD)">VisibleChange</animation>
-			<animation effect="fade" end="100" time="300" condition="Window.IsVisible(VideoOSD) + !Control.IsVisible(1)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>	
-			<!--little dialog fade out-->
-			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
-			<!--VIDEO OSD IS VISIBLE FADE-->
-			<!-- <animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsVisible(2901)">Conditional</animation> -->
-			<control type="group" id="0">
-				<!--*********************************************** Codec Box ***************************************************-->
-				<posx></posx>
-				<posy></posy>
-				<!--VisibleFadeEffect-->
-				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">VisibleChange</animation>
-				<!-- <animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="0">WindowOpen</animation>
-				<animation effect="slide" start="0" end="0,-400" time="250" delay="200">WindowClose</animation>
-				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation> -->
-				<animation effect="slide" end="0,123" time="250" tween="quadratic" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
-				<!-- OSD/FullscreenVid Both Visible -->
-				<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
 				
-				<!--*************************************************************************************************************-->
-				<visible>Player.HasVideo</visible>
-				<control type="image">
-					<animation effect="slide" end="0,95" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
-					<description>gradient</description>
-					<posx>-30</posx>
-					<posy>-205</posy>
-					<width>1360</width>
-					<height>350</height>
-					<texture border="10">$VAR[OSD_BackgroundColor]</texture>
-					<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
-				</control>
-				<control type="grouplist" id="0">
-					<animation effect="slide" end="0,99" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901)">Conditional</animation>
+			<control type="group" id="0">
+				<include>FS__OpenClose</include>
+				<visible>!Player.ShowInfo</visible>
+				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out" condition="!Window.IsVisible(VideoOSD)">VisibleChange</animation>
+				<animation effect="fade" end="100" time="300" condition="Window.IsVisible(VideoOSD) + !Control.IsVisible(1)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>	
+				<!--little dialog fade out-->
+				<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+				<control type="group" id="0">
+					<!--*********************************************** Codec Box ***************************************************-->
+					<posx></posx>
+					<posy></posy>
+					<!--VisibleFadeEffect-->
+					<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">VisibleChange</animation>
+					<!-- osd visible -->
+					<animation effect="slide" end="0,123" time="250" tween="quadratic" easing="out" condition="Window.IsActive(2901)">Conditional</animation>
+					<!-- OSD/FullscreenVid Both Visible -->
+					<animation effect="slide" start="0,0" end="0,-400" time="150" tween="quadratic" easing="out" condition="[Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings)] + Window.IsActive(2901)">Conditional</animation>
+					<!--*************************************************************************************************************-->
 					<visible>Player.HasVideo</visible>
-					<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
-					<posx>10</posx>
-					<posy>0</posy>
-					<itemgap>40</itemgap>
-					<control type="label" id="10">
-						<description>Row 1</description>
-						<width>1260</width>
-						<font>font_20</font>
-						<textcolor>DefaultColor</textcolor>
-						<shadowcolor>black</shadowcolor>
+					<control type="image">
+						<!-- ShowSystemVitals -->
+						<animation effect="zoom" end="-30,-232,1360,377" condition="Skin.HasSetting(ShowSystemVitals) + !Window.IsVisible(2901)">Conditional</animation>
+						<animation effect="zoom" end="-30,-232,1360,476" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901) + !Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<animation effect="zoom" end="-30,-232,1360,422" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901) + Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<description>gradient</description>
+						<posx>-30</posx>
+						<posy>-205</posy>
+						<width>1360</width>
+						<height>350</height>
+						<texture border="10">$VAR[OSD_BackgroundColor]</texture>
+						<colordiffuse>$VAR[OSD_BackgroundDiffuse]</colordiffuse>
 					</control>
-					<control type="label" id="11">
-						<description>Row 2</description>
-						<width>1260</width>
-						<wrapmultiline>true</wrapmultiline>
-						<font>font_20</font>
-						<textcolor>DefaultColor</textcolor>
-						<shadowcolor>black</shadowcolor>
+					<control type="grouplist" id="0">
+						<animation effect="slide" end="0,99" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901) + !Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<animation effect="slide" end="0,45" condition="Skin.HasSetting(EnableDebugLogging) + !Window.IsActive(2901) + Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+						<visible>Player.HasVideo</visible>
+						<animation effect="slide" start="0,-114" end="0,0" time="250" tween="circle" easing="out" delay="200">VisibleChange</animation>
+						<posx>10</posx>
+						<posy>0</posy>
+						<itemgap>40</itemgap>
+						<control type="label" id="10">
+							<description>Row 1</description>
+							<width>1260</width>
+							<font>font_20</font>
+							<textcolor>DefaultColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label" id="11">
+							<description>Row 2</description>
+							<width>1260</width>
+							<wrapmultiline>true</wrapmultiline>
+							<font>font_20</font>
+							<textcolor>DefaultColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label" id="12">
+							<description>Row 3</description>
+							<width>1260</width>
+							<font>font_20</font>
+							<textcolor>DefaultColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
-					<control type="label" id="12">
-						<description>Row 3</description>
-						<width>1260</width>
-						<font>font_20</font>
-						<textcolor>DefaultColor</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-				</control>
-			</control>	
-		</control>	
+				</control>	
+			</control>
+		</control>
 		<!--**************************PLAYER CONTROL ACTION *******************************-->
 		<include>MediaActionPackFSVideo</include>
 		<!--*******************************************************************************-->
+		
+		<!--************* SystemStatistics *************-->
+		<control type="group" id="1">
+			<animation effect="slide" end="0,-44" condition="!Window.IsActive(shutdownmenu) + [Window.IsVisible(playercontrols) | Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)]">Conditional</animation>
+			<!-- <animation effect="slide" end="0,200" condition="VideoPlayer.IsFullscreen">Conditional</animation> -->
+			<animation effect="fade" start="0" end="100" time="200"  condition="Window.Next(playercontrols)">Conditional</animation>
+			<!-- <animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia | Window.IsActive(fullscreenvideo) | VideoPlayer.IsFullscreen">Conditional</animation> -->
+			<description>VITALS</description>			
+			<posy>MenuBarOffsetY</posy>	
+			<control type="image" id="1">
+				<width>ScreenWidth</width>
+				<height>35</height>
+				<texture border="0,0,0,7">$VAR[TopBarImage]</texture>
+				<colordiffuse>$VAR[TopBarColor]</colordiffuse> <!--BLUE-->
+				<animation effect="fade" start="80" end="80"  condition="true">Conditional</animation>
+			</control>
+			<control type="grouplist" id="1">
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="button" id="1">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>RAM: $INFO[System.FreeMemory]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="1">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="1">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>CPU: $INFO[System.CPUTemperature]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="1">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>GPU: $INFO[System.GPUTemperature]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+				<control type="button" id="1">
+					<width>256</width>
+					<height>26</height>
+					<font>font_17_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<focusedcolor>ListLabelFocusedColor</focusedcolor>
+					<disabledcolor>DisabledColor</disabledcolor>
+					<label>FPS: $INFO[System.FPS]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>1</textoffsety>
+					<texturefocus border="10">$VAR[TopBarImage]</texturefocus>
+					<colordiffuse>BBBBBBBB</colordiffuse>
+					<texturenofocus border="10">search-focus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+				</control>
+			</control>
+			<visible>Skin.HasSetting(ShowSystemVitals)</visible>
+		</control>
+		<!--********************************************-->
 	</controls>
 </window>

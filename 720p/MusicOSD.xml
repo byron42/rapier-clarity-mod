@@ -27,6 +27,8 @@
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 			<control type="group">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<visible>!Window.IsActive(111) | !Window.IsActive(121) | !Window.IsActive(122) | !Window.IsActive(script-XBMC_Lyrics-main.xml)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
@@ -110,6 +112,8 @@
 			
 		<!--viz select menu-->
 			<control type="grouplist">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,13" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<posx>320</posx>
 				<posy>320</posy>
 				<itemgap>10</itemgap>
@@ -155,6 +159,10 @@
 					<colordiffuse>ThemeColor</colordiffuse>
 				</control>
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
 			
 		</control>
 	</controls>

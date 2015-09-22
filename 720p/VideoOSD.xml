@@ -9,6 +9,8 @@
 			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
 			
 			<control type="group">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 				<visible>!Window.IsActive(111) | !Window.IsActive(123) | !Window.IsActive(OSDAudioSettings)</visible>
 				<!--HomeMenuPaneOpenCloseAnim-->
 				<animation effect="slide" start="0,-120" end="0,-10" time="250" tween="circle" easing="out">WindowOpen</animation>
@@ -82,6 +84,11 @@
 					<shadowcolor></shadowcolor>
 				</control>
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	</controls>
 </window>

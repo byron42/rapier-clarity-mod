@@ -1,7 +1,8 @@
 <includes>
 	<include name="System_Vitals_Bar">
-		<control type="group">
-			<animation effect="fade" start="100" end="100" time="0"  condition="Player.HasMedia">Conditional</animation>
+		<control type="group" id="1">
+			<animation effect="slide" end="0,-44" condition="!Window.IsActive(shutdownmenu) + [Window.IsVisible(playercontrols) | Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(visualisation) | Window.IsVisible(fullscreenvideo)]">Conditional</animation>
+			<animation effect="fade" start="0" end="100" time="200"  condition="Window.Next(playercontrols)">Conditional</animation>
 			<description>VITALS</description>			
 			<posy>MenuBarOffsetY</posy>	
 			<control type="image" id="1110">

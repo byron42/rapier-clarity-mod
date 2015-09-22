@@ -59,6 +59,9 @@
 			
 	<!--(((NowPlaying)))=====================================================================================================================-->		
 			<control type="group">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!---->
 				<animation effect="slide" start="0,-400" end="0,0" time="250" tween="quadratic" easing="out">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="0,-400" time="250" delay="0" tween="quadratic" easing="out">WindowClose</animation>
 				<visible>!Window.IsActive(SlideShow)</visible>
@@ -71,6 +74,9 @@
 						<posx></posx>
 						<posy></posy>
 						<control type="image">
+							<!--SkinSystemStatMenuSlide-->
+							<animation effect="slide" end="0,-27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+							<animation effect="zoom" start="0,0,1300,200" end="0,0,1300,227" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
 							<description>media info background image</description>
 							<posx>-10</posx>
 							<posy>-38</posy>
@@ -86,19 +92,6 @@
 							<animation effect="fade" start="0" end="100" time="250" delay="50">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="250" >Hidden</animation>
 							<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
-							<!-- <control type="label">
-								<description>PlayerControlLabel</description>
-								<posx>815</posx>
-								<posy>115</posy>
-								<width>160</width>
-								<height>100</height>
-								<align>center</align>
-								<textwidth>160</textwidth>
-								<font>font_22_CB</font>
-								<textcolor>gray</textcolor>
-								<shadowcolor>black</shadowcolor>
-								<label>$VAR[PlayerControlActionLabel]</label>
-							</control> -->
 							<control type="image" id="1000">
 								<description>PlayerControlImage</description>
 								<posx>842</posx>
@@ -381,17 +374,6 @@
 								<bordersize>8</bordersize>
 								<visible>Skin.HasSetting(HidecdArt)</visible>
 							</control>
-							<!-- <control type="image">
-								<description>cover image</description>
-								<posx>25</posx>
-								<posy>700r</posy>
-								<width>235</width>
-								<height>215</height>
-								<texture>defaultaudio.png</texture>
-								<aspectratio aligny="top">stretch</aspectratio>
-								<bordertexture border="15">Glass/keyfocus.png</bordertexture>
-								<visible>IsEmpty(ListItem.Thumb)</visible>
-							</control> -->
 						</control>
 					</control>
 				</control>
@@ -469,6 +451,11 @@
 					<shadowcolor></shadowcolor>
 				</control>
 			</control>
+			
+			<!--************* SystemStatistics *************-->
+			<include>System_Vitals_Bar</include>
+			<!--********************************************-->
+			
 		</control>
 	<!--PLOT ARTIST/ALBUM INFO-->
 		<control type="group" id="5001">
