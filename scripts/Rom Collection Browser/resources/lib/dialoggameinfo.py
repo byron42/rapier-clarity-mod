@@ -394,7 +394,7 @@ class UIGameInfoView(xbmcgui.WindowXMLDialog):
 			control = self.getControl(controlId)
 		except: 
 			Logutil.log("Control with id: %s could not be found. Check WindowXML file." %str(controlId), util.LOG_LEVEL_ERROR)
-			self.writeMsg(util.localize(35025) %str(controlId))
+			# self.writeMsg(util.localize(35025) %str(controlId))
 			return None
 		
 		return control
