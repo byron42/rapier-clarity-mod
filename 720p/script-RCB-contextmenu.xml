@@ -1,0 +1,302 @@
+<window id="5100">
+	<defaultcontrol>996</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="350" />
+		<effect type="fade" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+		<effect type="fade" start="100" end="0" time="250" />
+	</animation>
+	<coordinates>
+		<system>1</system>
+		<!-- <origin x="410" y="150">Window.IsVisible(MusicPlaylistEditor)</origin> -->
+		<!-- <origin x="408" y="180">true</origin> -->
+	</coordinates>
+	<controls>	
+		<!--************************************* DialogPopUPScreenDim *************************************-->
+		<control type="image">
+			<!-- <visible>Window.IsVisible(5100)</visible> -->
+			<width>1300</width>
+			<height>770</height>
+			<posx>-10</posx>
+			<posy>-25</posy>
+			<texture border="10,10,10,10">background-dim.png</texture>
+			<colordiffuse></colordiffuse>
+			<!--BackgroundOpenCloseAnim-->
+			<animation effect="fade" start="0" end="20" time="100" condition="true">Conditional</animation> 
+		</control>
+		<!--************************************************************************************************-->
+		<control type="grouplist" id="996">
+			<posx>415</posx>
+			<posy>45</posy>
+			<width>450</width>
+			<height>640</height>
+			<control type="button" id="5110">
+				<description>button import games</description>
+				<posx>6</posx>
+				<description>Reboot</description>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51000]</label>
+				
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5121">
+				<description>button rescrape game</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51001]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5122">
+				<description>button rescrape selection</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51002]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5111">
+				<description>button add rom collection</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51003]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5112">
+				<description>button edit rom collection</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51004]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5117">
+				<description>button edit offline scraper</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51005]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5113">
+				<description>button edit command</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51006]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5118">
+				<description>button game as favorite</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51007]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5119">
+				<description>button selection as favorite</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51008]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5120">
+				<description>button export nfo files</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51009]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5114">
+				<description>button delete rom</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51010]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5115">
+				<description>button delete rom collection</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51011]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5116">
+				<description>button clean database</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51012]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="button" id="5223">
+				<description>button open settings</description>
+				<posx>6</posx>
+				<width>450</width>
+				<height>40</height>
+				<textwidth>420</textwidth>
+				<font>font_21_UB</font>
+				<shadowcolor>black</shadowcolor>
+				<aligny>top</aligny>
+				<textoffsety>5</textoffsety> <!--SDM-->
+				<texturefocus border="10,10,10,10">Glass/ShutDownButtonF.png</texturefocus>
+				<texturenofocus border="10,10,10,10">Glass/ShutDownButton.png</texturenofocus>
+				<alttexturenofocus border="10,10,10,10"></alttexturenofocus>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<label>$LOCALIZE[51013]</label>
+				<animation effect="zoom" end="104" center="auto" time="50">focus</animation>
+				<animation effect="zoom" start="104" center="auto" time="50">unfocus</animation>
+			</control>
+			<control type="image">
+				<posx></posx>
+				<description>spacer</description>
+				<posy></posy>
+				<width></width>
+				<height>10</height>
+				<texture></texture>
+				<aspectratio></aspectratio>
+				<fadetime></fadetime>
+			</control>
+		</control>		
+	</controls>	
+</window>

@@ -1,0 +1,738 @@
+<window type="dialog" id="5600">
+	<defaultcontrol>5201</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(movieinformation)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsVisible(PluginSettings) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(script-RCB-contextmenu.xml) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+		
+		
+	<!--(((TOP BAR)))===========================================================================================================================-->	
+			<control type="group">
+				<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
+				
+				<!--******************************* (BreadCrumbPluginSettings) **************************************-->
+				<include>BreadCrumbButtonRight</include>
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>	
+				 <!--home icon-->
+					<control type="button" id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->				
+				
+				
+			</control>
+		
+	<!--(((CONTROLS)))===========================================================================================================================-->			
+			<control type="group">	
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,5" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+				<!--log off button hidden slide-->
+				<animation effect="slide" end="0,-30" condition="[Control.IsVisible(105) + !Control.IsVisible(108)] | [!Control.IsVisible(105) + Control.IsVisible(108)]">Conditional</animation>
+				<animation effect="slide" end="0,-60" condition="Control.IsVisible(105) + Control.IsVisible(108)">Conditional</animation>
+				<!---->
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="50" end="100" center="640,360" easing="out" tween="back" time="500" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+					<effect type="fade" start="100" end="0" time="250" />
+				</animation>
+				
+				<control type="group"> <!--CUSTOM SUBMENU ITEMS /SEPARATORS (-)-->
+					<posx>30</posx>
+					<posy>80</posy>
+					<control type="label" id="">
+						<description>CUSTOM SUBMENU LABEL</description>
+						<posx></posx>
+						<posy>8</posy>
+						<font>font_32_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$LOCALIZE[56000]</label>
+						<width>600</width>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--******************************* separators ******************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<posy>34</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM-->
+						<description>BOTTOM bar</description>
+						<posy>565</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM 2-->
+						<description>BOTTOM bar</description>
+						<posy>620</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--*************************************************************************-->
+
+			<!--MAIN CONTROLS-->
+					<control type="group" id="451">	
+						<posx>110</posx>
+						<control type="button" id="5101">
+							<description>Close Window button</description>
+							<posx>640</posx>
+							<posy>-30</posy>
+							<width>40</width>
+							<height>25</height>
+							<label>-</label>
+							<font>-</font>
+							<texturefocus>rcb-DialogCloseButton-focus.png</texturefocus>
+							<texturenofocus>rcb-DialogCloseButton.png</texturenofocus>
+							<onleft>5201</onleft>
+							<onright>5201</onright>
+							<onup>6000</onup>
+							<ondown>5201</ondown>
+							<visible>system.getbool(input.enablemouse)</visible>
+						</control>
+		
+						<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOO-->
+						<control type="button" id="11900">
+							<posx>40</posx>
+							<posy>50</posy>
+							<!---->
+							<height>27</height><!---->
+							<width>900</width><!---->
+							<label>$LOCALIZE[33051] $LOCALIZE[587] $LOCALIZE[146]</label> <!---->
+							<font>font_21_UB</font><!---->
+							<disabledcolor>aa555555</disabledcolor><!---->
+							<align>left</align><!---->
+							<aligny>top</aligny><!---->
+							<textoffsety>-2</textoffsety><!---->
+							<textoffsetx>0</textoffsetx><!---->
+							<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+							<colordiffuse>BFFFFFFF</colordiffuse><!---->
+							<enable>false</enable>
+						</control>
+						<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->			
+						
+						<!-- Show/Hide missing info list -->
+						<control type="list" id="5200">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>40</posx>
+							<posy>80</posy>
+							<width>900</width>
+							<height>50</height>
+							<onleft>5200</onleft>
+							<onright>5200</onright>
+							<onup>5200</onup>
+							<ondown>5200</ondown>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5201) | Control.HasFocus(5202)]">Conditional</animation>
+							<itemlayout height="1" width="750"></itemlayout>
+							<focusedlayout height="48" width="670">
+								<control type="image">
+									<width>880</width>
+									<height>36</height>
+									<posx>10</posx>
+									<posy>2</posy>
+									<texture border="10">special://skin/images/skin/RCB_listviewitemback.png</texture>
+									<visible>![Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+								<control type="image">
+									<posx></posx>
+									<posy></posy>
+									<width>900</width>
+									<height>40</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>4</posy>
+									<width>300</width>
+									<height>46</height>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<font>font_21_U</font>
+									<aligny>top</aligny>
+									<label>$LOCALIZE[56001]</label>
+									<visible>![Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+								<control type="label">
+									<posx>17</posx>
+									<posy>4</posy>
+									<width>300</width>
+									<height>46</height>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<font>font_21_U</font>
+									<aligny>top</aligny>
+									<label>$LOCALIZE[56001]</label>
+									<visible>[Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+								<control type="label">
+									<posx>835</posx>
+									<posy>4</posy>
+									<width>470</width>
+									<height>46</height>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>right</align>
+									<font>font_21_U</font>
+									<aligny>top</aligny>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+								<control type="label">
+									<posx>835</posx>
+									<posy>4</posy>
+									<width>470</width>
+									<height>46</height>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>right</align>
+									<font>font_21_U</font>
+									<scroll>true</scroll>
+									<aligny>top</aligny>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5201) | Control.HasFocus(5202)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+				<!--spinners-->
+						<control type="button" id="5201">
+							<description>Menu Item Next Button</description>
+							<posx>886</posx>
+							<posy>78</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5200,1)</onclick>
+							<onleft>6000</onleft>
+							<onright>5202</onright>
+							<onup>5101</onup>
+							<ondown>5230</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5201) | Control.HasFocus(5202)]">Conditional</animation>
+						</control>
+						<control type="button" id="5202">
+							<description>Menu Item Prev Button</description>
+							<posx>904</posx>
+							<posy>78</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5200,-1)</onclick>
+							<onleft>5201</onleft>
+							<onright>6000</onright>
+							<onup>5101</onup>
+							<ondown>5230</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5201) | Control.HasFocus(5202)]">Conditional</animation>
+						</control>
+			
+						<control type="grouplist">
+							<posx>40</posx>
+							<posy>122</posy>
+							<height>700</height>
+							<width>1220</width>
+							<itemgap>2</itemgap>
+							<orientation>vertical</orientation>	
+							<usecontrolcoords>true</usecontrolcoords>
+							<onup>5201</onup>
+							<ondown>6000</ondown>
+							<onleft>6000</onleft>
+							<onright>6000</onright>
+							<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOO-->
+							<control type="button" id="11901">
+								<posx>0</posx><!---->
+								<height>27</height><!---->
+								<width>900</width><!---->
+								<label>$LOCALIZE[56002]:</label> <!---->
+								<font>font_21_UB</font><!---->
+								<disabledcolor>aa555555</disabledcolor><!---->
+								<align>left</align><!---->
+								<aligny>top</aligny><!---->
+								<textoffsety>-2</textoffsety><!---->
+								<textoffsetx>0</textoffsetx><!---->
+								<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+								<colordiffuse>BFFFFFFF</colordiffuse><!---->
+								<enable>false</enable>
+							</control>
+							<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->			
+
+		<!--(((ARTWORK)))===================================================================================================-->
+							<control type="grouplist" id="11902">
+								<itemgap>2</itemgap>
+								<orientation>vertical</orientation>	
+								<usecontrolcoords>true</usecontrolcoords>
+								
+							<!--SOME-->
+								<control type="button" id="10000">
+									<description>SOME OF THESE ITEMS MISSING</description>
+									<posx>10</posx>
+									<posy>0</posy>
+									<width>880</width>
+									<height>36</height>
+									<texturenofocus border="10">special://skin/images/skin/RCB_listviewitemback.png</texturenofocus>
+									<textcolor>ThemeColor2</textcolor>
+									<disabledcolor>ThemeColor2</disabledcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<textoffsety>2</textoffsety>
+									<textoffsetx>7</textoffsetx>
+									<font>font_21_U</font>
+									<label>$LOCALIZE[56003]:</label>
+									<enable>false</enable>
+								</control>
+								<control type="button" id="5230"> 
+									<description>Add item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56005]</label>
+									<focusedcolor>ThemeColor</focusedcolor>
+									<onup>5201</onup>
+									<ondown>5240</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+								<control type="button" id="5240"> 
+									<description>Remove item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56006]</label>
+									<onup>5230</onup>
+									<ondown>5260</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+							<!--ALL-->
+								<control type="button" id="10001">
+									<description>ALL OF THESE ITEMS MISSING</description>
+									<posx>10</posx>
+									<posy>0</posy>
+									<width>880</width>
+									<height>36</height>
+									<texturenofocus border="10">special://skin/images/skin/RCB_listviewitemback.png</texturenofocus>
+									<textcolor>ThemeColor2</textcolor>
+									<disabledcolor>ThemeColor2</disabledcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<textoffsety>2</textoffsety>
+									<textoffsetx>7</textoffsetx>
+									<font>font_21_U</font>
+									<label>$LOCALIZE[56007]:</label>
+									<enable>false</enable>
+								</control>
+								<control type="button" id="5260"> 
+									<description>Add item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56005]</label>
+									<onup>5240</onup>
+									<ondown>5270</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+								<control type="button" id="5270"> 
+									<description>Remove item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56006]</label>
+									<onup>5260</onup>
+									<ondown>5290</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+		<!--(((INFO)))===================================================================================================-->
+								
+								<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO CATEGORY SEPARTOR OOOOOOOOOOO-->
+								<control type="button" id="11903">
+									<description>SPACER!</description>
+									<posx>0</posx><!---->
+									<height>2</height><!---->
+									<width></width><!---->
+									<label></label> <!---->
+									<font></font><!---->
+									<disabledcolor></disabledcolor><!---->
+									<align></align><!---->
+									<aligny></aligny><!---->
+									<textoffsety></textoffsety><!---->
+									<textoffsetx></textoffsetx><!---->
+									<texturenofocus></texturenofocus><!---->
+									<colordiffuse></colordiffuse><!---->
+									<enable>false</enable>
+								</control>
+								<control type="button" id="11904">
+									<posx>0</posx><!---->
+									<height>27</height><!---->
+									<width>900</width><!---->
+									<label>$LOCALIZE[56008]:</label> <!---->
+									<font>font_21_UB</font><!---->
+									<disabledcolor>aa555555</disabledcolor><!---->
+									<align>left</align><!---->
+									<aligny>top</aligny><!---->
+									<textoffsety>-2</textoffsety><!---->
+									<textoffsetx>0</textoffsetx><!---->
+									<texturenofocus border="10">search-focus2.png</texturenofocus><!---->
+									<colordiffuse>BFFFFFFF</colordiffuse><!---->
+									<enable>false</enable>
+								</control>
+								<!--OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->			
+							<!--SOME-->
+								<control type="button" id="10002">
+									<description>SOME OF THESE ITEMS MISSING</description>
+									<posx>10</posx>
+									<posy>0</posy>
+									<width>880</width>
+									<height>36</height>
+									<texturenofocus border="10">special://skin/images/skin/RCB_listviewitemback.png</texturenofocus>
+									<textcolor>ThemeColor2</textcolor>
+									<disabledcolor>ThemeColor2</disabledcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<textoffsety>2</textoffsety>
+									<textoffsetx>7</textoffsetx>
+									<font>font_21_U</font>
+									<label>$LOCALIZE[56003]:</label>
+									<enable>false</enable>
+								</control>
+								<control type="button" id="5290"> 
+									<description>Add item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56005]</label>
+									<focusedcolor>ThemeColor</focusedcolor>
+									<onup>5270</onup>
+									<ondown>5300</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+								<control type="button" id="5300"> 
+									<description>Remove item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56006]</label>
+									<onup>5290</onup>
+									<ondown>5320</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+							<!--ALL-->
+								<control type="button" id="10003">
+									<description>ALL OF THESE ITEMS MISSING</description>
+									<posx>10</posx>
+									<posy>0</posy>
+									<width>880</width>
+									<height>36</height>
+									<texturenofocus border="10">special://skin/images/skin/RCB_listviewitemback.png</texturenofocus>
+									<textcolor>ThemeColor2</textcolor>
+									<disabledcolor>ThemeColor2</disabledcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<aligny>top</aligny>
+									<textoffsety>2</textoffsety>
+									<textoffsetx>7</textoffsetx>
+									<font>font_21_U</font>
+									<label>$LOCALIZE[56007]:</label>
+									<enable>false</enable>
+								</control>
+								<control type="button" id="5320"> 
+									<description>Add item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56005]</label>
+									<onup>5300</onup>
+									<ondown>5330</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+								<control type="button" id="5330"> 
+									<description>Remove item</description>
+									<posx>20</posx>
+									<width>870</width>
+									<height>25</height>
+									<font>font_19_U</font>
+									<textwidth>675</textwidth><!--RBTW-->
+									<textoffsetx>70</textoffsetx>
+									<aligny>top</aligny>
+									<textoffsety>-2</textoffsety>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<texturefocus border="58,2,10,0">button-subitem-focus.png</texturefocus>
+									<texturenofocus border="58,2,10,0">button-subitem-focus.png</texturenofocus>
+									<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+									<animation effect="zoom" start="103" center="auto" time="100">unfocus</animation>
+									<colordiffuse></colordiffuse>
+									<label>$LOCALIZE[56006]</label>
+									<onup>5320</onup>
+									<ondown>6000</ondown>
+									<onleft>6000</onleft>
+									<onright>6000</onright>
+								</control>
+							</control>
+						</control>
+						
+					<!--label 2-->
+						<control type="label" id="5220">
+							<description>One item missing (label2 ART)</description>
+							<posx>922</posx>
+							<posy>187</posy>
+							<width>600</width>
+							<height>25</height>
+							<font>font_19_U</font>
+							<aligny>top</aligny>
+							<textcolor>BBDCDCDC</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<label>[B]$LOCALIZE[56004][/B]</label>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5230)">Conditional</animation>
+						</control>
+						<control type="label" id="5250">
+							<description>All items missing (label2 ART)</description>
+							<posx>922</posx>
+							<posy>279</posy>
+							<width>600</width>
+							<height>25</height>
+							<font>font_19_U</font>
+							<aligny>top</aligny>
+							<textcolor>BBDCDCDC</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<label>[B]$LOCALIZE[56004][/B]</label>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5260)">Conditional</animation>
+						</control>
+						<control type="label" id="5280">
+							<description>One item missing (label2 INFO)</description>
+							<posx>922</posx>
+							<posy>404</posy>
+							<width>600</width>
+							<height>25</height>
+							<font>font_19_U</font>
+							<aligny>top</aligny>
+							<textcolor>BBDCDCDC</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<label>[B]$LOCALIZE[56004][/B]</label>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5290)">Conditional</animation>
+						</control>
+						<control type="label" id="5310">
+							<description>All items missing (label2 INFO)</description>
+							<posx>922</posx>
+							<posy>496</posy>
+							<width>600</width>
+							<height>25</height>
+							<font>font_19_U</font>
+							<aligny>top</aligny>
+							<textcolor>BBDCDCDC</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>right</align>
+							<label>[B]$LOCALIZE[56004][/B]</label>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5320)">Conditional</animation>
+						</control>	
+						
+					</control>
+				</control>
+				
+	<!--(((OK/RESET ALL)))=================================================================================================================================-->			
+				<control type="group" id="">
+					<control type="button" id="6000">
+						<description>delete</description>
+						<posx>319</posx>
+						<posy>650</posy>
+						<width>215</width>
+						<height>50</height>
+						<font>font_28</font>
+						<aligny>top</aligny>
+						<align>center</align>
+						<textoffsety>5</textoffsety>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<disabledcolor>ff343434</disabledcolor> <!--JET-->
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[52034]</label>
+						<onup>5330</onup>
+						<ondown>5101</ondown>
+						<onleft>6010</onleft>
+						<onright>6010</onright>
+					</control>	
+					<control type="button" id="6010">
+						<description>Cancel</description>
+						<posx>747</posx>
+						<posy>650</posy>
+						<width>215</width>
+						<height>50</height>
+						<font>font_28</font>
+						<aligny>top</aligny>
+						<align>center</align>
+						<textoffsety>5</textoffsety>
+						<textcolor>BBDCDCDC</textcolor>
+						<disabledcolor>ff343434</disabledcolor>
+						<shadowcolor>-</shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus border="10,10,10,10">-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[52035]</label>
+						<onup>5330</onup>
+						<ondown>5101</ondown>
+						<onleft>6000</onleft>
+						<onright>6000</onright>
+					</control>	
+				</control>
+			
+			</control>
+		</control>
+	</controls>
+</window>

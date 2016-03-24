@@ -1,0 +1,2035 @@
+<window id="5200">
+	<defaultcontrol>7000</defaultcontrol>
+	
+	<controls>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites) | Window.IsActive(movieinformation)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsVisible(PluginSettings) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
+			<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(script-RCB-contextmenu.xml) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			
+	<!--(((TOP BAR)))===========================================================================================================================-->	
+			<control type="group">
+				<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
+				<description>Top Bar Area</description>	
+				
+				<!--******************************* (BreadCrumbPluginSettings) **************************************-->
+				<include>BreadCrumbButtonRight</include>
+				<include>BreadCrumbButtonLeft</include>
+				
+				<!--BreadCrumbHome-->
+				<control type="group">
+					<control type="image">
+						<width>70</width>
+						<height>44</height> <!--BC HOME-->
+						<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+						<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+					</control>	
+				 <!--home icon-->
+					<control type="button" id="837">
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+						<texturenofocus></texturenofocus>
+						<colordiffuse>FFFFFFFF</colordiffuse>
+						<onclick>ActivateWindow(Home)</onclick>
+						<pulseonselect>true</pulseonselect>
+						<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+						<ondown>850</ondown>
+						<onright>458</onright>
+						<onleft>345</onleft>
+					</control>
+					<control type="image">
+						<description>Home Icon No Focus</description>
+						<posx>10</posx>
+						<posy>6</posy>
+						<width>31</width>
+						<height>28</height>
+						<texture>$VAR[BreadCrumbHomeIcon]</texture>
+						<colordiffuse></colordiffuse>
+						<visible>!Control.HasFocus(837)</visible>
+					</control>
+				</control>
+				<!--*************************************************************************************************-->
+				
+			</control>
+
+	<!--(((CONTROLS)))============================================================================================================================-->		
+			<control type="group">
+				<!--SkinSystemStatMenuSlide-->
+				<animation effect="slide" end="0,5" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			
+				<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="250" delay="350" condition="!Window.IsActive(FileBrowser)">Conditional</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+					<effect type="fade" start="100" end="0" time="250" />
+				</animation>
+			<!--header,separators-->
+				<control type="group">
+					<posx>30</posx>
+					<posy>80</posy>
+					<control type="label">
+						<posx></posx>
+						<posy>8</posy>
+						<font>font_32_B</font>
+						<textcolor>ThemeColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$LOCALIZE[30000] - $LOCALIZE[52000]</label>
+						<width>1000</width>
+						<align>left</align>
+						<aligny>center</aligny>
+					</control>
+					<!--**************************************** SEPARATORS ****************************************-->
+					<control type="image"> <!--TOP-->
+						<description>top bar</description>
+						<posy>34</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM-->
+						<description>BOTTOM bar</description>
+						<posy>565</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<control type="image"> <!--BOTTOM 2-->
+						<description>BOTTOM bar</description>
+						<posy>620</posy>
+						<width>1220</width>
+						<height>5</height>
+						<texture>separatio_FS.png</texture>
+					</control>
+					<!--********************************************************************************************-->
+				</control>
+				
+			<!--ICON-->
+				<control type="image">
+					<description>PLUGIN ICON</description>
+					<posx>56</posx>
+					<posy>390</posy>
+					<width>330</width>
+					<height>240</height>
+					<texture>special://skin/scripts/Rom Collection Browser/icon.png</texture>
+					<bordertexture border="15">Glass/keyfocus.png</bordertexture>
+					<bordersize>14</bordersize>
+					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+				</control>
+				
+			<!--CATEGORIES-->
+				<control type="group">
+					<posx>53</posx>
+					<posy>132</posy>
+				<!--Category buttons-->
+					<control type="list" id="7000">
+						<description>Category Area</description>
+						<posx></posx>
+						<posy></posy>
+						<width>355</width>
+						<height>248</height>
+						<itemgap></itemgap>
+						<onleft>6000</onleft>
+						<onright>7010</onright>
+						<onup>7000</onup>
+						<ondown>7000</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>300</scrolltime>
+						<itemlayout height="62" width="355">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>50</height>
+								<texture></texture>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>6</posy>
+								<width>352</width>
+								<height>50</height>
+								<font>font_26_CB</font>
+								<textcolor>Grey</textcolor> <!--GREY-->
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="62" width="355">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>50</height>
+								<texture border="10,10,10,10">scrollbar-background.png</texture>
+								<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(7000)">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>6</posy>
+								<width>352</width>
+								<height>50</height>
+								<font>font_26_CB</font>
+								<textcolor>ThemeColor</textcolor> <!--GREY-->
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>$LOCALIZE[52002]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="2">
+								<label>$LOCALIZE[52003]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="3">
+								<label>$LOCALIZE[52004]</label>
+								<onclick>-</onclick>
+							</item>
+							<item id="4">
+								<label>$LOCALIZE[52005]</label>
+								<onclick>-</onclick>
+							</item>
+						</content>
+					</control>
+				</control>		
+		
+			<!--CONTENT-->
+				<control type="group" id="7010">
+					<posx>430</posx>
+					<posy>180</posy>
+				
+				<!--Game Import-->
+					<control type="group" id="7001">
+						<visible>Container(7000).Hasfocus(1)</visible>
+						<width>780</width>
+						<height>490</height>
+						<pagecontrol>60</pagecontrol>
+						<control type="grouplist">
+							<width>780</width>
+							<height>490</height>
+							<itemgap>3</itemgap>
+							<onleft>7000</onleft>
+							<ondown>6000</ondown>
+							<onright>6000</onright>
+							<onup>5211</onup>
+							<orientation>vertical</orientation>
+							<usecontrolcoords>true</usecontrolcoords>
+						<!-- Rom Path -->
+							<control type="button" id="5240"> 
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52006]</label>
+							</control>
+						<!-- Rom file mask -->
+							<control type="button" id="5250"> 
+								<description>Rom file mask</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52007]</label>
+							</control>
+						<!-- Ignore on scan -->
+							<control type="radiobutton" id="5330">
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52008]</label>
+							</control>
+						<!-- Allow update -->
+							<control type="radiobutton" id="5400">
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52009]</label>
+							</control>
+						<!-- Max folder depth -->
+							<control type="button" id="5410"> 
+								<description>Max folder depth</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52010]</label>
+							</control>
+						<!-- Disk indicator -->
+							<control type="button" id="5420"> 
+								<description>Disk indicator</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52011]</label>
+							</control>
+							<control type="radiobutton" id="5430">
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>500</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52012]</label>
+								<onleft>7000</onleft>
+								<onright>6000</onright>
+								<onup>5420</onup>
+								<ondown>6000</ondown>
+							</control>
+						</control>
+				<!--************************************************-->
+				<!--***********************************[left labels]-->
+					<!--ROM PATHS-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>7</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52006]</label>
+							<visible>!Control.HasFocus(5240)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5240)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>7</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52006]</label>
+							<visible>Control.HasFocus(5240)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5240)">VisibleChange</animation>
+						</control>
+					<!--ROM FILE MASK-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>56</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52007]</label>
+							<visible>!Control.HasFocus(5250)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5250)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>56</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52007]</label>
+							<visible>Control.HasFocus(5250)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5250)">VisibleChange</animation>
+						</control>
+					<!--MAX FOLDER DEPTH-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>203</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52010]</label>
+							<visible>!Control.HasFocus(5410)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5410)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>203</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52010]</label>
+							<visible>Control.HasFocus(5410)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5410)">VisibleChange</animation>
+						</control>
+					<!--DISK INDICATOR-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>252</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52011]</label>
+							<visible>!Control.HasFocus(5420)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5420)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>252</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52011]</label>
+							<visible>Control.HasFocus(5420)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5420)">VisibleChange</animation>
+						</control>
+					</control>
+					
+				<!--Import Game data-->
+					<control type="group" id="7002">
+						<visible>Container(7000).Hasfocus(2)</visible>
+						<posx></posx>
+						<posy></posy>
+						<width>800</width>
+						<height>490</height>
+						
+						<!-- Scraper 1 -->				
+						<control type="list" id="5290">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5280</onup>
+							<ondown>5280</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5291) | Control.HasFocus(5292)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52013]</label>
+									<visible>![Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52013]</label>
+									<visible>[Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5291) | Control.HasFocus(5292)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5291">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>0</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5290,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5292</onright>
+							<onup>5211</onup>
+							<ondown>5301</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5291) | Control.HasFocus(5292)]">Conditional</animation>
+						</control>
+						<control type="button" id="5292">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>0</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5290,-1)</onclick>
+							<onleft>5291</onleft>
+							<onright>6000</onright>
+							<onup>5212</onup>
+							<ondown>5302</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5291) | Control.HasFocus(5292)]">Conditional</animation>
+						</control>
+						
+						<!-- Scraper 2 -->
+						<control type="list" id="5300">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>49</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5290</onup>
+							<ondown>5310</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5301) | Control.HasFocus(5302)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52014]</label>
+									<visible>![Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52014]</label>
+									<visible>[Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5301) | Control.HasFocus(5302)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5301">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>49</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5300,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5302</onright>
+							<onup>5291</onup>
+							<ondown>5311</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5301) | Control.HasFocus(5302)]">Conditional</animation>
+						</control>
+						<control type="button" id="5302">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>49</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5300,-1)</onclick>
+							<onleft>5301</onleft>
+							<onright>6000</onright>
+							<onup>5292</onup>
+							<ondown>5312</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5301) | Control.HasFocus(5302)]">Conditional</animation>
+						</control>
+		
+						<!-- Scraper 3 -->
+						<control type="list" id="5310">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>98</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5301</onup>
+							<ondown>5320</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5311) | Control.HasFocus(5312)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52015]</label>
+									<visible>![Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52015]</label>
+									<visible>[Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5311) | Control.HasFocus(5312)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5311">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>98</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5310,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5312</onright>
+							<onup>5301</onup>
+							<ondown>5261</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5311) | Control.HasFocus(5312)]">Conditional</animation>
+						</control>
+						<control type="button" id="5312">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>98</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5310,-1)</onclick>
+							<onleft>5311</onleft>
+							<onright>6000</onright>
+							<onup>5302</onup>
+							<ondown>5262</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5311) | Control.HasFocus(5312)]">Conditional</animation>
+						</control>
+						
+						<!-- Media Path -->
+						<control type="list" id="5260">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>147</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5210</onup>
+							<ondown>5210</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5261) | Control.HasFocus(5262)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52016]</label>
+									<visible>![Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52016]</label>
+									<visible>[Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5261) | Control.HasFocus(5262)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5261">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>147</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5260,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5262</onright>
+							<onup>5311</onup>
+							<ondown>5270</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5261) | Control.HasFocus(5262)]">Conditional</animation>
+						</control>
+						<control type="button" id="5262">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>147</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5260,-1)</onclick>
+							<onleft>5261</onleft>
+							<onright>6000</onright>
+							<onup>5312</onup>
+							<ondown>5270</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5261) | Control.HasFocus(5262)]">Conditional</animation>
+						</control>
+
+						<control type="grouplist">
+							<posy>196</posy>
+							<width>780</width>
+							<height>490</height>
+							<itemgap>3</itemgap>
+							<onleft>7000</onleft>
+							<ondown>6000</ondown>
+							<onright>6000</onright>
+							<onup>5261</onup>
+							<orientation>vertical</orientation>
+							<usecontrolcoords>true</usecontrolcoords>
+						<!-- Media Path -->
+							<control type="button" id="5270"> 
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>430</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52017]</label>
+							</control>
+						<!-- File Mask -->
+							<control type="button" id="5280"> 
+								<description>Media File Mask</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>430</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52018]</label>
+							</control>
+							<control type="button" id="5490"> 
+								<description>Remove Media path</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textoffsetx>30</textoffsetx>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52019]</label>
+							</control>
+							<control type="button" id="5500"> 
+								<description>Add Media path</description>
+								<width>780</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textoffsetx>30</textoffsetx>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52020]</label>
+							</control>
+						</control>
+				<!--************************************************-->
+				<!--***********************************[left labels]-->
+					<!--MEDIA PATH-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>203</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52017]</label>
+							<visible>!Control.HasFocus(5270)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5270)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>203</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52017]</label>
+							<visible>Control.HasFocus(5270)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5270)">VisibleChange</animation>
+						</control>
+					<!--FILE MASK-->	
+						<control type="label">
+							<posx>35</posx>
+							<posy>252</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52018]</label>
+							<visible>!Control.HasFocus(5280)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5280)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>35</posx>
+							<posy>252</posy>
+							<width>290</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52018]</label>
+							<visible>Control.HasFocus(5280)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5280)">VisibleChange</animation>
+						</control>
+					</control>
+				
+				<!-- Game Browsing -->
+					<control type="group" id="7002">
+						<visible>Container(7000).Hasfocus(3)</visible>
+						<posx></posx>
+						<posy></posy>
+						<control type="list" id="5320">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5320</onup>
+							<ondown>5320</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5321) | Control.HasFocus(5322)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52021]</label>
+									<visible>![Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52021]</label>
+									<visible>[Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5321) | Control.HasFocus(5322)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5321">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>0</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5320,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5322</onright>
+							<onup>5211</onup>
+							<ondown>5341</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5321) | Control.HasFocus(5322)]">Conditional</animation>
+						</control>
+						<control type="button" id="5322">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>0</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5320,-1)</onclick>
+							<onleft>5321</onleft>
+							<onright>6000</onright>
+							<onup>5212</onup>
+							<ondown>5342</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5321) | Control.HasFocus(5322)]">Conditional</animation>
+						</control>
+						
+						<control type="list" id="5340">
+							<hitrect x="0" y="0" w="0" h="0" />
+							<posx>0</posx>
+							<posy>49</posy>
+							<width>780</width>
+							<height>46</height>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5340</onup>
+							<ondown>5340</ondown>
+							<enable>false</enable>
+							<pagecontrol>-</pagecontrol>
+							<scrolltime>0</scrolltime>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5341) | Control.HasFocus(5342)]">Conditional</animation>
+							<itemlayout height="1" width="380"></itemlayout>
+							<focusedlayout height="46" width="800">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10">ListViewItemBack.png</texture>
+									<visible>![Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>780</width>
+									<height>46</height>
+									<texture border="10,0,10,0">scrollbar-background.png</texture>
+									<visible>[Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52022]</label>
+									<visible>![Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+								<control type="label">
+									<posx>5</posx>
+									<posy>7</posy>
+									<width>300</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<aligny>top</aligny>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<align>left</align>
+									<label>$LOCALIZE[52022]</label>
+									<visible>[Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor2</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>![Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+								<control type="label">
+									<posx>725</posx>
+									<posy>7</posy>
+									<width>400</width>
+									<height>46</height>
+									<font>font_22_U</font>
+									<textcolor>ThemeColor</textcolor>
+									<shadowcolor>black</shadowcolor>
+									<aligny>top</aligny>
+									<align>right</align>
+									<label>$INFO[ListItem.Label]</label>
+									<visible>[Control.HasFocus(5341) | Control.HasFocus(5342)]</visible>
+								</control>
+							</focusedlayout>
+						</control>
+						<control type="button" id="5341">
+							<description>Menu Item Next Button</description>
+							<posx>735</posx>
+							<posy>49</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+							<onclick>Control.Move(5340,1)</onclick>
+							<onleft>7000</onleft>
+							<onright>5342</onright>
+							<onup>5321</onup>
+							<ondown>5350</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5341) | Control.HasFocus(5342)]">Conditional</animation>
+						</control>
+						<control type="button" id="5342">
+							<description>Menu Item Prev Button</description>
+							<posx>754</posx>
+							<posy>49</posy>
+							<width>20</width>
+							<height>46</height>
+							<label></label>
+							<font></font>
+							<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+							<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+							<onclick>Control.Move(5340,-1)</onclick>
+							<onleft>5341</onleft>
+							<onright>6000</onright>
+							<onup>5322</onup>
+							<ondown>5350</ondown>
+							<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5341) | Control.HasFocus(5342)]">Conditional</animation>
+						</control>
+						
+					<!-- Autoplay Main -->
+						<control type="radiobutton" id="5350">
+							<posx>0</posx>
+							<posy>98</posy>
+							<width>780</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textoffsety>7</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<textwidth>750</textwidth>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							<label>$LOCALIZE[52023]</label>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5342</onup>
+							<ondown>5360</ondown>
+						</control>
+					<!-- Autoplay Info -->
+						<control type="radiobutton" id="5360">
+							<posx>0</posx>
+							<posy>147</posy>
+							<width>780</width>
+							<height>46</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textoffsety>7</textoffsety>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<textwidth>750</textwidth>
+							<align>left</align>
+							<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+							<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+							<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+							<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							<label>$LOCALIZE[52036]</label>
+							<onleft>7000</onleft>
+							<onright>6000</onright>
+							<onup>5350</onup>
+							<ondown>6000</ondown>
+						</control>
+					</control>
+				
+				<!-- Game Launching -->
+					<control type="group" id="7003">
+						<visible>Container(7000).Hasfocus(4)</visible>
+						<posx></posx>
+						<posy></posy>				
+
+						<control type="grouplist">
+							<width>780</width>
+							<height>490</height>
+							<itemgap>3</itemgap>
+							<onleft>7000</onleft>
+							<ondown>6000</ondown>
+							<onright>6000</onright>
+							<onup>5261</onup>
+							<orientation>vertical</orientation>
+							<usecontrolcoords>true</usecontrolcoords>
+
+						<!-- Emulator Cmd -->
+							<control type="button" id="5220"> 
+								<description>EmuCmd</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						<!-- Emulator Params -->
+							<control type="button" id="5230"> 
+								<description>EmuParams</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						<!-- Use emu solo -->
+							<control type="radiobutton" id="5440">
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52026]</label>
+								<onleft>7000</onleft>
+								<onright>6000</onright>
+								<onup>5230</onup>
+								<ondown>5530</ondown>
+							</control>
+						<!-- Use Popen -->
+							<control type="radiobutton" id="5530">
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52027]</label>
+								<onleft>7000</onleft>
+								<onright>6000</onright>
+								<onup>5240</onup>
+								<ondown>5450</ondown>
+							</control>
+						<!-- Do not extract zip files -->
+							<control type="radiobutton" id="5450">
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>750</textwidth>
+								<align>left</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+								<label>$LOCALIZE[52028]</label>
+								<onleft>7000</onleft>
+								<onright>6000</onright>
+								<onup>5530</onup>
+								<ondown>5460</ondown>
+							</control>
+						<!-- Savestate path -->
+							<control type="button" id="5460"> 
+								<description>Savestates</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						<!-- Savestate file mask -->
+							<control type="button" id="5470"> 
+								<description>Savestates</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						<!-- Savestate params -->
+							<control type="button" id="5480"> 
+								<description>Savestates</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						<!-- PreCmd -->
+							<control type="button" id="5510"> 
+								<description>Pre-Launch Command</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						<!-- PostCmd -->
+							<control type="button" id="5520"> 
+								<description>Post-Launch Command</description>
+								<width>780</width>
+								<height>42</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textoffsety>7</textoffsety>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<textwidth>480</textwidth>
+								<align>right</align>
+								<texturefocus border="5,2,10,0">scrollbar-background.png</texturefocus>
+								<texturenofocus border="10">ListViewItemBack.png</texturenofocus>
+								<animation effect="zoom" end="103" center="auto" time="100">focus</animation>
+								<animation effect="zoom" start="103" center="auto" time="200">unfocus</animation>
+							</control>
+						</control>
+				<!--************************************************-->
+				<!--***********************************[left labels]-->
+					<!--EMULATOR COMMAND-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>5</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52024]</label>
+							<visible>!Control.HasFocus(5220)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5220)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>5</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52024]</label>
+							<visible>Control.HasFocus(5220)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5220)">VisibleChange</animation>
+						</control>
+					<!--EMULATOR PARAMS-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>50</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52025]</label>
+							<visible>!Control.HasFocus(5230)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5230)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>50</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52025]</label>
+							<visible>Control.HasFocus(5230)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5230)">VisibleChange</animation>
+						</control>
+					<!--SAVESTATE PATHS-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>230</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52029]</label>
+							<visible>!Control.HasFocus(5460)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5460)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>230</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52029]</label>
+							<visible>Control.HasFocus(5460)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5460)">VisibleChange</animation>
+						</control>
+					<!--SAVESTATE FILE MASK-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>275</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52030]</label>
+							<visible>!Control.HasFocus(5470)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5470)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>275</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52030]</label>
+							<visible>Control.HasFocus(5470)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5470)">VisibleChange</animation>
+						</control>
+					<!--SAVESTATE PARAMS-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>320</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52031]</label>
+							<visible>!Control.HasFocus(5480)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5480)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>320</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52031]</label>
+							<visible>Control.HasFocus(5480)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5480)">VisibleChange</animation>
+						</control>	
+					<!--PRE CMD-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>365</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52032]</label>
+							<visible>!Control.HasFocus(5510)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5510)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>365</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52032]</label>
+							<visible>Control.HasFocus(5510)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5510)">VisibleChange</animation>
+						</control>	
+					<!--POST CMD-->
+						<control type="label">
+							<posx>10</posx>
+							<posy>410</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52033]</label>
+							<visible>!Control.HasFocus(5520)</visible>
+							<animation effect="zoom" start="103" center="auto" time="100" condition="!Control.HasFocus(5520)">VisibleChange</animation>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>410</posy>
+							<width>290</width>
+							<height>42</height>
+							<font>font_22_U</font>
+							<aligny>top</aligny>
+							<textcolor>ThemeColor</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<label>$LOCALIZE[52033]</label>
+							<visible>Control.HasFocus(5520)</visible>
+							<animation effect="zoom" end="103" center="auto" time="100" condition="Control.HasFocus(5520)">VisibleChange</animation>
+						</control>	
+					</control>
+				</control>
+				
+			<!--EMULATOR LIST-->	
+				<control type="group">
+					<posx>430</posx>
+					<posy>134</posy>
+					<animation effect="fade" start="100" end="0" time="250" condition="Window.IsActive(FileBrowser)">Conditional</animation>
+					<animation effect="fade" start="0" end="100" time="250" delay="350" condition="!Window.IsActive(FileBrowser)">Conditional</animation>
+					<animation type="WindowOpen" reversible="false">
+						<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="450" />
+						<effect type="fade" start="0" end="100" time="300" />
+					</animation>
+					<animation type="WindowClose" reversible="false">
+						<effect type="zoom" start="100" end="50" center="640,360" easing="in" tween="back" time="200" />
+						<effect type="fade" start="100" end="0" time="250" />
+					</animation>
+					<!-- Rom Collection List -->
+					<control type="list" id="5210">
+						<hitrect x="0" y="0" w="0" h="0" />
+						<visible>!Container(7000).Hasfocus(5)</visible>
+						<width>780</width>
+						<height>46</height>
+						<onleft>5210</onleft>
+						<onright>5210</onright>
+						<itemgap>3</itemgap>
+						<onup>5210</onup>
+						<ondown>5210</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<animation effect="zoom" end="103" center="auto" time="100" condition="[Control.HasFocus(5211) | Control.HasFocus(5212)]">Conditional</animation>
+						<itemlayout height="1" width="750">
+						</itemlayout>
+						<focusedlayout height="46" width="800">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>780</width>
+								<height>46</height>
+								<texture border="10">ListViewItemBack.png</texture>
+								<visible>![Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>780</width>
+								<height>46</height>
+								<texture border="10,0,10,0">scrollbar-background.png</texture>
+								<visible>[Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+							<control type="label">
+								<posx>5</posx>
+								<posy>7</posy>
+								<width>300</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>left</align>
+								<label>$LOCALIZE[52001]</label>
+								<visible>![Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+							<control type="label">
+								<posx>5</posx>
+								<posy>7</posy>
+								<width>300</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<aligny>top</aligny>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<align>left</align>
+								<label>$LOCALIZE[52001]</label>
+								<visible>[Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+							<control type="label">
+								<posx>725</posx>
+								<posy>7</posy>
+								<width>400</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<textcolor>ThemeColor2</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<aligny>top</aligny>
+								<align>right</align>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>![Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+							<control type="label">
+								<posx>725</posx>
+								<posy>7</posy>
+								<width>400</width>
+								<height>46</height>
+								<font>font_22_U</font>
+								<textcolor>ThemeColor</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<aligny>top</aligny>
+								<align>right</align>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>[Control.HasFocus(5211) | Control.HasFocus(5212)]</visible>
+							</control>
+						</focusedlayout>
+					</control>
+					
+					<control type="button" id="5211">
+						<description>Menu Item Next Button</description>
+						<visible>!Container(7000).Hasfocus(5)</visible>
+						<posx>735</posx>
+						<width>20</width>
+						<height>46</height>
+						<label></label>
+						<font></font>
+						<texturenofocus>spinnerex arrows/spinner_ArrowDown_nf.png</texturenofocus>
+						<texturefocus>spinnerex arrows/spinner_ArrowDown_focus.png</texturefocus>
+						<onclick>Control.Move(5210,1)</onclick>
+						<onleft>7000</onleft>
+						<onright>5212</onright>
+						<onup>5101</onup>
+						<ondown>7010</ondown>
+						<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5211) | Control.HasFocus(5212)]">Conditional</animation>
+					</control>
+					<control type="button" id="5212">
+						<description>Menu Item Prev Button</description>
+						<visible>!Container(7000).Hasfocus(5)</visible>
+						<posx>754</posx>
+						<width>20</width>
+						<height>46</height>
+						<label></label>
+						<font></font>
+						<texturenofocus>spinnerex arrows/spinner_ArrowUp_nf.png</texturenofocus>
+						<texturefocus>spinnerex arrows/spinner_ArrowUp_focus.png</texturefocus>
+						<onclick>Control.Move(5210,-1)</onclick>
+						<onleft>5211</onleft>
+						<onright>6000</onright>
+						<onup>5101</onup>
+						<ondown>7010</ondown>
+						<animation effect="slide" end="10,0" center="auto" time="100" condition="[Control.HasFocus(5211) | Control.HasFocus(5212)]">Conditional</animation>
+					</control>
+					
+					<control type="image">
+						<posx>-10</posx>
+						<posy>44</posy>
+						<description>Separator</description>
+						<width>800</width>
+						<height>1</height>
+						<texture>separator.png</texture>
+					</control>
+				</control>
+				
+	<!--(((DELETE/CANCEL)))=================================================================================================================================-->			
+				<control type="group">
+					<control type="button" id="6000">
+						<description>delete</description>
+						<posx>319</posx>
+						<posy>650</posy>
+						<width>215</width>
+						<height>50</height>
+						<font>font_28</font>
+						<aligny>top</aligny>
+						<align>center</align>
+						<textoffsety>5</textoffsety>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor></shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
+						<disabledcolor>ff343434</disabledcolor> <!--JET-->
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[52034]</label>
+						<onup>7010</onup>
+						<ondown>7000</ondown>
+						<onleft>6010</onleft>
+						<onright>6010</onright>
+					</control>	
+					<control type="button" id="6010">
+						<description>Cancel</description>
+						<posx>747</posx>
+						<posy>650</posy>
+						<width>215</width>
+						<height>50</height>
+						<font>font_28</font>
+						<aligny>top</aligny>
+						<align>center</align>
+						<textoffsety>5</textoffsety>
+						<textcolor>BBDCDCDC</textcolor>
+						<disabledcolor>ff343434</disabledcolor>
+						<shadowcolor></shadowcolor>
+						<textwidth>160</textwidth>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
+						<animation effect="zoom" end="125" center="auto" time="50">focus</animation>
+						<animation effect="zoom" start="125" center="auto" time="50">unfocus</animation>
+						<label>$LOCALIZE[52035]</label>
+						<onup>7010</onup>
+						<ondown>7000</ondown>
+						<onleft>6000</onleft>
+						<onright>6000</onright>
+					</control>	
+				</control>
+			
+			</control>
+		<!-- Window -->		
+			<control type="button" id="5101">
+				<description>Close Window button</description>
+				<posx>865</posx>
+				<posy>25</posy>
+				<width>40</width>
+				<height>25</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus>rcb-DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>rcb-DialogCloseButton.png</texturenofocus>
+				<onleft>5211</onleft>
+				<onright>5211</onright>
+				<onup>6000</onup>
+				<ondown>5211</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

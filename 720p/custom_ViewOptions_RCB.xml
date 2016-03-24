@@ -1,0 +1,98 @@
+<window type="dialog" id="3061">
+	<defaultcontrol always="true">900</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="group">
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!---->
+			<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | Window.IsActive(virtualkeyboard)">Conditional</animation>
+		<!--little dialog fade out-->
+			<animation effect="fade" start="100" end="20" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(contextmenu) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+			<!--******************************** FullControlAreaBackground *******************************-->
+			<control type="image">
+				<posx>-10</posx>
+				<posy>77</posy>
+				<width>1300</width>
+				<height>750</height>		
+				<texture>black.png</texture>
+				<colordiffuse></colordiffuse>
+				<!--MediaViewOpenCloseAnim-->
+				<animation effect="fade" start="0" end="83" time="300" >WindowOpen</animation>
+				<animation effect="fade" start="83" end="0" time="450">WindowClose</animation>
+				<aspectratio>scale</aspectratio>
+			
+			</control>
+			<!--******************************************************************************************-->
+			<control type="grouplist" id="900"> <!--1032-->
+				<description>Music View Options Menu</description>
+				<posx>35</posx>
+				<posy>75</posy>
+				<width>450</width>
+				<itemgap>2</itemgap>
+				<onleft>Dialog.Close(3061[,force])</onleft>
+				<onright>Dialog.Close(3061[,force])</onright>
+				<onup>900</onup>
+				<ondown>900</ondown>
+				<orientation>vertical</orientation>
+				<!-- <visible>Window.IsActive(MusicFiles) | Window.IsActive(MusicLibrary)</visible> -->
+				<!--MenuOpenCloseAnim-->
+				<animation type="WindowOpen">
+					<effect type="fade" end="100" time="250"/>
+					<effect type="slide" start="0,-35" time="100" tween="circle" easing="out"/>
+				</animation>	
+				<animation type="WindowClose">
+					<effect type="fade" end="0" time="150"/>
+				</animation>
+				<control type="image">
+					<!--MenuBarItemViewOptionsTopBorder-->
+					<width>450</width>
+					<height>8</height>
+					<texture border="7,7,7,0">menu-bar-item-top-border.png</texture>
+				</control>
+				<control type="radiobutton" id="10000">
+					<description>RCB Hide Fanart</description>
+					<width>450</width>
+					<height>38</height>
+					<font>font_24_B</font>
+					<textcolor>MenuItemColor</textcolor>
+					<focusedcolor>MenuItemFocusColor</focusedcolor>
+					<textoffsetx>13</textoffsetx>
+					<align>left</align>
+					<aligny>top</aligny>
+					<radioposx>419</radioposx>
+					<radioposy>-</radioposy>
+					<textwidth>395</textwidth>
+					<textureradioon>radio-button-focus.png</textureradioon>         
+					<textureradiooff>radio-button-nofocus.png</textureradiooff>   
+					<texturefocus border="10,10,10,10">Glass/SquareThemeBorder.png</texturefocus>
+					<texturenofocus border="10">ViewOptionsButtonNFS.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>$LOCALIZE[31043]</label>
+					<selected>Skin.HasSetting(HideRCBFanart)</selected>
+					<onclick>Skin.ToggleSetting(HideRCBFanart)</onclick>
+					<!-- <visible>Skin.String(CurrentViewMode,52) + [Container.Content(Albums) | Container.Content(Songs) | Container.Content(Artists)]</visible> -->
+				</control>
+				
+				
+				<control type="image">
+					<!--MenuBarItemViewOptionsBottomBorder-->
+					<width>450</width>
+					<height>8</height>
+					<texture border="7,0,7,7">menu-bar-item-bottom-border.png</texture>		
+					<!--MenuBarItemViewOptionsBottomBorder-->
+				</control>
+			
+			</control>	
+	
+		
+		
+		
+		
+		
+		</control>
+
+	</controls>
+
+</window>

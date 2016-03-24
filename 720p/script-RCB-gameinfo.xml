@@ -1,0 +1,485 @@
+<window>
+	<defaultcontrol always="false">3000</defaultcontrol>
+	
+	<controls>
+		<animation effect="fade" start="100" end="0" delay="400" time="300" condition="Window.IsActive(Favourites)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" delay="200" time="150" condition="Window.IsVisible(PlayerControls) | Window.IsVisible(PluginSettings) | Window.IsActive(ShutdownMenu) | Window.IsActive(selectdialog) | [Window.IsActive(virtualkeyboard) + ![Window.IsActive(virtualkeyboard) + [Window.IsActive(137) | Window.IsActive(136)]]]">Conditional</animation>
+		<!--little dialog fade out-->
+		<animation effect="fade" start="100" end="30" delay="0" time="200" condition="Window.IsActive(100) | Window.IsActive(script-RCB-contextmenu.xml) | Window.IsActive(numericinput) | Window.IsActive(101) | Window.IsActive(2002)">Conditional</animation>
+
+<!--(((MENU BAR)))========================================================================================================================-->
+		<control type="group" id="850">	
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,27" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!-- <animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation> -->
+			<description>Menu Bar Area</description>		
+			<height>34</height>
+			<posy>44</posy>
+			<control type="image">
+				<width>ScreenWidth</width>
+				<height>34</height>
+				<texture flipy="true" border="80,4,80,4">$VAR[SubMenuImage]</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
+			</control>
+			
+			<!--********************************************* GameInfoMenuBar **********************************************************-->
+			<control type="grouplist" id="987">
+				<animation effect="fade" start="100" end="57" time="250" condition="!ControlGroup(987).HasFocus">Conditional</animation>
+				<description>Game Info Menu Bar</description>
+				<posy>-3</posy>
+				<width>ScreenWidth</width>
+				<height>34</height>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<onup>850</onup>
+				<!--<ondown>961</ondown>-->
+				<control type="button" id="3000">
+					<description>Play Games</description>
+					<width>190</width>
+					<height>36</height>	
+					<textwidth>190</textwidth>
+					<aligny>top</aligny>
+					<textoffsety>4</textoffsety>
+					<font>font_19_UB</font>
+					<focusedcolor>ButtonFocusColor</focusedcolor>
+					<texturefocus border="10"></texturefocus>
+					<pulseonselect>true</pulseonselect>
+					<colordiffuse>ThemeColor</colordiffuse>
+					<texturenofocus>-</texturenofocus>
+					<label>[UPPERCASE]$LOCALIZE[54006][/UPPERCASE]</label>
+				</control>
+				<control type="image" id="30000">
+					<description>MenuBarSeparator</description>
+					<width>4</width>
+					<height>34</height>
+					<texture>menu-bar-separator.png</texture><!---->
+				</control>
+				<control type="button" id="3001">
+					<description>Play Videos</description>
+					<width>300</width>
+					<height>36</height>	
+					<textwidth>300</textwidth>
+					<aligny>top</aligny>
+					<textoffsety>4</textoffsety>
+					<font>font_19_UB</font>
+					<focusedcolor>ButtonFocusColor</focusedcolor>
+					<texturefocus border="10"></texturefocus>
+					<pulseonselect>false</pulseonselect>
+					<colordiffuse>ThemeColor</colordiffuse>
+					<texturenofocus>-</texturenofocus>
+					<label>244</label>
+					<enable>!IsEmpty(ListItem.Property(autoplayvideoinfo)) + !IsEmpty(ListItem.Property(gameplayinfo))</enable>
+				</control>	
+				<control type="image" id="30002">
+					<description>MenuBarSeparator</description>
+					<width>4</width>
+					<height>34</height>
+					<texture>menu-bar-separator.png</texture><!---->
+				</control>
+				<control type="label" id="4000">
+					<description>message</description>
+					<posx>10</posx>
+					<posy>4</posy>
+					<width>760</width>
+					<height>36</height>	
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>font_19_UB</font>
+					<textcolor>ButtonColor</textcolor>
+					<scroll>true</scroll>
+				</control>	
+				
+			</control>
+			<!--*************************************************************************************************************************-->
+			<animation effect="fade" start="0" end="100" delay="350" time="300">Visible</animation>
+			<animation effect="fade" start="0" end="100" delay="350" time="300">WindowOpen</animation>
+			<!--MenuBarOpenCloseAnim-->
+			<!-- <animation effect="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200" condition="!ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)">Conditional</animation> -->
+			<animation effect="zoom" start="0,86,1280,34" end="0,40,1280,34" condition="true">Conditional</animation>
+			<!--<animation effect="zoom" start="0,40,1280,0" end="0,86,1280,34" time="200" condition="Skin.HasSetting(HideMenuBar)">WindowOpen</animation>-->
+			<animation type="WindowClose" condition="[ControlGroup(987).HasFocus + !Skin.HasSetting(HideMenuBar)] | [Skin.HasSetting(HideMenuBar)]">
+				<effect type="zoom" start="0,86,1280,34" end="0,40,1280,0" time="200"/>
+				<effect type="fade" start="100" end="0" time="1" delay="200"/>
+			</animation>
+		
+		</control>
+		
+<!--(((TOP BAR)))============================================================================================================================-->		
+		<control type="group">
+			<animation effect="fade" start="100" end="0" delay="100" time="250">WindowClose</animation>
+			<description>Top Bar Area</description>	
+			
+			<!--******************************* (BreadCrumbPluginSettings) **************************************-->
+			<include>BreadCrumbButtonRight</include>
+			<include>BreadCrumbButtonLeft</include>
+			
+			<!--BreadCrumbHome-->
+			<control type="group">
+				<control type="image">
+					<width>70</width>
+					<height>44</height> <!--BC HOME-->
+					<texture border="0,0,22,0">special://skin/images/skin/breadcrumb-background.png</texture>
+					<colordiffuse>$VAR[BreadCrumbBackgroundColor]</colordiffuse> <!--BLUE-->
+				</control>	
+			 <!--home icon-->
+				<control type="button" id="837">
+					<posx>10</posx>
+					<posy>6</posy>
+					<width>31</width>
+					<height>28</height>
+					<texturefocus>Breadcrumb/breadcrumb-home-focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<colordiffuse>FFFFFFFF</colordiffuse>
+					<onclick>ActivateWindow(Home)</onclick>
+					<pulseonselect>true</pulseonselect>
+					<ondown condition="[Container(850).HasFocus(5) + Skin.HasSetting(HideRecentMovies)] | [Container(850).HasFocus(6) + Skin.HasSetting(HideRecentTVShows)] | [Container(850).HasFocus(3) + Skin.HasSetting(HideRecentAlbums)]">304</ondown>
+					<ondown>850</ondown>
+					<onright>458</onright>
+					<onleft>345</onleft>
+				</control>
+				<control type="image">
+					<description>Home Icon No Focus</description>
+					<posx>10</posx>
+					<posy>6</posy>
+					<width>31</width>
+					<height>28</height>
+					<texture>$VAR[BreadCrumbHomeIcon]</texture>
+					<colordiffuse></colordiffuse>
+					<visible>!Control.HasFocus(837)</visible>
+				</control>
+			</control>
+			<!--*************************************************************************************************-->				
+		</control>
+			
+<!--(((CONTROLS)))==================================================================================================================-->	
+		<control type="group" id="961">		
+			<posx>30</posx>
+			<posy>90</posy>
+			<!--SkinSystemStatMenuSlide-->
+			<animation effect="slide" end="0,17" condition="Skin.HasSetting(ShowSystemVitals)">Conditional</animation>
+			<!--ControlsOpenCloseAnim-->
+			<animation effect="fade" start="0" end="100" delay="350" time="300">Visible</animation>
+			<animation effect="fade" start="0" end="100" delay="350" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<control type="label">
+				<description>Title</description>
+				<posx></posx>
+				<posy>12</posy>
+				<textcolor>ThemeColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<font>font_27_CB</font>
+				<label>$INFO[ListItem.Label] $INFO[ListItem.Property(Year),(,)]</label>	
+				<scroll>yes</scroll>
+				<width>1000</width>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="label" id="6100">
+				<description>Genre</description>
+				<posx>1220</posx>
+				<posy>1</posy>
+				<width>600</width>
+				<font>font_23_B</font>
+				<textcolor>ThemeColor2</textcolor>
+				<shadowcolor>ShadowColor</shadowcolor>
+				<align>right</align>
+				<label>$INFO[ListItem.Property(genre)]</label>
+				<scroll>yes</scroll>
+			</control>
+			<!--**************************************** SEPARATORS ****************************************-->
+			<control type="image"> <!--TOP-->
+				<description>top bar</description>
+				<posy>34</posy>
+				<width>1220</width>
+				<height>5</height>
+				<texture>separatio_FS.png</texture>
+			</control>
+			<control type="image"> <!--BOTTOM-->
+				<description>BOTTOM bar</description>
+				<posy>595</posy>
+				<width>1220</width>
+				<height>5</height>
+				<texture>separatio_FS.png</texture>
+			</control>
+			<!--********************************************************************************************-->
+			<control type="image">
+				<description>INFO BACKGROUND</description>
+				<posx>10</posx>
+				<posy>40</posy>
+				<width>625</width>
+				<height>385</height>
+				<texture border="10,10,10,10">Glass/keyfocus.png</texture>
+				<bordersize>9</bordersize>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<description>IMAGE BACKGROUND</description>
+				<posx>627</posx>
+				<posy>40</posy>
+				<width>586</width>
+				<height>385</height>
+				<texture border="10,10,10,10">Glass/keyfocus.png</texture>
+				<bordersize>9</bordersize>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<description>PLOT/CAST BACKGROUND</description>
+				<posx>10</posx>
+				<posy>415</posy>
+				<width>1200</width>
+				<height>180</height>
+				<texture border="10,10,10,10">Glass/keyfocus.png</texture>
+				<bordersize>9</bordersize>
+				<colordiffuse>BBFFFFFF</colordiffuse>
+			</control>
+		
+		<!-- game info =====================================-->
+			<control type="list" id="59">
+				<posx>30</posx>
+				<posy>53</posy>
+				<width>580</width>
+				<height>395</height>
+				<!--<onup>987</onup>-->
+				<!--<ondown>50</ondown>-->
+				<onleft>987</onleft>
+				<onright>61</onright>
+				<itemgap></itemgap>
+				<itemlayout width="660" height="40">
+					<control type="image">
+						<width>740</width>
+						<height>38</height>
+						<colordiffuse>-</colordiffuse>
+						<texture border="10">ListViewItemBack.png</texture>
+					</control>	
+					<control type="label">
+						<posx>2</posx>
+						<posy></posy>
+						<width>250</width>
+						<height>35</height>
+						<font>font_21_UB</font> <!--CAT. LABEL-->
+						<aligny>center</aligny>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>- $INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>575</posx>
+						<posy></posy>
+						<width>320</width>
+						<height>35</height>
+						<font>font_21_UB</font> <!--INFO LABEL-->
+						<aligny>center</aligny>
+						<align>right</align>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>yes</scroll>
+					</control>
+				</itemlayout>	
+				<focusedlayout width="660" height="40">
+				<!--==============-->
+					<control type="image">
+						<width>740</width>
+						<height>38</height>
+						<colordiffuse>-</colordiffuse>
+						<texture border="10">ListViewItemBack.png</texture>
+					</control>
+				<!--==============-->
+					<control type="label">
+						<posx>2</posx>
+						<posy></posy>
+						<width>250</width>
+						<height>35</height>
+						<font>font_21_UB</font>
+						<aligny>center</aligny>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>- $INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>575</posx>
+						<posy></posy>
+						<width>320</width>
+						<height>35</height>
+						<font>font_21_UB</font>
+						<aligny>center</aligny>
+						<align>right</align>
+						<textcolor>BBDCDCDC</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<scroll>yes</scroll>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Region</description>
+						<label>$LOCALIZE[54000]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(region)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="2">
+						<description>Media</description>
+						<label>$LOCALIZE[54001]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(media)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="3">
+						<description>Publisher</description>
+						<label>$LOCALIZE[50002]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(publisher)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="4">
+						<description>Developer</description>
+						<label>$LOCALIZE[50003]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(developer)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="5">
+						<description>Controller</description>
+						<label>$LOCALIZE[54002]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(controllertype)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="6">
+						<description>Max Player</description>
+						<label>$LOCALIZE[54004]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(maxplayers)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="7">
+						<description>Max Player</description>
+						<label>$LOCALIZE[54003]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(rating)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="8">
+						<description>Max Player</description>
+						<label>$LOCALIZE[54005]</label>
+						<label2 fallback="416">$INFO[ListItem.Property(playcount)]</label2>
+						<onclick>-</onclick>
+					</item>
+					<item id="9">
+						<description>Max Player</description>
+						<label>URL</label>
+						<label2 fallback="416">$INFO[ListItem.Property(url)]</label2>
+						<onclick>-</onclick>
+					</item>
+				</content>
+			</control>
+		
+		<!-- PLOT ==========================================-->
+			<control type="textbox" id="8000">
+				<description>Games Plot Value</description>
+				<posx>30</posx>
+				<posy>425</posy>
+				<width>1160</width>
+				<height>152</height>
+				<font>font_23_B</font>
+				<textcolor>ThemeColor2</textcolor>
+				<align>justify</align>
+				<label fallback="416">$INFO[ListItem.Property(Plot)]</label>
+				<pagecontrol>61</pagecontrol>
+				<!-- <visible>Skin.HasSetting(RCB_PlotHideInfo)</visible> -->
+				<autoscroll time="2000" delay="10000" repeat="10000">true</autoscroll>
+				<!--ControlsOpenCloseAnim-->
+				<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			</control>
+			
+		<!-- IMAGES	========================================-->
+			<control type="group" id="1000">
+				<posx>-5</posx>
+				<posy>5</posy>
+				<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+			<!-- gameinfobig -->
+				<control type="image">
+					<description>game info</description>
+					<posx>655</posx>
+					<posy>55</posy>
+					<width>540</width>
+					<height>345</height>
+					<texture>$INFO[ListItem.Property(gameinfobig)]</texture>
+					<bordertexture border="10">ViewOptionsButtonNFS.png</bordertexture>
+					<bordersize>5</bordersize>
+					<visible>!Player.HasVideo</visible>
+				</control>
+			<!-- videowindowbig -->
+				<control type="videowindow">
+					<description>video control</description>
+					<posx>655</posx>
+					<posy>55</posy>
+					<width>540</width>
+					<height>345</height>
+					<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+				</control>
+				<control type="button">
+					<description>click absorber</description>
+					<posx>25</posx>
+					<posy>25</posy>
+					<width>540</width>
+					<height>280</height>
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+				</control>
+			<!-- gameinfoupperleft -->
+				<control type="image" id="2400">
+					<description>gameinfoupperleft</description>
+					<posx>655</posx>
+					<posy>55</posy>
+					<width>265</width>
+					<height>170</height>
+					<texture fallback="defaultpicture.png">$INFO[ListItem.Property(gameinfoupperleft)]</texture>
+					<bordertexture border="10">ViewOptionsButtonNFS.png</bordertexture>
+					<bordersize>2</bordersize>
+					<!-- <visible>IsEmpty(ListItem.Property(gameinfobig))</visible> -->
+					<animation effect="fade" start="100" end="35" time="0" condition="IsEmpty(ListItem.Property(gameinfoupperleft))">Conditional</animation>
+				</control>
+			<!-- gameinfoupperright	-->
+				<control type="image" id="2500">
+					<description>gameinfoupperright</description>
+					<posx>930</posx>
+					<posy>55</posy>
+					<width>265</width>
+					<height>170</height>
+					<texture fallback="defaultpicture.png">$INFO[ListItem.Property(gameinfoupperright)]</texture>
+					<bordertexture border="10">ViewOptionsButtonNFS.png</bordertexture>
+					<bordersize>2</bordersize>
+					<!-- <visible>IsEmpty(ListItem.Property(gameinfobig))</visible> -->
+					<animation effect="fade" start="100" end="35" time="0" condition="IsEmpty(ListItem.Property(gameinfoupperright))">Conditional</animation>
+				</control>
+			<!-- gameinfolowerleft -->
+				<control type="image" id="2600">
+					<description>gameinfolowerleft</description>
+					<posx>655</posx>
+					<posy>230</posy>
+					<width>265</width>
+					<height>170</height>
+					<texture fallback="defaultpicture.png">$INFO[ListItem.Property(gameinfolowerleft)]</texture>
+					<bordertexture border="10">ViewOptionsButtonNFS.png</bordertexture>
+					<bordersize>2</bordersize>
+					<!-- <visible>IsEmpty(ListItem.Property(gameinfobig))</visible> -->
+					<animation effect="fade" start="100" end="35" time="0" condition="IsEmpty(ListItem.Property(gameinfolowerleft))">Conditional</animation>
+				</control>
+			<!-- gameinfolowerright -->
+				<control type="image" id="2700">
+					<description>gameinfolowerright</description>
+					<posx>930</posx>
+					<posy>230</posy>
+					<width>265</width>
+					<height>170</height>
+					<texture fallback="defaultpicture.png">$INFO[ListItem.Property(gameinfolowerright)]</texture>
+					<bordertexture border="10" >ViewOptionsButtonNFS.png</bordertexture>
+					<bordersize>2</bordersize>
+					<!-- <visible>IsEmpty(ListItem.Property(gameinfobig))</visible> -->
+					<animation effect="fade" start="100" end="35" time="0" condition="IsEmpty(ListItem.Property(gameinfolowerright))">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

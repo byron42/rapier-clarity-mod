@@ -47,6 +47,11 @@
 			<name>font_19</name>
 			<filename>XBMC.ttf</filename>
 			<size>19</size>
+		</font><font>
+			<name>font_19_U</name>
+			<filename>XBMC.ttf</filename>
+			<style>uppercase</style>
+			<size>19</size>
 		</font>
 		<font>
 			<name>font_19_B</name>

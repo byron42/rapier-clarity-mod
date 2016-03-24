@@ -3,6 +3,8 @@
 	<defaultcontrol always="false">103</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
+		<animation effect="fade" start="10" end="100" delay="0" time="450">WindowOpen</animation> 
+		<animation effect="fade" start="100" end="0" delay="100" time="500">WindowClose</animation>
 		<control type="group">	
 	<!--(((BACKGROUNDS)))===========================================================================================================================-->			
 			<control type="group">	
