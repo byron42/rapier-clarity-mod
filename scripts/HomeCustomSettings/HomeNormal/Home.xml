@@ -1619,6 +1619,13 @@
 					<animation effect="fade" start="0" end="0" time="" condition="Window.Next(SystemInfo)">Conditional</animation>
 				<!--sub open animation-->
 					<animation effect="zoom" start="0,577,1280,40" end="0,610,1280,0" time="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!--hide for RCB/SelectDialog-->	
+					<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(ConstantHomeSubmenu) + [Window.IsVisible(SelectDialog) | Window.IsVisible(script-RCB-importoptions.xml)]">
+						<effect type="slide" end="0,114" time="100" />
+						<effect type="zoom" start="0,577,1280,40" end="0,610,1280,0" time="100" />
+					</animation>
+					<animation effect="slide" end="0,114" time="100" reversible="false" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Window.IsVisible(SelectDialog) | Window.IsVisible(script-RCB-importoptions.xml)]">Conditional</animation>
+					<!---->	
 					<description>Home SubMenu Bar Image</description>
 					<posy>571</posy>
 					<width>ScreenWidth</width>
@@ -1627,7 +1634,7 @@
 					<colordiffuse>$VAR[HomeMenuColors]</colordiffuse>
 					<aspectratio aligny="top">scale</aspectratio>
 					<!--<visible>!Skin.HasSetting(ConstantHomeSubmenu)</visible>-->
-					<visible>!Skin.HasSetting(ConstantHomeSubmenu) + ![Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
+					<visible>!Skin.HasSetting(ConstantHomeSubmenu) + ![Window.IsVisible(selectdialog) | Window.IsVisible(script-RCB-importoptions.xml) | Window.IsVisible(111) | Window.IsVisible(134) | Window.IsVisible(114) | Window.IsVisible(NumericInput) | Window.IsVisible(3071) | Window.IsVisible(3072) | Window.IsVisible(3073) | Window.IsVisible(3074) | Window.IsVisible(3075) | Window.IsVisible(3076) | Window.IsVisible(3078)]</visible>
 				</control>
 			</control>
 	
@@ -1688,7 +1695,7 @@
 				<animation effect="slide" start="0,114" time="250" delay="1000" tween="circle" easing="out" condition="Window.Next(SystemInfo)">Conditional</animation>
 				<!--HomeMenuPaneSpecificCloseAnim-->
 				<animation effect="slide" end="0,114" time="350" condition="Window.IsActive(PlayerControls) | Window.IsActive(NumericInput)">Conditional</animation>
-				<animation effect="slide" end="0,114" time="100" condition=" Window.IsActive(script_HomeSearch.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(SelectDialog)">Conditional</animation>
+				<animation effect="slide" end="0,114" time="100" condition=" Window.IsActive(script_HomeSearch.xml) | Window.IsActive(ShutdownMenu) | Window.IsActive(Favourites) | Window.IsActive(SelectDialog) | Window.IsVisible(script-RCB-importoptions.xml)">Conditional</animation>
 				<animation effect="slide" end="0,114" time="200" delay="250" condition="Window.IsActive(virtualkeyboard)">Conditional</animation>
 				<!--CUSTOM_SUB_ANIMATION-->
 				<animation effect="slide" end="0,114" time="250" condition="Window.IsActive(3071) | Window.IsActive(3072) | Window.IsActive(3073)
@@ -2020,6 +2027,13 @@
 				<animation effect="slide" start="0,114" end="0,33" time="250" condition="Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="60" time="250" condition="!ControlGroup(900).HasFocus + Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
 				<animation effect="fade" start="100" end="0" time="1" delay="200" condition="!ControlGroup(900).HasFocus + !Skin.HasSetting(ConstantHomeSubmenu)">Conditional</animation>
+				<!--hide for RCB/SelectDialog-->	
+				<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(ConstantHomeSubmenu) + [Window.IsVisible(SelectDialog) | Window.IsVisible(script-RCB-importoptions.xml)]">
+					<effect type="slide" end="0,114" time="100" />
+					<effect type="zoom" start="0,577,1280,40" end="0,610,1280,0" time="100" />
+				</animation>
+				<animation effect="slide" end="0,114" time="100" reversible="false" condition="Skin.HasSetting(ConstantHomeSubmenu) + [Window.IsVisible(SelectDialog) | Window.IsVisible(script-RCB-importoptions.xml)]">Conditional</animation>
+				<!---->
 				<control type="group">	
 					<height>40</height>
 					<onup>600</onup>
@@ -2971,7 +2985,8 @@
 							<item id="13">
 								<description>RCB</description>
 								<label>RCB</label>
-								<onclick>XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
+								<onclick condition="!System.HasAddon(script.rcb.check)">XBMC.RunScript(special://skin/scripts/Rom Collection Browser/ElementTree_Install/RCB_Installer.py)</onclick>
+								<onclick condition="System.HasAddon(script.rcb.check)">XBMC.RunScript(special://skin/scripts/Rom Collection Browser/default.py)</onclick>
 								<visible>!Skin.HasSetting(HideProgramsRCBButton)</visible>
 							</item>
 							<item id="4">
